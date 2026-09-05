@@ -716,3 +716,23 @@ New features require evidence from:
 > 사용자가 승인된 Product Truth와 프로젝트 맥락을 제공하고 `JOEDESIGN으로 디자인해`라고 요청했을 때, Astra가 generic한 단일 시안을 곧바로 production으로 확대하지 않고, 필요한 경우 의미 있는 방향을 탐색하고, 실제 target에 가까운 proof를 만들고, 사용자의 선택을 보존하며, 정확한 target만 반복적으로 refine하고, desktop/mobile 결과를 실제로 관찰하여 visual truth를 `DESIGN.md`에 지속 가능하게 유지할 수 있다.
 
 This is the product completion line for JOEDESIGN v0.1.
+
+---
+
+# Implementation handoff constraints (2026-09-06)
+
+The canonical specification above is preserved from remote main commit
+`92add5079ba467c72bd755e4eb3536ba9c883170`. The current TrackB instruction takes
+precedence over the competition gate/stop wording: this delivery stops at
+`JOEDESIGN_MVP_READY_FOR_REVIEW`; Program Lead review decides competition readiness.
+No BIO fixture or competition is run.
+
+The shared contract uses the exact repository/path/commit recorded above:
+`JOEWRKS/joewrks-work-harness/docs/contracts/JOEWRKS_CROSS_SYSTEM_AUTHORITY_V1.md`
+at `5e7497bd104527d5e6dbfc36011f0f5ee3668ff5`, blob
+`54187e494ccb217cef17457fb6e2aa2631614adb`. Its full text is not copied here.
+
+During implementation GitHub resolved the requested `JOEWRKS/joewrks-design`
+address to the current private `JOEWRKS/JOEDESIGN` repository. Remote main was
+preserved as the branch base; the initial independently recovered specification
+remains local historical evidence, not a competing canonical specification.
