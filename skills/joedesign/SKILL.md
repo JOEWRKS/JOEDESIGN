@@ -71,6 +71,24 @@ For responsive work, preserve hierarchy roles and visual flow, not desktop coord
 
 When a material proof is challenged, be able to identify the major Visual Block Tree, intended visual flow, spacing roles at important boundaries, whether same relationships use the same role, and any deliberate exception. Observe the actual render before declaring the hierarchy successful.
 
+## Make typography and scale deliberate
+
+Role before value. Identify the recurring semantic type roles the surface actually needs, then assign values. Prefer `semantic job → reusable type role → canonical token/style` over a local font-size or weight guess. Do not infer visual roles mechanically from `h1`/`h2`/`h3`, DOM depth, component names, or layer names.
+
+Font size alone is not hierarchy. Coordinate size with weight, line height, placement, whitespace, tone or text color, measure, tracking, and approved family/style so adjacent roles are unmistakable. If roles differ only by 1–2px with no other meaningful contrast, strengthen the relationship through multiple axes or collapse the role instead of inflating the type system.
+
+Use a restrained type scale that is not the spatial 4px grid. The JOE default starting size set is `12, 14, 16, 20, 24, 32, 40, 48, 64`; use only the subset the project needs. Typography may depart from multiples of four because the actual typeface, x-height, language, rendering environment, and role matter more than spatial divisibility. New sizes require a recurring semantic job, not a one-off attractive screenshot.
+
+Use the fewest families and the fewest weights that clearly support the approved visual world. A secondary display/mono family needs a clear role. Do not synthesize unsupported font weights, use bold everywhere to manufacture hierarchy, or rely on ultra-light body text that weakens legibility. A family change that materially changes voice is a direction decision, not a local polish tweak.
+
+Treat reading measure, line height, and actual typeface as one reading system. `16px` is the ordinary web body anchor when project/platform density does not justify another role; body line height around `1.45–1.6` and heading/display around `1.05–1.3` are starting ranges only. For long-form English, `60–80 characters` per line is a useful reference. Do not mechanically apply that Latin count to Korean/CJK, code, tables, dashboards, or narrow mobile UI; inspect actual language, line breaks, paragraph texture, and reading rhythm.
+
+Scale expresses Product priority beyond text. Coordinate the relative dominance of primary text, artwork, actions, metrics, repeated objects, and supporting metadata. Repeated semantic roles should reuse repeated size roles. Do not make every section equally loud or let a decorative object dominate a more important product decision without an intentional art-direction reason.
+
+Responsive typography preserves semantic role mapping and relative dominance; do not proportionally shrink desktop typography. Adjust measure, line breaks, display scale, and role values coherently, keep body text comfortably readable, and avoid independent breakpoint values or fluid formulas for every element. `clamp()` is optional and must represent a stable repeated role across the intended range.
+
+For material type claims, inspect the actual render. Record the major type roles, entry-point role, equivalent-role consistency, adjacent-role contrast, body/reading measure, material exceptions, and actual desktop/mobile observations. Token existence or valid CSS alone does not prove typographic hierarchy.
+
 ## Review actual output; keep verdicts separate
 
 For each material claim, use `expected observable → actual observed fact → PASS / FAIL / UNVERIFIED`. Bind the source, artifact/version, surface/state, and dimensions when material. Describe a concrete visible relation, not just “looks right.” Inspect the exact produced render; code, DOM existence, build/test success, or a screenshot merely existing on disk cannot prove appearance.
