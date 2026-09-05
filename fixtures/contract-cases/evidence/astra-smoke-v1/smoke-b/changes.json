@@ -1,0 +1,108 @@
+{
+  "kind": "smoke-b-bounded-change-manifest",
+  "fixtureCommit": "2d5a68552dfd394fed0afe9a607e89b273aaf131",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a07267-548b-7900-bd79-98ba75cbc55c",
+    "version": "codex-cli 0.153.0",
+    "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+  },
+  "source": {
+    "path": "styles.css",
+    "beforeSha256": "da496904c9901153061d6bb9a59b89398424c39265197dccdaa289c3439ccf45",
+    "afterSha256": "da44182bcf32f8f02b5485db1b803afe3ba1c968c48dd55f2640d68d833f4136"
+  },
+  "method": "Compare original fixture Git HEAD with the captured final workspace. Parse CSS rules with at-rule context and compare every declaration. Listed changes are exhaustive; remove only those changed properties from both sides and hash the identical remaining rule/declaration data.",
+  "ruleCount": 57,
+  "changedPropertyCount": 9,
+  "changes": [
+    {
+      "context": [],
+      "selector": ".eyebrow",
+      "property": "font-size",
+      "before": "22px",
+      "after": "13px"
+    },
+    {
+      "context": [],
+      "selector": ".eyebrow",
+      "property": "letter-spacing",
+      "before": null,
+      "after": ".08em"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "font-size",
+      "before": "28px",
+      "after": "42px"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "line-height",
+      "before": "1.22",
+      "after": "1.12"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "letter-spacing",
+      "before": "0",
+      "after": "-.025em"
+    },
+    {
+      "context": [],
+      "selector": ".hero-description",
+      "property": "font-size",
+      "before": "22px",
+      "after": "18px"
+    },
+    {
+      "context": [],
+      "selector": ".hero-description",
+      "property": "line-height",
+      "before": "1.5",
+      "after": "1.55"
+    },
+    {
+      "context": [
+        "@media(max-width:700px)"
+      ],
+      "selector": ".hero h1",
+      "property": "font-size",
+      "before": "26px",
+      "after": "34px"
+    },
+    {
+      "context": [
+        "@media(max-width:700px)"
+      ],
+      "selector": ".hero-description",
+      "property": "font-size",
+      "before": "19px",
+      "after": "18px"
+    }
+  ],
+  "unchangedRuleAndDeclarationDataSha256": "fe68f809d48a2067b7e3230aeae8ff8a7c9ff7f15890cfddf7cc580d15520a8b",
+  "unchangedFiles": {
+    "PRODUCT.md": {
+      "beforeSha256": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd",
+      "afterSha256": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd"
+    },
+    "DESIGN.md": {
+      "beforeSha256": "5dcf43e5500591061302b9580d053aa99c0d38e647ca4ca5cc08c773663cca9c",
+      "afterSha256": "5dcf43e5500591061302b9580d053aa99c0d38e647ca4ca5cc08c773663cca9c"
+    },
+    "index.html": {
+      "beforeSha256": "2f8c4a5593d756984f317004cf7eb4ac67bf96d5534656bd662f05259ccfa447",
+      "afterSha256": "2f8c4a5593d756984f317004cf7eb4ac67bf96d5534656bd662f05259ccfa447"
+    },
+    "render.mjs": {
+      "beforeSha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "afterSha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    }
+  },
+  "limitation": "A compact extraction of original source evidence, not a new runtime execution. The paired screenshots permit independent rendered comparison; this manifest records the exact source boundary without distributing the full runtime or logs."
+}
