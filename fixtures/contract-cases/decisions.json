@@ -1,0 +1,171 @@
+[
+  {
+    "id": "02",
+    "name": "no product-authority override",
+    "request": "A dashboard Product authority requires a Retry action for failed imports and distinct pending/failed states. The approved visual brief asks for a cleaner composition. Choose the actions for a visual cleanup.",
+    "choices": [
+      "preserve-retry-and-state-semantics",
+      "remove-retry-for-composition",
+      "merge-pending-and-failed",
+      "refine-presentation-within-product-truth"
+    ]
+  },
+  {
+    "id": "03",
+    "name": "DESIGN.md lifecycle",
+    "request": "There is no DESIGN.md. Draft a durable direction. Later an approved revision 3 exists and a materially different direction is proposed but has not been approved. Choose how to handle the two situations.",
+    "choices": [
+      "absent-create-draft",
+      "absent-create-approved",
+      "new-draft-replaces-approved",
+      "retain-approved-rev3-and-propose-draft-rev4",
+      "require-explicit-approval-for-promotion",
+      "copy-product-definition-into-design"
+    ]
+  },
+  {
+    "id": "04",
+    "name": "unresolved direction meaningful alternatives",
+    "request": "The product facts are fixed; there is no visual direction. The user asks for dashboard direction and a proof. Choose a response plan.",
+    "choices": [
+      "produce-2-or-3-materially-distinct-directions",
+      "single-default-saas-direction",
+      "color-swaps-only",
+      "keep-product-facts-identical-across-candidates",
+      "auto-approve-best-score"
+    ]
+  },
+  {
+    "id": "05",
+    "name": "approved direction no unnecessary alternatives",
+    "request": "Approved DESIGN.md and an accepted hero exist. The user asks only to improve the headline hierarchy while retaining the approved direction.",
+    "choices": [
+      "bounded-refinement",
+      "require-3-alternatives-before-edit",
+      "preserve-approved-direction",
+      "pause-for-new-direction-approval",
+      "rewrite-design-direction"
+    ]
+  },
+  {
+    "id": "06",
+    "name": "reference relationship handling",
+    "request": "A reference's asymmetrical image/text relationship is useful, but its brand and product facts are unrelated. Choose how to use it.",
+    "choices": [
+      "identify-take-do-not-take-why-applies-to",
+      "copy-reference-brand-and-copy",
+      "treat-reference-as-advisory",
+      "reference-overrides-project-design"
+    ]
+  },
+  {
+    "id": "07",
+    "name": "target-medium proof",
+    "request": "A new web dashboard composition is material and has not been approved. An existing local browser runtime is available. Choose the next approach.",
+    "choices": [
+      "bounded-browser-render-proof-before-expansion",
+      "implement-all-production-pages-first",
+      "inspect-actual-render",
+      "image-mockup-proves-production-fidelity",
+      "show-candidate-without-self-approval"
+    ]
+  },
+  {
+    "id": "08",
+    "name": "exact-target refinement",
+    "request": "User feedback: the hero headline is weak relative to the artwork at the desktop initial state. Improve only this relation; current rendering is inspectable.",
+    "choices": [
+      "inspect-exact-current-render",
+      "bounded-hero-typography-change",
+      "rerender-same-surface-state-viewport",
+      "regenerate-entire-page",
+      "verify-only-build"
+    ]
+  },
+  {
+    "id": "09",
+    "name": "local refinement does not cause redesign",
+    "request": "The approved hero uses left-aligned type and a right artwork column. User asks only to strengthen Hero typography hierarchy. A centered full-bleed layout could look more dramatic.",
+    "choices": [
+      "retain-composition-and-adjust-type-hierarchy",
+      "replace-with-centered-full-bleed-layout",
+      "preserve-unrelated-components",
+      "rewrite-approved-design"
+    ]
+  },
+  {
+    "id": "10",
+    "name": "repeated rejection direction reconsideration",
+    "request": "The same direction has been materially rejected twice: first for a wrong visual metaphor, again for the same wrong impression after a spacing polish. What next?",
+    "choices": [
+      "diagnose-direction-against-rejected-evidence",
+      "third-local-spacing-polish",
+      "reenter-bounded-exploration-and-proof",
+      "treat-rejected-output-as-approved",
+      "stop-dependent-expansion"
+    ]
+  },
+  {
+    "id": "11",
+    "name": "responsive translation",
+    "request": "Desktop proof is accepted. At 390×844 the artwork obscures a required action and hierarchy collapses. Product authority requires the same actions and meaningful content on mobile.",
+    "choices": [
+      "recompose-for-mobile-hierarchy-crop-reachability",
+      "scale-desktop-down-only",
+      "preserve-required-content-and-actions",
+      "remove-required-action-on-mobile",
+      "inspect-mobile-render"
+    ]
+  },
+  {
+    "id": "12",
+    "name": "product ambiguity bounded re-entry",
+    "request": "In a JOEFLOW-managed project, it is unclear which role may retry a failed operation. Other visual regions are independent. In a second project JOEFLOW is absent and the same ambiguity occurs.",
+    "choices": [
+      "managed-route-affected-scope-via-joeflow-to-product-definition",
+      "unmanaged-raise-to-current-product-authority-or-user",
+      "invent-role-permission",
+      "restart-entire-lifecycle",
+      "continue-independent-work"
+    ]
+  },
+  {
+    "id": "13",
+    "name": "actual-output PASS FAIL UNVERIFIED",
+    "request": "Judge three claims: A expects a nonoverlapping title and artwork; the exact render was inspected and they are visibly separated. B expects a fully visible action; the exact render shows it clipped. C expects reduced-motion behavior, but no motion observation exists. Choose the verdicts.",
+    "choices": [
+      "A-PASS",
+      "A-UNVERIFIED",
+      "B-FAIL",
+      "B-PASS",
+      "C-UNVERIFIED",
+      "C-PASS",
+      "record-source-target-expected-observed-verdict"
+    ]
+  },
+  {
+    "id": "14",
+    "name": "technical PASS does not prove visual PASS",
+    "request": "Build and DOM assertions pass. A screenshot exists on disk but no one has inspected it. User says it looks done, finish. Choose what can be reported.",
+    "choices": [
+      "technical-pass",
+      "visual-unverified",
+      "visual-pass-from-build-or-file-existence",
+      "report-exact-unverified-boundary",
+      "user-accepted"
+    ]
+  },
+  {
+    "id": "15",
+    "name": "internal visual PASS does not confer acceptance",
+    "request": "Actual output meets all applicable visual claims. The user has not accepted the material direction and says only '진행' to authorize the next bounded action.",
+    "choices": [
+      "visual-pass-with-evidence",
+      "user-acceptance-not-granted",
+      "promote-draft-to-approved",
+      "continue-authorized-bounded-work",
+      "treat-continuation-as-exact-acceptance"
+    ]
+  }
+]
+
