@@ -74,7 +74,7 @@ for (const c of cases) {
 }
 test('16 — external competitor dependencies absent in repository and installable skill', () => {
   const files = walk(root).filter(p=>!p.startsWith(path.join(root,'.git')+path.sep)).map(p=>path.relative(root,p).replaceAll('\\','/')).sort();
-  const allowed = new Set(['AGENTS.md','README.md','docs/specs/joedesign-v0.1.md','docs/specs/joedesign-craft-core-v0.1.md','skills/joedesign/SKILL.md','skills/joedesign/agents/openai.yaml','skills/joedesign/templates/DESIGN.md','tests/joedesign-contract.tests.mjs','tests/joedesign-craft-core.tests.mjs']);
+  const allowed = new Set(['AGENTS.md','README.md','docs/specs/joedesign-v0.1.md','docs/specs/joedesign-craft-core-v0.1.md','docs/specs/joedesign-typography-scale-core-v0.1.md','skills/joedesign/SKILL.md','skills/joedesign/agents/openai.yaml','skills/joedesign/templates/DESIGN.md','tests/joedesign-contract.tests.mjs','tests/joedesign-craft-core.tests.mjs','tests/joedesign-typography-scale-core.tests.mjs']);
   for (const file of files) assert.ok(allowed.has(file)||file.startsWith('fixtures/contract-cases/'),'Unexpected runtime/vendor surface: '+file);
   const expectedSkill = ['SKILL.md','agents/openai.yaml','templates/DESIGN.md'];
   assert.deepEqual(walk(skillRoot).map(p=>path.relative(skillRoot,p).replaceAll('\\','/')).sort(),expectedSkill);
