@@ -1,0 +1,230 @@
+{
+  "status": "JOEDESIGN_MVP_READY_FOR_REVIEW",
+  "repository": {
+    "requested": "JOEWRKS/joewrks-design",
+    "actual": "JOEWRKS/JOEDESIGN",
+    "visibility": "private",
+    "branch": "codex/joedesign-v0.1-mvp",
+    "base": "92add5079ba467c72bd755e4eb3536ba9c883170",
+    "skillImplementation": "1c0e79938b6a456fbddede126db841e38c92eb56"
+  },
+  "publicSkill": "joedesign",
+  "publicEntrypointCount": 1,
+  "files": [
+    "AGENTS.md",
+    "README.md",
+    "docs/specs/joedesign-v0.1.md",
+    "skills/joedesign/SKILL.md",
+    "skills/joedesign/agents/openai.yaml",
+    "skills/joedesign/templates/DESIGN.md",
+    "tests/joedesign-contract.tests.mjs",
+    "fixtures/contract-cases/decisions.json",
+    "fixtures/contract-cases/observed.json",
+    "fixtures/contract-cases/review-evidence.json"
+  ],
+  "contractTests": {
+    "command": "node --test tests/joedesign-contract.tests.mjs",
+    "result": "PASS",
+    "tests": 16,
+    "passed": 16,
+    "failed": 0,
+    "tdd": {
+      "testsCommit": "b62dfe7",
+      "beforeImplementation": {
+        "passed": 0,
+        "failed": 16
+      },
+      "afterImplementationBeforeEvidence": {
+        "passed": 2,
+        "failed": 14
+      }
+    },
+    "kind": "Public/package contract checks plus fourteen deterministic replays of actual Astra decisions, not a policy simulation or full execution of fourteen scenarios.",
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07263-ac56-7432-830a-0f30724f789a",
+      "version": "codex-cli 0.153.0",
+      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1",
+      "rolloutSha256": "e4ac60d833e8f32f12c834b6bf3a8ff56a791c1ff638e14f82748091c4a7f3a0"
+    },
+    "evidence": "fixtures/contract-cases/observed.json",
+    "skillSha256": {
+      "SKILL.md": "67484efe717e3fb4aa4409b338268facbaeed05dec62faf85cb2b12fb25b4def",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "e670671655bf2d9eba9e13273c28d025d0c00138b9a0029a3694f336d9d2bd75"
+    }
+  },
+  "smokeA": {
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07267-2b0b-75f0-99c2-a67aec590127",
+      "version": "codex-cli 0.153.0",
+      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+    },
+    "result": "PASS",
+    "fresh": true,
+    "evidence": {
+      "directory": "D:/JOEWRKS/joedesign-mvp-evidence-20260906/runs/A",
+      "rollouts": [
+        "D:\\JOEWRKS\\joedesign-mvp-evidence-20260906\\runs\\A\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T01-29-19-01a07267-2b0b-75f0-99c2-a67aec590127.jsonl"
+      ],
+      "rolloutSha256": [
+        "092fd414c43cccdd7c78f40906d7694af7e4b80a12ebe28387be3e643cabae75"
+      ],
+      "eventsSha256": "109d11e96a225ce6adf5341f8bd3a4755cb4a32a8070a75bde13b47daac7a62c",
+      "final": "D:/JOEWRKS/joedesign-mvp-evidence-20260906/runs/A/final.txt"
+    },
+    "checks": [
+      {
+        "claim": "Inspect current product facts",
+        "observed": "Native command evidence reads PRODUCT.md and current implementation before drafting.",
+        "verdict": "PASS"
+      },
+      {
+        "claim": "2–3 materially distinct candidates",
+        "observed": "Two actual browser proofs: Calm workbench uses large serif introduction, top-right pale Today note and full-width queue; Operational ledger uses compact sans introduction, separate primary action, high-contrast metric and queue-side Today rail.",
+        "verdict": "PASS"
+      },
+      {
+        "claim": "Product semantics invariant",
+        "observed": "PRODUCT.md unchanged; independent browser readback of both candidates at 1440×1000 and 390×844 preserves required copy, 17/5/12 metric labels, all three ID/name/status/owner combinations, and Review queue → #queue.",
+        "verdict": "PASS"
+      },
+      {
+        "claim": "Bounded target-medium proof",
+        "observed": "One landing surface in initial ready state, two candidate variants. Native session made and inspected desktop/mobile browser screenshots, refined observed defects, and reobserved the final targets. No additional product routes or backend work.",
+        "verdict": "PASS"
+      },
+      {
+        "claim": "No automatic approval",
+        "observed": "Root DESIGN.md is DRAFT Rev 1; both candidates explicitly unapproved; Approved visual evidence is None; User acceptance PENDING. Recommendation A is not promotion.",
+        "verdict": "PASS"
+      }
+    ],
+    "finalImageSha256": {
+      "proof/a-desktop.png": "3b7b4ce2493dd3e1e867e96f95a37320a44cc7d0e81b6aee6effa10deb19df25",
+      "proof/a-mobile.png": "30c1a20ca526b62556e44ec1f56c6aaf18712e398737c35fe2c8c0d2796a697b",
+      "proof/b-desktop.png": "4ee902148ab3cec17ebd3173f96f8a3604b76e97233da33ed65ac5fd880a1f27",
+      "proof/b-mobile.png": "5fc802b432687a30d0ff63462ab041b18f35087770b72767d76454d17fd6afb5"
+    },
+    "notes": [
+      "The first baseline capture failed; the same session recovered. A later claim-specific check failed and the session refined/reverified; original tool outputs are preserved in the rollout and collected.json.",
+      "The invocation wrapper had an empty-directory copy setup error before any A model session started; preserved at runs/A-setup-failure-01. The actual smoke A ran once."
+    ]
+  },
+  "smokeB": {
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07267-548b-7900-bd79-98ba75cbc55c",
+      "version": "codex-cli 0.153.0",
+      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+    },
+    "result": "PASS",
+    "fresh": true,
+    "evidence": {
+      "directory": "D:/JOEWRKS/joedesign-mvp-evidence-20260906/runs/B",
+      "rollouts": [
+        "D:\\JOEWRKS\\joedesign-mvp-evidence-20260906\\runs\\B\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T01-29-29-01a07267-548b-7900-bd79-98ba75cbc55c.jsonl"
+      ],
+      "rolloutSha256": [
+        "5d8e3039fc81c171c3cb8352e5897b3c6f4e028274dd5b8ac0552480643ed4fd"
+      ],
+      "eventsSha256": "f9a991c2665655de7e3d72badb86365652942bd88ffe8c4e3bc8575210ec2686",
+      "final": "D:/JOEWRKS/joedesign-mvp-evidence-20260906/runs/B/final.txt"
+    },
+    "checks": [
+      {
+        "claim": "No unnecessary alternatives",
+        "observed": "The native session selected direct bounded typography refinement; no alternatives or new direction approval gate.",
+        "verdict": "PASS"
+      },
+      {
+        "claim": "No broad redesign / exact-target change",
+        "observed": "Only styles.css changed: nine property changes in .eyebrow, .hero h1 and .hero-description (including mobile overrides), limited to font-size, line-height and letter-spacing. All other CSS rules/declarations, PRODUCT.md, DESIGN.md, index.html and render.mjs remain identical.",
+        "verdict": "PASS"
+      },
+      {
+        "claim": "Reobserve same rendered target",
+        "observed": "Native view_image calls inspected before and after images at desktop 1440×1000 and mobile 390×844. Final headline is visibly dominant (42px desktop / 34px mobile) over the 13px label and 18px description, without clipping.",
+        "verdict": "PASS"
+      },
+      {
+        "claim": "PASS / acceptance boundary",
+        "observed": "Rendered inspection PASS was reported; no new user acceptance was asserted and APPROVED DESIGN.md Rev 1 remained byte-identical. Its already-authorized local type refinement did not trigger promotion or a new approval gate.",
+        "verdict": "PASS"
+      }
+    ],
+    "finalImageSha256": {
+      "artifacts/hero-refined-desktop.png": "ac92004a64e91cfde91c6489c4f4bedc1be318827d3b790217d25ab3ef5572b5",
+      "artifacts/hero-refined-mobile.png": "e8f02803fb40fed712e706227dc49811029970f17c91ebf35755d12fbe4a06cb"
+    }
+  },
+  "isolation": {
+    "visibleSkills": [
+      "imagegen",
+      "openai-docs",
+      "plugin-creator",
+      "skill-creator",
+      "skill-installer",
+      "joedesign"
+    ],
+    "personalDesignSkillsDisabled": [
+      "C:/Users/tjdwo/.agents/skills/framer/SKILL.md",
+      "C:/Users/tjdwo/.agents/skills/framer-code-components/SKILL.md",
+      "C:/Users/tjdwo/.agents/skills/impeccable/SKILL.md"
+    ],
+    "pluginsDisabled": true,
+    "joenessKernelLoaded": false,
+    "competitorRuntimeDependencies": 0,
+    "installedCopyChecks": "Both A and B project-local skill copies passed the 16-test suite with JOEDESIGN_INSTALLED_SKILL set; all three files byte-identical, no extra payload.",
+    "credentialLeakCheck": "PASS on all three native runs",
+    "temporaryCredentialsRemaining": 0,
+    "personalInstallUnchanged": true
+  },
+  "crossSystemContract": {
+    "repository": "JOEWRKS/joewrks-work-harness",
+    "path": "docs/contracts/JOEWRKS_CROSS_SYSTEM_AUTHORITY_V1.md",
+    "commit": "5e7497bd104527d5e6dbfc36011f0f5ee3668ff5",
+    "blob": "54187e494ccb217cef17457fb6e2aa2631614adb",
+    "copiedFullContract": false
+  },
+  "sourcePreservation": {
+    "joenessLocalHead": "883898206c4f2db09d6c643c0c83296b2aa16492",
+    "joenessHeadAndWorkingStatusUnchanged": true,
+    "joeflowProductRepositoryWrites": 0,
+    "designRemoteMainWrites": 0,
+    "initialMainPushRejected": "Remote canonical spec appeared concurrently. No force push; feature branch rebased onto remote spec and local recovered spec preserved separately."
+  },
+  "independentReadback": {
+    "path": "D:/JOEWRKS/joedesign-mvp-evidence-20260906/target-readback.json",
+    "result": "PASS",
+    "targetViewportCombinations": 6,
+    "visualObservation": "Controller also inspected all four final A ready screenshots and both final B refined screenshots; rendered hierarchy/composition and visible product fields corroborated native observations.",
+    "skillFormatValidation": {
+      "command": "C:/Python314/python.exe -X utf8 C:/Users/tjdwo/.codex/skills/.system/skill-creator/scripts/quick_validate.py D:/JOEWRKS/joewrks-design/skills/joedesign",
+      "result": "PASS",
+      "output": "Skill is valid!"
+    }
+  },
+  "knownGaps": [],
+  "intentionallyNotImplemented": [
+    "BIO competition/dogfood",
+    "External design engines and competitor payload",
+    "JOENESS Core, manifest/distribution, evaluation taxonomy or runtime revival",
+    "S0–S6 public/process framing, mandatory waterfall, Ponytail or Superpowers as product behavior",
+    "Refero/oh-my-design/Watermelon/Componentry/Cult UI/Anime routing",
+    "Separate visual-check entrypoint",
+    "Installer framework, PM/ticket/lifecycle/multi-agent systems, universal aesthetic or general evaluation platform"
+  ],
+  "unverified": [
+    "Competition readiness and comparative design quality require Program Lead review and the later competition.",
+    "Decision replay is a supplied-choice semantic exercise; it does not prove actual execution for every contract scenario.",
+    "Runtime execution proof is limited to the two neutral dashboard cases and named Chrome viewports; broader projects, signature motion, other browsers and full accessibility conformance were not tested.",
+    "No user acceptance of either smoke A candidate or the newly refined smoke B output was inferred."
+  ],
+  "authoringInfluence": "skill-creator guided the single discoverable entrypoint, bounded metadata and self-contained minimal skill resources; TDD governed test-first implementation."
+}
+
