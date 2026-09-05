@@ -1,0 +1,337 @@
+{
+  "kind": "spatial-role-and-bounded-change-evidence",
+  "fixture": {
+    "name": "Waypoint static workshop briefing",
+    "commit": "6025a0508e28f449efadadd09166d13673dd8af9",
+    "tree": "d14ab641c290c99a115a0800d92da7071e2cc08e"
+  },
+  "sourceImplementation": "1b01984982d5108902b2a597b043a2dac2ed225b",
+  "sourceSha256": {
+    "before": {
+      "PRODUCT.md": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
+      "DESIGN.md": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
+      "index.html": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
+      "styles.css": "cc6d4e7d80757391bd45cd1e97f4d265f7fa42a54cb9319008f23e4d33a33fdb",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    },
+    "after": {
+      "PRODUCT.md": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
+      "DESIGN.md": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
+      "index.html": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
+      "styles.css": "a267333502b73ac3b2b195389e910c466df7101d8e78d7987f8ff397fe2dcfe4",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    }
+  },
+  "changedTrackedFiles": [
+    "styles.css"
+  ],
+  "checks": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "textUnchanged": true,
+      "recordsUnchanged": true,
+      "headingOrderUnchanged": true,
+      "horizontalOverflow": false,
+      "actionPreserved": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "textUnchanged": true,
+      "recordsUnchanged": true,
+      "headingOrderUnchanged": true,
+      "horizontalOverflow": false,
+      "actionPreserved": true
+    }
+  ],
+  "boundaries": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "measurements": {
+        "section": {
+          "from": "#preparation",
+          "to": "#handover",
+          "axis": "vertical",
+          "role": "space-section",
+          "before": 44,
+          "after": 160
+        },
+        "major": {
+          "from": "#a1",
+          "to": "#a2",
+          "axis": "vertical",
+          "role": "space-group-1",
+          "before": 36,
+          "after": 48
+        },
+        "subgroupA": {
+          "from": "#a1-a",
+          "to": "#a1-b",
+          "axis": "vertical",
+          "role": "space-group-2",
+          "before": 16,
+          "after": 24
+        },
+        "subgroupB": {
+          "from": "#b1-a",
+          "to": "#b1-b",
+          "axis": "vertical",
+          "role": "space-group-2",
+          "before": 16,
+          "after": 24
+        },
+        "itemGroupA": {
+          "from": "#a1-a-1",
+          "to": "#a1-a-2",
+          "axis": "vertical",
+          "role": "space-group-3",
+          "before": 16,
+          "after": 16
+        },
+        "itemGroupB": {
+          "from": "#b1-a-1",
+          "to": "#b1-a-2",
+          "axis": "vertical",
+          "role": "space-group-3",
+          "before": 28,
+          "after": 16
+        },
+        "itemTitleDescription": {
+          "from": "#a1-a-1 h5",
+          "to": "#a1-a-1 > p",
+          "axis": "vertical",
+          "role": "space-micro",
+          "before": 20,
+          "after": 4
+        },
+        "subgroupTitleDescription": {
+          "from": "#a1-a h4",
+          "to": "#a1-a .subgroup-heading p",
+          "axis": "vertical",
+          "role": "space-micro",
+          "before": 28,
+          "after": 4
+        },
+        "labelValue": {
+          "from": "#a1-a-1 dt",
+          "to": "#a1-a-1 dd",
+          "axis": "horizontal",
+          "role": "space-micro",
+          "before": 20,
+          "after": 4
+        }
+      },
+      "descriptionToMetadata": {
+        "role": "space-tight",
+        "before": "28px",
+        "after": "8px"
+      }
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "measurements": {
+        "section": {
+          "from": "#preparation",
+          "to": "#handover",
+          "axis": "vertical",
+          "role": "space-section",
+          "before": 22,
+          "after": 160
+        },
+        "major": {
+          "from": "#a1",
+          "to": "#a2",
+          "axis": "vertical",
+          "role": "space-group-1",
+          "before": 18,
+          "after": 48
+        },
+        "subgroupA": {
+          "from": "#a1-a",
+          "to": "#a1-b",
+          "axis": "vertical",
+          "role": "space-group-2",
+          "before": 8,
+          "after": 24
+        },
+        "subgroupB": {
+          "from": "#b1-a",
+          "to": "#b1-b",
+          "axis": "vertical",
+          "role": "space-group-2",
+          "before": 8,
+          "after": 24
+        },
+        "itemGroupA": {
+          "from": "#a1-a-1",
+          "to": "#a1-a-2",
+          "axis": "vertical",
+          "role": "space-group-3",
+          "before": 8,
+          "after": 16
+        },
+        "itemGroupB": {
+          "from": "#b1-a-1",
+          "to": "#b1-a-2",
+          "axis": "vertical",
+          "role": "space-group-3",
+          "before": 14,
+          "after": 16
+        },
+        "itemTitleDescription": {
+          "from": "#a1-a-1 h5",
+          "to": "#a1-a-1 > p",
+          "axis": "vertical",
+          "role": "space-micro",
+          "before": 10,
+          "after": 4
+        },
+        "subgroupTitleDescription": {
+          "from": "#a1-a h4",
+          "to": "#a1-a .subgroup-heading p",
+          "axis": "vertical",
+          "role": "space-micro",
+          "before": 14,
+          "after": 4
+        },
+        "labelValue": {
+          "from": "#a1-a-1 dt",
+          "to": "#a1-a-1 dd",
+          "axis": "horizontal",
+          "role": "space-micro",
+          "before": 10,
+          "after": 4
+        }
+      },
+      "descriptionToMetadata": {
+        "role": "space-tight",
+        "before": "14px",
+        "after": "8px"
+      }
+    }
+  ],
+  "semanticVisualBlockTree": [
+    {
+      "id": "A",
+      "section": "Preparation",
+      "majorGroups": [
+        {
+          "id": "A1",
+          "name": "People and materials",
+          "subgroups": [
+            {
+              "id": "A1-a",
+              "name": "Host briefings",
+              "itemGroups": [
+                "Welcome desk",
+                "Room host"
+              ]
+            },
+            {
+              "id": "A1-b",
+              "name": "Shared resources",
+              "itemGroups": [
+                "Participant pack",
+                "Facilitator pack"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "A2",
+          "name": "Room readiness",
+          "subgroups": [
+            {
+              "id": "A2-a",
+              "name": "Opening checks",
+              "itemGroups": [
+                "Seating plan",
+                "Materials table"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "B",
+      "section": "Handover",
+      "majorGroups": [
+        {
+          "id": "B1",
+          "name": "Follow-up and ownership",
+          "subgroups": [
+            {
+              "id": "B1-a",
+              "name": "Team handover",
+              "itemGroups": [
+                "Session recap",
+                "Open questions"
+              ]
+            },
+            {
+              "id": "B1-b",
+              "name": "Resource return",
+              "itemGroups": [
+                "Printed packs",
+                "Room notes"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "wrapperIndependence": "A1-b, B1, B1-a-1 and B1-a-2 contain different extra shim depths. No semantic hierarchy changes; identical relationships still share role selectors. Original HTML is byte-identical.",
+  "visualFlow": "Page purpose and blue anchor → Preparation → People and materials → Room readiness → largest chapter break → Handover and its follow-up ownership.",
+  "spatialProfile": {
+    "desktop": {
+      "section": 160,
+      "majorGroup": 48,
+      "subgroup": 24,
+      "itemGroup": 16,
+      "tight": 8,
+      "micro": 4
+    },
+    "mobile": {
+      "section": 160,
+      "majorGroup": 48,
+      "subgroup": 24,
+      "itemGroup": 16,
+      "tight": 8,
+      "micro": 4
+    },
+    "reason": "Approved calm briefing has no density override. Mobile deliberately preserves the default structural roles, while using one column, 24px gutters instead of 48px and the action below the introduction. It does not halve desktop spacing. Mobile document height changes from 2455 to 2536px; desktop from 3125 to 2374px."
+  },
+  "bindingVsStructure": "Heading-to-child-collection introductions use chapter 24px, major 16px, subgroup 8px; these do not replace sibling separation 160/48/24/16. Article title/description and label/value use 4px; description/metadata 8px; Owner/Time pair separation 16px.",
+  "oneOffSpacingReview": "Removed initial local 20/28/36/44px margin/padding/gap and their proportional mobile halves. Final material spacing uses the six named roles (plus zero resets and auto centering). Font sizes such as 44px and 28px are typography, not layout-spacing exceptions.",
+  "changeScope": "Only styles.css changed in the frozen fixture. Changes cover spatial roles, responsive gutters/action layout, heading scale, metadata legibility and anchor scroll clearance; no new surface system, cards, dependencies, Product semantics or direction replacement.",
+  "actualRenderedObservations": {
+    "before": "Titles, descriptions and metadata read apart; subgroup headings sit too close to the previous item. Preparation and Handover have inconsistent item rhythm and an insufficient chapter break.",
+    "after": "At both sizes, each title now reads with its description and metadata; subgroup starts have more separation than item starts, Room readiness has a stronger major-group pause, and Handover has the largest visible break. Required content remains readable in one left-aligned flow, without horizontal clipping.",
+    "basis": "Native fresh Astra inspected before/after full-page and viewport/anchor screenshots; controller independently inspected all four full-page PNGs and browser-measured the exact unchanged target."
+  },
+  "acceptance": "Craft/Visual Conformance PASS is not user acceptance. APPROVED DESIGN.md Rev 1 and Product authority remain unchanged. Exact refined output is not accepted.",
+  "reproduction": {
+    "files": [
+      "fixture.html",
+      "before.css",
+      "after.css",
+      "PRODUCT.md",
+      "DESIGN.md"
+    ],
+    "instructions": "In a disposable directory, copy fixture.html to index.html and copy either before.css or after.css to styles.css. Open index.html in Chrome at 1440x1000 or 390x844, device scale 1. No install, network or build is needed. Evidence uses full-page captures at these viewports.",
+    "warning": "fixture.html intentionally preserves the original styles.css link and byte hash; choose the paired CSS as described."
+  }
+}
