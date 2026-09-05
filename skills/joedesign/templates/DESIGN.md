@@ -16,6 +16,22 @@ Keep product meaning in its authority, not duplicated here. -->
 
 ## Typography
 
+### Type Roles
+
+<!-- Record only project-specific recurring semantic type roles when sourced/approved. Do not create a different role for every element. -->
+
+### Type Scale
+
+<!-- Record the approved project type-size/weight/line-height system if one exists. JOEDESIGN defaults used during draft proof are not automatically project authority. -->
+
+### Reading Measure / Rhythm
+
+<!-- Long-form measure, line-height, paragraph rhythm, language-specific constraints, and material optical notes when they matter. -->
+
+### Responsive Type Translation
+
+<!-- Preserve semantic role hierarchy and readable measure; do not merely scale desktop values proportionally. -->
+
 ## Color / Surface
 
 ## Composition / Spatial Hierarchy
