@@ -1,0 +1,432 @@
+{
+  "case": "Smoke C — fresh Typography & Scale Core regression",
+  "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a07302-8a2d-75d2-9f96-9a62ad626ceb",
+    "version": "codex-cli 0.153.0",
+    "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+  },
+  "spatialProfile": {
+    "section": 160,
+    "group1": 48,
+    "group2": 24,
+    "group3": 16,
+    "tight": 8,
+    "micro": 4
+  },
+  "semanticVisualBlockTree": [
+    "Preparation → People and materials → Host briefings / Shared resources → paired items",
+    "Preparation → Room readiness → Opening checks → paired items",
+    "Handover → Follow-up and ownership → Team handover / Resource return → paired items",
+    "Each item → title + description + owner/time fields"
+  ],
+  "changedTrackedFiles": [
+    "styles.css"
+  ],
+  "sourceSha256": {
+    "before": {
+      "PRODUCT.md": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
+      "DESIGN.md": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
+      "index.html": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
+      "styles.css": "cc6d4e7d80757391bd45cd1e97f4d265f7fa42a54cb9319008f23e4d33a33fdb",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    },
+    "after": {
+      "PRODUCT.md": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
+      "DESIGN.md": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
+      "index.html": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
+      "styles.css": "deaaee297b6de75ffd26571eb2a767b6df6b58b57df8d316ed36851f6bf883b7",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    }
+  },
+  "targets": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "boundaries": {
+        "section": {
+          "from": "#preparation",
+          "to": "#handover",
+          "vertical": 44,
+          "horizontal": -992
+        },
+        "major": {
+          "from": "#a1",
+          "to": "#a2",
+          "vertical": 36,
+          "horizontal": -992
+        },
+        "subgroupA": {
+          "from": "#a1-a",
+          "to": "#a1-b",
+          "vertical": 16,
+          "horizontal": -992
+        },
+        "subgroupB": {
+          "from": "#b1-a",
+          "to": "#b1-b",
+          "vertical": 16,
+          "horizontal": -992
+        },
+        "itemGroupA": {
+          "from": "#a1-a-1",
+          "to": "#a1-a-2",
+          "vertical": 16,
+          "horizontal": -992
+        },
+        "itemGroupB": {
+          "from": "#b1-a-1",
+          "to": "#b1-a-2",
+          "vertical": 28,
+          "horizontal": -992
+        },
+        "itemTitleDescription": {
+          "from": "#a1-a-1 h5",
+          "to": "#a1-a-1 > p",
+          "vertical": 20,
+          "horizontal": -992
+        },
+        "subgroupTitleDescription": {
+          "from": "#a1-a h4",
+          "to": "#a1-a .subgroup-heading p",
+          "vertical": 28,
+          "horizontal": -992
+        },
+        "labelValue": {
+          "from": "#a1-a-1 dt",
+          "to": "#a1-a-1 dd",
+          "vertical": -19.5,
+          "horizontal": 20
+        }
+      },
+      "customProperties": {},
+      "action": {
+        "count": 1,
+        "href": "#handover",
+        "hash": "#handover"
+      }
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boundaries": {
+        "section": {
+          "from": "#preparation",
+          "to": "#handover",
+          "vertical": 22,
+          "horizontal": -346
+        },
+        "major": {
+          "from": "#a1",
+          "to": "#a2",
+          "vertical": 18,
+          "horizontal": -346
+        },
+        "subgroupA": {
+          "from": "#a1-a",
+          "to": "#a1-b",
+          "vertical": 8,
+          "horizontal": -346
+        },
+        "subgroupB": {
+          "from": "#b1-a",
+          "to": "#b1-b",
+          "vertical": 8,
+          "horizontal": -346
+        },
+        "itemGroupA": {
+          "from": "#a1-a-1",
+          "to": "#a1-a-2",
+          "vertical": 8,
+          "horizontal": -346
+        },
+        "itemGroupB": {
+          "from": "#b1-a-1",
+          "to": "#b1-a-2",
+          "vertical": 14,
+          "horizontal": -346
+        },
+        "itemTitleDescription": {
+          "from": "#a1-a-1 h5",
+          "to": "#a1-a-1 > p",
+          "vertical": 10,
+          "horizontal": -346
+        },
+        "subgroupTitleDescription": {
+          "from": "#a1-a h4",
+          "to": "#a1-a .subgroup-heading p",
+          "vertical": 14,
+          "horizontal": -346
+        },
+        "labelValue": {
+          "from": "#a1-a-1 dt",
+          "to": "#a1-a-1 dd",
+          "vertical": -19.5,
+          "horizontal": 10
+        }
+      },
+      "customProperties": {},
+      "action": {
+        "count": 1,
+        "href": "#handover",
+        "hash": "#handover"
+      }
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "boundaries": {
+        "section": {
+          "from": "#preparation",
+          "to": "#handover",
+          "vertical": 160,
+          "horizontal": -984
+        },
+        "major": {
+          "from": "#a1",
+          "to": "#a2",
+          "vertical": 48,
+          "horizontal": -984
+        },
+        "subgroupA": {
+          "from": "#a1-a",
+          "to": "#a1-b",
+          "vertical": 24,
+          "horizontal": -984
+        },
+        "subgroupB": {
+          "from": "#b1-a",
+          "to": "#b1-b",
+          "vertical": 24,
+          "horizontal": -984
+        },
+        "itemGroupA": {
+          "from": "#a1-a-1",
+          "to": "#a1-a-2",
+          "vertical": 16,
+          "horizontal": -984
+        },
+        "itemGroupB": {
+          "from": "#b1-a-1",
+          "to": "#b1-a-2",
+          "vertical": 16,
+          "horizontal": -984
+        },
+        "itemTitleDescription": {
+          "from": "#a1-a-1 h5",
+          "to": "#a1-a-1 > p",
+          "vertical": 4,
+          "horizontal": -984
+        },
+        "subgroupTitleDescription": {
+          "from": "#a1-a h4",
+          "to": "#a1-a .subgroup-heading p",
+          "vertical": 8,
+          "horizontal": -984
+        },
+        "labelValue": {
+          "from": "#a1-a-1 dt",
+          "to": "#a1-a-1 dd",
+          "vertical": -21,
+          "horizontal": 4
+        }
+      },
+      "customProperties": {
+        "--space-tight": "8px",
+        "--space-micro": "4px",
+        "--type-group": "24px",
+        "--type-subgroup": "20px",
+        "--type-label": "12px",
+        "--type-display": "48px",
+        "--type-body": "16px",
+        "--space-group-3": "16px",
+        "--type-chapter": "32px",
+        "--space-group-1": "48px",
+        "--space-group-2": "24px",
+        "--space-section": "160px",
+        "--type-meta": "14px"
+      },
+      "action": {
+        "count": 1,
+        "href": "#handover",
+        "hash": "#handover"
+      }
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "boundaries": {
+        "section": {
+          "from": "#preparation",
+          "to": "#handover",
+          "vertical": 160,
+          "horizontal": -342
+        },
+        "major": {
+          "from": "#a1",
+          "to": "#a2",
+          "vertical": 48,
+          "horizontal": -342
+        },
+        "subgroupA": {
+          "from": "#a1-a",
+          "to": "#a1-b",
+          "vertical": 24,
+          "horizontal": -342
+        },
+        "subgroupB": {
+          "from": "#b1-a",
+          "to": "#b1-b",
+          "vertical": 24,
+          "horizontal": -342
+        },
+        "itemGroupA": {
+          "from": "#a1-a-1",
+          "to": "#a1-a-2",
+          "vertical": 16,
+          "horizontal": -342
+        },
+        "itemGroupB": {
+          "from": "#b1-a-1",
+          "to": "#b1-a-2",
+          "vertical": 16,
+          "horizontal": -342
+        },
+        "itemTitleDescription": {
+          "from": "#a1-a-1 h5",
+          "to": "#a1-a-1 > p",
+          "vertical": 4,
+          "horizontal": -342
+        },
+        "subgroupTitleDescription": {
+          "from": "#a1-a h4",
+          "to": "#a1-a .subgroup-heading p",
+          "vertical": 8,
+          "horizontal": -342
+        },
+        "labelValue": {
+          "from": "#a1-a-1 dt",
+          "to": "#a1-a-1 dd",
+          "vertical": -21,
+          "horizontal": 4
+        }
+      },
+      "customProperties": {
+        "--space-tight": "8px",
+        "--space-micro": "4px",
+        "--type-group": "24px",
+        "--type-subgroup": "20px",
+        "--type-label": "12px",
+        "--type-display": "40px",
+        "--type-body": "16px",
+        "--space-group-3": "16px",
+        "--type-chapter": "32px",
+        "--space-group-1": "48px",
+        "--space-group-2": "24px",
+        "--space-section": "160px",
+        "--type-meta": "14px"
+      },
+      "action": {
+        "count": 1,
+        "href": "#handover",
+        "hash": "#handover"
+      }
+    }
+  ],
+  "productInvariants": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "textUnchanged": true,
+      "recordsUnchanged": true,
+      "headingOrderUnchanged": true,
+      "horizontalOverflow": false,
+      "actionPreserved": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "textUnchanged": true,
+      "recordsUnchanged": true,
+      "headingOrderUnchanged": true,
+      "horizontalOverflow": false,
+      "actionPreserved": true
+    }
+  ],
+  "checks": [
+    {
+      "id": "C1",
+      "claim": "Semantic tree before DOM depth",
+      "observed": "Preparation/Handover → major groups → subgroups → item groups → local metadata. Native review identifies meaning and retains unequal wrapper depths in unchanged HTML.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C2",
+      "claim": "Same relationship uses the same role",
+      "observed": "Both A/B item-group siblings measure 16px and subgroup siblings 24px at desktop and mobile despite unequal wrappers.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C3",
+      "claim": "Distinct structural hierarchy",
+      "observed": "Actual section/major/subgroup/item boundaries are 160/48/24/16px at both viewports.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C4",
+      "claim": "Separation vs binding",
+      "observed": "Item title-description is 4px, description-metadata 8px, label-value 4px. Heading-purpose binding is 8px. These remain tighter than structural sibling gaps.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C5",
+      "claim": "Restricted spatial vocabulary",
+      "observed": "Six named spatial roles are 160/48/24/16/8/4. Type tokens are independent from layout tokens.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C6",
+      "claim": "Arbitrary spacing removed",
+      "observed": "Source CSS replaces one-off 20/28/36/44px layout gaps with named roles, zero resets or auto centering; optical type values are not spatial exceptions.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C7",
+      "claim": "Responsive hierarchy",
+      "observed": "Mobile retains the same structural profile and all ten records; only gutters and the introduction arrangement translate for mobile.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C8",
+      "claim": "Observed render",
+      "observed": "Controller opened all four fresh full-page before/after PNGs; item clusters visibly bind while Handover has the largest section pause. Independent browser readback checks content, heading order, rows, anchor and overflow.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "C9",
+      "claim": "Acceptance boundary",
+      "observed": "Native review explicitly keeps exact refinement unaccepted. PRODUCT.md and APPROVED DESIGN.md Rev 1 are byte-identical.",
+      "verdict": "PASS"
+    }
+  ],
+  "acceptanceBoundary": "Observed conformance PASS is not user acceptance; existing APPROVED Rev 1 remains unchanged.",
+  "reproduction": "Open fixture.html with either before.css or after.css copied to a disposable styles.css beside it. Named screenshot viewports are 1440x1000 and 390x844, full-page capture. Evidence source copies do not modify the installed skill."
+}

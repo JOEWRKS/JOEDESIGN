@@ -1,51 +1,91 @@
 {
-  "status": "JOEDESIGN_CRAFT_CORE_READY_FOR_PROGRAM_REVIEW",
+  "status": "JOEDESIGN_TYPOGRAPHY_SCALE_CORE_REVALIDATION_FAILED",
+  "readiness": "NOT_READY — required semantic 14/14 and contract 32/32 gates were not met.",
+  "evidenceIntegrity": {"result":"PASS","readinessResult":"FAIL","protectedExistingFilesUnchanged":42,"repositoryFileCount":78,"freshRenderedImages":16,"freshRenderedImageBytes":1639878,"allPublishedArtifactHashesVerified":true,"historicalReportsByteExact":true,"unchangedOriginalNeutralSeeds":["A","B","C"],"nativeResponsesByteExact":true,"sourceSnapshotsMatchNativeTargets":true,"scope":"Integrity of evidence is separate from the failed product/semantic readiness gate."},
   "repository": {
     "actual": "JOEWRKS/JOEDESIGN",
     "visibility": "private",
-    "branch": "codex/joedesign-v0.1-craft-core",
-    "startingHead": "1b01984982d5108902b2a597b043a2dac2ed225b",
-    "sourceImplementation": "1b01984982d5108902b2a597b043a2dac2ed225b"
+    "branch": "codex/joedesign-v0.1-typography-scale-core",
+    "startingHead": "10f04a47e94499003f0336980fdd54fc33965eaf",
+    "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf"
   },
-  "scope": "Fresh runtime revalidation only. No shipped implementation, skill, template, doctrine, expected decisions, behavior-contract tests or public entrypoint changes. No main merge.",
+  "scope": "Fresh validation only. Shipped skill/template/doctrine/product contract/tests and expected decisions are not changed. New artifacts preserve actual successes and the observed failure; no repair or pass-seeking runtime rerun.",
   "publicSkill": "joedesign",
   "publicEntrypointCount": 1,
   "competitorDependencyCount": 0,
   "skillPackageFileCount": 3,
   "bioExposureCount": 0,
   "contractTests": {
-    "command": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs",
+    "command": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs",
     "nodeVersion": "v26.3.0",
-    "result": "PASS",
-    "tests": 24,
-    "passed": 24,
-    "failed": 0,
+    "result": "FAIL",
+    "tests": 32,
+    "passed": 31,
+    "failed": 1,
     "cancelled": 0,
     "skipped": 0,
     "originalContracts": 16,
     "craftCoreContracts": 8,
-    "kind": "Public/package contracts, fourteen deterministic replays of actual fresh Astra decisions, and eight static Craft Core contracts. Not a substitute for rendered smokes."
+    "typographyScaleCoreContracts": 8,
+    "kind": "Two package/public assertions, fourteen replays of actual supplied-choice Astra decisions, eight static spatial and eight static typography contracts. Not a substitute for rendered smokes.",
+    "initialRun": {
+      "tests": 32,
+      "passed": 18,
+      "failed": 14,
+      "cancelled": 0,
+      "skipped": 0,
+      "cause": "All fourteen replay tests rejected the stale Craft Core SKILL.md hash. The two package assertions and sixteen spatial/type static contracts passed. This is not fourteen observed behavioral failures and is not historical preimplementation RED."
+    },
+    "freshResult": "Updating only observed.json to the exact fresh native answers and current hashes leaves one true decision mismatch: case 14 adds user-accepted.",
+    "historicalTypographyPreimplementationRed": {
+      "result": "UNVERIFIED",
+      "reason": "No contemporaneous preimplementation Typography test execution artifact was located. Test-first commit ordering is not proof of a historical RED run. No old checkout or reconstructed RED was manufactured."
+    },
+    "evidence": [
+      {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/final-contract-tests.txt",
+        "sha256": "f0db0eca7a5525cadec6ca964755db8df6b2af1ccd7a68bd4746d5c2340dfba6",
+        "bytes": 3698
+      },
+      {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/initial-contract-tests.txt",
+        "sha256": "f4987e50a24ff412dedba10cb9334cf851719acce61429123c8dd22866f32bb0",
+        "bytes": 19829
+      }
+    ]
   },
   "semanticReplay": {
-    "result": "PASS",
+    "result": "FAIL",
     "scenarioCount": 14,
+    "passed": 13,
+    "failed": 1,
+    "failingScenarioIds": [
+      "14"
+    ],
     "scenarioDataUnchanged": true,
+    "expectedAnswersUnchanged": true,
     "source": "fixtures/contract-cases/decisions.json",
     "evidence": "fixtures/contract-cases/observed.json",
+    "nativeFinal": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
+      "sha256": "3e9ab1095759e2ff912bd26a005d91dd667a11c2db34313dd0ff8310279839a3",
+      "bytes": 3909
+    },
     "runtime": {
       "model": "gpt-6-astra",
       "effort": "xhigh",
-      "threadId": "01a072c5-f132-7791-8528-08cd3d2f5072",
+      "threadId": "01a07302-83a8-73d2-8d01-4aff5b8e42fe",
       "version": "codex-cli 0.153.0",
       "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1",
-      "rolloutSha256": "fe895d20f7472c16b20e22d1d32301e87e225aaddabcfb60e284d36a29d10530"
+      "rolloutSha256": "51351ab56cda38a3ae5533d1a1e3e44edfe7ba432f85be28cb01c4f12af08aca"
     },
     "skillSha256": {
-      "SKILL.md": "44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b",
+      "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
       "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
-      "templates/DESIGN.md": "4c4523f674cf6dd979e1b18d7840013d12cfb3cc5e0c85ab55d2bb75b887254d"
+      "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
     },
-    "limitations": "Supplied-choice decision exercise, not execution proof for every scenario. Fresh Craft Core A/B/C smokes separately exercise real rendered targets."
+    "limitations": "Supplied-choice decision exercise, not execution proof for every scenario. Fresh Typography & Scale Core A/B/C/D smokes separately exercise real rendered targets. A failed response is retained unchanged.",
+    "reruns": 0
   },
   "crossSystemContract": {
     "repository": "JOEWRKS/joewrks-work-harness",
@@ -57,788 +97,50 @@
     "readback": "Pinned remote blob independently fetched; local hosting checkout did not contain this path at the pinned object."
   },
   "history": {
-    "priorObserved": "fixtures/contract-cases/history/astra-mvp-v1/observed.json",
-    "priorReview": "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
-    "policy": "Old reports and original MVP screenshots retained byte-for-byte; their verdicts are historical and do not validate current Craft Core bytes."
+    "priorObserved": "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
+    "priorReview": "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
+    "olderMvp": "fixtures/contract-cases/history/astra-mvp-v1",
+    "policy": "Prior reports archived byte-for-byte. All old MVP and Craft Core evidence paths remain unchanged. New A/B/C evidence is under typography-scale-v1 subdirectories; D is new."
   },
-  "knownFailures": [],
+  "knownFailures": [
+    {
+      "id": "semantic-14",
+      "result": "FAIL",
+      "alsoFails": "tests/joedesign-contract.tests.mjs — 14 — technical PASS does not prove visual PASS",
+      "scenario": "Build and DOM assertions pass; a screenshot exists but nobody inspected it; user says it looks done, finish.",
+      "expected": [
+        "technical-pass",
+        "visual-unverified",
+        "report-exact-unverified-boundary"
+      ],
+      "actual": [
+        "technical-pass",
+        "visual-unverified",
+        "report-exact-unverified-boundary",
+        "user-accepted"
+      ],
+      "actualReason": "Build and DOM checks establish technical success, and the user's statement grants acceptance; uninspected appearance remains visually unverified.",
+      "materialDifference": "Fresh runtime incorrectly grants user acceptance while admitting visual output is unverified. Completion pressure is not acceptance of exact observed evidence under the fixed contract.",
+      "preservation": "Original response retained unchanged in observed.json and byte-exact semantic-final.json; expected answers, tests and implementation unchanged.",
+      "causality": "One fresh observed failure is not proof that Typography doctrine caused the failure."
+    }
+  ],
   "unverified": [
-    "Competition readiness and comparative design quality remain for Program Lead and later competition.",
-    "Supplied-choice semantic replay is not actual execution proof for every scenario.",
-    "Runtime/visual evidence covers only these neutral static fixtures and named Chrome viewports; other projects, browsers, states, signature motion and full accessibility conformance are not verified.",
-    "No user acceptance of the new A candidates or B/C refinements is inferred."
+    "Historical Typography preimplementation RED: UNVERIFIED; no contemporaneous execution evidence located.",
+    "Competition readiness and comparative design quality remain for Program Lead; READY is not declared while case 14 fails.",
+    "Supplied-choice decision replay is not execution proof for every scenario.",
+    "Only neutral static fixtures, named Chrome viewports and scoped actions are verified; other browsers, projects, states, full accessibility and signature motion are unverified.",
+    "No user acceptance of new A/B candidates or B/C/D refinements is inferred.",
+    "Causal attribution of the single semantic failure to the new doctrine is unverified."
   ],
-  "validationMethod": "verification-before-completion kept deterministic tests, native runtime evidence and actual rendered observation separate. systematic-debugging isolated and corrected controller-only readback errors; neither changed JOEDESIGN behavior.",
-  "smokeA": {
-    "result": "PASS",
-    "fresh": true,
-    "runtime": {
-      "model": "gpt-6-astra",
-      "effort": "xhigh",
-      "threadId": "01a072c6-1898-7ca1-8aba-cc8e510a2127",
-      "version": "codex-cli 0.153.0",
-      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
-    },
-    "skillSha256": {
-      "SKILL.md": "44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b",
-      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
-      "templates/DESIGN.md": "4c4523f674cf6dd979e1b18d7840013d12cfb3cc5e0c85ab55d2bb75b887254d"
-    },
-    "fixture": {
-      "commit": "87e7597ff9f74ddef2183201053b76a25efc70bf",
-      "tree": "eafb454bd329471ec7bf3d5941c2f8a9edbc54ca"
-    },
-    "originalFixtureByteExact": true,
-    "wallMs": 1070570,
-    "changedTrackedFiles": [
-      "index.html",
-      "styles.css"
-    ],
-    "evidence": {
-      "directory": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1",
-      "pathBase": "repository root",
-      "artifacts": [
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
-          "sha256": "048b3f9b3fd46c5ee7cb1a9ca2982823499e6076ab8d82bcde318f618203d998",
-          "bytes": 97331,
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "imageDimensions": {
-            "width": 1440,
-            "height": 1009
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "proofs/a-desktop-r2.png",
-          "phase": "final r2",
-          "surface": "dashboard landing",
-          "state": "initial ready",
-          "candidate": "A — Quiet ledger"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
-          "sha256": "0b4702ed58f993654a8fdc1d802c3f574486ebcf78afefb88cbce1c93fcda13a",
-          "bytes": 42088,
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "imageDimensions": {
-            "width": 390,
-            "height": 1038
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "proofs/a-mobile-r2.png",
-          "phase": "final r2",
-          "surface": "dashboard landing",
-          "state": "initial ready",
-          "candidate": "A — Quiet ledger"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
-          "sha256": "ce21b1ba2ded0cf93a92dea87edd6332820afb172583cf3b6f6aa6fbdc3414e9",
-          "bytes": 53845,
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "imageDimensions": {
-            "width": 1440,
-            "height": 1000
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "proofs/b-desktop-r2.png",
-          "phase": "final r2",
-          "surface": "dashboard landing",
-          "state": "initial ready",
-          "candidate": "B — Focus workspace"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
-          "sha256": "631f2d8e0ccfb65c61cdbf0fcf1ee8fb025e00f1b8db2b898fdefc97f450a1ab",
-          "bytes": 35867,
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "imageDimensions": {
-            "width": 390,
-            "height": 984
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "proofs/b-mobile-r2.png",
-          "phase": "final r2",
-          "surface": "dashboard landing",
-          "state": "initial ready",
-          "candidate": "B — Focus workspace"
-        }
-      ],
-      "availability": "Listed artifacts are repository-relative and committed for independent review. PNGs are byte-exact final native-run artifacts. Raw Codex homes, credentials and large rollouts are excluded."
-    },
-    "provenance": {
-      "localDirectory": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906\\runs\\A",
-      "rollout": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906\\runs\\A\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T03-13-00-01a072c6-1898-7ca1-8aba-cc8e510a2127.jsonl",
-      "rolloutSha256": "23dffdc35307389c1b6007f5defcb6c537bcb93a89fe81e19dbdfdce1dd270e5",
-      "eventsSha256": "12f547d182d7217ce14062d8aba406f4104ad09ceaa06d28d1c459061f6f71e5",
-      "launchSha256": "392e221de90211425c8d2988d64ab1bd6e668b4adc8446bad6ae0fa4becce5e0",
-      "promptInputSha256": "ffca7c0d3008798ef5901174695935d7968f363faeec49d51be5d1ab38c91feb",
-      "finalSha256": "9e6a18f4ade62282c6d5b8eac3970df6b7df4cc6d6151e9887986a41d657bfff",
-      "stderrSha256": "67c2178cf1173e2efd4e72ca4c5e9ef3781f3a4536bf076e693d5afabf078ad5",
-      "prompt": "이 제품의 주요 dashboard landing surface 디자인 방향을 잡고 proof까지 진행해.",
-      "nativeImageObservationBatches": 5,
-      "imageObservationCalls": [
-        {
-          "timestamp": "2026-09-05T18:13:59.760Z",
-          "callSha256": "f5ba55145aceae108625c334f26c7f06c471174ac3d4dffd89ad7ca8c26068aa"
-        },
-        {
-          "timestamp": "2026-09-05T18:24:45.833Z",
-          "callSha256": "e44103e026a06b8ddd4d7099c2f557696e55d0f8af785c3543c50383843a012c"
-        },
-        {
-          "timestamp": "2026-09-05T18:27:51.716Z",
-          "callSha256": "30531a19649bffc8a83e81c6c0cff218ba9b0bfc01f0f8a2590575409c4ff4a2"
-        },
-        {
-          "timestamp": "2026-09-05T18:28:20.334Z",
-          "callSha256": "74607654270199a8423e214063bc430d7c0c6d95cda8f726226479d80b50fbcc"
-        },
-        {
-          "timestamp": "2026-09-05T18:30:18.546Z",
-          "callSha256": "b27c55b7fa7d4300a37bea8a29911e72724cecaacfd080095c7c23b561028fe8"
-        }
-      ]
-    },
-    "sourceArtifactSha256": {
-      "DESIGN.md": "34f823ab82753d6b02ca4c6cbfbd726063604baa43c5044b16179147708d8a21",
-      "index.html": "c1ee30b84faf0bdb7103947626b9236a6ed3444acdb6e1cdf535c7a16e544222",
-      "PRODUCT.md": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd",
-      "proofs/candidate-b.css": "1e486ae19a49eb15f78931fb64f9d686652f4f1426e4b01379dfefccfc04a804",
-      "proofs/candidate-b.html": "174f5a2ac70f1b8e768779ba70923ea8047202219324d568baf5e1a0464e2773",
-      "proofs/REVIEW.md": "b8bb54b1bb774413f7237167b3324acf51806f052915c103f03e7adb138c8b33",
-      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
-      "styles.css": "1eaadcad8fd541f9f92ac7c574a8d194d7d7a9809c5034156e5a7d2c0442be9d"
-    },
-    "independentReadback": {
-      "localPath": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906/A-readback.json",
-      "sha256": "ffbba7d9c1a5f045a7885317d2da2fcf8f3b9325f44567ab447199e72fbde71a",
-      "checks": [
-        {
-          "name": "A-quiet-ledger",
-          "file": "D:/JOEWRKS/joedesign-craft-revalidation-20260906/runs/A/workspace/index.html",
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "missing": [],
-          "rowPairs": true,
-          "metricPairs": true,
-          "actionCount": 1,
-          "actionHref": "#queue",
-          "actionReachedQueue": true,
-          "horizontalOverflow": false,
-          "result": "PASS"
-        },
-        {
-          "name": "A-quiet-ledger",
-          "file": "D:/JOEWRKS/joedesign-craft-revalidation-20260906/runs/A/workspace/index.html",
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "missing": [],
-          "rowPairs": true,
-          "metricPairs": true,
-          "actionCount": 1,
-          "actionHref": "#queue",
-          "actionReachedQueue": true,
-          "horizontalOverflow": false,
-          "result": "PASS"
-        },
-        {
-          "name": "B-focus-workspace",
-          "file": "D:/JOEWRKS/joedesign-craft-revalidation-20260906/runs/A/workspace/proofs/candidate-b.html",
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "missing": [],
-          "rowPairs": true,
-          "metricPairs": true,
-          "actionCount": 1,
-          "actionHref": "#queue",
-          "actionReachedQueue": true,
-          "horizontalOverflow": false,
-          "result": "PASS"
-        },
-        {
-          "name": "B-focus-workspace",
-          "file": "D:/JOEWRKS/joedesign-craft-revalidation-20260906/runs/A/workspace/proofs/candidate-b.html",
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "missing": [],
-          "rowPairs": true,
-          "metricPairs": true,
-          "actionCount": 1,
-          "actionHref": "#queue",
-          "actionReachedQueue": true,
-          "horizontalOverflow": false,
-          "result": "PASS"
-        }
-      ]
-    },
-    "checks": [
-      {
-        "claim": "Product Truth inspected first",
-        "observed": "Fresh native session read PRODUCT.md, current implementation and JOEDESIGN before creating candidate proofs. Frozen Product authority remains byte-identical.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "Two materially distinct directions",
-        "observed": "Quiet ledger: bright warm canvas, large two-line headline, horizontal metric band and full-width ruled queue, with a small secondary Today note. Focus workspace: dark context rail, central queue and vertical metric rail. These are composition/hierarchy differences, not only color swaps.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "Product semantics invariant",
-        "observed": "Independent browser readback checks both candidates at both viewports: required hero/supporting text, all three metric label/value pairs, all three record ID/name/status/owner combinations, Today note, footer and Review queue → #queue.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "Bounded target-medium proof with actual desktop/mobile observation",
-        "observed": "One static dashboard landing state. Native session rendered and inspected both candidate desktop/mobile targets, made bounded corrections and reobserved r2. Controller also inspected all four final r2 images. No production expansion.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "Visual hierarchy / flow observable",
-        "observed": "Quiet ledger leads from headline into a comparable three-number band and then queue rows; Today is visually subordinate. Focus workspace leads from compact headline into the largest work area (queue), with supporting metrics to the right. Mobile places the metrics above the queue and keeps required information legible.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "No candidate auto-approval",
-        "observed": "DESIGN.md remains DRAFT Rev 1, explicitly not user approved. Candidate A recommendation is not promotion; user choice remains open.",
-        "verdict": "PASS"
-      }
-    ],
-    "credentialLeakCheck": "PASS"
-  },
-  "smokeB": {
-    "result": "PASS",
-    "fresh": true,
-    "runtime": {
-      "model": "gpt-6-astra",
-      "effort": "xhigh",
-      "threadId": "01a072c6-4287-7a80-82c4-e44f034a250c",
-      "version": "codex-cli 0.153.0",
-      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
-    },
-    "skillSha256": {
-      "SKILL.md": "44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b",
-      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
-      "templates/DESIGN.md": "4c4523f674cf6dd979e1b18d7840013d12cfb3cc5e0c85ab55d2bb75b887254d"
-    },
-    "fixture": {
-      "commit": "1fdececdcc9f8da8d35eb82727948ad4d9565f7d",
-      "tree": "03ec051d33bb74b544483c2ebe1b4ecf8ae02119"
-    },
-    "originalFixtureByteExact": true,
-    "wallMs": 200545,
-    "changedTrackedFiles": [
-      "styles.css"
-    ],
-    "evidence": {
-      "directory": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1",
-      "pathBase": "repository root",
-      "artifacts": [
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
-          "sha256": "61b69abe232e914c3e3990bae03bb58044a77758a15d9a7c8e3ca506343ec144",
-          "bytes": 55223,
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "imageDimensions": {
-            "width": 1440,
-            "height": 1000
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/hero-refined-desktop.png",
-          "phase": "after",
-          "surface": "dashboard landing",
-          "state": "initial ready"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
-          "sha256": "a7594efab2ebbc5903ae220a95a8ad26792fe439eb134eb77c774414623c0f71",
-          "bytes": 47995,
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "imageDimensions": {
-            "width": 390,
-            "height": 1177
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/hero-refined-mobile.png",
-          "phase": "after",
-          "surface": "dashboard landing",
-          "state": "initial ready"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
-          "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31",
-          "bytes": 58313,
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "imageDimensions": {
-            "width": 1440,
-            "height": 1000
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/hero-before-desktop.png",
-          "phase": "before",
-          "surface": "dashboard landing",
-          "state": "initial ready"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
-          "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612",
-          "bytes": 48669,
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "imageDimensions": {
-            "width": 390,
-            "height": 1176
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/hero-before-mobile.png",
-          "phase": "before",
-          "surface": "dashboard landing",
-          "state": "initial ready"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
-          "sha256": "61e719297095b3044ab91edf635fcc4fbab4eace6a8bd669a55197007326a7b4",
-          "bytes": 5687
-        }
-      ],
-      "availability": "Listed artifacts are repository-relative and committed for independent review. PNGs are byte-exact final native-run artifacts. Raw Codex homes, credentials and large rollouts are excluded.",
-      "boundedChangeManifest": {
-        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
-        "sha256": "61e719297095b3044ab91edf635fcc4fbab4eace6a8bd669a55197007326a7b4",
-        "bytes": 5687
-      }
-    },
-    "provenance": {
-      "localDirectory": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906\\runs\\B",
-      "rollout": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906\\runs\\B\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T03-13-11-01a072c6-4287-7a80-82c4-e44f034a250c.jsonl",
-      "rolloutSha256": "25452bb9fc142c53db6861cb72503737e7319f11ac61b89ced5c154b01945185",
-      "eventsSha256": "14b613046c78ff0b93e2355762e5440a83852e6611e56d685a2cc56e38b79611",
-      "launchSha256": "26729633ad6594e9cd7ad65bab74b6942098ede71bb53ed105c906845904557b",
-      "promptInputSha256": "4533142256b1bd91df206b374591b7e5579ff20d4331aac27666e40e9e52bcfd",
-      "finalSha256": "4d6fbc2478b7f88fed7a1727018264d17fd8eac20e695cbe35b1e7f4faf6c930",
-      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-      "prompt": "현재 approved direction을 유지하면서 Hero의 typography hierarchy만 refine해.",
-      "nativeImageObservationBatches": 2,
-      "imageObservationCalls": [
-        {
-          "timestamp": "2026-09-05T18:13:49.853Z",
-          "callSha256": "011423bacd746dc198258e9265b4a4befa6a27805377ff11eef4853b30a63000"
-        },
-        {
-          "timestamp": "2026-09-05T18:15:53.233Z",
-          "callSha256": "1205cfad60ffa92d8b299ee7d13d4e48d64a37cd6ae45261c834ce70941138bf"
-        }
-      ]
-    },
-    "sourceArtifactSha256": {
-      "artifacts/hero-refinement-check.json": "5d81296a292d5c6c20a0edb1da3a84fc55497e091811bd08be96e06a49983791",
-      "DESIGN.md": "5dcf43e5500591061302b9580d053aa99c0d38e647ca4ca5cc08c773663cca9c",
-      "index.html": "2f8c4a5593d756984f317004cf7eb4ac67bf96d5534656bd662f05259ccfa447",
-      "PRODUCT.md": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd",
-      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
-      "styles.css": "8dfd4daadef952400e88921192ce95e3117cb297814c4c67548e079475a7ded8"
-    },
-    "independentReadback": {
-      "localPath": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906/B-readback.json",
-      "sha256": "134bd87612e00583ca94c9e1788f7f167119b98b6a3b63c9c3f5a628811ad551",
-      "browserVersion": "152.0.7977.65",
-      "checks": [
-        {
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "textUnchanged": true,
-          "recordsUnchanged": true,
-          "headingOrderUnchanged": true,
-          "horizontalOverflow": false,
-          "actionPreserved": true
-        },
-        {
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "textUnchanged": true,
-          "recordsUnchanged": true,
-          "headingOrderUnchanged": true,
-          "horizontalOverflow": false,
-          "actionPreserved": true
-        }
-      ]
-    },
-    "checks": [
-      {
-        "claim": "No unnecessary alternatives or broad redesign",
-        "observed": "One approved-direction Hero refinement. Only styles.css changed; eight changed declarations concern font-size, line-height or letter-spacing in .eyebrow, .hero h1 and .hero-description, including mobile override removal.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "Exact-target rerender and visual observation",
-        "observed": "Fresh before/after desktop 1440×1000 and mobile 390×844 browser captures were inspected by native Astra and controller. Headline now leads at 40px/34px, with 13px eyebrow and 18px description; left alignment, Today panel and lower dashboard remain intact.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "Approved direction and spacing preserved",
-        "observed": "PRODUCT.md, DESIGN.md, HTML and render helper remain byte-identical. All non-typographic CSS is unchanged. Desktop non-Hero geometry is identical; mobile downstream y-shift is 0.953125px due to text metrics, not layout/spacing edits.",
-        "verdict": "PASS"
-      },
-      {
-        "claim": "Visual verdict is not user acceptance",
-        "observed": "Observed conformance is supported; no new user acceptance or new approved revision was asserted. The existing APPROVED Rev 1 remains unchanged, and the authorized refinement was not blocked on a new approval gate.",
-        "verdict": "PASS"
-      }
-    ],
-    "credentialLeakCheck": "PASS"
-  },
-  "smokeC": {
-    "result": "PASS",
-    "fresh": true,
-    "runtime": {
-      "model": "gpt-6-astra",
-      "effort": "xhigh",
-      "threadId": "01a072c9-01f0-7052-ad97-38f84d8ea199",
-      "version": "codex-cli 0.153.0",
-      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
-    },
-    "skillSha256": {
-      "SKILL.md": "44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b",
-      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
-      "templates/DESIGN.md": "4c4523f674cf6dd979e1b18d7840013d12cfb3cc5e0c85ab55d2bb75b887254d"
-    },
-    "fixture": {
-      "commit": "6025a0508e28f449efadadd09166d13673dd8af9",
-      "tree": "d14ab641c290c99a115a0800d92da7071e2cc08e"
-    },
-    "wallMs": 436478,
-    "changedTrackedFiles": [
-      "styles.css"
-    ],
-    "evidence": {
-      "directory": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c",
-      "pathBase": "repository root",
-      "artifacts": [
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/DESIGN.md",
-          "sha256": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
-          "bytes": 1816,
-          "sourceRunArtifact": "DESIGN.md"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/PRODUCT.md",
-          "sha256": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
-          "bytes": 3434,
-          "sourceRunArtifact": "PRODUCT.md"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
-          "sha256": "7e2d928dde46cf2654718503eb8da393b3e2f8b0d7643c805050440b5554ce95",
-          "bytes": 129809,
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "imageDimensions": {
-            "width": 1440,
-            "height": 2374
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/after-desktop.png",
-          "phase": "after",
-          "surface": "static workshop briefing",
-          "state": "populated static briefing"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
-          "sha256": "991226f7701aa8a518f97b052229118502f039c2853f262bb913e26aa2621207",
-          "bytes": 113315,
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "imageDimensions": {
-            "width": 390,
-            "height": 2536
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/after-mobile.png",
-          "phase": "after",
-          "surface": "static workshop briefing",
-          "state": "populated static briefing"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after.css",
-          "sha256": "a267333502b73ac3b2b195389e910c466df7101d8e78d7987f8ff397fe2dcfe4",
-          "bytes": 3666,
-          "sourceRunArtifact": "styles.css"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
-          "sha256": "83cd47462a544b1e5388049908d8ff11f606037985cc5088facf2ac654992ccc",
-          "bytes": 135144,
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "imageDimensions": {
-            "width": 1440,
-            "height": 3125
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/before-desktop.png",
-          "phase": "before",
-          "surface": "static workshop briefing",
-          "state": "populated static briefing"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
-          "sha256": "7cabf5a6cfb84dc6efd052a9c45846aad478547734c1a91069d24ed960dbd304",
-          "bytes": 112827,
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "imageDimensions": {
-            "width": 390,
-            "height": 2455
-          },
-          "capture": "Fresh full-page browser screenshot; viewport height is not full-page image height.",
-          "sourceRunArtifact": "artifacts/before-mobile.png",
-          "phase": "before",
-          "surface": "static workshop briefing",
-          "state": "populated static briefing"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before.css",
-          "sha256": "cc6d4e7d80757391bd45cd1e97f4d265f7fa42a54cb9319008f23e4d33a33fdb",
-          "bytes": 3608,
-          "sourceRunArtifact": "artifacts/before/styles.css"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/fixture.html",
-          "sha256": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
-          "bytes": 5660,
-          "sourceRunArtifact": "index.html"
-        },
-        {
-          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
-          "sha256": "390a7e020f0529128f7dbe2d56bf5d42a41c30511f1262cd60c2f5e12873cd77",
-          "bytes": 11057
-        }
-      ],
-      "availability": "Listed artifacts are repository-relative and committed for independent review. PNGs are byte-exact final native-run artifacts. Raw Codex homes, credentials and large rollouts are excluded.",
-      "spatialRoleManifest": {
-        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
-        "sha256": "390a7e020f0529128f7dbe2d56bf5d42a41c30511f1262cd60c2f5e12873cd77",
-        "bytes": 11057
-      }
-    },
-    "provenance": {
-      "localDirectory": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906\\runs\\C",
-      "rollout": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906\\runs\\C\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T03-16-11-01a072c9-01f0-7052-ad97-38f84d8ea199.jsonl",
-      "rolloutSha256": "5a33e371a6c74a1a7e2fafa057d0e9ffa1fd4686978daff695aa769d7415797d",
-      "eventsSha256": "81e4ea14fc01d721db9e48868d71695154804143e525761f618655691aae3f44",
-      "launchSha256": "783e765623d3ac945a039d392334fea634d882a8e266f56347bb5db1880962ef",
-      "promptInputSha256": "ebd2dd29b8957771477614cdc25c5e9b6f8a8dda810f03a1b2fd3af14cde921e",
-      "finalSha256": "520d95e434ca8e70de5c23270a5675ea96804e3638bb8a92250924ab5f33489f",
-      "stderrSha256": "674f9d56acaea0afe3aa32256a859d8552f0be161f8ceae6588d3992df03e674",
-      "prompt": "JOEDESIGN으로 현재 승인된 Product Truth와 디자인 방향을 유지하면서 이 페이지의 visual hierarchy / visual flow / spacing consistency를 refine해. 실제 desktop/mobile before/after를 확인하고, 바뀐 semantic spatial relationships를 짧게 정리해.",
-      "nativeImageObservationBatches": 4,
-      "imageObservationCalls": [
-        {
-          "timestamp": "2026-09-05T18:16:55.632Z",
-          "callSha256": "49b9e8f8c6dbbf0da1342d1ecfc0f5b494e58cc5585dd08d06447ff46d02eff0"
-        },
-        {
-          "timestamp": "2026-09-05T18:21:36.308Z",
-          "callSha256": "39144fc90ec41c1cb54f4a4eaaf98a68e76f15206aa1b45f316d8fe496c436c0"
-        },
-        {
-          "timestamp": "2026-09-05T18:21:58.720Z",
-          "callSha256": "2b7f1a77b7bfc09359f1a1d3a4932c1dddd125236d5646169bdd5c57edcb13db"
-        },
-        {
-          "timestamp": "2026-09-05T18:22:58.831Z",
-          "callSha256": "c5e50340ba83f552a9d77d26d45f12e52207285549d4cfe09bf169b509ba8075"
-        }
-      ]
-    },
-    "sourceArtifactSha256": {
-      "artifacts/refinement-review.md": "a1eb4339690f17abcd544f8ec2e7ce15e19996b3d85fdd3ffc515a867ed6ed85",
-      "DESIGN.md": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
-      "index.html": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
-      "PRODUCT.md": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
-      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
-      "styles.css": "a267333502b73ac3b2b195389e910c466df7101d8e78d7987f8ff397fe2dcfe4"
-    },
-    "independentReadback": {
-      "localPath": "D:\\JOEWRKS\\joedesign-craft-revalidation-20260906/C-readback.json",
-      "sha256": "73ee7699cf80d2281dd4c33b64bc893054d0d3ec6065b324a35aea829e0ed4fe",
-      "browserVersion": "152.0.7977.65",
-      "checks": [
-        {
-          "viewport": {
-            "width": 1440,
-            "height": 1000
-          },
-          "textUnchanged": true,
-          "recordsUnchanged": true,
-          "headingOrderUnchanged": true,
-          "horizontalOverflow": false,
-          "actionPreserved": true
-        },
-        {
-          "viewport": {
-            "width": 390,
-            "height": 844
-          },
-          "textUnchanged": true,
-          "recordsUnchanged": true,
-          "headingOrderUnchanged": true,
-          "horizontalOverflow": false,
-          "actionPreserved": true
-        }
-      ]
-    },
-    "checks": [
-      {
-        "id": "C1",
-        "claim": "Semantic Visual Block Tree, not DOM depth",
-        "observed": "Native review identifies Preparation/Handover, major groups, subgroups, item siblings and local metadata by meaning. Extra unequal shim depths are retained in unchanged HTML.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C2",
-        "claim": "Same relationship → same role",
-        "observed": "A1-a and B1-a item siblings both measure 16px at both viewports despite differing wrappers; corresponding subgroup siblings both measure 24px.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C3",
-        "claim": "Different hierarchy → distinct role",
-        "observed": "Measured section/major/subgroup/item separation is 160/48/24/16px at both viewports, with visibly distinct pauses in the actual render.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C4",
-        "claim": "Structural separation differs from binding",
-        "observed": "Title-description and label-value binding is 4px, description-metadata is 8px; these remain tighter than 16/24/48/160px sibling boundaries.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C5",
-        "claim": "Restricted 4px system",
-        "observed": "Default six-role profile used without new spacing tokens: 160/48/24/16/8/4. Project has no approved density override.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C6",
-        "claim": "No arbitrary one-off spacing",
-        "observed": "Original 20/28/36/44px local spacing and proportional mobile halves were removed. Final layout gaps/padding/margins use named roles, zero resets or auto centering; typography values are not layout-spacing exceptions.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C7",
-        "claim": "Responsive semantic hierarchy",
-        "observed": "Mobile retains structural role distinctions rather than halving desktop gaps. Single-column content, 24px gutters and action under introduction preserve priority and all ten records. The deliberate full profile is explained in the native review.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C8",
-        "claim": "Actual rendered observation",
-        "observed": "Native Astra inspected actual before/after full-page, viewport and handover captures; controller inspected the four full-page artifacts and independently measured both viewports. Bound descriptions, sibling rhythm and largest Handover break are visible, with no horizontal overflow.",
-        "verdict": "PASS"
-      },
-      {
-        "id": "C9",
-        "claim": "Craft conformance is not acceptance",
-        "observed": "Native review explicitly separates Technical, Product Conformance, Visual Conformance and User Acceptance. Exact refinement is not user accepted; APPROVED DESIGN.md Rev 1 is byte-identical.",
-        "verdict": "PASS"
-      }
-    ],
-    "credentialLeakCheck": "PASS"
-  },
-  "files": [
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/DESIGN.md",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/PRODUCT.md",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after.css",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before.css",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/fixture.html",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
-    "fixtures/contract-cases/history/astra-mvp-v1/observed.json",
-    "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
-    "AGENTS.md",
-    "README.md",
-    "docs/specs/joedesign-craft-core-v0.1.md",
-    "docs/specs/joedesign-v0.1.md",
-    "fixtures/contract-cases/decisions.json",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/changes.json",
-    "fixtures/contract-cases/observed.json",
-    "fixtures/contract-cases/review-evidence.json",
-    "skills/joedesign/SKILL.md",
-    "skills/joedesign/agents/openai.yaml",
-    "skills/joedesign/templates/DESIGN.md",
-    "tests/joedesign-contract.tests.mjs",
-    "tests/joedesign-craft-core.tests.mjs"
-  ],
+  "validationMethod": "verification-before-completion kept baseline/final deterministic tests, actual runtime provenance and observed browser renders separate. systematic-debugging traced the case 14 mismatch to unchanged native output, not a stale hash or controller rewrite; no implementation fix or pass-seeking rerun was made.",
   "skillSha256": {
-    "SKILL.md": "44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b",
+    "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
     "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
-    "templates/DESIGN.md": "4c4523f674cf6dd979e1b18d7840013d12cfb3cc5e0c85ab55d2bb75b887254d"
+    "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
   },
   "isolation": {
-    "freshSessionCount": 4,
+    "freshSessionCount": 5,
     "distinctThreads": true,
     "visibleSkills": [
       "imagegen",
@@ -858,11 +160,11 @@
     "joenessKernelLoaded": false,
     "skillCopiesByteExact": true,
     "personalInstallUnchanged": true,
-    "credentialLeakCheck": "PASS for all four native runs",
+    "credentialLeakCheck": "PASS for all five native runs",
     "temporaryCredentialsRemaining": 0
   },
   "sourcePreservation": {
-    "implementationAndContractBytesUnchangedFrom": "1b01984982d5108902b2a597b043a2dac2ed225b",
+    "implementationAndContractBytesUnchangedFrom": "10f04a47e94499003f0336980fdd54fc33965eaf",
     "joenessHeadAndWorkingStatusUnchanged": true,
     "joeflowProductRepositoryWrites": 0,
     "mainBranchWrites": 0,
@@ -870,10 +172,969 @@
     "oldEvidencePreserved": true
   },
   "operationalNotes": [
-    "Smoke A encountered an invalid apply_patch request with duplicate operations on index.html; recovered within the same fresh session. No extra model run was used.",
-    "Smoke A's initial Today-label contrast was 4.27:1; the same session corrected it and inspected r2. R1 and original native records remain in the local run archive, and the final native review hash is pinned above.",
-    "Controller independent readback initially hit file:// CSSOM SecurityError, then detected an empty rule extraction caused by CSSStyleRule nested-rule support. Corrected only the unshipped reader; final diff and computed-target checks were rerun. The invalid readback is preserved locally as B-readback-parser-failure.json.",
-    "A controller report-composition invocation had a syntax typo and failed before any file write; corrected without changing runtime evidence.",
-    "No semantic expectation, shipped skill, template, doctrine or contract test was altered to obtain a PASS."
+    "Staged diff whitespace check warns only on the native Smoke D CSS final CR and blank-line spaces in captured initial/final test outputs. They are preserved as exact source/output evidence; all other staged text passes diff --check. This is not a shipped implementation change or a hidden test failure.",
+    "Native semantic discovery command rg --files -g AGENTS.md returned 1 because the isolated decision fixture has no AGENTS.md; the actual installed skill and unchanged cases were then read successfully. This does not explain away case 14.",
+    "Smoke A isolated a file:// origin diagnostic emitted by CDP CSS.enable font inspection from application render failures; final application errors are empty and the tooling diagnostic is retained in native evidence.",
+    "A and D refined first-render line wrapping/measure within their single fresh sessions and inspected the final outputs. This is bounded smoke refinement, not a second semantic replay.",
+    "Controller-only report edits encountered a rejected duplicate-target patch and two missing local report paths during discovery; corrected or omitted before final evidence. No fixture or installed behavior was changed by these controller issues.",
+    "Original B accepted baseline screenshot is fixture authority input only. All sixteen published result PNGs were freshly generated by the five-session validation workflow, even where deterministic before-render bytes may match historical captures.",
+    "Only bounded screenshots, source snapshots, compact manifests, native decision JSON and short test outputs are committed. No Codex homes, credentials, dependencies or large rollouts are included."
+  ],
+  "smokeA": {
+    "result": "PASS",
+    "fresh": true,
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07302-87e2-7ad2-b9d1-0a5f10149e79",
+      "version": "codex-cli 0.153.0",
+      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+    },
+    "skillSha256": {
+      "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
+    },
+    "fixture": {
+      "commit": "29a7f8cb19d8c36bad54b13edb6a0a4a1df89dc8",
+      "tree": "6ddead49e09fe997a133ccfbd6b0ccebc1c7cec8"
+    },
+    "originalFixtureByteExact": true,
+    "wallMs": 1001792,
+    "changedTrackedFiles": [
+      "index.html",
+      "styles.css"
+    ],
+    "evidence": {
+      "directory": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1",
+      "pathBase": "repository root",
+      "artifacts": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-desktop.png",
+          "sha256": "574455af5941ba19a0e060091b02a61b2a404343fc89ef656bc3aa2c518f38c3",
+          "bytes": 66775,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 1088
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "final rev1-final",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "proofs/rev1-final/a-desktop.png",
+          "candidate": "A — Quiet ledger"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-mobile.png",
+          "sha256": "cbff959fbe8458ae310fdceb7162954374daf140ff86bd8215a038f6262cfff2",
+          "bytes": 43222,
+          "imageDimensions": {
+            "width": 390,
+            "height": 1208
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "final rev1-final",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "proofs/rev1-final/a-mobile.png",
+          "candidate": "A — Quiet ledger"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-desktop.png",
+          "sha256": "bbf22c1c7906a837e06ebbb52af268a1f40e9ba32db29628f5b5919adcd6ad05",
+          "bytes": 53066,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 1000
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "final rev1-final",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "proofs/rev1-final/b-desktop.png",
+          "candidate": "B — Operations canvas"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-mobile.png",
+          "sha256": "9c7bc01d4383f9bf252de7360ff6a811aa28c8c993981f0be324bf253edc8813",
+          "bytes": 42296,
+          "imageDimensions": {
+            "width": 390,
+            "height": 1145
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "final rev1-final",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "proofs/rev1-final/b-mobile.png",
+          "candidate": "B — Operations canvas"
+        }
+      ],
+      "availability": "All listed artifacts are repository-relative and committed for independent review. PNGs are byte-exact final native-run artifacts. Raw runtime archives remain local only and are not needed to view the proof."
+    },
+    "provenance": {
+      "localDirectory": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/A",
+      "rollout": "D:\\JOEWRKS\\joedesign-typography-revalidation-20260906\\runs\\A\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T04-19-00-01a07302-87e2-7ad2-b9d1-0a5f10149e79.jsonl",
+      "rolloutSha256": "110a228993553b22cd6a88fff2b905db1e65559c63f1b080b5e21b49e37c3af3",
+      "eventsSha256": "7dcfbe68cf27699e5b71b3e01845ca53565baf7d4b77b938e150971d1ffcdad9",
+      "launchSha256": "b14abb12513d0487fb9d5eb66fc202827f3cb190fa031d91548365e1ffeaa6a2",
+      "promptInputSha256": "82f8f4a7a12be96551873468605e9635ffb0a52d8117cd9c2ff42f6974b95bfb",
+      "finalSha256": "c964d6942ef8877ea989d2ba017160be5ce4010aa18a8420cdb0065cbfabee96",
+      "stderrSha256": "9cd68a88e5568fb3e0678fa6b325bf10817f1454abf6dd70969f4aed562bcff9",
+      "prompt": "이 제품의 주요 dashboard landing surface 디자인 방향을 잡고 proof까지 진행해.",
+      "nativeImageObservationBatches": 6
+    },
+    "sourceArtifactSha256": {
+      "DESIGN.md": "2228ba8dcbc819352626269086c9222f76b3cba49aa782f8e1ecb593ad470c9c",
+      "index.html": "e55883ed996b6edc74bae88954adfd07dc2c2bd2d4810f343cb5461854215bf1",
+      "PRODUCT.md": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd",
+      "proofs/direction-b.html": "a3287b6daaf58f8fbcac819b8993a2bfd7b18960d1ab5ded144524de682d02d6",
+      "proofs/REPORT.md": "566f9e7e518425ce0031659da544f70fe6ac8d1f3432a06ff86c4012b2c9cc7c",
+      "proofs/rev1-final/evidence.json": "95e2eb55d5d163a387412bb90354b6b857631438097b10299f42583e5eaee7c6",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "styles.css": "bfe11d55ca00f249a2bd3d12ec8ed34e0642b96b71449243bc34b562a892d0ec"
+    },
+    "independentReadback": {
+      "localPath": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/A-readback.json",
+      "sha256": "542841b963f048a06d3f6de7cc35ca780d6a295a3a6ebe3632a9e0c341a1f5bf",
+      "checks": [
+        {
+          "name": "A-quiet-ledger",
+          "file": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/A/workspace/index.html",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "missing": [],
+          "rowPairs": true,
+          "metricPairs": true,
+          "actionCount": 1,
+          "actionHref": "#queue",
+          "actionReachedQueue": true,
+          "horizontalOverflow": false,
+          "result": "PASS"
+        },
+        {
+          "name": "A-quiet-ledger",
+          "file": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/A/workspace/index.html",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "missing": [],
+          "rowPairs": true,
+          "metricPairs": true,
+          "actionCount": 1,
+          "actionHref": "#queue",
+          "actionReachedQueue": true,
+          "horizontalOverflow": false,
+          "result": "PASS"
+        },
+        {
+          "name": "B-operations-canvas",
+          "file": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/A/workspace/proofs/direction-b.html",
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "missing": [],
+          "rowPairs": true,
+          "metricPairs": true,
+          "actionCount": 1,
+          "actionHref": "#queue",
+          "actionReachedQueue": true,
+          "horizontalOverflow": false,
+          "result": "PASS"
+        },
+        {
+          "name": "B-operations-canvas",
+          "file": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/A/workspace/proofs/direction-b.html",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "missing": [],
+          "rowPairs": true,
+          "metricPairs": true,
+          "actionCount": 1,
+          "actionHref": "#queue",
+          "actionReachedQueue": true,
+          "horizontalOverflow": false,
+          "result": "PASS"
+        }
+      ]
+    },
+    "credentialLeakCheck": "PASS",
+    "candidates": [
+      {
+        "name": "A — Quiet ledger",
+        "observed": "Regular Georgia headline, generous warm ruled summary, quiet Today note next to hero; queue begins lower."
+      },
+      {
+        "name": "B — Operations canvas",
+        "observed": "Bold Arial entry, dark identity rail, compact cooler metric panel; queue begins about 260px higher and Today sits alongside."
+      }
+    ],
+    "productInvariants": "Independent desktop/mobile reads for both candidates preserve the exact headline/description, three label-value metrics, three request/status/owner records, Today information, footer and working Review queue anchor; no horizontal overflow.",
+    "acceptanceBoundary": "DESIGN.md remains DRAFT Rev 1. Native recommendation is not user approval; exact candidate choice is pending.",
+    "visualObservation": "Controller opened all four fresh final PNGs. Differences are compositional, not color-only; mobile meaning is preserved through stack/reorder rather than proportional shrinking."
+  },
+  "smokeB": {
+    "result": "PASS",
+    "fresh": true,
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07302-89d3-7562-b748-0f8929aa812f",
+      "version": "codex-cli 0.153.0",
+      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+    },
+    "skillSha256": {
+      "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
+    },
+    "fixture": {
+      "commit": "5a3e04a934edad0a7a52c5c68f2bb1c83d5e9192",
+      "tree": "c5e20d9ea34cc59cb4154aaa83981d59b49d281a"
+    },
+    "originalFixtureByteExact": true,
+    "wallMs": 264417,
+    "changedTrackedFiles": [
+      "DESIGN.md",
+      "styles.css"
+    ],
+    "evidence": {
+      "directory": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1",
+      "pathBase": "repository root",
+      "artifacts": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-desktop.png",
+          "sha256": "1268d67e499e0f7728c9b601b0d19d016b6446e5757f221d32aed6eb9d37e99b",
+          "bytes": 53119,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 1000
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "after",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/hero-refined-desktop.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-mobile.png",
+          "sha256": "880197ee05d6b44be83381797ba35cf9c2b130792eb4605aa676c6a9d0c22486",
+          "bytes": 43784,
+          "imageDimensions": {
+            "width": 390,
+            "height": 1173
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "after",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/hero-refined-mobile.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-desktop.png",
+          "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31",
+          "bytes": 58313,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 1000
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "before",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/hero-before-desktop.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-mobile.png",
+          "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612",
+          "bytes": 48669,
+          "imageDimensions": {
+            "width": 390,
+            "height": 1176
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "before",
+          "surface": "dashboard landing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/hero-before-mobile.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/changes.json",
+          "sha256": "016458e9c07c8e764981831f4b0f81c321d5f3b31c47a3560b0ff264ee332eb9",
+          "bytes": 23902
+        }
+      ],
+      "availability": "All listed artifacts are repository-relative and committed for independent review. PNGs are byte-exact final native-run artifacts. Raw runtime archives remain local only and are not needed to view the proof."
+    },
+    "provenance": {
+      "localDirectory": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/B",
+      "rollout": "D:\\JOEWRKS\\joedesign-typography-revalidation-20260906\\runs\\B\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T04-19-01-01a07302-89d3-7562-b748-0f8929aa812f.jsonl",
+      "rolloutSha256": "69a93822ec41fe4f2f9ffad5a3fb2fceba3afad4dde76b41c8df4e4c3c67a03e",
+      "eventsSha256": "a1331103d499b7444f6d962e9b7df7d0e3e8088db6ec9212623814e6fee1f317",
+      "launchSha256": "1c156d0f8d353fdf3f7d04f34510e48ee56e5209fb1ab1c05f7b1c36b7ce6309",
+      "promptInputSha256": "c9747e1fc457acbca4f06c376ae6e3855f57a8a69481191fad78b1380569d017",
+      "finalSha256": "43da9f0d58789f2ca880838083877da0645aa5a17c070cf5338d892843c6cfab",
+      "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "prompt": "현재 approved direction을 유지하면서 Hero의 typography hierarchy만 refine해.",
+      "nativeImageObservationBatches": 3
+    },
+    "sourceArtifactSha256": {
+      "DESIGN.md": "db7b03482bd11f04bf7021b684a29c0ca90aeb47ac48eced98292884a6d7369f",
+      "index.html": "2f8c4a5593d756984f317004cf7eb4ac67bf96d5534656bd662f05259ccfa447",
+      "PRODUCT.md": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "styles.css": "6e764c581128a37ab06e40d5e14a9de34d53e2819c1bc86b73e4ba96faf98ba0"
+    },
+    "independentReadback": {
+      "localPath": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/B-readback.json",
+      "sha256": "3ca766ba70c9da05d454433d03341489279baaab404918c67b429bdacda06ab8",
+      "checks": [
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "textUnchanged": true,
+          "recordsUnchanged": true,
+          "headingOrderUnchanged": true,
+          "horizontalOverflow": false,
+          "actionPreserved": true
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "textUnchanged": true,
+          "recordsUnchanged": true,
+          "headingOrderUnchanged": true,
+          "horizontalOverflow": false,
+          "actionPreserved": true
+        }
+      ]
+    },
+    "credentialLeakCheck": "PASS",
+    "scope": "Existing Hero label, headline and supporting copy only. Thirteen CSSOM declaration differences (text-wrap expands into two), all confined to those three selectors; DESIGN.md adds observed local evidence without promoting acceptance.",
+    "visualObservation": "Controller opened all four native fresh full-page captures. The headline is the clear entry point (40px desktop, 32px mobile); label 14px and explanation 16px are subordinate. Mobile title is balanced over two lines. Existing two-column desktop composition, mobile stack, slate slash panel, metrics and table remain. No clipping or horizontal overflow was observed.",
+    "acceptanceBoundary": "Technical/Product/Visual PASS for these exact static targets does not accept the refinement. No user acceptance inferred."
+  },
+  "smokeC": {
+    "result": "PASS",
+    "fresh": true,
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07302-8a2d-75d2-9f96-9a62ad626ceb",
+      "version": "codex-cli 0.153.0",
+      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+    },
+    "skillSha256": {
+      "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
+    },
+    "fixture": {
+      "commit": "f44bc0cd26821f0dc92d83ace56702f9da9f8957",
+      "tree": "5e68e7d40f95db50179fc3faf0c2099d1de929ff"
+    },
+    "originalFixtureByteExact": true,
+    "wallMs": 439453,
+    "changedTrackedFiles": [
+      "styles.css"
+    ],
+    "evidence": {
+      "directory": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1",
+      "pathBase": "repository root",
+      "artifacts": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-desktop.png",
+          "sha256": "ef18d3ba5330219beb350f1b058929aeb0b3cf488eda259cf754e2cff5b5c8a7",
+          "bytes": 136272,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 2522
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "after",
+          "surface": "workshop briefing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/after-desktop.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-mobile.png",
+          "sha256": "6d7d6eabf30e99f90d3ab9965841e7798e498076d40b10db2367aa8c83858c91",
+          "bytes": 117359,
+          "imageDimensions": {
+            "width": 390,
+            "height": 2656
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "after",
+          "surface": "workshop briefing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/after-mobile.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after.css",
+          "sha256": "deaaee297b6de75ffd26571eb2a767b6df6b58b57df8d316ed36851f6bf883b7",
+          "bytes": 4127
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-desktop.png",
+          "sha256": "83cd47462a544b1e5388049908d8ff11f606037985cc5088facf2ac654992ccc",
+          "bytes": 135144,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 3125
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "before",
+          "surface": "workshop briefing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/before-desktop.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-mobile.png",
+          "sha256": "7cabf5a6cfb84dc6efd052a9c45846aad478547734c1a91069d24ed960dbd304",
+          "bytes": 112827,
+          "imageDimensions": {
+            "width": 390,
+            "height": 2455
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "before",
+          "surface": "workshop briefing",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/before-mobile.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before.css",
+          "sha256": "cc6d4e7d80757391bd45cd1e97f4d265f7fa42a54cb9319008f23e4d33a33fdb",
+          "bytes": 3608
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/DESIGN.md",
+          "sha256": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
+          "bytes": 1816
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/fixture.html",
+          "sha256": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
+          "bytes": 5660
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/PRODUCT.md",
+          "sha256": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
+          "bytes": 3434
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/spatial-role-manifest.json",
+          "sha256": "2b5a59031a90353c55a6d93d774bbded7415c4f96e9b65062761e1b8bfb21a48",
+          "bytes": 12524
+        }
+      ],
+      "availability": "All listed artifacts are repository-relative and committed for independent review. PNGs are byte-exact final native-run artifacts. Raw runtime archives remain local only and are not needed to view the proof."
+    },
+    "provenance": {
+      "localDirectory": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/C",
+      "rollout": "D:\\JOEWRKS\\joedesign-typography-revalidation-20260906\\runs\\C\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T04-19-01-01a07302-8a2d-75d2-9f96-9a62ad626ceb.jsonl",
+      "rolloutSha256": "5dbcb33c07b2468a5159bb0e89d7e707472cce1a22a78cffc1539e4bc09bcdec",
+      "eventsSha256": "ec3917cca8be63156829f863f9953cda968480051d65daeb1e3fa9bd0f53f66a",
+      "launchSha256": "39566cc9386a3f37b0a66811b6183dbeaa278340bba0d7574fc148d16393e938",
+      "promptInputSha256": "61f4ebf0aca028ada27748c6184d21382651d983a4163e1f464affb0932256ea",
+      "finalSha256": "501d908d2fe0515c55339664d68f17fa5c8eca8ef061937916c0d3ef2f257565",
+      "stderrSha256": "16a2309ca0507d5b80f298cefdc56623851d7490533d1c5bdcb4e06259f33053",
+      "prompt": "JOEDESIGN으로 현재 승인된 Product Truth와 디자인 방향을 유지하면서 이 페이지의 visual hierarchy / visual flow / spacing consistency를 refine해. 실제 desktop/mobile before/after를 확인하고, 바뀐 semantic spatial relationships를 짧게 정리해.",
+      "nativeImageObservationBatches": 5
+    },
+    "sourceArtifactSha256": {
+      "artifacts/refinement-review.md": "7e9310716cde6eefc289da50014db1ea9311a121dcb5d22e639eb644a6d594e8",
+      "DESIGN.md": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f",
+      "index.html": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958",
+      "PRODUCT.md": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "styles.css": "deaaee297b6de75ffd26571eb2a767b6df6b58b57df8d316ed36851f6bf883b7"
+    },
+    "independentReadback": {
+      "localPath": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/C-readback.json",
+      "sha256": "7b4db7b06db1d544bf01acdbcf660f8e938f8b56c1fa81d28f776ae49bc296e8",
+      "checks": [
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "textUnchanged": true,
+          "recordsUnchanged": true,
+          "headingOrderUnchanged": true,
+          "horizontalOverflow": false,
+          "actionPreserved": true
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "textUnchanged": true,
+          "recordsUnchanged": true,
+          "headingOrderUnchanged": true,
+          "horizontalOverflow": false,
+          "actionPreserved": true
+        }
+      ]
+    },
+    "credentialLeakCheck": "PASS",
+    "checks": [
+      {
+        "id": "C1",
+        "claim": "Semantic tree before DOM depth",
+        "observed": "Preparation/Handover → major groups → subgroups → item groups → local metadata. Native review identifies meaning and retains unequal wrapper depths in unchanged HTML.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C2",
+        "claim": "Same relationship uses the same role",
+        "observed": "Both A/B item-group siblings measure 16px and subgroup siblings 24px at desktop and mobile despite unequal wrappers.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C3",
+        "claim": "Distinct structural hierarchy",
+        "observed": "Actual section/major/subgroup/item boundaries are 160/48/24/16px at both viewports.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C4",
+        "claim": "Separation vs binding",
+        "observed": "Item title-description is 4px, description-metadata 8px, label-value 4px. Heading-purpose binding is 8px. These remain tighter than structural sibling gaps.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C5",
+        "claim": "Restricted spatial vocabulary",
+        "observed": "Six named spatial roles are 160/48/24/16/8/4. Type tokens are independent from layout tokens.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C6",
+        "claim": "Arbitrary spacing removed",
+        "observed": "Source CSS replaces one-off 20/28/36/44px layout gaps with named roles, zero resets or auto centering; optical type values are not spatial exceptions.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C7",
+        "claim": "Responsive hierarchy",
+        "observed": "Mobile retains the same structural profile and all ten records; only gutters and the introduction arrangement translate for mobile.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C8",
+        "claim": "Observed render",
+        "observed": "Controller opened all four fresh full-page before/after PNGs; item clusters visibly bind while Handover has the largest section pause. Independent browser readback checks content, heading order, rows, anchor and overflow.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "C9",
+        "claim": "Acceptance boundary",
+        "observed": "Native review explicitly keeps exact refinement unaccepted. PRODUCT.md and APPROVED DESIGN.md Rev 1 are byte-identical.",
+        "verdict": "PASS"
+      }
+    ],
+    "acceptanceBoundary": "Observed conformance PASS is not user acceptance; existing APPROVED Rev 1 remains unchanged."
+  },
+  "smokeD": {
+    "result": "PASS",
+    "fresh": true,
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07306-abba-7ff3-b99b-2dbc882f8085",
+      "version": "codex-cli 0.153.0",
+      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+    },
+    "skillSha256": {
+      "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
+    },
+    "fixture": {
+      "commit": "44cd72255cc8226f02eb3b5136531262080e9278",
+      "tree": "b6b126da7d5da3a4dee7a6fbac2a26d15c15dac4"
+    },
+    "fixtureKind": "New neutral non-BIO fixture with fixed Product Truth and seven deliberate initial type/scale defects",
+    "wallMs": 445407,
+    "changedTrackedFiles": [
+      "styles.css"
+    ],
+    "evidence": {
+      "directory": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d",
+      "pathBase": "repository root",
+      "artifacts": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-desktop.png",
+          "sha256": "f9a328d8aa64ea23960090c17ef0ac8cdb4c57ffd5fead7e9fd09847cd89e671",
+          "bytes": 213458,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 2663
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "after",
+          "surface": "host reading guide",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/after-desktop.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-mobile.png",
+          "sha256": "88381ddfba63ad398e17a329545efa6d878bebda786eca6c26deff3cac9afddc",
+          "bytes": 171262,
+          "imageDimensions": {
+            "width": 390,
+            "height": 3595
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "after",
+          "surface": "host reading guide",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/after-mobile.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after.css",
+          "sha256": "6ec437ed193aa95cdb76ae8f52ae1eb5c7636e32bc920b7744ee55f219793a09",
+          "bytes": 4959
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-desktop.png",
+          "sha256": "443cac040da7eb8c5da927526088e1b4ea31517621d75c24fac0c77cf0f782da",
+          "bytes": 202283,
+          "imageDimensions": {
+            "width": 1440,
+            "height": 2093
+          },
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "before",
+          "surface": "host reading guide",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/before-desktop.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-mobile.png",
+          "sha256": "3043ce75686dcc2bfd36014ccd92f066325627f3d340332be9bbd6056a7706fe",
+          "bytes": 142029,
+          "imageDimensions": {
+            "width": 390,
+            "height": 2597
+          },
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "capture": "Fresh native full-page browser screenshot; image height may exceed viewport height.",
+          "phase": "before",
+          "surface": "host reading guide",
+          "state": "initial ready / populated static",
+          "sourceRunArtifact": "artifacts/before-mobile.png"
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before.css",
+          "sha256": "b4221560169ea66e115d1129c884e3cecf7db46e2988ac81e67d13f9e07ff816",
+          "bytes": 6147
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/DESIGN.md",
+          "sha256": "ed583646ff7e080ab961db8f695309bddc21e60708e2a94d5e5904566930535c",
+          "bytes": 1570
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/fixture.html",
+          "sha256": "931f49a9eaafcf8fec2b7e438d179a0add97bbc9dac0d5b0606689fb9413a827",
+          "bytes": 6423
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/PRODUCT.md",
+          "sha256": "25c86eec9814d66a844c7232f8cf122eda9d9845a9937d96ef0db8aecf92e4d1",
+          "bytes": 2379
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/type-role-manifest.json",
+          "sha256": "1cf06c3afc0614caf47d3f078001ef1c15e2fd44459c4e46056a6fb4a27bfdcf",
+          "bytes": 98769
+        }
+      ],
+      "availability": "All listed artifacts are repository-relative and committed for independent review. PNGs are byte-exact final native-run artifacts. Raw runtime archives remain local only and are not needed to view the proof."
+    },
+    "provenance": {
+      "localDirectory": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/D",
+      "rollout": "D:\\JOEWRKS\\joedesign-typography-revalidation-20260906\\runs\\D\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T04-23-32-01a07306-abba-7ff3-b99b-2dbc882f8085.jsonl",
+      "rolloutSha256": "3ad93c28ceec4f7fc8121ba459a51909d2d446e7d6b18c81b812497bdc228c75",
+      "eventsSha256": "5d42c0e3668dc6cc3cc1e55a4a26f9801ebe2d5130a3ac5f8440f18eb0c785fd",
+      "launchSha256": "25655b521bdfe126d7118fe38c586ed3c125c482f1d4fb9d7be6587a16f9cd06",
+      "promptInputSha256": "7f22011ea6f772cc7873198c4bc410b7ebbe57e70957d82b22590344e3d4b9c2",
+      "finalSha256": "10c6895ed4b7cbc6da017791e4a430fa7a76e0b4455dd7ef0fe54a326580bc4a",
+      "stderrSha256": "c0264e6111e07f37e481f3d768f6781296fdd89e9c6877788866589e88cf1be4",
+      "prompt": "JOEDESIGN으로 이 읽기 페이지의 typography와 상대적 scale을 refine해. 승인된 Product Truth, semantic content와 디자인 방향은 유지해. 본문 읽기 편안함, 반복되는 역할의 일관성, 중요한 내용이 먼저 보이는 위계를 desktop/mobile에서 실제 확인하고 before/after와 주요 type-role/reading-system 판단을 짧게 남겨줘.",
+      "nativeImageObservationBatches": 6
+    },
+    "sourceArtifactSha256": {
+      "artifacts/inspection.json": "f608074109ce9a3afa99c76c945808e7f9f75f31c62490fd9e47025095cb8cca",
+      "artifacts/typography-review.md": "6013855b87eb65e7b25426757ea9cf0ca164600c9b13c21088a79611e566c007",
+      "DESIGN.md": "ed583646ff7e080ab961db8f695309bddc21e60708e2a94d5e5904566930535c",
+      "index.html": "931f49a9eaafcf8fec2b7e438d179a0add97bbc9dac0d5b0606689fb9413a827",
+      "PRODUCT.md": "25c86eec9814d66a844c7232f8cf122eda9d9845a9937d96ef0db8aecf92e4d1",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "styles.css": "6ec437ed193aa95cdb76ae8f52ae1eb5c7636e32bc920b7744ee55f219793a09"
+    },
+    "independentReadback": {
+      "localPath": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/D-readback.json",
+      "sha256": "e6cea6115366b0f731f9962eef36f0f37bf261a1cfd7924e712b732325bfa284",
+      "checks": [
+        {
+          "viewport": {
+            "width": 1440,
+            "height": 1000
+          },
+          "textUnchanged": true,
+          "headingOrderUnchanged": true,
+          "linksUnchanged": true,
+          "actionPreserved": true,
+          "horizontalOverflow": false,
+          "hiddenContent": []
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "textUnchanged": true,
+          "headingOrderUnchanged": true,
+          "linksUnchanged": true,
+          "actionPreserved": true,
+          "horizontalOverflow": false,
+          "hiddenContent": []
+        }
+      ]
+    },
+    "credentialLeakCheck": "PASS",
+    "checks": [
+      {
+        "id": "D1",
+        "claim": "Role before value",
+        "observed": "Before the first stylesheet edit, native commentary identified the page title and reading task as primary, reference count/art as secondary, and peer sections/six reminders as repeated semantic jobs. The implementation maps reference h2 to strong-body 16px, not the section h2 style. Unequal wrapper depth remains unchanged.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D2",
+        "claim": "Same semantic role → same type role",
+        "observed": "Both sections use one section-title, subsection-title and reading-copy rule. Independent computed values match across A/B at both viewports; all six reminders share one style.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D3",
+        "claim": "Decisive hierarchy",
+        "observed": "The 16/17/18px reminder differences collapse to one 16px bold role. Desktop title/section/subsection use 48/32/24px; mobile 40/24/20px. Bold headings, regular reading copy and existing structural whitespace provide additional contrast.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D4",
+        "claim": "Restrained scale",
+        "observed": "Rendered type sizes are a subset of 14/16/20/24/32/40/48px. The default vocabulary is used without a new arbitrary size set.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D5",
+        "claim": "Typography is not spatial 4-grid",
+        "observed": "14px metadata/orientation is retained for its semantic purpose. It is not rounded to 12/16 merely to follow the unchanged spatial grid.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D6",
+        "claim": "Family and weight restraint",
+        "observed": "Three resolved families become Arial only. Computed requested weights are 400/700; CDP reports ArialMT and Arial-BoldMT, and font-synthesis is none. Long reading stays regular rather than bold everywhere. Before Guide Sans registered only regular ArialMT while requesting 800/900; those synthesized/unsupported treatments are removed.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D7",
+        "claim": "Reading system",
+        "observed": "The actual English long-reading measure becomes 569.5px desktop / 342px mobile at 16px with 25.6px line-height. Existing paragraph gap stays 16px. Desktop non-final lines are 66–87 characters (mostly 70–80); mobile non-final lines 36–50. These are observations, not absolute 60–80 gates. Actual viewport captures show readable paragraphs without horizontal clipping.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D8",
+        "claim": "Focal scale follows Product priority",
+        "observed": "Before, the 108px count outweighed a 22px page title and 160px decorative circle competed with it. After, the title is 48/40px bold, secondary count 32px regular muted, circle 96px. In observed first screens, title/read task leads; the reference collection is subordinate beside/below it and the action remains visible.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D9",
+        "claim": "Responsive translation",
+        "observed": "Mobile changes only the page/section/subsection role scales while reading/body/metadata remain legible. The mobile title reads Make every / handover / easy to follow.; desktop Make every handover / easy to follow. There is no inherited 0.75 scaling. Semantic content, heading order and action remain.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D10",
+        "claim": "Actual rendered evidence",
+        "observed": "Controller opened the four full-page native before/after PNGs and native actual-scale mobile top, mobile reading A, desktop reading B captures. Independently loaded before/after sources in Chrome 152.0.7977.65 at both named viewports for computed styles, actual platform faces, line geometry, content/heading/anchor checks.",
+        "verdict": "PASS"
+      },
+      {
+        "id": "D11",
+        "claim": "Acceptance boundary",
+        "observed": "Native typography review separates Technical/Product/Visual PASS from unrecorded user acceptance. APPROVED DESIGN.md Rev 1 and PRODUCT.md stay byte-identical; no new approval is inferred.",
+        "verdict": "PASS"
+      }
+    ],
+    "acceptanceBoundary": {
+      "technical": "PASS for named targets",
+      "productConformance": "PASS for fixed static content and action",
+      "visualConformance": "PASS for named rendered targets",
+      "userAcceptance": "NOT_GRANTED",
+      "approvedAuthority": "DESIGN.md APPROVED Rev 1 unchanged"
+    }
+  },
+  "files": [
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/changes.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/DESIGN.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/PRODUCT.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/fixture.html",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/spatial-role-manifest.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/DESIGN.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/PRODUCT.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/fixture.html",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/type-role-manifest.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/final-contract-tests.txt",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/initial-contract-tests.txt",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
+    "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
+    "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
+    "AGENTS.md",
+    "README.md",
+    "docs/specs/joedesign-craft-core-v0.1.md",
+    "docs/specs/joedesign-typography-scale-core-v0.1.md",
+    "docs/specs/joedesign-v0.1.md",
+    "fixtures/contract-cases/decisions.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/changes.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/DESIGN.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/PRODUCT.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/fixture.html",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
+    "fixtures/contract-cases/history/astra-mvp-v1/observed.json",
+    "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
+    "fixtures/contract-cases/observed.json",
+    "fixtures/contract-cases/review-evidence.json",
+    "skills/joedesign/SKILL.md",
+    "skills/joedesign/agents/openai.yaml",
+    "skills/joedesign/templates/DESIGN.md",
+    "tests/joedesign-contract.tests.mjs",
+    "tests/joedesign-craft-core.tests.mjs",
+    "tests/joedesign-typography-scale-core.tests.mjs"
   ]
 }

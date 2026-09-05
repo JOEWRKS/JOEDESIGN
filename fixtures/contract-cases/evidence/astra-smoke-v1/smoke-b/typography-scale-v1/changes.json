@@ -1,0 +1,899 @@
+{
+  "case": "Smoke B — fresh Typography & Scale Core regression",
+  "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a07302-89d3-7562-b748-0f8929aa812f",
+    "version": "codex-cli 0.153.0",
+    "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+  },
+  "changedTrackedFiles": [
+    "DESIGN.md",
+    "styles.css"
+  ],
+  "sourceSha256": {
+    "before": {
+      "PRODUCT.md": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd",
+      "DESIGN.md": "5dcf43e5500591061302b9580d053aa99c0d38e647ca4ca5cc08c773663cca9c",
+      "index.html": "2f8c4a5593d756984f317004cf7eb4ac67bf96d5534656bd662f05259ccfa447",
+      "styles.css": "da496904c9901153061d6bb9a59b89398424c39265197dccdaa289c3439ccf45",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    },
+    "after": {
+      "PRODUCT.md": "becd1b5d781277c54b88832eaf3ff497cfdefe0a106cef40cb7b44b8597a40fd",
+      "DESIGN.md": "db7b03482bd11f04bf7021b684a29c0ca90aeb47ac48eced98292884a6d7369f",
+      "index.html": "2f8c4a5593d756984f317004cf7eb4ac67bf96d5534656bd662f05259ccfa447",
+      "styles.css": "6e764c581128a37ab06e40d5e14a9de34d53e2819c1bc86b73e4ba96faf98ba0",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    }
+  },
+  "cssDeclarationChanges": [
+    {
+      "context": [],
+      "selector": ".eyebrow",
+      "property": "font-size",
+      "before": "22px",
+      "after": "14px"
+    },
+    {
+      "context": [],
+      "selector": ".eyebrow",
+      "property": "line-height",
+      "before": "1.2",
+      "after": "1.4"
+    },
+    {
+      "context": [],
+      "selector": ".eyebrow",
+      "property": "letter-spacing",
+      "before": null,
+      "after": "0.06em"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "font-size",
+      "before": "28px",
+      "after": "40px"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "line-height",
+      "before": "1.22",
+      "after": "1.2"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "font-weight",
+      "before": "600",
+      "after": "700"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "letter-spacing",
+      "before": "0px",
+      "after": "-0.025em"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "text-wrap-mode",
+      "before": null,
+      "after": "initial"
+    },
+    {
+      "context": [],
+      "selector": ".hero h1",
+      "property": "text-wrap-style",
+      "before": null,
+      "after": "balance"
+    },
+    {
+      "context": [],
+      "selector": ".hero-description",
+      "property": "font-size",
+      "before": "22px",
+      "after": "16px"
+    },
+    {
+      "context": [],
+      "selector": ".hero-description",
+      "property": "max-width",
+      "before": "490px",
+      "after": "42ch"
+    },
+    {
+      "context": [
+        "(max-width: 700px)"
+      ],
+      "selector": ".hero h1",
+      "property": "font-size",
+      "before": "26px",
+      "after": "32px"
+    },
+    {
+      "context": [
+        "(max-width: 700px)"
+      ],
+      "selector": ".hero-description",
+      "property": "font-size",
+      "before": "19px",
+      "after": null
+    }
+  ],
+  "cssDiffCounting": "13 CSSOM property changes; text-wrap shorthand expands to two longhand entries. The removed mobile description rule changes selector order only by deleting that rule. All differences are three existing Hero text selectors.",
+  "sameCssSelectorOrder": false,
+  "checks": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "textUnchanged": true,
+      "recordsUnchanged": true,
+      "headingOrderUnchanged": true,
+      "horizontalOverflow": false,
+      "actionPreserved": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "textUnchanged": true,
+      "recordsUnchanged": true,
+      "headingOrderUnchanged": true,
+      "horizontalOverflow": false,
+      "actionPreserved": true
+    }
+  ],
+  "computedTargets": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "geometry": {
+        ".topbar": {
+          "rect": {
+            "x": 128,
+            "y": 0,
+            "width": 1184,
+            "height": 88,
+            "bottom": 88,
+            "right": 1312
+          },
+          "display": "flex",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "28px",
+          "rowGap": "28px",
+          "columnGap": "28px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        ".hero": {
+          "rect": {
+            "x": 128,
+            "y": 88,
+            "width": 1184,
+            "height": 366.5,
+            "bottom": 454.5,
+            "right": 1312
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "80px",
+          "rowGap": "80px",
+          "columnGap": "80px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "60px 0px"
+        },
+        ".eyebrow": {
+          "rect": {
+            "x": 128,
+            "y": 153.46875,
+            "width": 687.390625,
+            "height": 26.390625,
+            "bottom": 179.859375,
+            "right": 815.390625
+          },
+          "display": "block",
+          "fontSize": "22px",
+          "lineHeight": "26.4px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero h1": {
+          "rect": {
+            "x": 128,
+            "y": 197.859375,
+            "width": 620,
+            "height": 34.15625,
+            "bottom": 232.015625,
+            "right": 748
+          },
+          "display": "block",
+          "fontSize": "28px",
+          "lineHeight": "34.16px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero-description": {
+          "rect": {
+            "x": 128,
+            "y": 250.015625,
+            "width": 490,
+            "height": 66,
+            "bottom": 316.015625,
+            "right": 618
+          },
+          "display": "block",
+          "fontSize": "22px",
+          "lineHeight": "33px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "28px",
+          "padding": "0px"
+        },
+        ".today": {
+          "rect": {
+            "x": 895.390625,
+            "y": 148,
+            "width": 416.59375,
+            "height": 246.5,
+            "bottom": 394.5,
+            "right": 1311.984375
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "28px 30px"
+        },
+        ".metrics": {
+          "rect": {
+            "x": 128,
+            "y": 454.5,
+            "width": 1184,
+            "height": 140.5,
+            "bottom": 595,
+            "right": 1312
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "42px",
+          "padding": "0px"
+        },
+        ".queue": {
+          "rect": {
+            "x": 128,
+            "y": 637,
+            "width": 1184,
+            "height": 278.6875,
+            "bottom": 915.6875,
+            "right": 1312
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        "footer": {
+          "rect": {
+            "x": 128,
+            "y": 915.6875,
+            "width": 1184,
+            "height": 76.5,
+            "bottom": 992.1875,
+            "right": 1312
+          },
+          "display": "block",
+          "fontSize": "11px",
+          "lineHeight": "16.5px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "30px 0px"
+        }
+      },
+      "action": {
+        "count": 1,
+        "href": "#queue",
+        "hash": "#queue"
+      }
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "geometry": {
+        ".topbar": {
+          "rect": {
+            "x": 24,
+            "y": 0,
+            "width": 342,
+            "height": 72,
+            "bottom": 72,
+            "right": 366
+          },
+          "display": "flex",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "16px",
+          "rowGap": "16px",
+          "columnGap": "16px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        ".hero": {
+          "rect": {
+            "x": 24,
+            "y": 72,
+            "width": 342,
+            "height": 555.328125,
+            "bottom": 627.328125,
+            "right": 366
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "24px",
+          "rowGap": "24px",
+          "columnGap": "24px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "36px 0px"
+        },
+        ".eyebrow": {
+          "rect": {
+            "x": 24,
+            "y": 108,
+            "width": 342,
+            "height": 26.390625,
+            "bottom": 134.390625,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "22px",
+          "lineHeight": "26.4px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero h1": {
+          "rect": {
+            "x": 24,
+            "y": 152.390625,
+            "width": 342,
+            "height": 63.4375,
+            "bottom": 215.828125,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "26px",
+          "lineHeight": "31.72px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero-description": {
+          "rect": {
+            "x": 24,
+            "y": 233.828125,
+            "width": 342,
+            "height": 57,
+            "bottom": 290.828125,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "19px",
+          "lineHeight": "28.5px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "28px",
+          "padding": "0px"
+        },
+        ".today": {
+          "rect": {
+            "x": 24,
+            "y": 387.828125,
+            "width": 342,
+            "height": 203.5,
+            "bottom": 591.328125,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "28px 30px"
+        },
+        ".metrics": {
+          "rect": {
+            "x": 24,
+            "y": 627.328125,
+            "width": 342,
+            "height": 131,
+            "bottom": 758.328125,
+            "right": 366
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "28px",
+          "padding": "0px"
+        },
+        ".queue": {
+          "rect": {
+            "x": 24,
+            "y": 786.328125,
+            "width": 342,
+            "height": 312.875,
+            "bottom": 1099.203125,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        "footer": {
+          "rect": {
+            "x": 24,
+            "y": 1099.203125,
+            "width": 342,
+            "height": 76.5,
+            "bottom": 1175.703125,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "11px",
+          "lineHeight": "16.5px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "30px 0px"
+        }
+      },
+      "action": {
+        "count": 1,
+        "href": "#queue",
+        "hash": "#queue"
+      }
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "geometry": {
+        ".topbar": {
+          "rect": {
+            "x": 128,
+            "y": 0,
+            "width": 1184,
+            "height": 88,
+            "bottom": 88,
+            "right": 1312
+          },
+          "display": "flex",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "28px",
+          "rowGap": "28px",
+          "columnGap": "28px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        ".hero": {
+          "rect": {
+            "x": 128,
+            "y": 88,
+            "width": 1184,
+            "height": 366.5,
+            "bottom": 454.5,
+            "right": 1312
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "80px",
+          "rowGap": "80px",
+          "columnGap": "80px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "60px 0px"
+        },
+        ".eyebrow": {
+          "rect": {
+            "x": 128,
+            "y": 158.953125,
+            "width": 687.390625,
+            "height": 19.59375,
+            "bottom": 178.546875,
+            "right": 815.390625
+          },
+          "display": "block",
+          "fontSize": "14px",
+          "lineHeight": "19.6px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero h1": {
+          "rect": {
+            "x": 128,
+            "y": 196.546875,
+            "width": 620,
+            "height": 48,
+            "bottom": 244.546875,
+            "right": 748
+          },
+          "display": "block",
+          "fontSize": "40px",
+          "lineHeight": "48px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero-description": {
+          "rect": {
+            "x": 128,
+            "y": 262.546875,
+            "width": 373.734375,
+            "height": 48,
+            "bottom": 310.546875,
+            "right": 501.734375
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "28px",
+          "padding": "0px"
+        },
+        ".today": {
+          "rect": {
+            "x": 895.390625,
+            "y": 148,
+            "width": 416.59375,
+            "height": 246.5,
+            "bottom": 394.5,
+            "right": 1311.984375
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "28px 30px"
+        },
+        ".metrics": {
+          "rect": {
+            "x": 128,
+            "y": 454.5,
+            "width": 1184,
+            "height": 140.5,
+            "bottom": 595,
+            "right": 1312
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "42px",
+          "padding": "0px"
+        },
+        ".queue": {
+          "rect": {
+            "x": 128,
+            "y": 637,
+            "width": 1184,
+            "height": 278.6875,
+            "bottom": 915.6875,
+            "right": 1312
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        "footer": {
+          "rect": {
+            "x": 128,
+            "y": 915.6875,
+            "width": 1184,
+            "height": 76.5,
+            "bottom": 992.1875,
+            "right": 1312
+          },
+          "display": "block",
+          "fontSize": "11px",
+          "lineHeight": "16.5px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "30px 0px"
+        }
+      },
+      "action": {
+        "count": 1,
+        "href": "#queue",
+        "hash": "#queue"
+      }
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "geometry": {
+        ".topbar": {
+          "rect": {
+            "x": 24,
+            "y": 0,
+            "width": 342,
+            "height": 72,
+            "bottom": 72,
+            "right": 366
+          },
+          "display": "flex",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "16px",
+          "rowGap": "16px",
+          "columnGap": "16px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        ".hero": {
+          "rect": {
+            "x": 24,
+            "y": 72,
+            "width": 342,
+            "height": 552.875,
+            "bottom": 624.875,
+            "right": 366
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "24px",
+          "rowGap": "24px",
+          "columnGap": "24px",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "36px 0px"
+        },
+        ".eyebrow": {
+          "rect": {
+            "x": 24,
+            "y": 108,
+            "width": 342,
+            "height": 19.59375,
+            "bottom": 127.59375,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "14px",
+          "lineHeight": "19.6px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero h1": {
+          "rect": {
+            "x": 24,
+            "y": 145.59375,
+            "width": 342,
+            "height": 76.78125,
+            "bottom": 222.375,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "32px",
+          "lineHeight": "38.4px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "18px",
+          "padding": "0px"
+        },
+        ".hero-description": {
+          "rect": {
+            "x": 24,
+            "y": 240.375,
+            "width": 342,
+            "height": 48,
+            "bottom": 288.375,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "28px",
+          "padding": "0px"
+        },
+        ".today": {
+          "rect": {
+            "x": 24,
+            "y": 385.375,
+            "width": 342,
+            "height": 203.5,
+            "bottom": 588.875,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "28px 30px"
+        },
+        ".metrics": {
+          "rect": {
+            "x": 24,
+            "y": 624.875,
+            "width": 342,
+            "height": 131,
+            "bottom": 755.875,
+            "right": 366
+          },
+          "display": "grid",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "28px",
+          "padding": "0px"
+        },
+        ".queue": {
+          "rect": {
+            "x": 24,
+            "y": 783.875,
+            "width": 342,
+            "height": 312.875,
+            "bottom": 1096.75,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "0px"
+        },
+        "footer": {
+          "rect": {
+            "x": 24,
+            "y": 1096.75,
+            "width": 342,
+            "height": 76.5,
+            "bottom": 1173.25,
+            "right": 366
+          },
+          "display": "block",
+          "fontSize": "11px",
+          "lineHeight": "16.5px",
+          "gap": "normal",
+          "rowGap": "normal",
+          "columnGap": "normal",
+          "marginTop": "0px",
+          "marginBottom": "0px",
+          "padding": "30px 0px"
+        }
+      },
+      "action": {
+        "count": 1,
+        "href": "#queue",
+        "hash": "#queue"
+      }
+    }
+  ],
+  "allowedScope": "Hero label/headline/supporting copy typography and reading measure. DESIGN.md gains observed local evidence only; APPROVED Rev 1 authority and acceptance remain unchanged.",
+  "visualObservation": "Controller opened all four native fresh full-page captures. The headline is the clear entry point (40px desktop, 32px mobile); label 14px and explanation 16px are subordinate. Mobile title is balanced over two lines. Existing two-column desktop composition, mobile stack, slate slash panel, metrics and table remain. No clipping or horizontal overflow was observed.",
+  "acceptanceBoundary": "Technical/Product/Visual PASS for these exact static targets does not accept the refinement. No user acceptance inferred."
+}

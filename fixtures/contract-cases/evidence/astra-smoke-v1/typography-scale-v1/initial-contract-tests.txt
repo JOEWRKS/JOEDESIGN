@@ -1,0 +1,381 @@
+Switched to a new branch 'codex/joedesign-v0.1-typography-scale-core'
+branch 'codex/joedesign-v0.1-typography-scale-core' set up to track 'origin/codex/joedesign-v0.1-typography-scale-core'.
+## codex/joedesign-v0.1-typography-scale-core...origin/codex/joedesign-v0.1-typography-scale-core
+✔ 01 — single public entrypoint (6.5306ms)
+✖ 02 — no product-authority override (5.019ms)
+✖ 03 — DESIGN.md lifecycle (2.5466ms)
+✖ 04 — unresolved direction meaningful alternatives (3.542ms)
+✖ 05 — approved direction no unnecessary alternatives (3.3892ms)
+✖ 06 — reference relationship handling (2.7861ms)
+✖ 07 — target-medium proof (3.7307ms)
+✖ 08 — exact-target refinement (2.9702ms)
+✖ 09 — local refinement does not cause redesign (2.882ms)
+✖ 10 — repeated rejection direction reconsideration (1.8564ms)
+✖ 11 — responsive translation (2.17ms)
+✖ 12 — product ambiguity bounded re-entry (2.4036ms)
+✖ 13 — actual-output PASS FAIL UNVERIFIED (2.3445ms)
+✖ 14 — technical PASS does not prove visual PASS (2.5109ms)
+✖ 15 — internal visual PASS does not confer acceptance (1.8569ms)
+✔ 16 — external competitor dependencies absent in repository and installable skill (23.7346ms)
+✔ craft — hierarchy and visual flow precede decoration (2.8714ms)
+✔ craft — material spacing follows a semantic Visual Block Tree (0.3339ms)
+✔ craft — spacing belongs to relationships, not isolated elements (0.3383ms)
+✔ craft — structural separation and binding hierarchy stay distinct (0.3113ms)
+✔ craft — 4px base uses a deliberately restricted canonical token set (0.2997ms)
+✔ craft — one-off spacing is challenged and density changes systemically (0.2351ms)
+✔ craft — responsive work preserves hierarchy roles, not raw coordinates (0.2245ms)
+✔ craft — project DESIGN template can persist the chosen spatial profile (0.1098ms)
+✔ type — semantic role is chosen before numeric value (2.1632ms)
+✔ type — hierarchy uses multiple axes rather than font size alone (0.2907ms)
+✔ type — scale is restrained and independent from the spatial 4px grid (0.2425ms)
+✔ type — near-duplicate roles and arbitrary local sizes are challenged (0.2238ms)
+✔ type — family and weight strategy is restrained and role-based (0.2804ms)
+✔ type — readability couples measure, line height, language, and actual face (0.3751ms)
+✔ type — responsive translation preserves role hierarchy instead of proportional shrinking (0.2989ms)
+✔ type — project DESIGN template can persist type roles and reading system (0.1365ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 18
+ℹ fail 14
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 180.7607
+
+✖ failing tests:
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 02 — no product-authority override (5.019ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 03 — DESIGN.md lifecycle (2.5466ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 04 — unresolved direction meaningful alternatives (3.542ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 05 — approved direction no unnecessary alternatives (3.3892ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 06 — reference relationship handling (2.7861ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 07 — target-medium proof (3.7307ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 08 — exact-target refinement (2.9702ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 09 — local refinement does not cause redesign (2.882ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 10 — repeated rejection direction reconsideration (1.8564ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 11 — responsive translation (2.17ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 12 — product ambiguity bounded re-entry (2.4036ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 13 — actual-output PASS FAIL UNVERIFIED (2.3445ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 14 — technical PASS does not prove visual PASS (2.5109ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-contract.tests.mjs:65:3
+✖ 15 — internal visual PASS does not confer acceptance (1.8569ms)
+  AssertionError [ERR_ASSERTION]: Skill changed: rerun contract decisions
+  + actual - expected
+  
+  + '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3'
+  - '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b'
+  
+      at observed (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:40:36)
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joewrks-design/tests/joedesign-contract.tests.mjs:66:20)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: '3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3',
+    expected: '44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,4039 @@
+{
+  "case": "Smoke D — Typography & Scale Core",
+  "result": "PASS",
+  "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a07306-abba-7ff3-b99b-2dbc882f8085",
+    "version": "codex-cli 0.153.0",
+    "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1"
+  },
+  "fixture": {
+    "commit": "44cd72255cc8226f02eb3b5136531262080e9278",
+    "tree": "b6b126da7d5da3a4dee7a6fbac2a26d15c15dac4"
+  },
+  "target": {
+    "product": "Northbank — neutral host reading guide",
+    "language": "English",
+    "state": "populated static guide",
+    "browserVersion": "152.0.7977.65",
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "capture": "Full-page native browser images; image heights exceed viewport heights."
+  },
+  "rolePlanningProvenance": {
+    "rolloutSha256": "3ad93c28ceec4f7fc8121ba459a51909d2d446e7d6b18c81b812497bdc228c75",
+    "semanticIntentBeforeEdit": "2026-09-05T19:23:59.727Z",
+    "observedDiagnosisBeforeEdit": "2026-09-05T19:24:55.342Z",
+    "firstStylesheetEdit": "2026-09-05T19:25:36.936Z",
+    "note": "Timestamps are UTC from native records. The early messages identify the primary reading task, secondary references and recurring semantic roles; the map below is the controller's explicit mapping of the resulting CSS, not a fabricated pre-run document."
+  },
+  "semanticTypeRoleMap": [
+    {
+      "role": "page-title",
+      "selector": "h1",
+      "meaning": "Primary entry to the reading task",
+      "style": "--type-page"
+    },
+    {
+      "role": "section-title",
+      "selector": ".section-title",
+      "meaning": "Peer Preparation/Handover section titles, not every h2",
+      "style": "--type-section"
+    },
+    {
+      "role": "subsection-title",
+      "selector": ".subsection-title",
+      "meaning": "Peer long-reading introductions across unequal wrapper depths",
+      "style": "--type-subsection"
+    },
+    {
+      "role": "lead",
+      "selector": ".lead",
+      "meaning": "Opening explanation, distinct by placement and regular weight",
+      "style": "--type-lead"
+    },
+    {
+      "role": "reading-body",
+      "selector": ".reading-copy",
+      "meaning": "All A/B introductions and long paragraphs",
+      "style": "--type-body / --leading-reading"
+    },
+    {
+      "role": "strong-body",
+      "selector": ".reminder-title",
+      "meaning": "Six same-job reminder titles",
+      "style": "--type-body / --weight-strong"
+    },
+    {
+      "role": "reminder-body",
+      "selector": ".reminder-copy",
+      "meaning": "Short descriptions bound to reminder titles",
+      "style": "--type-body / --leading-ui"
+    },
+    {
+      "role": "supporting-title",
+      "selector": ".reference-title",
+      "meaning": "Reference collection h2 is a secondary label, not section-title",
+      "style": "--type-body / --weight-strong"
+    },
+    {
+      "role": "supporting-count",
+      "selector": ".reference-count",
+      "meaning": "Secondary count, not the product focal point",
+      "style": "32px / --weight-regular"
+    },
+    {
+      "role": "supporting-label",
+      "selector": ".reference-label",
+      "meaning": "Label for the secondary count",
+      "style": "--type-body"
+    },
+    {
+      "role": "small-support",
+      "selector": ".reference-description",
+      "meaning": "Supporting context",
+      "style": "--type-small"
+    },
+    {
+      "role": "metadata",
+      "selector": ".metadata",
+      "meaning": "Owner and revision information",
+      "style": "--type-small"
+    },
+    {
+      "role": "orientation",
+      "selector": ".eyebrow",
+      "meaning": "Page orientation, not primary title",
+      "style": "--type-small / --weight-strong"
+    },
+    {
+      "role": "section-orientation",
+      "selector": ".section-kicker",
+      "meaning": "Section context",
+      "style": "--type-small / --weight-strong"
+    },
+    {
+      "role": "identity",
+      "selector": ".brand",
+      "meaning": "Wordmark identification, not a guide heading",
+      "style": "24px / --weight-strong"
+    },
+    {
+      "role": "header-support",
+      "selector": ".header-label",
+      "meaning": "Compact guide descriptor",
+      "style": "--type-small"
+    },
+    {
+      "role": "action",
+      "selector": ".primary-action",
+      "meaning": "Primary native handover anchor",
+      "style": "--type-body / --weight-strong"
+    },
+    {
+      "role": "footer",
+      "selector": "footer",
+      "meaning": "Secondary example disclaimer",
+      "style": "--type-small"
+    }
+  ],
+  "beforeAfterComputed": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "valuesOrder": [
+        "fontSize",
+        "fontWeight",
+        "lineHeight",
+        "letterSpacing",
+        "fontFamily",
+        "fontSynthesis"
+      ],
+      "roles": [
+        {
+          "role": "page-title",
+          "selector": "h1",
+          "styles": [
+            {
+              "values": [
+                "22px",
+                "800",
+                "23.1px",
+                "1.54px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-title",
+          "selector": ".section-title",
+          "styles": [
+            {
+              "values": [
+                "28px",
+                "900",
+                "32.2px",
+                "0.7px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                }
+              ]
+            },
+            {
+              "values": [
+                "31px",
+                "400",
+                "55.8px",
+                "-1.085px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "subsection-title",
+          "selector": ".subsection-title",
+          "styles": [
+            {
+              "values": [
+                "24px",
+                "400",
+                "26.88px",
+                "1.56px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                }
+              ]
+            },
+            {
+              "values": [
+                "22px",
+                "650",
+                "38.5px",
+                "-0.99px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "lead",
+          "selector": ".lead",
+          "styles": [
+            {
+              "values": [
+                "17px",
+                "400",
+                "33.15px",
+                "0.425px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reading-body",
+          "selector": ".reading-copy",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "400",
+                "17.92px",
+                "0.8px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                }
+              ]
+            },
+            {
+              "values": [
+                "15px",
+                "400",
+                "32.25px",
+                "-0.375px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "strong-body",
+          "selector": ".reminder-title",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "600",
+                "19.2px",
+                "0.64px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                }
+              ]
+            },
+            {
+              "values": [
+                "17px",
+                "600",
+                "20.4px",
+                "-0.595px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                }
+              ]
+            },
+            {
+              "values": [
+                "18px",
+                "600",
+                "21.6px",
+                "1.62px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reminder-body",
+          "selector": ".reminder-copy",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "18.2px",
+                "0.28px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-title",
+          "selector": ".reference-title",
+          "styles": [
+            {
+              "values": [
+                "17px",
+                "700",
+                "20.4px",
+                "1.19px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-count",
+          "selector": ".reference-count",
+          "styles": [
+            {
+              "values": [
+                "108px",
+                "900",
+                "108px",
+                "-8.64px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-label",
+          "selector": ".reference-label",
+          "styles": [
+            {
+              "values": [
+                "23px",
+                "700",
+                "39.1px",
+                "1.035px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "small-support",
+          "selector": ".reference-description",
+          "styles": [
+            {
+              "values": [
+                "13px",
+                "600",
+                "14.3px",
+                "0.39px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "metadata",
+          "selector": ".metadata",
+          "styles": [
+            {
+              "values": [
+                "15px",
+                "400",
+                "18.75px",
+                "1.125px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                },
+                {
+                  "index": 1,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "orientation",
+          "selector": ".eyebrow",
+          "styles": [
+            {
+              "values": [
+                "18px",
+                "600",
+                "32.4px",
+                "2.34px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-orientation",
+          "selector": ".section-kicker",
+          "styles": [
+            {
+              "values": [
+                "15px",
+                "700",
+                "30px",
+                "2.1px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "identity",
+          "selector": ".brand",
+          "styles": [
+            {
+              "values": [
+                "29px",
+                "700",
+                "43.5px",
+                "normal",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "header-support",
+          "selector": ".header-label",
+          "styles": [
+            {
+              "values": [
+                "13px",
+                "400",
+                "19.5px",
+                "1.17px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "action",
+          "selector": ".primary-action",
+          "styles": [
+            {
+              "values": [
+                "19px",
+                "900",
+                "20.9px",
+                "-1.14px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "footer",
+          "selector": "footer",
+          "styles": [
+            {
+              "values": [
+                "13px",
+                "400",
+                "23.4px",
+                "normal",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "valuesOrder": [
+        "fontSize",
+        "fontWeight",
+        "lineHeight",
+        "letterSpacing",
+        "fontFamily",
+        "fontSynthesis"
+      ],
+      "roles": [
+        {
+          "role": "page-title",
+          "selector": "h1",
+          "styles": [
+            {
+              "values": [
+                "16.5px",
+                "800",
+                "17.325px",
+                "1.155px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-title",
+          "selector": ".section-title",
+          "styles": [
+            {
+              "values": [
+                "21px",
+                "900",
+                "24.15px",
+                "0.525px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                }
+              ]
+            },
+            {
+              "values": [
+                "23.25px",
+                "400",
+                "41.85px",
+                "-0.81375px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "subsection-title",
+          "selector": ".subsection-title",
+          "styles": [
+            {
+              "values": [
+                "18px",
+                "400",
+                "20.16px",
+                "1.17px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                }
+              ]
+            },
+            {
+              "values": [
+                "16.5px",
+                "650",
+                "28.875px",
+                "-0.7425px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "lead",
+          "selector": ".lead",
+          "styles": [
+            {
+              "values": [
+                "12.75px",
+                "400",
+                "24.8625px",
+                "0.31875px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reading-body",
+          "selector": ".reading-copy",
+          "styles": [
+            {
+              "values": [
+                "12px",
+                "400",
+                "13.44px",
+                "0.6px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                }
+              ]
+            },
+            {
+              "values": [
+                "11.25px",
+                "400",
+                "24.1875px",
+                "-0.28125px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "strong-body",
+          "selector": ".reminder-title",
+          "styles": [
+            {
+              "values": [
+                "12px",
+                "600",
+                "14.4px",
+                "0.48px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                }
+              ]
+            },
+            {
+              "values": [
+                "12.75px",
+                "600",
+                "15.3px",
+                "-0.44625px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                }
+              ]
+            },
+            {
+              "values": [
+                "13.5px",
+                "600",
+                "16.2px",
+                "1.215px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reminder-body",
+          "selector": ".reminder-copy",
+          "styles": [
+            {
+              "values": [
+                "10.5px",
+                "400",
+                "13.65px",
+                "0.21px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-title",
+          "selector": ".reference-title",
+          "styles": [
+            {
+              "values": [
+                "12.75px",
+                "700",
+                "15.3px",
+                "0.8925px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-count",
+          "selector": ".reference-count",
+          "styles": [
+            {
+              "values": [
+                "81px",
+                "900",
+                "81px",
+                "-6.48px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-label",
+          "selector": ".reference-label",
+          "styles": [
+            {
+              "values": [
+                "17.25px",
+                "700",
+                "29.325px",
+                "0.77625px",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "small-support",
+          "selector": ".reference-description",
+          "styles": [
+            {
+              "values": [
+                "9.75px",
+                "600",
+                "10.725px",
+                "0.2925px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "metadata",
+          "selector": ".metadata",
+          "styles": [
+            {
+              "values": [
+                "11.25px",
+                "400",
+                "14.0625px",
+                "0.84375px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                },
+                {
+                  "index": 1,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "orientation",
+          "selector": ".eyebrow",
+          "styles": [
+            {
+              "values": [
+                "13.5px",
+                "600",
+                "24.3px",
+                "1.755px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-orientation",
+          "selector": ".section-kicker",
+          "styles": [
+            {
+              "values": [
+                "11.25px",
+                "700",
+                "22.5px",
+                "1.575px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "identity",
+          "selector": ".brand",
+          "styles": [
+            {
+              "values": [
+                "21.75px",
+                "700",
+                "32.625px",
+                "normal",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "header-support",
+          "selector": ".header-label",
+          "styles": [
+            {
+              "values": [
+                "9.75px",
+                "400",
+                "14.625px",
+                "0.8775px",
+                "\"Courier New\", monospace",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "action",
+          "selector": ".primary-action",
+          "styles": [
+            {
+              "values": [
+                "14.25px",
+                "900",
+                "15.675px",
+                "-0.855px",
+                "\"Guide Sans\", Arial, sans-serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "footer",
+          "selector": "footer",
+          "styles": [
+            {
+              "values": [
+                "9.75px",
+                "400",
+                "17.55px",
+                "normal",
+                "Georgia, serif",
+                "weight style"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "valuesOrder": [
+        "fontSize",
+        "fontWeight",
+        "lineHeight",
+        "letterSpacing",
+        "fontFamily",
+        "fontSynthesis"
+      ],
+      "roles": [
+        {
+          "role": "page-title",
+          "selector": "h1",
+          "styles": [
+            {
+              "values": [
+                "48px",
+                "700",
+                "52.8px",
+                "-1.2px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-title",
+          "selector": ".section-title",
+          "styles": [
+            {
+              "values": [
+                "32px",
+                "700",
+                "40px",
+                "-0.48px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "subsection-title",
+          "selector": ".subsection-title",
+          "styles": [
+            {
+              "values": [
+                "24px",
+                "700",
+                "30px",
+                "-0.24px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "lead",
+          "selector": ".lead",
+          "styles": [
+            {
+              "values": [
+                "20px",
+                "400",
+                "30px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reading-body",
+          "selector": ".reading-copy",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "400",
+                "25.6px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "strong-body",
+          "selector": ".reminder-title",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "700",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reminder-body",
+          "selector": ".reminder-copy",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "400",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-title",
+          "selector": ".reference-title",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "700",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-count",
+          "selector": ".reference-count",
+          "styles": [
+            {
+              "values": [
+                "32px",
+                "400",
+                "40px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-label",
+          "selector": ".reference-label",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "400",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "small-support",
+          "selector": ".reference-description",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "metadata",
+          "selector": ".metadata",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                },
+                {
+                  "index": 1,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "orientation",
+          "selector": ".eyebrow",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "700",
+                "21px",
+                "0.84px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-orientation",
+          "selector": ".section-kicker",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "700",
+                "21px",
+                "0.84px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "identity",
+          "selector": ".brand",
+          "styles": [
+            {
+              "values": [
+                "24px",
+                "700",
+                "30px",
+                "-0.6px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "header-support",
+          "selector": ".header-label",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "action",
+          "selector": ".primary-action",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "700",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "footer",
+          "selector": "footer",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "valuesOrder": [
+        "fontSize",
+        "fontWeight",
+        "lineHeight",
+        "letterSpacing",
+        "fontFamily",
+        "fontSynthesis"
+      ],
+      "roles": [
+        {
+          "role": "page-title",
+          "selector": "h1",
+          "styles": [
+            {
+              "values": [
+                "40px",
+                "700",
+                "44px",
+                "-1px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-title",
+          "selector": ".section-title",
+          "styles": [
+            {
+              "values": [
+                "24px",
+                "700",
+                "30px",
+                "-0.36px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "subsection-title",
+          "selector": ".subsection-title",
+          "styles": [
+            {
+              "values": [
+                "20px",
+                "700",
+                "25px",
+                "-0.2px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "lead",
+          "selector": ".lead",
+          "styles": [
+            {
+              "values": [
+                "20px",
+                "400",
+                "30px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reading-body",
+          "selector": ".reading-copy",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "400",
+                "25.6px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "strong-body",
+          "selector": ".reminder-title",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "700",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "reminder-body",
+          "selector": ".reminder-copy",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "400",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "preparation"
+                },
+                {
+                  "index": 2,
+                  "section": "preparation"
+                },
+                {
+                  "index": 3,
+                  "section": "handover"
+                },
+                {
+                  "index": 4,
+                  "section": "handover"
+                },
+                {
+                  "index": 5,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-title",
+          "selector": ".reference-title",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "700",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-count",
+          "selector": ".reference-count",
+          "styles": [
+            {
+              "values": [
+                "32px",
+                "400",
+                "40px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "supporting-label",
+          "selector": ".reference-label",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "400",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "small-support",
+          "selector": ".reference-description",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "metadata",
+          "selector": ".metadata",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                },
+                {
+                  "index": 1,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "orientation",
+          "selector": ".eyebrow",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "700",
+                "21px",
+                "0.84px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "section-orientation",
+          "selector": ".section-kicker",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "700",
+                "21px",
+                "0.84px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": "preparation"
+                },
+                {
+                  "index": 1,
+                  "section": "handover"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "identity",
+          "selector": ".brand",
+          "styles": [
+            {
+              "values": [
+                "24px",
+                "700",
+                "30px",
+                "-0.6px",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "header-support",
+          "selector": ".header-label",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "action",
+          "selector": ".primary-action",
+          "styles": [
+            {
+              "values": [
+                "16px",
+                "700",
+                "24px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "role": "footer",
+          "selector": "footer",
+          "styles": [
+            {
+              "values": [
+                "14px",
+                "400",
+                "21px",
+                "normal",
+                "Arial, Helvetica, sans-serif",
+                "none"
+              ],
+              "elements": [
+                {
+                  "index": 0,
+                  "section": null
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "familyUsage": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "declaredCustomFaces": [
+        {
+          "family": "Guide Sans",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        }
+      ],
+      "platformFonts": [
+        {
+          "selector": "h1",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 35
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .section-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 21
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .section-title",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia",
+              "isCustomFont": false,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia",
+              "isCustomFont": false,
+              "glyphCount": 34
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 37
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 269
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia",
+              "isCustomFont": false,
+              "glyphCount": 309
+            }
+          ]
+        },
+        {
+          "selector": ".reminder-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 23
+            }
+          ]
+        },
+        {
+          "selector": ".reference-count",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia-Bold",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "selector": ".metadata",
+          "fonts": [
+            {
+              "familyName": "Courier New",
+              "postScriptName": "CourierNewPSMT",
+              "isCustomFont": false,
+              "glyphCount": 36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "declaredCustomFaces": [
+        {
+          "family": "Guide Sans",
+          "weight": "400",
+          "style": "normal",
+          "status": "loaded"
+        }
+      ],
+      "platformFonts": [
+        {
+          "selector": "h1",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 35
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .section-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 21
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .section-title",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia",
+              "isCustomFont": false,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia",
+              "isCustomFont": false,
+              "glyphCount": 34
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 37
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 266
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia",
+              "isCustomFont": false,
+              "glyphCount": 306
+            }
+          ]
+        },
+        {
+          "selector": ".reminder-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 23
+            }
+          ]
+        },
+        {
+          "selector": ".reference-count",
+          "fonts": [
+            {
+              "familyName": "Georgia",
+              "postScriptName": "Georgia-Bold",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "selector": ".metadata",
+          "fonts": [
+            {
+              "familyName": "Courier New",
+              "postScriptName": "CourierNewPSMT",
+              "isCustomFont": false,
+              "glyphCount": 36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "declaredCustomFaces": [],
+      "platformFonts": [
+        {
+          "selector": "h1",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 34
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .section-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 21
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .section-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 34
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 37
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 267
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 306
+            }
+          ]
+        },
+        {
+          "selector": ".reminder-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 23
+            }
+          ]
+        },
+        {
+          "selector": ".reference-count",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "selector": ".metadata",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 36
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "declaredCustomFaces": [],
+      "platformFonts": [
+        {
+          "selector": "h1",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 33
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .section-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 21
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .section-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 17
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 34
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .subsection-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 37
+            }
+          ]
+        },
+        {
+          "selector": ".section-a .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 265
+            }
+          ]
+        },
+        {
+          "selector": ".section-b .reading-copy",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 304
+            }
+          ]
+        },
+        {
+          "selector": ".reminder-title",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "Arial-BoldMT",
+              "isCustomFont": false,
+              "glyphCount": 23
+            }
+          ]
+        },
+        {
+          "selector": ".reference-count",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 2
+            }
+          ]
+        },
+        {
+          "selector": ".metadata",
+          "fonts": [
+            {
+              "familyName": "Arial",
+              "postScriptName": "ArialMT",
+              "isCustomFont": false,
+              "glyphCount": 36
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "representativeReadingMeasure": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "paragraphGapPx": [
+        {
+          "section": "preparation",
+          "width": 1200,
+          "paragraphGap": 16
+        },
+        {
+          "section": "handover",
+          "width": 1200,
+          "paragraphGap": 16
+        }
+      ],
+      "paragraphs": [
+        {
+          "index": 0,
+          "section": "preparation",
+          "widthPx": 1200,
+          "maxWidth": "none",
+          "fontSize": "16px",
+          "lineHeight": "17.92px",
+          "lineCharacters": [
+            153,
+            116
+          ]
+        },
+        {
+          "index": 1,
+          "section": "preparation",
+          "widthPx": 1200,
+          "maxWidth": "none",
+          "fontSize": "16px",
+          "lineHeight": "17.92px",
+          "lineCharacters": [
+            154,
+            143,
+            149,
+            87
+          ]
+        },
+        {
+          "index": 2,
+          "section": "preparation",
+          "widthPx": 1200,
+          "maxWidth": "none",
+          "fontSize": "16px",
+          "lineHeight": "17.92px",
+          "lineCharacters": [
+            143,
+            147,
+            150,
+            63
+          ]
+        },
+        {
+          "index": 3,
+          "section": "handover",
+          "widthPx": 1200,
+          "maxWidth": "none",
+          "fontSize": "15px",
+          "lineHeight": "32.25px",
+          "lineCharacters": [
+            186,
+            123
+          ]
+        },
+        {
+          "index": 4,
+          "section": "handover",
+          "widthPx": 1200,
+          "maxWidth": "none",
+          "fontSize": "15px",
+          "lineHeight": "32.25px",
+          "lineCharacters": [
+            192,
+            190,
+            70
+          ]
+        },
+        {
+          "index": 5,
+          "section": "handover",
+          "widthPx": 1200,
+          "maxWidth": "none",
+          "fontSize": "15px",
+          "lineHeight": "32.25px",
+          "lineCharacters": [
+            186,
+            192,
+            112
+          ]
+        }
+      ],
+      "method": "Browser Range geometry grouped by rendered line y; counts include internal spaces and exclude leading/trailing whitespace. Last line is retained, not used as a minimum-measure gate."
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paragraphGapPx": [
+        {
+          "section": "preparation",
+          "width": 342,
+          "paragraphGap": 16
+        },
+        {
+          "section": "handover",
+          "width": 342,
+          "paragraphGap": 16
+        }
+      ],
+      "paragraphs": [
+        {
+          "index": 0,
+          "section": "preparation",
+          "widthPx": 342,
+          "maxWidth": "none",
+          "fontSize": "12px",
+          "lineHeight": "13.44px",
+          "lineCharacters": [
+            57,
+            58,
+            50,
+            58,
+            43
+          ]
+        },
+        {
+          "index": 1,
+          "section": "preparation",
+          "widthPx": 342,
+          "maxWidth": "none",
+          "fontSize": "12px",
+          "lineHeight": "13.44px",
+          "lineCharacters": [
+            53,
+            57,
+            58,
+            55,
+            55,
+            50,
+            50,
+            47,
+            58,
+            44
+          ]
+        },
+        {
+          "index": 2,
+          "section": "preparation",
+          "widthPx": 342,
+          "maxWidth": "none",
+          "fontSize": "12px",
+          "lineHeight": "13.44px",
+          "lineCharacters": [
+            53,
+            52,
+            52,
+            53,
+            45,
+            56,
+            52,
+            53,
+            53,
+            28
+          ]
+        },
+        {
+          "index": 3,
+          "section": "handover",
+          "widthPx": 342,
+          "maxWidth": "none",
+          "fontSize": "11.25px",
+          "lineHeight": "24.1875px",
+          "lineCharacters": [
+            61,
+            66,
+            73,
+            63,
+            43
+          ]
+        },
+        {
+          "index": 4,
+          "section": "handover",
+          "widthPx": 342,
+          "maxWidth": "none",
+          "fontSize": "11.25px",
+          "lineHeight": "24.1875px",
+          "lineCharacters": [
+            69,
+            70,
+            71,
+            72,
+            70,
+            68,
+            28
+          ]
+        },
+        {
+          "index": 5,
+          "section": "handover",
+          "widthPx": 342,
+          "maxWidth": "none",
+          "fontSize": "11.25px",
+          "lineHeight": "24.1875px",
+          "lineCharacters": [
+            68,
+            70,
+            66,
+            71,
+            67,
+            70,
+            65,
+            8
+          ]
+        }
+      ],
+      "method": "Browser Range geometry grouped by rendered line y; counts include internal spaces and exclude leading/trailing whitespace. Last line is retained, not used as a minimum-measure gate."
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "paragraphGapPx": [
+        {
+          "section": "preparation",
+          "width": 1200,
+          "paragraphGap": 16
+        },
+        {
+          "section": "handover",
+          "width": 1200,
+          "paragraphGap": 16
+        }
+      ],
+      "paragraphs": [
+        {
+          "index": 0,
+          "section": "preparation",
+          "widthPx": 569.5,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            76,
+            80,
+            80,
+            31
+          ]
+        },
+        {
+          "index": 1,
+          "section": "preparation",
+          "widthPx": 569.5,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            74,
+            87,
+            76,
+            77,
+            76,
+            78,
+            62
+          ]
+        },
+        {
+          "index": 2,
+          "section": "preparation",
+          "widthPx": 569.5,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            76,
+            77,
+            76,
+            72,
+            77,
+            80,
+            42
+          ]
+        },
+        {
+          "index": 3,
+          "section": "handover",
+          "widthPx": 569.5,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            69,
+            76,
+            72,
+            76,
+            13
+          ]
+        },
+        {
+          "index": 4,
+          "section": "handover",
+          "widthPx": 569.5,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            78,
+            80,
+            79,
+            79,
+            78,
+            55
+          ]
+        },
+        {
+          "index": 5,
+          "section": "handover",
+          "widthPx": 569.5,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            74,
+            73,
+            66,
+            72,
+            72,
+            78,
+            51
+          ]
+        }
+      ],
+      "method": "Browser Range geometry grouped by rendered line y; counts include internal spaces and exclude leading/trailing whitespace. Last line is retained, not used as a minimum-measure gate."
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "paragraphGapPx": [
+        {
+          "section": "preparation",
+          "width": 342,
+          "paragraphGap": 16
+        },
+        {
+          "section": "handover",
+          "width": 342,
+          "paragraphGap": 16
+        }
+      ],
+      "paragraphs": [
+        {
+          "index": 0,
+          "section": "preparation",
+          "widthPx": 342,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            48,
+            45,
+            42,
+            50,
+            44,
+            36
+          ]
+        },
+        {
+          "index": 1,
+          "section": "preparation",
+          "widthPx": 342,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            44,
+            44,
+            47,
+            46,
+            41,
+            44,
+            45,
+            44,
+            45,
+            46,
+            46,
+            33
+          ]
+        },
+        {
+          "index": 2,
+          "section": "preparation",
+          "widthPx": 342,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            43,
+            45,
+            46,
+            47,
+            46,
+            40,
+            43,
+            43,
+            38,
+            46,
+            45,
+            13
+          ]
+        },
+        {
+          "index": 3,
+          "section": "handover",
+          "widthPx": 342,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            36,
+            42,
+            44,
+            48,
+            45,
+            46,
+            43
+          ]
+        },
+        {
+          "index": 4,
+          "section": "handover",
+          "widthPx": 342,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            49,
+            46,
+            43,
+            44,
+            45,
+            49,
+            44,
+            45,
+            42,
+            38
+          ]
+        },
+        {
+          "index": 5,
+          "section": "handover",
+          "widthPx": 342,
+          "maxWidth": "569.5px",
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "lineCharacters": [
+            43,
+            41,
+            43,
+            41,
+            43,
+            47,
+            45,
+            47,
+            39,
+            42,
+            39,
+            11
+          ]
+        }
+      ],
+      "method": "Browser Range geometry grouped by rendered line y; counts include internal spaces and exclude leading/trailing whitespace. Last line is retained, not used as a minimum-measure gate."
+    }
+  ],
+  "responsiveMappings": [
+    {
+      "role": "page-title",
+      "selector": "h1",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "48px",
+          "lineHeight": "52.8px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "40px",
+          "lineHeight": "44px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "section-title",
+      "selector": ".section-title",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "32px",
+          "lineHeight": "40px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "32px",
+          "lineHeight": "40px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "24px",
+          "lineHeight": "30px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "24px",
+          "lineHeight": "30px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "subsection-title",
+      "selector": ".subsection-title",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "24px",
+          "lineHeight": "30px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "24px",
+          "lineHeight": "30px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "20px",
+          "lineHeight": "25px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "20px",
+          "lineHeight": "25px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "lead",
+      "selector": ".lead",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "20px",
+          "lineHeight": "30px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "20px",
+          "lineHeight": "30px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "reading-body",
+      "selector": ".reading-copy",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 1,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 2,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 3,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 4,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 5,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 1,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 2,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 3,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 4,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 5,
+          "fontSize": "16px",
+          "lineHeight": "25.6px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "strong-body",
+      "selector": ".reminder-title",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 2,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 3,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 4,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 5,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 2,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 3,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 4,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 5,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "reminder-body",
+      "selector": ".reminder-copy",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 1,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 2,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 3,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 4,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 5,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 1,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 2,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 3,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 4,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 5,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "supporting-title",
+      "selector": ".reference-title",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "supporting-count",
+      "selector": ".reference-count",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "32px",
+          "lineHeight": "40px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "32px",
+          "lineHeight": "40px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "supporting-label",
+      "selector": ".reference-label",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "small-support",
+      "selector": ".reference-description",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "metadata",
+      "selector": ".metadata",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 1,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        },
+        {
+          "index": 1,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "orientation",
+      "selector": ".eyebrow",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "section-orientation",
+      "selector": ".section-kicker",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "700"
+        },
+        {
+          "index": 1,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "identity",
+      "selector": ".brand",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "24px",
+          "lineHeight": "30px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "24px",
+          "lineHeight": "30px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "header-support",
+      "selector": ".header-label",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ]
+    },
+    {
+      "role": "action",
+      "selector": ".primary-action",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "16px",
+          "lineHeight": "24px",
+          "fontWeight": "700"
+        }
+      ]
+    },
+    {
+      "role": "footer",
+      "selector": "footer",
+      "desktop": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ],
+      "mobile": [
+        {
+          "index": 0,
+          "fontSize": "14px",
+          "lineHeight": "21px",
+          "fontWeight": "400"
+        }
+      ]
+    }
+  ],
+  "titleLineBreaks": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "lines": [
+        "Make every handover easy to follow."
+      ]
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lines": [
+        "Make every handover easy to follow."
+      ]
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "lines": [
+        "Make every handover",
+        "easy to follow."
+      ]
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "lines": [
+        "Make every",
+        "handover",
+        "easy to follow."
+      ]
+    }
+  ],
+  "spatialPreservation": [
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sectionGap": 160,
+      "tokens": {
+        "--space-tight": "8px",
+        "--space-micro": "4px",
+        "--space-group-3": "16px",
+        "--space-group-1": "48px",
+        "--space-group-2": "24px",
+        "--space-section": "160px"
+      }
+    },
+    {
+      "phase": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sectionGap": 160,
+      "tokens": {
+        "--space-tight": "8px",
+        "--space-micro": "4px",
+        "--space-group-3": "16px",
+        "--space-group-1": "48px",
+        "--space-group-2": "24px",
+        "--space-section": "160px"
+      }
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sectionGap": 160,
+      "tokens": {
+        "--space-section": "160px",
+        "--space-tight": "8px",
+        "--space-micro": "4px",
+        "--space-group-3": "16px",
+        "--space-group-1": "48px",
+        "--space-group-2": "24px"
+      }
+    },
+    {
+      "phase": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "sectionGap": 160,
+      "tokens": {
+        "--space-section": "160px",
+        "--space-tight": "8px",
+        "--space-micro": "4px",
+        "--space-group-3": "16px",
+        "--space-group-1": "48px",
+        "--space-group-2": "24px"
+      }
+    }
+  ],
+  "changedFiles": [
+    "styles.css"
+  ],
+  "sourceSha256": {
+    "before": {
+      "PRODUCT.md": "25c86eec9814d66a844c7232f8cf122eda9d9845a9937d96ef0db8aecf92e4d1",
+      "DESIGN.md": "ed583646ff7e080ab961db8f695309bddc21e60708e2a94d5e5904566930535c",
+      "index.html": "931f49a9eaafcf8fec2b7e438d179a0add97bbc9dac0d5b0606689fb9413a827",
+      "styles.css": "b4221560169ea66e115d1129c884e3cecf7db46e2988ac81e67d13f9e07ff816",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    },
+    "after": {
+      "PRODUCT.md": "25c86eec9814d66a844c7232f8cf122eda9d9845a9937d96ef0db8aecf92e4d1",
+      "DESIGN.md": "ed583646ff7e080ab961db8f695309bddc21e60708e2a94d5e5904566930535c",
+      "index.html": "931f49a9eaafcf8fec2b7e438d179a0add97bbc9dac0d5b0606689fb9413a827",
+      "styles.css": "6ec437ed193aa95cdb76ae8f52ae1eb5c7636e32bc920b7744ee55f219793a09",
+      "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    }
+  },
+  "productSemanticInvariants": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "textUnchanged": true,
+      "headingOrderUnchanged": true,
+      "linksUnchanged": true,
+      "actionPreserved": true,
+      "horizontalOverflow": false,
+      "hiddenContent": []
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "textUnchanged": true,
+      "headingOrderUnchanged": true,
+      "linksUnchanged": true,
+      "actionPreserved": true,
+      "horizontalOverflow": false,
+      "hiddenContent": []
+    }
+  ],
+  "invariants": "index.html, PRODUCT.md, DESIGN.md and render.mjs are byte-identical before/after. Title, two guide sections, unequal wrappers, six reminders, body, heading levels/order, count 12, metadata, footer and native Read handover action are preserved.",
+  "actualRenderedObservations": [
+    {
+      "id": "D1",
+      "claim": "Role before value",
+      "observed": "Before the first stylesheet edit, native commentary identified the page title and reading task as primary, reference count/art as secondary, and peer sections/six reminders as repeated semantic jobs. The implementation maps reference h2 to strong-body 16px, not the section h2 style. Unequal wrapper depth remains unchanged.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D2",
+      "claim": "Same semantic role → same type role",
+      "observed": "Both sections use one section-title, subsection-title and reading-copy rule. Independent computed values match across A/B at both viewports; all six reminders share one style.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D3",
+      "claim": "Decisive hierarchy",
+      "observed": "The 16/17/18px reminder differences collapse to one 16px bold role. Desktop title/section/subsection use 48/32/24px; mobile 40/24/20px. Bold headings, regular reading copy and existing structural whitespace provide additional contrast.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D4",
+      "claim": "Restrained scale",
+      "observed": "Rendered type sizes are a subset of 14/16/20/24/32/40/48px. The default vocabulary is used without a new arbitrary size set.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D5",
+      "claim": "Typography is not spatial 4-grid",
+      "observed": "14px metadata/orientation is retained for its semantic purpose. It is not rounded to 12/16 merely to follow the unchanged spatial grid.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D6",
+      "claim": "Family and weight restraint",
+      "observed": "Three resolved families become Arial only. Computed requested weights are 400/700; CDP reports ArialMT and Arial-BoldMT, and font-synthesis is none. Long reading stays regular rather than bold everywhere. Before Guide Sans registered only regular ArialMT while requesting 800/900; those synthesized/unsupported treatments are removed.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D7",
+      "claim": "Reading system",
+      "observed": "The actual English long-reading measure becomes 569.5px desktop / 342px mobile at 16px with 25.6px line-height. Existing paragraph gap stays 16px. Desktop non-final lines are 66–87 characters (mostly 70–80); mobile non-final lines 36–50. These are observations, not absolute 60–80 gates. Actual viewport captures show readable paragraphs without horizontal clipping.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D8",
+      "claim": "Focal scale follows Product priority",
+      "observed": "Before, the 108px count outweighed a 22px page title and 160px decorative circle competed with it. After, the title is 48/40px bold, secondary count 32px regular muted, circle 96px. In observed first screens, title/read task leads; the reference collection is subordinate beside/below it and the action remains visible.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D9",
+      "claim": "Responsive translation",
+      "observed": "Mobile changes only the page/section/subsection role scales while reading/body/metadata remain legible. The mobile title reads Make every / handover / easy to follow.; desktop Make every handover / easy to follow. There is no inherited 0.75 scaling. Semantic content, heading order and action remain.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D10",
+      "claim": "Actual rendered evidence",
+      "observed": "Controller opened the four full-page native before/after PNGs and native actual-scale mobile top, mobile reading A, desktop reading B captures. Independently loaded before/after sources in Chrome 152.0.7977.65 at both named viewports for computed styles, actual platform faces, line geometry, content/heading/anchor checks.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "D11",
+      "claim": "Acceptance boundary",
+      "observed": "Native typography review separates Technical/Product/Visual PASS from unrecorded user acceptance. APPROVED DESIGN.md Rev 1 and PRODUCT.md stay byte-identical; no new approval is inferred.",
+      "verdict": "PASS"
+    }
+  ],
+  "acceptanceBoundary": {
+    "technical": "PASS for named targets",
+    "productConformance": "PASS for fixed static content and action",
+    "visualConformance": "PASS for named rendered targets",
+    "userAcceptance": "NOT_GRANTED",
+    "approvedAuthority": "DESIGN.md APPROVED Rev 1 unchanged"
+  },
+  "reproduction": "In a disposable directory copy fixture.html to index.html and choose before.css or after.css as styles.css. Render in Chrome at 1440x1000 / 390x844 with full-page screenshots. No network fonts or runtime dependencies in the fixture. These evidence copies are not installable skill changes.",
+  "limitations": [
+    "This neutral fixture pass does not erase the separate semantic case 14 failure.",
+    "No user acceptance, competition readiness, cross-browser/general accessibility result or causal claim about doctrine is inferred."
+  ]
+}
