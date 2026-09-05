@@ -20,6 +20,14 @@ Keep product meaning in its authority, not duplicated here. -->
 
 ## Composition / Spatial Hierarchy
 
+### Visual Flow
+
+<!-- Entry point → next visual destination(s) → major narrative/task transitions. -->
+
+### Spatial Profile
+
+<!-- Record project-specific spacing roles only when sourced/approved. If no override exists, JOEDESIGN may use its current default craft profile during draft proof without promoting those values to project authority. -->
+
 ## Imagery / Artwork
 
 ## Component / Control Grammar
