@@ -55,6 +55,22 @@ After the same direction is materially rejected twice, diagnose direction agains
 
 Translate responsive intent, not desktop coordinates. Recompose mobile hierarchy, crop/focal point, density, negative space, information order, control reachability, and height/aspect relationships as needed while preserving required information and behavior. Inspect the named mobile target; scaling desktop down is not proof of a mobile solution. Preserve visual legibility, contrast, focus visibility, and applicable motion restraint.
 
+## Build hierarchy before decoration
+
+Hierarchy before decoration. For every material surface, determine the Product-priority focal point, visual entry point, intended second/third destinations, and overall visual flow before polishing typography, surfaces, effects, or local spacing. Treat the page as a semantic visual composition rather than a pile of components.
+
+Before assigning material layout spacing, form a semantic Visual Block Tree such as `SURFACE → SECTION → MAJOR GROUP → SUBGROUP → ITEM GROUP → ITEM/MICRO`. This tree is based on meaning and visual relationships, not DOM depth, component nesting, or container count. Use proximity, alignment, whitespace, scale, type, contrast, and imagery to make that hierarchy visible before reaching for cards, borders, or background panels.
+
+Spacing belongs to the relationship and boundary between visual blocks, not to an isolated element or its nominal depth. Equivalent relationships should reuse the same spacing role across the surface. Do not say “this is level 3, therefore margin 16”; identify whether the boundary is between sections, major groups, subgroups, item groups, or tightly bound content.
+
+Keep structural hierarchy and binding hierarchy distinct. Structural sibling separation uses the JOE default spatial profile `space-section 160px / space-group-1 48px / space-group-2 24px / space-group-3 16px`; strongly bound parent-child or local content normally uses `space-tight 8px / space-micro 4px`. Parent-child binding is not automatically the same as sibling separation, and multiple structural levels must not collapse to one gap merely for numeric uniformity.
+
+Use a deliberately restricted 4px base, not every possible multiple of four. The default canonical spacing set is `4, 8, 16, 24, 48, 160`. Its purpose is to reduce arbitrary one-off choices and create repeated spatial rhythm. New project tokens require a recurring semantic role; a single attractive screenshot is not enough. If project density differs, change the spatial profile systemically rather than mutating unrelated local gaps.
+
+For responsive work, preserve hierarchy roles and visual flow, not desktop coordinates. Recompose the structure and use an appropriate responsive spatial profile while keeping the relative importance of section, group, subgroup, item, tight, and micro boundaries coherent. Optical correction may refine glyph/icon/stroke alignment, but it must not silently create a new layout-spacing role or dissolve the spatial system.
+
+When a material proof is challenged, be able to identify the major Visual Block Tree, intended visual flow, spacing roles at important boundaries, whether same relationships use the same role, and any deliberate exception. Observe the actual render before declaring the hierarchy successful.
+
 ## Review actual output; keep verdicts separate
 
 For each material claim, use `expected observable → actual observed fact → PASS / FAIL / UNVERIFIED`. Bind the source, artifact/version, surface/state, and dimensions when material. Describe a concrete visible relation, not just “looks right.” Inspect the exact produced render; code, DOM existence, build/test success, or a screenshot merely existing on disk cannot prove appearance.
