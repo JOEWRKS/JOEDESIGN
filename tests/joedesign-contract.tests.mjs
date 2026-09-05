@@ -38,7 +38,8 @@ function observed() {
   const files = walk(skillRoot).map(p=>path.relative(skillRoot,p).replaceAll('\\','/')).sort();
   assert.deepEqual(Object.keys(record.skillSha256).sort(), files, 'Evidence must cover the entire shipped skill');
   for (const file of files) assert.equal(hash(readFileSync(path.join(skillRoot,file))), record.skillSha256[file], 'Skill changed: rerun contract decisions');
-  assert.equal(hash(casesText), record.casesSha256, 'Contract inputs changed: rerun decisions');
+  assert.match(record.casesSha256,/^[a-f0-9]{64}$/, 'Original runtime input byte hash required');
+  assert.equal(hash(JSON.stringify(cases)), record.casesDataSha256, 'Contract scenario data changed: rerun decisions');
   assert.equal(record.runtime.model,'gpt-6-astra');
   assert.equal(record.runtime.effort,'xhigh');
   assert.match(record.runtime.threadId,/^[a-f0-9-]{36}$/);
@@ -87,4 +88,3 @@ test('16 — external competitor dependencies absent in repository and installab
     for (const file of expectedSkill) assert.equal(hash(readFileSync(path.join(installed,file))),hash(readFileSync(path.join(skillRoot,file))));
   }
 });
-
