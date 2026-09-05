@@ -2,6 +2,7 @@
 
 - `docs/specs/joedesign-v0.1.md` is the implementation baseline; its current handoff stop is review, not competition readiness.
 - `docs/specs/joedesign-craft-core-v0.1.md` is the canonical native craft doctrine. Read it before changing visual hierarchy, spacing, sizing, composition, typography hierarchy, responsive visual translation, or critique behavior.
+- `docs/specs/joedesign-typography-scale-core-v0.1.md` is the canonical typography and scale doctrine. Read it before changing type roles, type scale, font-family/weight strategy, reading measure, line-height, tracking, focal scale, or responsive typography behavior.
 - Any branch that changes shipped `skills/joedesign/**` bytes invalidates the recorded Astra semantic/smoke evidence for readiness. Refresh the skill hashes and fresh Astra evidence before claiming competition readiness for that branch.
 - Ship one public skill, `joedesign`. Keep project-specific visual truth in the consuming project's root `DESIGN.md`, not in this repository's global instructions.
 - Preserve Product authority, user acceptance, and the exact shared-contract boundary pinned in the spec. Source JOENESS and JOEFLOW/Product repositories are read-only inputs.
