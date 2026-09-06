@@ -1,0 +1,22 @@
+✔ 02 — no product-authority override (5.2657ms)
+✔ 03 — DESIGN.md lifecycle (1.26ms)
+✔ 04 — unresolved direction meaningful alternatives (2.1586ms)
+✔ 05 — approved direction no unnecessary alternatives (1.2961ms)
+✔ 06 — reference relationship handling (1.0565ms)
+✔ 07 — target-medium proof (1.0048ms)
+✔ 08 — exact-target refinement (1.0801ms)
+✔ 09 — local refinement does not cause redesign (1.4555ms)
+✔ 10 — repeated rejection direction reconsideration (1.4091ms)
+✔ 11 — responsive translation (1.207ms)
+✔ 12 — product ambiguity bounded re-entry (1.1558ms)
+✔ 13 — actual-output PASS FAIL UNVERIFIED (1.1379ms)
+✔ 14 — technical PASS does not prove visual PASS (1.5775ms)
+✔ 15 — internal visual PASS does not confer acceptance (1.5986ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 118.3688

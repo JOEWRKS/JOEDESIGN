@@ -1,0 +1,67 @@
+{
+  "kind": "sanitized-native-semantic-provenance",
+  "sourceImplementation": "2877d0f5dc4d02124111e8ef4f1cdee6ad38926c",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a076df-2bcc-7663-a777-078fef647340",
+    "version": "codex-cli 0.153.4",
+    "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+    "rolloutSha256": "10f64cda7ab2db42f8dc6b3b01d5dd1df5e15ecaf1f6f12844549e529ff95a04",
+    "wallMs": 46806,
+    "exitCode": 0
+  },
+  "fixture": {
+    "commit": "2c65e9573e54cbd7563ad827b1862b18c8c2a46a",
+    "tree": "63717966271715b022a7e0b76d1f95be5d0f770c",
+    "gitStatus": "",
+    "diff": ""
+  },
+  "skillSha256": {
+    "SKILL.md": "467ff9cb889b2c17b25c246e8d2433aecbe71d89ca806b14ba81dcac52374aed",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "b98cc398163bd148dd8d8b28fa0d73dc34b642bd5b4b00614500f89d62a4068b"
+  },
+  "inputs": {
+    "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+    "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
+    "promptInputSha256": "444bba39fa8798004c4c1b29bdb8ec94b74582735faa7d6ad5d8979fa27e52e5"
+  },
+  "outputs": {
+    "rolloutSha256": "10f64cda7ab2db42f8dc6b3b01d5dd1df5e15ecaf1f6f12844549e529ff95a04",
+    "eventsSha256": "35998302030fd814669afea3c09a0af8d92f20836d94aa553953978e7d004943",
+    "launchSha256": "10cf4e25c6ec1acc6ec574c46fc4d2093b411e461d301bebbff65aa4e4786d66",
+    "finalSha256": "cb8ca3ed9a96fac8f7d94e90c1b63bed7cc0212624cbc5ef492a8f7f3a06649f",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exitSha256": "ae04bbd2d1a6f7c766630751cc540b17edd32bc25c61b16bc24d716ca8cf33af",
+    "finalBytes": 4027
+  },
+  "isolation": {
+    "credentialLeakCheck": "PASS",
+    "personalInstallUnchanged": true,
+    "sourceHarnessHeadUnchanged": true,
+    "sourceHarnessStatusUnchanged": true,
+    "temporaryCredentialsRemaining": 0,
+    "personalCompetitorSkillsDisabled": [
+      "framer",
+      "framer-code-components",
+      "impeccable"
+    ],
+    "pluginsAppsExternalToolsDisabled": true,
+    "personalRulesIgnored": true
+  },
+  "boundedEvidence": {
+    "nativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-final.json",
+    "observed": "fixtures/contract-cases/observed.json",
+    "filteredContractTest": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-contract-tests.txt",
+    "filteredContractTestSha256": "7d4d21e4f13ff568682474238ae6e2b974594a8ad91b6eae05f4aabb31a0a641",
+    "filteredContractResult": "14 PASS / 0 FAIL",
+    "priorObserved": "fixtures/contract-cases/history/astra-color-contrast-v1/observed.json",
+    "priorReview": "fixtures/contract-cases/history/astra-color-contrast-v1/review-evidence.json"
+  },
+  "supplementaryLocalProvenance": {
+    "collected": "D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/collected-contracts.json",
+    "runDirectory": "D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/contracts"
+  },
+  "exclusions": "No full rollout, Codex home, credentials, identity directory, or absolute rollout path is committed."
+}

@@ -1,0 +1,450 @@
+{
+  "status": "JOEDESIGN_COLOR_CONTRAST_CORE_READY_FOR_PROGRAM_REVIEW",
+  "repository": {
+    "name": "JOEWRKS/JOEDESIGN",
+    "branch": "codex/joedesign-v0.1-color-contrast-core",
+    "startingHead": "ecfcb3175f5e7654dc0a6e37e228ceddc28f2fa9",
+    "sourceImplementation": "b15d77946862df0f8c1ebc41f43319d17e1c11a5",
+    "evidenceIntegrationBase": "670293aaa063fdd719d3f18a488c2c040b0bda87",
+    "productionMain": "92add5079ba467c72bd755e4eb3536ba9c883170"
+  },
+  "scope": "Focused final Color / Contrast evidence integration only. No model, semantic, smoke, browser, render, source, native-response, doctrine, case, expected-action, or shipped-runtime rerun/edit during this final gate.",
+  "contractTests": {
+    "command": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs tests/joedesign-color-contrast-core.tests.mjs",
+    "nodeVersion": "v26.3.0",
+    "result": "PASS",
+    "exitCode": 0,
+    "tests": 48,
+    "passed": 48,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "executionsThisFinalGate": 1,
+    "evidence": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/final-contract-tests.txt",
+    "breakdown": {
+      "processAuthority": {
+        "tests": 16,
+        "passed": 16,
+        "failed": 0
+      },
+      "spatialCraft": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "typographyScale": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "referenceIntelligence": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "colorContrast": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      }
+    }
+  },
+  "semanticReplay": {
+    "result": "PASS",
+    "scenarioCount": 14,
+    "passed": 14,
+    "failed": 0,
+    "source": "fixtures/contract-cases/decisions.json",
+    "observed": "fixtures/contract-cases/observed.json",
+    "provenance": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-provenance.json",
+    "nativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-final.json",
+    "sourceImplementation": "b15d77946862df0f8c1ebc41f43319d17e1c11a5",
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a0765e-898c-7933-8bf8-4b5754267b50",
+      "version": "codex-cli 0.153.4",
+      "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+      "rolloutSha256": "a6c81bda2bc134270a3b2d890719ed99f08811ced1e242b6b85787e6968eab06",
+      "wallMs": 45853,
+      "exitCode": 0
+    },
+    "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+    "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
+    "expectedActionsUnchanged": true,
+    "rerunsDuringFinalGate": 0,
+    "limitations": "One fresh supplied-choice replay of all fourteen unchanged scenarios against the current Color / Contrast skill; not execution or rendered proof for every scenario. Historical failures and prior validation remain preserved."
+  },
+  "smokeG": {
+    "result": "PASS",
+    "userAcceptance": "NOT_GRANTED",
+    "provenance": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-provenance.json",
+    "portableReviewEntrypoint": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final-links.md",
+    "nativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final.txt",
+    "manifest": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/color-role-manifest.json",
+    "sourceImplementation": "452e4ea2e7f36cc983801002faebe2175a7c10cf",
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a07666-dd97-7a20-800a-087f437002c8",
+      "version": "codex-cli 0.153.4",
+      "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+      "rolloutSha256": "0fa9eb4c81928f4b960a0b930da29ffcd55618b7dc0dd9ddcda0ab81d522804d",
+      "eventsSha256": "82c43ca65eb27a4cab33250ee3f62d1fb1d935abfe89efb89e42690be4b589d2",
+      "launchSha256": "81753f2838f79c7f7623c3bdefd93e100cae5cddf67c7b40ea13d6393b74df31",
+      "finalSha256": "ff578a788d8fb0da5add0f8ed16913a8fb29c5a1adde7ff2bef26465647d094e",
+      "wallMs": 551538,
+      "exitCode": 0
+    },
+    "roleMapping": "PASS",
+    "contrastHierarchy": "PASS",
+    "accentOwnership": "PASS",
+    "surfaceLayerCoherence": "PASS",
+    "stateSemantics": "PASS",
+    "colorOnlyCuePrevention": "PASS",
+    "accessibilityGate": "PASS",
+    "desktopObservation": "PASS",
+    "mobileObservation": "PASS",
+    "productTruthInvariant": "PASS",
+    "browser": "152.0.7977.76",
+    "desktopViewport": "1440x1000",
+    "mobileViewport": "390x844",
+    "mobileFullPageImage": "390x985",
+    "minimumUnroundedRequiredTextRatio": 5.5533252875311545,
+    "currentPriorityVisibleTextRatio": 6.648377872586666,
+    "focusOutlineRatio": 8.314699070021883,
+    "hoverActionTextRatio": 9.069679831601487,
+    "rerunsDuringFinalGate": 0,
+    "limitations": [
+      "No claim of full WCAG conformance, theme coverage, production behavior, cross-browser behavior, comparative superiority, or user acceptance.",
+      "Mobile proof is a 390x844 browser viewport, not a physical touch-device test.",
+      "Other viewports, forced colors, dark theme, zoom, screen reader behavior, and unobserved state combinations remain outside this smoke boundary."
+    ]
+  },
+  "skillSha256": {
+    "SKILL.md": "0ba7b4cb7e8dd0169bbf1cfcecab98b4c1fdf45aff6b0010b0c4a4ed731f86e1",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "fe89676895c752a65730d3626e724d35e13f5586c94884ddf0535b600121e791"
+  },
+  "publicEntrypointCount": 1,
+  "competitorDependencyCount": 0,
+  "runtimeDependencyCount": 0,
+  "bioExposureCount": 0,
+  "evidenceArtifacts": [
+    {
+      "path": "fixtures/contract-cases/decisions.json",
+      "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+      "bytes": 6860
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/baseline-tests.txt",
+      "sha256": "d674bb745e0f0eaee645e4361917a3ca0e9524aded72c8df3922c946cad8ce79",
+      "bytes": 4157
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-green-tests.txt",
+      "sha256": "04f1c0338b6d7ab2b574b8d49bc33fc73e1e24cca1dae242799475d440495c26",
+      "bytes": 851
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-intermediate-tests.txt",
+      "sha256": "f6647ac694087e2adf2379b162235fc4cf600468c69ae14c552b84e551849845",
+      "bytes": 618
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-red-tests.txt",
+      "sha256": "e5ac84f1e1998713a5d965d28fe1f2462252b6f7e1cf8efebf3d6d663c8576d4",
+      "bytes": 161606
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/controller-integrity-diagnostic.json",
+      "sha256": "687e0943f60d38115c12c19aa000ccdf5fd93a05aeda1c61bf197b3710eac7c3",
+      "bytes": 3720
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/final-contract-tests.txt",
+      "sha256": "98f9a0d7ba6c6844517e1d3e662e7b07c25838706ed362aff8284d3b61160497",
+      "bytes": 3983
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/post-semantic-contract-tests.txt",
+      "sha256": "2a7b728e00c6dca2bfd8a8e3cc941647775674656668b2eb2215ea9a25a7a47d",
+      "bytes": 4040
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-final.json",
+      "sha256": "7613327a8f96245fdbaffbde12df83d6e20053159d8c987fd7cd730105b1087e",
+      "bytes": 3878
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-provenance.json",
+      "sha256": "e20f79c1bb74a41d063fe7e5f5ce87d6ef5347a11c96899111fce063a78b4160",
+      "bytes": 2231
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final-links.md",
+      "sha256": "6611d95e9f7e8703273086212e1420a8a25be952ecb402639a292761731d3fb2",
+      "bytes": 1175
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final.txt",
+      "sha256": "ff578a788d8fb0da5add0f8ed16913a8fb29c5a1adde7ff2bef26465647d094e",
+      "bytes": 615
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-provenance.json",
+      "sha256": "d34dbd68308942ecfcb814243f3505c295aef0168b0b7104ed9aa65eaed27773",
+      "bytes": 3107
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/validation-notes.md",
+      "sha256": "c65d64143bbf76ae62d96954ea9dc04fc103eb9964be1b8899a658a8de4b46e3",
+      "bytes": 5562
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/DESIGN.md",
+      "sha256": "9430d0c2d37e6953b223e5500a27cef7c6fe546beb21deb20e9633d636e4b864",
+      "bytes": 453
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/PRODUCT.md",
+      "sha256": "46679484668fa7e36c79afa015118694ef779a0b3075c2ba4634eef4fc836e9b",
+      "bytes": 1590
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-computed.json",
+      "sha256": "e2dab11a9a35d6ab0f993e6486a65f85d031eb430f122cbc7a81231113d44fd3",
+      "bytes": 47046
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-contrast.md",
+      "sha256": "90da9ec9d7361cd5354242d5611d515263cf7524b81f2996f15eba72ecba5ab0",
+      "bytes": 6706
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-desktop.png",
+      "sha256": "01368b15217fc22315817ee8b6845f0e0b213275c6537b4ae976c963e6031466",
+      "bytes": 52654
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-mobile.png",
+      "sha256": "d75a2260b5fb178a0309bc21ac8572edfe6cf41514720475dbca97995a0ce22b",
+      "bytes": 43252
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-states-desktop.png",
+      "sha256": "8fcce2915054304083b443d79514513e70fdfeddd5cd5b0301b9884d72240a7a",
+      "bytes": 25831
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-states-mobile.png",
+      "sha256": "541c3e3507b9b7ab1e7fbba6c3fc44158bdc9d990039627725b19884563f804d",
+      "bytes": 22665
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after/index.html",
+      "sha256": "23c3f8b3be87998d6a628f3c564d6a65cd2f1e4690ef9c8d0f1b930b4c131074",
+      "bytes": 2612
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after/styles.css",
+      "sha256": "9936cbb16b61e2f2f1f84f0c586ef1479a86689e8c90df8abcfd371522c3e1a9",
+      "bytes": 3491
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-computed.json",
+      "sha256": "922df82d297bd2754598f09c5cb171c6a9645bf3e7611490edf65b68a520aa67",
+      "bytes": 47200
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-contrast.md",
+      "sha256": "94ac3416c09cbf4724373a29afe5defa6ce9a77153c9fe29506c12a8568d0890",
+      "bytes": 6703
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-desktop.png",
+      "sha256": "149aa57ae5dcf2e61b41a5678e1f7a29c5f9b43ee87626a8d2556e78a1adffe6",
+      "bytes": 54293
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-mobile.png",
+      "sha256": "1225d70f9e7fa67ed3a4adadbae7d99ca9b1a218f7c6d5fcc80cbbb82a1846ce",
+      "bytes": 44267
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-states-desktop.png",
+      "sha256": "24c3fe4a3b963f0f2b4b92f73ceb86791bc84405c7f19e2ba5da19c51756c7dc",
+      "bytes": 25703
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-states-mobile.png",
+      "sha256": "bc31ec5825ddc816d5d81a94a2f6682b283990d93a83a9ee4979e9ec806e57d2",
+      "bytes": 22374
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before/index.html",
+      "sha256": "23c3f8b3be87998d6a628f3c564d6a65cd2f1e4690ef9c8d0f1b930b4c131074",
+      "bytes": 2612
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before/styles.css",
+      "sha256": "5710b6e327daabc70c3e6edea197a35e3f5df32c78e495604f5909a6e083f484",
+      "bytes": 3202
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/color-role-manifest.json",
+      "sha256": "869bdf49546462b031c5ff4c67ad00f8574b790ac0d62a0fa9760b67ddb7fb3a",
+      "bytes": 11031
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/controller-g-observations.md",
+      "sha256": "0148a5b3c86f2239330f9313ef1c443e1430362b8ee89aeebc58719c6973cdf8",
+      "bytes": 4491
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/independent-g-summary.json",
+      "sha256": "0d35cff643e5cd051c9bdab50af6c0c699273cde54963d336b6f4ba152c804f0",
+      "bytes": 7613
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/native-intermediate-failure.md",
+      "sha256": "2b61f168faa6c5a8c5f8e6f056aa90cd19a77f0b3360ad4ddb2f9261c9a65fa7",
+      "bytes": 747
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/proof.md",
+      "sha256": "e2ba055e4e5aee02b52d6d0370488a11708b134144eeb0505c3df79c91bfa3c4",
+      "bytes": 7774
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/role-map-before.md",
+      "sha256": "649e5b867444f05429ad87fe876dc788298075f9da5e71bb49c68b4b5af274f8",
+      "bytes": 5218
+    },
+    {
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/observed.json",
+      "sha256": "4eac1a9d3eaa180342cd927b7cf5a63f7aaca923cfec6774e6986c6ead02a519",
+      "bytes": 7309
+    },
+    {
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/review-evidence.json",
+      "sha256": "1ccdb7e7e8b69cb3f45b54f4896f04d865215d16bc07dbf4730e5b837bf6e11b",
+      "bytes": 32316
+    },
+    {
+      "path": "fixtures/contract-cases/observed.json",
+      "sha256": "b4a556078ce9a8e07e10feb93fae38631cc2ed947d46ae0c1fe71a52ebf9fd67",
+      "bytes": 6307
+    }
+  ],
+  "evidenceIntegrity": {
+    "result": "PASS",
+    "repositoryRelativeArtifactCount": 41,
+    "artifactBytes": 697863,
+    "exhaustiveCurrentEvidenceDirectories": [
+      "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1",
+      "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g"
+    ],
+    "reviewFileSelfHashExcluded": true,
+    "historicalReferenceIntelligenceObservedByteExact": true,
+    "historicalReferenceIntelligenceReviewByteExact": true,
+    "decisionsBytesUnchangedFromStartingHead": true,
+    "expectedActionMapUnchangedFromStartingHead": true,
+    "shippedPackageMatchesSemanticProducer": true,
+    "shippedPackageMatchesSmokeProducer": true,
+    "nativeResponsesUnmodified": true,
+    "previousSmokeArtifactsUnmodified": true,
+    "credentialsCommitted": false,
+    "rawRolloutsCommitted": false
+  },
+  "history": {
+    "priorObserved": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/observed.json",
+    "priorReview": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/review-evidence.json",
+    "priorFailuresAndSmokeABCDERetained": true,
+    "currentColorRed": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-red-tests.txt",
+    "intermediateColorDiagnostic": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-intermediate-tests.txt",
+    "validationNotes": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/validation-notes.md"
+  },
+  "historicalFailures": [
+    {
+      "id": "initial-worktree-static",
+      "result": "39 PASS / 1 FAIL",
+      "disposition": "Historical metadata diagnostic; resolved by narrow exact-root .git metadata handling."
+    },
+    {
+      "id": "color-red",
+      "result": "0 PASS / 8 FAIL",
+      "disposition": "Genuine preimplementation TDD RED, preserved exact."
+    },
+    {
+      "id": "color-intermediate",
+      "result": "7 PASS / 1 FAIL",
+      "disposition": "Known failed accent-loudness assertion; full output unavailable and not reconstructed."
+    },
+    {
+      "id": "adhoc-semantic-comparison",
+      "result": "0/14 diagnostic",
+      "disposition": "Invalid comparison used nonexistent expectedActions property; canonical unchanged fixed-map replay is 14/14 PASS."
+    },
+    {
+      "id": "smoke-g-authority-read",
+      "result": "missing literal APPROVED DESIGN.md",
+      "disposition": "Recovered to actual DESIGN.md with Status: APPROVED; authority bytes unchanged."
+    },
+    {
+      "id": "native-contrast-whitespace",
+      "result": "trailing blank-line diff warnings",
+      "disposition": "Byte-exact native contrast tables intentionally preserved."
+    }
+  ],
+  "operationalNotes": [
+    "Controller verification observed a transient shared-worktree notes/manifest hash mismatch while the active producer was between an artifact edit and hash regeneration. Immutable a37cc74 and 2372335 each have internally matching notes hashes, and the completed 2372335 snapshot independently passed. The byte-exact controller diagnostic is preserved in color-contrast-v1/controller-integrity-diagnostic.json; this is not a failed semantic, render, contrast, or committed-integrity gate."
+  ],
+  "knownFailures": [],
+  "unverified": [
+    "User acceptance is NOT_GRANTED.",
+    "Other browsers, themes, viewports, forced colors, zoom, screen readers, physical touch devices, production behavior, and unobserved state combinations.",
+    "Full WCAG certification, statistical stability, comparative superiority, and competition readiness.",
+    "Program Lead approval and COLOR_CONTRAST_CORE = CLOSED."
+  ],
+  "preservation": {
+    "startingHead": "ecfcb3175f5e7654dc0a6e37e228ceddc28f2fa9",
+    "unchangedExistingFilesOutsideAllowlist": true,
+    "allowedExistingChanges": [
+      "tests/joedesign-contract.tests.mjs",
+      "skills/joedesign/SKILL.md",
+      "skills/joedesign/templates/DESIGN.md",
+      "fixtures/contract-cases/observed.json",
+      "fixtures/contract-cases/review-evidence.json"
+    ],
+    "sourceBoundary": [
+      "skills/joedesign/SKILL.md",
+      "skills/joedesign/templates/DESIGN.md",
+      "tests/joedesign-color-contrast-core.tests.mjs",
+      "tests/joedesign-contract.tests.mjs"
+    ],
+    "doctrineChanged": false,
+    "casesChanged": false,
+    "expectedActionsChanged": false,
+    "observedNativeResponsesChangedDuringFinalGate": false,
+    "priorSmokeArtifactsChanged": false,
+    "personalInstallationWrites": 0,
+    "sourceHarnessWrites": 0,
+    "productionMainWrites": 0,
+    "pushPerformed": false,
+    "pullRequestCreated": false
+  },
+  "isolation": {
+    "priorFreshSessionCount": 2,
+    "distinctThreads": true,
+    "semanticRunsDuringFinalGate": 0,
+    "smokeRunsDuringFinalGate": 0,
+    "browserRendersDuringFinalGate": 0,
+    "skillCopiesByteExact": true,
+    "personalInstallUnchanged": true,
+    "sourceHarnessUnchanged": true,
+    "credentialLeakCheck": "PASS for both prior native runs",
+    "temporaryCredentialsRemaining": 0
+  },
+  "validationMethod": "Fresh final static suite plus independent hash, provenance, preservation, native-isolation, and local audit readback. READY is only for Program Lead review."
+}
