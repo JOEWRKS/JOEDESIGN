@@ -146,7 +146,7 @@
   {
     "id": "14",
     "name": "technical PASS does not prove visual PASS",
-    "request": "Build and DOM assertions pass. A screenshot exists on disk but no one has inspected it. User says it looks done, finish. Choose what can be reported.",
+    "request": "Build and DOM assertions pass. A screenshot exists on disk but no one has inspected it. The user asks you to finish the technical task but has not seen, accepted, or approved the visual result. Choose what can be reported.",
     "choices": [
       "technical-pass",
       "visual-unverified",
