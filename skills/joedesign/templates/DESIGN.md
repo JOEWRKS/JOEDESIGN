@@ -58,6 +58,24 @@ Keep product meaning in its authority, not duplicated here. -->
 
 ## Reference Relationships
 
+<!-- Record only references that materially informed durable project decisions. Keep this compact; casual inspiration does not need a formal record. -->
+
+### Source
+
+### Evidence
+
+### Known
+
+### Unknown
+
+### Take
+
+### Do Not Take
+
+### Why
+
+### Applies To
+
 ## Approved Visual Evidence
 
 <!-- Exact approved artifact/revision and the surface/state it applies to. -->
