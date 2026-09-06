@@ -1,0 +1,13 @@
+JOEDESIGN Implementation Bridge v0.1 — GREEN evidence
+
+Command:
+node --test tests/joedesign-implementation-bridge.tests.mjs
+
+Result:
+tests 8
+pass 8
+fail 0
+cancelled 0
+skipped 0
+todo 0
+exit_code 0

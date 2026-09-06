@@ -131,6 +131,20 @@ References contribute imagery relationships: a reference relationship ≠ a copi
 
 Responsive translation may recrop, reposition, or recompose while preserving image role and required content. A material crop or focal claim requires inspection of the actual target render.
 
+## Bridge approved design into implementation
+
+The **Implementation Bridge** is derivative: it translates exact approved Project `DESIGN.md` truth into implementation roles but does not create or amend visual authority. Treat exact approved values separately from visual intent/rationale; do not manufacture machine-readable tokens just to make a schema complete.
+
+Map an approved semantic role to an existing equivalent project-native token, component role, or theme value first. Create a new project-native role only when the approved design actually requires one. Do not rename stable existing tokens or replace a healthy project token architecture merely to match an external naming convention.
+
+Exact approved values may be mapped; unknown values remain unresolved. Do not invent a missing token from prose, copy a reference value, or promote current code to authority. If a missing value becomes a material visual decision, make and prove that JOEDESIGN decision before treating it as durable truth.
+
+Google `design.md` structured tokens are optional interoperability, not a dependency. When compatible YAML frontmatter is already present or machine-readable interchange materially helps, consume or produce compatible groups such as colors, typography, spacing, rounded, and components without requiring Google tooling. Preserve custom/unknown JOEDESIGN sections and rationale including Visual Flow, Approved Visual Evidence, and Open Visual Decisions; do not force responsive intent into a structured shape that loses meaning.
+
+For a material token mapping change, compare the semantic role mapping and surface the relevant before/after value, source authority, scope, and reason. Lint/diff/export are bounded interoperability concepts in v0.1, not mandatory ceremony or a required CLI. Small local refinements may map directly into existing roles.
+
+`Token Mapping PASS ≠ Technical PASS ≠ Visual Conformance PASS ≠ User Acceptance`. A successful token mapping, lint, diff, export, build, or code change still requires actual rendered observation for a material visual PASS.
+
 ## Review actual output; keep verdicts separate
 
 For each material claim, use `expected observable → actual observed fact → PASS / FAIL / UNVERIFIED`. Bind the source, artifact/version, surface/state, and dimensions when material. Describe a concrete visible relation, not just “looks right.” Inspect the exact produced render; code, DOM existence, build/test success, or a screenshot merely existing on disk cannot prove appearance.

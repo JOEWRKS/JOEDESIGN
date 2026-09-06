@@ -1,0 +1,37 @@
+JOEDESIGN Implementation Bridge v0.1 — RED evidence
+
+Observed at: 2026-09-07T02:03:16.5113755+09:00
+Current HEAD before shipped-skill insertion: 93104319ede75569c660bbf2d55b12e4ba51549f
+Historical source: f51a9f70b39d49bb023a3ffc080fe7a05227b9e8
+Spec blob expected/actual: cc07c0e5b25c6f75491d9ca789453daf4513acff / cc07c0e5b25c6f75491d9ca789453daf4513acff
+Test blob expected/actual: 6137a05ff0897ba28758d88165ea1ae57961d51a / 6137a05ff0897ba28758d88165ea1ae57961d51a
+
+Command:
+node --test tests/joedesign-implementation-bridge.tests.mjs
+
+Result:
+tests 8
+pass 1
+fail 7
+cancelled 0
+skipped 0
+todo 0
+exit_code 1
+
+PASS before Bridge insertion:
+- exact approved values may map while unknown values remain unresolved
+
+FAIL before Bridge insertion:
+- implementation mapping is derivative, not visual authority
+- existing project-native token roles are preferred over forced renaming
+- structured tokens remain distinct from visual rationale
+- Google design.md interoperability is optional and dependency-free
+- custom JOEDESIGN sections survive structured interoperability
+- material mapping changes use bounded semantic diff or review
+- token mapping success never replaces actual rendered verification
+
+Interpretation:
+The one pre-existing PASS comes from compatible newer-core exact/unknown
+wording. The seven failures demonstrate that the bounded Implementation Bridge
+section is not yet present. No expected action or Bridge assertion was changed
+to force an all-red result.
