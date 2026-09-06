@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operations Status Console</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="console">
+    <header class="heading">
+      <p class="eyebrow">Shift handoff</p>
+      <h1>Operations Status</h1>
+      <p class="summary">Three operating areas require a quick read before the next shift handoff.</p>
+    </header>
+    <section class="status-list" aria-label="Operating areas">
+      <article class="status-row healthy"><span class="status-dot" aria-hidden="true"></span><div><h2>Inbound queue</h2><p><strong>Healthy</strong> — No delayed receipts in the last 30 minutes.</p></div></article>
+      <article class="status-row monitoring"><span class="status-dot" aria-hidden="true"></span><div><h2>Billing sync</h2><p><strong>Monitoring</strong> — Two retries are processing within the normal window.</p></div></article>
+      <article class="status-row attention"><span class="status-dot" aria-hidden="true"></span><div><h2>Exports</h2><p><strong>Action needed</strong> — One failed export requires an operator review.</p></div></article>
+    </section>
+    <footer class="actions"><button type="button">Review exceptions</button><a href="#run-details">View run details</a></footer>
+  </main>
+</body>
+</html>

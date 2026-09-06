@@ -1,0 +1,12 @@
+JOEDESIGN Implementation Bridge v0.1 — fresh semantic contract gate
+Observed: 2026-09-07T02:08:26.3767892+09:00
+Source implementation: ce8dff818088a4925bb7e138bdb4a20a61c81abc
+Producer: fresh /root/bridge_semantic_14; gpt-6-astra; xhigh
+Inputs supplied: skills/joedesign/SKILL.md and fixtures/contract-cases/decisions.json only
+Expected actions supplied: NO
+Prior responses supplied: NO
+Environment-enforced repository isolation: NO
+Command: node --test tests/joedesign-contract.tests.mjs
+Result: PASS
+Semantic cases: 14/14 PASS
+Whole file: 16 tests / 16 pass / 0 fail / 0 skipped

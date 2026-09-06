@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "label": "implementation-bridge-v1-semantic-replay",
+  "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
+  "producer": {
+    "mechanism": "fresh collaboration subagent",
+    "canonicalTaskName": "/root/bridge_semantic_14",
+    "model": "gpt-6-astra",
+    "reasoningEffort": "xhigh",
+    "correlationId": "19d3ff97-553b-4745-b8ff-91282d218d6a"
+  },
+  "inputs": {
+    "skill": "skills/joedesign/SKILL.md",
+    "skillSha256": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+    "cases": "fixtures/contract-cases/decisions.json",
+    "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+    "expectedActionsSupplied": false,
+    "repositoryTestsSupplied": false,
+    "priorResponsesSupplied": false
+  },
+  "exclusions": {
+    "instructionBound": true,
+    "environmentEnforced": false,
+    "notRead": [
+      "tests/**",
+      "fixtures/contract-cases/observed.json",
+      "fixtures/contract-cases/review-evidence.json",
+      "docs/specs/**",
+      "git history and diffs",
+      "prior evidence and expected semantic actions"
+    ],
+    "note": "The collaboration runtime shared the repository filesystem. The fresh producer was explicitly limited to the two listed inputs; this is not an environment-isolation attestation."
+  },
+  "output": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+    "sha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+    "bytes": 4931,
+    "responseCount": 14,
+    "schemaCorrectionTurns": 1,
+    "schemaCorrectionNote": "The initial response used the originally requested singular action field. A same-context correction requested actions[] and all applicable supplied choices without providing expected outputs or additional files."
+  },
+  "observedAt": "2026-09-07T02:08:26.3767892+09:00",
+  "limitations": "One fresh supplied-choice semantic replay. It is not per-scenario implementation, rendered proof, statistical stability, environmental isolation, user acceptance, or a superiority claim."
+}

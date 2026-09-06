@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "sourceAuthority": "APPROVED DESIGN.md Revision 1",
+  "authorityChanged": false,
+  "projectNativeRolesRenamed": false,
+  "tokenArchitectureChanged": false,
+  "mappings": [
+    {
+      "role": "surface.page",
+      "before": {"projectNativeRole": "--workspace", "value": "#F2F4F7"},
+      "after": {"projectNativeRole": "--workspace", "value": "#F6F7F4"},
+      "source": "DESIGN.md Approved semantic values",
+      "reason": "Map the exact approved page surface into the existing equivalent role.",
+      "scope": "Smoke F page"
+    },
+    {
+      "role": "surface.panel",
+      "before": {"projectNativeRole": "--sheet", "value": "#FFFFFF"},
+      "after": {"projectNativeRole": "--sheet", "value": "#FFFFFF"},
+      "source": "DESIGN.md Approved semantic values",
+      "reason": "Reuse the healthy equivalent role; its value already matches authority.",
+      "scope": "Smoke F panels"
+    },
+    {
+      "role": "text.primary",
+      "before": {"projectNativeRole": "--copy", "value": "#1E2520"},
+      "after": {"projectNativeRole": "--copy", "value": "#1E2520"},
+      "source": "DESIGN.md Approved semantic values",
+      "reason": "Reuse the healthy equivalent role; its value already matches authority.",
+      "scope": "Smoke F primary text"
+    },
+    {
+      "role": "action.primary",
+      "before": {"projectNativeRole": "--commit-action", "value": "#3459A8"},
+      "after": {"projectNativeRole": "--commit-action", "value": "#205C4A"},
+      "source": "DESIGN.md Approved semantic values and Bridge Rationale",
+      "reason": "Correct the material value while retaining the established project-native role.",
+      "scope": "Review exceptions action"
+    },
+    {
+      "role": "space.section",
+      "before": {"projectNativeRole": "--section-gap", "value": "24px"},
+      "after": {"projectNativeRole": "--section-gap", "value": "32px"},
+      "source": "DESIGN.md Approved semantic values",
+      "reason": "Map the exact approved section rhythm into the existing spacing role.",
+      "scope": "Smoke F major section relationships"
+    },
+    {
+      "role": "status.attention.icon",
+      "before": null,
+      "after": null,
+      "source": "DESIGN.md Open Visual Decisions",
+      "reason": "The value is intentionally unresolved; no role or value may be invented.",
+      "scope": "No implementation mapping"
+    }
+  ]
+}

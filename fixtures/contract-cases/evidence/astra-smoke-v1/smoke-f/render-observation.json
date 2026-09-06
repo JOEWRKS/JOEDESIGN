@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "observedAt": "2026-09-07T02:16:00+09:00",
+  "method": "Playwright loaded the local after/index.html in actual Chromium; controller then opened both exact PNGs at original resolution and visually inspected them.",
+  "browser": "Chromium 152.0.7977.75",
+  "targets": [
+    {
+      "name": "desktop",
+      "viewport": {"width": 1440, "height": 1000},
+      "document": {"width": 1440, "height": 1000},
+      "horizontalOverflow": false,
+      "screenshot": "renders/desktop.png",
+      "screenshotSha256": "b783d684ca2da57330c4450256ef3de529440769c1968e2b28fb22cbc1eb769d",
+      "screenshotBytes": 45672,
+      "observed": "The Operations Status heading and summary lead the page; all three ordered status rows are fully visible with text labels and distinct dots; Review exceptions and View run details are visible without clipping."
+    },
+    {
+      "name": "mobile",
+      "viewport": {"width": 390, "height": 844},
+      "document": {"width": 390, "height": 844},
+      "horizontalOverflow": false,
+      "screenshot": "renders/mobile.png",
+      "screenshotSha256": "37762aa0953f84df2d7c1419189c848d02cb096f4b8929a5fe5ec395dc1b7397",
+      "screenshotBytes": 33596,
+      "observed": "The header context stacks above three ordered full-width rows; all status copy is readable; the primary action becomes a full-width reachable control and the secondary link remains directly below it with no clipping."
+    }
+  ],
+  "domInvariants": {
+    "title": "Operations Status Console",
+    "heading": "Operations Status",
+    "summary": "Three operating areas require a quick read before the next shift handoff.",
+    "orderedRows": ["Inbound queue", "Billing sync", "Exports"],
+    "primaryAction": "Review exceptions",
+    "secondaryAction": "View run details",
+    "computedApprovedValues": {
+      "--workspace": "#f6f7f4",
+      "--commit-action": "#205c4a",
+      "--section-gap": "32px"
+    },
+    "pageErrors": 0
+  }
+}
