@@ -1,0 +1,16 @@
+✔ color — semantic role is chosen before local color value (1.0154ms)
+✔ color — contrast hierarchy and accent ownership reinforce Product priority (0.3213ms)
+✔ color — neutral surfaces express real layer and containment relationships (0.3185ms)
+✔ color — functional state colors preserve Product semantics without color-only meaning (0.2586ms)
+✔ color — applicable WCAG 2.2 AA ratios are minimum gates, not an aesthetic preset (0.2273ms)
+✔ color — material contrast is evaluated in actual foreground/background context (0.3006ms)
+✔ color — responsive and light-dark translation preserves roles while values may change (0.2716ms)
+✔ color — project DESIGN template persists compact color authority (0.1453ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 94.7835

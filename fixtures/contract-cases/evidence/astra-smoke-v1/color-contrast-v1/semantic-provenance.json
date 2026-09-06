@@ -1,0 +1,12 @@
+{
+  "kind": "sanitized-native-semantic-provenance",
+  "sourceImplementation": "b15d77946862df0f8c1ebc41f43319d17e1c11a5",
+  "runtime": {"model":"gpt-6-astra","effort":"xhigh","threadId":"01a0765e-898c-7933-8bf8-4b5754267b50","version":"codex-cli 0.153.4","binarySha256":"a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6","rolloutSha256":"a6c81bda2bc134270a3b2d890719ed99f08811ced1e242b6b85787e6968eab06","wallMs":45853,"exitCode":0},
+  "fixture": {"commit":"d935702ea84f46f03ffae7b708d2a0bc54b35532","tree":"c14fb75a959cc8f728e42e9f26b104830c3d0df0","gitStatus":"","diff":""},
+  "skillSha256": {"SKILL.md":"0ba7b4cb7e8dd0169bbf1cfcecab98b4c1fdf45aff6b0010b0c4a4ed731f86e1","agents/openai.yaml":"c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1","templates/DESIGN.md":"fe89676895c752a65730d3626e724d35e13f5586c94884ddf0535b600121e791"},
+  "inputs": {"casesSha256":"02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80","casesDataSha256":"3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23","promptInputSha256":"80de63eab887b4faf397adbedbc6f56fcfef22d03dd2805cdf7d0235564b4878"},
+  "outputs": {"eventsSha256":"59df0337db7762d4db6e3b75d0d357a5db9ae67673ef414c66f73ab58d892afa","launchSha256":"82e805532d67d032ff0d35b65895b6b9f33f4745e28b96ffb35fd18a0e92f448","finalSha256":"7613327a8f96245fdbaffbde12df83d6e20053159d8c987fd7cd730105b1087e","finalBytes":3878},
+  "isolation": {"credentialLeakCheck":"PASS","personalInstallUnchanged":true,"sourceHarnessUnchanged":true,"temporaryCredentialsRemaining":0,"personalCompetitorSkillsDisabled":["framer","framer-code-components","impeccable"],"pluginsAppsExternalToolsDisabled":true,"personalRulesIgnored":true},
+  "boundedEvidence": {"nativeFinal":"fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-final.json","observed":"fixtures/contract-cases/observed.json","priorObserved":"fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/observed.json","priorReview":"fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/review-evidence.json"},
+  "exclusions": "No full rollout, Codex home, credentials, identity directory, or absolute rollout path is committed."
+}

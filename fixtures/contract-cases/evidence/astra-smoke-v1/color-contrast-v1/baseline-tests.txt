@@ -1,0 +1,68 @@
+✔ 01 — single public entrypoint (6.8757ms)
+✔ 02 — no product-authority override (12.6674ms)
+✔ 03 — DESIGN.md lifecycle (7.8492ms)
+✔ 04 — unresolved direction meaningful alternatives (7.9642ms)
+✔ 05 — approved direction no unnecessary alternatives (9.7291ms)
+✔ 06 — reference relationship handling (7.5485ms)
+✔ 07 — target-medium proof (6.8582ms)
+✔ 08 — exact-target refinement (3.3799ms)
+✔ 09 — local refinement does not cause redesign (6.0919ms)
+✔ 10 — repeated rejection direction reconsideration (6.4438ms)
+✔ 11 — responsive translation (5.2418ms)
+✔ 12 — product ambiguity bounded re-entry (3.8752ms)
+✔ 13 — actual-output PASS FAIL UNVERIFIED (4.1212ms)
+✔ 14 — technical PASS does not prove visual PASS (3.8932ms)
+✔ 15 — internal visual PASS does not confer acceptance (3.0672ms)
+✖ 16 — external competitor dependencies absent in repository and installable skill (12.9948ms)
+✔ craft — hierarchy and visual flow precede decoration (2.5964ms)
+✔ craft — material spacing follows a semantic Visual Block Tree (0.3173ms)
+✔ craft — spacing belongs to relationships, not isolated elements (0.3348ms)
+✔ craft — structural separation and binding hierarchy stay distinct (0.2891ms)
+✔ craft — 4px base uses a deliberately restricted canonical token set (0.3052ms)
+✔ craft — one-off spacing is challenged and density changes systemically (0.2671ms)
+✔ craft — responsive work preserves hierarchy roles, not raw coordinates (0.3124ms)
+✔ craft — project DESIGN template can persist the chosen spatial profile (0.1532ms)
+✔ reference — material adoption records source and evidence quality without mandatory ceremony for casual inspiration (1.5811ms)
+✔ reference — unknown facts remain unknown instead of being invented (0.3012ms)
+✔ reference — relationships are extracted rather than whole-brand recipes copied (0.2213ms)
+✔ reference — references never override Product Truth or approved project design authority (0.6061ms)
+✔ reference — multiple references stay scoped and conflicts are surfaced instead of silently blended (0.3134ms)
+✔ reference — evidence quality affects trust, not aesthetic authority (0.2823ms)
+✔ reference — external corpora are optional sources, not bundled runtime dependencies or automatic routers (0.3319ms)
+✔ reference — DESIGN template can persist material reference relationships compactly (0.2004ms)
+✔ type — semantic role is chosen before numeric value (3.6556ms)
+✔ type — hierarchy uses multiple axes rather than font size alone (0.4012ms)
+✔ type — scale is restrained and independent from the spatial 4px grid (0.3394ms)
+✔ type — near-duplicate roles and arbitrary local sizes are challenged (0.2791ms)
+✔ type — family and weight strategy is restrained and role-based (0.3939ms)
+✔ type — readability couples measure, line height, language, and actual face (0.345ms)
+✔ type — responsive translation preserves role hierarchy instead of proportional shrinking (0.3473ms)
+✔ type — project DESIGN template can persist type roles and reading system (0.1589ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 39
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 226.4831
+
+✖ failing tests:
+
+test at tests\joedesign-contract.tests.mjs:75:1
+✖ 16 — external competitor dependencies absent in repository and installable skill (12.9948ms)
+  AssertionError [ERR_ASSERTION]: Unexpected runtime/vendor surface: .git
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-color-contrast-worktree/tests/joedesign-contract.tests.mjs:78:36)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

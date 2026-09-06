@@ -1,0 +1,14 @@
+EXACT OUTPUT: UNVERIFIED
+
+The complete byte-for-byte output from the initial focused run is no longer available as a retained artifact; the tool display was truncated. This note preserves the known failure without reconstructing or fabricating omitted output.
+
+Command:
+node --test tests/joedesign-color-contrast-core.tests.mjs
+
+Known result:
+- tests: 8
+- pass: 7
+- fail: 1
+- failing contract: color — contrast hierarchy and accent ownership reinforce Product priority
+- failed assertion: runtime text did not match `/not .*every(?:thing| element).*equally loud|do not make every(?:thing| element).*equally loud/i`
+
