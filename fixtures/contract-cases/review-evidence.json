@@ -1,17 +1,72 @@
 {
-  "status": "JOEDESIGN_COMPOSITION_ANTI_TEMPLATE_CORE_NOT_READY",
-  "task3EvidenceResult": "PASS",
-  "statusReason": "Fresh semantic evidence and the post-semantic 64-test gate are complete, but Smoke I, final whole-branch review, final 64-test gate, non-force push, and remote equality verification remain pending and controller-owned.",
+  "status": "JOEDESIGN_COMPOSITION_ANTI_TEMPLATE_CORE_READY_FOR_PROGRAM_REVIEW",
+  "statusScope": "VALIDATION_ONLY",
+  "statusReason": "All approved gates through the one authorized final seven-file suite are evidenced: baseline 56/56, expected Composition RED 0/8, minimal runtime plus Composition 8/8, one fresh Astra/xhigh semantic replay 14/14 then 64/64, one actual Smoke I run with final I1-I9 PASS and candidate 01 failure preserved, and final 64/64. Controller whole-branch review, push, and remote equality remain separate later actions.",
   "repository": {
     "name": "JOEWRKS/JOEDESIGN",
     "currentBranch": "codex/joedesign-v0.1-composition-anti-template-core",
-    "task3StartingHead": "100f24bbe90cedf1b0b6d261e571aa372b290949",
-    "sourceImplementation": "100f24bbe90cedf1b0b6d261e571aa372b290949"
+    "finalGateSourceHead": "026a679d68e1e8a78347d64261c08dfe246d91a5",
+    "finalGateSourceTree": "429c0a681aea9d398b1b786137f7ecf152aa6345",
+    "worktreeCleanImmediatelyBeforeFinalGate": true,
+    "implementationSource": "100f24bbe90cedf1b0b6d261e571aa372b290949",
+    "smokeIEvidenceSource": "220b92d94565a33c3d6e77694f2f2b05affb305b",
+    "finalEvidenceCommit": "RECORDED_EXTERNALLY_AFTER_COMMIT"
   },
-  "scope": "Fresh Composition / Anti-Template semantic evidence and its exact post-semantic seven-file gate. Shipped skill bytes, tests, decisions, expected actions, doctrine, and prior evidence remain frozen; Smoke I and final readiness are not part of this record.",
+  "scope": "Composition / Anti-template Core validation evidence only. Runtime, tests, cases, doctrine, expected decisions, historical evidence, and all prior current-phase evidence are frozen. This record does not claim future delivery actions or phase closure.",
+  "executionSequence": [
+    {
+      "gate": "Task 1 baseline",
+      "result": "PASS",
+      "passed": 56,
+      "failed": 0,
+      "output": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/baseline-tests.txt"
+    },
+    {
+      "gate": "Task 1 expected Composition RED",
+      "result": "EXPECTED_FAIL",
+      "passed": 0,
+      "failed": 8,
+      "output": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-red-tests.txt"
+    },
+    {
+      "gate": "Task 2 minimal implementation and Composition",
+      "result": "PASS",
+      "passed": 8,
+      "failed": 0,
+      "output": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-green-tests.txt"
+    },
+    {
+      "gate": "Task 3 fresh semantic replay",
+      "result": "PASS",
+      "passed": 14,
+      "failed": 0,
+      "output": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-contract-tests.txt"
+    },
+    {
+      "gate": "Task 3 post-semantic suite",
+      "result": "PASS",
+      "passed": 64,
+      "failed": 0,
+      "output": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt"
+    },
+    {
+      "gate": "Task 4 one actual Smoke I run",
+      "result": "PASS_FINAL_WITH_PRESERVED_FAILURE",
+      "passed": 9,
+      "failed": 0,
+      "preservedFailure": "candidate 01 desktop shared-start-line mismatch"
+    },
+    {
+      "gate": "Task 5 final suite",
+      "result": "PASS",
+      "passed": 64,
+      "failed": 0,
+      "output": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-contract-tests.txt"
+    }
+  ],
   "contractTests": {
     "command": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs tests/joedesign-color-contrast-core.tests.mjs tests/joedesign-imagery-focal-core.tests.mjs tests/joedesign-composition-anti-template-core.tests.mjs",
-    "captureCommand": "node D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/capture-baseline.mjs fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs tests/joedesign-color-contrast-core.tests.mjs tests/joedesign-imagery-focal-core.tests.mjs tests/joedesign-composition-anti-template-core.tests.mjs",
+    "captureCommand": "node D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/capture-baseline.mjs fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-contract-tests.txt node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs tests/joedesign-color-contrast-core.tests.mjs tests/joedesign-imagery-focal-core.tests.mjs tests/joedesign-composition-anti-template-core.tests.mjs",
     "nodeVersion": "v26.3.0",
     "result": "PASS",
     "exitCode": 0,
@@ -20,18 +75,46 @@
     "failed": 0,
     "cancelled": 0,
     "skipped": 0,
-    "executionsThisTask3": 1,
-    "exactOutput": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt",
-    "exactOutputSha256": "d69ee48edaf8404cb614ab789181f84bd788c21af86884fb0606af14c7da6fbe",
+    "executionsThisTask5": 1,
+    "exactOutput": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-contract-tests.txt",
+    "exactOutputSha256": "7b038b3ce4696e26f4fdf3e938c95a3519c08b3e8abffb367d6792b010344f15",
     "exactOutputBytes": 5653,
     "breakdown": {
-      "processAuthority": {"tests": 16, "passed": 16, "failed": 0},
-      "spatialCraft": {"tests": 8, "passed": 8, "failed": 0},
-      "typographyScale": {"tests": 8, "passed": 8, "failed": 0},
-      "referenceIntelligence": {"tests": 8, "passed": 8, "failed": 0},
-      "colorContrast": {"tests": 8, "passed": 8, "failed": 0},
-      "imageryFocal": {"tests": 8, "passed": 8, "failed": 0},
-      "compositionAntiTemplate": {"tests": 8, "passed": 8, "failed": 0}
+      "processAuthority": {
+        "tests": 16,
+        "passed": 16,
+        "failed": 0
+      },
+      "spatialCraft": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "typographyScale": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "referenceIntelligence": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "colorContrast": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "imageryFocal": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      },
+      "compositionAntiTemplate": {
+        "tests": 8,
+        "passed": 8,
+        "failed": 0
+      }
     }
   },
   "semanticReplay": {
@@ -39,11 +122,14 @@
     "scenarioCount": 14,
     "passed": 14,
     "failed": 0,
+    "kind": "actual-astra-decision-replay",
+    "limitation": "One fresh supplied-choice replay of fourteen unchanged scenarios; not per-scenario execution, rendered proof, statistical stability, or a superiority claim.",
     "source": "fixtures/contract-cases/decisions.json",
     "observed": "fixtures/contract-cases/observed.json",
     "provenance": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-provenance.json",
     "nativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-final.json",
     "focusedContractOutput": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-contract-tests.txt",
+    "postSemanticContractOutput": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt",
     "sourceImplementation": "100f24bbe90cedf1b0b6d261e571aa372b290949",
     "runtime": {
       "model": "gpt-6-astra",
@@ -53,56 +139,452 @@
       "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
       "rolloutSha256": "1bfd94624e2b9ba58e978b63de13a297ae888347f1a111a6981e7d49be9770ad",
       "wallMs": 47183,
-      "exitCode": 0
+      "exitCode": 0,
+      "signal": null
     },
     "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
     "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
     "expectedActionsUnchanged": true,
     "expectedActionsSuppliedToProducer": false,
     "currentPackageByteExactToProducer": true,
-    "nativeRunsThisTask3": 1,
-    "limitations": "One fresh supplied-choice replay of fourteen unchanged scenarios; not execution or rendered proof for every scenario and not a statistical-stability or superiority claim."
+    "nativeRunsThisTask3": 1
+  },
+  "smokeI": {
+    "result": "PASS",
+    "actualNativeRunsThisTask4": 1,
+    "runtime": {
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "threadId": "01a0775f-4777-7f33-bf60-1fb0d3b05c75",
+      "version": "codex-cli 0.153.4",
+      "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+      "code": 0,
+      "signal": null,
+      "wallMs": 622605,
+      "start": "2026-09-06T15:38:44.083Z"
+    },
+    "fixture": {
+      "commit": "4100d2404aa4ed7bc3242c9b14543e9ca1c225f1",
+      "tree": "077809572e8618764df44f7b77e8e4a871ab6541"
+    },
+    "structuralMap": {
+      "firstImplementationEdit": {
+        "callLine": 66,
+        "callTimestamp": "2026-09-06T15:43:22.035Z",
+        "completedResultLine": 70,
+        "completedResultTimestamp": "2026-09-06T15:43:23.749Z"
+      }
+    },
+    "observables": {
+      "I1": "PASS",
+      "I2": "PASS",
+      "I3": "PASS",
+      "I4": "PASS",
+      "I5": "PASS",
+      "I6": "PASS",
+      "I7": "PASS",
+      "I8": "PASS",
+      "I9": "PASS"
+    },
+    "preservedFailure": "Candidate 01 desktop finding text x=456 versus action x=432 contradicted the pre-edit shared-start-line intent; source, images, and failure observation remain preserved before the bounded candidate 02 correction.",
+    "actualTargets": {
+      "desktop": {
+        "viewport": "1440x1000",
+        "finalFullPagePng": "1440x1000"
+      },
+      "mobile": {
+        "viewport": "390x844",
+        "finalFullPagePng": "390x869",
+        "ordinaryVerticalScroll": true,
+        "horizontalOverflow": false
+      }
+    },
+    "productTruthInvariant": "PASS_UNCHANGED",
+    "approvedDesignInvariant": "PASS_UNCHANGED",
+    "userAcceptance": "NOT_GRANTED",
+    "nativeChecks": {
+      "passed": 25,
+      "failed": 0
+    },
+    "controllerBrowserChecks": {
+      "browser": "152.0.7977.76",
+      "passed": 12,
+      "failed": 0
+    },
+    "packet": {
+      "files": 40,
+      "bytes": 698030,
+      "manifestEntries": 39,
+      "manifestSelfHashExcluded": true,
+      "manifestSha256": "3f38f3fc287f37fd6d4f09725f1afcbe765d0da410fc68809fb6c9f43c152ec7"
+    }
+  },
+  "packageBoundary": {
+    "skillSha256": {
+      "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+    },
+    "skillBytes": {
+      "SKILL.md": 21484,
+      "agents/openai.yaml": 207,
+      "templates/DESIGN.md": 3743
+    },
+    "unchangedSinceImplementationCommit": "100f24bbe90cedf1b0b6d261e571aa372b290949",
+    "publicEntrypointCount": 1,
+    "competitorDependencyCount": 0,
+    "runtimeDependencyCount": 0,
+    "bioExposureCount": 0,
+    "shippedRawRolloutCount": 0,
+    "shippedHomeCount": 0,
+    "shippedCredentialCount": 0,
+    "shippedValidationHelperCount": 0,
+    "shippedDependencyTreeCount": 0
+  },
+  "immutableBoundary": {
+    "frozenInitialFilesChecked": 206,
+    "frozenInitialMismatches": 0,
+    "existingContractTest": {
+      "path": "tests/joedesign-contract.tests.mjs",
+      "sha256": "19f81e1dd8507920f152425b0144dd1d0b25c3506c13631caf283db5f5e661fc",
+      "bytes": 7844
+    },
+    "existingCases": {
+      "path": "fixtures/contract-cases/decisions.json",
+      "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+      "bytes": 6860
+    },
+    "historicalFailuresRewritten": false,
+    "priorCurrentArchivesByteExact": true
   },
   "historyArchive": {
     "sourcePhase": "Imagery / Focal",
-    "observed": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
-    "observedSha256": "e15312699ce3baaed88d5a524b34dcd3ca3a2f98a54b9609c160fbbb6f6b5ea6",
-    "observedBytes": 7342,
-    "review": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json",
-    "reviewSha256": "c37493f7054024b2ac45799434fc6d4abb003a913b6364cc39d01564c9e44277",
-    "reviewBytes": 20080,
-    "byteExactToTask3Start": true,
+    "observed": {
+      "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
+      "sha256": "e15312699ce3baaed88d5a524b34dcd3ca3a2f98a54b9609c160fbbb6f6b5ea6",
+      "bytes": 7342
+    },
+    "review": {
+      "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json",
+      "sha256": "c37493f7054024b2ac45799434fc6d4abb003a913b6364cc39d01564c9e44277",
+      "bytes": 20080
+    },
     "historicalStatusPreservedVerbatim": true
   },
-  "pendingBoundaries": {
-    "smokeI": "NOT_RUN",
-    "finalWholeBranchReview": "NOT_RUN",
-    "final64": "NOT_RUN",
-    "userAcceptance": "NOT_GRANTED",
-    "push": "NOT_PERFORMED",
-    "remoteEquality": "NOT_VERIFIED"
-  },
-  "skillSha256": {
-    "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
-    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
-    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
-  },
-  "publicEntrypointCount": 1,
-  "competitorDependencyCount": 0,
-  "runtimeDependencyCount": 0,
-  "bioExposureCount": 0,
-  "evidenceArtifacts": [
-    {"path": "fixtures/contract-cases/decisions.json", "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80", "bytes": 6860},
-    {"path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/baseline-tests.txt", "sha256": "b8b9bd3da82ba82711208145fb8a38adb35d9a0b48c08839a5f0a2e120b4a5d8", "bytes": 4818},
-    {"path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-green-tests.txt", "sha256": "def335d3895d3c82aecfe19036a47fd0d9419b4543f94f849eee18aaaea1d3b0", "bytes": 947},
-    {"path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-red-tests.txt", "sha256": "12139cb90646b5237c33e2f05a22b27cff10d772118fb6d05b1ac22a569ce752", "bytes": 9014},
-    {"path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt", "sha256": "d69ee48edaf8404cb614ab789181f84bd788c21af86884fb0606af14c7da6fbe", "bytes": 5653},
-    {"path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-contract-tests.txt", "sha256": "01d48ba052fc2d18830177a4904e86cdf189229f98b89f921100ac527d2b119b", "bytes": 909},
-    {"path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-final.json", "sha256": "202a1f0abc0142e7cd67880742c804de1f14f4e4813889675085e86f21e44c0c", "bytes": 3949},
-    {"path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-provenance.json", "sha256": "1fae7dcd875c8897c13c6b68ec95c63d8676f13770ba39d96dd596b5e37d84f1", "bytes": 5275},
-    {"path": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json", "sha256": "e15312699ce3baaed88d5a524b34dcd3ca3a2f98a54b9609c160fbbb6f6b5ea6", "bytes": 7342},
-    {"path": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json", "sha256": "c37493f7054024b2ac45799434fc6d4abb003a913b6364cc39d01564c9e44277", "bytes": 20080},
-    {"path": "fixtures/contract-cases/observed.json", "sha256": "4dfd3b18763a8c667b1ca79a1f3e45ce935f8ff143d6a225696cff85967f9a42", "bytes": 7110}
+  "knownFailures": [
+    "Task 1 expected Composition RED: 0 PASS / 8 FAIL before implementation; preserved unchanged.",
+    "Smoke I deliberately defective generic baseline; source and actual desktop/mobile renders preserved.",
+    "Smoke I candidate 01 desktop shared-start-line failure; source, renders, and observation preserved before candidate 02 correction."
   ],
-  "evidenceInventoryNote": "Compact Task 3 inventory generated from the current Composition evidence directory, current observed/cases, and byte-exact prior-current archives. Current review-evidence.json excludes its own self-hash. Task 5 owns the exhaustive final packet inventory."
+  "diagnostics": [
+    "Task 2 unquoted read-only PowerShell HEAD^{tree} command failed; the quoted revision succeeded with no mutation.",
+    "Task 4 default diff check classified 33 CRLF lines in exact native before-manifest.json as whitespace; command-local core.whitespace=cr-at-eol passed, bytes were preserved, and no config changed.",
+    "Controller guessed a missing packet-audit helper name, then found the actual read-only audit-i.mjs with rg; no mutation or gate failure. The Task 4-only unchanged-review assertion is intentionally not reused after this current review refresh.",
+    "Task 5 first supplemental inventory-set verifier used an incorrectly escaped Windows separator literal and reported a mismatch; corrected path.sep normalization verified the exact set and every hash/byte count with no repository mutation."
+  ],
+  "unverified": [
+    "exhaustive accessibility and assistive-technology behavior",
+    "other browsers, devices, viewports, and themes",
+    "user acceptance",
+    "production incident behavior",
+    "statistical stability",
+    "causal or comparative superiority",
+    "competition closure or readiness",
+    "phase closure",
+    "controller whole-branch review",
+    "push",
+    "remote equality"
+  ],
+  "rulingsAndDiagnosticNarrative": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-validation-notes.md",
+  "deliveryBoundaries": {
+    "product": "FIXED",
+    "approvedDesign": "FIXED",
+    "userAcceptance": "NOT_GRANTED",
+    "controllerWholeBranchReview": "NOT_PERFORMED_IN_THIS_SNAPSHOT",
+    "push": "NOT_PERFORMED",
+    "remoteEquality": "NOT_VERIFIED",
+    "programLeadClosure": "NOT_CLAIMED"
+  },
+  "evidenceArtifacts": [
+    {
+      "path": "fixtures/contract-cases/decisions.json",
+      "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+      "bytes": 6860
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/baseline-tests.txt",
+      "sha256": "b8b9bd3da82ba82711208145fb8a38adb35d9a0b48c08839a5f0a2e120b4a5d8",
+      "bytes": 4818
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-green-tests.txt",
+      "sha256": "def335d3895d3c82aecfe19036a47fd0d9419b4543f94f849eee18aaaea1d3b0",
+      "bytes": 947
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-red-tests.txt",
+      "sha256": "12139cb90646b5237c33e2f05a22b27cff10d772118fb6d05b1ac22a569ce752",
+      "bytes": 9014
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-contract-tests.txt",
+      "sha256": "7b038b3ce4696e26f4fdf3e938c95a3519c08b3e8abffb367d6792b010344f15",
+      "bytes": 5653
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-validation-notes.md",
+      "sha256": "286d1914d325d873f7fa28e7ff60502c2bed43ba2da9c5339900c59a50b99734",
+      "bytes": 10403
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt",
+      "sha256": "d69ee48edaf8404cb614ab789181f84bd788c21af86884fb0606af14c7da6fbe",
+      "bytes": 5653
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-contract-tests.txt",
+      "sha256": "01d48ba052fc2d18830177a4904e86cdf189229f98b89f921100ac527d2b119b",
+      "bytes": 909
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-final.json",
+      "sha256": "202a1f0abc0142e7cd67880742c804de1f14f4e4813889675085e86f21e44c0c",
+      "bytes": 3949
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-provenance.json",
+      "sha256": "1fae7dcd875c8897c13c6b68ec95c63d8676f13770ba39d96dd596b5e37d84f1",
+      "bytes": 5275
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/smoke-i-final-summary.md",
+      "sha256": "d26ce2e25cadb60f49b1cb241c4137f2c51ef091e765a6f5cddc553331dfd857",
+      "bytes": 2783
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/AGENTS.md",
+      "sha256": "181729aba0cc455b0331818668250ecf0b04d7229d05dff785ff0321007c0887",
+      "bytes": 1724
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/DESIGN.md",
+      "sha256": "ebc7aa6adfe41c1bae9f3c625323f64f89c7f752fc9155c29de35fb19af88348",
+      "bytes": 945
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/PRODUCT.md",
+      "sha256": "9f689d0886e3147189d05e8ecec105818f383796e31a0cfc2be32f285bc773d7",
+      "bytes": 1876
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01-images.json",
+      "sha256": "6057f2900e8c8420fa695d0cc5698cb921277cb3744860b4597e4e8e5f3cb57a",
+      "bytes": 225
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01-observation.md",
+      "sha256": "183c61b1e6354fcf9f99130fb9f0c167b584a4c6e51b06e6c93218c07854f3d8",
+      "bytes": 1460
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/desktop.png",
+      "sha256": "07e95c4a8904de6dfe97284a3bb674affb254baf7239c313581c76e8c467cb85",
+      "bytes": 43567
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/index.html",
+      "sha256": "0eb88f436d78b318f1a08bd4ed295760d1c9c0dd50acd7c97587c1b0554e8f88",
+      "bytes": 1843
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/mobile.png",
+      "sha256": "00a49a248d9906852e1efdbade2df18a3a02918f78a6b7cbdb459451339b6deb",
+      "bytes": 36046
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/styles.css",
+      "sha256": "72013ce3e18ebffd9c0683fb0f8609e5989f95d61292f4348d9eb24502d2d04c",
+      "bytes": 1792
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop-prepared-button-focus.png",
+      "sha256": "2e1e2c595f96d1f52b2e331777d1f90dbab9e6eacfa07006e48c71bc02e29794",
+      "bytes": 48498
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop-prepared-link-focus.png",
+      "sha256": "d9f26ee1911f78521fd9895df7932e07d615c91e5e4ba982351fdcfd025eb02a",
+      "bytes": 46365
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop.png",
+      "sha256": "296662469d601b3d035aff1ebf9ea1dbdb3231261221dc20945e7f8891c8f1f4",
+      "bytes": 43595
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/index.html",
+      "sha256": "0eb88f436d78b318f1a08bd4ed295760d1c9c0dd50acd7c97587c1b0554e8f88",
+      "bytes": 1843
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile-prepared-button-focus.png",
+      "sha256": "101b211a4c57e393b1b4020b49e0f5e73bb3d5cd620de73c4e7503ee8cb661ad",
+      "bytes": 40819
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile-prepared-link-focus.png",
+      "sha256": "a7b632f5ca6a61384d4fe9b153a8297e1ef8078475568562179b9fd88be1460a",
+      "bytes": 38819
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile.png",
+      "sha256": "00a49a248d9906852e1efdbade2df18a3a02918f78a6b7cbdb459451339b6deb",
+      "bytes": 36046
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/styles.css",
+      "sha256": "19ffd289b78a6eebc75570c12759baa425a48074f24647751a674c6f751de698",
+      "bytes": 1859
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before-images.json",
+      "sha256": "5a4649fc6e7c3a4d8cd8989797fbff9a47d78b7a4ef743da14dc43a2fe8e73c7",
+      "bytes": 222
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before-manifest.json",
+      "sha256": "25fb1c3584a854894297653d1d0280198982d6fd7b8f382f0573bbea4a2380de",
+      "bytes": 980
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/AGENTS.md",
+      "sha256": "181729aba0cc455b0331818668250ecf0b04d7229d05dff785ff0321007c0887",
+      "bytes": 1724
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/DESIGN.md",
+      "sha256": "ebc7aa6adfe41c1bae9f3c625323f64f89c7f752fc9155c29de35fb19af88348",
+      "bytes": 945
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/PRODUCT.md",
+      "sha256": "9f689d0886e3147189d05e8ecec105818f383796e31a0cfc2be32f285bc773d7",
+      "bytes": 1876
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/desktop.png",
+      "sha256": "48be2392f8f2fc4817071ae7047cf45ad692a536e37840e01cfa4d8987b89749",
+      "bytes": 126383
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/index.html",
+      "sha256": "5074277e39d0e58ae3ee0df93b012e406d42d4a43cbdfda361a7cd12c5b9ec28",
+      "bytes": 1897
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/mobile.png",
+      "sha256": "4dcf9ce5937219f365ac1c84d1068c718df5a647ca69be98e99ed5233e618f75",
+      "bytes": 69651
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/styles.css",
+      "sha256": "8cc85c5f22e7578096c5bf88d9a7255f14952b384b9b2ebb4066cde967f8e0e4",
+      "bytes": 1801
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/render-log.json",
+      "sha256": "1bcf61c6bc2a14eef2fa4233b86c682961ddbb3e953df2b99355cac249d1f730",
+      "bytes": 2848
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/structural-map.md",
+      "sha256": "a24155865e7cbcd250c43b43e056d3ae504b8124ca3bb2a7609886c82cf5e9ba",
+      "bytes": 6419
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/verification.json",
+      "sha256": "bbdcd90e23776af8286585883854a0db420688b20f6c4ab9112171e9170bd472",
+      "bytes": 65203
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/proof.md",
+      "sha256": "6aa7302d035021ea0d805e7d486e47f45e07351d4d66b97c3dedfd23d6c8d86e",
+      "bytes": 9552
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/change-verification.json",
+      "sha256": "d2bfc41a48b5f01213fe04fe430856d314bfd76f23a3c96a8160e6e247ad6305",
+      "bytes": 6173
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-browser-observation.json",
+      "sha256": "0e9dbb3d4bda29d3140825db2d43695ac0abf54b70c69d00c44af349c0ff75c9",
+      "bytes": 16674
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-chronology.json",
+      "sha256": "1aea03b26d87c4f12852e83b7c6644dcc9aaa4c238413608fcaf9f81935a8c89",
+      "bytes": 921
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-observations.md",
+      "sha256": "9095c813687f0458717ae47676db464a475e0da04ac35b390a4b8564ed5c6eb9",
+      "bytes": 5364
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/manifest.json",
+      "sha256": "3f38f3fc287f37fd6d4f09725f1afcbe765d0da410fc68809fb6c9f43c152ec7",
+      "bytes": 6939
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/native-final.txt",
+      "sha256": "bafb307ff1339a1df5cd2255cb660bfdd56be260a4acb956f0198044a23dfcfb",
+      "bytes": 790
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/native-provenance.json",
+      "sha256": "cb2137351912c833ef961f411db11c90901caa3979d44a5b43b1a6269e350214",
+      "bytes": 7070
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/proof.md",
+      "sha256": "8d3de523aff5c79157b09cb8c314ffa60cefff5aa9c34504dfb8cf9b92cfef28",
+      "bytes": 7957
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/source.diff",
+      "sha256": "43dbef1202adac595869bf289689a09a57921415926dbd675226db8ac0fcc988",
+      "bytes": 4356
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/tool-order-verification.json",
+      "sha256": "fe8606f5eb6ff9a0a08b7ae045e8eda8c9beb20a4360b0eac0d882028d664998",
+      "bytes": 4963
+    },
+    {
+      "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
+      "sha256": "e15312699ce3baaed88d5a524b34dcd3ca3a2f98a54b9609c160fbbb6f6b5ea6",
+      "bytes": 7342
+    },
+    {
+      "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json",
+      "sha256": "c37493f7054024b2ac45799434fc6d4abb003a913b6364cc39d01564c9e44277",
+      "bytes": 20080
+    },
+    {
+      "path": "fixtures/contract-cases/observed.json",
+      "sha256": "4dfd3b18763a8c667b1ca79a1f3e45ce935f8ff143d6a225696cff85967f9a42",
+      "bytes": 7110
+    }
+  ],
+  "evidenceInventory": {
+    "count": 54,
+    "bytes": 788826,
+    "compositionPhaseFiles": 10,
+    "smokeIPacketFiles": 40,
+    "currentObservedAndCases": 2,
+    "priorCurrentArchives": 2,
+    "sort": "single code-point comparator applied to all repository-relative paths",
+    "selfHashExcluded": "fixtures/contract-cases/review-evidence.json deliberately excludes its own self-hash."
+  }
 }
