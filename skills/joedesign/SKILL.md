@@ -83,6 +83,16 @@ For responsive work, preserve hierarchy roles and visual flow, not desktop coord
 
 When a material proof is challenged, be able to identify the major Visual Block Tree, intended visual flow, spacing roles at important boundaries, whether same relationships use the same role, and any deliberate exception. Observe the actual render before declaring the hierarchy successful.
 
+## Assign color by role and preserve contrast meaning
+
+Role before color value. Identify the recurring semantic color roles a surface needs, then assign or reuse project values; prefer `semantic job → reusable color role → project value` over an attractive local color value. Use contrast hierarchy to reinforce Product priority, and give each attention-dominant accent clear accent ownership. Do not make every element equally loud.
+
+Neutral and surface color must express an actual layer, containment, state, or focal relationship; design does not require a panel for every group. State color may express a Product state but may not invent or change it: preserve Product semantics, and do not make color the only cue for required meaning when text, iconography, shape, position, underline, border, or another cue is needed.
+
+For web work where applicable, treat WCAG 2.2 AA as a minimum accessibility gate, not an aesthetic preset: normal text requires at least `4.5:1`, while large-scale text and meaningful UI component/state visuals require at least `3:1` against the relevant adjacent color. Stricter applicable project or platform requirements take precedence.
+
+Evaluate the actual foreground/background pair across base and nested surfaces, imagery or gradients, interaction states, and light/dark themes. Token existence is not proof of contrast. Responsive recomposition and light/dark translation preserve semantic color roles and relative priority while values may change. A material visual PASS requires observation of the actual render for the named surface, state, and dimensions.
+
 ## Make typography and scale deliberate
 
 Role before value. Identify the recurring semantic type roles the surface actually needs, then assign values. Prefer `semantic job → reusable type role → canonical token/style` over a local font-size or weight guess. Do not infer visual roles mechanically from `h1`/`h2`/`h3`, DOM depth, component names, or layer names.

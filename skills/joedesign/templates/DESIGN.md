@@ -34,6 +34,16 @@ Keep product meaning in its authority, not duplicated here. -->
 
 ## Color / Surface
 
+<!-- Persist only sourced/approved project-specific color decisions. JOEDESIGN defaults used during draft proof do not automatically become project authority. -->
+
+### Color Roles
+
+### Accent Ownership
+
+### Surface / Layer Relationships
+
+### State / Contrast Constraints
+
 ## Composition / Spatial Hierarchy
 
 ### Visual Flow
