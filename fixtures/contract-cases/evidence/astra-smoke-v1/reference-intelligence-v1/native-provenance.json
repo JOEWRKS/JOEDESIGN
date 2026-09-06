@@ -1,0 +1,106 @@
+{
+  "sourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290",
+  "method": "Two fresh isolated native CLI contexts, one semantic replay and one neutral Smoke E; no reruns, resumed history, private user rules, competitor skill invocation or external corpus.",
+  "runs": {
+    "contracts": {
+      "runtime": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh",
+        "threadId": "01a0759b-f57d-7fc3-be74-3078d1d4df14",
+        "version": "codex-cli 0.153.4",
+        "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6"
+      },
+      "code": 0,
+      "wallMs": 45803,
+      "fixture": {
+        "commit": "66bf3adc44db7001a3baa8992aa9122e15418b6b",
+        "tree": "7b9702a338f78c5106293d5d699752f093d71dd8"
+      },
+      "skillSha256": {
+        "SKILL.md": "f4395b40d01f0d73ecf869bed17fa0903eab27582556efc71eec49f7bc6e9ea1",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "f22e55be18a0de8a3e44237025a13efde73598662083cfd92f86e35553991353"
+      },
+      "provenance": {
+        "localDirectory": "D:/JOEWRKS/joedesign-reference-validation-20260906/runs/contracts",
+        "rollout": "D:\\JOEWRKS\\joedesign-reference-validation-20260906\\runs\\contracts\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T16-25-50-01a0759b-f57d-7fc3-be74-3078d1d4df14.jsonl",
+        "rolloutSha256": "a0334f014e76df851813707dbf907aee812006438d34ba94a663b3dfc60caab0",
+        "events_jsonlSha256": "d1ea533ef8c7e48879422f92dc1d81ffa6091c5a818951eec2a539a71286edbc",
+        "launch_jsonSha256": "5f2816e45c9a86e3bbacf8868fddc6ce979edbd2818a8a4ba41c296f6bd5e4fe",
+        "prompt_input_jsonSha256": "08023728e3da3ee483e47e0fac06d826e689a7d51e100d598c2691267fb05ad2",
+        "final_txtSha256": "353bd61762a151ddeceb5adf2b3b2c0777d63971ff4222f8fdbcd3f6ced7be9a",
+        "stderr_txtSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "exit_jsonSha256": "3598c42879a46dc7869d3611fcfe383b38441ad3ca22bddfde4d02f0d230c321",
+        "prompt": "Use $joedesign. Read cases.json and evaluate each independent scenario as a decision exercise only. For each, select all applicable action identifiers from its choices and give a concise reason. Return only JSON with a responses array of {id, actions, reason}. Do not execute the hypothetical actions or modify files."
+      },
+      "imageObservations": [],
+      "changedTrackedFiles": [],
+      "failedCommands": [
+        {
+          "id": "item_1",
+          "exitCode": 1,
+          "command": "\"C:\\\\Users\\\\tjdwo\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'rg --files -g AGENTS.md'",
+          "output": ""
+        }
+      ],
+      "credentialLeakCheck": "PASS"
+    },
+    "E": {
+      "runtime": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh",
+        "threadId": "01a0759d-4944-7a53-bc5e-a7271025e641",
+        "version": "codex-cli 0.153.4",
+        "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6"
+      },
+      "code": 0,
+      "wallMs": 548488,
+      "fixture": {
+        "commit": "f58bb7035d1ed41a74e8070600f41b5d706139b3",
+        "tree": "89bc32577bd2e8ddea413283fbf746e89cf7992b"
+      },
+      "skillSha256": {
+        "SKILL.md": "f4395b40d01f0d73ecf869bed17fa0903eab27582556efc71eec49f7bc6e9ea1",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "f22e55be18a0de8a3e44237025a13efde73598662083cfd92f86e35553991353"
+      },
+      "provenance": {
+        "localDirectory": "D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E",
+        "rollout": "D:\\JOEWRKS\\joedesign-reference-validation-20260906\\runs\\E\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T16-27-17-01a0759d-4944-7a53-bc5e-a7271025e641.jsonl",
+        "rolloutSha256": "c2a1dbea6f9b454d7bd15cd239a7f1f5850e577bed07dba04e0c1cb461b7afe8",
+        "events_jsonlSha256": "f2d3e2487e3a276192962736af5098e66a96e00b939e4c83365c413d9a38b667",
+        "launch_jsonSha256": "3c8adecd1885f0ab5f98b7c9756301656583eaad1537a6c2f1fba9b0a50a079c",
+        "prompt_input_jsonSha256": "5498a9bda3ffa2c1841a959cafa14cd96ec255d1648142c27f44c04bb6636d02",
+        "final_txtSha256": "0391992ddff419b77ee03aa28583c89c02b314c28a8d95669c0281ca4bcb1263",
+        "stderr_txtSha256": "7a0b610ec01227ef764ec267ac0448a78d73afa2bc9c255a0b7b4febdcfa0584",
+        "exit_jsonSha256": "0b002f844a5f81103c05be5504c5804b94e442bf3412fead1b533950d6bf4b8b",
+        "prompt": "JOEDESIGN으로 현재 Research Briefing Portal의 승인된 Product Truth와 디자인 방향을 유지하면서 reference-a.md와 reference-b.md를 검토해 필요한 관계를 현재 화면에 번역하고 bounded proof를 만들어줘. Desktop 1440×1000 / mobile 390×844 before/after를 실제 확인하고 채택 판단과 관찰 결과를 artifacts에 간단히 남겨줘."
+      },
+      "imageObservations": [
+        {
+          "timestamp": "2026-09-06T07:29:00.773Z",
+          "call": "const r=await Promise.allSettled([\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/before-desktop.png\"}),\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/before-mobile.png\"})\n]);r.forEach((x,i)=>{text({i,status:x.status});if(x.status===\"fulfilled\")image(x.value.image_url);else text(x.reason)});\n"
+        },
+        {
+          "timestamp": "2026-09-06T07:32:01.282Z",
+          "call": "const r=await Promise.allSettled([\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/after-desktop.png\"}),\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/after-mobile.png\"})\n]);r.forEach((x,i)=>{text({i,status:x.status});if(x.status===\"fulfilled\")image(x.value.image_url);else text(x.reason)});\n"
+        },
+        {
+          "timestamp": "2026-09-06T07:33:12.959Z",
+          "call": "const r=await Promise.allSettled([\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/after-desktop.png\"}),\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/after-mobile.png\"})\n]);r.forEach((x,i)=>{text({i,status:x.status});if(x.status===\"fulfilled\")image(x.value.image_url);else text(x.reason)});\n"
+        },
+        {
+          "timestamp": "2026-09-06T07:34:58.776Z",
+          "call": "const r=await Promise.allSettled([\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/focus-desktop.png\"}),\n tools.view_image({path:\"D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E/workspace/artifacts/focus-mobile.png\"})\n]);r.forEach((x,i)=>{text({i,status:x.status});if(x.status===\"fulfilled\")image(x.value.image_url);else text(x.reason)});\n"
+        }
+      ],
+      "changedTrackedFiles": [
+        "index.html",
+        "styles.css"
+      ],
+      "failedCommands": [],
+      "credentialLeakCheck": "PASS"
+    }
+  },
+  "rawLogs": "Raw rollouts, runtime homes and credentials are not committed. Repository PNGs, source snapshots, unchanged input briefs, native proof/checks, final semantic JSON and exact hashes provide bounded independently viewable evidence."
+}

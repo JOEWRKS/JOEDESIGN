@@ -1,0 +1,557 @@
+{
+  "kind": "actual-rendered-neutral-material-reference-adoption",
+  "result": "PASS",
+  "sourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a0759d-4944-7a53-bc5e-a7271025e641",
+    "version": "codex-cli 0.153.4",
+    "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6"
+  },
+  "provenance": {
+    "localDirectory": "D:/JOEWRKS/joedesign-reference-validation-20260906/runs/E",
+    "rollout": "D:\\JOEWRKS\\joedesign-reference-validation-20260906\\runs\\E\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T16-27-17-01a0759d-4944-7a53-bc5e-a7271025e641.jsonl",
+    "rolloutSha256": "c2a1dbea6f9b454d7bd15cd239a7f1f5850e577bed07dba04e0c1cb461b7afe8",
+    "events_jsonlSha256": "f2d3e2487e3a276192962736af5098e66a96e00b939e4c83365c413d9a38b667",
+    "launch_jsonSha256": "3c8adecd1885f0ab5f98b7c9756301656583eaad1537a6c2f1fba9b0a50a079c",
+    "prompt_input_jsonSha256": "5498a9bda3ffa2c1841a959cafa14cd96ec255d1648142c27f44c04bb6636d02",
+    "final_txtSha256": "0391992ddff419b77ee03aa28583c89c02b314c28a8d95669c0281ca4bcb1263",
+    "stderr_txtSha256": "7a0b610ec01227ef764ec267ac0448a78d73afa2bc9c255a0b7b4febdcfa0584",
+    "exit_jsonSha256": "0b002f844a5f81103c05be5504c5804b94e442bf3412fead1b533950d6bf4b8b",
+    "prompt": "JOEDESIGN으로 현재 Research Briefing Portal의 승인된 Product Truth와 디자인 방향을 유지하면서 reference-a.md와 reference-b.md를 검토해 필요한 관계를 현재 화면에 번역하고 bounded proof를 만들어줘. Desktop 1440×1000 / mobile 390×844 before/after를 실제 확인하고 채택 판단과 관찰 결과를 artifacts에 간단히 남겨줘."
+  },
+  "fixture": {
+    "commit": "f58bb7035d1ed41a74e8070600f41b5d706139b3",
+    "tree": "89bc32577bd2e8ddea413283fbf746e89cf7992b"
+  },
+  "skillSha256": {
+    "SKILL.md": "f4395b40d01f0d73ecf869bed17fa0903eab27582556efc71eec49f7bc6e9ea1",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "f22e55be18a0de8a3e44237025a13efde73598662083cfd92f86e35553991353"
+  },
+  "target": {
+    "product": "Research Briefing Portal",
+    "fictional": true,
+    "state": "single initial static screen with one in-page anchor",
+    "browser": "152.0.7977.76",
+    "deviceScaleFactor": 1,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "images": "Actual full-page browser PNGs; viewport dimensions are not screenshot document heights."
+  },
+  "productTruth": {
+    "authority": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/PRODUCT.md",
+    "title": "Shared spaces, stronger daily routines.",
+    "lead": "Three research notes on how shared neighborhood spaces support everyday reading, learning, and connection.",
+    "primaryAction": {
+      "text": "Read the briefing",
+      "href": "#research-summary"
+    },
+    "records": [
+      {
+        "id": "R-01",
+        "title": "Later hours, easier access",
+        "description": "Evening library sessions gave participants more ways to fit reading into their working week.",
+        "source": "Civic Reading Study",
+        "date": "2026-08-12",
+        "datetime": "2026-08-12"
+      },
+      {
+        "id": "R-02",
+        "title": "A place to pause and read",
+        "description": "Small neighborhood reading areas supported short, repeat visits close to daily routes.",
+        "source": "Neighborhood Spaces Review",
+        "date": "2026-08-19",
+        "datetime": "2026-08-19"
+      },
+      {
+        "id": "R-03",
+        "title": "Rooms that welcome more people",
+        "description": "Clear entrances and adaptable shared rooms helped participants join community learning activities.",
+        "source": "Community Access Notes",
+        "date": "2026-08-26",
+        "datetime": "2026-08-26"
+      }
+    ],
+    "invariants": "Required title/action, all three exact record payloads with source/date, meaning/order and desktop/mobile availability preserved.",
+    "existingRecordIdentifiersMadeVisible": true,
+    "wholeBodyTextIdentical": false,
+    "diagnostic": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/independent-inspection-note.json"
+  },
+  "projectDesign": {
+    "authority": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/DESIGN.md",
+    "status": "APPROVED",
+    "revision": 1,
+    "approved": [
+      "calm editorial hierarchy",
+      "one clear primary focal point",
+      "restrained surfaces",
+      "dense dashboard/card-wall composition forbidden"
+    ],
+    "unchanged": true,
+    "exactFamilyMobileSpacingMotionTimingNotApproved": true
+  },
+  "referenceA": {
+    "source": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-a.md",
+    "evidence": "strong for the provided relationships only; not a quality/taste score or a retrieved website",
+    "known": [
+      "editorial asymmetry",
+      "large headline relative to body",
+      "generous image/text negative space",
+      "low chrome"
+    ],
+    "unknown": [
+      "exact mobile spacing",
+      "exact font family",
+      "motion timing"
+    ],
+    "take": [
+      "headline/body dominance",
+      "asymmetric negative space",
+      "low-chrome editorial grouping"
+    ],
+    "doNotTake": [
+      "source brand identity",
+      "exact source copy",
+      "unsupported tokens",
+      "unprovided reference imagery"
+    ],
+    "why": "Compatible with approved calm editorial hierarchy, primary focal point and restrained surfaces.",
+    "appliesTo": [
+      "hero title/lead relationship",
+      "text/quiet-mark spacing",
+      "open summary grouping"
+    ]
+  },
+  "referenceB": {
+    "source": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-b.md",
+    "evidence": "supported for provided relationships; trust is separate from project suitability",
+    "known": [
+      "dense modular card grid",
+      "compact metadata grouping",
+      "repeated boxed containers"
+    ],
+    "unknown": [
+      "responsive order",
+      "exact spacing tokens"
+    ],
+    "conflict": "Dense modular card grid and repeated boxed composition conflict materially with APPROVED DESIGN.md's no-card-wall rule; explicitly rejected before implementation.",
+    "boundedTake": [
+      "source/date proximity inside each record only"
+    ],
+    "doNotTake": [
+      "dense card grid",
+      "repeated boxed containers",
+      "unprovided responsive order",
+      "unsupported exact spacing tokens"
+    ],
+    "why": "Internal metadata association is compatible independent of the rejected overall composition.",
+    "appliesTo": [
+      "each record's source/time grouping only"
+    ]
+  },
+  "projectSpecificDecisions": {
+    "authority": "project-specific JOEDESIGN decisions, NOT recovered reference facts or new approval",
+    "font": "Existing local Arial retained; source family remains unknown.",
+    "typography": "64px desktop / 40px mobile primary title; 24px section / 20px record / 16px body / 14px metadata / 12px existing ID label; 400/700 weights.",
+    "spacing": "4/8/16/24/48px semantic roles; 24px mobile gutters; 16px desktop metadata gap and 4px mobile stack gap.",
+    "responsive": "Existing semantic order retained; local 900/600px breakpoint choices collapse editorial columns, omit aria-hidden decoration, stack record identity/metadata. Mobile title uses normal wrapping after observing an isolated word.",
+    "motion": "No new motion; source timing remains unknown."
+  },
+  "changedFiles": [
+    "index.html",
+    "styles.css"
+  ],
+  "beforeAfterObservations": {
+    "desktop": "Before: 26px title near 24px section scale, text/mark stacked, metadata at far edges. Final: 64px primary title, asymmetric hero, left summary label and open ordered records, compact source/date groups.",
+    "mobile": "Before: 26px title, visible auxiliary mark, source/date across the row. Final: 40px title reads Shared spaces, / stronger daily / routines.; decorative mark omitted, existing IDs and metadata stacked; all records visible by scrolling. Full-page height grows 1216→1300px.",
+    "localIteration": "First after-mobile isolated 'stronger' under balanced wrapping. Native runtime inspected it, retained iteration-1-mobile.png, changed only mobile wrap, then rendered/inspected final. One fresh Smoke E run, not a repeated model run."
+  },
+  "actualRenderedObservations": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "invariants": {
+        "title": true,
+        "titleCount": true,
+        "lead": true,
+        "bodyText": false,
+        "headings": true,
+        "links": true,
+        "records": true,
+        "recordOrder": true,
+        "requiredAction": true,
+        "noHidden": true,
+        "noOverflow": true
+      },
+      "title": {
+        "before": "26px",
+        "after": "64px"
+      },
+      "body": "16px",
+      "action": {
+        "hash": "#research-summary",
+        "targetExists": 1,
+        "targetTop": 441.609375
+      },
+      "metadata": [
+        {
+          "source": {
+            "x": 520,
+            "y": 541.40625,
+            "width": 126.0625,
+            "height": 21.6875
+          },
+          "date": {
+            "x": 662.0625,
+            "y": 541.40625,
+            "width": 71.625,
+            "height": 21.6875
+          },
+          "horizontalGap": 16,
+          "verticalGap": -21.6875
+        },
+        {
+          "source": {
+            "x": 520,
+            "y": 686.890625,
+            "width": 188.34375,
+            "height": 21.6875
+          },
+          "date": {
+            "x": 724.34375,
+            "y": 686.890625,
+            "width": 71.625,
+            "height": 21.6875
+          },
+          "horizontalGap": 16,
+          "verticalGap": -21.6875
+        },
+        {
+          "source": {
+            "x": 520,
+            "y": 832.375,
+            "width": 159.5,
+            "height": 21.6875
+          },
+          "date": {
+            "x": 695.5,
+            "y": 832.375,
+            "width": 71.625,
+            "height": 21.6875
+          },
+          "horizontalGap": 16,
+          "verticalGap": -21.6875
+        }
+      ],
+      "recordSurfaces": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "borderTop": "0px",
+          "borderRight": "0px"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "borderTop": "1px",
+          "borderRight": "0px"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "borderTop": "1px",
+          "borderRight": "0px"
+        }
+      ]
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "invariants": {
+        "title": true,
+        "titleCount": true,
+        "lead": true,
+        "bodyText": false,
+        "headings": true,
+        "links": true,
+        "records": true,
+        "recordOrder": true,
+        "requiredAction": true,
+        "noHidden": true,
+        "noOverflow": true
+      },
+      "title": {
+        "before": "26px",
+        "after": "40px"
+      },
+      "body": "16px",
+      "action": {
+        "hash": "#research-summary",
+        "targetExists": 1,
+        "targetTop": 23.75
+      },
+      "metadata": [
+        {
+          "source": {
+            "x": 24,
+            "y": 664.125,
+            "width": 126.0625,
+            "height": 21.6875
+          },
+          "date": {
+            "x": 24,
+            "y": 689.8125,
+            "width": 71.625,
+            "height": 21.6875
+          },
+          "horizontalGap": -126.0625,
+          "verticalGap": 4
+        },
+        {
+          "source": {
+            "x": 24,
+            "y": 886.6875,
+            "width": 188.34375,
+            "height": 21.6875
+          },
+          "date": {
+            "x": 24,
+            "y": 912.375,
+            "width": 71.625,
+            "height": 21.6875
+          },
+          "horizontalGap": -188.34375,
+          "verticalGap": 4
+        },
+        {
+          "source": {
+            "x": 24,
+            "y": 1134.046875,
+            "width": 159.5,
+            "height": 21.6875
+          },
+          "date": {
+            "x": 24,
+            "y": 1159.734375,
+            "width": 71.625,
+            "height": 21.6875
+          },
+          "horizontalGap": -159.5,
+          "verticalGap": 4
+        }
+      ],
+      "recordSurfaces": [
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "borderTop": "0px",
+          "borderRight": "0px"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "borderTop": "1px",
+          "borderRight": "0px"
+        },
+        {
+          "background": "rgba(0, 0, 0, 0)",
+          "shadow": "none",
+          "borderTop": "1px",
+          "borderRight": "0px"
+        }
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "E1",
+      "claim": "Material adoption record",
+      "expected": "Both materially adopted references need source, quality, known, unknown, take, doNotTake, why and scope.",
+      "observed": "Native proof.md records all eight fields before the implementation edit, only for the two supplied references.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E2",
+      "claim": "Unknown facts",
+      "expected": "Unprovided font/mobile/motion details remain unknown.",
+      "observed": "A exact font family/mobile spacing/motion and B responsive order/exact spacing remain UNKNOWN in the native adoption record and final boundary.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E3",
+      "claim": "Editorial hierarchy",
+      "expected": "A may inform hierarchy without copying an unsupported source design.",
+      "observed": "Actual desktop has a 64px two-line headline versus 16px body, asymmetric text/quiet-mark spacing, and an open ordered summary list; mobile has a 40px three-line title.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E4",
+      "claim": "Conflict",
+      "expected": "B dense card-grid must be explicitly rejected against approved authority.",
+      "observed": "Before rendering, runtime names the conflict with APPROVED DESIGN and excludes the card grid and repeated boxes. Final renders have no repeated boxed-card wall.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E5",
+      "claim": "Bounded adoption",
+      "expected": "B compact metadata grouping may apply only inside each record.",
+      "observed": "Three desktop source/date pairs have a 16px horizontal gap; mobile source/date pairs stack with a 4px vertical gap. B is not applied to the overall composition.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E6",
+      "claim": "No automatic blending",
+      "expected": "Do not average A and B into a generic hybrid.",
+      "observed": "A controls editorial hierarchy and open grouping; B only source/time proximity. Actual renders show an open editorial list, not an averaged card-grid composition.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E7",
+      "claim": "Product and approved design",
+      "expected": "Fixed content, record order, sources/dates and action remain; approval authority is unchanged.",
+      "observed": "Independent browser readback matches title, lead, headings, record payloads/order and one #research-summary anchor at both targets; immutable authority/input bytes match. Existing Product record IDs become visible labels; whole-body string equality is false and preserved separately.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E8",
+      "claim": "Project-specific missing values",
+      "expected": "Needed exact layout values must be project decisions, not fabricated reference facts.",
+      "observed": "Native pre-render record labels Arial, 64/40px title roles, semantic spacing and breakpoint translation as project judgments rather than extracted source values; introduces no motion.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E9",
+      "claim": "Actual output",
+      "expected": "Observe actual desktop and mobile before and final after, bound material claims to expected → observed → verdict.",
+      "observed": "Native image-tool calls cover before, first after, corrected final after and focus crops. Controller opened all four final before/after PNGs and independently inspected the two source states in Chrome. No overflow or hidden required content at either target.",
+      "verdict": "PASS"
+    },
+    {
+      "id": "E10",
+      "claim": "Acceptance",
+      "expected": "Visual conformance is not user acceptance.",
+      "observed": "Native proof limits Technical/Product/Visual PASS to the two exact static targets and anchor/focus; new-render User Acceptance remains unconfirmed and APPROVED Rev 1 is not promoted.",
+      "verdict": "PASS"
+    }
+  ],
+  "acceptanceBoundary": {
+    "technical": "PASS for named static browser targets and anchor/focus only",
+    "productConformance": "PASS for fixed Product Truth, not identical whole-body text",
+    "visualConformance": "PASS for named actual rendered relationships",
+    "userAcceptance": "NOT_GRANTED / no new result accepted",
+    "approvedRevisionPromoted": false
+  },
+  "limitations": [
+    "No live reference website, exact source CSS, font, responsive tokens or motion evidence was supplied; stipulated evidence labels cover relationship briefs only.",
+    "One neutral static fixture and two Chrome viewports are not comparative quality, cross-browser, full accessibility, motion, state coverage or competition-readiness proof.",
+    "Full repository readiness remains NOT_READY because test 16 fails independently."
+  ],
+  "nativeImageObservationBatches": 4,
+  "nativeProof": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/proof.md",
+  "evidenceArtifacts": [
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after/index.html",
+      "sha256": "da373dc008647892b34b7c58a65896a3a4ee0482fef9f5fe5faf69b9566aa659",
+      "bytes": 2342
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after/styles.css",
+      "sha256": "18b1b6c17ad740e784d1feffed0c32799a43552ba30893311403f96bb981bee1",
+      "bytes": 3767
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after-desktop.png",
+      "sha256": "06fe7e490da5b34b8ac4ae2fde9ecab00afff154bc6fdb84a9c9201a6518aa3a",
+      "bytes": 71884
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after-mobile.png",
+      "sha256": "bf729539be0e976810407e86dcee08e4daa843c018f35c7d5a62a09c16ec97ab",
+      "bytes": 53815
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before/index.html",
+      "sha256": "45610f2ff59d588090bf7cec180d471251a2e6706b55727bf0edf8f6efce35bf",
+      "bytes": 2204
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before/styles.css",
+      "sha256": "2ac85cec8a0824a72cbcd803b490dd123bbd279ec5bf4deb73d79b90091cc14f",
+      "bytes": 1307
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-desktop.png",
+      "sha256": "de74756570ee7cba1c6befb3868f88af5f9b7f91264d3f3b87a7e1a4bc94e56c",
+      "bytes": 52407
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-hashes.json",
+      "sha256": "c6a5a0791ba357c79bcfb701322b0f75c1f332e738e87d376b2e94111af79917",
+      "bytes": 1574
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-mobile.png",
+      "sha256": "114cbfa8a5a1a8e8b122682d2174fb2e3e822a45d728090cf8160685d7fba7b6",
+      "bytes": 47377
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/checks.json",
+      "sha256": "7b94d881bc2f9e29875311c97b1a22ae599fd9ed98b028c602dc7ec6b6ac6a76",
+      "bytes": 8741
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/DESIGN.md",
+      "sha256": "051c1738764d460755170f34ba575266bf5f0d398ae781ee3e54bf402360b5b8",
+      "bytes": 411
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/focus-desktop.png",
+      "sha256": "9907bf26897fab91dd7e5feee5f2cb1e1b16597fb746799feb8a919b4901b40d",
+      "bytes": 1394
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/focus-mobile.png",
+      "sha256": "9907bf26897fab91dd7e5feee5f2cb1e1b16597fb746799feb8a919b4901b40d",
+      "bytes": 1394
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/iteration-1-mobile.png",
+      "sha256": "9f8783a739aff1a0bc5e6fb3df33980a73a5884de35cf9ca363d82e5c001144b",
+      "bytes": 53940
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/PRODUCT.md",
+      "sha256": "8a4002f6cd6530bec0c45732a7cf0a9581a091f3d7cfb0e2326aea4d420979cc",
+      "bytes": 1594
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/proof.md",
+      "sha256": "14474a7b827508366708ff32973141a55946273f87e0fcd848dfc5238f6517de",
+      "bytes": 8389
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-a.md",
+      "sha256": "cb73a92a009c35e228003738dfb2c42309664d557d87baf73346e2e2403073f2",
+      "bytes": 613
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-b.md",
+      "sha256": "51d3bffcd063aff461df06fbddeeaa5181802eb21087f982da786236c010c5d9",
+      "bytes": 410
+    }
+  ]
+}

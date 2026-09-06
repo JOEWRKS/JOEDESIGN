@@ -1,0 +1,314 @@
+{
+  "authority": "PRODUCT.md + DESIGN.md APPROVED Rev 1",
+  "states": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "productConformance": "PASS",
+      "technical": "PASS",
+      "observed": {
+        "masthead": "Research Briefing Portal",
+        "title": "Shared spaces, stronger daily routines.",
+        "lead": "Three research notes on how shared neighborhood spaces support everyday reading, learning, and connection.",
+        "heading": "Research summary",
+        "footer": "Neutral example fixture — fictional research data.",
+        "records": [
+          {
+            "id": "R-01",
+            "title": "Later hours, easier access",
+            "summary": "Evening library sessions gave participants more ways to fit reading into their working week.",
+            "source": "Civic Reading Study",
+            "date": "2026-08-12"
+          },
+          {
+            "id": "R-02",
+            "title": "A place to pause and read",
+            "summary": "Small neighborhood reading areas supported short, repeat visits close to daily routes.",
+            "source": "Neighborhood Spaces Review",
+            "date": "2026-08-19"
+          },
+          {
+            "id": "R-03",
+            "title": "Rooms that welcome more people",
+            "summary": "Clear entrances and adaptable shared rooms helped participants join community learning activities.",
+            "source": "Community Access Notes",
+            "date": "2026-08-26"
+          }
+        ],
+        "datesMatchDatetime": true,
+        "idsVisible": true,
+        "allRequiredTextHasVisibleBounds": true,
+        "action": {
+          "text": "Read the briefing",
+          "href": "#research-summary",
+          "count": 1,
+          "height": 44
+        },
+        "orderedRegion": true,
+        "horizontalOverflow": false,
+        "documentHeight": 1000,
+        "type": {
+          "h1": {
+            "size": "64px",
+            "lineHeight": "69.12px",
+            "width": 783
+          },
+          "h2": {
+            "size": "24px",
+            "lineHeight": "31.2px",
+            "width": 240
+          },
+          "h3": {
+            "size": "20px",
+            "lineHeight": "26px",
+            "width": 760
+          },
+          ".lead": {
+            "size": "16px",
+            "lineHeight": "24.8px",
+            "width": 534
+          },
+          ".description": {
+            "size": "16px",
+            "lineHeight": "24.8px",
+            "width": 712
+          },
+          ".metadata": {
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "width": 760
+          },
+          ".record-id": {
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "width": 48
+          }
+        },
+        "metadata": [
+          {
+            "id": "R-01",
+            "horizontalGap": 16,
+            "verticalGap": -22,
+            "sameLine": true
+          },
+          {
+            "id": "R-02",
+            "horizontalGap": 16,
+            "verticalGap": -22,
+            "sameLine": true
+          },
+          {
+            "id": "R-03",
+            "horizontalGap": 16,
+            "verticalGap": -22,
+            "sameLine": true
+          }
+        ]
+      },
+      "focus": {
+        "active": true,
+        "focusVisible": true,
+        "outline": "rgb(37, 78, 62) solid 2px"
+      },
+      "anchor": {
+        "hash": "#research-summary",
+        "scrollY": 0,
+        "summaryTop": 442,
+        "summaryHeadingVisible": true
+      },
+      "errors": [],
+      "externalRequests": []
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "productConformance": "PASS",
+      "technical": "PASS",
+      "observed": {
+        "masthead": "Research Briefing Portal",
+        "title": "Shared spaces, stronger daily routines.",
+        "lead": "Three research notes on how shared neighborhood spaces support everyday reading, learning, and connection.",
+        "heading": "Research summary",
+        "footer": "Neutral example fixture — fictional research data.",
+        "records": [
+          {
+            "id": "R-01",
+            "title": "Later hours, easier access",
+            "summary": "Evening library sessions gave participants more ways to fit reading into their working week.",
+            "source": "Civic Reading Study",
+            "date": "2026-08-12"
+          },
+          {
+            "id": "R-02",
+            "title": "A place to pause and read",
+            "summary": "Small neighborhood reading areas supported short, repeat visits close to daily routes.",
+            "source": "Neighborhood Spaces Review",
+            "date": "2026-08-19"
+          },
+          {
+            "id": "R-03",
+            "title": "Rooms that welcome more people",
+            "summary": "Clear entrances and adaptable shared rooms helped participants join community learning activities.",
+            "source": "Community Access Notes",
+            "date": "2026-08-26"
+          }
+        ],
+        "datesMatchDatetime": true,
+        "idsVisible": true,
+        "allRequiredTextHasVisibleBounds": true,
+        "action": {
+          "text": "Read the briefing",
+          "href": "#research-summary",
+          "count": 1,
+          "height": 44
+        },
+        "orderedRegion": true,
+        "horizontalOverflow": false,
+        "documentHeight": 1300,
+        "type": {
+          "h1": {
+            "size": "40px",
+            "lineHeight": "43.2px",
+            "width": 342
+          },
+          "h2": {
+            "size": "24px",
+            "lineHeight": "31.2px",
+            "width": 342
+          },
+          "h3": {
+            "size": "20px",
+            "lineHeight": "26px",
+            "width": 342
+          },
+          ".lead": {
+            "size": "16px",
+            "lineHeight": "24.8px",
+            "width": 342
+          },
+          ".description": {
+            "size": "16px",
+            "lineHeight": "24.8px",
+            "width": 342
+          },
+          ".metadata": {
+            "size": "14px",
+            "lineHeight": "21.7px",
+            "width": 342
+          },
+          ".record-id": {
+            "size": "12px",
+            "lineHeight": "18.6px",
+            "width": 342
+          }
+        },
+        "metadata": [
+          {
+            "id": "R-01",
+            "horizontalGap": -126,
+            "verticalGap": 4,
+            "sameLine": false
+          },
+          {
+            "id": "R-02",
+            "horizontalGap": -188,
+            "verticalGap": 4,
+            "sameLine": false
+          },
+          {
+            "id": "R-03",
+            "horizontalGap": -159,
+            "verticalGap": 4,
+            "sameLine": false
+          }
+        ]
+      },
+      "focus": {
+        "active": true,
+        "focusVisible": true,
+        "outline": "rgb(37, 78, 62) solid 2px"
+      },
+      "anchor": {
+        "hash": "#research-summary",
+        "scrollY": 434,
+        "summaryTop": 24,
+        "summaryHeadingVisible": true
+      },
+      "errors": [],
+      "externalRequests": []
+    }
+  ],
+  "immutableInputs": [
+    {
+      "file": "PRODUCT.md",
+      "unchanged": true
+    },
+    {
+      "file": "DESIGN.md",
+      "unchanged": true
+    },
+    {
+      "file": "reference-a.md",
+      "unchanged": true
+    },
+    {
+      "file": "reference-b.md",
+      "unchanged": true
+    },
+    {
+      "file": "render.mjs",
+      "unchanged": true
+    },
+    {
+      "file": ".agents\\skills\\joedesign\\SKILL.md",
+      "unchanged": true
+    }
+  ],
+  "finalImplementation": [
+    {
+      "file": "index.html",
+      "sha256": "DA373DC008647892B34B7C58A65896A3A4EE0482FEF9F5FE5FAF69B9566AA659"
+    },
+    {
+      "file": "styles.css",
+      "sha256": "18B1B6C17AD740E784D1FEFFED0C32799A43552BA30893311403F96BB981BEE1"
+    }
+  ],
+  "artifacts": [
+    {
+      "file": "artifacts/before-desktop.png",
+      "width": 1440,
+      "height": 1059,
+      "sha256": "DE74756570EE7CBA1C6BEFB3868F88AF5F9B7F91264D3F3B87A7E1A4BC94E56C"
+    },
+    {
+      "file": "artifacts/before-mobile.png",
+      "width": 390,
+      "height": 1216,
+      "sha256": "114CBFA8A5A1A8E8B122682D2174FB2E3E822A45D728090CF8160685D7FBA7B6"
+    },
+    {
+      "file": "artifacts/after-desktop.png",
+      "width": 1440,
+      "height": 1000,
+      "sha256": "06FE7E490DA5B34B8AC4AE2FDE9ECAB00AFFF154BC6FDB84A9C9201A6518AA3A"
+    },
+    {
+      "file": "artifacts/after-mobile.png",
+      "width": 390,
+      "height": 1300,
+      "sha256": "BF729539BE0E976810407E86DCEE08E4DAA843C018F35C7D5A62A09C16EC97AB"
+    }
+  ],
+  "textContrast": {
+    "252c29": 13.19,
+    "525e55": 6.28,
+    "254e3e": 8.67
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "check": "Controller whole-body text equality",
+  "exitCode": 1,
+  "assertion": "bodyText: false !== true",
+  "originalReadbackLocal": "D:/JOEWRKS/joedesign-reference-validation-20260906/E-readback.json",
+  "targets": [
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "invariants": {
+        "title": true,
+        "titleCount": true,
+        "lead": true,
+        "bodyText": false,
+        "headings": true,
+        "links": true,
+        "records": true,
+        "recordOrder": true,
+        "requiredAction": true,
+        "noHidden": true,
+        "noOverflow": true
+      },
+      "beforeBodyText": "Research Briefing Portal Shared spaces, stronger daily routines. Three research notes on how shared neighborhood spaces support everyday reading, learning, and connection. Read the briefing Research summary Later hours, easier access Evening library sessions gave participants more ways to fit reading into their working week. Civic Reading Study2026-08-12 A place to pause and read Small neighborhood reading areas supported short, repeat visits close to daily routes. Neighborhood Spaces Review2026-08-19 Rooms that welcome more people Clear entrances and adaptable shared rooms helped participants join community learning activities. Community Access Notes2026-08-26 Neutral example fixture — fictional research data.",
+      "afterBodyText": "Research Briefing Portal Shared spaces, stronger daily routines. Three research notes on how shared neighborhood spaces support everyday reading, learning, and connection. Read the briefing Research summary R-01 Later hours, easier access Evening library sessions gave participants more ways to fit reading into their working week. Civic Reading Study2026-08-12 R-02 A place to pause and read Small neighborhood reading areas supported short, repeat visits close to daily routes. Neighborhood Spaces Review2026-08-19 R-03 Rooms that welcome more people Clear entrances and adaptable shared rooms helped participants join community learning activities. Community Access Notes2026-08-26 Neutral example fixture — fictional research data.",
+      "onlyExistingIdentifiersAdded": true
+    },
+    {
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "invariants": {
+        "title": true,
+        "titleCount": true,
+        "lead": true,
+        "bodyText": false,
+        "headings": true,
+        "links": true,
+        "records": true,
+        "recordOrder": true,
+        "requiredAction": true,
+        "noHidden": true,
+        "noOverflow": true
+      },
+      "beforeBodyText": "Research Briefing Portal Shared spaces, stronger daily routines. Three research notes on how shared neighborhood spaces support everyday reading, learning, and connection. Read the briefing Research summary Later hours, easier access Evening library sessions gave participants more ways to fit reading into their working week. Civic Reading Study2026-08-12 A place to pause and read Small neighborhood reading areas supported short, repeat visits close to daily routes. Neighborhood Spaces Review2026-08-19 Rooms that welcome more people Clear entrances and adaptable shared rooms helped participants join community learning activities. Community Access Notes2026-08-26 Neutral example fixture — fictional research data.",
+      "afterBodyText": "Research Briefing Portal Shared spaces, stronger daily routines. Three research notes on how shared neighborhood spaces support everyday reading, learning, and connection. Read the briefing Research summary R-01 Later hours, easier access Evening library sessions gave participants more ways to fit reading into their working week. Civic Reading Study2026-08-12 R-02 A place to pause and read Small neighborhood reading areas supported short, repeat visits close to daily routes. Neighborhood Spaces Review2026-08-19 R-03 Rooms that welcome more people Clear entrances and adaptable shared rooms helped participants join community learning activities. Community Access Notes2026-08-26 Neutral example fixture — fictional research data.",
+      "onlyExistingIdentifiersAdded": true
+    }
+  ],
+  "disposition": "Preserved diagnostic failure, not a shipped contract or changed expected answer. Product Truth already defines R-01/R-02/R-03 and before HTML has those data-record-id values; after HTML exposes only those existing IDs as presentation labels. Required title, lead, headings, exact record payloads/source/date/order and single anchor are unchanged at both targets. No implementation or expected answer was changed in response to this diagnostic. Smoke E's semantic Product Truth invariant passes; whole rendered body text is NOT claimed identical."
+}
