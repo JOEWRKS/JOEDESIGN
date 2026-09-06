@@ -1,0 +1,40 @@
+✔ 01 — single public entrypoint (4.9162ms)
+✔ 02 — no product-authority override (2.9153ms)
+✔ 03 — DESIGN.md lifecycle (1.8191ms)
+✔ 04 — unresolved direction meaningful alternatives (2.622ms)
+✔ 05 — approved direction no unnecessary alternatives (2.068ms)
+✔ 06 — reference relationship handling (1.9497ms)
+✔ 07 — target-medium proof (3.627ms)
+✔ 08 — exact-target refinement (2.2149ms)
+✔ 09 — local refinement does not cause redesign (2.4418ms)
+✔ 10 — repeated rejection direction reconsideration (2.5855ms)
+✔ 11 — responsive translation (2.1661ms)
+✔ 12 — product ambiguity bounded re-entry (1.7942ms)
+✔ 13 — actual-output PASS FAIL UNVERIFIED (2.547ms)
+✔ 14 — technical PASS does not prove visual PASS (1.6803ms)
+✔ 15 — internal visual PASS does not confer acceptance (1.5066ms)
+✔ 16 — external competitor dependencies absent in repository and installable skill (80.0069ms)
+✔ craft — hierarchy and visual flow precede decoration (16.243ms)
+✔ craft — material spacing follows a semantic Visual Block Tree (0.574ms)
+✔ craft — spacing belongs to relationships, not isolated elements (0.2913ms)
+✔ craft — structural separation and binding hierarchy stay distinct (0.2154ms)
+✔ craft — 4px base uses a deliberately restricted canonical token set (0.2177ms)
+✔ craft — one-off spacing is challenged and density changes systemically (0.2674ms)
+✔ craft — responsive work preserves hierarchy roles, not raw coordinates (0.2503ms)
+✔ craft — project DESIGN template can persist the chosen spatial profile (0.1137ms)
+✔ type — semantic role is chosen before numeric value (1.5536ms)
+✔ type — hierarchy uses multiple axes rather than font size alone (0.2987ms)
+✔ type — scale is restrained and independent from the spatial 4px grid (0.2277ms)
+✔ type — near-duplicate roles and arbitrary local sizes are challenged (0.2162ms)
+✔ type — family and weight strategy is restrained and role-based (0.2732ms)
+✔ type — readability couples measure, line height, language, and actual face (0.27ms)
+✔ type — responsive translation preserves role hierarchy instead of proportional shrinking (0.2659ms)
+✔ type — project DESIGN template can persist type roles and reading system (0.1374ms)
+ℹ tests 32
+ℹ suites 0
+ℹ pass 32
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 208.0202

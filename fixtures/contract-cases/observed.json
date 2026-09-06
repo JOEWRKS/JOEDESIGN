@@ -1,29 +1,30 @@
 {
   "kind": "actual-astra-decision-replay",
-  "limitations": "Supplied-choice decision exercise, not execution proof for every scenario. Fresh Typography & Scale Core A/B/C/D smokes separately exercise real rendered targets. A failed response is retained unchanged.",
-  "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+  "limitations": "One fresh supplied-choice replay of all fourteen current scenarios; not execution proof for every scenario. Existing Typography & Scale A/B/C/D smokes are reused because the entire shipped skill package is byte-identical; no smoke rerun.",
+  "sourceImplementation": "62220f9c9382cbd189d64076d88071fb53cc52b4",
   "skillSha256": {
     "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
     "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
     "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
   },
-  "casesSha256": "a777f9970e69f9a6768bea0aa1379c85f0c948b49aa7e0824dd9e54111288672",
-  "casesDataSha256": "a43ee236434355aac9b5cf4c0ffaa231e3462b7ffdd139a9fc689553c40c634c",
-  "caseFormattingNote": "Runtime cases.json is a byte-exact copy of the unchanged repository decisions.json.",
+  "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+  "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
+  "caseFormattingNote": "Runtime cases.json is a byte-exact copy of the current repository decisions.json. Only the Program Lead's case 14 request clarification differs from the prior run; choices and deterministic expected actions remain unchanged.",
   "runtime": {
     "model": "gpt-6-astra",
     "effort": "xhigh",
-    "threadId": "01a07302-83a8-73d2-8d01-4aff5b8e42fe",
-    "version": "codex-cli 0.153.0",
-    "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1",
-    "rolloutSha256": "51351ab56cda38a3ae5533d1a1e3e44edfe7ba432f85be28cb01c4f12af08aca"
+    "threadId": "01a074f5-d371-7bd2-883a-bd294e29547e",
+    "version": "codex-cli 0.153.4",
+    "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+    "rolloutSha256": "49969805ea45a31d7324076193b5de8dbfc93751281758c7b07d7f7e162301a0"
   },
   "evidence": {
-    "run": "D:/JOEWRKS/joedesign-typography-revalidation-20260906/runs/contracts",
-    "rollout": "D:\\JOEWRKS\\joedesign-typography-revalidation-20260906\\runs\\contracts\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T04-19-00-01a07302-83a8-73d2-8d01-4aff5b8e42fe.jsonl",
-    "eventsSha256": "3aea8a746c65aa0dfb7a3fa41ac9801ae38f14d9bc108a0723b8560725aabc53",
-    "finalSha256": "3e9ab1095759e2ff912bd26a005d91dd667a11c2db34313dd0ff8310279839a3",
-    "promptInputSha256": "54dff83e20cb0f65db0b692c98517bc9bcc141502a0e07a9d719117e19648357",
+    "run": "D:/JOEWRKS/joedesign-case14-revalidation-20260906/runs/contracts",
+    "rollout": "D:\\JOEWRKS\\joedesign-case14-revalidation-20260906\\runs\\contracts\\codex-home\\sessions\\2026\\09\\06\\rollout-2026-09-06T13-24-22-01a074f5-d371-7bd2-883a-bd294e29547e.jsonl",
+    "eventsSha256": "3cfede45d89ea0e1484c0b6d3b9a738242e169d4aca12750a37e3debc4eb7c9b",
+    "launchSha256": "791a6586229f0a6e9dd8eacf07e33b406bb56bdec0d6637ed03c076ecf7bedb3",
+    "finalSha256": "21ff9c2d390cd570cee7fd93fd19e049109401b899517f43587276dd2ffd4901",
+    "promptInputSha256": "63f707adfdf5d6785f4771f1d1b4dc6981ff144ca3e379247766c03d69908c4a",
     "prompt": "Use $joedesign. Read cases.json and evaluate each independent scenario as a decision exercise only. For each, select all applicable action identifiers from its choices and give a concise reason. Return only JSON with a responses array of {id, actions, reason}. Do not execute the hypothetical actions or modify files.",
     "personalCompetitorSkillsDisabled": [
       "C:/Users/tjdwo/.agents/skills/framer/SKILL.md",
@@ -31,9 +32,10 @@
       "C:/Users/tjdwo/.agents/skills/impeccable/SKILL.md"
     ],
     "credentialLeakCheck": "PASS",
-    "priorEvidence": "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
-    "repositoryFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
-    "repositoryFinalSha256": "3e9ab1095759e2ff912bd26a005d91dd667a11c2db34313dd0ff8310279839a3"
+    "priorEvidence": "fixtures/contract-cases/history/astra-typography-scale-v1/observed.json",
+    "priorCases": "fixtures/contract-cases/history/astra-typography-scale-v1/decisions.json",
+    "repositoryFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/semantic-final.json",
+    "repositoryFinalSha256": "21ff9c2d390cd570cee7fd93fd19e049109401b899517f43587276dd2ffd4901"
   },
   "responses": [
     {
@@ -42,7 +44,7 @@
         "preserve-retry-and-state-semantics",
         "refine-presentation-within-product-truth"
       ],
-      "reason": "Visual cleanup must preserve required actions and distinct product states."
+      "reason": "Visual cleanup must preserve required actions and distinct semantic states."
     },
     {
       "id": "03",
@@ -51,7 +53,7 @@
         "retain-approved-rev3-and-propose-draft-rev4",
         "require-explicit-approval-for-promotion"
       ],
-      "reason": "Create a draft when authority is absent; preserve approved revisions until a proposed replacement receives explicit approval."
+      "reason": "Begin with a draft; retain approved authority while proposing its successor, and require explicit approval for promotion."
     },
     {
       "id": "04",
@@ -59,7 +61,7 @@
         "produce-2-or-3-materially-distinct-directions",
         "keep-product-facts-identical-across-candidates"
       ],
-      "reason": "Unresolved direction calls for meaningful visual alternatives with identical Product Truth."
+      "reason": "Unresolved direction requires meaningful visual alternatives that preserve identical Product Truth."
     },
     {
       "id": "05",
@@ -67,7 +69,7 @@
         "bounded-refinement",
         "preserve-approved-direction"
       ],
-      "reason": "Headline refinement within approved intent needs neither alternative directions nor another approval gate."
+      "reason": "Headline refinement within approved intent needs neither alternative directions nor renewed direction approval."
     },
     {
       "id": "06",
@@ -75,7 +77,7 @@
         "identify-take-do-not-take-why-applies-to",
         "treat-reference-as-advisory"
       ],
-      "reason": "Borrow the useful compositional relationship while preserving project authority, brand, and product facts."
+      "reason": "Borrow the relevant compositional relationship while respecting project authority and excluding unrelated branding and semantics."
     },
     {
       "id": "07",
@@ -84,7 +86,7 @@
         "inspect-actual-render",
         "show-candidate-without-self-approval"
       ],
-      "reason": "Prove the material composition in its target medium and obtain user response before dependent expansion."
+      "reason": "Prove the material composition in the available browser runtime, inspect it, and present it for user response before dependent expansion."
     },
     {
       "id": "08",
@@ -93,7 +95,7 @@
         "bounded-hero-typography-change",
         "rerender-same-surface-state-viewport"
       ],
-      "reason": "Inspect and adjust the specified headline/artwork relationship, then verify the same desktop target."
+      "reason": "Inspect and adjust the specified headline–artwork relationship, then verify the same desktop target."
     },
     {
       "id": "09",
@@ -101,7 +103,7 @@
         "retain-composition-and-adjust-type-hierarchy",
         "preserve-unrelated-components"
       ],
-      "reason": "A typography refinement does not authorize replacing the approved composition or changing unrelated components."
+      "reason": "A typography refinement authorizes bounded hierarchy changes within the approved composition."
     },
     {
       "id": "10",
@@ -110,7 +112,7 @@
         "reenter-bounded-exploration-and-proof",
         "stop-dependent-expansion"
       ],
-      "reason": "Two material rejections require reconsidering the direction against failed evidence before further polish or expansion."
+      "reason": "Two material rejections require diagnosing the direction and renewing bounded exploration before further expansion."
     },
     {
       "id": "11",
@@ -119,7 +121,7 @@
         "preserve-required-content-and-actions",
         "inspect-mobile-render"
       ],
-      "reason": "Recompose and inspect the 390×844 target while retaining required information and reachable actions."
+      "reason": "Recompose and inspect the 390×844 target while preserving required information and reachable actions."
     },
     {
       "id": "12",
@@ -128,7 +130,7 @@
         "unmanaged-raise-to-current-product-authority-or-user",
         "continue-independent-work"
       ],
-      "reason": "Role permissions belong to Product authority; route only the affected scope and continue independent visual work."
+      "reason": "Role permissions belong to Product authority; route only the affected scope appropriately and continue independent visual work."
     },
     {
       "id": "13",
@@ -138,17 +140,16 @@
         "C-UNVERIFIED",
         "record-source-target-expected-observed-verdict"
       ],
-      "reason": "Observed separation passes, observed clipping fails, and unobserved motion remains unverified; bind each verdict to its evidence."
+      "reason": "Observed separation satisfies A, observed clipping contradicts B, and missing motion observation leaves C unverified."
     },
     {
       "id": "14",
       "actions": [
         "technical-pass",
         "visual-unverified",
-        "report-exact-unverified-boundary",
-        "user-accepted"
+        "report-exact-unverified-boundary"
       ],
-      "reason": "Build and DOM checks establish technical success, and the user's statement grants acceptance; uninspected appearance remains visually unverified."
+      "reason": "Passing technical checks and an uninspected screenshot establish neither visual conformance nor user acceptance."
     },
     {
       "id": "15",
@@ -157,7 +158,7 @@
         "user-acceptance-not-granted",
         "continue-authorized-bounded-work"
       ],
-      "reason": "Observed visual conformance supports PASS, but authorization to continue does not approve the material direction."
+      "reason": "Observed conformance supports visual PASS; '진행' authorizes bounded continuation without accepting or approving the material direction."
     }
   ]
 }

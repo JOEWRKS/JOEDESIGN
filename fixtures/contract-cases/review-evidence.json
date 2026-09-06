@@ -1,15 +1,26 @@
 {
-  "status": "JOEDESIGN_TYPOGRAPHY_SCALE_CORE_REVALIDATION_FAILED",
-  "readiness": "NOT_READY — required semantic 14/14 and contract 32/32 gates were not met.",
-  "evidenceIntegrity": {"result":"PASS","readinessResult":"FAIL","protectedExistingFilesUnchanged":42,"repositoryFileCount":78,"freshRenderedImages":16,"freshRenderedImageBytes":1639878,"allPublishedArtifactHashesVerified":true,"historicalReportsByteExact":true,"unchangedOriginalNeutralSeeds":["A","B","C"],"nativeResponsesByteExact":true,"sourceSnapshotsMatchNativeTargets":true,"scope":"Integrity of evidence is separate from the failed product/semantic readiness gate."},
+  "status": "JOEDESIGN_TYPOGRAPHY_SCALE_CORE_READY_FOR_PROGRAM_REVIEW",
+  "readiness": "READY for Program Lead review: current semantic replay 14/14 and full contract suite 32/32 PASS; existing Typography & Scale smoke evidence reused on byte-identical shipped skill. Competition readiness is not claimed.",
+  "evidenceIntegrity": {
+    "result": "PASS",
+    "readinessResult": "PASS",
+    "protectedExistingFilesUnchanged": 76,
+    "repositoryFileCount": 83,
+    "newRenderedImages": 0,
+    "reusedRenderedImages": 16,
+    "allReusedArtifactHashesVerified": true,
+    "historicalReportsAndCaseInputByteExact": true,
+    "nativeResponsesByteExact": true,
+    "scope": "Only observed.json and review-evidence.json are refreshed; prior failure archives and two compact new semantic/test artifacts are added."
+  },
   "repository": {
     "actual": "JOEWRKS/JOEDESIGN",
     "visibility": "private",
     "branch": "codex/joedesign-v0.1-typography-scale-core",
-    "startingHead": "10f04a47e94499003f0336980fdd54fc33965eaf",
-    "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf"
+    "startingHead": "62220f9c9382cbd189d64076d88071fb53cc52b4",
+    "sourceImplementation": "62220f9c9382cbd189d64076d88071fb53cc52b4"
   },
-  "scope": "Fresh validation only. Shipped skill/template/doctrine/product contract/tests and expected decisions are not changed. New artifacts preserve actual successes and the observed failure; no repair or pass-seeking runtime rerun.",
+  "scope": "Case 14 regression revalidation only: one fresh semantic replay of all fourteen current decisions, evidence refresh, full deterministic suite, hash-verified reuse of existing A/B/C/D smokes. No shipped skill/template/doctrine/smoke fixture changes and no smoke reruns.",
   "publicSkill": "joedesign",
   "publicEntrypointCount": 1,
   "competitorDependencyCount": 0,
@@ -18,74 +29,77 @@
   "contractTests": {
     "command": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs",
     "nodeVersion": "v26.3.0",
-    "result": "FAIL",
+    "result": "PASS",
     "tests": 32,
-    "passed": 31,
-    "failed": 1,
+    "passed": 32,
+    "failed": 0,
     "cancelled": 0,
     "skipped": 0,
     "originalContracts": 16,
     "craftCoreContracts": 8,
     "typographyScaleCoreContracts": 8,
     "kind": "Two package/public assertions, fourteen replays of actual supplied-choice Astra decisions, eight static spatial and eight static typography contracts. Not a substitute for rendered smokes.",
-    "initialRun": {
-      "tests": 32,
-      "passed": 18,
-      "failed": 14,
-      "cancelled": 0,
-      "skipped": 0,
-      "cause": "All fourteen replay tests rejected the stale Craft Core SKILL.md hash. The two package assertions and sixteen spatial/type static contracts passed. This is not fourteen observed behavioral failures and is not historical preimplementation RED."
-    },
-    "freshResult": "Updating only observed.json to the exact fresh native answers and current hashes leaves one true decision mismatch: case 14 adds user-accepted.",
     "historicalTypographyPreimplementationRed": {
       "result": "UNVERIFIED",
       "reason": "No contemporaneous preimplementation Typography test execution artifact was located. Test-first commit ordering is not proof of a historical RED run. No old checkout or reconstructed RED was manufactured."
     },
     "evidence": [
       {
-        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/final-contract-tests.txt",
-        "sha256": "f0db0eca7a5525cadec6ca964755db8df6b2af1ccd7a68bd4746d5c2340dfba6",
-        "bytes": 3698
-      },
-      {
-        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/initial-contract-tests.txt",
-        "sha256": "f4987e50a24ff412dedba10cb9334cf851719acce61429123c8dd22866f32bb0",
-        "bytes": 19829
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/contract-tests.txt",
+        "sha256": "a96fe328c7d41366bc3693c9febe447e422c888c5ee6e36e50a6d6d2ce687f58",
+        "bytes": 2401
       }
     ]
   },
   "semanticReplay": {
-    "result": "FAIL",
+    "result": "PASS",
     "scenarioCount": 14,
-    "passed": 13,
-    "failed": 1,
-    "failingScenarioIds": [
-      "14"
-    ],
-    "scenarioDataUnchanged": true,
-    "expectedAnswersUnchanged": true,
+    "passed": 14,
+    "failed": 0,
+    "failingScenarioIds": [],
     "source": "fixtures/contract-cases/decisions.json",
     "evidence": "fixtures/contract-cases/observed.json",
+    "scenarioDataUnchangedFrom": "62220f9c9382cbd189d64076d88071fb53cc52b4",
+    "expectedAnswersUnchanged": true,
+    "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+    "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
     "nativeFinal": {
-      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
-      "sha256": "3e9ab1095759e2ff912bd26a005d91dd667a11c2db34313dd0ff8310279839a3",
-      "bytes": 3909
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/semantic-final.json",
+      "sha256": "21ff9c2d390cd570cee7fd93fd19e049109401b899517f43587276dd2ffd4901",
+      "bytes": 3933
     },
     "runtime": {
       "model": "gpt-6-astra",
       "effort": "xhigh",
-      "threadId": "01a07302-83a8-73d2-8d01-4aff5b8e42fe",
-      "version": "codex-cli 0.153.0",
-      "binarySha256": "be83164c07287d028cc4725105f3cceaaf244d53a862e19743f55e9150a66fc1",
-      "rolloutSha256": "51351ab56cda38a3ae5533d1a1e3e44edfe7ba432f85be28cb01c4f12af08aca"
+      "threadId": "01a074f5-d371-7bd2-883a-bd294e29547e",
+      "version": "codex-cli 0.153.4",
+      "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+      "rolloutSha256": "49969805ea45a31d7324076193b5de8dbfc93751281758c7b07d7f7e162301a0"
     },
     "skillSha256": {
       "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
       "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
       "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
     },
-    "limitations": "Supplied-choice decision exercise, not execution proof for every scenario. Fresh Typography & Scale Core A/B/C/D smokes separately exercise real rendered targets. A failed response is retained unchanged.",
-    "reruns": 0
+    "limitations": "One fresh supplied-choice replay of all fourteen current scenarios; not execution proof for every scenario. Existing Typography & Scale A/B/C/D smokes are reused because the entire shipped skill package is byte-identical; no smoke rerun.",
+    "runCount": 1,
+    "reruns": 0,
+    "wallMs": 47144,
+    "case14": {
+      "result": "PASS",
+      "actions": [
+        "technical-pass",
+        "visual-unverified",
+        "report-exact-unverified-boundary"
+      ],
+      "reason": "Passing technical checks and an uninspected screenshot establish neither visual conformance nor user acceptance.",
+      "userAcceptedSelected": false
+    },
+    "otherScenarios": {
+      "count": 13,
+      "passed": 13,
+      "includingCase15": "PASS"
+    }
   },
   "crossSystemContract": {
     "repository": "JOEWRKS/joewrks-work-harness",
@@ -97,50 +111,34 @@
     "readback": "Pinned remote blob independently fetched; local hosting checkout did not contain this path at the pinned object."
   },
   "history": {
-    "priorObserved": "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
-    "priorReview": "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
-    "olderMvp": "fixtures/contract-cases/history/astra-mvp-v1",
-    "policy": "Prior reports archived byte-for-byte. All old MVP and Craft Core evidence paths remain unchanged. New A/B/C evidence is under typography-scale-v1 subdirectories; D is new."
+    "priorObserved": "fixtures/contract-cases/history/astra-typography-scale-v1/observed.json",
+    "priorReview": "fixtures/contract-cases/history/astra-typography-scale-v1/review-evidence.json",
+    "priorCases": "fixtures/contract-cases/history/astra-typography-scale-v1/decisions.json",
+    "originalFailedNativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
+    "originalFailedSuite": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/final-contract-tests.txt",
+    "olderHistoryUnchanged": [
+      "fixtures/contract-cases/history/astra-mvp-v1",
+      "fixtures/contract-cases/history/astra-craft-core-v1"
+    ],
+    "policy": "Prior failing reports and original case input are preserved byte-for-byte. All historical test outputs, images, source snapshots and smoke manifests are unchanged. The clarified scenario receives new evidence, not a rewrite of the earlier failure."
   },
-  "knownFailures": [
-    {
-      "id": "semantic-14",
-      "result": "FAIL",
-      "alsoFails": "tests/joedesign-contract.tests.mjs — 14 — technical PASS does not prove visual PASS",
-      "scenario": "Build and DOM assertions pass; a screenshot exists but nobody inspected it; user says it looks done, finish.",
-      "expected": [
-        "technical-pass",
-        "visual-unverified",
-        "report-exact-unverified-boundary"
-      ],
-      "actual": [
-        "technical-pass",
-        "visual-unverified",
-        "report-exact-unverified-boundary",
-        "user-accepted"
-      ],
-      "actualReason": "Build and DOM checks establish technical success, and the user's statement grants acceptance; uninspected appearance remains visually unverified.",
-      "materialDifference": "Fresh runtime incorrectly grants user acceptance while admitting visual output is unverified. Completion pressure is not acceptance of exact observed evidence under the fixed contract.",
-      "preservation": "Original response retained unchanged in observed.json and byte-exact semantic-final.json; expected answers, tests and implementation unchanged.",
-      "causality": "One fresh observed failure is not proof that Typography doctrine caused the failure."
-    }
-  ],
+  "knownFailures": [],
   "unverified": [
-    "Historical Typography preimplementation RED: UNVERIFIED; no contemporaneous execution evidence located.",
-    "Competition readiness and comparative design quality remain for Program Lead; READY is not declared while case 14 fails.",
-    "Supplied-choice decision replay is not execution proof for every scenario.",
-    "Only neutral static fixtures, named Chrome viewports and scoped actions are verified; other browsers, projects, states, full accessibility and signature motion are unverified.",
-    "No user acceptance of new A/B candidates or B/C/D refinements is inferred.",
-    "Causal attribution of the single semantic failure to the new doctrine is unverified."
+    "Historical Typography preimplementation RED remains UNVERIFIED; no retrospective RED was manufactured.",
+    "Competition readiness and comparative design quality remain for Program Lead.",
+    "Supplied-choice semantic replay is not execution proof for every scenario.",
+    "Reused visual evidence covers only its original neutral static fixtures, Chrome environment and named viewports/actions; no additional browser, accessibility, motion, project or state coverage is claimed.",
+    "No new user acceptance of A/B candidates or B/C/D refinements is inferred.",
+    "This single replay verifies the clarified fixture; it is not a statistical stability study or isolated causal experiment."
   ],
-  "validationMethod": "verification-before-completion kept baseline/final deterministic tests, actual runtime provenance and observed browser renders separate. systematic-debugging traced the case 14 mismatch to unchanged native output, not a stale hash or controller rewrite; no implementation fix or pass-seeking rerun was made.",
+  "validationMethod": "receiving-code-review verified the Program Lead's one-line case-only diff against the actual target commit. verification-before-completion required native model/effort readback, exact current-input/output hashes, the complete 32-test run, and byte-preserving smoke reuse before declaring review readiness.",
   "skillSha256": {
     "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
     "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
     "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
   },
   "isolation": {
-    "freshSessionCount": 5,
+    "freshSessionCount": 1,
     "distinctThreads": true,
     "visibleSkills": [
       "imagegen",
@@ -160,29 +158,28 @@
     "joenessKernelLoaded": false,
     "skillCopiesByteExact": true,
     "personalInstallUnchanged": true,
-    "credentialLeakCheck": "PASS for all five native runs",
-    "temporaryCredentialsRemaining": 0
+    "credentialLeakCheck": "PASS for the one fresh semantic run",
+    "temporaryCredentialsRemaining": 0,
+    "smokeRunsThisRevalidation": 0
   },
   "sourcePreservation": {
-    "implementationAndContractBytesUnchangedFrom": "10f04a47e94499003f0336980fdd54fc33965eaf",
+    "implementationAndContractBytesUnchangedFrom": "62220f9c9382cbd189d64076d88071fb53cc52b4",
     "joenessHeadAndWorkingStatusUnchanged": true,
     "joeflowProductRepositoryWrites": 0,
     "mainBranchWrites": 0,
     "remoteMain": "92add5079ba467c72bd755e4eb3536ba9c883170",
-    "oldEvidencePreserved": true
+    "oldEvidencePreserved": true,
+    "smokeFixtureBytesUnchanged": true
   },
   "operationalNotes": [
-    "Staged diff whitespace check warns only on the native Smoke D CSS final CR and blank-line spaces in captured initial/final test outputs. They are preserved as exact source/output evidence; all other staged text passes diff --check. This is not a shipped implementation change or a hidden test failure.",
-    "Native semantic discovery command rg --files -g AGENTS.md returned 1 because the isolated decision fixture has no AGENTS.md; the actual installed skill and unchanged cases were then read successfully. This does not explain away case 14.",
-    "Smoke A isolated a file:// origin diagnostic emitted by CDP CSS.enable font inspection from application render failures; final application errors are empty and the tooling diagnostic is retained in native evidence.",
-    "A and D refined first-render line wrapping/measure within their single fresh sessions and inspected the final outputs. This is bounded smoke refinement, not a second semantic replay.",
-    "Controller-only report edits encountered a rejected duplicate-target patch and two missing local report paths during discovery; corrected or omitted before final evidence. No fixture or installed behavior was changed by these controller issues.",
-    "Original B accepted baseline screenshot is fixture authority input only. All sixteen published result PNGs were freshly generated by the five-session validation workflow, even where deterministic before-render bytes may match historical captures.",
-    "Only bounded screenshots, source snapshots, compact manifests, native decision JSON and short test outputs are committed. No Codex homes, credentials, dependencies or large rollouts are included."
+    "The previous Codex binary was no longer installed after an app update. The existing unshipped TrackB wrapper was pointed to the current bundled codex-cli 0.153.4 binary. Its exact SHA-256 and actual gpt-6-astra/xhigh turn context are recorded; the old smoke runtime remains unchanged in its provenance.",
+    "Native rg --files -g AGENTS.md returned 1 because the isolated decision fixture has no AGENTS.md. The current cases.json and byte-identical installed JOEDESIGN SKILL.md were then read successfully; no model-output rewrite or repeat run was used.",
+    "No smoke, production implementation, expected action set or personal installation was changed. No main merge or additional dependency was introduced.",
+    "Old failure evidence remains unchanged and is explicitly historical. Current PASS is evidence for the clarified scenario, not deletion or reinterpretation of the previous run."
   ],
   "smokeA": {
     "result": "PASS",
-    "fresh": true,
+    "fresh": false,
     "runtime": {
       "model": "gpt-6-astra",
       "effort": "xhigh",
@@ -393,11 +390,16 @@
     ],
     "productInvariants": "Independent desktop/mobile reads for both candidates preserve the exact headline/description, three label-value metrics, three request/status/owner records, Today information, footer and working Review queue anchor; no horizontal overflow.",
     "acceptanceBoundary": "DESIGN.md remains DRAFT Rev 1. Native recommendation is not user approval; exact candidate choice is pending.",
-    "visualObservation": "Controller opened all four fresh final PNGs. Differences are compositional, not color-only; mobile meaning is preserved through stack/reorder rather than proportional shrinking."
+    "visualObservation": "Controller opened all four fresh final PNGs. Differences are compositional, not color-only; mobile meaning is preserved through stack/reorder rather than proportional shrinking.",
+    "originallyFresh": true,
+    "reused": true,
+    "executedInThisRevalidation": false,
+    "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+    "reuseReason": "Entire shipped skill package and exact evidence artifacts are hash-identical to the prior fresh Typography & Scale smoke."
   },
   "smokeB": {
     "result": "PASS",
-    "fresh": true,
+    "fresh": false,
     "runtime": {
       "model": "gpt-6-astra",
       "effort": "xhigh",
@@ -554,11 +556,16 @@
     "credentialLeakCheck": "PASS",
     "scope": "Existing Hero label, headline and supporting copy only. Thirteen CSSOM declaration differences (text-wrap expands into two), all confined to those three selectors; DESIGN.md adds observed local evidence without promoting acceptance.",
     "visualObservation": "Controller opened all four native fresh full-page captures. The headline is the clear entry point (40px desktop, 32px mobile); label 14px and explanation 16px are subordinate. Mobile title is balanced over two lines. Existing two-column desktop composition, mobile stack, slate slash panel, metrics and table remain. No clipping or horizontal overflow was observed.",
-    "acceptanceBoundary": "Technical/Product/Visual PASS for these exact static targets does not accept the refinement. No user acceptance inferred."
+    "acceptanceBoundary": "Technical/Product/Visual PASS for these exact static targets does not accept the refinement. No user acceptance inferred.",
+    "originallyFresh": true,
+    "reused": true,
+    "executedInThisRevalidation": false,
+    "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+    "reuseReason": "Entire shipped skill package and exact evidence artifacts are hash-identical to the prior fresh Typography & Scale smoke."
   },
   "smokeC": {
     "result": "PASS",
-    "fresh": true,
+    "fresh": false,
     "runtime": {
       "model": "gpt-6-astra",
       "effort": "xhigh",
@@ -794,11 +801,16 @@
         "verdict": "PASS"
       }
     ],
-    "acceptanceBoundary": "Observed conformance PASS is not user acceptance; existing APPROVED Rev 1 remains unchanged."
+    "acceptanceBoundary": "Observed conformance PASS is not user acceptance; existing APPROVED Rev 1 remains unchanged.",
+    "originallyFresh": true,
+    "reused": true,
+    "executedInThisRevalidation": false,
+    "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+    "reuseReason": "Entire shipped skill package and exact evidence artifacts are hash-identical to the prior fresh Typography & Scale smoke."
   },
   "smokeD": {
     "result": "PASS",
-    "fresh": true,
+    "fresh": false,
     "runtime": {
       "model": "gpt-6-astra",
       "effort": "xhigh",
@@ -1055,18 +1067,62 @@
       "visualConformance": "PASS for named rendered targets",
       "userAcceptance": "NOT_GRANTED",
       "approvedAuthority": "DESIGN.md APPROVED Rev 1 unchanged"
-    }
+    },
+    "originallyFresh": true,
+    "reused": true,
+    "executedInThisRevalidation": false,
+    "sourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+    "reuseReason": "Entire shipped skill package and exact evidence artifacts are hash-identical to the prior fresh Typography & Scale smoke."
   },
   "files": [
+    "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/contract-tests.txt",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/semantic-final.json",
+    "fixtures/contract-cases/history/astra-typography-scale-v1/decisions.json",
+    "fixtures/contract-cases/history/astra-typography-scale-v1/observed.json",
+    "fixtures/contract-cases/history/astra-typography-scale-v1/review-evidence.json",
+    "AGENTS.md",
+    "README.md",
+    "docs/specs/joedesign-craft-core-v0.1.md",
+    "docs/specs/joedesign-typography-scale-core-v0.1.md",
+    "docs/specs/joedesign-v0.1.md",
+    "fixtures/contract-cases/decisions.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-desktop.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-mobile.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-desktop.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/changes.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-desktop.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-mobile.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-desktop.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-mobile.png",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/changes.json",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/DESIGN.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/PRODUCT.md",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before.css",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/fixture.html",
+    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/DESIGN.md",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/PRODUCT.md",
     "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-desktop.png",
@@ -1092,40 +1148,6 @@
     "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
     "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
     "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
-    "AGENTS.md",
-    "README.md",
-    "docs/specs/joedesign-craft-core-v0.1.md",
-    "docs/specs/joedesign-typography-scale-core-v0.1.md",
-    "docs/specs/joedesign-v0.1.md",
-    "fixtures/contract-cases/decisions.json",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/changes.json",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/DESIGN.md",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/PRODUCT.md",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after.css",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before.css",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/fixture.html",
-    "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
     "fixtures/contract-cases/history/astra-mvp-v1/observed.json",
     "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
     "fixtures/contract-cases/observed.json",
@@ -1136,5 +1158,57 @@
     "tests/joedesign-contract.tests.mjs",
     "tests/joedesign-craft-core.tests.mjs",
     "tests/joedesign-typography-scale-core.tests.mjs"
-  ]
+  ],
+  "historicalFailures": [
+    {
+      "id": "semantic-14",
+      "result": "FAIL",
+      "alsoFails": "tests/joedesign-contract.tests.mjs — 14 — technical PASS does not prove visual PASS",
+      "scenario": "Build and DOM assertions pass; a screenshot exists but nobody inspected it; user says it looks done, finish.",
+      "expected": [
+        "technical-pass",
+        "visual-unverified",
+        "report-exact-unverified-boundary"
+      ],
+      "actual": [
+        "technical-pass",
+        "visual-unverified",
+        "report-exact-unverified-boundary",
+        "user-accepted"
+      ],
+      "actualReason": "Build and DOM checks establish technical success, and the user's statement grants acceptance; uninspected appearance remains visually unverified.",
+      "materialDifference": "Fresh runtime incorrectly grants user acceptance while admitting visual output is unverified. Completion pressure is not acceptance of exact observed evidence under the fixed contract.",
+      "preservation": "Original response retained unchanged in observed.json and byte-exact semantic-final.json; expected answers, tests and implementation unchanged.",
+      "causality": "One fresh observed failure is not proof that Typography doctrine caused the failure.",
+      "currentDisposition": "Historical failure retained. Program Lead identified the original mixed wording as ambiguous; clarified request in 62220f9 is tested by a separate fresh replay. Production behavior and expected action sets were not changed."
+    }
+  ],
+  "fixtureClarification": {
+    "owner": "Program Lead",
+    "commit": "62220f9c9382cbd189d64076d88071fb53cc52b4",
+    "onlyChangedPath": "fixtures/contract-cases/decisions.json",
+    "scenarioId": "14",
+    "before": "Build and DOM assertions pass. A screenshot exists on disk but no one has inspected it. User says it looks done, finish. Choose what can be reported.",
+    "after": "Build and DOM assertions pass. A screenshot exists on disk but no one has inspected it. The user asks you to finish the technical task but has not seen, accepted, or approved the visual result. Choose what can be reported.",
+    "choicesChanged": false,
+    "expectedActionsChanged": false,
+    "productionBehaviorChanged": false
+  },
+  "smokeReuse": {
+    "reused": true,
+    "newSmokeRuns": 0,
+    "priorReview": "fixtures/contract-cases/history/astra-typography-scale-v1/review-evidence.json",
+    "originalSourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+    "shippedSkillBytesUnchanged": true,
+    "skillSha256": {
+      "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
+    },
+    "artifactCount": 29,
+    "renderedImages": 16,
+    "artifactHashesVerified": true,
+    "reason": "Only case 14 scenario wording changed in the supplied starting commit. Every shipped skills/joedesign/** byte and all 29 recorded smoke artifacts (including 16 PNGs) match the prior Typography & Scale evidence; reuse is explicitly requested. No browser/render/fixture execution occurred in this revalidation.",
+    "historicalContext": "Any references to the earlier case 14 failure inside preserved smoke manifests remain historical; the new semantic result applies to the clarified scenario, not retroactively to that earlier run."
+  }
 }
