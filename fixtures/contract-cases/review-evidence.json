@@ -586,5 +586,167 @@
     "priorCurrentArchives": 2,
     "sort": "single code-point comparator applied to all repository-relative paths",
     "selfHashExcluded": "fixtures/contract-cases/review-evidence.json deliberately excludes its own self-hash."
+  },
+  "validationSupplement": {
+    "schemaVersion": 1,
+    "status": "JOEDESIGN_COMPOSITION_VALIDATION_SUPPLEMENT_READY_FOR_PROGRAM_REVIEW",
+    "repository": "JOEWRKS/JOEDESIGN",
+    "branch": "codex/joedesign-v0.1-composition-validation-hardening",
+    "pinnedBaseline": "2b75ca76d6fcadb8aedbc7c7f1390b3bc760ec28",
+    "preregistrationCommit": "43852b422adaee8662e753ba178bce468855fe11",
+    "scope": "Additive validation-report clarification and exactly one unhinted rental comparison countercase. All original top-level review fields remain the historical Composition snapshot, not a rewritten account of this supplement.",
+    "baselineContracts": {
+      "pass": 64,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "output": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-contract-tests.txt",
+        "sha256": "89582b8a2353033b792c86f9054d044c5c9bde6e08999314bb8ffff1c565ab5f",
+        "bytes": 5656
+      }
+    },
+    "finalContracts": {
+      "pass": 64,
+      "fail": 0,
+      "cancelled": 0,
+      "skipped": 0,
+      "todo": 0,
+      "output": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/final-contract-tests.txt",
+        "sha256": "9bc41ae5a24f8717ba4e9c07824fa9c1dcee6a62bc73f43f230d366e0bd63102",
+        "bytes": 5656
+      }
+    },
+    "shippedPackageUnchanged": true,
+    "shippedPackageSha256": {
+      "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+    },
+    "preservedBaselineTrackedFiles": 262,
+    "existingSemanticEvidence": {
+      "reused": true,
+      "recordedMatch": "14/14",
+      "freshInvocationThisSupplement": false,
+      "reason": "Shipped package, existing scenarios and recorded response bytes unchanged.",
+      "cases": {
+        "path": "fixtures/contract-cases/decisions.json",
+        "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+        "bytes": 6860
+      },
+      "observed": {
+        "path": "fixtures/contract-cases/observed.json",
+        "sha256": "4dfd3b18763a8c667b1ca79a1f3e45ce935f8ff143d6a225696cff85967f9a42",
+        "bytes": 7110
+      }
+    },
+    "existingSmokeIEvidence": {
+      "reused": true,
+      "rerun": false,
+      "reason": "Shipped package and existing Smoke I sources/evidence unchanged; original guided repair remains bounded evidence.",
+      "proof": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/proof.md",
+        "sha256": "8d3de523aff5c79157b09cb8c314ffa60cefff5aa9c34504dfb8cf9b92cfef28",
+        "bytes": 7957
+      }
+    },
+    "evidenceReporting": {
+      "report": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/evidence-reporting.md",
+        "sha256": "7856c70b85d18f9a73373282b893b69aa81a1e9b9a7df1c8cb28dac3bb2a111c",
+        "bytes": 4698
+      },
+      "categories": [
+        {
+          "kind": "문구·패키지 검사",
+          "supports": "Required wording/package/static assertions.",
+          "doesNotProve": "Actual design judgment or comprehensive semantic-regression detection."
+        },
+        {
+          "kind": "기록형 semantic 응답 검사",
+          "supports": "Saved responses match expected actions for fixed scenario/package hashes.",
+          "doesNotProve": "A fresh model invocation now or fourteen practical design jobs."
+        },
+        {
+          "kind": "실제 화면 검증",
+          "supports": "Observed fixture/source/state/browser/viewport result.",
+          "doesNotProve": "Other-product generalization, competition superiority or user acceptance."
+        }
+      ],
+      "contractCountBoundary": "64/64 is the aggregate existing contract suite, not64 independent real-world design tasks."
+    },
+    "countercase": {
+      "product": "Fieldlight Rentals — three fictional equipment rental options, compare and select locally",
+      "exactProducerPrompt": "$joedesign 이 화면의 정보 위계와 읽기 흐름을 개선해.",
+      "producerInvocations": 1,
+      "runtime": {
+        "model": "gpt-6-astra",
+        "reasoning": "xhigh",
+        "threadId": "01a0781f-b804-7db3-8c1e-70f3598df0f9",
+        "cli": "codex-cli 0.153.4"
+      },
+      "isolation": "Fresh context/config and selective inputs, shared unrestricted filesystem; not OS isolation. Standard native system skill catalog visible, no additional skill load observed.",
+      "criteria": {
+        "C1_Product": "PASS",
+        "C2_GroupingComparison": "PASS",
+        "C3_Hierarchy": "PASS",
+        "C4_NoOvercorrection": "PASS",
+        "C5_Responsive": "PASS",
+        "C6_ProducerAutonomousObservation": "PASS",
+        "C7_ApprovalBoundary": "PASS"
+      },
+      "verdict": "PASS",
+      "producerObservation": "Three actual returned-image batches: two before, two refined required-target images, six optional states/widths. No follow-up hints.",
+      "controllerObservation": "Independent before/final pair inspection and final-source renders/behavior readback; never substituted for Producer autonomy.",
+      "projectDesignBoundary": "Original1009-byte APPROVED intent preserved as exact prefix; final6963-byte file appends unapproved evidence. Whole project DESIGN.md not unchanged.",
+      "mobileBoundary": "Viewport390x844, full-page1415 to1645;230px extra vertical scrolling, no horizontal overflow or lost action.",
+      "userAcceptance": "NOT_GRANTED",
+      "proof": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md",
+        "sha256": "1d53b94045b9aa4c60bf0857a1bed773c8fdb67fb4d51085eee326cc156c8d19",
+        "bytes": 13015
+      },
+      "runtimeProvenance": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/runtime-provenance.json",
+        "sha256": "b8032f27f0587f9658ff1cd96f3318e50f83fdb11f54b258648e129747ec7c81",
+        "bytes": 7431
+      },
+      "boundaryReadback": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/boundary-readback.json",
+        "sha256": "73c89f3675bee8fe1392f513fcc4d4a74548e0538c66249c26e923d32e00dffd",
+        "bytes": 2893
+      }
+    },
+    "knownFailures": {
+      "unresolvedMandatory": [],
+      "preservedResolved": [
+        "Native custom-tool patch verification rejection at rollout49/51; corrected at55/59 within the same invocation. Zero failed subprocesses is not zero tool errors.",
+        "Controller preflight text-transform comparison false failure; corrected check on unchanged fixture, original preserved.",
+        "Controller preflight trailing-empty Git path EISDIR; corrected before native launch.",
+        "Controller post-run provenance filename mapping ENOENT; existing copies verified, curation resumed without a new native run."
+      ],
+      "historicalFailures": "All older tracked failure evidence and reports byte-preserved."
+    },
+    "unverified": [
+      "Cross-product/platform/general design capability and repeated-run stability",
+      "Causal contribution of JOEDESIGN/individual clauses or bare-Astra comparison",
+      "Competition readiness and Program Lead closure decisions",
+      "OS-level filesystem isolation",
+      "Comprehensive accessibility and other browser/platform/forced-color rendering",
+      "User Acceptance remains NOT_GRANTED; internal PASS is not approval"
+    ],
+    "manifest": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/manifest.json",
+      "sha256": "86ca2fcef46a745a4df9b0487a0fb6eef736e646072430aa91f75eed4019a999",
+      "bytes": 7521
+    },
+    "evidenceInventory": {
+      "filesExcludingManifest": 43,
+      "bytesExcludingManifest": 932167,
+      "paths": "repository-relative in manifest, per-file exact SHA-256 and byte length",
+      "excludes": "Credentials, raw home/full rollout/hidden reasoning, temporary tools, personal installation changes"
+    }
   }
 }

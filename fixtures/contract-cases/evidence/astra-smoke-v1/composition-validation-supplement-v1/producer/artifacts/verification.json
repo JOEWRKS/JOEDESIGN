@@ -1,0 +1,176 @@
+[
+  {
+    "label": "desktop",
+    "viewport": {
+      "width": 1440,
+      "height": 1000
+    },
+    "productFacts": "PASS",
+    "selectionAndReplacement": "PASS",
+    "reloadReset": "PASS",
+    "keyboard": "PASS",
+    "focus": {
+      "outline": "rgb(36, 91, 73) solid 3px",
+      "visible": true
+    },
+    "geometry": {
+      "horizontalOverflow": false,
+      "buttonRects": [
+        {
+          "x": 193,
+          "y": 603.796875,
+          "width": 302,
+          "height": 48
+        },
+        {
+          "x": 569,
+          "y": 603.796875,
+          "width": 302,
+          "height": 48
+        },
+        {
+          "x": 945,
+          "y": 603.796875,
+          "width": 302,
+          "height": 48
+        }
+      ],
+      "equipmentTops": [
+        405.796875,
+        405.796875,
+        405.796875
+      ]
+    },
+    "colors": {
+      "body": {
+        "color": "rgb(38, 59, 54)",
+        "background": "rgb(244, 246, 245)",
+        "border": "rgb(38, 59, 54)"
+      },
+      "card": {
+        "color": "rgb(38, 59, 54)",
+        "background": "rgb(255, 255, 255)",
+        "border": "rgb(186, 199, 193)"
+      },
+      "label": {
+        "color": "rgb(86, 102, 95)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(86, 102, 95)"
+      },
+      "intro": {
+        "color": "rgb(86, 102, 95)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(86, 102, 95)"
+      },
+      "button": {
+        "color": "rgb(36, 91, 73)",
+        "background": "rgb(255, 255, 255)",
+        "border": "rgb(36, 91, 73)"
+      },
+      "selected": {
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(36, 91, 73)",
+        "border": "rgb(36, 91, 73)"
+      }
+    },
+    "browserErrors": [],
+    "networkRequests": []
+  },
+  {
+    "label": "mobile",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "productFacts": "PASS",
+    "selectionAndReplacement": "PASS",
+    "reloadReset": "PASS",
+    "keyboard": "PASS",
+    "focus": {
+      "outline": "rgb(36, 91, 73) solid 3px",
+      "visible": true
+    },
+    "geometry": {
+      "horizontalOverflow": false,
+      "buttonRects": [
+        {
+          "x": 49,
+          "y": 576.578125,
+          "width": 292,
+          "height": 48
+        },
+        {
+          "x": 49,
+          "y": 996.96875,
+          "width": 292,
+          "height": 48
+        },
+        {
+          "x": 49,
+          "y": 1417.359375,
+          "width": 292,
+          "height": 48
+        }
+      ],
+      "equipmentTops": [
+        378.578125,
+        798.96875,
+        1219.359375
+      ]
+    },
+    "colors": {
+      "body": {
+        "color": "rgb(38, 59, 54)",
+        "background": "rgb(244, 246, 245)",
+        "border": "rgb(38, 59, 54)"
+      },
+      "card": {
+        "color": "rgb(38, 59, 54)",
+        "background": "rgb(255, 255, 255)",
+        "border": "rgb(186, 199, 193)"
+      },
+      "label": {
+        "color": "rgb(86, 102, 95)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(86, 102, 95)"
+      },
+      "intro": {
+        "color": "rgb(86, 102, 95)",
+        "background": "rgba(0, 0, 0, 0)",
+        "border": "rgb(86, 102, 95)"
+      },
+      "button": {
+        "color": "rgb(36, 91, 73)",
+        "background": "rgb(255, 255, 255)",
+        "border": "rgb(36, 91, 73)"
+      },
+      "selected": {
+        "color": "rgb(255, 255, 255)",
+        "background": "rgb(36, 91, 73)",
+        "border": "rgb(36, 91, 73)"
+      }
+    },
+    "browserErrors": [],
+    "networkRequests": []
+  },
+  {
+    "width": 320,
+    "horizontalOverflow": false
+  },
+  {
+    "width": 1001,
+    "horizontalOverflow": false
+  },
+  {
+    "contrast": {
+      "bodyOnPage": 10.98,
+      "bodyOnCard": 11.92,
+      "labelOnCard": 6.07,
+      "supportingOnPage": 5.59,
+      "buttonText": 7.87,
+      "selectedButton": 7.87,
+      "buttonBorder": 7.87,
+      "hoverText": 7.05
+    }
+  }
+]
