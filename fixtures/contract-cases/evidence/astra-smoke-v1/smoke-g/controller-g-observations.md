@@ -21,13 +21,13 @@ Mobile: the same semantic color hierarchy survives independently on the actual c
 
 ## Boundary
 
-These are bounded visual observations, not user acceptance or a full accessibility certification. Actual independent DOM/computed-color, frozen-input, and interaction verification is still required before final technical/Product/contrast PASS. No judgment about an unprovided theme, production system, other browser, statistical consistency, or comparative superiority is made.
+These are bounded visual observations, not user acceptance or a full accessibility certification. Actual independent DOM/computed-color, frozen-input, and interaction verification is still required before final technical/Product/contrast PASS. The frozen visual authority is `DESIGN.md` (`Status: APPROVED`). No judgment about an unprovided theme, production system, other browser, statistical consistency, or comparative superiority is made.
 
 ## Independent completion readback
 
 Native execution finished once with exit 0, thread 01a07666-dd97-7a20-800a-087f437002c8, actual gpt-6-astra/xhigh. The four image hashes above were checked again after completion and are unchanged. The only native tracked change against the frozen fixture commit is styles.css. No worker/controller correction was made.
 
-A separate Chrome readback inspected before/after at both exact viewports. Exact Product payload/order/action target, normalized body text, PRODUCT.md, APPROVED DESIGN.md, AGENTS.md and render.mjs all remain unchanged. The after state has 26 visible text elements per viewport, all above their applicable minimum, with no unsupported gradient/opacity context or horizontal overflow. Minimum observed after text ratio is 5.5533252875311545 (Blocked label); Current priority is visible and 6.648377872586666. The same values were independently recomputed on the actual mobile canvas rather than inferred from desktop.
+A separate Chrome readback inspected before/after at both exact viewports. Exact Product payload/order/action target, normalized body text, PRODUCT.md, DESIGN.md (`Status: APPROVED`), AGENTS.md and render.mjs all remain unchanged. The after state has 26 visible text elements per viewport, all above their applicable minimum, with no unsupported gradient/opacity context or horizontal overflow. Minimum observed after text ratio is 5.5533252875311545 (Blocked label); Current priority is visible and 6.648377872586666. The same values were independently recomputed on the actual mobile canvas rather than inferred from desktop.
 
 Controller also opened actual focus crops at both viewports: a complete 2px solid outline, offset 3px, surrounds the primary action and focused R-02; the label and status remain separated and visible. The outline is 8.314699070021883:1 against its adjacent canvas (see independent summary for full precision). Hover text and primary focus/base text remain above 4.5. The native keyboard Tab/Enter readback additionally verifies the original #review-r-02 target; controller programmatic focus is corroborating visual evidence, not a second claimed keyboard traversal.
 

@@ -38,7 +38,16 @@
     "manifest": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/color-role-manifest.json"
   },
   "boundedEvidence": {
-    "nativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final.txt",
+    "portableReviewEntrypoint": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final-links.md",
+      "sha256": "6611d95e9f7e8703273086212e1420a8a25be952ecb402639a292761731d3fb2",
+      "status": "portable repository review entrypoint"
+    },
+    "nativeFinal": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final.txt",
+      "sha256": "ff578a788d8fb0da5add0f8ed16913a8fb29c5a1adde7ff2bef26465647d094e",
+      "status": "byte-exact original native transcript; absolute links are preserved historical local-run output, not the portable entrypoint"
+    },
     "nativeProof": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/proof.md",
     "independentReadback": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/independent-g-summary.json",
     "independentVisualObservation": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/controller-g-observations.md",

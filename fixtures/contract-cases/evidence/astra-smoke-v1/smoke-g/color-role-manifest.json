@@ -16,8 +16,15 @@
     "computedReadback": "independent-g-summary.json",
     "computedReadbackSha256": "0d35cff643e5cd051c9bdab50af6c0c699273cde54963d336b6f4ba152c804f0",
     "actualImageObservations": "controller-g-observations.md",
-    "actualImageObservationsSha256": "4b4f38788eff86852fc9b39bd5bec94f3a3aa0f43e0c55c6bb7dc9377cae0366",
+    "actualImageObservationsSha256": "0148a5b3c86f2239330f9313ef1c443e1430362b8ee89aeebc58719c6973cdf8",
     "summary": "Independent browser readback found 26 visible text elements at each after target, minimum unrounded ratio 5.5533252875311545, visible priority ratio 6.648377872586666, focus ratio 8.314699070021883, hover text ratio 9.069679831601487, no failed or unsupported pairs, no overflow, and matching Product payload/order/action and frozen inputs."
+  },
+  "portableReviewEntrypoint": {
+    "path": "../color-contrast-v1/smoke-g-final-links.md",
+    "sha256": "6611d95e9f7e8703273086212e1420a8a25be952ecb402639a292761731d3fb2",
+    "nativeTranscript": "../color-contrast-v1/smoke-g-final.txt",
+    "nativeTranscriptSha256": "ff578a788d8fb0da5add0f8ed16913a8fb29c5a1adde7ff2bef26465647d094e",
+    "boundary": "The companion is the portable repository review entrypoint. The native transcript is preserved byte-exact and retains historical local-run links."
   },
   "fixture": {
     "commit": "19467a70c31bb378e353c8d1244f950d136a4ebd",
