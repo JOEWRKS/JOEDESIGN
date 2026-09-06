@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "method": "Read actual completed native rollout calls and matching tool outputs; no screenshot regeneration or model rerun.",
+  "rolloutSha256": "c7c9c1043f0ebb8c452a375934c94a7913e17d3a4b71720e029d644db2dc2ea6",
+  "map": {
+    "creationCallLine": 58,
+    "creationCallTimestamp": "2026-09-06T15:42:22.757Z",
+    "completedResultLine": 62,
+    "completedResultTimestamp": "2026-09-06T15:42:24.509Z",
+    "completionPrecedesFirstImplementationEdit": true
+  },
+  "firstImplementationEdit": {
+    "callLine": 66,
+    "callTimestamp": "2026-09-06T15:43:22.035Z",
+    "completedResultLine": 70,
+    "completedResultTimestamp": "2026-09-06T15:43:23.749Z"
+  },
+  "failureBeforeCorrection": {
+    "callLine": 91,
+    "callTimestamp": "2026-09-06T15:44:33.618Z",
+    "completedResultLine": 97,
+    "completedResultTimestamp": "2026-09-06T15:44:36.713Z",
+    "sequentialAwaitOrder": [
+      "apply_patch creates after-01-observation.md",
+      "exec_command marks observation read-only",
+      "apply_patch corrects styles.css",
+      "exec_command freezes after-02 sources"
+    ],
+    "observationFirstPayloadMatchesPreservedBytes": true,
+    "observationSha256": "183c61b1e6354fcf9f99130fb9f0c167b584a4c6e51b06e6c93218c07854f3d8"
+  },
+  "imageCalls": [
+    {
+      "callLine": 41,
+      "callTimestamp": "2026-09-06T15:39:57.117Z",
+      "callId": "call_Fd0bi1tK8qNQ3KYA4wO23n25",
+      "resultLine": 46,
+      "resultTimestamp": "2026-09-06T15:39:59.379Z",
+      "resultSummary": "Script completed; embedded image result count equals actual image paths.",
+      "returnedImageCount": 2,
+      "paths": [
+        "artifacts/20260906T153930Z/before/desktop.png",
+        "artifacts/20260906T153930Z/before/mobile.png"
+      ]
+    },
+    {
+      "callLine": 78,
+      "callTimestamp": "2026-09-06T15:43:45.739Z",
+      "callId": "call_FVqu5iYjKo0gYF3K8lnxuBiP",
+      "resultLine": 83,
+      "resultTimestamp": "2026-09-06T15:43:47.849Z",
+      "resultSummary": "Script completed; embedded image result count equals actual image paths.",
+      "returnedImageCount": 2,
+      "paths": [
+        "artifacts/20260906T153930Z/after-01/desktop.png",
+        "artifacts/20260906T153930Z/after-01/mobile.png"
+      ]
+    },
+    {
+      "callLine": 105,
+      "callTimestamp": "2026-09-06T15:44:52.981Z",
+      "callId": "call_9RgdAOZNfpShA5yg4B4pHfEk",
+      "resultLine": 109,
+      "resultTimestamp": "2026-09-06T15:44:53.046Z",
+      "resultSummary": "Script completed; embedded image result count equals actual image paths.",
+      "returnedImageCount": 2,
+      "paths": [
+        "artifacts/20260906T153930Z/after-02/desktop.png",
+        "artifacts/20260906T153930Z/after-02/mobile.png"
+      ]
+    },
+    {
+      "callLine": 125,
+      "callTimestamp": "2026-09-06T15:47:02.680Z",
+      "callId": "call_hMpYdJTCIixHNuZOrIRJiRAI",
+      "resultLine": 132,
+      "resultTimestamp": "2026-09-06T15:47:04.016Z",
+      "resultSummary": "Script completed; embedded image result count equals actual image paths.",
+      "returnedImageCount": 4,
+      "paths": [
+        "artifacts/20260906T153930Z/after-02/desktop-prepared-button-focus.png",
+        "artifacts/20260906T153930Z/after-02/desktop-prepared-link-focus.png",
+        "artifacts/20260906T153930Z/after-02/mobile-prepared-button-focus.png",
+        "artifacts/20260906T153930Z/after-02/mobile-prepared-link-focus.png"
+      ]
+    }
+  ],
+  "actualImageCallBatches": 4,
+  "actualEmbeddedImageCount": 10,
+  "collectorSubstringMatchCount": 7,
+  "collectorCountBoundary": "Collector matched view_image as a substring, including documentation inside map/failure/proof patches. Four actual tools.view_image batches returned ten image blocks; the coarse count of seven is not an image-call count.",
+  "nativeLocalChecks": {
+    "passed": 25,
+    "failed": 0
+  },
+  "controllerBrowserChecks": {
+    "browser": "152.0.7977.76",
+    "passed": 12,
+    "failed": 0
+  },
+  "controllerFiles": [
+    {
+      "path": "controller-observations.md",
+      "sha256": "9095c813687f0458717ae47676db464a475e0da04ac35b390a4b8564ed5c6eb9"
+    },
+    {
+      "path": "controller-browser-observation.json",
+      "sha256": "0e9dbb3d4bda29d3140825db2d43695ac0abf54b70c69d00c44af349c0ff75c9"
+    },
+    {
+      "path": "controller-chronology.json",
+      "sha256": "1aea03b26d87c4f12852e83b7c6644dcc9aaa4c238413608fcaf9f81935a8c89"
+    }
+  ],
+  "nativeOnlyHelperPaths": [
+    {
+      "path": "render.mjs",
+      "sha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+    },
+    {
+      "path": "artifacts/20260906T153930Z/verify.mjs",
+      "sha256": "2835ee748a13280d2aba58470eb83f3fcab9d489e35ad1e9cabc95864af158eb"
+    }
+  ],
+  "helperBoundary": "These validation-only scripts remain external. Native proof retains its original verify.mjs link; the portable review entrypoint links to its exact verification.json output and recorded helper hash instead.",
+  "controllerChronologyResult": "PASS"
+}

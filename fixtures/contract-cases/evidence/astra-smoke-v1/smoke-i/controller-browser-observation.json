@@ -1,0 +1,520 @@
+{
+  "browser": "152.0.7977.76",
+  "method": "Actual loaded content, semantic sequence, geometry and authorized local-only fixture action; no automated visual or saliency score.",
+  "targets": [
+    {
+      "label": "before",
+      "name": "desktop",
+      "htmlSha256": "5074277e39d0e58ae3ee0df93b012e406d42d4a43cbdfda361a7cd12c5b9ec28",
+      "actual": {
+        "title": "Incident Decision Brief",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "document": {
+          "width": 1440,
+          "height": 1000
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "headings": [
+          {
+            "text": "Delivery queue delay",
+            "box": {
+              "x": 137,
+              "y": 146,
+              "width": 622.90625,
+              "height": 46
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "40px"
+          },
+          {
+            "text": "Ordered findings",
+            "box": {
+              "x": 137,
+              "y": 394,
+              "width": 1166,
+              "height": 28
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "24px"
+          },
+          {
+            "text": "Backlog is shrinking",
+            "box": {
+              "x": 162,
+              "y": 505,
+              "width": 322.65625,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "New notices remain delayed",
+            "box": {
+              "x": 558.65625,
+              "y": 505,
+              "width": 322.671875,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Restart needs a review",
+            "box": {
+              "x": 955.328125,
+              "y": 505,
+              "width": 322.65625,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Next action",
+            "box": {
+              "x": 137,
+              "y": 692,
+              "width": 1166,
+              "height": 28
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "24px"
+          }
+        ],
+        "findings": [
+          "Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated.",
+          "New notices remain delayed Incoming notices are still waiting six minutes before delivery begins.",
+          "Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart."
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "box": {
+              "x": 508.3125,
+              "y": 744,
+              "width": 233.015625,
+              "height": 50
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "16px"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": ""
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Prepare recovery review"
+      },
+      "actionOutput": "Recovery review prepared locally. No live action performed.",
+      "errors": []
+    },
+    {
+      "label": "before",
+      "name": "mobile",
+      "htmlSha256": "5074277e39d0e58ae3ee0df93b012e406d42d4a43cbdfda361a7cd12c5b9ec28",
+      "actual": {
+        "title": "Incident Decision Brief",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 1356
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "headings": [
+          {
+            "text": "Delivery queue delay",
+            "box": {
+              "x": 33,
+              "y": 122,
+              "width": 324,
+              "height": 36.796875
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "32px"
+          },
+          {
+            "text": "Ordered findings",
+            "box": {
+              "x": 33,
+              "y": 560.796875,
+              "width": 324,
+              "height": 28
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "24px"
+          },
+          {
+            "text": "Backlog is shrinking",
+            "box": {
+              "x": 50,
+              "y": 663.796875,
+              "width": 290,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "New notices remain delayed",
+            "box": {
+              "x": 50,
+              "y": 835.796875,
+              "width": 290,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Restart needs a review",
+            "box": {
+              "x": 50,
+              "y": 1007.796875,
+              "width": 290,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Next action",
+            "box": {
+              "x": 33,
+              "y": 1170.796875,
+              "width": 324,
+              "height": 28
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "24px"
+          }
+        ],
+        "findings": [
+          "Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated.",
+          "New notices remain delayed Incoming notices are still waiting six minutes before delivery begins.",
+          "Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart."
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "box": {
+              "x": 33,
+              "y": 1222.796875,
+              "width": 324,
+              "height": 50
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "16px"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": ""
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Prepare recovery review"
+      },
+      "actionOutput": "Recovery review prepared locally. No live action performed.",
+      "errors": []
+    },
+    {
+      "label": "after",
+      "name": "desktop",
+      "htmlSha256": "0eb88f436d78b318f1a08bd4ed295760d1c9c0dd50acd7c97587c1b0554e8f88",
+      "actual": {
+        "title": "Incident Decision Brief",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "document": {
+          "width": 1440,
+          "height": 1000
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "headings": [
+          {
+            "text": "Delivery queue delay",
+            "box": {
+              "x": 192,
+              "y": 85,
+              "width": 760,
+              "height": 46
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "40px"
+          },
+          {
+            "text": "Ordered findings",
+            "box": {
+              "x": 192,
+              "y": 313,
+              "width": 192,
+              "height": 216
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "14px"
+          },
+          {
+            "text": "Backlog is shrinking",
+            "box": {
+              "x": 456,
+              "y": 313,
+              "width": 792,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "New notices remain delayed",
+            "box": {
+              "x": 456,
+              "y": 393,
+              "width": 792,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Restart needs a review",
+            "box": {
+              "x": 456,
+              "y": 473,
+              "width": 792,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Next action",
+            "box": {
+              "x": 192,
+              "y": 602,
+              "width": 192,
+              "height": 50
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "14px"
+          }
+        ],
+        "findings": [
+          "Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated.",
+          "New notices remain delayed Incoming notices are still waiting six minutes before delivery begins.",
+          "Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart."
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "box": {
+              "x": 456,
+              "y": 602,
+              "width": 233.015625,
+              "height": 50
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "16px"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": ""
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Prepare recovery review"
+      },
+      "actionOutput": "Recovery review prepared locally. No live action performed.",
+      "errors": []
+    },
+    {
+      "label": "after",
+      "name": "mobile",
+      "htmlSha256": "0eb88f436d78b318f1a08bd4ed295760d1c9c0dd50acd7c97587c1b0554e8f88",
+      "actual": {
+        "title": "Incident Decision Brief",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 869
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "headings": [
+          {
+            "text": "Delivery queue delay",
+            "box": {
+              "x": 24,
+              "y": 61,
+              "width": 342,
+              "height": 36.796875
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "32px"
+          },
+          {
+            "text": "Ordered findings",
+            "box": {
+              "x": 24,
+              "y": 303.796875,
+              "width": 342,
+              "height": 21
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "14px"
+          },
+          {
+            "text": "Backlog is shrinking",
+            "box": {
+              "x": 48,
+              "y": 348.796875,
+              "width": 318,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "New notices remain delayed",
+            "box": {
+              "x": 48,
+              "y": 452.796875,
+              "width": 318,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Restart needs a review",
+            "box": {
+              "x": 48,
+              "y": 556.796875,
+              "width": 318,
+              "height": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "20px"
+          },
+          {
+            "text": "Next action",
+            "box": {
+              "x": 24,
+              "y": 709.796875,
+              "width": 342,
+              "height": 21
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "14px"
+          }
+        ],
+        "findings": [
+          "Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated.",
+          "New notices remain delayed Incoming notices are still waiting six minutes before delivery begins.",
+          "Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart."
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "box": {
+              "x": 24,
+              "y": 754.796875,
+              "width": 342,
+              "height": 50
+            },
+            "display": "block",
+            "visibility": "visible",
+            "fontSize": "16px"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": ""
+      },
+      "focus": {
+        "tag": "BUTTON",
+        "text": "Prepare recovery review"
+      },
+      "actionOutput": "Recovery review prepared locally. No live action performed.",
+      "errors": []
+    }
+  ],
+  "invariants": {
+    "desktop": {
+      "visibleTextUnchanged": true,
+      "orderedFindingsUnchanged": true,
+      "actionPreserved": true,
+      "initialOutputEmpty": true,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true
+    },
+    "mobile": {
+      "visibleTextUnchanged": true,
+      "orderedFindingsUnchanged": true,
+      "actionPreserved": true,
+      "initialOutputEmpty": true,
+      "noHorizontalOverflow": true,
+      "noPageErrors": true
+    }
+  }
+}

@@ -1,0 +1,38 @@
+:root{font-family:Arial,sans-serif;color:#233039;background:#f0f3f5;font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}main{max-width:1152px;margin:auto;padding:48px}
+
+/* The incident leads; metadata stays bound to its summary. */
+.hero{max-width:760px;margin-bottom:48px}
+.eyebrow{font-size:14px;margin:0 0 16px}
+h1{font-size:40px;line-height:1.15;margin:0 0 16px}
+h2{font-size:14px;line-height:1.5;margin:0;padding-top:4px}
+h3{font-size:20px;line-height:1.2;margin:0 0 8px}
+p{font-size:16px;line-height:1.5}
+.summary{max-width:72ch;margin:0 0 24px}
+.metadata{display:flex;flex-wrap:wrap;gap:8px 24px;font-size:14px;line-height:1.5}
+
+/* Quiet labels sit beside one continuous sequence of evidence and action. */
+.findings,.action{display:grid;grid-template-columns:192px minmax(0,1fr);column-gap:48px;border-top:1px solid #dbe2e8;padding-top:24px}
+.findings{margin-bottom:48px}
+.findings ol{margin:0;padding-left:24px}
+.finding{min-width:0;padding-left:0}
+.finding + .finding{margin-top:24px}
+.finding::marker{font-size:14px}
+.finding p{max-width:68ch;margin:0}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:24px}
+button{background:#244970;color:#fff;border:0;border-radius:999px;padding:16px 24px;font:700 16px Arial;cursor:pointer}
+a{color:#244970;font-size:16px;line-height:1.5}
+button:focus-visible,a:focus-visible{outline:3px solid #287287;outline-offset:4px}
+output{grid-column:2;display:block;font-size:14px;line-height:1.5}
+output:not(:empty){margin-top:16px}
+
+@media(max-width:720px){
+  main{padding:24px}
+  h1{font-size:32px}
+  h2{padding-top:0;margin-bottom:24px}
+  .findings,.action{grid-template-columns:minmax(0,1fr)}
+  .actions{flex-direction:column;align-items:stretch;gap:16px}
+  button{width:100%}
+  a{align-self:flex-start}
+  output{grid-column:1}
+}

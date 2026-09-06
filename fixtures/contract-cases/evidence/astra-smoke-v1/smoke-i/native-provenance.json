@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "label": "I",
+  "sourceImplementation": "220b92d94565a33c3d6e77694f2f2b05affb305b",
+  "fixture": {
+    "commit": "4100d2404aa4ed7bc3242c9b14543e9ca1c225f1",
+    "tree": "077809572e8618764df44f7b77e8e4a871ab6541"
+  },
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a0775f-4777-7f33-bf60-1fb0d3b05c75",
+    "version": "codex-cli 0.153.4",
+    "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6"
+  },
+  "nativeExit": {
+    "code": 0,
+    "signal": null,
+    "wallMs": 622605,
+    "start": "2026-09-06T15:38:44.083Z"
+  },
+  "credentialLeakCheck": "PASS",
+  "changedTrackedFiles": [
+    "index.html",
+    "styles.css"
+  ],
+  "skillSha256": {
+    "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+  },
+  "provenanceSha256": {
+    "rollout": "c7c9c1043f0ebb8c452a375934c94a7913e17d3a4b71720e029d644db2dc2ea6",
+    "events.jsonl": "fa9244d0594fc081b2a762535b05de082cd0125635121d1482a2302a59a33d4d",
+    "launch.json": "d8eaa34b0c65dd9b1fab95c0e92772179799a34b5aeea46240d1923975a46f1c",
+    "prompt-input.json": "fccb1ce87d3ec992ececbcbbed13a54d11871ea9f472d7109b8a3e2f485cfecd",
+    "final.txt": "bafb307ff1339a1df5cd2255cb660bfdd56be260a4acb956f0198044a23dfcfb",
+    "stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit.json": "84c57d97deb3e16eeb57273d084368d21fd3ed78afe9f2e12b5845a3962982a4",
+    "collector": "cc723943f0908efba43e38e885f57aec1898ab5f3e399d92f805ef112a3ad41f",
+    "runHelper": "c3d70a9c12589cb6e801afb858ad190e185556dd0ede2215645753cf2db83d8c",
+    "collectorHelper": "1cd114ee1f32907df4bec015158aa80b2cd820a0c37672f0391ba0b889c8b7d9"
+  },
+  "nativePrompt": "Use $joedesign to correct the composition defect on this fictional Incident Decision Brief. Read AGENTS.md and work within fixed PRODUCT.md and APPROVED DESIGN.md. Before editing CSS/HTML, inspect current actual renders and save a timestamped compact structural map in artifacts: Product first/second/third destinations, major semantic regions, justified containment, familiar patterns present and any lacking project-specific justification, intended desktop/mobile relationship. Make the smallest relevant CSS/layout and minimal markup correction preserving all Product content, actions, ordered findings and approved authority bytes. Render and open actual before/after desktop 1440x1000 and mobile viewport 390x844 images; distinguish viewport from full-page PNG dimensions. In artifacts/proof.md report exact expected/observed/PASS-FAIL-UNVERIFIED boundaries for structural sequence, containment, motif justification, meaningful repetition/variation, intentional desktop rhythm/asymmetry, mobile recomposition and invariants. User acceptance remains separate. No external assets, dependencies or new Product content.",
+  "orderedEvidence": [
+    {
+      "label": "actual browser render",
+      "line": 35,
+      "timestamp": "2026-09-06T15:39:38.476Z",
+      "callId": "call_aIw7s6csXR3SaC1vTeYyr9Lj",
+      "name": "exec",
+      "inputSha256": "120c8a87eaf2828a188b2c97a7b3c32c33e7c3a0dd95767ac74bd441a548429f"
+    },
+    {
+      "label": "actual image open",
+      "line": 41,
+      "timestamp": "2026-09-06T15:39:57.117Z",
+      "callId": "call_Fd0bi1tK8qNQ3KYA4wO23n25",
+      "name": "exec",
+      "inputSha256": "d59fd24af534d38a08eaf3e96c729ea66269f995f1f170895bba478887e23678"
+    },
+    {
+      "label": "structural map creation",
+      "line": 58,
+      "timestamp": "2026-09-06T15:42:22.757Z",
+      "callId": "call_RnX9MlMZKyiYTDeB1Y8JIulh",
+      "name": "exec",
+      "inputSha256": "90745ef5658931eb31a0c7cf28967ae2bb458912ed3a8c5dde5c958a843ba8cc"
+    },
+    {
+      "label": "first implementation edit",
+      "line": 66,
+      "timestamp": "2026-09-06T15:43:22.035Z",
+      "callId": "call_SnuEzA95DvJLq8XOMwzUSmsr",
+      "name": "exec",
+      "inputSha256": "2329b258e5e2698b3930eca7ee92b587f87e7a0a36c5aaa38e2ea6299dd6d770"
+    },
+    {
+      "label": "actual browser render",
+      "line": 72,
+      "timestamp": "2026-09-06T15:43:30.498Z",
+      "callId": "call_gBsudU3CZbkbJ02y8Su9nltF",
+      "name": "exec",
+      "inputSha256": "e078fc16dddd550c724a4a9e4f8dc58c4ab9309b2020e63e45989deedf1db327"
+    },
+    {
+      "label": "actual image open",
+      "line": 78,
+      "timestamp": "2026-09-06T15:43:45.739Z",
+      "callId": "call_FVqu5iYjKo0gYF3K8lnxuBiP",
+      "name": "exec",
+      "inputSha256": "83d395c1e36a1b04833fff7d58fe6ca18605224f07f0ac7500c19a9b8c16c4b9"
+    },
+    {
+      "label": "preserved candidate failure then bounded correction",
+      "line": 91,
+      "timestamp": "2026-09-06T15:44:33.618Z",
+      "callId": "call_eGPrRgjcNTRGJmk8KAnA5Jto",
+      "name": "exec",
+      "inputSha256": "f77a24192a758352877647f7b1e6836e5da1ab4b86d5cdc9da748b43120cb3be"
+    },
+    {
+      "label": "actual browser render",
+      "line": 99,
+      "timestamp": "2026-09-06T15:44:42.683Z",
+      "callId": "call_bmEWLFtAh5dYRcpxGSrdishV",
+      "name": "exec",
+      "inputSha256": "c7a4dfaa3266879080b85d074e2494d47a0788ced6b7a20f1cb9d3ac2ef57213"
+    },
+    {
+      "label": "actual image open",
+      "line": 105,
+      "timestamp": "2026-09-06T15:44:52.981Z",
+      "callId": "call_9RgdAOZNfpShA5yg4B4pHfEk",
+      "name": "exec",
+      "inputSha256": "dec9918f12cfbcc24e326e144c48d02164d55b29a82ce26e43a3624249128f77"
+    },
+    {
+      "label": "actual image open",
+      "line": 125,
+      "timestamp": "2026-09-06T15:47:02.680Z",
+      "callId": "call_hMpYdJTCIixHNuZOrIRJiRAI",
+      "name": "exec",
+      "inputSha256": "c49597a610f9f6e48e65e235bdab2ffa14277117f494de3be8c21a9c34d29578"
+    }
+  ],
+  "mapEvidence": {
+    "captureLabel": "2026-09-06T15:39:30Z",
+    "actualCreationCallTimestamp": "2026-09-06T15:42:22.757Z",
+    "actualCreationCallLine": 58,
+    "firstImplementationEditCallTimestamp": "2026-09-06T15:43:22.035Z",
+    "firstImplementationEditCallLine": 66,
+    "firstCreationPayloadEqualsPreservedMap": true,
+    "mapSha256": "a24155865e7cbcd250c43b43e056d3ae504b8124ca3bb2a7609886c82cf5e9ba",
+    "laterMapPatchCount": 0,
+    "timestampBoundary": "Map heading is the baseline capture time. Actual pre-edit ordering is established by the native rollout creation call and first implementation-edit call."
+  },
+  "nativeImageObservationBatches": 4,
+  "failedCommands": [],
+  "nativeFailureDisposition": "Initial defect baseline and candidate 01 desktop alignment failure are preserved with source, screenshots and native observation before candidate 02 correction. A native run is a single invocation; its bounded candidate correction is not a rerun.",
+  "exclusions": "Raw rollouts/events/launch payloads, isolated Codex home, credentials, validation scripts and installed browser dependencies remain external.",
+  "shippedRuntimeDependencyCount": 0,
+  "userAcceptance": "NOT_GRANTED"
+}

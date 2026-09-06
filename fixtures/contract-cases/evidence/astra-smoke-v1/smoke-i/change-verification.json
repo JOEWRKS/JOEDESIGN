@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 1,
+  "base": "220b92d94565a33c3d6e77694f2f2b05affb305b",
+  "fixture": {
+    "commit": "4100d2404aa4ed7bc3242c9b14543e9ca1c225f1",
+    "tree": "077809572e8618764df44f7b77e8e4a871ab6541"
+  },
+  "changedTrackedFiles": [
+    "index.html",
+    "styles.css"
+  ],
+  "fixedInputs": [
+    {
+      "path": "PRODUCT.md",
+      "sha256": "9f689d0886e3147189d05e8ecec105818f383796e31a0cfc2be32f285bc773d7",
+      "bytes": 1876,
+      "seedMatches": true,
+      "workspaceMatches": true,
+      "beforeSnapshotMatches": true
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "ebc7aa6adfe41c1bae9f3c625323f64f89c7f752fc9155c29de35fb19af88348",
+      "bytes": 945,
+      "seedMatches": true,
+      "workspaceMatches": true,
+      "beforeSnapshotMatches": true
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "181729aba0cc455b0331818668250ecf0b04d7229d05dff785ff0321007c0887",
+      "bytes": 1724,
+      "seedMatches": true,
+      "workspaceMatches": true,
+      "beforeSnapshotMatches": true
+    },
+    {
+      "path": "render.mjs",
+      "sha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "bytes": 1183,
+      "seedMatches": true,
+      "workspaceMatches": true,
+      "beforeSnapshotMatches": true
+    }
+  ],
+  "sources": [
+    {
+      "path": "index.html",
+      "beforeSha256": "5074277e39d0e58ae3ee0df93b012e406d42d4a43cbdfda361a7cd12c5b9ec28",
+      "frozenMatchesBeforeSnapshot": true,
+      "afterSha256": "0eb88f436d78b318f1a08bd4ed295760d1c9c0dd50acd7c97587c1b0554e8f88",
+      "workspaceMatchesAfter02": true
+    },
+    {
+      "path": "styles.css",
+      "beforeSha256": "8cc85c5f22e7578096c5bf88d9a7255f14952b384b9b2ebb4066cde967f8e0e4",
+      "frozenMatchesBeforeSnapshot": true,
+      "afterSha256": "19ffd289b78a6eebc75570c12759baa425a48074f24647751a674c6f751de698",
+      "workspaceMatchesAfter02": true
+    }
+  ],
+  "htmlOnlyRemovesEmptyDecorativeElement": true,
+  "scriptBytesUnchanged": true,
+  "shippedPackage": [
+    {
+      "path": "SKILL.md",
+      "sha256": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+      "semanticMatches": true,
+      "repositoryMatches": true,
+      "nativeInstalledMatches": true,
+      "frozenInstalledMatches": true
+    },
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "semanticMatches": true,
+      "repositoryMatches": true,
+      "nativeInstalledMatches": true,
+      "frozenInstalledMatches": true
+    },
+    {
+      "path": "templates/DESIGN.md",
+      "sha256": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237",
+      "semanticMatches": true,
+      "repositoryMatches": true,
+      "nativeInstalledMatches": true,
+      "frozenInstalledMatches": true
+    }
+  ],
+  "acceptancePreserved": true,
+  "nativeMapFirstCreationPreserved": true,
+  "images": [
+    {
+      "path": "artifacts/20260906T153930Z/after-01/desktop.png",
+      "sha256": "07e95c4a8904de6dfe97284a3bb674affb254baf7239c313581c76e8c467cb85",
+      "bytes": 43567,
+      "width": 1440,
+      "height": 1000,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/after-01/mobile.png",
+      "sha256": "00a49a248d9906852e1efdbade2df18a3a02918f78a6b7cbdb459451339b6deb",
+      "bytes": 36046,
+      "width": 390,
+      "height": 869,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/after-02/desktop-prepared-button-focus.png",
+      "sha256": "2e1e2c595f96d1f52b2e331777d1f90dbab9e6eacfa07006e48c71bc02e29794",
+      "bytes": 48498,
+      "width": 1440,
+      "height": 1000,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/after-02/desktop-prepared-link-focus.png",
+      "sha256": "d9f26ee1911f78521fd9895df7932e07d615c91e5e4ba982351fdcfd025eb02a",
+      "bytes": 46365,
+      "width": 1440,
+      "height": 1000,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/after-02/desktop.png",
+      "sha256": "296662469d601b3d035aff1ebf9ea1dbdb3231261221dc20945e7f8891c8f1f4",
+      "bytes": 43595,
+      "width": 1440,
+      "height": 1000,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/after-02/mobile-prepared-button-focus.png",
+      "sha256": "101b211a4c57e393b1b4020b49e0f5e73bb3d5cd620de73c4e7503ee8cb661ad",
+      "bytes": 40819,
+      "width": 390,
+      "height": 927,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/after-02/mobile-prepared-link-focus.png",
+      "sha256": "a7b632f5ca6a61384d4fe9b153a8297e1ef8078475568562179b9fd88be1460a",
+      "bytes": 38819,
+      "width": 390,
+      "height": 927,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/after-02/mobile.png",
+      "sha256": "00a49a248d9906852e1efdbade2df18a3a02918f78a6b7cbdb459451339b6deb",
+      "bytes": 36046,
+      "width": 390,
+      "height": 869,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/before/desktop.png",
+      "sha256": "48be2392f8f2fc4817071ae7047cf45ad692a536e37840e01cfa4d8987b89749",
+      "bytes": 126383,
+      "width": 1440,
+      "height": 1000,
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "path": "artifacts/20260906T153930Z/before/mobile.png",
+      "sha256": "4dcf9ce5937219f365ac1c84d1068c718df5a647ca69be98e99ed5233e618f75",
+      "bytes": 69651,
+      "width": 390,
+      "height": 1356,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      }
+    }
+  ],
+  "validationHelperExcluded": {
+    "path": "render.mjs",
+    "sha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb"
+  },
+  "independentBehaviorEvidence": "controller-browser-observation.json"
+}

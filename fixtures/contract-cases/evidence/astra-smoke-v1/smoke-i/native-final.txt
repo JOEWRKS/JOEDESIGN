@@ -1,0 +1,5 @@
+Corrected the composition with open grouping, vertical ordered findings, and aligned actions. Product content, local behavior, and authority bytes are preserved. All 25 checks passed.
+
+Inspected [desktop](/D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/runs/I/workspace/artifacts/20260906T153930Z/after-02/desktop.png) and [mobile](/D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/runs/I/workspace/artifacts/20260906T153930Z/after-02/mobile.png) renders. Mobile viewport: 390×844; full-page PNG: 390×869.
+
+[Proof and preserved evidence](/D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/runs/I/workspace/artifacts/proof.md) includes the structural map and recorded failed alignment attempt. User acceptance remains **NOT_GRANTED**.

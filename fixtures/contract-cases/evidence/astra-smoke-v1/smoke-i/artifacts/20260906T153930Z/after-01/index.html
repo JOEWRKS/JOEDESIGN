@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Incident Decision Brief</title><link rel="stylesheet" href="styles.css"></head>
+<body>
+<main>
+  <header class="hero shell">
+    <div class="intro">
+      <p class="eyebrow pill">Incident Decision Brief</p>
+      <h1>Delivery queue delay</h1>
+      <p class="summary">A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review.</p>
+      <div class="metadata"><span class="pill">Severity: Moderate</span><span class="pill">Status: Recovering</span></div>
+    </div>
+  </header>
+  <section class="findings shell" id="incident-evidence" aria-labelledby="findings-title">
+    <h2 id="findings-title">Ordered findings</h2>
+    <ol>
+      <li class="finding shell"><h3>Backlog is shrinking</h3><p>The queue has fallen from 240 to 80 notices since the worker was isolated.</p></li>
+      <li class="finding shell"><h3>New notices remain delayed</h3><p>Incoming notices are still waiting six minutes before delivery begins.</p></li>
+      <li class="finding shell"><h3>Restart needs a review</h3><p>Confirm the replacement worker is ready before preparing a controlled restart.</p></li>
+    </ol>
+  </section>
+  <section class="action shell" aria-labelledby="action-title">
+    <h2 id="action-title">Next action</h2>
+    <div class="actions"><button type="button" id="prepare">Prepare recovery review</button><a href="#incident-evidence">Read incident evidence</a></div>
+    <output id="result" aria-live="polite"></output>
+  </section>
+</main>
+<script>document.getElementById('prepare').addEventListener('click',()=>{document.getElementById('result').textContent='Recovery review prepared locally. No live action performed.';});</script>
+</body>
+</html>

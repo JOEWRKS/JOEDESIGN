@@ -1,0 +1,2173 @@
+{
+  "recordedUTC": "2026-09-06T15:46:49.540Z",
+  "fixed": [
+    {
+      "path": "PRODUCT.md",
+      "sha256": "9F689D0886E3147189D05E8ECEC105818F383796E31A0CFC2BE32F285BC773D7",
+      "observedSHA256": "9F689D0886E3147189D05E8ECEC105818F383796E31A0CFC2BE32F285BC773D7",
+      "pass": true
+    },
+    {
+      "path": "DESIGN.md",
+      "sha256": "EBC7AA6ADFE41C1BAE9F3C625323F64F89C7F752FC9155C29DE35FB19AF88348",
+      "observedSHA256": "EBC7AA6ADFE41C1BAE9F3C625323F64F89C7F752FC9155C29DE35FB19AF88348",
+      "pass": true
+    },
+    {
+      "path": "AGENTS.md",
+      "sha256": "181729ABA0CC455B0331818668250ECF0B04D7229D05DFF785FF0321007C0887",
+      "observedSHA256": "181729ABA0CC455B0331818668250ECF0B04D7229D05DFF785FF0321007C0887",
+      "pass": true
+    },
+    {
+      "path": "render.mjs",
+      "sha256": "A6C3283DE91F30917317F52AED00E73F6002750D2E8FC6646BF4CB4266EE93CB",
+      "observedSHA256": "A6C3283DE91F30917317F52AED00E73F6002750D2E8FC6646BF4CB4266EE93CB",
+      "pass": true
+    },
+    {
+      "path": ".agents/skills/joedesign/SKILL.md",
+      "sha256": "2440962D1BE29E8274722EFA86D8271327206ECDEF9E9566BD30FC226002CC04",
+      "observedSHA256": "2440962D1BE29E8274722EFA86D8271327206ECDEF9E9566BD30FC226002CC04",
+      "pass": true
+    }
+  ],
+  "finalSource": [
+    {
+      "path": "index.html",
+      "sha256": "0EB88F436D78B318F1A08BD4ED295760D1C9C0DD50ACD7C97587C1B0554E8F88"
+    },
+    {
+      "path": "styles.css",
+      "sha256": "19FFD289B78A6EEBC75570C12759BAA425A48074F24647751A674C6F751DE698"
+    }
+  ],
+  "checks": [
+    {
+      "name": "Fixed authorities, AGENTS, renderer and installed skill byte-identical",
+      "verdict": "PASS"
+    },
+    {
+      "name": "Only HTML change is removal of empty aria-hidden decoration",
+      "verdict": "PASS"
+    },
+    {
+      "name": "Final rendered source matches root source bytes",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: all Product text, roles, order, metadata, controls and script preserved",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: single button, required anchor and initially empty polite output",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: summary, all findings 1/2/3, then action in vertical order",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: no horizontal overflow",
+      "verdict": "PASS"
+    },
+    {
+      "name": "Desktop finding text and button share x coordinate",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: actual normal text pairs >=4.5:1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard button activation produces exact local output",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: prepared state has no horizontal overflow",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: keyboard focus visible on both controls with >=3:1 outline",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: evidence link navigates to existing findings and preserves output",
+      "verdict": "PASS"
+    },
+    {
+      "name": "desktop: zero browser errors or HTTP(S) requests",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: all Product text, roles, order, metadata, controls and script preserved",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: single button, required anchor and initially empty polite output",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: summary, all findings 1/2/3, then action in vertical order",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: no horizontal overflow",
+      "verdict": "PASS"
+    },
+    {
+      "name": "Mobile section label above list; full-width button",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: actual normal text pairs >=4.5:1",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: keyboard button activation produces exact local output",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: prepared state has no horizontal overflow",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: keyboard focus visible on both controls with >=3:1 outline",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: evidence link navigates to existing findings and preserves output",
+      "verdict": "PASS"
+    },
+    {
+      "name": "mobile: zero browser errors or HTTP(S) requests",
+      "verdict": "PASS"
+    }
+  ],
+  "targets": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "before": {
+        "visibleText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "title": "Delivery queue delay",
+        "summary": "A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review.",
+        "metadata": [
+          "Severity: Moderate",
+          "Status: Recovering"
+        ],
+        "labels": [
+          "Incident Decision Brief",
+          "Ordered findings",
+          "Next action"
+        ],
+        "findings": [
+          {
+            "heading": "Backlog is shrinking",
+            "body": "The queue has fallen from 240 to 80 notices since the worker was isolated.",
+            "rect": {
+              "x": 137,
+              "y": 446,
+              "width": 372.65625,
+              "height": 172,
+              "bottom": 618
+            }
+          },
+          {
+            "heading": "New notices remain delayed",
+            "body": "Incoming notices are still waiting six minutes before delivery begins.",
+            "rect": {
+              "x": 533.65625,
+              "y": 446,
+              "width": 372.671875,
+              "height": 172,
+              "bottom": 618
+            }
+          },
+          {
+            "heading": "Restart needs a review",
+            "body": "Confirm the replacement worker is ready before preparing a controlled restart.",
+            "rect": {
+              "x": 930.328125,
+              "y": 446,
+              "width": 372.65625,
+              "height": 172,
+              "bottom": 618
+            }
+          }
+        ],
+        "mainOrder": [
+          "HEADER:hero shell",
+          "SECTION:findings shell",
+          "SECTION:action shell"
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "type": "button",
+            "id": "prepare"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": "",
+        "live": "polite",
+        "script": "document.getElementById('prepare').addEventListener('click',()=>{document.getElementById('result').textContent='Recovery review prepared locally. No live action performed.';});",
+        "horizontalOverflow": false,
+        "documentHeight": 1000,
+        "geometry": {
+          "h1": {
+            "x": 137,
+            "y": 146,
+            "width": 622.90625,
+            "height": 46,
+            "bottom": 192
+          },
+          ".summary": {
+            "x": 137,
+            "y": 216,
+            "width": 622.90625,
+            "height": 48,
+            "bottom": 264
+          },
+          ".metadata": {
+            "x": 137,
+            "y": 288,
+            "width": 622.90625,
+            "height": 32,
+            "bottom": 320
+          },
+          ".findings": {
+            "x": 112,
+            "y": 369,
+            "width": 1216,
+            "height": 274,
+            "bottom": 643
+          },
+          "h2": {
+            "x": 137,
+            "y": 394,
+            "width": 1166,
+            "height": 28,
+            "bottom": 422
+          },
+          "ol": {
+            "x": 137,
+            "y": 446,
+            "width": 1166,
+            "height": 172,
+            "bottom": 618
+          },
+          "h3": {
+            "x": 162,
+            "y": 505,
+            "width": 322.65625,
+            "height": 24,
+            "bottom": 529
+          },
+          ".finding p": {
+            "x": 162,
+            "y": 545,
+            "width": 322.65625,
+            "height": 48,
+            "bottom": 593
+          },
+          ".action": {
+            "x": 112,
+            "y": 667,
+            "width": 1216,
+            "height": 168,
+            "bottom": 835
+          },
+          "button": {
+            "x": 508.3125,
+            "y": 744,
+            "width": 233.015625,
+            "height": 50,
+            "bottom": 794
+          },
+          "a": {
+            "x": 765.328125,
+            "y": 760,
+            "width": 166.34375,
+            "height": 18,
+            "bottom": 778
+          },
+          "output": {
+            "x": 137,
+            "y": 810,
+            "width": 1166,
+            "height": 0,
+            "bottom": 810
+          }
+        },
+        "colors": {
+          "h1": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "46px"
+          },
+          ".summary": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          ".metadata": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "normal"
+          },
+          "h2": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "24px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "h3": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(248, 250, 252)",
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "lineHeight": "24px"
+          },
+          "button": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(36, 73, 112)",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "a": {
+            "foreground": "rgb(36, 73, 112)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "normal"
+          },
+          "output": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "normal"
+          }
+        },
+        "containment": [
+          {
+            "class": "hero shell",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "eyebrow pill",
+            "background": "rgb(229, 237, 250)",
+            "shadow": "none",
+            "radius": "999px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgb(229, 237, 250)",
+            "shadow": "none",
+            "radius": "999px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgb(229, 237, 250)",
+            "shadow": "none",
+            "radius": "999px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "findings shell",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgb(248, 250, 252)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgb(248, 250, 252)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgb(248, 250, 252)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "action shell",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          }
+        ]
+      },
+      "initial": {
+        "visibleText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "title": "Delivery queue delay",
+        "summary": "A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review.",
+        "metadata": [
+          "Severity: Moderate",
+          "Status: Recovering"
+        ],
+        "labels": [
+          "Incident Decision Brief",
+          "Ordered findings",
+          "Next action"
+        ],
+        "findings": [
+          {
+            "heading": "Backlog is shrinking",
+            "body": "The queue has fallen from 240 to 80 notices since the worker was isolated.",
+            "rect": {
+              "x": 456,
+              "y": 313,
+              "width": 792,
+              "height": 56,
+              "bottom": 369
+            }
+          },
+          {
+            "heading": "New notices remain delayed",
+            "body": "Incoming notices are still waiting six minutes before delivery begins.",
+            "rect": {
+              "x": 456,
+              "y": 393,
+              "width": 792,
+              "height": 56,
+              "bottom": 449
+            }
+          },
+          {
+            "heading": "Restart needs a review",
+            "body": "Confirm the replacement worker is ready before preparing a controlled restart.",
+            "rect": {
+              "x": 456,
+              "y": 473,
+              "width": 792,
+              "height": 56,
+              "bottom": 529
+            }
+          }
+        ],
+        "mainOrder": [
+          "HEADER:hero shell",
+          "SECTION:findings shell",
+          "SECTION:action shell"
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "type": "button",
+            "id": "prepare"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": "",
+        "live": "polite",
+        "script": "document.getElementById('prepare').addEventListener('click',()=>{document.getElementById('result').textContent='Recovery review prepared locally. No live action performed.';});",
+        "horizontalOverflow": false,
+        "documentHeight": 1000,
+        "geometry": {
+          "h1": {
+            "x": 192,
+            "y": 85,
+            "width": 760,
+            "height": 46,
+            "bottom": 131
+          },
+          ".summary": {
+            "x": 192,
+            "y": 147,
+            "width": 640.6875,
+            "height": 48,
+            "bottom": 195
+          },
+          ".metadata": {
+            "x": 192,
+            "y": 219,
+            "width": 760,
+            "height": 21,
+            "bottom": 240
+          },
+          ".findings": {
+            "x": 192,
+            "y": 288,
+            "width": 1056,
+            "height": 241,
+            "bottom": 529
+          },
+          "h2": {
+            "x": 192,
+            "y": 313,
+            "width": 192,
+            "height": 216,
+            "bottom": 529
+          },
+          "ol": {
+            "x": 432,
+            "y": 313,
+            "width": 816,
+            "height": 216,
+            "bottom": 529
+          },
+          "h3": {
+            "x": 456,
+            "y": 313,
+            "width": 792,
+            "height": 24,
+            "bottom": 337
+          },
+          ".finding p": {
+            "x": 456,
+            "y": 345,
+            "width": 605.09375,
+            "height": 24,
+            "bottom": 369
+          },
+          ".action": {
+            "x": 192,
+            "y": 577,
+            "width": 1056,
+            "height": 75,
+            "bottom": 652
+          },
+          "button": {
+            "x": 456,
+            "y": 602,
+            "width": 233.015625,
+            "height": 50,
+            "bottom": 652
+          },
+          "a": {
+            "x": 713.015625,
+            "y": 615,
+            "width": 166.34375,
+            "height": 24,
+            "bottom": 639
+          },
+          "output": {
+            "x": 456,
+            "y": 652,
+            "width": 792,
+            "height": 0,
+            "bottom": 652
+          }
+        },
+        "colors": {
+          "h1": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "46px"
+          },
+          ".summary": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          ".metadata": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          },
+          "h2": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21px"
+          },
+          "h3": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "lineHeight": "24px"
+          },
+          "button": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(36, 73, 112)",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "a": {
+            "foreground": "rgb(36, 73, 112)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          "output": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          }
+        },
+        "containment": [
+          {
+            "class": "hero shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "eyebrow pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "findings shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "action shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          }
+        ]
+      },
+      "prepared": {
+        "visibleText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence Recovery review prepared locally. No live action performed.",
+        "title": "Delivery queue delay",
+        "summary": "A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review.",
+        "metadata": [
+          "Severity: Moderate",
+          "Status: Recovering"
+        ],
+        "labels": [
+          "Incident Decision Brief",
+          "Ordered findings",
+          "Next action"
+        ],
+        "findings": [
+          {
+            "heading": "Backlog is shrinking",
+            "body": "The queue has fallen from 240 to 80 notices since the worker was isolated.",
+            "rect": {
+              "x": 456,
+              "y": 313,
+              "width": 792,
+              "height": 56,
+              "bottom": 369
+            }
+          },
+          {
+            "heading": "New notices remain delayed",
+            "body": "Incoming notices are still waiting six minutes before delivery begins.",
+            "rect": {
+              "x": 456,
+              "y": 393,
+              "width": 792,
+              "height": 56,
+              "bottom": 449
+            }
+          },
+          {
+            "heading": "Restart needs a review",
+            "body": "Confirm the replacement worker is ready before preparing a controlled restart.",
+            "rect": {
+              "x": 456,
+              "y": 473,
+              "width": 792,
+              "height": 56,
+              "bottom": 529
+            }
+          }
+        ],
+        "mainOrder": [
+          "HEADER:hero shell",
+          "SECTION:findings shell",
+          "SECTION:action shell"
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "type": "button",
+            "id": "prepare"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": "Recovery review prepared locally. No live action performed.",
+        "live": "polite",
+        "script": "document.getElementById('prepare').addEventListener('click',()=>{document.getElementById('result').textContent='Recovery review prepared locally. No live action performed.';});",
+        "horizontalOverflow": false,
+        "documentHeight": 1000,
+        "geometry": {
+          "h1": {
+            "x": 192,
+            "y": 85,
+            "width": 760,
+            "height": 46,
+            "bottom": 131
+          },
+          ".summary": {
+            "x": 192,
+            "y": 147,
+            "width": 640.6875,
+            "height": 48,
+            "bottom": 195
+          },
+          ".metadata": {
+            "x": 192,
+            "y": 219,
+            "width": 760,
+            "height": 21,
+            "bottom": 240
+          },
+          ".findings": {
+            "x": 192,
+            "y": 288,
+            "width": 1056,
+            "height": 241,
+            "bottom": 529
+          },
+          "h2": {
+            "x": 192,
+            "y": 313,
+            "width": 192,
+            "height": 216,
+            "bottom": 529
+          },
+          "ol": {
+            "x": 432,
+            "y": 313,
+            "width": 816,
+            "height": 216,
+            "bottom": 529
+          },
+          "h3": {
+            "x": 456,
+            "y": 313,
+            "width": 792,
+            "height": 24,
+            "bottom": 337
+          },
+          ".finding p": {
+            "x": 456,
+            "y": 345,
+            "width": 605.09375,
+            "height": 24,
+            "bottom": 369
+          },
+          ".action": {
+            "x": 192,
+            "y": 577,
+            "width": 1056,
+            "height": 112,
+            "bottom": 689
+          },
+          "button": {
+            "x": 456,
+            "y": 602,
+            "width": 233.015625,
+            "height": 50,
+            "bottom": 652
+          },
+          "a": {
+            "x": 713.015625,
+            "y": 615,
+            "width": 166.34375,
+            "height": 24,
+            "bottom": 639
+          },
+          "output": {
+            "x": 456,
+            "y": 668,
+            "width": 792,
+            "height": 21,
+            "bottom": 689
+          }
+        },
+        "colors": {
+          "h1": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "40px",
+            "fontWeight": "700",
+            "lineHeight": "46px"
+          },
+          ".summary": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          ".metadata": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          },
+          "h2": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21px"
+          },
+          "h3": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "lineHeight": "24px"
+          },
+          "button": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(36, 73, 112)",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "a": {
+            "foreground": "rgb(36, 73, 112)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          "output": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          }
+        },
+        "containment": [
+          {
+            "class": "hero shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "eyebrow pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "findings shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "action shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          }
+        ]
+      },
+      "colors": [
+        {
+          "role": "h1",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "40px",
+          "fontWeight": "700",
+          "lineHeight": "46px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": ".summary",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": ".metadata",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": "h2",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "14px",
+          "fontWeight": "700",
+          "lineHeight": "21px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": "h3",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "lineHeight": "24px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": "button",
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(36, 73, 112)",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "normal",
+          "ratio": 9.283813737948323
+        },
+        {
+          "role": "a",
+          "foreground": "rgb(36, 73, 112)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "ratio": 8.330589000026777
+        },
+        {
+          "role": "output",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "ratio": 12.131250292790549
+        }
+      ],
+      "buttonFocus": {
+        "tag": "BUTTON",
+        "id": "prepare",
+        "outline": "rgb(40, 114, 135) solid 3px",
+        "outlineColor": "rgb(40, 114, 135)",
+        "outlineWidth": "3px",
+        "outlineOffset": "4px",
+        "focusVisible": true
+      },
+      "linkFocus": {
+        "tag": "A",
+        "id": "",
+        "outline": "rgb(40, 114, 135) solid 3px",
+        "outlineColor": "rgb(40, 114, 135)",
+        "outlineWidth": "3px",
+        "outlineOffset": "4px",
+        "focusVisible": true
+      },
+      "focusRatio": 4.89830807906859,
+      "anchor": {
+        "hash": "#incident-evidence",
+        "target": true,
+        "scrollY": 0,
+        "output": "Recovery review prepared locally. No live action performed."
+      },
+      "errors": [],
+      "network": []
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "before": {
+        "visibleText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "title": "Delivery queue delay",
+        "summary": "A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review.",
+        "metadata": [
+          "Severity: Moderate",
+          "Status: Recovering"
+        ],
+        "labels": [
+          "Incident Decision Brief",
+          "Ordered findings",
+          "Next action"
+        ],
+        "findings": [
+          {
+            "heading": "Backlog is shrinking",
+            "body": "The queue has fallen from 240 to 80 notices since the worker was isolated.",
+            "rect": {
+              "x": 33,
+              "y": 612.796875,
+              "width": 324,
+              "height": 156,
+              "bottom": 768.796875
+            }
+          },
+          {
+            "heading": "New notices remain delayed",
+            "body": "Incoming notices are still waiting six minutes before delivery begins.",
+            "rect": {
+              "x": 33,
+              "y": 784.796875,
+              "width": 324,
+              "height": 156,
+              "bottom": 940.796875
+            }
+          },
+          {
+            "heading": "Restart needs a review",
+            "body": "Confirm the replacement worker is ready before preparing a controlled restart.",
+            "rect": {
+              "x": 33,
+              "y": 956.796875,
+              "width": 324,
+              "height": 156,
+              "bottom": 1112.796875
+            }
+          }
+        ],
+        "mainOrder": [
+          "HEADER:hero shell",
+          "SECTION:findings shell",
+          "SECTION:action shell"
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "type": "button",
+            "id": "prepare"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": "",
+        "live": "polite",
+        "script": "document.getElementById('prepare').addEventListener('click',()=>{document.getElementById('result').textContent='Recovery review prepared locally. No live action performed.';});",
+        "horizontalOverflow": false,
+        "documentHeight": 1356,
+        "geometry": {
+          "h1": {
+            "x": 33,
+            "y": 122,
+            "width": 324,
+            "height": 36.796875,
+            "bottom": 158.796875
+          },
+          ".summary": {
+            "x": 33,
+            "y": 182.796875,
+            "width": 324,
+            "height": 72,
+            "bottom": 254.796875
+          },
+          ".metadata": {
+            "x": 33,
+            "y": 278.796875,
+            "width": 324,
+            "height": 32,
+            "bottom": 310.796875
+          },
+          ".findings": {
+            "x": 16,
+            "y": 543.796875,
+            "width": 358,
+            "height": 586,
+            "bottom": 1129.796875
+          },
+          "h2": {
+            "x": 33,
+            "y": 560.796875,
+            "width": 324,
+            "height": 28,
+            "bottom": 588.796875
+          },
+          "ol": {
+            "x": 33,
+            "y": 612.796875,
+            "width": 324,
+            "height": 500,
+            "bottom": 1112.796875
+          },
+          "h3": {
+            "x": 50,
+            "y": 663.796875,
+            "width": 290,
+            "height": 24,
+            "bottom": 687.796875
+          },
+          ".finding p": {
+            "x": 50,
+            "y": 703.796875,
+            "width": 290,
+            "height": 48,
+            "bottom": 751.796875
+          },
+          ".action": {
+            "x": 16,
+            "y": 1153.796875,
+            "width": 358,
+            "height": 186,
+            "bottom": 1339.796875
+          },
+          "button": {
+            "x": 33,
+            "y": 1222.796875,
+            "width": 324,
+            "height": 50,
+            "bottom": 1272.796875
+          },
+          "a": {
+            "x": 111.828125,
+            "y": 1288.796875,
+            "width": 166.34375,
+            "height": 18,
+            "bottom": 1306.796875
+          },
+          "output": {
+            "x": 33,
+            "y": 1322.796875,
+            "width": 324,
+            "height": 0,
+            "bottom": 1322.796875
+          }
+        },
+        "colors": {
+          "h1": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "32px",
+            "fontWeight": "700",
+            "lineHeight": "36.8px"
+          },
+          ".summary": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          ".metadata": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "normal"
+          },
+          "h2": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "24px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "h3": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(248, 250, 252)",
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "lineHeight": "24px"
+          },
+          "button": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(36, 73, 112)",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "a": {
+            "foreground": "rgb(36, 73, 112)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "normal"
+          },
+          "output": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(255, 255, 255)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "normal"
+          }
+        },
+        "containment": [
+          {
+            "class": "hero shell",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "eyebrow pill",
+            "background": "rgb(229, 237, 250)",
+            "shadow": "none",
+            "radius": "999px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgb(229, 237, 250)",
+            "shadow": "none",
+            "radius": "999px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgb(229, 237, 250)",
+            "shadow": "none",
+            "radius": "999px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "findings shell",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgb(248, 250, 252)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgb(248, 250, 252)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgb(248, 250, 252)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "action shell",
+            "background": "rgb(255, 255, 255)",
+            "shadow": "rgba(32, 52, 64, 0.03) 0px 8px 24px 0px",
+            "radius": "24px",
+            "borderTop": "1px"
+          }
+        ]
+      },
+      "initial": {
+        "visibleText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence",
+        "title": "Delivery queue delay",
+        "summary": "A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review.",
+        "metadata": [
+          "Severity: Moderate",
+          "Status: Recovering"
+        ],
+        "labels": [
+          "Incident Decision Brief",
+          "Ordered findings",
+          "Next action"
+        ],
+        "findings": [
+          {
+            "heading": "Backlog is shrinking",
+            "body": "The queue has fallen from 240 to 80 notices since the worker was isolated.",
+            "rect": {
+              "x": 48,
+              "y": 348.796875,
+              "width": 318,
+              "height": 80,
+              "bottom": 428.796875
+            }
+          },
+          {
+            "heading": "New notices remain delayed",
+            "body": "Incoming notices are still waiting six minutes before delivery begins.",
+            "rect": {
+              "x": 48,
+              "y": 452.796875,
+              "width": 318,
+              "height": 80,
+              "bottom": 532.796875
+            }
+          },
+          {
+            "heading": "Restart needs a review",
+            "body": "Confirm the replacement worker is ready before preparing a controlled restart.",
+            "rect": {
+              "x": 48,
+              "y": 556.796875,
+              "width": 318,
+              "height": 80,
+              "bottom": 636.796875
+            }
+          }
+        ],
+        "mainOrder": [
+          "HEADER:hero shell",
+          "SECTION:findings shell",
+          "SECTION:action shell"
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "type": "button",
+            "id": "prepare"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": "",
+        "live": "polite",
+        "script": "document.getElementById('prepare').addEventListener('click',()=>{document.getElementById('result').textContent='Recovery review prepared locally. No live action performed.';});",
+        "horizontalOverflow": false,
+        "documentHeight": 869,
+        "geometry": {
+          "h1": {
+            "x": 24,
+            "y": 61,
+            "width": 342,
+            "height": 36.796875,
+            "bottom": 97.796875
+          },
+          ".summary": {
+            "x": 24,
+            "y": 113.796875,
+            "width": 342,
+            "height": 72,
+            "bottom": 185.796875
+          },
+          ".metadata": {
+            "x": 24,
+            "y": 209.796875,
+            "width": 342,
+            "height": 21,
+            "bottom": 230.796875
+          },
+          ".findings": {
+            "x": 24,
+            "y": 278.796875,
+            "width": 342,
+            "height": 358,
+            "bottom": 636.796875
+          },
+          "h2": {
+            "x": 24,
+            "y": 303.796875,
+            "width": 342,
+            "height": 21,
+            "bottom": 324.796875
+          },
+          "ol": {
+            "x": 24,
+            "y": 348.796875,
+            "width": 342,
+            "height": 288,
+            "bottom": 636.796875
+          },
+          "h3": {
+            "x": 48,
+            "y": 348.796875,
+            "width": 318,
+            "height": 24,
+            "bottom": 372.796875
+          },
+          ".finding p": {
+            "x": 48,
+            "y": 380.796875,
+            "width": 318,
+            "height": 48,
+            "bottom": 428.796875
+          },
+          ".action": {
+            "x": 24,
+            "y": 684.796875,
+            "width": 342,
+            "height": 160,
+            "bottom": 844.796875
+          },
+          "button": {
+            "x": 24,
+            "y": 754.796875,
+            "width": 342,
+            "height": 50,
+            "bottom": 804.796875
+          },
+          "a": {
+            "x": 24,
+            "y": 820.796875,
+            "width": 166.34375,
+            "height": 24,
+            "bottom": 844.796875
+          },
+          "output": {
+            "x": 24,
+            "y": 844.796875,
+            "width": 342,
+            "height": 0,
+            "bottom": 844.796875
+          }
+        },
+        "colors": {
+          "h1": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "32px",
+            "fontWeight": "700",
+            "lineHeight": "36.8px"
+          },
+          ".summary": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          ".metadata": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          },
+          "h2": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21px"
+          },
+          "h3": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "lineHeight": "24px"
+          },
+          "button": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(36, 73, 112)",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "a": {
+            "foreground": "rgb(36, 73, 112)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          "output": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          }
+        },
+        "containment": [
+          {
+            "class": "hero shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "eyebrow pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "findings shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "action shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          }
+        ]
+      },
+      "prepared": {
+        "visibleText": "Incident Decision Brief Delivery queue delay A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review. Severity: Moderate Status: Recovering Ordered findings Backlog is shrinking The queue has fallen from 240 to 80 notices since the worker was isolated. New notices remain delayed Incoming notices are still waiting six minutes before delivery begins. Restart needs a review Confirm the replacement worker is ready before preparing a controlled restart. Next action Prepare recovery review Read incident evidence Recovery review prepared locally. No live action performed.",
+        "title": "Delivery queue delay",
+        "summary": "A stalled worker is delaying outgoing notices; delivery is recovering, but the next restart needs an operations review.",
+        "metadata": [
+          "Severity: Moderate",
+          "Status: Recovering"
+        ],
+        "labels": [
+          "Incident Decision Brief",
+          "Ordered findings",
+          "Next action"
+        ],
+        "findings": [
+          {
+            "heading": "Backlog is shrinking",
+            "body": "The queue has fallen from 240 to 80 notices since the worker was isolated.",
+            "rect": {
+              "x": 48,
+              "y": 348.796875,
+              "width": 318,
+              "height": 80,
+              "bottom": 428.796875
+            }
+          },
+          {
+            "heading": "New notices remain delayed",
+            "body": "Incoming notices are still waiting six minutes before delivery begins.",
+            "rect": {
+              "x": 48,
+              "y": 452.796875,
+              "width": 318,
+              "height": 80,
+              "bottom": 532.796875
+            }
+          },
+          {
+            "heading": "Restart needs a review",
+            "body": "Confirm the replacement worker is ready before preparing a controlled restart.",
+            "rect": {
+              "x": 48,
+              "y": 556.796875,
+              "width": 318,
+              "height": 80,
+              "bottom": 636.796875
+            }
+          }
+        ],
+        "mainOrder": [
+          "HEADER:hero shell",
+          "SECTION:findings shell",
+          "SECTION:action shell"
+        ],
+        "buttons": [
+          {
+            "text": "Prepare recovery review",
+            "type": "button",
+            "id": "prepare"
+          }
+        ],
+        "links": [
+          {
+            "text": "Read incident evidence",
+            "href": "#incident-evidence"
+          }
+        ],
+        "output": "Recovery review prepared locally. No live action performed.",
+        "live": "polite",
+        "script": "document.getElementById('prepare').addEventListener('click',()=>{document.getElementById('result').textContent='Recovery review prepared locally. No live action performed.';});",
+        "horizontalOverflow": false,
+        "documentHeight": 927,
+        "geometry": {
+          "h1": {
+            "x": 24,
+            "y": 61,
+            "width": 342,
+            "height": 36.796875,
+            "bottom": 97.796875
+          },
+          ".summary": {
+            "x": 24,
+            "y": 113.796875,
+            "width": 342,
+            "height": 72,
+            "bottom": 185.796875
+          },
+          ".metadata": {
+            "x": 24,
+            "y": 209.796875,
+            "width": 342,
+            "height": 21,
+            "bottom": 230.796875
+          },
+          ".findings": {
+            "x": 24,
+            "y": 278.796875,
+            "width": 342,
+            "height": 358,
+            "bottom": 636.796875
+          },
+          "h2": {
+            "x": 24,
+            "y": 303.796875,
+            "width": 342,
+            "height": 21,
+            "bottom": 324.796875
+          },
+          "ol": {
+            "x": 24,
+            "y": 348.796875,
+            "width": 342,
+            "height": 288,
+            "bottom": 636.796875
+          },
+          "h3": {
+            "x": 48,
+            "y": 348.796875,
+            "width": 318,
+            "height": 24,
+            "bottom": 372.796875
+          },
+          ".finding p": {
+            "x": 48,
+            "y": 380.796875,
+            "width": 318,
+            "height": 48,
+            "bottom": 428.796875
+          },
+          ".action": {
+            "x": 24,
+            "y": 684.796875,
+            "width": 342,
+            "height": 218,
+            "bottom": 902.796875
+          },
+          "button": {
+            "x": 24,
+            "y": 754.796875,
+            "width": 342,
+            "height": 50,
+            "bottom": 804.796875
+          },
+          "a": {
+            "x": 24,
+            "y": 820.796875,
+            "width": 166.34375,
+            "height": 24,
+            "bottom": 844.796875
+          },
+          "output": {
+            "x": 24,
+            "y": 860.796875,
+            "width": 342,
+            "height": 42,
+            "bottom": 902.796875
+          }
+        },
+        "colors": {
+          "h1": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "32px",
+            "fontWeight": "700",
+            "lineHeight": "36.8px"
+          },
+          ".summary": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          ".metadata": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          },
+          "h2": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "700",
+            "lineHeight": "21px"
+          },
+          "h3": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "20px",
+            "fontWeight": "700",
+            "lineHeight": "24px"
+          },
+          "button": {
+            "foreground": "rgb(255, 255, 255)",
+            "background": "rgb(36, 73, 112)",
+            "fontSize": "16px",
+            "fontWeight": "700",
+            "lineHeight": "normal"
+          },
+          "a": {
+            "foreground": "rgb(36, 73, 112)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "16px",
+            "fontWeight": "400",
+            "lineHeight": "24px"
+          },
+          "output": {
+            "foreground": "rgb(35, 48, 57)",
+            "background": "rgb(240, 243, 245)",
+            "fontSize": "14px",
+            "fontWeight": "400",
+            "lineHeight": "21px"
+          }
+        },
+        "containment": [
+          {
+            "class": "hero shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "eyebrow pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "pill",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "findings shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "finding shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "0px"
+          },
+          {
+            "class": "action shell",
+            "background": "rgba(0, 0, 0, 0)",
+            "shadow": "none",
+            "radius": "0px",
+            "borderTop": "1px"
+          }
+        ]
+      },
+      "colors": [
+        {
+          "role": "h1",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "32px",
+          "fontWeight": "700",
+          "lineHeight": "36.8px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": ".summary",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": ".metadata",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": "h2",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "14px",
+          "fontWeight": "700",
+          "lineHeight": "21px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": "h3",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "20px",
+          "fontWeight": "700",
+          "lineHeight": "24px",
+          "ratio": 12.131250292790549
+        },
+        {
+          "role": "button",
+          "foreground": "rgb(255, 255, 255)",
+          "background": "rgb(36, 73, 112)",
+          "fontSize": "16px",
+          "fontWeight": "700",
+          "lineHeight": "normal",
+          "ratio": 9.283813737948323
+        },
+        {
+          "role": "a",
+          "foreground": "rgb(36, 73, 112)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "16px",
+          "fontWeight": "400",
+          "lineHeight": "24px",
+          "ratio": 8.330589000026777
+        },
+        {
+          "role": "output",
+          "foreground": "rgb(35, 48, 57)",
+          "background": "rgb(240, 243, 245)",
+          "fontSize": "14px",
+          "fontWeight": "400",
+          "lineHeight": "21px",
+          "ratio": 12.131250292790549
+        }
+      ],
+      "buttonFocus": {
+        "tag": "BUTTON",
+        "id": "prepare",
+        "outline": "rgb(40, 114, 135) solid 3px",
+        "outlineColor": "rgb(40, 114, 135)",
+        "outlineWidth": "3px",
+        "outlineOffset": "4px",
+        "focusVisible": true
+      },
+      "linkFocus": {
+        "tag": "A",
+        "id": "",
+        "outline": "rgb(40, 114, 135) solid 3px",
+        "outlineColor": "rgb(40, 114, 135)",
+        "outlineWidth": "3px",
+        "outlineOffset": "4px",
+        "focusVisible": true
+      },
+      "focusRatio": 4.89830807906859,
+      "anchor": {
+        "hash": "#incident-evidence",
+        "target": true,
+        "scrollY": 83,
+        "output": "Recovery review prepared locally. No live action performed."
+      },
+      "errors": [],
+      "network": []
+    }
+  ],
+  "images": [
+    {
+      "path": "before/desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "png": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "48BE2392F8F2FC4817071AE7047CF45AD692A536E37840E01CFA4D8987B89749"
+    },
+    {
+      "path": "before/mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "png": {
+        "width": 390,
+        "height": 1356
+      },
+      "sha256": "4DCF9CE5937219F365AC1C84D1068C718DF5A647CA69BE98E99ED5233E618F75"
+    },
+    {
+      "path": "after-01/desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "png": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "07E95C4A8904DE6DFE97284A3BB674AFFB254BAF7239C313581C76E8C467CB85"
+    },
+    {
+      "path": "after-01/mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "png": {
+        "width": 390,
+        "height": 869
+      },
+      "sha256": "00A49A248D9906852E1EFDBADE2DF18A3A02918F78A6B7CBDB459451339B6DEB"
+    },
+    {
+      "path": "after-02/desktop-prepared-button-focus.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "png": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "2E1E2C595F96D1F52B2E331777D1F90DBAB9E6EACFA07006E48C71BC02E29794"
+    },
+    {
+      "path": "after-02/desktop-prepared-link-focus.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "png": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "D9F26EE1911F78521FD9895DF7932E07D615C91E5E4BA982351FDCFD025EB02A"
+    },
+    {
+      "path": "after-02/desktop.png",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "png": {
+        "width": 1440,
+        "height": 1000
+      },
+      "sha256": "296662469D601B3D035AFF1EBF9EA1DBDB3231261221DC20945E7F8891C8F1F4"
+    },
+    {
+      "path": "after-02/mobile-prepared-button-focus.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "png": {
+        "width": 390,
+        "height": 927
+      },
+      "sha256": "101B211A4C57E393B1B4020B49E0F5E73BB3D5CD620DE73C4E7503EE8CB661AD"
+    },
+    {
+      "path": "after-02/mobile-prepared-link-focus.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "png": {
+        "width": 390,
+        "height": 927
+      },
+      "sha256": "A7B632F5CA6A61384D4FE9B153A8297E1EF8078475568562179B9FD88BE1460A"
+    },
+    {
+      "path": "after-02/mobile.png",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "png": {
+        "width": 390,
+        "height": 869
+      },
+      "sha256": "00A49A248D9906852E1EFDBADE2DF18A3A02918F78A6B7CBDB459451339B6DEB"
+    }
+  ]
+}
