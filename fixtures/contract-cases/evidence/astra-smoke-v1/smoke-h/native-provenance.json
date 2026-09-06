@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "label": "H",
+  "sourceImplementation": "ec5d46c3a64f4d5c0866e575731c2b4dbe3b21e8",
+  "fixture": {
+    "commit": "c0b385e5f85ed3e326b11f5b3b525fdcc2c46e36",
+    "tree": "ba73183517fdabbf9de21edf04cd8f8a10c3db8f"
+  },
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a076ee-20ca-77b1-8628-39cd36560799",
+    "version": "codex-cli 0.153.4",
+    "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6"
+  },
+  "nativeExit": {
+    "code": 0,
+    "signal": null,
+    "wallMs": 530084
+  },
+  "credentialLeakCheck": "PASS",
+  "changedTrackedFiles": [
+    "styles.css"
+  ],
+  "shippedRuntimeDependencyCount": 0,
+  "skillSha256": {
+    "SKILL.md": "467ff9cb889b2c17b25c246e8d2433aecbe71d89ca806b14ba81dcac52374aed",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "b98cc398163bd148dd8d8b28fa0d73dc34b642bd5b4b00614500f89d62a4068b"
+  },
+  "provenanceSha256": {
+    "rollout": "05bd34fd397f2f11cbe88845a505ddbca46793a064e646eb4bff8636b88680fc",
+    "events": "b359ea5f49b815d0eb8dea42f374351adb6dcff3e7b6ba67735aaa15fa5225c9",
+    "launch": "bc41c542289c3677c27497b0c59758186ef09f9b83d8885b5ea60c188ec9a6df",
+    "promptInput": "d52c74e84ad4753f68addaf363eed96da473d8cf10612242406988d93b52e658",
+    "final": "b7808a5a052d871c7f157cc2ac2493f25ac889112855f0a6f62b80c227a1158c",
+    "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "exit": "8b450e31cab8a91215273a1285abf4b3a3d88052df6ce4f3781466edc136881b"
+  },
+  "nativeOutputSha256": {
+    "final": "b7808a5a052d871c7f157cc2ac2493f25ac889112855f0a6f62b80c227a1158c",
+    "proof": "d676ddb5f64d59b48aa33981e6adfd9c3bb59c4f15011ba46b3b394d8fbd3b3e",
+    "roleMap": "3144051fdcdc04784c475994edf5da4b10b66d1649043d61958aaed543db8ad9"
+  },
+  "orderedEvidence": {
+    "beforeImageOpen": {
+      "line": 39,
+      "timestamp": "2026-09-06T13:36:21.604Z",
+      "type": "custom_tool_call",
+      "name": "exec"
+    },
+    "sourceImageOpen": {
+      "line": 63,
+      "timestamp": "2026-09-06T13:36:59.100Z",
+      "type": "custom_tool_call",
+      "name": "exec"
+    },
+    "roleMapWritten": {
+      "line": 73,
+      "timestamp": "2026-09-06T13:38:17.249Z",
+      "type": "custom_tool_call",
+      "name": "exec"
+    },
+    "firstStylesEdit": {
+      "line": 83,
+      "timestamp": "2026-09-06T13:38:46.853Z",
+      "type": "custom_tool_call",
+      "name": "exec"
+    },
+    "afterImageOpen": {
+      "line": 91,
+      "timestamp": "2026-09-06T13:38:58.368Z",
+      "type": "custom_tool_call",
+      "name": "exec"
+    },
+    "optionalFocusImagesOpen": {
+      "line": 112,
+      "timestamp": "2026-09-06T13:40:42.532Z",
+      "type": "custom_tool_call",
+      "name": "exec"
+    }
+  },
+  "nativeImageObservationBatches": 4,
+  "failedCommands": [
+    {
+      "id": "item_8",
+      "exitCode": 1,
+      "command": "\"C:\\\\Users\\\\tjdwo\\\\.cache\\\\codex-runtimes\\\\codex-primary-runtime\\\\dependencies\\\\native\\\\powershell\\\\pwsh.exe\" -Command 'node render.mjs assets/specimen-s17.svg artifacts/source-specimen.png 1200 900'",
+      "output": "node:internal/modules/run_main:107\r\n    triggerUncaughtException(\r\n    ^\r\n\r\npage.screenshot: Timeout 30000ms exceeded.\r\nCall log:\r\n\u001b[2m  - taking page screenshot\u001b[22m\r\n\u001b[2m  - waiting for fonts to load...\u001b[22m\r\n\u001b[2m  - fonts loaded\u001b[22m\r\n\r\n    at D:\\JOEWRKS\\joedesign-imagery-focal-validation-20260906\\runs\\H\\workspace\\render.mjs:14:13 {\r\n  log: [\r\n    '  - taking page screenshot',\r\n    '  - waiting for fonts to load...',\r\n    '  - fonts loaded'\r\n  ],\r\n  name: 'TimeoutError'\r\n}\r\n\r\nNode.js v26.3.0\r\n"
+    }
+  ],
+  "operationalFailureDisposition": "Preserved direct-SVG screenshot timeout; unchanged SVG subsequently rendered through a local HTML wrapper and opened. No unresolved H observable.",
+  "userAcceptance": "NOT_GRANTED"
+}

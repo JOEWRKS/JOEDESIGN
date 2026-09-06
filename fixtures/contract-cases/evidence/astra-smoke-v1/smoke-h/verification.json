@@ -1,0 +1,772 @@
+{
+  "checks": {
+    "immutableInputsUnchanged": true,
+    "cssChanged": true,
+    "exactSnapshots": true,
+    "textPreserved": true,
+    "localResourcesOnly": true,
+    "imagesLoaded": true,
+    "noHorizontalOverflow": true,
+    "afterImageIntrinsicRatio": true,
+    "keyboardActionAndTarget": true,
+    "textContrastAA": true
+  },
+  "invariants": [
+    {
+      "path": "index.html",
+      "bytes": 1536,
+      "sha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "currentSha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "unchanged": true
+    },
+    {
+      "path": "styles.css",
+      "bytes": 2562,
+      "sha256": "d8694abf0dedc93a9fa03a79733bc6e7dda68ce1f75cd0b8fac52b8a3eae306f",
+      "currentSha256": "9d71fe197a9094cdb2203d755b12a62dda7681f3c716e220f63be67bceabcafc",
+      "unchanged": false
+    },
+    {
+      "path": "PRODUCT.md",
+      "bytes": 1780,
+      "sha256": "c3200908ae62c4993c6c6c0ce4d1c70cc1e8710a3dd20536c48f08c5771b7627",
+      "currentSha256": "c3200908ae62c4993c6c6c0ce4d1c70cc1e8710a3dd20536c48f08c5771b7627",
+      "unchanged": true
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 1029,
+      "sha256": "4ac4717cb5c1f2eab59c1db5f2c6fd72684ee2ab80cc581556ea69b58ca571fe",
+      "currentSha256": "4ac4717cb5c1f2eab59c1db5f2c6fd72684ee2ab80cc581556ea69b58ca571fe",
+      "unchanged": true
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 1540,
+      "sha256": "892cea5e1ee73668bbad0489368adc8a62adcb31dff7758e885deedbab6c2a1b",
+      "currentSha256": "892cea5e1ee73668bbad0489368adc8a62adcb31dff7758e885deedbab6c2a1b",
+      "unchanged": true
+    },
+    {
+      "path": "render.mjs",
+      "bytes": 1183,
+      "sha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "currentSha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "unchanged": true
+    },
+    {
+      "path": "assets/specimen-s17.svg",
+      "bytes": 2261,
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12",
+      "currentSha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12",
+      "unchanged": true
+    },
+    {
+      "path": ".agents/skills/joedesign/SKILL.md",
+      "bytes": 20602,
+      "sha256": "467ff9cb889b2c17b25c246e8d2433aecbe71d89ca806b14ba81dcac52374aed",
+      "currentSha256": "467ff9cb889b2c17b25c246e8d2433aecbe71d89ca806b14ba81dcac52374aed",
+      "unchanged": true
+    }
+  ],
+  "snapshots": [
+    {
+      "path": "artifacts/before/index.html",
+      "sha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/before/styles.css",
+      "sha256": "d8694abf0dedc93a9fa03a79733bc6e7dda68ce1f75cd0b8fac52b8a3eae306f",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/before/PRODUCT.md",
+      "sha256": "c3200908ae62c4993c6c6c0ce4d1c70cc1e8710a3dd20536c48f08c5771b7627",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/before/DESIGN.md",
+      "sha256": "4ac4717cb5c1f2eab59c1db5f2c6fd72684ee2ab80cc581556ea69b58ca571fe",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/before/assets/specimen-s17.svg",
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/after/index.html",
+      "sha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/after/styles.css",
+      "sha256": "9d71fe197a9094cdb2203d755b12a62dda7681f3c716e220f63be67bceabcafc",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/after/PRODUCT.md",
+      "sha256": "c3200908ae62c4993c6c6c0ce4d1c70cc1e8710a3dd20536c48f08c5771b7627",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/after/DESIGN.md",
+      "sha256": "4ac4717cb5c1f2eab59c1db5f2c6fd72684ee2ab80cc581556ea69b58ca571fe",
+      "exactMatch": true
+    },
+    {
+      "path": "artifacts/after/assets/specimen-s17.svg",
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12",
+      "exactMatch": true
+    }
+  ],
+  "pages": [
+    {
+      "state": "before",
+      "name": "desktop",
+      "input": "artifacts/before/index.html",
+      "initial": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "fullPage": {
+          "width": 1440,
+          "height": 1000
+        },
+        "horizontalOverflow": false,
+        "image": {
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 1122.3292236328125,
+            "y": 269.37530517578125,
+            "width": 220.4561767578125,
+            "height": 169.54998779296875
+          },
+          "frame": {
+            "x": 1122.3292236328125,
+            "y": 269.37530517578125,
+            "width": 220.4561767578125,
+            "height": 169.54998779296875
+          },
+          "objectFit": "cover",
+          "filter": "none"
+        },
+        "figure": {
+          "border": "12px",
+          "padding": "16px",
+          "transform": "matrix(0.996195, -0.0871557, 0.0871557, 0.996195, 0, 0)",
+          "boxShadow": "rgb(221, 223, 202) 16px 16px 0px 0px"
+        },
+        "background": "rgb(246, 244, 238)",
+        "action": {
+          "href": "#review-note"
+        },
+        "text": [
+          {
+            "selector": ".site-header",
+            "text": "Material studies\nSpecimen archive",
+            "rect": {
+              "x": 72,
+              "y": 0,
+              "width": 1296,
+              "height": 68.5
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "13px"
+          },
+          {
+            "selector": ".record-id",
+            "text": "Record S-17",
+            "rect": {
+              "x": 72,
+              "y": 180.25,
+              "width": 850,
+              "height": 21
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "h1",
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 72,
+              "y": 217.25,
+              "width": 830,
+              "height": 219.5
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "112px"
+          },
+          {
+            "selector": "dl",
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 72,
+              "y": 468.75,
+              "width": 850,
+              "height": 58
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "figcaption",
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 1136.971435546875,
+              "y": 436.73602294921875,
+              "width": 212.6993408203125,
+              "height": 80.888671875
+            },
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": ".review-action",
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 72,
+              "y": 558.75,
+              "width": 161.125,
+              "height": 48
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": ".review-note",
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 72,
+              "y": 718.5,
+              "width": 1296,
+              "height": 102
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": "footer",
+            "text": "Fictional archive fixture · No review outcome recorded",
+            "rect": {
+              "x": 72,
+              "y": 820.5,
+              "width": 1296,
+              "height": 58
+            },
+            "color": "rgb(89, 89, 79)",
+            "fontSize": "12px"
+          }
+        ]
+      },
+      "requests": [
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/index.html",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/styles.css",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/assets/specimen-s17.svg"
+      ]
+    },
+    {
+      "state": "after",
+      "name": "desktop",
+      "input": "index.html",
+      "initial": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "fullPage": {
+          "width": 1440,
+          "height": 1000
+        },
+        "horizontalOverflow": false,
+        "image": {
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 72,
+            "y": 116.5,
+            "width": 832,
+            "height": 624
+          },
+          "frame": {
+            "x": 72,
+            "y": 116.5,
+            "width": 832,
+            "height": 624
+          },
+          "objectFit": "fill",
+          "filter": "none"
+        },
+        "figure": {
+          "border": "0px",
+          "padding": "0px",
+          "transform": "none",
+          "boxShadow": "none"
+        },
+        "background": "rgb(246, 244, 238)",
+        "action": {
+          "href": "#review-note"
+        },
+        "text": [
+          {
+            "selector": ".site-header",
+            "text": "Material studies\nSpecimen archive",
+            "rect": {
+              "x": 72,
+              "y": 0,
+              "width": 1296,
+              "height": 68.5
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "13px"
+          },
+          {
+            "selector": ".record-id",
+            "text": "Record S-17",
+            "rect": {
+              "x": 952,
+              "y": 321.5,
+              "width": 416,
+              "height": 21
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "h1",
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 952,
+              "y": 358.5,
+              "width": 416,
+              "height": 44
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "40px"
+          },
+          {
+            "selector": "dl",
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 952,
+              "y": 434.5,
+              "width": 416,
+              "height": 58
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "figcaption",
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 72,
+              "y": 756.5,
+              "width": 832,
+              "height": 21
+            },
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": ".review-action",
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 952,
+              "y": 524.5,
+              "width": 161.125,
+              "height": 48
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": ".review-note",
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 72,
+              "y": 825.5,
+              "width": 1296,
+              "height": 102
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": "footer",
+            "text": "Fictional archive fixture · No review outcome recorded",
+            "rect": {
+              "x": 72,
+              "y": 927.5,
+              "width": 1296,
+              "height": 58
+            },
+            "color": "rgb(89, 89, 79)",
+            "fontSize": "12px"
+          }
+        ]
+      },
+      "keyboard": {
+        "actionFocus": {
+          "selector": "review-action",
+          "focusVisible": true,
+          "outline": "rgb(73, 77, 54) solid 2px",
+          "outlineOffset": "5px"
+        },
+        "target": {
+          "hash": "#review-note",
+          "focused": true,
+          "visible": true,
+          "outline": "rgb(73, 77, 54) solid 2px"
+        },
+        "actionPng": "artifacts/after-desktop-action-focus.png",
+        "notePng": "artifacts/after-desktop-note-focus.png"
+      },
+      "requests": [
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/index.html",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/styles.css",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/assets/specimen-s17.svg"
+      ]
+    },
+    {
+      "state": "before",
+      "name": "mobile",
+      "input": "artifacts/before/index.html",
+      "initial": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "fullPage": {
+          "width": 390,
+          "height": 896
+        },
+        "horizontalOverflow": false,
+        "image": {
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 35.549041748046875,
+            "y": 448.9137878417969,
+            "width": 609.4525146484375,
+            "height": 151.44644165039062
+          },
+          "frame": {
+            "x": 35.549041748046875,
+            "y": 464.71923828125,
+            "width": 307.8664245605469,
+            "height": 135.6409912109375
+          },
+          "objectFit": "cover",
+          "filter": "none"
+        },
+        "figure": {
+          "border": "8px",
+          "padding": "8px",
+          "transform": "matrix(0.99863, -0.052336, 0.052336, 0.99863, 0, 0)",
+          "boxShadow": "rgb(221, 223, 202) 8px 8px 0px 0px"
+        },
+        "background": "rgb(246, 244, 238)",
+        "action": {
+          "href": "#review-note"
+        },
+        "text": [
+          {
+            "selector": ".site-header",
+            "text": "Material studies\nSpecimen archive",
+            "rect": {
+              "x": 24,
+              "y": 0,
+              "width": 342,
+              "height": 65.5
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "11px"
+          },
+          {
+            "selector": ".record-id",
+            "text": "Record S-17",
+            "rect": {
+              "x": 24,
+              "y": 97.5,
+              "width": 342,
+              "height": 21
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "h1",
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 24,
+              "y": 134.5,
+              "width": 342,
+              "height": 128
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "64px"
+          },
+          {
+            "selector": "dl",
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 24,
+              "y": 286.5,
+              "width": 342,
+              "height": 58
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "figcaption",
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 42.66673278808594,
+              "y": 600.5328369140625,
+              "width": 303.78424072265625,
+              "height": 57.7479248046875
+            },
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": ".review-action",
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 24,
+              "y": 376.5,
+              "width": 161.125,
+              "height": 48
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": ".review-note",
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 24,
+              "y": 714.5,
+              "width": 342,
+              "height": 123
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": "footer",
+            "text": "Fictional archive fixture · No review outcome recorded",
+            "rect": {
+              "x": 24,
+              "y": 837.5,
+              "width": 342,
+              "height": 58
+            },
+            "color": "rgb(89, 89, 79)",
+            "fontSize": "12px"
+          }
+        ]
+      },
+      "requests": [
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/index.html",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/styles.css",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/assets/specimen-s17.svg"
+      ]
+    },
+    {
+      "state": "after",
+      "name": "mobile",
+      "input": "index.html",
+      "initial": {
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "fullPage": {
+          "width": 390,
+          "height": 891
+        },
+        "horizontalOverflow": false,
+        "image": {
+          "loaded": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 24,
+            "y": 97.5,
+            "width": 342,
+            "height": 256.5
+          },
+          "frame": {
+            "x": 24,
+            "y": 97.5,
+            "width": 342,
+            "height": 256.5
+          },
+          "objectFit": "fill",
+          "filter": "none"
+        },
+        "figure": {
+          "border": "0px",
+          "padding": "0px",
+          "transform": "none",
+          "boxShadow": "none"
+        },
+        "background": "rgb(246, 244, 238)",
+        "action": {
+          "href": "#review-note"
+        },
+        "text": [
+          {
+            "selector": ".site-header",
+            "text": "Material studies\nSpecimen archive",
+            "rect": {
+              "x": 24,
+              "y": 0,
+              "width": 342,
+              "height": 65.5
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "11px"
+          },
+          {
+            "selector": ".record-id",
+            "text": "Record S-17",
+            "rect": {
+              "x": 24,
+              "y": 444,
+              "width": 342,
+              "height": 21
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "h1",
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 24,
+              "y": 481,
+              "width": 342,
+              "height": 35.1875
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "32px"
+          },
+          {
+            "selector": "dl",
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 24,
+              "y": 540.1875,
+              "width": 342,
+              "height": 58
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": "figcaption",
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 24,
+              "y": 370,
+              "width": 342,
+              "height": 42
+            },
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          {
+            "selector": ".review-action",
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 24,
+              "y": 630.1875,
+              "width": 161.125,
+              "height": 48
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": ".review-note",
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 24,
+              "y": 710.1875,
+              "width": 342,
+              "height": 123
+            },
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          {
+            "selector": "footer",
+            "text": "Fictional archive fixture · No review outcome recorded",
+            "rect": {
+              "x": 24,
+              "y": 833.1875,
+              "width": 342,
+              "height": 58
+            },
+            "color": "rgb(89, 89, 79)",
+            "fontSize": "12px"
+          }
+        ]
+      },
+      "keyboard": {
+        "actionFocus": {
+          "selector": "review-action",
+          "focusVisible": true,
+          "outline": "rgb(73, 77, 54) solid 2px",
+          "outlineOffset": "5px"
+        },
+        "target": {
+          "hash": "#review-note",
+          "focused": true,
+          "visible": true,
+          "outline": "rgb(73, 77, 54) solid 2px"
+        },
+        "actionPng": "artifacts/after-mobile-action-focus.png",
+        "notePng": "artifacts/after-mobile-note-focus.png"
+      },
+      "requests": [
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/index.html",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/styles.css",
+        "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/assets/specimen-s17.svg"
+      ]
+    }
+  ],
+  "contrast": [
+    {
+      "foreground": "rgb(41, 41, 35)",
+      "background": "rgb(246, 244, 238)",
+      "ratio": 13.3
+    },
+    {
+      "foreground": "rgb(73, 73, 63)",
+      "background": "rgb(246, 244, 238)",
+      "ratio": 8.27
+    },
+    {
+      "foreground": "rgb(89, 89, 79)",
+      "background": "rgb(246, 244, 238)",
+      "ratio": 6.44
+    },
+    {
+      "foreground": "rgb(73, 77, 54)",
+      "background": "rgb(246, 244, 238)",
+      "ratio": 7.96
+    }
+  ]
+}

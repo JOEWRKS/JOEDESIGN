@@ -1,0 +1,714 @@
+{
+  "browser": "152.0.7977.76",
+  "method": "Read actual loaded content, source identity, computed image/frame geometry and local action; no saliency or automated focal judgment.",
+  "targets": [
+    {
+      "label": "before",
+      "name": "desktop",
+      "html": "D:\\JOEWRKS\\joedesign-imagery-focal-validation-20260906\\runs\\H\\workspace\\artifacts\\before\\index.html",
+      "htmlSha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "actual": {
+        "title": "Ceramic study S-17 — Specimen Review",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "document": {
+          "width": 1440,
+          "height": 1000
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Material studies Specimen archive Record S-17 Ceramic study S-17 Type Synthetic ceramic specimen Status Review pending Open review note ↗ Synthetic ceramic study with an amber inset and three circular impressions. Review note Check the complete contour, amber inset, and three impressions before recording a review. Fictional archive fixture · No review outcome recorded",
+        "required": {
+          "h1": {
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 72,
+              "y": 217.25,
+              "width": 830,
+              "height": 219.5,
+              "top": 217.25,
+              "right": 902,
+              "bottom": 436.75,
+              "left": 72
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "112px"
+          },
+          ".record-id": {
+            "text": "Record S-17",
+            "rect": {
+              "x": 72,
+              "y": 180.25,
+              "width": 850,
+              "height": 21,
+              "top": 180.25,
+              "right": 922,
+              "bottom": 201.25,
+              "left": 72
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "dl": {
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 72,
+              "y": 468.75,
+              "width": 850,
+              "height": 58,
+              "top": 468.75,
+              "right": 922,
+              "bottom": 526.75,
+              "left": 72
+            },
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "figcaption": {
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 1136.971435546875,
+              "y": 436.73602294921875,
+              "width": 212.6993408203125,
+              "height": 80.888671875,
+              "top": 436.73602294921875,
+              "right": 1349.6707763671875,
+              "bottom": 517.6246948242188,
+              "left": 1136.971435546875
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          ".review-action": {
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 72,
+              "y": 558.75,
+              "width": 161.125,
+              "height": 48,
+              "top": 558.75,
+              "right": 233.125,
+              "bottom": 606.75,
+              "left": 72
+            },
+            "display": "inline-flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          ".review-note": {
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 72,
+              "y": 718.5,
+              "width": 1296,
+              "height": 102,
+              "top": 718.5,
+              "right": 1368,
+              "bottom": 820.5,
+              "left": 72
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          }
+        },
+        "image": {
+          "src": "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/assets/specimen-s17.svg",
+          "alt": "Synthetic ceramic specimen with a complete irregular contour, amber inset at upper right, and three circular impressions at lower left.",
+          "complete": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 1122.3292236328125,
+            "y": 269.37530517578125,
+            "width": 220.4561767578125,
+            "height": 169.54998779296875,
+            "top": 269.37530517578125,
+            "right": 1342.785400390625,
+            "bottom": 438.92529296875,
+            "left": 1122.3292236328125
+          },
+          "objectFit": "cover",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        "frame": {
+          "rect": {
+            "x": 1122.3292236328125,
+            "y": 269.37530517578125,
+            "width": 220.4561767578125,
+            "height": 169.54998779296875,
+            "top": 269.37530517578125,
+            "right": 1342.785400390625,
+            "bottom": 438.92529296875,
+            "left": 1122.3292236328125
+          },
+          "overflow": "hidden",
+          "transform": "none"
+        },
+        "actionHref": "#review-note"
+      },
+      "tabFocus": "review-action",
+      "action": {
+        "hash": "#review-note",
+        "activeId": "review-note",
+        "targetRect": {
+          "top": 718.5,
+          "bottom": 820.5
+        }
+      },
+      "errors": []
+    },
+    {
+      "label": "before",
+      "name": "mobile",
+      "html": "D:\\JOEWRKS\\joedesign-imagery-focal-validation-20260906\\runs\\H\\workspace\\artifacts\\before\\index.html",
+      "htmlSha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "actual": {
+        "title": "Ceramic study S-17 — Specimen Review",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 896
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Material studies Specimen archive Record S-17 Ceramic study S-17 Type Synthetic ceramic specimen Status Review pending Open review note ↗ Synthetic ceramic study with an amber inset and three circular impressions. Review note Check the complete contour, amber inset, and three impressions before recording a review. Fictional archive fixture · No review outcome recorded",
+        "required": {
+          "h1": {
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 24,
+              "y": 134.5,
+              "width": 342,
+              "height": 128,
+              "top": 134.5,
+              "right": 366,
+              "bottom": 262.5,
+              "left": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "64px"
+          },
+          ".record-id": {
+            "text": "Record S-17",
+            "rect": {
+              "x": 24,
+              "y": 97.5,
+              "width": 342,
+              "height": 21,
+              "top": 97.5,
+              "right": 366,
+              "bottom": 118.5,
+              "left": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "dl": {
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 24,
+              "y": 286.5,
+              "width": 342,
+              "height": 58,
+              "top": 286.5,
+              "right": 366,
+              "bottom": 344.5,
+              "left": 24
+            },
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "figcaption": {
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 42.66673278808594,
+              "y": 600.5328369140625,
+              "width": 303.78424072265625,
+              "height": 57.7479248046875,
+              "top": 600.5328369140625,
+              "right": 346.4509735107422,
+              "bottom": 658.28076171875,
+              "left": 42.66673278808594
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          ".review-action": {
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 24,
+              "y": 376.5,
+              "width": 161.125,
+              "height": 48,
+              "top": 376.5,
+              "right": 185.125,
+              "bottom": 424.5,
+              "left": 24
+            },
+            "display": "inline-flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          ".review-note": {
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 24,
+              "y": 714.5,
+              "width": 342,
+              "height": 123,
+              "top": 714.5,
+              "right": 366,
+              "bottom": 837.5,
+              "left": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          }
+        },
+        "image": {
+          "src": "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/before/assets/specimen-s17.svg",
+          "alt": "Synthetic ceramic specimen with a complete irregular contour, amber inset at upper right, and three circular impressions at lower left.",
+          "complete": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 35.549041748046875,
+            "y": 448.9137878417969,
+            "width": 609.4525146484375,
+            "height": 151.44644165039062,
+            "top": 448.9137878417969,
+            "right": 645.0015563964844,
+            "bottom": 600.3602294921875,
+            "left": 35.549041748046875
+          },
+          "objectFit": "cover",
+          "objectPosition": "0% 50%",
+          "transform": "none",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        "frame": {
+          "rect": {
+            "x": 35.549041748046875,
+            "y": 464.71923828125,
+            "width": 307.8664245605469,
+            "height": 135.6409912109375,
+            "top": 464.71923828125,
+            "right": 343.41546630859375,
+            "bottom": 600.3602294921875,
+            "left": 35.549041748046875
+          },
+          "overflow": "hidden",
+          "transform": "none"
+        },
+        "actionHref": "#review-note"
+      },
+      "tabFocus": "review-action",
+      "action": {
+        "hash": "#review-note",
+        "activeId": "review-note",
+        "targetRect": {
+          "top": 662.5,
+          "bottom": 785.5
+        }
+      },
+      "errors": []
+    },
+    {
+      "label": "after",
+      "name": "desktop",
+      "html": "D:\\JOEWRKS\\joedesign-imagery-focal-validation-20260906\\runs\\H\\workspace\\artifacts\\after\\index.html",
+      "htmlSha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "actual": {
+        "title": "Ceramic study S-17 — Specimen Review",
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "document": {
+          "width": 1440,
+          "height": 1000
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Material studies Specimen archive Record S-17 Ceramic study S-17 Type Synthetic ceramic specimen Status Review pending Open review note ↗ Synthetic ceramic study with an amber inset and three circular impressions. Review note Check the complete contour, amber inset, and three impressions before recording a review. Fictional archive fixture · No review outcome recorded",
+        "required": {
+          "h1": {
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 952,
+              "y": 358.5,
+              "width": 416,
+              "height": 44,
+              "top": 358.5,
+              "right": 1368,
+              "bottom": 402.5,
+              "left": 952
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "40px"
+          },
+          ".record-id": {
+            "text": "Record S-17",
+            "rect": {
+              "x": 952,
+              "y": 321.5,
+              "width": 416,
+              "height": 21,
+              "top": 321.5,
+              "right": 1368,
+              "bottom": 342.5,
+              "left": 952
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "dl": {
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 952,
+              "y": 434.5,
+              "width": 416,
+              "height": 58,
+              "top": 434.5,
+              "right": 1368,
+              "bottom": 492.5,
+              "left": 952
+            },
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "figcaption": {
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 72,
+              "y": 756.5,
+              "width": 832,
+              "height": 21,
+              "top": 756.5,
+              "right": 904,
+              "bottom": 777.5,
+              "left": 72
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          ".review-action": {
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 952,
+              "y": 524.5,
+              "width": 161.125,
+              "height": 48,
+              "top": 524.5,
+              "right": 1113.125,
+              "bottom": 572.5,
+              "left": 952
+            },
+            "display": "inline-flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          ".review-note": {
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 72,
+              "y": 825.5,
+              "width": 1296,
+              "height": 102,
+              "top": 825.5,
+              "right": 1368,
+              "bottom": 927.5,
+              "left": 72
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          }
+        },
+        "image": {
+          "src": "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/after/assets/specimen-s17.svg",
+          "alt": "Synthetic ceramic specimen with a complete irregular contour, amber inset at upper right, and three circular impressions at lower left.",
+          "complete": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 72,
+            "y": 116.5,
+            "width": 832,
+            "height": 624,
+            "top": 116.5,
+            "right": 904,
+            "bottom": 740.5,
+            "left": 72
+          },
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        "frame": {
+          "rect": {
+            "x": 72,
+            "y": 116.5,
+            "width": 832,
+            "height": 624,
+            "top": 116.5,
+            "right": 904,
+            "bottom": 740.5,
+            "left": 72
+          },
+          "overflow": "visible",
+          "transform": "none"
+        },
+        "actionHref": "#review-note"
+      },
+      "tabFocus": "review-action",
+      "action": {
+        "hash": "#review-note",
+        "activeId": "review-note",
+        "targetRect": {
+          "top": 825.5,
+          "bottom": 927.5
+        }
+      },
+      "errors": []
+    },
+    {
+      "label": "after",
+      "name": "mobile",
+      "html": "D:\\JOEWRKS\\joedesign-imagery-focal-validation-20260906\\runs\\H\\workspace\\artifacts\\after\\index.html",
+      "htmlSha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120",
+      "actual": {
+        "title": "Ceramic study S-17 — Specimen Review",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "width": 390,
+          "height": 891
+        },
+        "horizontalOverflow": false,
+        "bodyText": "Material studies Specimen archive Record S-17 Ceramic study S-17 Type Synthetic ceramic specimen Status Review pending Open review note ↗ Synthetic ceramic study with an amber inset and three circular impressions. Review note Check the complete contour, amber inset, and three impressions before recording a review. Fictional archive fixture · No review outcome recorded",
+        "required": {
+          "h1": {
+            "text": "Ceramic study S-17",
+            "rect": {
+              "x": 24,
+              "y": 481,
+              "width": 342,
+              "height": 35.1875,
+              "top": 481,
+              "right": 366,
+              "bottom": 516.1875,
+              "left": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "32px"
+          },
+          ".record-id": {
+            "text": "Record S-17",
+            "rect": {
+              "x": 24,
+              "y": 444,
+              "width": 342,
+              "height": 21,
+              "top": 444,
+              "right": 366,
+              "bottom": 465,
+              "left": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "dl": {
+            "text": "Type\nSynthetic ceramic specimen\nStatus\nReview pending",
+            "rect": {
+              "x": 24,
+              "y": 540.1875,
+              "width": 342,
+              "height": 58,
+              "top": 540.1875,
+              "right": 366,
+              "bottom": 598.1875,
+              "left": 24
+            },
+            "display": "grid",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "14px"
+          },
+          "figcaption": {
+            "text": "Synthetic ceramic study with an amber inset and three circular impressions.",
+            "rect": {
+              "x": 24,
+              "y": 370,
+              "width": 342,
+              "height": 42,
+              "top": 370,
+              "right": 366,
+              "bottom": 412,
+              "left": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(73, 73, 63)",
+            "fontSize": "14px"
+          },
+          ".review-action": {
+            "text": "Open review note\n↗",
+            "rect": {
+              "x": 24,
+              "y": 630.1875,
+              "width": 161.125,
+              "height": 48,
+              "top": 630.1875,
+              "right": 185.125,
+              "bottom": 678.1875,
+              "left": 24
+            },
+            "display": "inline-flex",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          },
+          ".review-note": {
+            "text": "Review note\n\nCheck the complete contour, amber inset, and three impressions before recording a review.",
+            "rect": {
+              "x": 24,
+              "y": 710.1875,
+              "width": 342,
+              "height": 123,
+              "top": 710.1875,
+              "right": 366,
+              "bottom": 833.1875,
+              "left": 24
+            },
+            "display": "block",
+            "visibility": "visible",
+            "opacity": "1",
+            "color": "rgb(41, 41, 35)",
+            "fontSize": "16px"
+          }
+        },
+        "image": {
+          "src": "file:///D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/H/workspace/artifacts/after/assets/specimen-s17.svg",
+          "alt": "Synthetic ceramic specimen with a complete irregular contour, amber inset at upper right, and three circular impressions at lower left.",
+          "complete": true,
+          "naturalWidth": 1200,
+          "naturalHeight": 900,
+          "rect": {
+            "x": 24,
+            "y": 97.5,
+            "width": 342,
+            "height": 256.5,
+            "top": 97.5,
+            "right": 366,
+            "bottom": 354,
+            "left": 24
+          },
+          "objectFit": "fill",
+          "objectPosition": "50% 50%",
+          "transform": "none",
+          "display": "block",
+          "visibility": "visible",
+          "opacity": "1"
+        },
+        "frame": {
+          "rect": {
+            "x": 24,
+            "y": 97.5,
+            "width": 342,
+            "height": 256.5,
+            "top": 97.5,
+            "right": 366,
+            "bottom": 354,
+            "left": 24
+          },
+          "overflow": "visible",
+          "transform": "none"
+        },
+        "actionHref": "#review-note"
+      },
+      "tabFocus": "review-action",
+      "action": {
+        "hash": "#review-note",
+        "activeId": "review-note",
+        "targetRect": {
+          "top": 663.1875,
+          "bottom": 786.1875
+        }
+      },
+      "errors": []
+    }
+  ]
+}

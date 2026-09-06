@@ -1,0 +1,5 @@
+Corrected only `styles.css`: the specimen leads, all required regions remain visible, and competing decoration is removed. Immutable files remain byte-identical.
+
+Inspected desktop and mobile renders; bounded checks **PASS**. [Proof, hashes, dimensions, and imagery-role map](artifacts/proof.md).
+
+User acceptance remains **NOT_GRANTED**.

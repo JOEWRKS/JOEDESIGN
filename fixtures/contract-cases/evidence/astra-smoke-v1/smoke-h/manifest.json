@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "algorithm": "SHA-256",
+  "root": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1540,
+      "sha256": "892cea5e1ee73668bbad0489368adc8a62adcb31dff7758e885deedbab6c2a1b"
+    },
+    {
+      "path": "DESIGN.md",
+      "bytes": 1029,
+      "sha256": "4ac4717cb5c1f2eab59c1db5f2c6fd72684ee2ab80cc581556ea69b58ca571fe"
+    },
+    {
+      "path": "PRODUCT.md",
+      "bytes": 1780,
+      "sha256": "c3200908ae62c4993c6c6c0ce4d1c70cc1e8710a3dd20536c48f08c5771b7627"
+    },
+    {
+      "path": "after-desktop.png",
+      "bytes": 151642,
+      "sha256": "56789c49bcbb00b86ddc963b1865b2ba03ad74ae01a1195a37e06d55f6941f81",
+      "png": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "path": "after-mobile.png",
+      "bytes": 57006,
+      "sha256": "91f5a77689a25314afa8f190eda7e76c889fa9687b1877eb41a15ccc2a6593d3",
+      "png": {
+        "width": 390,
+        "height": 891
+      }
+    },
+    {
+      "path": "after/assets/specimen-s17.svg",
+      "bytes": 2261,
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12"
+    },
+    {
+      "path": "after/index.html",
+      "bytes": 1536,
+      "sha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120"
+    },
+    {
+      "path": "after/styles.css",
+      "bytes": 2099,
+      "sha256": "9d71fe197a9094cdb2203d755b12a62dda7681f3c716e220f63be67bceabcafc"
+    },
+    {
+      "path": "assets/specimen-s17.svg",
+      "bytes": 2261,
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12"
+    },
+    {
+      "path": "before-desktop.png",
+      "bytes": 90003,
+      "sha256": "2fc7efec9ae0240b4b6c9a4b2ec242e7049459b4cb4f8538cad41ddf97b95ac5",
+      "png": {
+        "width": 1440,
+        "height": 1000
+      }
+    },
+    {
+      "path": "before-mobile.png",
+      "bytes": 57292,
+      "sha256": "54619ace6e4c8d86edd911ba8321a1c605f65d482816d4d2222876ec5599b086",
+      "png": {
+        "width": 390,
+        "height": 896
+      }
+    },
+    {
+      "path": "before/assets/specimen-s17.svg",
+      "bytes": 2261,
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12"
+    },
+    {
+      "path": "before/index.html",
+      "bytes": 1536,
+      "sha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120"
+    },
+    {
+      "path": "before/styles.css",
+      "bytes": 2562,
+      "sha256": "d8694abf0dedc93a9fa03a79733bc6e7dda68ce1f75cd0b8fac52b8a3eae306f"
+    },
+    {
+      "path": "controller-browser-observation.json",
+      "bytes": 23430,
+      "sha256": "8f7fcb2234962a714967add6f2d487c166793cc912fdc0f859e2f0c6d9286ec1"
+    },
+    {
+      "path": "controller-observations.md",
+      "bytes": 4329,
+      "sha256": "065dbabc7e1fe7320defff2207d135df283ebfb35e934b31bdd423001adc35c9"
+    },
+    {
+      "path": "native-final.txt",
+      "bytes": 338,
+      "sha256": "b7808a5a052d871c7f157cc2ac2493f25ac889112855f0a6f62b80c227a1158c"
+    },
+    {
+      "path": "native-proof.md",
+      "bytes": 10131,
+      "sha256": "d676ddb5f64d59b48aa33981e6adfd9c3bb59c4f15011ba46b3b394d8fbd3b3e"
+    },
+    {
+      "path": "native-provenance.json",
+      "bytes": 3990,
+      "sha256": "7fe6acffc49e5bcd9d40b872c54fed3cd31b6863a1fdc3e2d48a0d7ced74d507"
+    },
+    {
+      "path": "proof.md",
+      "bytes": 6266,
+      "sha256": "b0b7fa199c1c7687aee7bb4bde124d6a3eccb0b7b464aa5f4eb15c7ccd75e51d"
+    },
+    {
+      "path": "role-map-before.md",
+      "bytes": 3155,
+      "sha256": "3144051fdcdc04784c475994edf5da4b10b66d1649043d61958aaed543db8ad9"
+    },
+    {
+      "path": "source-specimen.png",
+      "bytes": 178969,
+      "sha256": "3b5d4c6cfb8e99ed249f2e2ea63da360a454a6708d90c0e360fa2a199d6213ff",
+      "png": {
+        "width": 1200,
+        "height": 900
+      }
+    },
+    {
+      "path": "styles.diff",
+      "bytes": 3103,
+      "sha256": "cc1236f55e08c8de2f9c8029a2ef8ee8005349476750b2dd464a7dc4945c922a"
+    },
+    {
+      "path": "verification.json",
+      "bytes": 22946,
+      "sha256": "acfbff9028d930e76930c24cf8bc0464a8cf9b02fc0c6b5811de3e54f91e1d14"
+    }
+  ]
+}

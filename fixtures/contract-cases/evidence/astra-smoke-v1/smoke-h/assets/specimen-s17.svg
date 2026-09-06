@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+  <title>Original synthetic ceramic specimen S-17</title>
+  <desc>Fictional ceramic study: irregular complete contour, amber inset at upper right, and three circular impressions at lower left. No recovered scientific evidence.</desc>
+  <defs>
+    <linearGradient id="body" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#d7c9a7"/><stop offset=".45" stop-color="#b5a17a"/><stop offset="1" stop-color="#7c785c"/></linearGradient>
+    <linearGradient id="amber" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#dfa745"/><stop offset="1" stop-color="#945b24"/></linearGradient>
+    <pattern id="grain" width="31" height="29" patternUnits="userSpaceOnUse"><circle cx="4" cy="8" r="1.2" fill="#514c3a" opacity=".24"/><circle cx="21" cy="19" r="1" fill="#f6e9ca" opacity=".65"/></pattern>
+  </defs>
+  <rect width="1200" height="900" fill="#eee9dd"/>
+  <path d="M244 459 369 194 747 154 970 265 1000 584 817 800 435 756 230 573Z" fill="#8b846b" opacity=".18" transform="translate(18 18)"/>
+  <path d="M244 445 366 178 744 140 961 253 984 570 803 779 426 740 230 558Z" fill="url(#body)" stroke="#666650" stroke-width="3"/>
+  <path d="m244 445 155-226 337-35 181 90 23 282-159 179-333-35-169-152Z" fill="none" stroke="#ece0bd" stroke-width="9" opacity=".6"/>
+  <path d="M244 445 366 178 744 140 961 253 984 570 803 779 426 740 230 558Z" fill="url(#grain)"/>
+  <path d="m373 289 177-48 148 61 88 163-71 175-186 69-140-97-53-186Z" fill="#626c61" opacity=".85"/>
+  <path d="m407 333 143-40 114 53 67 123-59 129-135 53-109-79-42-131Z" fill="#879080"/>
+  <path d="m802 222 69-19 55 38-15 66-69 12-36-41Z" fill="url(#amber)" stroke="#7c512d" stroke-width="5"/>
+  <path d="m822 230 45-12 34 23" fill="none" stroke="#f5cd70" stroke-width="7" stroke-linecap="round"/>
+  <g fill="#6b624b" stroke="#ded0ad" stroke-width="6"><circle cx="344" cy="623" r="29"/><circle cx="405" cy="650" r="27"/><circle cx="475" cy="671" r="25"/></g>
+  <g fill="#4d4d3e" opacity=".45"><circle cx="344" cy="623" r="15"/><circle cx="405" cy="650" r="13"/><circle cx="475" cy="671" r="12"/></g>
+  <path d="m714 353 96 67 45 114m-342-94 38 55 85 15" fill="none" stroke="#d8cba9" stroke-width="5" opacity=".5"/>
+</svg>
