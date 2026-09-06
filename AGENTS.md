@@ -1,5 +1,6 @@
 # JOEDESIGN repository
 
+- `docs/handoffs/JOEDESIGN_REFERENCE_INTELLIGENCE_VALIDATION_V1.md` is the active execution handoff on this branch. Read it first and do not expand scope beyond validation.
 - `docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md` is the canonical top-level role map and operating model. Read it first when changing system boundaries, authority order, process ownership, or how Product Definition, JOEFLOW, JOEDESIGN, references, DESIGN.md, implementation, verification, and user approval fit together.
 - `docs/specs/joedesign-v0.1.md` is the implementation baseline; its current handoff stop is review, not competition readiness.
 - `docs/specs/joedesign-craft-core-v0.1.md` is the canonical native craft doctrine. Read it before changing visual hierarchy, spacing, sizing, composition, typography hierarchy, responsive visual translation, or critique behavior.
