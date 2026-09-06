@@ -1,0 +1,284 @@
+✖ imagery — role precedes treatment and informative imagery remains Product content (1.8153ms)
+✖ imagery — focal ownership or visual sequence is intentional (0.4444ms)
+✖ imagery — text-image dominance is deliberate rather than accidental co-dominance (0.241ms)
+✖ imagery — crop and focal point preserve important or required image content (0.2277ms)
+✖ imagery — scale and negative space express image priority without fixed ratios (0.4314ms)
+✖ imagery — references contribute imagery relationships without copied assets or invented source facts (0.1945ms)
+✖ imagery — responsive translation may recrop reposition or recompose while preserving role and required content (0.1614ms)
+✖ imagery — project DESIGN persists compact focal authority and material claims require actual target renders (0.4868ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 92.444
+
+✖ failing tests:
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:12:1
+✖ imagery — role precedes treatment and informative imagery remains Product content (1.8153ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Role before (?:asset )?treatment/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:13:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /Role before (?:asset )?treatment/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:20:1
+✖ imagery — focal ownership or visual sequence is intentional (0.4444ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /intentional focal (?:owner|ownership)|focal (?:owner|ownership).*intentional/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:21:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /intentional focal (?:owner|ownership)|focal (?:owner|ownership).*intentional/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:25:1
+✖ imagery — text-image dominance is deliberate rather than accidental co-dominance (0.241ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /text[- ↔]+image dominance/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:26:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /text[- ↔]+image dominance/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:31:1
+✖ imagery — crop and focal point preserve important or required image content (0.2277ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /important (?:subject|focal region)/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:32:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /important (?:subject|focal region)/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:37:1
+✖ imagery — scale and negative space express image priority without fixed ratios (0.4314ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /scale (?:and|\/) negative space (?:express|communicate) (?:image )?priority/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:38:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /scale (?:and|\/) negative space (?:express|communicate) (?:image )?priority/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:42:1
+✖ imagery — references contribute imagery relationships without copied assets or invented source facts (0.1945ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /(?:image|imagery) relationships?/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:43:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /(?:image|imagery) relationships?/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:48:1
+✖ imagery — responsive translation may recrop reposition or recompose while preserving role and required content (0.1614ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /recrop/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:49:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /recrop/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:56:1
+✖ imagery — project DESIGN persists compact focal authority and material claims require actual target renders (0.4868ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /### Role/. Input:
+  
+  '# Project Design\n' +
+    '\n' +
+    '**Status:** DRAFT\n' +
+    '**Revision:** 1\n' +
+    '**Product Authority:** <pointer>\n' +
+    '\n' +
+    '<!-- Structural seed only. Empty sections are valid. Replace placeholders only\n' +
+    'with project-specific sourced decisions; do not invent approved tokens or values.\n' +
+    'Keep product meaning in its authority, not duplicated here. -->\n' +
+    '\n' +
+    '## Visual North Star\n' +
+    '\n' +
+    '## Experience / Brand Character\n' +
+    '\n' +
+    '## Durable Visual Principles\n' +
+    '\n' +
+    '## Typography\n' +
+    '\n' +
+    '### Type Roles\n' +
+    '\n' +
+    '<!-- Record only project-specific recurring semantic type roles when sourced/approved. Do not create a different role for every element. -->\n' +
+    '\n' +
+    '### Type Scale\n' +
+    '\n' +
+    '<!-- Record the approved project type-size/weight/line-height system if one exists. JOEDESIGN defaults used during draft proof are not automatically project authority. -->\n' +
+    '\n' +
+    '### Reading Measure / Rhythm\n' +
+    '\n' +
+    '<!-- Long-form measure, line-height, paragraph rhythm, language-specific constraints, and material optical notes when they matter. -->\n' +
+    '\n' +
+    '### Responsive Type Translation\n' +
+    '\n' +
+    '<!-- Preserve semantic role hierarchy and readable measure; do not merely scale desktop values proportionally. -->\n' +
+    '\n' +
+    '## Color / Surface\n' +
+    '\n' +
+    '<!-- Persist only sourced/approved project-specific color decisions. JOEDESIGN defaults used during draft proof do not automatically become project authority. -->\n' +
+    '\n' +
+    '### Color Roles\n' +
+    '\n' +
+    '### Accent Ownership\n' +
+    '\n' +
+    '### Surface / Layer Relationships\n' +
+    '\n' +
+    '### State / Contrast Constraints\n' +
+    '\n' +
+    '## Composition / Spatial Hierarchy\n' +
+    '\n' +
+    '### Visual Flow\n' +
+    '\n' +
+    '<!-- Entry point → next visual destination(s) → major narrative/task transitions. -->\n' +
+    '\n' +
+    '### Spatial Profile\n' +
+    '\n' +
+    '<!-- Record project-specific spacing roles only when sourced/approved. If no override exists, JOEDESIGN may use its current default craft profile during draft proof without promoting those values to project authority. -->\n' +
+    '\n' +
+    '## Imagery / Artwork\n' +
+    '\n' +
+    '## Component / Control Grammar\n' +
+    '\n' +
+    '## Motion / Interaction Expression\n' +
+    '\n' +
+    '## Responsive Translation\n' +
+    '\n' +
+    '## Accessibility / Legibility\n' +
+    '\n' +
+    '## Project-specific Anti-patterns\n' +
+    '\n' +
+    '## Reference Relationships\n' +
+    '\n' +
+    '<!-- Record only references that materially informed durable project decisions. Keep this compact; casual inspiration does not need a formal record. -->\n' +
+    '\n' +
+    '### Source\n' +
+    '\n' +
+    '### Evidence\n' +
+    '\n' +
+    '### Known\n' +
+    '\n' +
+    '### Unknown\n' +
+    '\n' +
+    '### Take\n' +
+    '\n' +
+    '### Do Not Take\n' +
+    '\n' +
+    '### Why\n' +
+    '\n' +
+    '### Applies To\n' +
+    '\n' +
+    '## Approved Visual Evidence\n' +
+    '\n' +
+    '<!-- Exact approved artifact/revision and the surface/state it applies to. -->\n' +
+    '\n' +
+    '## Open Visual Decisions\n' +
+    '\n' +
+    '## Amendment Rule\n' +
+    '\n' +
+    'Only explicit user approval promotes a DRAFT to APPROVED. A material amendment\n' +
+    'is a separately labeled DRAFT Rev N+1 within this file; the existing APPROVED\n' +
+    'revision remains authoritative until replacement is explicitly approved after\n' +
+    'proof. Keep only one active approved rule set. Local refinements that preserve\n' +
+    'approved intent do not automatically amend durable direction.\n'
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:58:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '# Project Design\n\n**Status:** DRAFT\n**Revision:** 1\n**Product Authority:** <pointer>\n\n<!-- Structural seed only. Empty sections are valid. Replace placeholders only\nwith project-specific sourced decisions; do not invent approved tokens or values.\nKeep product meaning in its authority, not duplicated here. -->\n\n## Visual North Star\n\n## Experience / Brand Character\n\n## Durable Visual Principles\n\n## Typography\n\n### Type Roles\n\n<!-- Record only project-specific recurring semantic type roles when sourced/approved. Do not create a different role for every element. -->\n\n### Type Scale\n\n<!-- Record the approved project type-size/weight/line-height system if one exists. JOEDESIGN defaults used during draft proof are not automatically project authority. -->\n\n### Reading Measure / Rhythm\n\n<!-- Long-form measure, line-height, paragraph rhythm, language-specific constraints, and material optical notes when they matter. -->\n\n### Responsive Type Translation\n\n<!-- Preserve semantic role hierarchy and readable measure; do not merely scale desktop values proportionally. -->\n\n## Color / Surface\n\n<!-- Persist only sourced/approved project-specific color decisions. JOEDESIGN defaults used during draft proof do not automatically become project authority. -->\n\n### Color Roles\n\n### Accent Ownership\n\n### Surface / Layer Relationships\n\n### State / Contrast Constraints\n\n## Composition / Spatial Hierarchy\n\n### Visual Flow\n\n<!-- Entry point → next visual destination(s) → major narrative/task transitions. -->\n\n### Spatial Profile\n\n<!-- Record project-specific spacing roles only when sourced/approved. If no override exists, JOEDESIGN may use its current default craft profile during draft proof without promoting those values to project authority. -->\n\n## Imagery / Artwork\n\n## Component / Control Grammar\n\n## Motion / Interaction Expression\n\n## Responsive Translation\n\n## Accessibility / Legibility\n\n## Project-specific Anti-patterns\n\n## Reference Relationships\n\n<!-- Record only references that materially informed durable project decisions. Keep this compact; casual inspiration does not need a formal record. -->\n\n### Source\n\n### Evidence\n\n### Known\n\n### Unknown\n\n### Take\n\n### Do Not Take\n\n### Why\n\n### Applies To\n\n## Approved Visual Evidence\n\n<!-- Exact approved artifact/revision and the surface/state it applies to. -->\n\n## Open Visual Decisions\n\n## Amendment Rule\n\nOnly explicit user approval promotes a DRAFT to APPROVED. A material amendment\nis a separately labeled DRAFT Rev N+1 within this file; the existing APPROVED\nrevision remains authoritative until replacement is explicitly approved after\nproof. Keep only one active approved rule set. Local refinements that preserve\napproved intent do not automatically amend durable direction.\n',
+    expected: /### Role/,
+    operator: 'match',
+    diff: 'simple'
+  }
