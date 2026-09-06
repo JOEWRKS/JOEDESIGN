@@ -1,0 +1,184 @@
+✖ composition — Product priority and task or narrative flow precede pattern choice (1.447ms)
+✖ composition — cards and containers require semantic containment rather than decoration (0.2254ms)
+✖ composition — familiar AI SaaS patterns are challenge triggers not blanket bans (0.1963ms)
+✖ composition — repetition expresses equivalence and variation expresses meaningful change (0.2238ms)
+✖ composition — intentional asymmetry may support hierarchy without novelty for its own sake (0.1966ms)
+✖ composition — distinctiveness never overrides Product Truth usability or accessibility (0.5297ms)
+✖ composition — mobile recomposes priority instead of shrinking desktop coordinates (0.2849ms)
+✖ composition — DESIGN persists compact structural authority and material claims require actual renders (0.3139ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 106.1077
+
+✖ failing tests:
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:13:1
+✖ composition — Product priority and task or narrative flow precede pattern choice (1.447ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Product priority/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /Product priority/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:19:1
+✖ composition — cards and containers require semantic containment rather than decoration (0.2254ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /semantic containment/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:20:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /semantic containment/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:25:1
+✖ composition — familiar AI SaaS patterns are challenge triggers not blanket bans (0.1963ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /hero.*right image|three.*feature|3.*card|pill/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:26:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /hero.*right image|three.*feature|3.*card|pill/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:31:1
+✖ composition — repetition expresses equivalence and variation expresses meaningful change (0.2238ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /repetition.*equivalence|equivalence.*repetition/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:32:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /repetition.*equivalence|equivalence.*repetition/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:36:1
+✖ composition — intentional asymmetry may support hierarchy without novelty for its own sake (0.1966ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /intentional asymmetry/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:37:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /intentional asymmetry/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:42:1
+✖ composition — distinctiveness never overrides Product Truth usability or accessibility (0.5297ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Product Truth|Product/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:43:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /Product Truth|Product/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:48:1
+✖ composition — mobile recomposes priority instead of shrinking desktop coordinates (0.2849ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /recompose/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:49:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /recompose/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-composition-anti-template-core.tests.mjs:54:1
+✖ composition — DESIGN persists compact structural authority and material claims require actual renders (0.3139ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /## Composition/. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-composition-anti-template-worktree/tests/joedesign-composition-anti-template-core.tests.mjs:55:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /## Composition/,
+    operator: 'match',
+    diff: 'simple'
+  }
