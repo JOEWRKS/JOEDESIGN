@@ -7,8 +7,8 @@ import {fileURLToPath} from 'node:url';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const skill = readFileSync(path.join(root, 'skills/joedesign/SKILL.md'), 'utf8');
 const template = readFileSync(path.join(root, 'skills/joedesign/templates/DESIGN.md'), 'utf8');
-const imagery = skill.match(/^## [^\r\n]*imagery[^\r\n]*\r?\n[\s\S]*?(?=^## |\s*$)/im)?.[0] ?? '';
-const imageryTemplate = template.match(/^## Imagery \/ Artwork\r?\n[\s\S]*?(?=^## |\s*$)/m)?.[0] ?? '';
+const imagery = skill.match(/^## [^\r\n]*imagery[^\r\n]*\r?\n[\s\S]*?(?=^## |(?![\s\S]))/im)?.[0] ?? '';
+const imageryTemplate = template.match(/^## Imagery \/ Artwork\r?\n[\s\S]*?(?=^## |(?![\s\S]))/m)?.[0] ?? '';
 
 test('imagery — role precedes treatment and informative imagery remains Product content', () => {
   assert.match(imagery, /Role before (?:asset )?treatment/i);

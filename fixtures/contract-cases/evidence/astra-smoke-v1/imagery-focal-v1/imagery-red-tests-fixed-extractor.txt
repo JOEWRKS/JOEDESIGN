@@ -1,0 +1,184 @@
+✖ imagery — role precedes treatment and informative imagery remains Product content (1.8758ms)
+✖ imagery — focal ownership or visual sequence is intentional (0.348ms)
+✖ imagery — text-image dominance is deliberate rather than accidental co-dominance (0.2244ms)
+✖ imagery — crop and focal point preserve important or required image content (0.2087ms)
+✖ imagery — scale and negative space express image priority without fixed ratios (0.2529ms)
+✖ imagery — references contribute imagery relationships without copied assets or invented source facts (0.1967ms)
+✖ imagery — responsive translation may recrop reposition or recompose while preserving role and required content (0.1613ms)
+✖ imagery — project DESIGN persists compact focal authority and material claims require actual target renders (0.2076ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 0
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 89.1812
+
+✖ failing tests:
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:13:1
+✖ imagery — role precedes treatment and informative imagery remains Product content (1.8758ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /Role before (?:asset )?treatment/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:14:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.start (node:internal/test_runner/test:1242:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /Role before (?:asset )?treatment/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:21:1
+✖ imagery — focal ownership or visual sequence is intentional (0.348ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /intentional focal (?:owner|ownership)|focal (?:owner|ownership).*intentional/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:22:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /intentional focal (?:owner|ownership)|focal (?:owner|ownership).*intentional/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:26:1
+✖ imagery — text-image dominance is deliberate rather than accidental co-dominance (0.2244ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /text[- ↔]+image dominance/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:27:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /text[- ↔]+image dominance/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:32:1
+✖ imagery — crop and focal point preserve important or required image content (0.2087ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /important (?:subject|focal region)/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:33:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /important (?:subject|focal region)/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:38:1
+✖ imagery — scale and negative space express image priority without fixed ratios (0.2529ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /scale (?:and|\/) negative space (?:express|communicate) (?:image )?priority/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:39:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /scale (?:and|\/) negative space (?:express|communicate) (?:image )?priority/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:43:1
+✖ imagery — references contribute imagery relationships without copied assets or invented source facts (0.1967ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /(?:image|imagery|reference) relationships?/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:44:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /(?:image|imagery|reference) relationships?/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:49:1
+✖ imagery — responsive translation may recrop reposition or recompose while preserving role and required content (0.1613ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /recrop/i. Input:
+  
+  ''
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:50:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '',
+    expected: /recrop/i,
+    operator: 'match',
+    diff: 'simple'
+  }
+
+test at tests\joedesign-imagery-focal-core.tests.mjs:57:1
+✖ imagery — project DESIGN persists compact focal authority and material claims require actual target renders (0.2076ms)
+  AssertionError [ERR_ASSERTION]: The input did not match the regular expression /### Role/. Input:
+  
+  '## Imagery / Artwork\n\n'
+  
+      at TestContext.<anonymous> (file:///D:/JOEWRKS/joedesign-imagery-focal-worktree/tests/joedesign-imagery-focal-core.tests.mjs:59:10)
+      at Test.runInAsyncScope (node:async_hooks:226:14)
+      at Test.run (node:internal/test_runner/test:1382:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+      at Test.postRun (node:internal/test_runner/test:1522:19)
+      at Test.run (node:internal/test_runner/test:1447:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: '## Imagery / Artwork\n\n',
+    expected: /### Role/,
+    operator: 'match',
+    diff: 'simple'
+  }
