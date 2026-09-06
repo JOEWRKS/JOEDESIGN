@@ -54,6 +54,29 @@ Keep product meaning in its authority, not duplicated here. -->
 
 <!-- Record project-specific spacing roles only when sourced/approved. If no override exists, JOEDESIGN may use its current default craft profile during draft proof without promoting those values to project authority. -->
 
+## Composition
+
+### Structural Sequence
+<!-- Primary first → second → third structural progression. -->
+
+### Major Region Roles
+<!-- Major semantic regions and relative dominance. -->
+
+### Containment Rules
+<!-- What is legitimately card/panel/container bounded, and what stays open. -->
+
+### Repetition / Variation
+<!-- Which structures repeat because roles are equivalent; where structure intentionally changes. -->
+
+### Project-specific Anti-patterns
+<!-- Only durable project-specific patterns to avoid; no global template blacklist. -->
+
+### Responsive Composition
+<!-- How priority/order/containment recomposes across target viewports. -->
+
+### Approved Evidence
+<!-- Exact approved artifact/revision/surface/state/viewport. -->
+
 ## Imagery / Artwork
 
 <!-- Optional: persist only sourced/approved durable imagery decisions. Empty or unknown values are valid. -->

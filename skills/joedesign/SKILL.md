@@ -83,6 +83,14 @@ For responsive work, preserve hierarchy roles and visual flow, not desktop coord
 
 When a material proof is challenged, be able to identify the major Visual Block Tree, intended visual flow, spacing roles at important boundaries, whether same relationships use the same role, and any deliberate exception. Observe the actual render before declaring the hierarchy successful.
 
+## Build composition from structure
+
+Structure before pattern. Establish Product priority and task/narrative flow before choosing a layout recipe. Require semantic containment before card or panel use; a container must express a real boundary, not manufacture one.
+
+Common AI/SaaS motifs such as a hero + right image, three equal feature cards, or decorative pills are challenge triggers, not blanket bans. Repetition expresses semantic equivalence; variation expresses a meaningful change in role or priority. Intentional asymmetry is allowed when hierarchy remains clear. Prefer project specificity over novelty; Product Truth, usability, and accessibility remain boundaries.
+
+References contribute relationships, not complete page grammar. Mobile recomposes semantic priority rather than shrinking desktop coordinates. Material composition claims require actual target renders.
+
 ## Assign color by role and preserve contrast meaning
 
 Role before color value. Identify the recurring semantic color roles a surface needs, then assign or reuse project values; prefer `semantic job → reusable color role → project value` over an attractive local color value. Use contrast hierarchy to reinforce Product priority, and give each attention-dominant accent clear accent ownership. Do not make every element equally loud.

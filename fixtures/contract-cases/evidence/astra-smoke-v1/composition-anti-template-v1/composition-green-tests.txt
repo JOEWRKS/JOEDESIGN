@@ -1,0 +1,16 @@
+✔ composition — Product priority and task or narrative flow precede pattern choice (0.9114ms)
+✔ composition — cards and containers require semantic containment rather than decoration (0.3985ms)
+✔ composition — familiar AI SaaS patterns are challenge triggers not blanket bans (0.287ms)
+✔ composition — repetition expresses equivalence and variation expresses meaningful change (0.5279ms)
+✔ composition — intentional asymmetry may support hierarchy without novelty for its own sake (0.4065ms)
+✔ composition — distinctiveness never overrides Product Truth usability or accessibility (0.3639ms)
+✔ composition — mobile recomposes priority instead of shrinking desktop coordinates (0.1874ms)
+✔ composition — DESIGN persists compact structural authority and material claims require actual renders (0.1829ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 104.7964
