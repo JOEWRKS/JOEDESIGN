@@ -3,8 +3,8 @@
 **Status:** Active execution roadmap  
 **Purpose:** 대화 기억이 없어져도 현재 완료 상태, 남은 순서, gate, 금지선을 즉시 복구한다.  
 **Operating model:** `docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md`  
-**Current working branch:** `codex/joedesign-v0.1-imagery-focal-core`  
-**Current phase baseline:** Color / Contrast Core CLOSED at `7417ef037062f27272c3d3527713475b7d97c6f3`
+**Current working branch:** `codex/joedesign-v0.1-composition-anti-template-core`  
+**Current phase baseline:** Imagery / Focal Ownership Core CLOSED at `ad22a9a761eb89ec03ace3fd94625f6a6db6927e`
 
 ---
 
@@ -33,8 +33,8 @@ JOEDESIGN v0.1은 다음 다섯 층을 가진 작고 독립적인 AI 디자인 �
 | Typography & Scale Core | 완료 | 완료 | CLOSED |
 | Reference Intelligence | 완료 | 완료 | CLOSED |
 | Color / Contrast Core | 완료 | 완료 | CLOSED |
-| Imagery / Focal Ownership Core | doctrine/plan 작성 | 미완료 | IN PROGRESS |
-| Composition / Anti-template Core | 미착수 | 미착수 | NEXT AFTER IMAGERY |
+| Imagery / Focal Ownership Core | 완료 | 완료 | CLOSED |
+| Composition / Anti-template Core | doctrine/plan 작성 | 미완료 | IN PROGRESS |
 | Optical / Detail Polish | 미착수 | 미착수 | OPTIONAL MINIMUM |
 | Implementation Bridge | candidate 별도 보존 | 미완료 | HOLD |
 | Pure Core Freeze | 미완료 | 미완료 | GATE |
@@ -43,8 +43,7 @@ JOEDESIGN v0.1은 다음 다섯 층을 가진 작고 독립적인 AI 디자인 �
 현재 순서:
 
 ```text
-Imagery / Focal Ownership
-→ Composition / Anti-template
+Composition / Anti-template
 → Optical 최소 필요성 판단
 → Implementation Bridge validation
 → Pure Core freeze
@@ -75,159 +74,152 @@ Imagery / Focal Ownership
 - [x] spacing belongs to relationship/boundary
 - [x] structural hierarchy / binding hierarchy 분리
 - [x] JOE spatial roles `160 / 48 / 24 / 16 / 8 / 4`
-- [x] 제한된 4px spatial vocabulary
 - [x] responsive hierarchy translation
 - [x] rendered Smoke C
 
 ### Typography & Scale Core
 
-- [x] `Role before value`
+- [x] role before value
 - [x] semantic type roles
 - [x] font size alone is not hierarchy
-- [x] restrained type scale
-- [x] family/weight restraint
-- [x] reading measure / line-height system
-- [x] Product-priority focal scale
-- [x] responsive typography translation
-- [x] static/semantic/rendered validation 완료
+- [x] restrained type scale / family / weight / measure / line-height
+- [x] responsive type translation
+- [x] static + semantic + rendered validation
 
 ### Reference Intelligence
 
-- [x] material adoption에서만 provenance/evidence discipline
+- [x] material adoption discipline
 - [x] `KNOWN / UNKNOWN`
-- [x] missing source facts 발명 금지
 - [x] `TAKE / DO NOT TAKE / WHY / APPLIES TO`
 - [x] evidence quality ≠ aesthetic authority
-- [x] multi-reference scoped contribution
-- [x] conflict 자동 평균/다수결 금지
-- [x] external corpus optional
-- [x] DB/router/vendor dependency 없음
-- [x] static contracts `40/40 PASS`
-- [x] Astra semantic replay `14/14 PASS`
+- [x] multi-reference conflict stays explicit
+- [x] external corpus optional; DB/router/vendor dependency 없음
+- [x] static `40/40 PASS`
+- [x] Astra semantic `14/14 PASS`
 - [x] Smoke E PASS
 - [x] Program Lead: `REFERENCE_INTELLIGENCE_CORE = CLOSED`
 
 ### Color / Contrast Core
 
 - [x] role before color value
-- [x] semantic color roles
-- [x] contrast hierarchy
-- [x] accent ownership
-- [x] neutral/surface-layer hierarchy
-- [x] state color preserves Product semantics
-- [x] color-only required cue 금지
-- [x] WCAG 2.2 AA minimum gate where applicable
-- [x] accessibility gate ≠ aesthetic preset
-- [x] contextual foreground/background verification
-- [x] responsive/theme roles preserved, values may change
-- [x] project palette overrides JOE defaults
-- [x] static contracts `48/48 PASS`
-- [x] fresh Astra semantic replay `14/14 PASS`
-- [x] Smoke G PASS — desktop `1440×1000`, mobile viewport `390×844`
-- [x] Product / APPROVED DESIGN invariant
-- [x] User Acceptance 별도 유지
+- [x] semantic color roles / contrast hierarchy / accent ownership
+- [x] neutral surface hierarchy
+- [x] state semantics + non-color cues
+- [x] WCAG AA minimum gate where applicable
+- [x] contextual foreground/background observation
+- [x] responsive/theme role preservation
+- [x] static `48/48 PASS`
+- [x] fresh Astra semantic `14/14 PASS`
+- [x] Smoke G PASS
 - [x] Program Lead: `COLOR_CONTRAST_CORE = CLOSED`
 
-Canonical Color evidence branch HEAD: `7417ef037062f27272c3d3527713475b7d97c6f3`.
+Canonical Color evidence HEAD: `7417ef037062f27272c3d3527713475b7d97c6f3`.
+
+### Imagery / Focal Ownership Core
+
+- [x] role before asset treatment
+- [x] `FOCAL / SUPPORT / DECORATIVE`
+- [x] informative imagery preserves Product meaning
+- [x] intentional focal ownership / sequence
+- [x] deliberate text-image dominance
+- [x] focal region / crop intent
+- [x] scale / negative space express image priority
+- [x] reference imagery relationship ≠ copied asset
+- [x] responsive recrop/reposition/recomposition
+- [x] actual render required for crop/focal PASS
+- [x] static `56/56 PASS`
+- [x] Imagery contracts `8/8 PASS`
+- [x] fresh Astra semantic `14/14 PASS`
+- [x] Smoke H H1–H9 PASS — desktop `1440×1000`, mobile viewport `390×844`
+- [x] Product / APPROVED DESIGN invariant
+- [x] User Acceptance remains separate
+- [x] Program Lead: `IMAGERY_FOCAL_CORE = CLOSED`
+
+Canonical Imagery evidence HEAD: `ad22a9a761eb89ec03ace3fd94625f6a6db6927e`.
 
 ---
 
-## 4. Phase 3 — Imagery / Focal Ownership Core
+## 4. Phase 4 — Composition / Anti-template Core
 
 **Status:** IN PROGRESS  
-**Canonical doctrine:** `docs/specs/joedesign-imagery-focal-core-v0.1.md`  
-**Implementation plan:** `docs/superpowers/plans/2026-09-06-joedesign-imagery-focal-core-v0.1.md`  
-**Execution handoff:** `docs/handoffs/JOEDESIGN_IMAGERY_FOCAL_CORE_V1.md`
+**Canonical doctrine:** `docs/specs/joedesign-composition-anti-template-core-v0.1.md`  
+**Implementation plan:** `docs/superpowers/plans/2026-09-06-joedesign-composition-anti-template-core-v0.1.md`  
+**Execution handoff:** `docs/handoffs/JOEDESIGN_COMPOSITION_ANTI_TEMPLATE_CORE_V1.md`
 
 ### Required behavior
 
-- [x] Doctrine: role before asset treatment
-- [x] Doctrine: `FOCAL / SUPPORT / DECORATIVE`
-- [x] Doctrine: informative/evidence imagery preserves Product meaning
-- [x] Doctrine: intentional focal owner / sequence
-- [x] Doctrine: deliberate text-image dominance
-- [x] Doctrine: explicit focal region / crop intent
-- [x] Doctrine: scale and negative space express priority
-- [x] Doctrine: reference imagery relationship ≠ copied asset
-- [x] Doctrine: responsive recrop/reposition/recomposition
-- [x] Doctrine: actual render required for crop/focal PASS
-- [x] Doctrine: compact Project DESIGN.md persistence
+- [x] Doctrine: structure before pattern
+- [x] Doctrine: Product priority + task/narrative flow precede layout recipe
+- [x] Doctrine: semantic containment before cards/panels
+- [x] Doctrine: familiar AI/SaaS motifs are challenge triggers, not blanket bans
+- [x] Doctrine: repetition expresses equivalence
+- [x] Doctrine: variation expresses meaningful role/priority change
+- [x] Doctrine: intentional asymmetry allowed when hierarchy remains clear
+- [x] Doctrine: specificity over novelty
+- [x] Doctrine: Product Truth/usability/accessibility remain boundaries
+- [x] Doctrine: references contribute relationships, not complete page grammar
+- [x] Doctrine: mobile recomposes rather than shrinking desktop coordinates
+- [x] Doctrine: actual target render required for material composition PASS
 
 ### Codex implementation checklist
 
-- [ ] isolated worktree / baseline `48/48`
-- [ ] Imagery contracts 8개 test-first 작성
+- [ ] isolated worktree / baseline `56/56`
+- [ ] Composition contracts 8개 test-first 작성
 - [ ] RED evidence 보존
-- [ ] 최소 `SKILL.md` imagery/focal behavior 추가
-- [ ] `DESIGN.md` imagery/focal block 최소 확장
-- [ ] Imagery contracts `8/8 PASS`
+- [ ] 최소 `SKILL.md` composition behavior 추가
+- [ ] `DESIGN.md` Composition block 최소 확장
+- [ ] Composition contracts `8/8 PASS`
 - [ ] fresh Astra semantic replay `14/14 PASS`
-- [ ] 전체 suite `56/56 PASS`
-- [ ] Smoke H neutral fixture
-- [ ] pre-edit image-role map
+- [ ] 전체 suite `64/64 PASS`
+- [ ] Smoke I neutral fixture
+- [ ] pre-edit structural map
 - [ ] desktop `1440×1000` actual before/after observation
 - [ ] mobile viewport `390×844` actual before/after observation
-- [ ] focal owner visually correct
-- [ ] important focal/subject region preserved
-- [ ] text-image dominance intentional
-- [ ] responsive crop/reposition preserves intent
+- [ ] Product first/second/third destinations 보존
+- [ ] semantic containment / card justification 확인
+- [ ] generic motif 자동 기본값 억제 확인
+- [ ] repetition / variation structural meaning 확인
+- [ ] mobile recomposition 확인
 - [ ] Product / APPROVED DESIGN invariant
 - [ ] User Acceptance separate
-- [ ] final `56/56 PASS`
+- [ ] final `64/64 PASS`
 
 ### Required execution order
 
 ```text
-baseline 48/48
+baseline 56/56
 → RED
 → minimal implementation
-→ Imagery 8/8
+→ Composition 8/8
 → fresh semantic 14/14
-→ full 56/56
-→ Smoke H
-→ final 56/56
+→ full 64/64
+→ Smoke I
+→ final 64/64
 ```
 
-If Smoke H changes any shipped `skills/joedesign/**` bytes:
+If Smoke I changes shipped `skills/joedesign/**` bytes:
 
 ```text
 fresh semantic again
-→ full 56/56 again
-→ rerun affected Smoke H evidence
+→ full 64/64 again
+→ rerun affected Smoke I evidence
 ```
 
 ### Gate
 
-Program Lead approval after all required evidence:
+Program Lead approval after all evidence:
 
 ```text
-IMAGERY_FOCAL_CORE = CLOSED
+COMPOSITION_ANTI_TEMPLATE_CORE = CLOSED
 ```
 
 ---
 
-## 5. Phase 4 — Composition / Anti-template Core
+## 5. Phase 5 — Optical / Detail Polish Decision
 
-**Status:** NOT STARTED
+**Status:** OPTIONAL MINIMUM
 
-- [ ] Product priority / narrative-task flow에서 composition 시작
-- [ ] card는 의미 있는 containment일 때만 사용
-- [ ] `hero + right image`, `3-card features`, pills, floating blobs 자동 문법 억제
-- [ ] intentional asymmetry 허용
-- [ ] repetition / variation 역할 구분
-- [ ] 모든 section의 동일 loudness/shape 반복 금지
-- [ ] reference를 generic template 평균으로 만들지 않기
-- [ ] distinctiveness가 Product Truth/usability 침범 금지
-- [ ] mobile composition 재구성
-- [ ] doctrine → RED contracts → minimal runtime → Smoke I
-
-Gate: `COMPOSITION_ANTI_TEMPLATE_CORE = CLOSED`
-
----
-
-## 6. Phase 5 — Optical / Detail Polish Decision
-
-독립 거대 코어로 선제 확장하지 않는다. 경쟁 전 실제 proof에서 필요성이 증명될 때만 최소화한다.
+독립 거대 코어로 선제 확장하지 않는다. Composition까지의 actual proof와 경쟁 준비 상태에서 명확한 반복 결함이 확인될 때만 최소화한다.
 
 검토 후보:
 
@@ -252,7 +244,7 @@ OPTICAL_CORE = DEFERRED; no demonstrated need before competition
 
 ---
 
-## 7. Phase 6 — Implementation Bridge Validation
+## 6. Phase 6 — Implementation Bridge Validation
 
 Implementation Bridge candidate는 별도 branch에 보존되어 있다. Craft Core를 완료하기 전 더 확장하지 않는다.
 
@@ -267,7 +259,7 @@ Implementation Bridge candidate는 별도 branch에 보존되어 있다. Craft C
 - [x] custom JOEDESIGN sections 보존
 - [x] Token Mapping PASS ≠ Visual PASS
 
-Competition 전 필수 아님:
+Competition 전 필수 구현 아님:
 
 - [ ] parser
 - [ ] standalone lint CLI
@@ -285,7 +277,7 @@ Gate: `IMPLEMENTATION_BRIDGE_V0_1 = CLOSED`
 
 ---
 
-## 8. Pure Core Freeze
+## 7. Pure Core Freeze
 
 - [ ] public entrypoint = 1
 - [ ] competitor runtime dependency = 0
@@ -304,7 +296,7 @@ Gate: `JOEDESIGN_PURE_CORE_FROZEN = PASS`
 
 ---
 
-## 9. BIO 5-way Competition
+## 8. BIO 5-way Competition
 
 Pure Core freeze 전에는 실행하지 않는다.
 
@@ -316,7 +308,7 @@ Competitors:
 - [ ] Astra x-high + UI UX Pro Max only
 - [ ] Figma Make
 
-Round 1:
+Round 1 target:
 
 - [ ] BIO Opening Hero desktop `1440×900`
 - [ ] mobile `390×844`
@@ -342,7 +334,7 @@ Mobile 10
 
 ---
 
-## 10. v0.2 Decision
+## 9. v0.2 Decision
 
 경쟁 전에 competitor mechanism을 JOEDESIGN에 복사하지 않는다.
 
@@ -357,7 +349,7 @@ Mobile 10
 
 ---
 
-## 11. 항상 지켜야 할 금지선
+## 10. 항상 지켜야 할 금지선
 
 - [ ] Product meaning을 시각 편의를 위해 변경하지 않는다.
 - [ ] Visual PASS로 User Acceptance를 추론하지 않는다.
@@ -365,14 +357,16 @@ Mobile 10
 - [ ] Unknown source facts를 그럴듯하게 복원하지 않는다.
 - [ ] JOE default taste가 APPROVED DESIGN.md를 덮지 않는다.
 - [ ] 작은 수정에 전체 exploration/workflow를 강제하지 않는다.
+- [ ] common pattern 자체를 blanket-ban하지 않는다.
+- [ ] anti-template을 novelty score로 바꾸지 않는다.
 - [ ] Google/OmD/Awesome/competitor runtime을 v0.1 dependency로 넣지 않는다.
-- [ ] 필요성이 증명되지 않은 DB/router/CLI/asset system을 선제 구축하지 않는다.
+- [ ] 필요성이 증명되지 않은 DB/router/CLI/asset/template system을 선제 구축하지 않는다.
 - [ ] failure evidence를 삭제하거나 expected result를 실패에 맞춰 수정하지 않는다.
 - [ ] actual render 없이 material Visual PASS를 선언하지 않는다.
 
 ---
 
-## 12. Memory-loss Recovery Procedure
+## 11. Memory-loss Recovery Procedure
 
 새 세션/새 에이전트는 구현 전에 다음 순서로 읽는다.
 
@@ -391,12 +385,12 @@ Mobile 10
 
 ---
 
-## 13. Immediate Next Action
+## 12. Immediate Next Action
 
 현재 다음 작업은 하나다.
 
 ```text
-Imagery / Focal Ownership Core implementation + validation
+Composition / Anti-template Core implementation + validation
 ```
 
-Codex는 `docs/handoffs/JOEDESIGN_IMAGERY_FOCAL_CORE_V1.md`를 최우선 실행 지시로 사용한다.
+Codex는 `docs/handoffs/JOEDESIGN_COMPOSITION_ANTI_TEMPLATE_CORE_V1.md`를 최우선 실행 지시로 사용한다.
