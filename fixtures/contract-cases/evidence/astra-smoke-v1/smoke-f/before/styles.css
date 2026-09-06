@@ -1,0 +1,43 @@
+:root {
+  --workspace: #f2f4f7;
+  --sheet: #ffffff;
+  --copy: #1e2520;
+  --supporting-copy: #66706a;
+  --hairline: #d7ddd8;
+  --commit-action: #3459a8;
+  --positive: #207a55;
+  --watch: #8a6418;
+  --intervention: #a33a32;
+  --section-gap: 24px;
+  --panel-corner: 18px;
+}
+
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; background: var(--workspace); color: var(--copy); font: 16px/1.5 Inter, ui-sans-serif, system-ui, sans-serif; }
+.console { width: min(1080px, calc(100% - 48px)); margin: 0 auto; padding: 72px 0; }
+.heading { display: grid; gap: 12px; padding-bottom: var(--section-gap); border-bottom: 1px solid var(--hairline); }
+.eyebrow { margin: 0; color: var(--supporting-copy); font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+h1 { margin: 0; font-size: clamp(38px, 5vw, 64px); line-height: 1.02; letter-spacing: -.045em; }
+.summary { max-width: 660px; margin: 0; color: var(--supporting-copy); font-size: 19px; }
+.status-list { display: grid; gap: 12px; margin-top: var(--section-gap); }
+.status-row { display: grid; grid-template-columns: 14px 1fr; gap: 18px; align-items: start; padding: 22px 24px; background: var(--sheet); border: 1px solid var(--hairline); border-radius: var(--panel-corner); }
+.status-dot { width: 10px; height: 10px; margin-top: 8px; border-radius: 50%; background: currentColor; }
+.healthy { color: var(--positive); } .monitoring { color: var(--watch); } .attention { color: var(--intervention); }
+.status-row h2 { margin: 0; color: var(--copy); font-size: 18px; }
+.status-row p { margin: 4px 0 0; color: var(--supporting-copy); }
+.status-row strong { color: var(--copy); }
+.actions { display: flex; align-items: center; gap: 22px; margin-top: var(--section-gap); }
+button { min-height: 48px; padding: 0 22px; border: 0; border-radius: 999px; background: var(--commit-action); color: white; font: inherit; font-weight: 700; cursor: pointer; }
+a { color: var(--copy); font-weight: 700; text-underline-offset: 4px; }
+
+@media (max-width: 600px) {
+  .console { width: min(100% - 32px, 420px); padding: 36px 0; }
+  .heading { gap: 10px; }
+  h1 { font-size: 40px; }
+  .summary { font-size: 17px; }
+  .status-row { padding: 18px; }
+  .actions { align-items: stretch; flex-direction: column; gap: 14px; }
+  button { width: 100%; }
+  a { text-align: center; }
+}
+
