@@ -1,0 +1,48 @@
+✔ 01 — single public entrypoint (4.909ms)
+✔ 02 — no product-authority override (2.9023ms)
+✔ 03 — DESIGN.md lifecycle (1.3865ms)
+✔ 04 — unresolved direction meaningful alternatives (2.2939ms)
+✔ 05 — approved direction no unnecessary alternatives (1.7196ms)
+✔ 06 — reference relationship handling (1.2904ms)
+✔ 07 — target-medium proof (1.2139ms)
+✔ 08 — exact-target refinement (3.4157ms)
+✔ 09 — local refinement does not cause redesign (1.751ms)
+✔ 10 — repeated rejection direction reconsideration (1.4109ms)
+✔ 11 — responsive translation (2.1091ms)
+✔ 12 — product ambiguity bounded re-entry (1.2648ms)
+✔ 13 — actual-output PASS FAIL UNVERIFIED (1.0988ms)
+✔ 14 — technical PASS does not prove visual PASS (1.2906ms)
+✔ 15 — internal visual PASS does not confer acceptance (1.0873ms)
+✔ 16 — external competitor dependencies absent in repository and installable skill (33.4901ms)
+✔ craft — hierarchy and visual flow precede decoration (14.5165ms)
+✔ craft — material spacing follows a semantic Visual Block Tree (0.3121ms)
+✔ craft — spacing belongs to relationships, not isolated elements (0.2579ms)
+✔ craft — structural separation and binding hierarchy stay distinct (0.2241ms)
+✔ craft — 4px base uses a deliberately restricted canonical token set (0.2799ms)
+✔ craft — one-off spacing is challenged and density changes systemically (0.2878ms)
+✔ craft — responsive work preserves hierarchy roles, not raw coordinates (0.2214ms)
+✔ craft — project DESIGN template can persist the chosen spatial profile (0.1038ms)
+✔ reference — material adoption records source and evidence quality without mandatory ceremony for casual inspiration (1.7164ms)
+✔ reference — unknown facts remain unknown instead of being invented (0.205ms)
+✔ reference — relationships are extracted rather than whole-brand recipes copied (0.1615ms)
+✔ reference — references never override Product Truth or approved project design authority (0.2373ms)
+✔ reference — multiple references stay scoped and conflicts are surfaced instead of silently blended (0.2046ms)
+✔ reference — evidence quality affects trust, not aesthetic authority (0.2134ms)
+✔ reference — external corpora are optional sources, not bundled runtime dependencies or automatic routers (0.2552ms)
+✔ reference — DESIGN template can persist material reference relationships compactly (0.1424ms)
+✔ type — semantic role is chosen before numeric value (2.5317ms)
+✔ type — hierarchy uses multiple axes rather than font size alone (0.4237ms)
+✔ type — scale is restrained and independent from the spatial 4px grid (0.3657ms)
+✔ type — near-duplicate roles and arbitrary local sizes are challenged (0.3102ms)
+✔ type — family and weight strategy is restrained and role-based (0.3182ms)
+✔ type — readability couples measure, line height, language, and actual face (0.5603ms)
+✔ type — responsive translation preserves role hierarchy instead of proportional shrinking (0.3467ms)
+✔ type — project DESIGN template can persist type roles and reading system (0.16ms)
+ℹ tests 40
+ℹ suites 0
+ℹ pass 40
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 178.8384

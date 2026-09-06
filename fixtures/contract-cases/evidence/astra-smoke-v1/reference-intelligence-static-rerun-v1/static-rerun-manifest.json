@@ -1,0 +1,144 @@
+{
+  "kind": "static-gate-rerun-only",
+  "checkedAt": "2026-09-06T08:07:19.445Z",
+  "repository": "JOEWRKS/JOEDESIGN",
+  "branch": "codex/joedesign-v0.1-reference-intelligence-validation",
+  "startingHead": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
+  "startingTree": "9b64b04ec9f5751d8fb080090e501fbfe0ffa4c6",
+  "programLeadFix": {
+    "commit": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
+    "previousHead": "afc8ef8d6a90465a5193742ca9a6d50f89c608fe",
+    "changedPaths": [
+      "tests/joedesign-contract.tests.mjs"
+    ],
+    "change": "One allowlist line adds docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md and docs/handoffs/JOEDESIGN_REFERENCE_INTELLIGENCE_VALIDATION_V1.md. No expected semantic action, scenario, shipped skill, doctrine or fixture change.",
+    "changedDuringThisRerun": false
+  },
+  "staticContracts": {
+    "command": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs",
+    "nodeVersion": "v26.3.0",
+    "exitCode": 0,
+    "tests": 40,
+    "passed": 40,
+    "failed": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "executionsThisRerun": 1,
+    "evidence": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/contract-tests.txt",
+      "sha256": "46b1997feca69243a3fbec112ffadc248f22052d471a11c15fba1c01dcc0ae53",
+      "bytes": 3246
+    },
+    "testFileHashes": [
+      {
+        "path": "tests/joedesign-contract.tests.mjs",
+        "sha256": "aee62aa75d495a5300e50799bdeb624a83955ec03690c2f07f9d1c8f2349991e",
+        "bytes": 7020
+      },
+      {
+        "path": "tests/joedesign-craft-core.tests.mjs",
+        "sha256": "df3327fcc4a7275b349514d469d57a8006beabeebac5ee39513951b49c6edace",
+        "bytes": 2354
+      },
+      {
+        "path": "tests/joedesign-typography-scale-core.tests.mjs",
+        "sha256": "0744c4ceaf13bb704bcfbfeb42d3bc503c01ca89b661f5babbf6077d25da7e7e",
+        "bytes": 2687
+      },
+      {
+        "path": "tests/joedesign-reference-intelligence-core.tests.mjs",
+        "sha256": "4058cdc9254641ca2525b9b4f62005158a41e66573e628924fde99eb6dc7cabc",
+        "bytes": 2855
+      }
+    ]
+  },
+  "reuse": {
+    "reason": "Entire shipped skills/joedesign/** package is byte-identical to both the recorded semantic producer and Smoke E producer. Case input, expected actions, observed responses and all existing evidence bytes are unchanged; only the Program Lead's internal-document allowlist line changed.",
+    "skillSha256": {
+      "SKILL.md": "f4395b40d01f0d73ecf869bed17fa0903eab27582556efc71eec49f7bc6e9ea1",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "f22e55be18a0de8a3e44237025a13efde73598662083cfd92f86e35553991353"
+    },
+    "observed": {
+      "path": "fixtures/contract-cases/observed.json",
+      "sha256": "4eac1a9d3eaa180342cd927b7cf5a63f7aaca923cfec6774e6986c6ead02a519",
+      "bytes": 7309
+    },
+    "cases": {
+      "path": "fixtures/contract-cases/decisions.json",
+      "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+      "bytes": 6860
+    },
+    "semantic": {
+      "reused": true,
+      "passed": 14,
+      "failed": 0,
+      "newNativeRuns": 0,
+      "runtime": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh",
+        "threadId": "01a0759b-f57d-7fc3-be74-3078d1d4df14",
+        "version": "codex-cli 0.153.4",
+        "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+        "rolloutSha256": "a0334f014e76df851813707dbf907aee812006438d34ba94a663b3dfc60caab0"
+      },
+      "originalSourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290"
+    },
+    "smokeE": {
+      "reused": true,
+      "result": "PASS",
+      "newNativeRuns": 0,
+      "newBrowserRenders": 0,
+      "runtime": {
+        "model": "gpt-6-astra",
+        "effort": "xhigh",
+        "threadId": "01a0759d-4944-7a53-bc5e-a7271025e641",
+        "version": "codex-cli 0.153.4",
+        "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6"
+      },
+      "originalSourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290",
+      "manifest": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-adoption-manifest.json",
+      "artifactCount": 20
+    },
+    "allPriorArtifactHashesVerified": 29,
+    "existingFilesProtectedExceptReview": 115
+  },
+  "priorFailure": {
+    "result": "39 PASS / 1 FAIL",
+    "suite": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/final-contract-tests.txt",
+    "report": {
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-v1/review-evidence.json",
+      "sha256": "ff63c551b669563e784ac81bc26e71299f3f40cc983d89b0e4a5c5cca21fac02",
+      "bytes": 26498
+    },
+    "preservedByteExact": true,
+    "currentDisposition": "Contract 16 PASS after the supplied Program Lead allowlist fix. The original failure, raw output, reports, and Smoke E's contemporaneous NOT_READY limitation remain historical and are not rewritten."
+  },
+  "unchanged": {
+    "shippedSkill": true,
+    "doctrine": true,
+    "semanticExpectedActions": true,
+    "decisions": true,
+    "observed": true,
+    "smokeE": true,
+    "priorEvidence": true
+  },
+  "currentKnownFailures": [],
+  "unverified": [
+    "Program Lead approval, CLOSED and competition readiness are not declared.",
+    "Reused smoke covers its original neutral static portal and named Chrome targets only; no new rendering or acceptance.",
+    "Reference unknowns remain unknown; no new source facts were inferred."
+  ],
+  "evidenceArtifacts": [
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/contract-tests.txt",
+      "sha256": "46b1997feca69243a3fbec112ffadc248f22052d471a11c15fba1c01dcc0ae53",
+      "bytes": 3246
+    },
+    {
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-v1/review-evidence.json",
+      "sha256": "ff63c551b669563e784ac81bc26e71299f3f40cc983d89b0e4a5c5cca21fac02",
+      "bytes": 26498
+    }
+  ]
+}

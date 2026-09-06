@@ -1,16 +1,17 @@
 {
-  "status": "JOEDESIGN_REFERENCE_INTELLIGENCE_CORE_NOT_READY",
-  "readiness": "NOT_READY: the final required suite is 39/40 PASS with one preserved package allowlist failure. Semantic replay is 14/14 PASS and neutral Smoke E is PASS. Neither READY, Reference Intelligence CLOSED nor competition readiness is declared.",
+  "status": "JOEDESIGN_REFERENCE_INTELLIGENCE_CORE_READY_FOR_PROGRAM_REVIEW",
+  "readiness": "READY for Program Lead review: fresh static suite 40/40 PASS; byte-verified reuse of semantic replay 14/14 PASS and Smoke E PASS. No new native replay or render. Program Lead approval, Reference Intelligence CLOSED and competition readiness are not declared.",
   "repository": {
     "actual": "JOEWRKS/JOEDESIGN",
     "visibility": "private",
     "branch": "codex/joedesign-v0.1-reference-intelligence-validation",
     "handoffStartingHead": "fb8c843629416c3f706c8d9cd72eb9c1f60889d0",
-    "startingHead": "d8b35c67205e837318ae49b17333c293ebe44290",
+    "startingHead": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
     "sourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290",
-    "startingHeadDifference": "Two documentation-only descendants add the active handoff and AGENTS pointer; shipped skill and expected answers unchanged."
+    "startingHeadDifference": "User-supplied d5636a2 changes one internal-doc allowlist line in tests/joedesign-contract.tests.mjs only; all shipped and prior evidence bytes remain unchanged.",
+    "priorValidationHead": "afc8ef8d6a90465a5193742ca9a6d50f89c608fe"
   },
-  "scope": "Reference Intelligence Core validation only. Current 14 scenarios replayed once in a fresh gpt-6-astra/xhigh context; new neutral Smoke E once in a separate fresh native context; baseline/final full 40-test suite. No shipped changes, new feature, doctrine, Bridge, main merge, personal installation change or corpus/dependency.",
+  "scope": "Static gate rerun only after the Program Lead's internal-document allowlist correction. One full 40-test execution, new bounded static evidence, byte-exact archive of prior NOT_READY review and review refresh. No semantic replay, browser/render run, source/skill/doctrine/expected-answer/Smoke E edit.",
   "publicSkill": "joedesign",
   "publicEntrypointCount": 1,
   "competitorDependencyCount": 0,
@@ -21,18 +22,18 @@
   "contractTests": {
     "command": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs",
     "nodeVersion": "v26.3.0",
-    "result": "FAIL",
-    "exitCode": 1,
+    "result": "PASS",
+    "exitCode": 0,
     "tests": 40,
-    "passed": 39,
-    "failed": 1,
+    "passed": 40,
+    "failed": 0,
     "cancelled": 0,
     "skipped": 0,
     "breakdown": {
       "processAuthority": {
         "tests": 16,
-        "passed": 15,
-        "failed": 1
+        "passed": 16,
+        "failed": 0
       },
       "spatialCraft": {
         "tests": 8,
@@ -57,10 +58,27 @@
       "reason": "Fourteen stale skill provenance failures plus the independent package allowlist failure."
     },
     "evidence": [
-      "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/initial-contract-tests.txt",
-      "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/final-contract-tests.txt"
+      "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/contract-tests.txt"
     ],
-    "kind": "Fourteen actual supplied-choice semantic decisions and 26 static assertions; not a substitute for actual rendered smoke evidence."
+    "kind": "Fourteen actual supplied-choice semantic decisions and 26 static assertions; not a substitute for actual rendered smoke evidence.",
+    "executionsThisRerun": 1,
+    "sourceCommit": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
+    "priorValidationFinal": {
+      "tests": 40,
+      "passed": 39,
+      "failed": 1,
+      "evidence": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/final-contract-tests.txt",
+      "preserved": true
+    },
+    "programLeadFix": {
+      "commit": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
+      "previousHead": "afc8ef8d6a90465a5193742ca9a6d50f89c608fe",
+      "changedPaths": [
+        "tests/joedesign-contract.tests.mjs"
+      ],
+      "change": "One allowlist line adds docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md and docs/handoffs/JOEDESIGN_REFERENCE_INTELLIGENCE_VALIDATION_V1.md. No expected semantic action, scenario, shipped skill, doctrine or fixture change.",
+      "changedDuringThisRerun": false
+    }
   },
   "semanticReplay": {
     "result": "PASS",
@@ -88,7 +106,7 @@
     },
     "sourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290",
     "scenarioAndExpectedAnswersUnchanged": true,
-    "runCount": 1,
+    "runCount": 0,
     "reruns": 0,
     "wallMs": 45803,
     "case14": {
@@ -109,11 +127,15 @@
       ],
       "reason": "Observed visual conformance supports PASS; '진행' authorizes bounded continuation without accepting the material direction."
     },
-    "limitations": "One fresh supplied-choice replay of all fourteen unchanged scenarios against the current Reference Intelligence skill; not execution proof for every scenario. Historical A/B/C/D are preserved, not claimed as current-skill smoke evidence."
+    "limitations": "One fresh supplied-choice replay of all fourteen unchanged scenarios against the current Reference Intelligence skill; not execution proof for every scenario. Historical A/B/C/D are preserved, not claimed as current-skill smoke evidence.",
+    "reused": true,
+    "executedInThisRevalidation": false,
+    "originalRunCount": 1,
+    "reuseReason": "Entire shipped skills/joedesign/** package is byte-identical to both the recorded semantic producer and Smoke E producer. Case input, expected actions, observed responses and all existing evidence bytes are unchanged; only the Program Lead's internal-document allowlist line changed."
   },
   "smokeE": {
     "result": "PASS",
-    "fresh": true,
+    "fresh": false,
     "sourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290",
     "runtime": {
       "model": "gpt-6-astra",
@@ -122,7 +144,7 @@
       "version": "codex-cli 0.153.4",
       "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6"
     },
-    "runCount": 1,
+    "runCount": 0,
     "reruns": 0,
     "wallMs": 548488,
     "manifest": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-adoption-manifest.json",
@@ -229,7 +251,13 @@
     "nativeImageObservationBatches": 4,
     "wholeBodyTextIdentical": false,
     "controllerDiagnostic": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/independent-inspection-note.json",
-    "controllerDiagnosticDisposition": "Preserved diagnostic failure, not a shipped contract or changed expected answer. Product Truth already defines R-01/R-02/R-03 and before HTML has those data-record-id values; after HTML exposes only those existing IDs as presentation labels. Required title, lead, headings, exact record payloads/source/date/order and single anchor are unchanged at both targets. No implementation or expected answer was changed in response to this diagnostic. Smoke E's semantic Product Truth invariant passes; whole rendered body text is NOT claimed identical."
+    "controllerDiagnosticDisposition": "Preserved diagnostic failure, not a shipped contract or changed expected answer. Product Truth already defines R-01/R-02/R-03 and before HTML has those data-record-id values; after HTML exposes only those existing IDs as presentation labels. Required title, lead, headings, exact record payloads/source/date/order and single anchor are unchanged at both targets. No implementation or expected answer was changed in response to this diagnostic. Smoke E's semantic Product Truth invariant passes; whole rendered body text is NOT claimed identical.",
+    "originallyFresh": true,
+    "reused": true,
+    "executedInThisRevalidation": false,
+    "originalRunCount": 1,
+    "reuseReason": "Entire shipped skills/joedesign/** package is byte-identical to both the recorded semantic producer and Smoke E producer. Case input, expected actions, observed responses and all existing evidence bytes are unchanged; only the Program Lead's internal-document allowlist line changed.",
+    "historicalBoundaryNote": "Original proof/manifests retain the prior whole-repository NOT_READY statement. That contemporaneous limitation is superseded only by this separate static result; the smoke artifacts are not modified or retroactively relabelled."
   },
   "skillSha256": {
     "SKILL.md": "f4395b40d01f0d73ecf869bed17fa0903eab27582556efc71eec49f7bc6e9ea1",
@@ -382,21 +410,38 @@
       "path": "fixtures/contract-cases/history/astra-case14-regression-v1/review-evidence.json",
       "sha256": "44db3402b1f3c3738b2629e9eee6a28ca2da0a7a6125de296421c9613aca9488",
       "bytes": 62538
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/contract-tests.txt",
+      "sha256": "46b1997feca69243a3fbec112ffadc248f22052d471a11c15fba1c01dcc0ae53",
+      "bytes": 3246
+    },
+    {
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-v1/review-evidence.json",
+      "sha256": "ff63c551b669563e784ac81bc26e71299f3f40cc983d89b0e4a5c5cca21fac02",
+      "bytes": 26498
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/static-rerun-manifest.json",
+      "sha256": "3087381d8a44efba6507230470f8e4589274258408ae5fd8c663b267b03c9344",
+      "bytes": 6193
     }
   ],
   "evidenceIntegrity": {
-    "result": "PASS for hashes, provenance and preservation; not a readiness PASS",
-    "originalFileCount": 87,
-    "protectedExistingFilesUnchanged": 85,
+    "result": "PASS",
+    "readinessResult": "PASS",
+    "startingFileCount": 116,
+    "protectedExistingFilesUnchanged": 115,
     "historicalReportsByteExact": true,
     "nativeResponsesUnmodified": true,
-    "requiredFinalVisualImages": 4,
-    "additionalBoundedImages": 3,
-    "repositoryRelativeArtifactCount": 29,
-    "artifactBytes": 456701,
+    "newRenderedImages": 0,
+    "reusedSmokeEArtifacts": 20,
+    "allPriorArtifactHashesVerified": 29,
+    "repositoryRelativeArtifactCount": 32,
+    "artifactBytes": 492638,
     "rawRuntimeLogsCommitted": false,
     "credentialsCommitted": false,
-    "scope": "Only observed/review are refreshed; bounded current evidence plus byte-exact prior report archive added. Old failure evidence is not rewritten."
+    "scope": "Only review-evidence.json is refreshed. New static output/manifest and byte-exact prior review archive are added; all 115 other existing files remain unchanged."
   },
   "history": {
     "priorObserved": "fixtures/contract-cases/history/astra-case14-regression-v1/observed.json",
@@ -405,7 +450,10 @@
     "priorFailedObserved": "fixtures/contract-cases/history/astra-typography-scale-v1/observed.json",
     "priorFailedReview": "fixtures/contract-cases/history/astra-typography-scale-v1/review-evidence.json",
     "allExistingEvidenceUnchanged": true,
-    "smokeABCD": "Historical only. Not rerun and not counted as fresh evidence for changed Reference Intelligence skill bytes. Original provenance and artifacts retained."
+    "smokeABCD": "Historical only. Not rerun and not counted as fresh evidence for changed Reference Intelligence skill bytes. Original provenance and artifacts retained.",
+    "priorReferenceIntelligenceReview": "fixtures/contract-cases/history/astra-reference-intelligence-v1/review-evidence.json",
+    "priorReferenceIntelligenceFailedSuite": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/final-contract-tests.txt",
+    "originalReferenceFailurePreserved": true
   },
   "historicalFailures": [
     {
@@ -429,18 +477,7 @@
       "preservation": "Original response retained unchanged in observed.json and byte-exact semantic-final.json; expected answers, tests and implementation unchanged.",
       "causality": "One fresh observed failure is not proof that Typography doctrine caused the failure.",
       "currentDisposition": "Historical failure retained. Program Lead identified the original mixed wording as ambiguous; clarified request in 62220f9 is tested by a separate fresh replay. Production behavior and expected action sets were not changed."
-    }
-  ],
-  "crossSystemContract": {
-    "repository": "JOEWRKS/joewrks-work-harness",
-    "path": "docs/contracts/JOEWRKS_CROSS_SYSTEM_AUTHORITY_V1.md",
-    "commit": "5e7497bd104527d5e6dbfc36011f0f5ee3668ff5",
-    "blob": "54187e494ccb217cef17457fb6e2aa2631614adb",
-    "pointerUnchanged": true,
-    "copiedFullContract": false,
-    "readback": "Pinned remote blob independently fetched; local hosting checkout did not contain this path at the pinned object."
-  },
-  "knownFailures": [
+    },
     {
       "id": "contract-16-package-allowlist",
       "result": "FAIL",
@@ -454,18 +491,71 @@
         "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/final-contract-tests.txt",
         "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/initial-validation-findings.md"
       ],
-      "disposition": "No test, expected answer, document, doctrine or shipped runtime fix within validation-only scope. Program Lead must resolve this gate; NOT_READY."
+      "disposition": "No test, expected answer, document, doctrine or shipped runtime fix within validation-only scope. Program Lead must resolve this gate; NOT_READY.",
+      "currentDisposition": "Historical failure preserved byte-exact in the archived prior review and original static output. Resolved by the Program Lead's d5636a2 allowlist correction; this separate fresh static rerun returns 40/40 PASS.",
+      "resolutionCommit": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
+      "resolutionEvidence": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/contract-tests.txt"
     }
   ],
+  "crossSystemContract": {
+    "repository": "JOEWRKS/joewrks-work-harness",
+    "path": "docs/contracts/JOEWRKS_CROSS_SYSTEM_AUTHORITY_V1.md",
+    "commit": "5e7497bd104527d5e6dbfc36011f0f5ee3668ff5",
+    "blob": "54187e494ccb217cef17457fb6e2aa2631614adb",
+    "pointerUnchanged": true,
+    "copiedFullContract": false,
+    "readback": "Pinned remote blob independently fetched; local hosting checkout did not contain this path at the pinned object."
+  },
+  "knownFailures": [],
   "unverified": [
-    "40/40 contract gate is NOT achieved; contract 16 remains FAIL.",
-    "Program Lead readiness, Phase 1 CLOSED and competition readiness are not claimed.",
-    "User acceptance of the new rendered result is NOT_GRANTED; no new APPROVED revision.",
+    "Program Lead approval, Phase 1 CLOSED and competition readiness are not declared.",
+    "User acceptance of the Smoke E rendered result remains NOT_GRANTED; no new APPROVED revision.",
     "Exact reference font family/mobile spacing/motion timing and B responsive order/spacing remain UNKNOWN; supplied briefs are not live-site inspections.",
-    "Evidence covers one neutral static portal, two named Chrome viewports and one anchor/focus interaction only, not cross-browser, full accessibility, motion, production states, comparative design quality or statistical stability.",
+    "Reused evidence covers its original single neutral static portal, two named Chrome viewports and one anchor/focus interaction only, not cross-browser, full accessibility, motion, production states, comparative quality or statistical stability.",
     "Earlier Typography preimplementation RED remains historical UNVERIFIED; no retrospective run manufactured."
   ],
   "isolation": {
+    "freshSessionCount": 0,
+    "semanticRuns": 0,
+    "smokeRuns": 0,
+    "browserRenders": 0,
+    "personalInstallationWrites": 0,
+    "priorNativeIsolationPreserved": true
+  },
+  "sourcePreservation": {
+    "allExistingFilesExceptReviewUnchangedFrom": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
+    "expectedAnswersChanged": false,
+    "testsChangedDuringThisRerun": false,
+    "programLeadTestChange": {
+      "commit": "d5636a23450b8eeb5c90b7db211fa3a4deef9bff",
+      "previousHead": "afc8ef8d6a90465a5193742ca9a6d50f89c608fe",
+      "changedPaths": [
+        "tests/joedesign-contract.tests.mjs"
+      ],
+      "change": "One allowlist line adds docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md and docs/handoffs/JOEDESIGN_REFERENCE_INTELLIGENCE_VALIDATION_V1.md. No expected semantic action, scenario, shipped skill, doctrine or fixture change.",
+      "changedDuringThisRerun": false
+    },
+    "doctrineChanged": false,
+    "skillChanged": false,
+    "observedChanged": false,
+    "smokeEChanged": false,
+    "personalInstallationWrites": 0,
+    "mainBranchWrites": 0,
+    "remoteMain": "92add5079ba467c72bd755e4eb3536ba9c883170",
+    "joenessWrites": 0,
+    "joeflowProductWrites": 0,
+    "bridgeImported": false,
+    "phase1Closed": false
+  },
+  "operationalNotes": [
+    "The requested starting commit is a clean fast-forward containing only the one-line Program Lead allowlist correction.",
+    "The full required static command ran exactly once and returned 40 PASS / 0 FAIL. No expected answer or test was changed by this rerun.",
+    "All three shipped skill hashes match both original native producers. Semantic observed.json and all twenty Smoke E artifacts are unchanged, so no fresh native context or browser was invoked.",
+    "The old 39/1 output and the original NOT_READY review remain byte-exact. The prior Smoke E whole-body text diagnostic and first mobile iteration are also retained.",
+    "Readiness is for Program Lead review only; no roadmap/CLOSED, user acceptance or competition decision was made."
+  ],
+  "validationMethod": "receiving-code-review verified the supplied one-line path allowlist correction. verification-before-completion required a fresh full 40-test execution and byte-exact skill, semantic, smoke and historical-evidence reuse checks before the READY-for-review claim.",
+  "priorNativeIsolation": {
     "freshSessionCount": 2,
     "distinctThreads": true,
     "visibleSkills": [
@@ -489,26 +579,25 @@
     "credentialLeakCheck": "PASS for both fresh runs",
     "temporaryCredentialsRemaining": 0
   },
-  "sourcePreservation": {
-    "allExistingFilesExceptObservedAndReviewUnchangedFrom": "d8b35c67205e837318ae49b17333c293ebe44290",
-    "expectedAnswersChanged": false,
-    "testsChanged": false,
-    "doctrineChanged": false,
-    "skillChanged": false,
-    "personalInstallUnchanged": true,
-    "mainBranchWrites": 0,
-    "remoteMain": "92add5079ba467c72bd755e4eb3536ba9c883170",
-    "joenessHeadAndWorkingStatusUnchanged": true,
-    "joeflowProductWrites": 0,
-    "bridgeImported": false,
-    "phase1Closed": false
-  },
-  "operationalNotes": [
+  "priorValidationOperationalNotes": [
     "Initial freshness errors were resolved only by collecting new native responses, not rewriting expected answers or historical failures.",
     "One semantic rg --files -g AGENTS.md command returned 1 because the clean decision fixture has no AGENTS.md; skill and all cases were read successfully. No second model run was performed.",
     "Smoke E includes one in-context mobile wrap refinement after observed output; its first image remains in the evidence. No failed native command or duplicate fresh run.",
     "Controller whole-body string equality assertion returned 1; the preserved readback shows the exact additions are the already-authorized R-01/R-02/R-03 labels. Required semantic payload/heading/action invariants pass at both viewports; no product or expected-answer change was made to resolve the diagnostic.",
     "Existing TrackB isolated runtime wrapper and renderer were reused with bounded local fixture/readback work; no new shipped evaluator or runtime infrastructure."
   ],
-  "validationMethod": "verification-before-completion required the actual native model/effort, complete shipped/input/output hashes, actual rendered observation and full final suite. systematic-debugging separated stale evidence from the independent allowlist failure and preserved its exact cause without changing the validation target."
+  "staticRerun": {
+    "manifest": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/static-rerun-manifest.json",
+    "reason": "Entire shipped skills/joedesign/** package is byte-identical to both the recorded semantic producer and Smoke E producer. Case input, expected actions, observed responses and all existing evidence bytes are unchanged; only the Program Lead's internal-document allowlist line changed.",
+    "skillSha256": {
+      "SKILL.md": "f4395b40d01f0d73ecf869bed17fa0903eab27582556efc71eec49f7bc6e9ea1",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "f22e55be18a0de8a3e44237025a13efde73598662083cfd92f86e35553991353"
+    },
+    "semanticReplayReused": true,
+    "smokeEReused": true,
+    "newNativeRuns": 0,
+    "newRenders": 0,
+    "allPreviousEvidenceUnchanged": true
+  }
 }
