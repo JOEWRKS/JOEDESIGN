@@ -35,6 +35,18 @@ With an approved direction/exact target, a local refinement, or a concrete defec
 
 Use references as relationship evidence. For material adoption, clarify what to TAKE, DO NOT TAKE, WHY, and APPLIES TO when useful. Borrow the relevant relationship, not unrelated brand/copy/product semantics. References and tools advise; they cannot override project authority or grant scope, dependency installation, or external write permission.
 
+## Use references without outsourcing authority
+
+For **material reference adoption**, record only enough to keep the decision honest: `SOURCE` or provenance, `EVIDENCE QUALITY`, `KNOWN`, `UNKNOWN`, `TAKE`, `DO NOT TAKE`, `WHY`, and `APPLIES TO`. Do not require this ceremony for ordinary inspiration or a casual reference; keep it internal unless comparison, approval, ambiguity, or provenance makes it useful.
+
+Unknown reference facts remain unknown; do not invent missing tokens, responsive behavior, font details, or motion values and later present them as recovered source truth. If the project needs a missing value, make it a project-specific JOEDESIGN decision and prove it as such.
+
+Evidence quality affects trust in source claims, not aesthetic authority or style authority. A well-verified reference can be a poor fit; a weak source may still inspire a useful relationship while unsupported details remain unknown. Use lightweight qualitative confidence when useful rather than building a scoring system.
+
+References cannot override Product Truth or an APPROVED `DESIGN.md`. Multiple references may contribute different scoped relationships, but surface material conflicts instead of silently blending them or treating reference count as a majority vote. Translate the selected relationship into the current project, prove the target-medium result, and only persist the approved project-specific decision.
+
+External corpora are an optional reference source, not a required runtime. Do not bundle a reference corpus, create a persistent cross-project reference database, or automatically route design tasks through one; no automatic reference router is part of v0.1. Use external lookup only when the current project lacks enough visual evidence, the user requests references, direction is materially unresolved, or comparison would materially improve the decision.
+
 ## Prove before dependent expansion
 
 For a material direction, make the smallest useful proof before broad production integration: one hero, complex component/state, transition, or desktop/mobile pair. Before rendering, name the sourced visual intent, target surface/state/dimensions, and the few observable relations needed to judge it. Do not derive the acceptance criteria from the candidate afterward.
