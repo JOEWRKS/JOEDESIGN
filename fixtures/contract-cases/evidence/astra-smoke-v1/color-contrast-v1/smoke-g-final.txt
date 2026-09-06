@@ -1,0 +1,5 @@
+`styles.css`에서 색상·대비와 기존 우선순위 라벨 표시를 수정했습니다. Product 내용·순서·상태·행동 의미는 보존했습니다.
+
+Chrome에서 1440×1000 / 390×844 before·after를 실제 확인했습니다. 검증한 텍스트 대비는 최소 **5.55:1**, 포커스는 **8.31:1**입니다.
+
+[편집 전 역할맵](D:/JOEWRKS/joedesign-color-contrast-validation-20260906/runs/G/workspace/artifacts/role-map-before.md) · [렌더 이미지·대비 계산·비색상 단서·검증 경계](D:/JOEWRKS/joedesign-color-contrast-validation-20260906/runs/G/workspace/artifacts/proof.md)

@@ -1,0 +1,50 @@
+{
+  "kind": "sanitized-native-smoke-g-provenance",
+  "sourceImplementation": "452e4ea2e7f36cc983801002faebe2175a7c10cf",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a07666-dd97-7a20-800a-087f437002c8",
+    "version": "codex-cli 0.153.4",
+    "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+    "rolloutSha256": "0fa9eb4c81928f4b960a0b930da29ffcd55618b7dc0dd9ddcda0ab81d522804d",
+    "eventsSha256": "82c43ca65eb27a4cab33250ee3f62d1fb1d935abfe89efb89e42690be4b589d2",
+    "launchSha256": "81753f2838f79c7f7623c3bdefd93e100cae5cddf67c7b40ea13d6393b74df31",
+    "finalSha256": "ff578a788d8fb0da5add0f8ed16913a8fb29c5a1adde7ff2bef26465647d094e",
+    "wallMs": 551538,
+    "exitCode": 0
+  },
+  "fixture": {
+    "commit": "19467a70c31bb378e353c8d1244f950d136a4ebd",
+    "tree": "3d60c2437158dfe69369344de93440140640f008",
+    "changedTrackedFilesAgainstFixtureCommit": ["styles.css"]
+  },
+  "currentCompletePackageHashes": {
+    "SKILL.md": "0ba7b4cb7e8dd0169bbf1cfcecab98b4c1fdf45aff6b0010b0c4a4ed731f86e1",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "fe89676895c752a65730d3626e724d35e13f5586c94884ddf0535b600121e791"
+  },
+  "roleMapBeforeSourceEdit": {
+    "roleMapWrittenUtc": "2026-09-06T11:12:16.847Z",
+    "firstStylesEditUtc": "2026-09-06T11:13:27.138Z",
+    "nativeRolloutOrdinals": [73, 82],
+    "verdict": "PASS"
+  },
+  "actualImageObservations": {
+    "nativeBatches": 3,
+    "controllerOpenedFourNativeFinalPngs": true,
+    "controllerRecheckedHashesAfterNativeExit": true,
+    "controllerOpenedIndependentFocusCrops": true,
+    "manifest": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/color-role-manifest.json"
+  },
+  "boundedEvidence": {
+    "nativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final.txt",
+    "nativeProof": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/proof.md",
+    "independentReadback": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/independent-g-summary.json",
+    "independentVisualObservation": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/controller-g-observations.md",
+    "preservedFailure": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/native-intermediate-failure.md"
+  },
+  "finalResult": "PASS",
+  "userAcceptance": "NOT_GRANTED",
+  "exclusions": "No full rollout, Codex home, credentials, identity directory, helper runtime, scanner, or full controller readback is committed."
+}

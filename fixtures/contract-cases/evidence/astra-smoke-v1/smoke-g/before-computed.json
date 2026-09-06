@@ -1,0 +1,1590 @@
+{
+  "phase": "before",
+  "browser": "152.0.7977.76",
+  "files": {
+    "PRODUCT.md": "46679484668fa7e36c79afa015118694ef779a0b3075c2ba4634eef4fc836e9b",
+    "DESIGN.md": "9430d0c2d37e6953b223e5500a27cef7c6fe546beb21deb20e9633d636e4b864",
+    "AGENTS.md": "3db9200165cf531e6eab2c9501be939d9f509e8ed1b89687390b24f32a85727b",
+    "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+    "index.html": "23c3f8b3be87998d6a628f3c564d6a65cd2f1e4690ef9c8d0f1b930b4c131074",
+    "styles.css": "5710b6e327daabc70c3e6edea197a35e3f5df32c78e495604f5909a6e083f484"
+  },
+  "views": [
+    {
+      "name": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "pairs": [
+        {
+          "selector": ".eyebrow",
+          "state": "base",
+          "property": "color",
+          "foreground": "#19ad57",
+          "background": "#fafbfe",
+          "minimum": 4.5,
+          "font": "13px/700",
+          "rect": {
+            "x": 240,
+            "y": 48,
+            "width": 760,
+            "height": 15
+          },
+          "clipPath": "none",
+          "outline": "rgb(25, 173, 87) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.8359,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "h1",
+          "state": "base",
+          "property": "color",
+          "foreground": "#d400b8",
+          "background": "#fafbfe",
+          "minimum": 3,
+          "font": "42px/700",
+          "rect": {
+            "x": 240,
+            "y": 77,
+            "width": 720,
+            "height": 47.03125
+          },
+          "clipPath": "none",
+          "outline": "rgb(212, 0, 184) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 4.5184,
+          "verdict": "PASS"
+        },
+        {
+          "selector": ".lead",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a8adbb",
+          "background": "#fafbfe",
+          "minimum": 4.5,
+          "font": "17px/400",
+          "rect": {
+            "x": 240,
+            "y": 142.03125,
+            "width": 650,
+            "height": 52.6875
+          },
+          "clipPath": "none",
+          "outline": "rgb(168, 173, 187) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1683,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "base",
+          "property": "color",
+          "foreground": "#ffffff",
+          "background": "#19bdd5",
+          "minimum": 4.5,
+          "font": "15px/700",
+          "rect": {
+            "x": 240,
+            "y": 216.71875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.2626,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "h2",
+          "state": "base",
+          "property": "color",
+          "foreground": "#593de0",
+          "background": "#edf7ef",
+          "minimum": 3,
+          "font": "19px/700",
+          "rect": {
+            "x": 261,
+            "y": 321.96875,
+            "width": 228.046875,
+            "height": 26.59375
+          },
+          "clipPath": "none",
+          "outline": "rgb(89, 61, 224) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 6.0441,
+          "verdict": "PASS"
+        },
+        {
+          "selector": ".count",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e69131",
+          "background": "#edf7ef",
+          "minimum": 4.5,
+          "font": "13px/400",
+          "rect": {
+            "x": 1124.796875,
+            "y": 328.96875,
+            "width": 54.203125,
+            "height": 15
+          },
+          "clipPath": "none",
+          "outline": "rgb(230, 145, 49) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.264,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "footer",
+          "state": "base",
+          "property": "color",
+          "foreground": "#adb1bc",
+          "background": "#fafbfe",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 240,
+            "y": 845.796875,
+            "width": 960,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(173, 177, 188) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.0726,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".priority-label",
+          "state": "base",
+          "property": "color",
+          "foreground": "#30334a",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "16px/400",
+          "rect": {
+            "x": 286,
+            "y": 539.9375,
+            "width": 1,
+            "height": 1
+          },
+          "clipPath": "inset(50%)",
+          "outline": "rgb(48, 51, 74) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 11.2312,
+          "verdict": "HIDDEN"
+        },
+        {
+          "selector": "#review-r-01 .record-id",
+          "state": "base",
+          "property": "color",
+          "foreground": "#9a78d6",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 286,
+            "y": 383.359375,
+            "width": 28.890625,
+            "height": 14
+          },
+          "clipPath": "none",
+          "outline": "rgb(154, 120, 214) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.1791,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 h3",
+          "state": "base",
+          "property": "color",
+          "foreground": "#43356c",
+          "background": "#eff5ff",
+          "minimum": 3,
+          "font": "19px/700",
+          "rect": {
+            "x": 286,
+            "y": 408.15625,
+            "width": 872,
+            "height": 24.6875
+          },
+          "clipPath": "none",
+          "outline": "rgb(67, 53, 108) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 9.7611,
+          "verdict": "PASS"
+        },
+        {
+          "selector": "#review-r-01 .description",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a5a9b5",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "14px/400",
+          "rect": {
+            "x": 286,
+            "y": 437.84375,
+            "width": 872,
+            "height": 21
+          },
+          "clipPath": "none",
+          "outline": "rgb(165, 169, 181) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1443,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 .source",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 286,
+            "y": 468.84375,
+            "width": 87.375,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3192,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 time",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 397.375,
+            "y": 468.84375,
+            "width": 122.75,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3192,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 .status",
+          "state": "base",
+          "property": "color",
+          "foreground": "#12834d",
+          "background": "#d1f4df",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 1107.96875,
+            "y": 379.5625,
+            "width": 50.03125,
+            "height": 21.59375
+          },
+          "clipPath": "none",
+          "outline": "rgb(18, 131, 77) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 4.0455,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 .record-id",
+          "state": "base",
+          "property": "color",
+          "foreground": "#9a78d6",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 286,
+            "y": 533.4375,
+            "width": 28.890625,
+            "height": 14
+          },
+          "clipPath": "none",
+          "outline": "rgb(154, 120, 214) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.1619,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 h3",
+          "state": "base",
+          "property": "color",
+          "foreground": "#43356c",
+          "background": "#fff0f8",
+          "minimum": 3,
+          "font": "19px/700",
+          "rect": {
+            "x": 286,
+            "y": 558.234375,
+            "width": 872,
+            "height": 24.6875
+          },
+          "clipPath": "none",
+          "outline": "rgb(67, 53, 108) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 9.7084,
+          "verdict": "PASS"
+        },
+        {
+          "selector": "#review-r-02 .description",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a5a9b5",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "14px/400",
+          "rect": {
+            "x": 286,
+            "y": 587.921875,
+            "width": 872,
+            "height": 21
+          },
+          "clipPath": "none",
+          "outline": "rgb(165, 169, 181) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1327,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 .source",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 286,
+            "y": 618.921875,
+            "width": 91.40625,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3067,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 time",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 401.40625,
+            "y": 618.921875,
+            "width": 122.75,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3067,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 .status",
+          "state": "base",
+          "property": "color",
+          "foreground": "#d89e22",
+          "background": "#fff0be",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 1067.28125,
+            "y": 529.640625,
+            "width": 90.71875,
+            "height": 21.59375
+          },
+          "clipPath": "none",
+          "outline": "rgb(216, 158, 34) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.0897,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 .record-id",
+          "state": "base",
+          "property": "color",
+          "foreground": "#9a78d6",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 286,
+            "y": 683.515625,
+            "width": 28.890625,
+            "height": 14
+          },
+          "clipPath": "none",
+          "outline": "rgb(154, 120, 214) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.2204,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 h3",
+          "state": "base",
+          "property": "color",
+          "foreground": "#43356c",
+          "background": "#e8faf5",
+          "minimum": 3,
+          "font": "19px/700",
+          "rect": {
+            "x": 286,
+            "y": 708.3125,
+            "width": 872,
+            "height": 24.6875
+          },
+          "clipPath": "none",
+          "outline": "rgb(67, 53, 108) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 9.8878,
+          "verdict": "PASS"
+        },
+        {
+          "selector": "#review-r-03 .description",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a5a9b5",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "14px/400",
+          "rect": {
+            "x": 286,
+            "y": 738,
+            "width": 872,
+            "height": 21
+          },
+          "clipPath": "none",
+          "outline": "rgb(165, 169, 181) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1721,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 .source",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 286,
+            "y": 769,
+            "width": 94.0625,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3493,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 time",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 404.0625,
+            "y": 769,
+            "width": 122.75,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3493,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 .status",
+          "state": "base",
+          "property": "color",
+          "foreground": "#ec6666",
+          "background": "#ffdcdc",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 1097.3125,
+            "y": 679.71875,
+            "width": 60.6875,
+            "height": 21.59375
+          },
+          "clipPath": "none",
+          "outline": "rgb(236, 102, 102) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.4813,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "base boundary",
+          "property": "backgroundColor",
+          "foreground": "#19bdd5",
+          "background": "#fafbfe",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 240,
+            "y": 216.71875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1867,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "base outer boundary",
+          "property": "borderTopColor",
+          "foreground": "#14bba5",
+          "background": "#fafbfe",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 240,
+            "y": 216.71875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3378,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02",
+          "state": "priority rail (supplemental)",
+          "property": "borderLeftColor",
+          "foreground": "#f24d94",
+          "background": "#edf7ef",
+          "minimum": 3,
+          "font": "16px/400",
+          "rect": {
+            "x": 261,
+            "y": 512.640625,
+            "width": 918,
+            "height": 140.078125
+          },
+          "clipPath": "none",
+          "outline": "rgb(48, 51, 74) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.0571,
+          "verdict": "PASS"
+        },
+        {
+          "selector": "#review-r-02",
+          "state": "priority rail / inner surface",
+          "property": "borderLeftColor",
+          "foreground": "#f24d94",
+          "background": "#fff0f8",
+          "minimum": 3,
+          "font": "16px/400",
+          "rect": {
+            "x": 261,
+            "y": 512.640625,
+            "width": 918,
+            "height": 140.078125
+          },
+          "clipPath": "none",
+          "outline": "rgb(48, 51, 74) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.0443,
+          "verdict": "PASS"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "hover",
+          "property": "color",
+          "foreground": "#ffffff",
+          "background": "#f6a229",
+          "minimum": 4.5,
+          "font": "15px/700",
+          "rect": {
+            "x": 240,
+            "y": 216.71875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.0754,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "hover boundary",
+          "property": "backgroundColor",
+          "foreground": "#f6a229",
+          "background": "#fafbfe",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 240,
+            "y": 216.71875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.0057,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "hover outer boundary",
+          "property": "borderTopColor",
+          "foreground": "#14bba5",
+          "background": "#fafbfe",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 240,
+            "y": 216.71875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3378,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "keyboard focus",
+          "property": "outlineColor",
+          "foreground": "#a2c9ef",
+          "background": "#fafbfe",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 240,
+            "y": 216.71875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(162, 201, 239) solid 2px",
+          "outlineOffset": "3px",
+          "ratio": 1.6721,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02",
+          "state": "anchor target focus",
+          "property": "outlineColor",
+          "foreground": "#a2c9ef",
+          "background": "#edf7ef",
+          "minimum": 3,
+          "font": "16px/400",
+          "rect": {
+            "x": 261,
+            "y": 512.640625,
+            "width": 918,
+            "height": 140.078125
+          },
+          "clipPath": "none",
+          "outline": "rgb(162, 201, 239) solid 2px",
+          "outlineOffset": "3px",
+          "ratio": 1.5779,
+          "verdict": "FAIL"
+        }
+      ],
+      "interactionObservations": {
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true
+        },
+        "activation": {
+          "hash": "#review-r-02",
+          "activeId": "review-r-02",
+          "priorityCount": 1,
+          "states": [
+            "Ready",
+            "Needs review",
+            "Blocked"
+          ]
+        }
+      },
+      "layout": {
+        "scrollWidth": 1440,
+        "scrollHeight": 1000,
+        "horizontalOverflow": false
+      },
+      "content": {
+        "title": "Operations Review Portal",
+        "text": "Operations / Review queue Review the next operational handoff. Three handoffs are waiting for a status check. Review the current priority before moving to the remaining records. Review priority item → Handoffs awaiting review3 records R-01Ready West depot stock check The count is ready for the next reviewer. Inventory review2026-09-05 09:00 UTC R-02Current priorityNeeds review North route timing review Confirm the timing note before the route handoff. Route operations2026-09-05 09:20 UTC R-03Blocked Shared equipment reconciliation One supporting record is missing from the equipment ledger. Equipment ledger2026-09-05 09:40 UTC Local review fixture · No production operation",
+        "primaryHref": "#review-r-02",
+        "records": [
+          {
+            "id": "review-r-01",
+            "recordId": "R-01",
+            "priority": "false",
+            "text": "R-01Ready West depot stock check The count is ready for the next reviewer. Inventory review2026-09-05 09:00 UTC",
+            "timestamp": "2026-09-05T09:00:00Z",
+            "status": "Ready"
+          },
+          {
+            "id": "review-r-02",
+            "recordId": "R-02",
+            "priority": "true",
+            "text": "R-02Current priorityNeeds review North route timing review Confirm the timing note before the route handoff. Route operations2026-09-05 09:20 UTC",
+            "timestamp": "2026-09-05T09:20:00Z",
+            "status": "Needs review"
+          },
+          {
+            "id": "review-r-03",
+            "recordId": "R-03",
+            "priority": "false",
+            "text": "R-03Blocked Shared equipment reconciliation One supporting record is missing from the equipment ledger. Equipment ledger2026-09-05 09:40 UTC",
+            "timestamp": "2026-09-05T09:40:00Z",
+            "status": "Blocked"
+          }
+        ]
+      },
+      "surfaces": {
+        "body": {
+          "background": "rgb(250, 251, 254)",
+          "border": "rgb(48, 51, 74)",
+          "borderLeft": "rgb(48, 51, 74)"
+        },
+        ".queue": {
+          "background": "rgb(237, 247, 239)",
+          "border": "rgb(84, 195, 136)",
+          "borderLeft": "rgb(84, 195, 136)"
+        },
+        "#review-r-01": {
+          "background": "rgb(239, 245, 255)",
+          "border": "rgb(107, 182, 237) rgb(107, 182, 237) rgb(107, 182, 237) rgb(96, 165, 237)",
+          "borderLeft": "rgb(96, 165, 237)"
+        },
+        "#review-r-02": {
+          "background": "rgb(255, 240, 248)",
+          "border": "rgb(235, 141, 207) rgb(235, 141, 207) rgb(235, 141, 207) rgb(242, 77, 148)",
+          "borderLeft": "rgb(242, 77, 148)"
+        },
+        "#review-r-03": {
+          "background": "rgb(232, 250, 245)",
+          "border": "rgb(110, 203, 192) rgb(110, 203, 192) rgb(110, 203, 192) rgb(13, 175, 133)",
+          "borderLeft": "rgb(13, 175, 133)"
+        }
+      }
+    },
+    {
+      "name": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "pairs": [
+        {
+          "selector": ".eyebrow",
+          "state": "base",
+          "property": "color",
+          "foreground": "#19ad57",
+          "background": "#e3eaf4",
+          "minimum": 4.5,
+          "font": "13px/700",
+          "rect": {
+            "x": 22,
+            "y": 28,
+            "width": 346,
+            "height": 15
+          },
+          "clipPath": "none",
+          "outline": "rgb(25, 173, 87) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.4232,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "h1",
+          "state": "base",
+          "property": "color",
+          "foreground": "#d400b8",
+          "background": "#e3eaf4",
+          "minimum": 3,
+          "font": "32px/700",
+          "rect": {
+            "x": 22,
+            "y": 57,
+            "width": 346,
+            "height": 71.65625
+          },
+          "clipPath": "none",
+          "outline": "rgb(212, 0, 184) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.8609,
+          "verdict": "PASS"
+        },
+        {
+          "selector": ".lead",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a8adbb",
+          "background": "#e3eaf4",
+          "minimum": 4.5,
+          "font": "16px/400",
+          "rect": {
+            "x": 22,
+            "y": 146.65625,
+            "width": 346,
+            "height": 74.390625
+          },
+          "clipPath": "none",
+          "outline": "rgb(168, 173, 187) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 1.8527,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "base",
+          "property": "color",
+          "foreground": "#ffffff",
+          "background": "#19bdd5",
+          "minimum": 4.5,
+          "font": "15px/700",
+          "rect": {
+            "x": 22,
+            "y": 243.046875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.2626,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "h2",
+          "state": "base",
+          "property": "color",
+          "foreground": "#593de0",
+          "background": "#dce4ef",
+          "minimum": 4.5,
+          "font": "17px/700",
+          "rect": {
+            "x": 35,
+            "y": 336.296875,
+            "width": 204.046875,
+            "height": 23.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(89, 61, 224) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 5.1716,
+          "verdict": "PASS"
+        },
+        {
+          "selector": ".count",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e69131",
+          "background": "#dce4ef",
+          "minimum": 4.5,
+          "font": "13px/400",
+          "rect": {
+            "x": 300.796875,
+            "y": 336.296875,
+            "width": 54.203125,
+            "height": 15
+          },
+          "clipPath": "none",
+          "outline": "rgb(230, 145, 49) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 1.9372,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "footer",
+          "state": "base",
+          "property": "color",
+          "foreground": "#adb1bc",
+          "background": "#e3eaf4",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 22,
+            "y": 943.828125,
+            "width": 346,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(173, 177, 188) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 1.771,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".priority-label",
+          "state": "base",
+          "property": "color",
+          "foreground": "#30334a",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "16px/400",
+          "rect": {
+            "x": 53,
+            "y": 567.96875,
+            "width": 1,
+            "height": 1
+          },
+          "clipPath": "inset(50%)",
+          "outline": "rgb(48, 51, 74) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 11.2312,
+          "verdict": "HIDDEN"
+        },
+        {
+          "selector": "#review-r-01 .record-id",
+          "state": "base",
+          "property": "color",
+          "foreground": "#9a78d6",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 53,
+            "y": 393.890625,
+            "width": 28.890625,
+            "height": 14
+          },
+          "clipPath": "none",
+          "outline": "rgb(154, 120, 214) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.1791,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 h3",
+          "state": "base",
+          "property": "color",
+          "foreground": "#43356c",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "18px/700",
+          "rect": {
+            "x": 53,
+            "y": 418.6875,
+            "width": 288,
+            "height": 23.390625
+          },
+          "clipPath": "none",
+          "outline": "rgb(67, 53, 108) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 9.7611,
+          "verdict": "PASS"
+        },
+        {
+          "selector": "#review-r-01 .description",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a5a9b5",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "14px/400",
+          "rect": {
+            "x": 53,
+            "y": 447.078125,
+            "width": 288,
+            "height": 21
+          },
+          "clipPath": "none",
+          "outline": "rgb(165, 169, 181) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1443,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 .source",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 53,
+            "y": 478.078125,
+            "width": 288,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3192,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 time",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#eff5ff",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 53,
+            "y": 498.875,
+            "width": 288,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3192,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-01 .status",
+          "state": "base",
+          "property": "color",
+          "foreground": "#12834d",
+          "background": "#d1f4df",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 290.96875,
+            "y": 390.09375,
+            "width": 50.03125,
+            "height": 21.59375
+          },
+          "clipPath": "none",
+          "outline": "rgb(18, 131, 77) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 4.0455,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 .record-id",
+          "state": "base",
+          "property": "color",
+          "foreground": "#9a78d6",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 53,
+            "y": 561.46875,
+            "width": 28.890625,
+            "height": 14
+          },
+          "clipPath": "none",
+          "outline": "rgb(154, 120, 214) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.1619,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 h3",
+          "state": "base",
+          "property": "color",
+          "foreground": "#43356c",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "18px/700",
+          "rect": {
+            "x": 53,
+            "y": 586.265625,
+            "width": 288,
+            "height": 23.390625
+          },
+          "clipPath": "none",
+          "outline": "rgb(67, 53, 108) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 9.7084,
+          "verdict": "PASS"
+        },
+        {
+          "selector": "#review-r-02 .description",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a5a9b5",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "14px/400",
+          "rect": {
+            "x": 53,
+            "y": 614.65625,
+            "width": 288,
+            "height": 42
+          },
+          "clipPath": "none",
+          "outline": "rgb(165, 169, 181) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1327,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 .source",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 53,
+            "y": 666.65625,
+            "width": 288,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3067,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 time",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#fff0f8",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 53,
+            "y": 687.453125,
+            "width": 288,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3067,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02 .status",
+          "state": "base",
+          "property": "color",
+          "foreground": "#d89e22",
+          "background": "#fff0be",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 250.28125,
+            "y": 557.671875,
+            "width": 90.71875,
+            "height": 21.59375
+          },
+          "clipPath": "none",
+          "outline": "rgb(216, 158, 34) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.0897,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 .record-id",
+          "state": "base",
+          "property": "color",
+          "foreground": "#9a78d6",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 53,
+            "y": 750.046875,
+            "width": 28.890625,
+            "height": 14
+          },
+          "clipPath": "none",
+          "outline": "rgb(154, 120, 214) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.2204,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 h3",
+          "state": "base",
+          "property": "color",
+          "foreground": "#43356c",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "18px/700",
+          "rect": {
+            "x": 53,
+            "y": 774.84375,
+            "width": 288,
+            "height": 23.390625
+          },
+          "clipPath": "none",
+          "outline": "rgb(67, 53, 108) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 9.8878,
+          "verdict": "PASS"
+        },
+        {
+          "selector": "#review-r-03 .description",
+          "state": "base",
+          "property": "color",
+          "foreground": "#a5a9b5",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "14px/400",
+          "rect": {
+            "x": 53,
+            "y": 803.234375,
+            "width": 288,
+            "height": 42
+          },
+          "clipPath": "none",
+          "outline": "rgb(165, 169, 181) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.1721,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 .source",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 53,
+            "y": 855.234375,
+            "width": 288,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3493,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 time",
+          "state": "base",
+          "property": "color",
+          "foreground": "#e88d25",
+          "background": "#e8faf5",
+          "minimum": 4.5,
+          "font": "12px/400",
+          "rect": {
+            "x": 53,
+            "y": 876.03125,
+            "width": 288,
+            "height": 16.796875
+          },
+          "clipPath": "none",
+          "outline": "rgb(232, 141, 37) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.3493,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-03 .status",
+          "state": "base",
+          "property": "color",
+          "foreground": "#ec6666",
+          "background": "#ffdcdc",
+          "minimum": 4.5,
+          "font": "12px/700",
+          "rect": {
+            "x": 280.3125,
+            "y": 746.25,
+            "width": 60.6875,
+            "height": 21.59375
+          },
+          "clipPath": "none",
+          "outline": "rgb(236, 102, 102) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.4813,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "base boundary",
+          "property": "backgroundColor",
+          "foreground": "#19bdd5",
+          "background": "#e3eaf4",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 22,
+            "y": 243.046875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 1.8685,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "base outer boundary",
+          "property": "borderTopColor",
+          "foreground": "#14bba5",
+          "background": "#e3eaf4",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 22,
+            "y": 243.046875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 1.9976,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02",
+          "state": "priority rail (supplemental)",
+          "property": "borderLeftColor",
+          "foreground": "#f24d94",
+          "background": "#dce4ef",
+          "minimum": 3,
+          "font": "16px/400",
+          "rect": {
+            "x": 35,
+            "y": 541.671875,
+            "width": 320,
+            "height": 178.578125
+          },
+          "clipPath": "none",
+          "outline": "rgb(48, 51, 74) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.6158,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02",
+          "state": "priority rail / inner surface",
+          "property": "borderLeftColor",
+          "foreground": "#f24d94",
+          "background": "#fff0f8",
+          "minimum": 3,
+          "font": "16px/400",
+          "rect": {
+            "x": 35,
+            "y": 541.671875,
+            "width": 320,
+            "height": 178.578125
+          },
+          "clipPath": "none",
+          "outline": "rgb(48, 51, 74) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 3.0443,
+          "verdict": "PASS"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "hover",
+          "property": "color",
+          "foreground": "#ffffff",
+          "background": "#f6a229",
+          "minimum": 4.5,
+          "font": "15px/700",
+          "rect": {
+            "x": 22,
+            "y": 243.046875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 2.0754,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "hover boundary",
+          "property": "backgroundColor",
+          "foreground": "#f6a229",
+          "background": "#e3eaf4",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 22,
+            "y": 243.046875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 1.7138,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "hover outer boundary",
+          "property": "borderTopColor",
+          "foreground": "#14bba5",
+          "background": "#e3eaf4",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 22,
+            "y": 243.046875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(255, 255, 255) none 3px",
+          "outlineOffset": "0px",
+          "ratio": 1.9976,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": ".primary-action",
+          "state": "keyboard focus",
+          "property": "outlineColor",
+          "foreground": "#a2c9ef",
+          "background": "#e3eaf4",
+          "minimum": 3,
+          "font": "15px/700",
+          "rect": {
+            "x": 22,
+            "y": 243.046875,
+            "width": 219.546875,
+            "height": 50.25
+          },
+          "clipPath": "none",
+          "outline": "rgb(162, 201, 239) solid 2px",
+          "outlineOffset": "3px",
+          "ratio": 1.4288,
+          "verdict": "FAIL"
+        },
+        {
+          "selector": "#review-r-02",
+          "state": "anchor target focus",
+          "property": "outlineColor",
+          "foreground": "#a2c9ef",
+          "background": "#dce4ef",
+          "minimum": 3,
+          "font": "16px/400",
+          "rect": {
+            "x": 35,
+            "y": 400.671875,
+            "width": 320,
+            "height": 178.578125
+          },
+          "clipPath": "none",
+          "outline": "rgb(162, 201, 239) solid 2px",
+          "outlineOffset": "3px",
+          "ratio": 1.3501,
+          "verdict": "FAIL"
+        }
+      ],
+      "interactionObservations": {
+        "keyboardFocus": {
+          "active": true,
+          "focusVisible": true
+        },
+        "activation": {
+          "hash": "#review-r-02",
+          "activeId": "review-r-02",
+          "priorityCount": 1,
+          "states": [
+            "Ready",
+            "Needs review",
+            "Blocked"
+          ]
+        }
+      },
+      "layout": {
+        "scrollWidth": 390,
+        "scrollHeight": 985,
+        "horizontalOverflow": false
+      },
+      "content": {
+        "title": "Operations Review Portal",
+        "text": "Operations / Review queue Review the next operational handoff. Three handoffs are waiting for a status check. Review the current priority before moving to the remaining records. Review priority item → Handoffs awaiting review3 records R-01Ready West depot stock check The count is ready for the next reviewer. Inventory review2026-09-05 09:00 UTC R-02Current priorityNeeds review North route timing review Confirm the timing note before the route handoff. Route operations2026-09-05 09:20 UTC R-03Blocked Shared equipment reconciliation One supporting record is missing from the equipment ledger. Equipment ledger2026-09-05 09:40 UTC Local review fixture · No production operation",
+        "primaryHref": "#review-r-02",
+        "records": [
+          {
+            "id": "review-r-01",
+            "recordId": "R-01",
+            "priority": "false",
+            "text": "R-01Ready West depot stock check The count is ready for the next reviewer. Inventory review2026-09-05 09:00 UTC",
+            "timestamp": "2026-09-05T09:00:00Z",
+            "status": "Ready"
+          },
+          {
+            "id": "review-r-02",
+            "recordId": "R-02",
+            "priority": "true",
+            "text": "R-02Current priorityNeeds review North route timing review Confirm the timing note before the route handoff. Route operations2026-09-05 09:20 UTC",
+            "timestamp": "2026-09-05T09:20:00Z",
+            "status": "Needs review"
+          },
+          {
+            "id": "review-r-03",
+            "recordId": "R-03",
+            "priority": "false",
+            "text": "R-03Blocked Shared equipment reconciliation One supporting record is missing from the equipment ledger. Equipment ledger2026-09-05 09:40 UTC",
+            "timestamp": "2026-09-05T09:40:00Z",
+            "status": "Blocked"
+          }
+        ]
+      },
+      "surfaces": {
+        "body": {
+          "background": "rgb(227, 234, 244)",
+          "border": "rgb(48, 51, 74)",
+          "borderLeft": "rgb(48, 51, 74)"
+        },
+        ".queue": {
+          "background": "rgb(220, 228, 239)",
+          "border": "rgb(84, 195, 136)",
+          "borderLeft": "rgb(84, 195, 136)"
+        },
+        "#review-r-01": {
+          "background": "rgb(239, 245, 255)",
+          "border": "rgb(107, 182, 237) rgb(107, 182, 237) rgb(107, 182, 237) rgb(96, 165, 237)",
+          "borderLeft": "rgb(96, 165, 237)"
+        },
+        "#review-r-02": {
+          "background": "rgb(255, 240, 248)",
+          "border": "rgb(235, 141, 207) rgb(235, 141, 207) rgb(235, 141, 207) rgb(242, 77, 148)",
+          "borderLeft": "rgb(242, 77, 148)"
+        },
+        "#review-r-03": {
+          "background": "rgb(232, 250, 245)",
+          "border": "rgb(110, 203, 192) rgb(110, 203, 192) rgb(110, 203, 192) rgb(13, 175, 133)",
+          "borderLeft": "rgb(13, 175, 133)"
+        }
+      }
+    }
+  ]
+}

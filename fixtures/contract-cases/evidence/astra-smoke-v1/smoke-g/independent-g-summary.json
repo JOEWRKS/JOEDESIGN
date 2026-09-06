@@ -1,0 +1,278 @@
+{
+  "kind": "independent-controller-browser-readback",
+  "result": "PASS",
+  "browser": "152.0.7977.76",
+  "deviceScaleFactor": 1,
+  "method": "Actual computed CSS, composited ancestor backgrounds, sRGB relative luminance, unrounded thresholds; visual observation is separate. No blanket WCAG conformance claim.",
+  "standards": [
+    "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+    "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+    "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html"
+  ],
+  "productInvariant": true,
+  "normalizedBodyTextInvariant": true,
+  "frozenInputs": {
+    "PRODUCT.md": {
+      "beforeSha256": "46679484668fa7e36c79afa015118694ef779a0b3075c2ba4634eef4fc836e9b",
+      "afterSha256": "46679484668fa7e36c79afa015118694ef779a0b3075c2ba4634eef4fc836e9b",
+      "unchanged": true
+    },
+    "DESIGN.md": {
+      "beforeSha256": "9430d0c2d37e6953b223e5500a27cef7c6fe546beb21deb20e9633d636e4b864",
+      "afterSha256": "9430d0c2d37e6953b223e5500a27cef7c6fe546beb21deb20e9633d636e4b864",
+      "unchanged": true
+    },
+    "AGENTS.md": {
+      "beforeSha256": "3db9200165cf531e6eab2c9501be939d9f509e8ed1b89687390b24f32a85727b",
+      "afterSha256": "3db9200165cf531e6eab2c9501be939d9f509e8ed1b89687390b24f32a85727b",
+      "unchanged": true
+    },
+    "render.mjs": {
+      "beforeSha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "afterSha256": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+      "unchanged": true
+    }
+  },
+  "targets": [
+    {
+      "state": "before",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "visibleTextCount": 25,
+      "minimumVisibleTextRatio": 2.072619319779439,
+      "priorityVisible": false,
+      "priorityRatio": 11.231154920950972,
+      "interactions": [
+        {
+          "state": "hover",
+          "textRatio": 2.0753618600787282,
+          "outlineRatio": null,
+          "outlineStyle": "none",
+          "focusVisible": false,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        },
+        {
+          "state": "focus",
+          "textRatio": 2.2626403319464905,
+          "outlineRatio": 1.6720989687851657,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        },
+        {
+          "state": "priority-focus",
+          "textRatio": 11.231154920950972,
+          "outlineRatio": 1.577909208253935,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            237,
+            247,
+            239,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "state": "before",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "visibleTextCount": 25,
+      "minimumVisibleTextRatio": 1.7710237211423758,
+      "priorityVisible": false,
+      "priorityRatio": 11.231154920950972,
+      "interactions": [
+        {
+          "state": "hover",
+          "textRatio": 2.0753618600787282,
+          "outlineRatio": null,
+          "outlineStyle": "none",
+          "focusVisible": false,
+          "adjacentBackground": [
+            227,
+            234,
+            244,
+            1
+          ]
+        },
+        {
+          "state": "focus",
+          "textRatio": 2.2626403319464905,
+          "outlineRatio": 1.4287847795085535,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            227,
+            234,
+            244,
+            1
+          ]
+        },
+        {
+          "state": "priority-focus",
+          "textRatio": 11.231154920950972,
+          "outlineRatio": 1.3501226843748193,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            220,
+            228,
+            239,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "state": "after",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "visibleTextCount": 26,
+      "minimumVisibleTextRatio": 5.5533252875311545,
+      "priorityVisible": true,
+      "priorityRatio": 6.648377872586666,
+      "interactions": [
+        {
+          "state": "hover",
+          "textRatio": 9.069679831601487,
+          "outlineRatio": null,
+          "outlineStyle": "none",
+          "focusVisible": false,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        },
+        {
+          "state": "focus",
+          "textRatio": 6.879386960746579,
+          "outlineRatio": 8.314699070021883,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        },
+        {
+          "state": "priority-focus",
+          "textRatio": 11.951567663832869,
+          "outlineRatio": 8.314699070021883,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        }
+      ]
+    },
+    {
+      "state": "after",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "visibleTextCount": 26,
+      "minimumVisibleTextRatio": 5.5533252875311545,
+      "priorityVisible": true,
+      "priorityRatio": 6.648377872586666,
+      "interactions": [
+        {
+          "state": "hover",
+          "textRatio": 9.069679831601487,
+          "outlineRatio": null,
+          "outlineStyle": "none",
+          "focusVisible": false,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        },
+        {
+          "state": "focus",
+          "textRatio": 6.879386960746579,
+          "outlineRatio": 8.314699070021883,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        },
+        {
+          "state": "priority-focus",
+          "textRatio": 11.951567663832869,
+          "outlineRatio": 8.314699070021883,
+          "outlineStyle": "solid",
+          "focusVisible": true,
+          "adjacentBackground": [
+            250,
+            251,
+            254,
+            1
+          ]
+        }
+      ]
+    }
+  ],
+  "afterTextFailureCount": 0,
+  "afterOverflow": false,
+  "fullPageImageDimensions": [
+    {
+      "width": 1440,
+      "height": 1000
+    },
+    {
+      "width": 390,
+      "height": 985
+    }
+  ],
+  "imageObservationHashes": [
+    {
+      "file": "before-desktop.png",
+      "sha256": "149aa57ae5dcf2e61b41a5678e1f7a29c5f9b43ee87626a8d2556e78a1adffe6"
+    },
+    {
+      "file": "after-desktop.png",
+      "sha256": "01368b15217fc22315817ee8b6845f0e0b213275c6537b4ae976c963e6031466"
+    },
+    {
+      "file": "before-mobile.png",
+      "sha256": "1225d70f9e7fa67ed3a4adadbae7d99ca9b1a218f7c6d5fcc80cbbb82a1846ce"
+    },
+    {
+      "file": "after-mobile.png",
+      "sha256": "d75a2260b5fb178a0309bc21ac8572edfe6cf41514720475dbca97995a0ce22b"
+    }
+  ],
+  "acceptance": "NOT_GRANTED",
+  "limitations": "Only this neutral fixture and exact Chrome desktop/mobile targets. Ratio readback is independent of native calculations; actual PNGs and focused crops were viewed separately. Native-only keyboard traversal is corroborated, not claimed as independently re-executed."
+}

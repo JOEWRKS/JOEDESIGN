@@ -1,0 +1,144 @@
+{
+  "case": "Smoke G — Color / Contrast rendered proof",
+  "result": "PASS",
+  "sourceImplementation": "452e4ea2e7f36cc983801002faebe2175a7c10cf",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a07666-dd97-7a20-800a-087f437002c8",
+    "version": "codex-cli 0.153.4",
+    "rolloutSha256": "0fa9eb4c81928f4b960a0b930da29ffcd55618b7dc0dd9ddcda0ab81d522804d",
+    "exitCode": 0,
+    "wallMs": 551538
+  },
+  "independentControllerEvidence": {
+    "result": "PASS",
+    "computedReadback": "independent-g-summary.json",
+    "computedReadbackSha256": "0d35cff643e5cd051c9bdab50af6c0c699273cde54963d336b6f4ba152c804f0",
+    "actualImageObservations": "controller-g-observations.md",
+    "actualImageObservationsSha256": "4b4f38788eff86852fc9b39bd5bec94f3a3aa0f43e0c55c6bb7dc9377cae0366",
+    "summary": "Independent browser readback found 26 visible text elements at each after target, minimum unrounded ratio 5.5533252875311545, visible priority ratio 6.648377872586666, focus ratio 8.314699070021883, hover text ratio 9.069679831601487, no failed or unsupported pairs, no overflow, and matching Product payload/order/action and frozen inputs."
+  },
+  "fixture": {
+    "commit": "19467a70c31bb378e353c8d1244f950d136a4ebd",
+    "tree": "3d60c2437158dfe69369344de93440140640f008",
+    "changedTrackedFilesAgainstFixtureCommit": ["styles.css"]
+  },
+  "roleMapBeforeSourceEdit": {
+    "artifact": "role-map-before.md",
+    "completedUtc": "2026-09-06T11:12:16.847Z",
+    "firstSourceEditUtc": "2026-09-06T11:13:27.138Z",
+    "ordering": "PASS",
+    "basis": "Native rollout ordinals 73 then 82; role-map-before.md was written before the first styles.css edit."
+  },
+  "productInvariants": {
+    "title": "Review the next operational handoff.",
+    "description": "Three handoffs are waiting for a status check. Review the current priority before moving to the remaining records.",
+    "primaryAction": {"label": "Review priority item", "target": "#review-r-02", "meaning": "navigate to the current-priority record without changing state"},
+    "recordOrder": ["R-01", "R-02", "R-03"],
+    "sources": ["Inventory review", "Route operations", "Equipment ledger"],
+    "timestampsUtc": ["2026-09-05 09:00 UTC", "2026-09-05 09:20 UTC", "2026-09-05 09:40 UTC"],
+    "statuses": ["Ready", "Needs review", "Blocked"],
+    "currentPriority": "R-02",
+    "authorityBytesUnchanged": ["PRODUCT.md", "DESIGN.md"],
+    "supportBytesUnchanged": ["AGENTS.md", "index.html", "render.mjs"]
+  },
+  "approvedVisualIntent": [
+    "calm operational clarity",
+    "one clear primary action",
+    "priority record must be visually findable",
+    "records remain an open list, not a card wall"
+  ],
+  "beforeColorDefects": [
+    "Unrelated high-chroma title, action, metadata, borders, and record accents competed.",
+    "There was no clear accent owner.",
+    "Supporting text and metadata failed applicable normal-text contrast.",
+    "Current priority relied primarily on a colored rail because its literal label was visually hidden.",
+    "State hues were echoed by unrelated decorative wrappers and records.",
+    "Tinted queue and per-record panels implied unsupported containment.",
+    "The mobile background changed the contrast context and further weakened multiple pairs."
+  ],
+  "semanticColorRoleMap": {
+    "foregroundPrimary": {"value": "#30334a", "uses": ["h1", "h2", "h3", "body"]},
+    "foregroundSupporting": {"value": "#586174", "uses": ["eyebrow", "lead", "record id", "description", "metadata", "count", "footer"]},
+    "surfaceCanvas": {"value": "#fafbfe", "uses": ["desktop body", "mobile body", "transparent queue and records"]},
+    "separatorDecorative": {"value": "#d6dbe5", "uses": ["record bottom separator"]},
+    "accent": {"value": "#285d8f", "uses": ["primary action", "R-02 Current priority text and supplemental rail"]},
+    "accentHover": {"value": "#204b73", "uses": ["primary action hover"]},
+    "focus": {"value": "#174f7b", "uses": ["primary action focus outline", "R-02 anchor-target focus outline"]},
+    "ready": {"foreground": "#14633d", "background": "#d1f4df", "literalCue": "Ready"},
+    "needsReview": {"foreground": "#785514", "background": "#fff0be", "literalCue": "Needs review"},
+    "blocked": {"foreground": "#a12f36", "background": "#ffdcdc", "literalCue": "Blocked"}
+  },
+  "dominantAccentOwner": {
+    "owner": "primary review action",
+    "supportingReuse": "R-02 only, because it is the destination and Product current priority",
+    "verdict": "PASS"
+  },
+  "beforeAfterComputedPairs": [
+    {"role": "page title", "before": {"foreground": "#d400b8", "desktopBackground": "#fafbfe", "mobileBackground": "#e3eaf4", "desktopRatio": 4.52, "mobileRatio": 3.86}, "after": {"foreground": "#30334a", "background": "#fafbfe", "ratio": 11.9516, "minimum": 3, "verdict": "PASS"}},
+    {"role": "supporting text", "before": {"leadDesktopRatio": 2.17, "leadMobileRatio": 1.85}, "after": {"foreground": "#586174", "background": "#fafbfe", "ratio": 6.0097, "minimum": 4.5, "verdict": "PASS"}},
+    {"role": "primary action text", "before": {"foreground": "#ffffff", "background": "#19bdd5", "ratio": 2.26}, "after": {"foreground": "#ffffff", "background": "#285d8f", "ratio": 6.879, "minimum": 4.5, "verdict": "PASS"}},
+    {"role": "primary action hover text", "before": {"foreground": "#ffffff", "background": "#f6a229", "ratio": 2.08}, "after": {"foreground": "#ffffff", "background": "#204b73", "ratio": 9.0697, "minimum": 4.5, "verdict": "PASS"}},
+    {"role": "Ready text", "before": {"ratio": 4.05}, "after": {"foreground": "#14633d", "background": "#d1f4df", "ratio": 6.1477, "minimum": 4.5, "verdict": "PASS"}},
+    {"role": "Needs review text", "before": {"ratio": 2.09}, "after": {"foreground": "#785514", "background": "#fff0be", "ratio": 5.9392, "minimum": 4.5, "verdict": "PASS"}},
+    {"role": "Blocked text", "before": {"ratio": 2.48}, "after": {"foreground": "#a12f36", "background": "#ffdcdc", "ratio": 5.5533, "minimum": 4.5, "verdict": "PASS"}},
+    {"role": "focus outline", "before": {"desktopRatios": [1.67, 1.58], "mobileRatios": [1.43, 1.35]}, "after": {"foreground": "#174f7b", "background": "#fafbfe", "ratio": 8.3147, "minimum": 3, "verdict": "PASS"}},
+    {"role": "priority rail", "before": {"desktopOuterRatio": 3.06, "mobileOuterRatio": 2.62}, "after": {"foreground": "#285d8f", "background": "#fafbfe", "ratio": 6.6484, "minimum": 3, "verdict": "PASS"}}
+  ],
+  "contrastMethod": "WCAG sRGB relative luminance using unrounded channel calculations; transparent ancestors were composited to the opaque canvas. Full selector/state measurements are preserved in before-contrast.md, after-contrast.md, before-computed.json, and after-computed.json.",
+  "stateCueMapping": [
+    {"record": "R-01", "semanticState": "Ready", "nonColorCue": "literal Ready label"},
+    {"record": "R-02", "semanticState": "Needs review", "nonColorCue": "literal Needs review label"},
+    {"record": "R-03", "semanticState": "Blocked", "nonColorCue": "literal Blocked label"},
+    {"record": "R-02", "semanticState": "Current priority", "nonColorCue": "visible literal Current priority label; supplemental rail is not the sole cue"},
+    {"target": "primary action and R-02", "semanticState": "focus", "nonColorCue": "2px outline appearing with 3px offset"}
+  ],
+  "surfaceLayerMapping": {
+    "canvas": "one #fafbfe surface at both target widths",
+    "queue": "transparent open-list grouping",
+    "records": "transparent rows with decorative neutral bottom separators",
+    "priority": "R-02 alone has a meaningful accent rail; no tinted record panel",
+    "stateBadges": "existing compact state-label backgrounds retained for semantic reinforcement"
+  },
+  "responsiveMobileRoleTranslation": {
+    "viewport": "390x844",
+    "capture": "390x985 full-page PNG from the 390x844 viewport",
+    "translation": "The mobile-only blue-gray canvas and nested tint were removed; the same semantic roles were recomputed against #fafbfe rather than copied without checking.",
+    "horizontalOverflow": false,
+    "verticalScrollRequired": true,
+    "verdict": "PASS"
+  },
+  "changedFiles": {
+    "implementation": ["styles.css"],
+    "evidence": ["artifacts/*"],
+    "basis": "git diff --name-status 19467a70c31bb378e353c8d1244f950d136a4ebd -- plus untracked artifact enumeration; native HEAD remained the fixture commit"
+  },
+  "actualDesktopObservation": "The exact before/after 1440x1000 images were opened. After correction, a dark heading leads to one solid blue action; supporting copy is quieter but readable; rows read as an open list; R-02 alone has the rail and visible Current priority; all three literal status labels remain visible.",
+  "actualMobileObservation": "The exact before/after 390x985 full-page captures from a 390x844 viewport were opened. After correction, the common light canvas preserves contrast, R-02 / Current priority / Needs review fit without overlap, all three ordered records and footer are reachable by vertical scrolling, and no horizontal overflow is present.",
+  "claimVerdicts": [
+    {"claim": "Role mapping", "verdict": "PASS"},
+    {"claim": "Contrast hierarchy", "verdict": "PASS"},
+    {"claim": "Accent ownership", "verdict": "PASS"},
+    {"claim": "Surface/layer coherence", "verdict": "PASS"},
+    {"claim": "State semantics", "verdict": "PASS"},
+    {"claim": "No color-only required cue", "verdict": "PASS"},
+    {"claim": "Applicable accessibility gate", "verdict": "PASS"},
+    {"claim": "Desktop actual observation", "verdict": "PASS"},
+    {"claim": "Mobile actual observation", "verdict": "PASS"},
+    {"claim": "Product Truth invariant", "verdict": "PASS"},
+    {"claim": "User acceptance", "verdict": "NOT_GRANTED"}
+  ],
+  "userAcceptanceBoundary": {
+    "technical": "PASS for the named local Chrome targets and observed base/hover/focus/anchor states",
+    "productConformance": "PASS for frozen Product Truth and approved direction",
+    "visualConformance": "PASS for the exact inspected PNGs and measured relationships",
+    "userAcceptance": "NOT_GRANTED",
+    "approvedRevisionPromoted": false
+  },
+  "limitations": [
+    "No claim of full WCAG conformance, theme coverage, production behavior, cross-browser behavior, comparative superiority, or user acceptance.",
+    "Mobile proof is a 390x844 browser viewport, not a physical touch-device test.",
+    "Other viewports, forced colors, dark theme, zoom, screen reader behavior, and unobserved state combinations remain outside this smoke boundary."
+  ]
+}

@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Operations Review Portal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="page-header">
+      <p class="eyebrow">Operations / Review queue</p>
+      <h1>Review the next operational handoff.</h1>
+      <p class="lead">Three handoffs are waiting for a status check. Review the current priority before moving to the remaining records.</p>
+      <a class="primary-action" href="#review-r-02">Review priority item <span aria-hidden="true">→</span></a>
+    </header>
+    <section class="queue" aria-labelledby="queue-title">
+      <div class="queue-heading"><h2 id="queue-title">Handoffs awaiting review</h2><span class="count">3 records</span></div>
+      <ol class="records">
+        <li class="record" id="review-r-01" data-record-id="R-01" data-priority="false" tabindex="-1">
+          <div class="record-top"><span class="record-id">R-01</span><span class="status status-ready">Ready</span></div>
+          <h3>West depot stock check</h3>
+          <p class="description">The count is ready for the next reviewer.</p>
+          <div class="metadata"><span class="source">Inventory review</span><time datetime="2026-09-05T09:00:00Z">2026-09-05 09:00 UTC</time></div>
+        </li>
+        <li class="record" id="review-r-02" data-record-id="R-02" data-priority="true" tabindex="-1">
+          <div class="record-top"><span class="record-id">R-02</span><span class="priority-label">Current priority</span><span class="status status-review">Needs review</span></div>
+          <h3>North route timing review</h3>
+          <p class="description">Confirm the timing note before the route handoff.</p>
+          <div class="metadata"><span class="source">Route operations</span><time datetime="2026-09-05T09:20:00Z">2026-09-05 09:20 UTC</time></div>
+        </li>
+        <li class="record" id="review-r-03" data-record-id="R-03" data-priority="false" tabindex="-1">
+          <div class="record-top"><span class="record-id">R-03</span><span class="status status-blocked">Blocked</span></div>
+          <h3>Shared equipment reconciliation</h3>
+          <p class="description">One supporting record is missing from the equipment ledger.</p>
+          <div class="metadata"><span class="source">Equipment ledger</span><time datetime="2026-09-05T09:40:00Z">2026-09-05 09:40 UTC</time></div>
+        </li>
+      </ol>
+    </section>
+    <footer>Local review fixture · No production operation</footer>
+  </main>
+</body>
+</html>
