@@ -1,0 +1,91 @@
+{
+  "kind": "sanitized-native-semantic-provenance",
+  "sourceImplementation": "100f24bbe90cedf1b0b6d261e571aa372b290949",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a0774d-d28b-7a40-b0ff-2e21f77b3331",
+    "version": "codex-cli 0.153.4",
+    "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
+    "rolloutSha256": "1bfd94624e2b9ba58e978b63de13a297ae888347f1a111a6981e7d49be9770ad",
+    "wallMs": 47183,
+    "exitCode": 0,
+    "signal": null
+  },
+  "fixture": {
+    "commit": "967d1a037ace253b87c32bd841922755573f8602",
+    "tree": "3ffe2b9f196e60166ddeb7f465f3c06abc11c71c",
+    "gitStatus": "",
+    "diff": "",
+    "changedTrackedFiles": [],
+    "artifacts": ["cases.json"]
+  },
+  "skillSha256": {
+    "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+  },
+  "inputs": {
+    "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+    "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
+    "scenarioDataSha256": {
+      "02": "9b322439ea5fe7b8460b2a6dacae5f1bf7ec8b86db89c2834fe5f66e235cccb5",
+      "03": "2ef75af7a903e301138adb3925c8a7df6f0a216f9d3a7a9dcca3e9aa23b8bc69",
+      "04": "7405326f62a5ede0fe620f67a6036aceeef8141cb4580151e4c2ef114ffc46cd",
+      "05": "61dc18d0f83dd40c6151dbdd370dc2e5374d202f8bf847bc22d866628212909d",
+      "06": "cc8a66d9e4ae104bff3f20692ddda7a00b1e6d7b54939b72a0483a8ea5d789fa",
+      "07": "aa85419bb2bf4f238efa674ce1dcb29b87b40ad9c7febddb3aa2a4e409e21a2b",
+      "08": "f72a2495f63a612a9116a43ae854f4a325305618d1ed2fb6c37870f8807faa9a",
+      "09": "4be3c87f8da7c9b658d0428861079f2e7c4a2e4fd2788622b85b1d3ef4d833e1",
+      "10": "46dd1e8523935577b87eac5aecaca59dc57b21e88f45fc4daa15145972020149",
+      "11": "18dab760f8042b535e54d255fe460530d4bfabf473ef920282d7ec7c792ef412",
+      "12": "6d29fcc54f7da509ed84966e922fa3b661efe4b5ba0da3025e55a1f8286eb3d4",
+      "13": "552b75d227af94ca6311fef6a2c4a10572f39edcf53f67983ec830720065ad58",
+      "14": "be51e51dc662f2d7971d1d30b97d778c817edf6aaeb3c514b309cd269ee724a7",
+      "15": "494e528aeae4c2d5e8857c619c64870c90a034bc2a93c9fc20dd6ad14d338206"
+    },
+    "promptInputSha256": "7696021568a3b6c498852b2667515ded61e256410824bc0837f73c51a9852a87"
+  },
+  "outputs": {
+    "rolloutSha256": "1bfd94624e2b9ba58e978b63de13a297ae888347f1a111a6981e7d49be9770ad",
+    "eventsSha256": "ed655c24be2f06188abbc2fee39ade9f602859fa3750d6754828523aaa6a0f77",
+    "launchSha256": "a816ebeab38f1e57c87a294ca9fc452f5f77071fca8c3b3f7ea23e06331ccf6a",
+    "exitSha256": "fea9c395a234af524fca6ac9d5530dd8ac2ec465e740821fda3e9a65f5913e48",
+    "collectorOutputSha256": "ff64524dacd748dc84997e9af6aa8b6efe56476570339465b6c36b3d7c87f763",
+    "runHelperSha256": "c3d70a9c12589cb6e801afb858ad190e185556dd0ede2215645753cf2db83d8c",
+    "collectorHelperSha256": "1cd114ee1f32907df4bec015158aa80b2cd820a0c37672f0391ba0b889c8b7d9",
+    "finalSha256": "202a1f0abc0142e7cd67880742c804de1f14f4e4813889675085e86f21e44c0c",
+    "stderrSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "finalBytes": 3949
+  },
+  "isolation": {
+    "credentialLeakCheck": "PASS",
+    "personalInstallUnchanged": true,
+    "sourceHarnessHeadUnchanged": true,
+    "sourceHarnessStatusUnchanged": true,
+    "temporaryCredentialsRemaining": 0,
+    "personalCompetitorSkillsDisabled": ["framer", "framer-code-components", "impeccable"],
+    "pluginsAppsExternalToolsDisabled": true,
+    "personalRulesIgnored": true,
+    "expectedActionsSuppliedToProducer": false,
+    "repositoryTestsSuppliedToProducer": false,
+    "priorResponsesSuppliedToProducer": false
+  },
+  "boundedEvidence": {
+    "nativeFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-final.json",
+    "observed": "fixtures/contract-cases/observed.json",
+    "filteredContractTest": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-contract-tests.txt",
+    "filteredContractTestSha256": "01d48ba052fc2d18830177a4904e86cdf189229f98b89f921100ac527d2b119b",
+    "filteredContractResult": "14 PASS / 0 FAIL",
+    "postSemanticContractTest": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt",
+    "postSemanticContractTestSha256": "d69ee48edaf8404cb614ab789181f84bd788c21af86884fb0606af14c7da6fbe",
+    "postSemanticContractResult": "64 PASS / 0 FAIL",
+    "priorObserved": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
+    "priorReview": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json"
+  },
+  "supplementaryLocalProvenance": {
+    "collected": "D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/collected-contracts.json",
+    "runDirectory": "D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/runs/contracts"
+  },
+  "exclusions": "No raw rollout, events, stderr, launch payload, Codex home, credentials, identity directory, or absolute rollout path is committed."
+}

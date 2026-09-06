@@ -1,164 +1,110 @@
 {
   "kind": "actual-astra-decision-replay",
-  "limitations": "One fresh supplied-choice replay of all fourteen unchanged scenarios against the current Imagery / Focal skill; not execution or rendered proof for every scenario. Historical failures and prior validation remain preserved.",
-  "sourceImplementation": "2877d0f5dc4d02124111e8ef4f1cdee6ad38926c",
+  "limitations": "One fresh supplied-choice replay of all fourteen unchanged scenarios against the current Composition / Anti-Template skill; not execution or rendered proof for every scenario. Smoke I, final whole-branch review, push, phase closure, user acceptance, statistical stability, and superiority remain unverified. Historical failures and prior validation remain preserved.",
+  "sourceImplementation": "100f24bbe90cedf1b0b6d261e571aa372b290949",
   "skillSha256": {
-    "SKILL.md": "467ff9cb889b2c17b25c246e8d2433aecbe71d89ca806b14ba81dcac52374aed",
+    "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
     "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
-    "templates/DESIGN.md": "b98cc398163bd148dd8d8b28fa0d73dc34b642bd5b4b00614500f89d62a4068b"
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
   },
   "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
   "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
-  "caseFormattingNote": "Runtime cases.json is a byte-exact copy of unchanged repository decisions.json. Expected actions and tests are unchanged.",
+  "caseFormattingNote": "Runtime cases.json is a byte-exact copy of unchanged repository decisions.json. Expected actions and tests were not supplied to the native producer and remain unchanged.",
   "runtime": {
     "model": "gpt-6-astra",
     "effort": "xhigh",
-    "threadId": "01a076df-2bcc-7663-a777-078fef647340",
+    "threadId": "01a0774d-d28b-7a40-b0ff-2e21f77b3331",
     "version": "codex-cli 0.153.4",
     "binarySha256": "a1cf6360ca71918d5466bc3a32d9f18b7044c9128756d1949e715d277b88c9b6",
-    "rolloutSha256": "10f64cda7ab2db42f8dc6b3b01d5dd1df5e15ecaf1f6f12844549e529ff95a04"
+    "rolloutSha256": "1bfd94624e2b9ba58e978b63de13a297ae888347f1a111a6981e7d49be9770ad"
   },
   "evidence": {
-    "run": "D:/JOEWRKS/joedesign-imagery-focal-validation-20260906/runs/contracts",
-    "eventsSha256": "35998302030fd814669afea3c09a0af8d92f20836d94aa553953978e7d004943",
-    "launchSha256": "10cf4e25c6ec1acc6ec574c46fc4d2093b411e461d301bebbff65aa4e4786d66",
-    "finalSha256": "cb8ca3ed9a96fac8f7d94e90c1b63bed7cc0212624cbc5ef492a8f7f3a06649f",
-    "promptInputSha256": "444bba39fa8798004c4c1b29bdb8ec94b74582735faa7d6ad5d8979fa27e52e5",
+    "run": "D:/JOEWRKS/joedesign-composition-anti-template-validation-20260907/runs/contracts",
+    "eventsSha256": "ed655c24be2f06188abbc2fee39ade9f602859fa3750d6754828523aaa6a0f77",
+    "launchSha256": "a816ebeab38f1e57c87a294ca9fc452f5f77071fca8c3b3f7ea23e06331ccf6a",
+    "exitSha256": "fea9c395a234af524fca6ac9d5530dd8ac2ec465e740821fda3e9a65f5913e48",
+    "collectorSha256": "ff64524dacd748dc84997e9af6aa8b6efe56476570339465b6c36b3d7c87f763",
+    "finalSha256": "202a1f0abc0142e7cd67880742c804de1f14f4e4813889675085e86f21e44c0c",
+    "promptInputSha256": "7696021568a3b6c498852b2667515ded61e256410824bc0837f73c51a9852a87",
     "prompt": "Use $joedesign. Read cases.json and evaluate each independent scenario as a decision exercise only. For each, select all applicable action identifiers from its choices and give a concise reason. Return only JSON with a responses array of {id, actions, reason}. Do not execute the hypothetical actions or modify files.",
-    "personalCompetitorSkillsDisabled": [
-      "C:/Users/tjdwo/.agents/skills/framer/SKILL.md",
-      "C:/Users/tjdwo/.agents/skills/framer-code-components/SKILL.md",
-      "C:/Users/tjdwo/.agents/skills/impeccable/SKILL.md"
-    ],
+    "personalCompetitorSkillsDisabled": ["framer", "framer-code-components", "impeccable"],
     "credentialLeakCheck": "PASS",
-    "priorObserved": "fixtures/contract-cases/history/astra-color-contrast-v1/observed.json",
-    "priorReview": "fixtures/contract-cases/history/astra-color-contrast-v1/review-evidence.json",
-    "repositoryFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-final.json",
-    "repositoryFinalSha256": "cb8ca3ed9a96fac8f7d94e90c1b63bed7cc0212624cbc5ef492a8f7f3a06649f",
-    "repositoryProvenance": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-provenance.json"
+    "priorObserved": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
+    "priorReview": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json",
+    "repositoryFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-final.json",
+    "repositoryFinalSha256": "202a1f0abc0142e7cd67880742c804de1f14f4e4813889675085e86f21e44c0c",
+    "repositoryProvenance": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-provenance.json"
   },
   "responses": [
     {
       "id": "02",
-      "actions": [
-        "preserve-retry-and-state-semantics",
-        "refine-presentation-within-product-truth"
-      ],
+      "actions": ["preserve-retry-and-state-semantics", "refine-presentation-within-product-truth"],
       "reason": "Visual cleanup must preserve required actions and distinct Product states."
     },
     {
       "id": "03",
-      "actions": [
-        "absent-create-draft",
-        "retain-approved-rev3-and-propose-draft-rev4",
-        "require-explicit-approval-for-promotion"
-      ],
-      "reason": "Create an initial draft; preserve approved authority while proposing a separate draft revision in the same DESIGN.md, with explicit approval required for promotion."
+      "actions": ["absent-create-draft", "retain-approved-rev3-and-propose-draft-rev4", "require-explicit-approval-for-promotion"],
+      "reason": "Start with a draft; retain approved authority while proposing a separate revision in the same root DESIGN.md. Promotion requires explicit approval."
     },
     {
       "id": "04",
-      "actions": [
-        "produce-2-or-3-materially-distinct-directions",
-        "keep-product-facts-identical-across-candidates"
-      ],
-      "reason": "Unresolved direction calls for meaningful visual alternatives that preserve identical Product facts."
+      "actions": ["produce-2-or-3-materially-distinct-directions", "keep-product-facts-identical-across-candidates"],
+      "reason": "Unresolved direction calls for meaningful visual alternatives that preserve identical Product Truth."
     },
     {
       "id": "05",
-      "actions": [
-        "bounded-refinement",
-        "preserve-approved-direction"
-      ],
-      "reason": "Headline refinement within approved intent requires neither alternative directions nor renewed direction approval."
+      "actions": ["bounded-refinement", "preserve-approved-direction"],
+      "reason": "A local headline refinement stays within approved intent without new alternatives or approval gates."
     },
     {
       "id": "06",
-      "actions": [
-        "identify-take-do-not-take-why-applies-to",
-        "treat-reference-as-advisory"
-      ],
-      "reason": "Adopt the scoped image/text relationship while excluding unrelated branding and respecting project authority."
+      "actions": ["identify-take-do-not-take-why-applies-to", "treat-reference-as-advisory"],
+      "reason": "Adopt the useful image/text relationship with clear scope; unrelated branding and product facts carry no authority."
     },
     {
       "id": "07",
-      "actions": [
-        "bounded-browser-render-proof-before-expansion",
-        "inspect-actual-render",
-        "show-candidate-without-self-approval"
-      ],
-      "reason": "Prove the material composition in the available browser, inspect it, and present it for user response before dependent expansion."
+      "actions": ["bounded-browser-render-proof-before-expansion", "inspect-actual-render", "show-candidate-without-self-approval"],
+      "reason": "Prove the material composition in the browser and present it for user response before dependent expansion."
     },
     {
       "id": "08",
-      "actions": [
-        "inspect-exact-current-render",
-        "bounded-hero-typography-change",
-        "rerender-same-surface-state-viewport"
-      ],
-      "reason": "Inspect and refine the specified headline/artwork relationship, then verify the same desktop target."
+      "actions": ["inspect-exact-current-render", "bounded-hero-typography-change", "rerender-same-surface-state-viewport"],
+      "reason": "Inspect and refine the specified headline/artwork relation, then verify the same desktop target."
     },
     {
       "id": "09",
-      "actions": [
-        "retain-composition-and-adjust-type-hierarchy",
-        "preserve-unrelated-components"
-      ],
-      "reason": "A typography refinement does not authorize replacing the approved composition or changing unrelated components."
+      "actions": ["retain-composition-and-adjust-type-hierarchy", "preserve-unrelated-components"],
+      "reason": "Typography refinement does not authorize replacing the approved composition or changing unrelated components."
     },
     {
       "id": "10",
-      "actions": [
-        "diagnose-direction-against-rejected-evidence",
-        "reenter-bounded-exploration-and-proof",
-        "stop-dependent-expansion"
-      ],
-      "reason": "Two material rejections require diagnosing the failed direction and reopening bounded exploration before further expansion."
+      "actions": ["diagnose-direction-against-rejected-evidence", "reenter-bounded-exploration-and-proof", "stop-dependent-expansion"],
+      "reason": "Two material rejections require diagnosing and reconsidering the direction before further polish or expansion."
     },
     {
       "id": "11",
-      "actions": [
-        "recompose-for-mobile-hierarchy-crop-reachability",
-        "preserve-required-content-and-actions",
-        "inspect-mobile-render"
-      ],
-      "reason": "Recompose and inspect the 390×844 target to restore hierarchy and action reachability while preserving required content."
+      "actions": ["recompose-for-mobile-hierarchy-crop-reachability", "preserve-required-content-and-actions", "inspect-mobile-render"],
+      "reason": "Recompose and inspect the 390×844 target so hierarchy and action reachability preserve Product requirements."
     },
     {
       "id": "12",
-      "actions": [
-        "managed-route-affected-scope-via-joeflow-to-product-definition",
-        "unmanaged-raise-to-current-product-authority-or-user",
-        "continue-independent-work"
-      ],
-      "reason": "Role permissions belong to Product authority; route only the affected ambiguity through the applicable authority and continue independent work."
+      "actions": ["managed-route-affected-scope-via-joeflow-to-product-definition", "unmanaged-raise-to-current-product-authority-or-user", "continue-independent-work"],
+      "reason": "Role permissions require Product authority resolution through the applicable route; independent visual work can continue."
     },
     {
       "id": "13",
-      "actions": [
-        "A-PASS",
-        "B-FAIL",
-        "C-UNVERIFIED",
-        "record-source-target-expected-observed-verdict"
-      ],
-      "reason": "Observed separation satisfies A, observed clipping contradicts B, and unobserved motion leaves C unverified; bind verdicts to their evidence."
+      "actions": ["A-PASS", "B-FAIL", "C-UNVERIFIED", "record-source-target-expected-observed-verdict"],
+      "reason": "Observed separation passes, observed clipping fails, and unobserved reduced-motion behavior remains unverified; record each claim's evidence and target."
     },
     {
       "id": "14",
-      "actions": [
-        "technical-pass",
-        "visual-unverified",
-        "report-exact-unverified-boundary"
-      ],
-      "reason": "Passing technical checks and an uninspected screenshot establish neither visual conformance nor user acceptance."
+      "actions": ["technical-pass", "visual-unverified", "report-exact-unverified-boundary"],
+      "reason": "Passing technical checks and screenshot existence cannot establish visual conformance without inspection or grant user acceptance."
     },
     {
       "id": "15",
-      "actions": [
-        "visual-pass-with-evidence",
-        "user-acceptance-not-granted",
-        "continue-authorized-bounded-work"
-      ],
-      "reason": "Observed visual conformance supports PASS, while '진행' authorizes bounded continuation without approving the material direction."
+      "actions": ["visual-pass-with-evidence", "user-acceptance-not-granted", "continue-authorized-bounded-work"],
+      "reason": "Observed visual conformance supports PASS; '진행' authorizes bounded continuation without accepting the material direction."
     }
   ]
 }

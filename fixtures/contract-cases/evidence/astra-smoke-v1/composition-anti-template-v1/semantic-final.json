@@ -1,0 +1,74 @@
+{
+  "responses": [
+    {
+      "id": "02",
+      "actions": ["preserve-retry-and-state-semantics", "refine-presentation-within-product-truth"],
+      "reason": "Visual cleanup must preserve required actions and distinct Product states."
+    },
+    {
+      "id": "03",
+      "actions": ["absent-create-draft", "retain-approved-rev3-and-propose-draft-rev4", "require-explicit-approval-for-promotion"],
+      "reason": "Start with a draft; retain approved authority while proposing a separate revision in the same root DESIGN.md. Promotion requires explicit approval."
+    },
+    {
+      "id": "04",
+      "actions": ["produce-2-or-3-materially-distinct-directions", "keep-product-facts-identical-across-candidates"],
+      "reason": "Unresolved direction calls for meaningful visual alternatives that preserve identical Product Truth."
+    },
+    {
+      "id": "05",
+      "actions": ["bounded-refinement", "preserve-approved-direction"],
+      "reason": "A local headline refinement stays within approved intent without new alternatives or approval gates."
+    },
+    {
+      "id": "06",
+      "actions": ["identify-take-do-not-take-why-applies-to", "treat-reference-as-advisory"],
+      "reason": "Adopt the useful image/text relationship with clear scope; unrelated branding and product facts carry no authority."
+    },
+    {
+      "id": "07",
+      "actions": ["bounded-browser-render-proof-before-expansion", "inspect-actual-render", "show-candidate-without-self-approval"],
+      "reason": "Prove the material composition in the browser and present it for user response before dependent expansion."
+    },
+    {
+      "id": "08",
+      "actions": ["inspect-exact-current-render", "bounded-hero-typography-change", "rerender-same-surface-state-viewport"],
+      "reason": "Inspect and refine the specified headline/artwork relation, then verify the same desktop target."
+    },
+    {
+      "id": "09",
+      "actions": ["retain-composition-and-adjust-type-hierarchy", "preserve-unrelated-components"],
+      "reason": "Typography refinement does not authorize replacing the approved composition or changing unrelated components."
+    },
+    {
+      "id": "10",
+      "actions": ["diagnose-direction-against-rejected-evidence", "reenter-bounded-exploration-and-proof", "stop-dependent-expansion"],
+      "reason": "Two material rejections require diagnosing and reconsidering the direction before further polish or expansion."
+    },
+    {
+      "id": "11",
+      "actions": ["recompose-for-mobile-hierarchy-crop-reachability", "preserve-required-content-and-actions", "inspect-mobile-render"],
+      "reason": "Recompose and inspect the 390×844 target so hierarchy and action reachability preserve Product requirements."
+    },
+    {
+      "id": "12",
+      "actions": ["managed-route-affected-scope-via-joeflow-to-product-definition", "unmanaged-raise-to-current-product-authority-or-user", "continue-independent-work"],
+      "reason": "Role permissions require Product authority resolution through the applicable route; independent visual work can continue."
+    },
+    {
+      "id": "13",
+      "actions": ["A-PASS", "B-FAIL", "C-UNVERIFIED", "record-source-target-expected-observed-verdict"],
+      "reason": "Observed separation passes, observed clipping fails, and unobserved reduced-motion behavior remains unverified; record each claim's evidence and target."
+    },
+    {
+      "id": "14",
+      "actions": ["technical-pass", "visual-unverified", "report-exact-unverified-boundary"],
+      "reason": "Passing technical checks and screenshot existence cannot establish visual conformance without inspection or grant user acceptance."
+    },
+    {
+      "id": "15",
+      "actions": ["visual-pass-with-evidence", "user-acceptance-not-granted", "continue-authorized-bounded-work"],
+      "reason": "Observed visual conformance supports PASS; '진행' authorizes bounded continuation without accepting the material direction."
+    }
+  ]
+}
