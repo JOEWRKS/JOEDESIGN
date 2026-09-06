@@ -1,0 +1,16 @@
+✔ imagery — role precedes treatment and informative imagery remains Product content (1.0231ms)
+✔ imagery — focal ownership or visual sequence is intentional (0.2003ms)
+✔ imagery — text-image dominance is deliberate rather than accidental co-dominance (0.2109ms)
+✔ imagery — crop and focal point preserve important or required image content (0.3639ms)
+✔ imagery — scale and negative space express image priority without fixed ratios (0.2631ms)
+✔ imagery — references contribute imagery relationships without copied assets or invented source facts (0.3458ms)
+✔ imagery — responsive translation may recrop reposition or recompose while preserving role and required content (0.2504ms)
+✔ imagery — project DESIGN persists compact focal authority and material claims require actual target renders (0.191ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 90.4282

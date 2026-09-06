@@ -111,6 +111,18 @@ Responsive typography preserves semantic role mapping and relative dominance; do
 
 For material type claims, inspect the actual render. Record the major type roles, entry-point role, equivalent-role consistency, adjacent-role contrast, body/reading measure, material exceptions, and actual desktop/mobile observations. Token existence or valid CSS alone does not prove typographic hierarchy.
 
+## Direct imagery and focal ownership
+
+Role before asset treatment. Classify imagery as **FOCAL**, **SUPPORT**, or **DECORATIVE**; informative imagery preserves Product meaning regardless of its visual role.
+
+Choose an intentional focal owner or intentional sequence rather than forcing a universal single focal. Make text-image dominance deliberate, not accidental co-dominance: quiet text may anchor strong imagery, text may lead, or a balanced relationship may be intentional.
+
+Identify the important subject or focal region and preserve important or required image content before a blind center-crop. Let scale and negative space express image priority; do not enforce a fixed ratio or percentage.
+
+References contribute imagery relationships: a reference relationship ≠ a copied asset. Unknown source facts remain unknown; do not invent source facts or copy assets without authorization.
+
+Responsive translation may recrop, reposition, or recompose while preserving image role and required content. A material crop or focal claim requires inspection of the actual target render.
+
 ## Review actual output; keep verdicts separate
 
 For each material claim, use `expected observable → actual observed fact → PASS / FAIL / UNVERIFIED`. Bind the source, artifact/version, surface/state, and dimensions when material. Describe a concrete visible relation, not just “looks right.” Inspect the exact produced render; code, DOM existence, build/test success, or a screenshot merely existing on disk cannot prove appearance.

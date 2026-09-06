@@ -56,6 +56,20 @@ Keep product meaning in its authority, not duplicated here. -->
 
 ## Imagery / Artwork
 
+<!-- Optional: persist only sourced/approved durable imagery decisions. Empty or unknown values are valid. -->
+
+### Role
+
+### Focal Owner
+
+### Text-Image Relationship
+
+### Important Focal / Crop Rule
+
+### Responsive Translation
+
+### Approved Evidence
+
 ## Component / Control Grammar
 
 ## Motion / Interaction Expression
