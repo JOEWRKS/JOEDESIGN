@@ -1,0 +1,74 @@
+{
+  "kind": "controller-in-progress-integrity-diagnostic",
+  "command": "node verify-final.mjs",
+  "initialResult": "FAIL",
+  "exitCode": 1,
+  "observedError": {
+    "name": "AssertionError [ERR_ASSERTION]",
+    "claim": "Artifact hash: fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/validation-notes.md",
+    "actualSha256": "2c03d37f48100eb829e99fef42c176fe80fd7f4836dc519af955e93e8cf9e4c7",
+    "recordedSha256": "9f5bd64547332b39d756a5ddd00f2703dfacf881d2b38910e103db19b9e936df",
+    "stackLocation": "verify-final.mjs:48:9"
+  },
+  "cause": "Controller launched a read-only integrity check before the active evidence-producing worker reported completion. The shared worktree was between a notes edit and corresponding manifest regeneration. Neither immutable committed snapshot had a mismatched notes hash.",
+  "committedSnapshotComparison": [
+    {
+      "commit": "a37cc74f8bef04f57026e96252dc37c5739de5fa",
+      "actualNotesSha256": "9f5bd64547332b39d756a5ddd00f2703dfacf881d2b38910e103db19b9e936df",
+      "recordedNotesSha256": "9f5bd64547332b39d756a5ddd00f2703dfacf881d2b38910e103db19b9e936df"
+    },
+    {
+      "commit": "23723354b7c9d044d9b7a192b463b570a720d14d",
+      "actualNotesSha256": "2c03d37f48100eb829e99fef42c176fe80fd7f4836dc519af955e93e8cf9e4c7",
+      "recordedNotesSha256": "2c03d37f48100eb829e99fef42c176fe80fd7f4836dc519af955e93e8cf9e4c7"
+    }
+  ],
+  "resolution": "No runtime, test, expected action, model response, screenshot or gate was changed. After producer completion, freeze current HEAD and rerun read-only integrity verification.",
+  "completedSnapshotVerification": {
+    "result": "PASS",
+    "startingHead": "ecfcb3175f5e7654dc0a6e37e228ceddc28f2fa9",
+    "head": "23723354b7c9d044d9b7a192b463b570a720d14d",
+    "tree": "29309a342ad189a42befb776f9bf263396dcbbd9",
+    "existingFiles": 123,
+    "protectedExistingUnchanged": 118,
+    "changedExisting": [
+      "fixtures/contract-cases/observed.json",
+      "fixtures/contract-cases/review-evidence.json",
+      "skills/joedesign/SKILL.md",
+      "skills/joedesign/templates/DESIGN.md",
+      "tests/joedesign-contract.tests.mjs"
+    ],
+    "historicalArchivesByteExact": true,
+    "expectedActionsUnchanged": true,
+    "skillSha256": {
+      "SKILL.md": "0ba7b4cb7e8dd0169bbf1cfcecab98b4c1fdf45aff6b0010b0c4a4ed731f86e1",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "fe89676895c752a65730d3626e724d35e13f5586c94884ddf0535b600121e791"
+    },
+    "nativeRuns": [
+      {
+        "label": "contracts",
+        "threadId": "01a0765e-898c-7933-8bf8-4b5754267b50",
+        "rolloutSha256": "a6c81bda2bc134270a3b2d890719ed99f08811ced1e242b6b85787e6968eab06",
+        "sourceImplementation": "b15d77946862df0f8c1ebc41f43319d17e1c11a5"
+      },
+      {
+        "label": "G",
+        "threadId": "01a07666-dd97-7a20-800a-087f437002c8",
+        "rolloutSha256": "0fa9eb4c81928f4b960a0b930da29ffcd55618b7dc0dd9ddcda0ab81d522804d",
+        "sourceImplementation": "452e4ea2e7f36cc983801002faebe2175a7c10cf"
+      }
+    ],
+    "artifactCount": 40,
+    "artifactBytes": 693528,
+    "newlyAddedFiles": 39,
+    "audit": {
+      "personalInstallUnchanged": true,
+      "sourceHeadUnchanged": true,
+      "sourceStatusUnchanged": true,
+      "credentialsRemaining": []
+    }
+  },
+  "preservation": "This is a compact faithful diagnostic record, not a claimed byte-exact copy of the entire tool wrapper output. The initial FAIL is retained and is not relabelled PASS; the separate completed-snapshot check passed.",
+  "scope": "Coordination diagnostic, not a failed final semantic/render/contrast gate. No native replay or render was repeated."
+}

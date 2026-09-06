@@ -157,6 +157,11 @@
       "bytes": 161606
     },
     {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/controller-integrity-diagnostic.json",
+      "sha256": "687e0943f60d38115c12c19aa000ccdf5fd93a05aeda1c61bf197b3710eac7c3",
+      "bytes": 3720
+    },
+    {
       "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/final-contract-tests.txt",
       "sha256": "98f9a0d7ba6c6844517e1d3e662e7b07c25838706ed362aff8284d3b61160497",
       "bytes": 3983
@@ -193,8 +198,8 @@
     },
     {
       "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/validation-notes.md",
-      "sha256": "2c03d37f48100eb829e99fef42c176fe80fd7f4836dc519af955e93e8cf9e4c7",
-      "bytes": 4947
+      "sha256": "c65d64143bbf76ae62d96954ea9dc04fc103eb9964be1b8899a658a8de4b46e3",
+      "bytes": 5562
     },
     {
       "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/DESIGN.md",
@@ -334,8 +339,8 @@
   ],
   "evidenceIntegrity": {
     "result": "PASS",
-    "repositoryRelativeArtifactCount": 40,
-    "artifactBytes": 693528,
+    "repositoryRelativeArtifactCount": 41,
+    "artifactBytes": 697863,
     "exhaustiveCurrentEvidenceDirectories": [
       "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1",
       "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g"
@@ -391,6 +396,9 @@
       "result": "trailing blank-line diff warnings",
       "disposition": "Byte-exact native contrast tables intentionally preserved."
     }
+  ],
+  "operationalNotes": [
+    "Controller verification observed a transient shared-worktree notes/manifest hash mismatch while the active producer was between an artifact edit and hash regeneration. Immutable a37cc74 and 2372335 each have internally matching notes hashes, and the completed 2372335 snapshot independently passed. The byte-exact controller diagnostic is preserved in color-contrast-v1/controller-integrity-diagnostic.json; this is not a failed semantic, render, contrast, or committed-integrity gate."
   ],
   "knownFailures": [],
   "unverified": [
