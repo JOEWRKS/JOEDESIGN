@@ -1,0 +1,210 @@
+{
+  "source": "D:\\JOEWRKS\\joedesign-composition-validation-supplement-20260907\\seed\\index.html",
+  "browserVersion": "152.0.7977.76",
+  "observations": [
+    {
+      "label": "desktop",
+      "viewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "document": {
+        "width": 1440,
+        "height": 1000
+      },
+      "visibleText": "FIELDLIGHT RENTALS Choose your field kit Compare day-hire equipment for a small recording session. One-day hire · Collection only Pocket Audio Kit $24 / day INCLUDED EQUIPMENT Portable recorder Lavalier microphone Headphones Availability Available today Choose Pocket Audio Kit Interview Kit $42 / day INCLUDED EQUIPMENT Two wireless microphones Portable recorder Table stands Availability Available today Choose Interview Kit Room Recording Kit $58 / day INCLUDED EQUIPMENT Stereo microphone pair Audio interface Monitor headphones Availability Available tomorrow Choose Room Recording Kit Selection preview No kit selected.",
+      "requiredCopyPresent": false,
+      "initialNoSelection": true,
+      "buttonCount": 3,
+      "choices": [
+        {
+          "name": "Pocket Audio Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "true"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "false"
+            }
+          ],
+          "correctPressed": true
+        },
+        {
+          "name": "Interview Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "true"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "false"
+            }
+          ],
+          "correctPressed": true
+        },
+        {
+          "name": "Room Recording Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "true"
+            }
+          ],
+          "correctPressed": true
+        },
+        {
+          "name": "Pocket Audio Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "true"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "false"
+            }
+          ],
+          "correctPressed": true
+        }
+      ],
+      "errors": [],
+      "externalRequests": [],
+      "reloadResets": true,
+      "storage": {
+        "local": 0,
+        "session": 0
+      },
+      "pass": false
+    },
+    {
+      "label": "mobile",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "width": 390,
+        "height": 1415
+      },
+      "visibleText": "FIELDLIGHT RENTALS Choose your field kit Compare day-hire equipment for a small recording session. One-day hire · Collection only Pocket Audio Kit $24 / day INCLUDED EQUIPMENT Portable recorder Lavalier microphone Headphones Availability Available today Choose Pocket Audio Kit Interview Kit $42 / day INCLUDED EQUIPMENT Two wireless microphones Portable recorder Table stands Availability Available today Choose Interview Kit Room Recording Kit $58 / day INCLUDED EQUIPMENT Stereo microphone pair Audio interface Monitor headphones Availability Available tomorrow Choose Room Recording Kit Selection preview No kit selected.",
+      "requiredCopyPresent": false,
+      "initialNoSelection": true,
+      "buttonCount": 3,
+      "choices": [
+        {
+          "name": "Pocket Audio Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "true"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "false"
+            }
+          ],
+          "correctPressed": true
+        },
+        {
+          "name": "Interview Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "true"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "false"
+            }
+          ],
+          "correctPressed": true
+        },
+        {
+          "name": "Room Recording Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "true"
+            }
+          ],
+          "correctPressed": true
+        },
+        {
+          "name": "Pocket Audio Kit",
+          "visibleResult": true,
+          "pressed": [
+            {
+              "text": "Choose Pocket Audio Kit",
+              "pressed": "true"
+            },
+            {
+              "text": "Choose Interview Kit",
+              "pressed": "false"
+            },
+            {
+              "text": "Choose Room Recording Kit",
+              "pressed": "false"
+            }
+          ],
+          "correctPressed": true
+        }
+      ],
+      "errors": [],
+      "externalRequests": [],
+      "reloadResets": true,
+      "storage": {
+        "local": 0,
+        "session": 0
+      },
+      "pass": false
+    }
+  ],
+  "limitations": "Actual content/actions/geometry checks, not a visual judgment or exhaustive accessibility audit.",
+  "pass": false
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Fieldlight Rentals — Choose your field kit</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="page-heading">
+      <p class="brand">Fieldlight Rentals</p>
+      <h1>Choose your field kit</h1>
+      <p class="intro">Compare day-hire equipment for a small recording session.</p>
+      <p class="hire-note">One-day hire · Collection only</p>
+    </header>
+    <section class="options" aria-label="Rental options">
+      <article class="option" data-kit="pocket" aria-labelledby="pocket-name">
+        <h2 id="pocket-name">Pocket Audio Kit</h2>
+        <p class="price">$24 <span>/ day</span></p>
+        <h3>Included equipment</h3>
+        <ul><li>Portable recorder</li><li>Lavalier microphone</li><li>Headphones</li></ul>
+        <p class="availability"><span>Availability</span> Available today</p>
+        <button type="button" data-select="pocket" aria-pressed="false">Choose Pocket Audio Kit</button>
+      </article>
+      <article class="option" data-kit="interview" aria-labelledby="interview-name">
+        <h2 id="interview-name">Interview Kit</h2>
+        <p class="price">$42 <span>/ day</span></p>
+        <h3>Included equipment</h3>
+        <ul><li>Two wireless microphones</li><li>Portable recorder</li><li>Table stands</li></ul>
+        <p class="availability"><span>Availability</span> Available today</p>
+        <button type="button" data-select="interview" aria-pressed="false">Choose Interview Kit</button>
+      </article>
+      <article class="option" data-kit="room" aria-labelledby="room-name">
+        <h2 id="room-name">Room Recording Kit</h2>
+        <p class="price">$58 <span>/ day</span></p>
+        <h3>Included equipment</h3>
+        <ul><li>Stereo microphone pair</li><li>Audio interface</li><li>Monitor headphones</li></ul>
+        <p class="availability"><span>Availability</span> Available tomorrow</p>
+        <button type="button" data-select="room" aria-pressed="false">Choose Room Recording Kit</button>
+      </article>
+    </section>
+    <section class="selection" aria-labelledby="selection-heading">
+      <h2 id="selection-heading">Selection preview</h2>
+      <output id="selection-output" aria-live="polite">No kit selected.</output>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
