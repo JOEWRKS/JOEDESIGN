@@ -1,6 +1,6 @@
 # JOEDESIGN repository
 
-- Current phase: Pure Core Freeze review preparation only. Read `fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md` with the roadmap; its source/package identities and evidence limits are the active resume pointer. Do not restart completed implementation, transplant, semantic replay or Smoke work.
+- Current phase: `v0.1-test` snapshot of the approved frozen core `7f890c60ed3837efc1693aeeba33759f12c85383`. Read `README.md` and the roadmap for version, package hashes, current roles and test boundaries. Preserve the package; do not restart completed implementation, transplant, semantic replay or Smoke work.
 - `docs/roadmaps/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md` is the canonical execution roadmap and memory-loss recovery source.
 - `docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md` remains the canonical top-level role/authority map, not the current phase-status source; use the roadmap for completed/deferred phases.
 - Process / Authority, Craft (Spatial / Hierarchy, Typography / Scale, Color / Contrast, Imagery / Focal Ownership, Composition / Anti-template), and Reference Intelligence are CLOSED. Preserve them.
@@ -9,8 +9,9 @@
 - Implementation Bridge v0.1 is CLOSED by Program Lead for the existing contracts and Smoke F scope only. Evidence-repair baseline is `4ae644128a71f514ea10564400d6dc70e70ae0fa`; see `fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/proof.md` and the active freeze review record for runtime/input-exclusion limits and the Smoke F terminal-LF correction. `status.attention.icon` remains intentionally unresolved.
 - `docs/decisions/JOEDESIGN_OPTICAL_GATE_V1.md` records `OPTICAL_CORE = DEFERRED; no demonstrated need before competition`.
 - All previous phase handoffs, including `docs/handoffs/JOEDESIGN_IMPLEMENTATION_BRIDGE_VALIDATION_V1.md`, are historical records, not active execution instructions. Never overwrite current package or evidence from a historical branch.
-- Pure Core Freeze and competition readiness are NOT declared. Next action: Program Lead final judgment, then TrackC handoff only as authorized by that judgment.
+- Program Lead approved Pure Core Freeze and JOEDESIGN-arm comparison readiness. This is a working test MVP, not production acceptance or readiness of all five arms. Historical review packets remain unchanged; their pending statuses do not override this current decision.
+- TrackC implementation agent owns BIO production; its existing lead chat owns BIO brief/product/evaluation management. New TrackE owns comparison execution, independent runs, evidence collection and anonymization. Do not assign comparison execution to the TrackC implementation agent; TrackE does not decide the winner itself.
 - Any shipped `skills/joedesign/**` byte change invalidates branch-level semantic readiness; refresh fresh Astra evidence before full readiness claims.
 - Preserve one public skill, `joedesign`, Product authority, APPROVED project `DESIGN.md`, and User Acceptance separation.
 - No competitor/vendor runtime, parser, standalone lint CLI, token DB, exporter, router, or new public skill without demonstrated need.
-- Preserve prior failure evidence and frozen expected semantic actions. This review preparation changes documents/evidence only: keep shipped package, existing tests, scenarios, response actions/reasons and original Smokes byte-exact; no new semantic or Smoke run, BIO access/work, dependency, personal install, main or other branch changes.
+- Preserve prior failure evidence and frozen expected semantic actions. This test-version publication changes README, AGENTS and the roadmap only; keep shipped package, existing tests, scenarios, response actions/reasons and all evidence byte-exact. Publication does not authorize competition execution, BIO production, a personal install, main integration, other-branch changes or new dependencies.

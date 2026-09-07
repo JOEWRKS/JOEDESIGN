@@ -6,6 +6,39 @@ JOEDESIGN turns a project's approved product meaning and current context into vi
 
 It owns visual expression and the project-root `DESIGN.md`: composition, typography, color, imagery, visual controls, motion expression, and responsive recomposition. Product Definition still owns what the product does. JOEFLOW, when present, owns lifecycle progression and routes bounded product ambiguities; it is not a runtime prerequisite. Visual PASS is not user acceptance.
 
+## Test version — v0.1-test
+
+A working MVP frozen for practical evaluation, not a production release or a claim of design superiority.
+
+| Item | Value |
+| --- | --- |
+| Version | `v0.1-test` |
+| Date | `2026-09-07` |
+| Test branch | `codex/joedesign-v0.1-test` |
+| Frozen core / evidence source | `7f890c60ed3837efc1693aeeba33759f12c85383` |
+| Source tree | `0945d2b7dafc671bd7afdd3b5b5daaf2678f8b6c` |
+| Program decision | Pure Core Freeze approved; JOEDESIGN arm may be handed off for comparison |
+| Package change in this snapshot | None; documentation only |
+
+Pin the exact test commit used for an evaluation; do not follow a moving branch during the run. The immutable source commit above supplies the same three-file skill package. This version label is a branch/document designation, not a Git tag or a published GitHub Release.
+
+| File under `skills/joedesign/` | SHA-256 |
+| --- | --- |
+| `SKILL.md` | `d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652` |
+| `templates/DESIGN.md` | `4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237` |
+| `agents/openai.yaml` | `c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1` |
+
+### Test ownership
+
+| Owner | Responsibility |
+| --- | --- |
+| JOEDESIGN lead / TrackB | Preserve the frozen core; assess demonstrated defects after evaluation |
+| TrackC implementation agent | BIO production implementation; remains paused until its own resumption is authorized |
+| Existing TrackC lead chat | BIO brief, product priorities, evaluation criteria and adoption decisions |
+| New TrackE agent | Comparison execution, independent run contexts, evidence collection and anonymization; does not select a winner itself |
+
+Publishing this snapshot does not start the comparison or resume BIO production. See the [roadmap](docs/roadmaps/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md) for the current phase and corrected track roles. Historical review packets retain their original pending statuses and role wording; they are not current execution instructions.
+
 ## Install and use
 
 Copy only `skills/joedesign` from this repository to your project's `.agents/skills/joedesign`. Keep its three files and relative paths intact. This is a project-local copy, not an installer or a global behavior overlay. Do not copy the repository's `AGENTS.md`, tests, or specification into your project's runtime skill folder.
@@ -22,6 +55,14 @@ v0.1 intentionally includes no Impeccable, UI UX Pro Max, Figma Make methodology
 
 ## Verification
 
-Run `node --test tests/joedesign-contract.tests.mjs` with Node.js. The 16 tests map 1:1 to specification §23: public discovery, fourteen deterministic replays of actual Astra scenario decisions, and pure-core package/install-copy absence checks. The replay pins all shipped skill bytes and parsed input-case data; it fails when evidence is missing or stale. JSON formatting alone does not invalidate identical scenario data; the original runtime input byte hash is also retained. It does not call a model, simulate an instruction engine, or prove that every decision was executed in a real project. The original run and evidence provenance are in `fixtures/contract-cases/observed.json`.
+The inherited freeze record contains **72 PASS / 0 FAIL** for the eight-file suite. This is an aggregate of wording/package assertions and saved semantic-response checks, not 72 practical design jobs. Documentation publication is not a new model replay, browser observation or test run.
 
-An optional `JOEDESIGN_INSTALLED_SKILL` environment variable points the same suite at a project-local installed copy for byte-for-byte verification. Fresh Astra xhigh smoke A/B separately verify an unresolved dashboard proof and approved Hero typography refinement. Competition and broader project generalization remain outside this MVP review gate.
+Run the full suite with Node.js:
+
+```sh
+node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs tests/joedesign-color-contrast-core.tests.mjs tests/joedesign-imagery-focal-core.tests.mjs tests/joedesign-composition-anti-template-core.tests.mjs tests/joedesign-implementation-bridge.tests.mjs
+```
+
+`tests/joedesign-contract.tests.mjs` alone remains the 16-test Process/Authority subset. Its fourteen saved-response checks do not call a model. An optional `JOEDESIGN_INSTALLED_SKILL` environment variable verifies a project-local installed copy against the shipped three-file package.
+
+[Freeze review evidence](fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md) records original commands, outputs, package identities and version-scoped Smoke evidence. The recovered Bridge run verifies native identity and input/output linkage; independent exclusion of hints in encrypted messages and OS isolation remain UNVERIFIED. No new observation is implied by copying historical evidence. Real-project quality, generalization, comparative advantage and User Acceptance remain unverified.

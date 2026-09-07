@@ -1,6 +1,6 @@
 # JOEDESIGN v0.1 Implementation Roadmap
 
-**Status:** Active execution roadmap  
+**Status:** `v0.1-test` — frozen working MVP for evaluation
 **Purpose:** 대화 기억이 없어져도 현재 완료 상태, 다음 gate, 금지선을 즉시 복구한다.  
 **Operating model:** `docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md`
 
@@ -36,16 +36,17 @@ JOEDESIGN v0.1은 다음 다섯 층을 가진 작고 독립적인 AI 디자인 �
 | Composition validation supplement | ACCEPTED by Program Lead — original Composition package scope |
 | Optical / Detail Polish | DEFERRED — no demonstrated need before competition |
 | Implementation Bridge | CLOSED by Program Lead — existing contracts and Smoke F scope only |
-| Pure Core Freeze | REVIEW PREPARATION — not declared |
-| BIO 5-way Competition | NOT AUTHORIZED by this task; readiness not declared |
+| Pure Core Freeze | PASS — Program Lead approved exact source `7f890c60ed3837efc1693aeeba33759f12c85383` |
+| Test snapshot | `v0.1-test` — unchanged frozen package on `codex/joedesign-v0.1-test` |
+| BIO 5-way Competition | JOEDESIGN arm ready for handoff; TrackE execution pending common-input/runtime preflight and authorization |
 
 현재 순서:
 
 ```text
-Pure Core Freeze review preparation (documents/evidence only)
-→ Program Lead final Freeze / readiness judgment
-→ TrackC handoff only after that judgment and authorization
-→ competition only when separately authorized
+Frozen v0.1-test snapshot
+→ TrackE comparison handoff; TrackC lead chat retains BIO product/evaluation management
+→ common-input/runtime preflight and separately authorized comparison
+→ evaluation and BIO adoption decision
 → v0.2 decision
 ```
 
@@ -166,7 +167,7 @@ Actual runtime identity, separate log/response hashes, fixed input readback and 
 
 Smoke F HTML before/after is not byte-identical: before equals after plus one terminal LF. Separate hashes and original proof are preserved in the correction record. `status.attention.icon` remains intentionally unresolved; no future icon-specific claim is verified.
 
-Everything below in this section describes the completed historical integration/validation. **Do not execute these transplant or validation steps again.** The original handoff remains a historical document; the active task is Section 6.
+Everything below in this section describes the completed historical integration/validation. **Do not execute these transplant or validation steps again.** The original handoff remains a historical document; the frozen version is in Section 6 and the next handoff is in Section 7.
 
 ### Existing candidate
 
@@ -272,30 +273,46 @@ Do not build these unless the bounded Bridge contract cannot be proven without t
 
 ---
 
-## 6. ACTIVE — Pure Core Freeze review preparation
+## 6. CLOSED — Pure Core Freeze / v0.1-test
 
-Review baseline: `4ae644128a71f514ea10564400d6dc70e70ae0fa`, tree `77197aa9894de7c3691c28adf70df20b9fbf6fca`. Composition supplement source: `6a499807826ca41a68616a0faa5d1f4007b60596`.
+Program Lead approved `JOEDESIGN_PURE_CORE_FROZEN = PASS` and `JOEDESIGN_ARM_READY_FOR_COMPETITION = PASS`. The user requested that this version be committed and pushed as a test version on 2026-09-07. These are current program decisions, not deductions from test counts.
 
-Active resume/evidence pointer: [Pure Core Freeze review record](../../fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md). This documents source identities, package hashes, approval pointers, versioned reuse, actual suite outputs, preserved failures and current limitations. The final result HEAD/tree belongs in the delivery report, not recursively inside its own commit.
+| Identity | Value |
+| --- | --- |
+| Test version | `v0.1-test` |
+| Test branch | `codex/joedesign-v0.1-test` |
+| Frozen core / evidence source | `7f890c60ed3837efc1693aeeba33759f12c85383` |
+| Source tree | `0945d2b7dafc671bd7afdd3b5b5daaf2678f8b6c` |
+| Shipped package | Unchanged three-file `skills/joedesign/`; hashes in [README](../../README.md) |
 
-Preparation checks are evidence/document checks, not a Freeze declaration:
+This is a working MVP for practical evaluation, not a production release. Freeze means a fixed comparison baseline, not absence of possible improvements. Pin the exact test commit for each run; do not substitute a later branch head. The source commit above remains an immutable source of the same package. No Git tag or GitHub Release is created by this document designation.
 
-- package/public checks: one public entrypoint; zero competitor/runtime dependency, vendor payload, DB bundle or automatic router; fixed three-file shipped package;
-- existing eight-file suite: baseline and final 72 PASS / 0 FAIL, with command/exit/full output in the review record;
-- saved semantic responses: recovered Bridge execution 14/14, no new model invocation; actual identity/log/input/output linkage is separate from unverified encrypted-message exclusion;
-- actual-screen evidence: reuse each historical Smoke only for its recorded source package, fixture, state and viewport; Composition supplement uses its original Composition package, not Bridge;
-- no shipped skill/test/scenario/response/Smoke-source changes; no new BIO access or work;
-- preserve Product authority, APPROVED DESIGN invariants and User Acceptance NOT_GRANTED.
+[Historical freeze review evidence](../../fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md) preserves the original pre-approval snapshot, commands, outputs, package identities and limitations. Its former pending statuses are historical; this section is the current phase-status authority. Do not rewrite historical evidence to simulate a new test or approval.
 
-The operating model remains the role/authority map; its original expansion-candidate list is not today's phase schedule. Closed Craft/Reference/Bridge and deferred Optical status are governed here. No role, philosophy, doctrine or skill behavior is changed by this update.
+Evidence retained at its original scope:
 
-**Pure Core Freeze and competition readiness remain undeclared. Program Lead alone makes the final judgment.** Preparation READY means ready for that review only.
+- package/public boundary: one public entrypoint, zero competitor/runtime dependency, vendor payload, DB bundle or automatic router;
+- inherited eight-file suite: baseline/final 72 PASS / 0 FAIL in the freeze record; this documents wording/package and stored-response checks, not 72 independent design jobs or a new run for this documentation publication;
+- stored semantic responses: recovered Bridge execution 14/14 with verified native identity/log/input/output linkage; independent encrypted-message input exclusion and OS isolation remain UNVERIFIED;
+- historical renders: each Smoke keeps its source package, fixture, state and viewport; the Composition countercase is not a fresh Bridge-package run;
+- Product authority, APPROVED project DESIGN, User Acceptance separation, prior failures and the Smoke F terminal-LF correction remain preserved.
+
+Actual design quality, density/scroll tradeoffs and work/document overhead should be assessed in the planned comparison rather than by adding speculative rules. User Acceptance, generalization, comparative superiority and readiness of all five arms remain unverified. Optical stays DEFERRED. Publishing `v0.1-test` does not run the comparison or resume BIO production.
 
 ---
 
 ## 7. BIO 5-way Competition
 
-Future TrackC scope, not active execution instructions: run only after Program Lead's final judgment and separate authorization. This preparation neither accesses BIO inputs nor runs competition.
+Comparison execution belongs to the **new TrackE agent**, not the TrackC BIO implementation agent. JOEDESIGN's frozen arm is ready for handoff; all-arm readiness, common inputs and execution authorization remain separate. This test-version publication neither accesses BIO inputs nor runs the comparison.
+
+| Owner | Responsibility |
+| --- | --- |
+| JOEDESIGN lead / TrackB | Preserve the frozen candidate; review concrete defects, not speculative feature expansion |
+| TrackC implementation agent | BIO production implementation; remains paused pending its own resumption decision |
+| Existing TrackC lead chat | BIO brief, product priorities, evaluation criteria and adoption decisions |
+| New TrackE agent | Comparison execution, separate participant contexts, evidence collection and anonymization; no autonomous winner selection |
+
+Historical references to "TrackC handoff" must not be interpreted as assigning comparison execution to the BIO implementation agent. This role clarification does not alter Product or Visual authority.
 
 Competitors:
 
@@ -371,14 +388,15 @@ Read in this order:
 5. current branch HEAD + diff + latest review evidence
 ```
 
-Resume the current review-preparation gate only. Previous phase handoffs/specs preserve history and authority, not permission to repeat CLOSED implementation or old transplant steps. Optical stays DEFERRED. A preparation READY report does not grant Freeze, competition readiness or User Acceptance.
+Resume from the frozen test snapshot and TrackE handoff boundary. Previous phase handoffs and review packets preserve history, not permission to repeat CLOSED implementation or old transplant steps. Current Freeze approval is in Section 6. TrackC implementation and TrackE comparison execution are separate. Optical stays DEFERRED; User Acceptance and comparative superiority remain unverified.
 
 ---
 
 ## 11. Immediate Next Action
 
 ```text
-Complete Pure Core Freeze review packet
-→ Program Lead final judgment
-→ TrackC handoff only after that judgment and authorization
+Register the exact v0.1-test commit and package hashes with TrackE
+→ existing TrackC lead chat confirms BIO product brief/evaluation inputs
+→ TrackE checks all-arm runtime/common-input readiness
+→ execute the comparison only within separate authorization; do not resume TrackC BIO production here
 ```
