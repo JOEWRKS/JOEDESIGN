@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 1,
+  "sourceExecutionLogSha256": "065e43afeafecd5fff08f41ad09d1ca0b25ea0df143de4c8aa7ccb1b85444026",
+  "extraction": "Only runtime identity/context, one complete input-read call, output pointer/hash, final-response pointers, task completion and bounded parent/delivery metadata. Raw base instructions, world-state/skill catalog, ciphertext, hidden reasoning, credentials and unrelated parent content are omitted.",
+  "session": {
+    "line": 1,
+    "timestamp": "2026-09-06T17:06:21.514Z",
+    "rawLineSha256": "2e907f686227a250265b407963198859d873011a76911457a62280806917318a",
+    "recordType": "session_meta",
+    "id": "01a077af-6ed8-7cd2-929b-88e8383ab663",
+    "sessionId": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+    "parentThreadId": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+    "agentPath": "/root/bridge_semantic_14",
+    "agentNickname": "Hypatia the 2nd",
+    "cliVersion": "0.153.4",
+    "modelProvider": "openai",
+    "cwd": "D:\\JOEWRKS\\JOEWRKS-Product",
+    "historyMode": "paginated",
+    "source": {
+      "subagent": {
+        "thread_spawn": {
+          "parent_thread_id": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+          "depth": 1,
+          "agent_path": "/root/bridge_semantic_14",
+          "agent_nickname": "Hypatia the 2nd",
+          "agent_role": null
+        }
+      }
+    },
+    "gitContextCaution": "session_meta.git belongs to the parent JOEWRKS-Product cwd, not to the JOEDESIGN implementation. The actual file-read workdir and byte-matched inputs establish JOEDESIGN source identity."
+  },
+  "turnContexts": [
+    {
+      "line": 8,
+      "timestamp": "2026-09-06T17:06:23.761Z",
+      "rawLineSha256": "f3fdda29fd51102771ebe6c0bae98617d4c6d464b346be3f436890f6e4727258",
+      "recordType": "turn_context",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "turnId": "01a077af-6fa8-7eb3-b3bb-46486a1c59b9",
+      "rootTurnId": "01a077a7-ede4-7f82-94e4-cf39dd964e30",
+      "cwd": "D:\\JOEWRKS\\JOEWRKS-Product",
+      "approvalPolicy": "never",
+      "sandboxPolicy": {
+        "type": "danger-full-access"
+      },
+      "permissionProfile": {
+        "type": "disabled"
+      }
+    },
+    {
+      "line": 24,
+      "timestamp": "2026-09-06T17:07:15.384Z",
+      "rawLineSha256": "52b4e86c3d9761ecc949d11cf77b2ff3573964953dfbb4446a6bbd284a8389d1",
+      "recordType": "turn_context",
+      "model": "gpt-6-astra",
+      "effort": "xhigh",
+      "turnId": "01a077b0-419d-77f1-9267-e0009d1dfd80",
+      "rootTurnId": "01a077a7-ede4-7f82-94e4-cf39dd964e30",
+      "cwd": "D:\\JOEWRKS\\JOEWRKS-Product",
+      "approvalPolicy": "never",
+      "sandboxPolicy": {
+        "type": "danger-full-access"
+      },
+      "permissionProfile": {
+        "type": "disabled"
+      }
+    }
+  ],
+  "inputRead": {
+    "call": {
+      "line": 11,
+      "timestamp": "2026-09-06T17:06:27.670Z",
+      "rawLineSha256": "f5086ca9b4d72efe8f0e3d136481cf6c5fa2af15a655831abe0438ad9722a848"
+    },
+    "name": "exec",
+    "callId": "call_7dMDeSOVmF4Q7pzOkpGCfkVd",
+    "exactInput": "const result = await tools.exec_command({cmd:\"Get-Content -Raw skills/joedesign/SKILL.md; Get-Content -Raw fixtures/contract-cases/decisions.json\",workdir:\"D:\\\\JOEWRKS\\\\joedesign-implementation-bridge-validation\",max_output_tokens:30000});text(result.output);\n",
+    "result": {
+      "line": 14,
+      "timestamp": "2026-09-06T17:06:28.853Z",
+      "rawLineSha256": "04927103e6b494a111c050b5cdee3998c3b368c06e397692da74bff197a43164"
+    },
+    "resultStatus": "Script completed\nWall time 1.1 seconds\nOutput:\n",
+    "stdout": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-readback.txt",
+      "sha256": "3be51dc46c33b889125608bf719f6cc51fe0663262957fb3deeecb1fc2530797",
+      "bytes": 30437
+    },
+    "toolCallCount": 1
+  },
+  "responses": [
+    {
+      "line": 19,
+      "timestamp": "2026-09-06T17:07:06.844Z",
+      "rawLineSha256": "f6fa02df24eea7d1758511f6048b056e8903ea6ebc049a60dec345529d2c13ca",
+      "phase": "final_answer",
+      "artifact": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-initial-response.json",
+        "sha256": "4ba96cbae1ccc1b3486d7821c1021e8def8587f323839a0f071af5f81ae5c522",
+        "bytes": 3838
+      },
+      "shape": "responses[].action / rationale; historical initial schema diagnostic, not newly scored as a semantic failure"
+    },
+    {
+      "line": 32,
+      "timestamp": "2026-09-06T17:07:53.151Z",
+      "rawLineSha256": "80cf3883bb7df307043f1029c43b6aedd7be89b5918316c6f9442c41cf8e8e15",
+      "phase": "final_answer",
+      "artifact": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-final-response.json",
+        "sha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648",
+        "bytes": 4410
+      },
+      "shape": "responses[].actions[] / reason; exact native final text without formatting or an appended newline"
+    }
+  ],
+  "completions": [
+    {
+      "line": 22,
+      "timestamp": "2026-09-06T17:07:06.971Z",
+      "rawLineSha256": "70babfc3d4d4a1312296f093665f6ecece15886242d813ea4644c2ba3b8d3335",
+      "recordType": "task_complete",
+      "turnId": "01a077af-6fa8-7eb3-b3bb-46486a1c59b9",
+      "startedAt": 1788714381,
+      "completedAt": 1788714426,
+      "durationMs": 45719,
+      "finalMessageSha256": "4ba96cbae1ccc1b3486d7821c1021e8def8587f323839a0f071af5f81ae5c522"
+    },
+    {
+      "line": 35,
+      "timestamp": "2026-09-06T17:07:53.284Z",
+      "rawLineSha256": "2d6a93e48044e549056e43d232e213436d03093d77bc1f1f4f4640facedf4272",
+      "recordType": "task_complete",
+      "turnId": "01a077b0-419d-77f1-9267-e0009d1dfd80",
+      "startedAt": 1788714434,
+      "completedAt": 1788714473,
+      "durationMs": 38290,
+      "finalMessageSha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648"
+    }
+  ],
+  "parentBinding": {
+    "localPath": "C:/Users/tjdwo/.codex/sessions/2026/08/24/rollout-2026-08-24T02-49-38-01a02fbe-0a39-76c1-bda3-075f0ba74d9f.jsonl",
+    "snapshotBytes": 356402360,
+    "snapshotSha256": "f7a47fec69943de4e08a901971febeec61d1c393823749a9caeb37d70bde421e",
+    "recordCount": 68687,
+    "snapshotAt": "2026-09-07T04:46:13.636Z",
+    "note": "Supporting parent snapshot only; the actual semantic execution-log hash is the stable child log hash above. Parent may later append unrelated tasks.",
+    "spawnActivity": {
+      "line": 67455,
+      "timestamp": "2026-09-06T17:06:21.224Z",
+      "rawLineSha256": "9d395c093cdc3529013a3dd939d8eab41c78ce2d46f5dade071c8e01314beece",
+      "payload": {
+        "type": "item_completed",
+        "thread_id": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+        "turn_id": "01a077a7-ede4-7f82-94e4-cf39dd964e30",
+        "item": {
+          "type": "SubAgentActivity",
+          "id": "call_eG43WUWGmKjIgdS2zy3zqvqn",
+          "kind": "started",
+          "agent_thread_id": "01a077af-6ed8-7cd2-929b-88e8383ab663",
+          "agent_path": "/root/bridge_semantic_14"
+        },
+        "started_at_ms": 1788714381224,
+        "completed_at_ms": 1788714381224
+      }
+    },
+    "spawnToolOutput": {
+      "line": 67456,
+      "timestamp": "2026-09-06T17:06:21.301Z",
+      "rawLineSha256": "2168ce4482ddacef7a4307b3d09aa8852bf11e66071b6c5de9fce445bdd785cd",
+      "callId": "call_eG43WUWGmKjIgdS2zy3zqvqn",
+      "output": "{\"task_name\":\"/root/bridge_semantic_14\"}"
+    },
+    "messageDeliveryBindings": [
+      {
+        "parentLine": 67453,
+        "parentTimestamp": "2026-09-06T17:06:20.997Z",
+        "parentRawLineSha256": "261efa7d6240e768e64bd266d837304a800fae7db30c553be1a8b62901cf3347",
+        "tool": "spawn_agent",
+        "callId": "call_eG43WUWGmKjIgdS2zy3zqvqn",
+        "target": "bridge_semantic_14",
+        "forkTurns": "none",
+        "model": "gpt-6-astra",
+        "reasoningEffort": "xhigh",
+        "childDelivery": {
+          "line": 10,
+          "timestamp": "2026-09-06T17:06:23.777Z",
+          "rawLineSha256": "c11c7390479c7f27f9eda11d83d343a116f56121234478c664efe037ebc0e37c"
+        },
+        "childMessageId": "amsg_01a077af-79a1-7152-ab72-9c3c87edde67",
+        "author": "/root",
+        "recipient": "/root/bridge_semantic_14",
+        "messageBodyStorage": "encrypted in both parent arguments and child delivery record",
+        "ciphertextSha256": "43bf11ca7fa5c2279a57b6fb129ad3cc909c170a57e33406b0532f05622549c8",
+        "ciphertextBytes": 1508,
+        "parentChildCiphertextByteEqual": true,
+        "plaintextRecovered": false
+      },
+      {
+        "parentLine": 67482,
+        "parentTimestamp": "2026-09-06T17:06:48.867Z",
+        "parentRawLineSha256": "8213b85d938ce0b7f0c5652d860d6153dbc432551e0ec7dd246898c85ac15cc4",
+        "tool": "send_message",
+        "callId": "call_GnGtmpaRY84qclyzXc0P85h3",
+        "target": "bridge_semantic_14",
+        "childDelivery": {
+          "line": 26,
+          "timestamp": "2026-09-06T17:07:15.413Z",
+          "rawLineSha256": "1ee47295a5664a8d3988f1e8671d564431a3bd2218db0d6d931aa0d72aacc782"
+        },
+        "childMessageId": "amsg_01a077b0-4354-7d11-9455-0d2659fd4c68",
+        "author": "/root",
+        "recipient": "/root/bridge_semantic_14",
+        "messageBodyStorage": "encrypted in both parent arguments and child delivery record",
+        "ciphertextSha256": "635f67db5d3f766265cf159e643bc1f8cf62317fb0d971ed698cd57a561150fd",
+        "ciphertextBytes": 588,
+        "parentChildCiphertextByteEqual": true,
+        "plaintextRecovered": false
+      },
+      {
+        "parentLine": 67508,
+        "parentTimestamp": "2026-09-06T17:07:14.955Z",
+        "parentRawLineSha256": "82d65df53a929d0437a0c255699b8596df9a1254215f62497f18498bca4e38aa",
+        "tool": "followup_task",
+        "callId": "call_EheKXhCFgwcxCjp9gRLkDyEO",
+        "target": "bridge_semantic_14",
+        "childDelivery": {
+          "line": 28,
+          "timestamp": "2026-09-06T17:07:15.426Z",
+          "rawLineSha256": "2c07ce6abff7d98842d3c8403207ba6aeafb4ff9685cd52b120f36c58cd6bbf6"
+        },
+        "childMessageId": "amsg_01a077b0-4362-76d1-81fa-d66aa581a672",
+        "author": "/root",
+        "recipient": "/root/bridge_semantic_14",
+        "messageBodyStorage": "encrypted in both parent arguments and child delivery record",
+        "ciphertextSha256": "7d71e806d674f254f96de5aca5a35bf6f3a138608088311759e60d8fe115a403",
+        "ciphertextBytes": 972,
+        "parentChildCiphertextByteEqual": true,
+        "plaintextRecovered": false
+      }
+    ]
+  }
+}

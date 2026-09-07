@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "pinnedBaseline": "20953484ec089e3ebd1e0912233cd1fb08f23bc4",
+  "pinnedTree": "1211dc6cf5744fcbc60a2f93bbfe92c5a951350b",
+  "baselineTrackedFiles": 288,
+  "immutableExistingFiles": 286,
+  "allowedExistingChanges": [
+    "fixtures/contract-cases/observed.json",
+    "fixtures/contract-cases/review-evidence.json"
+  ],
+  "originalObserved": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/observed.json",
+    "sha256": "b63cbb371682d6302808d3622fbba0a4f41d728171bc5fcad114587f5d934fb5",
+    "bytes": 7028
+  },
+  "originalReview": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/review-evidence.json",
+    "sha256": "1741bd13cbdefcf3dd6d2957d6fd8672e62f088d0655be69e1b5d3b12f8c1dfb",
+    "bytes": 5624
+  },
+  "originalsByteExact": true,
+  "packageSha256": {
+    "SKILL.md": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1"
+  },
+  "oldSemanticFinal": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+    "sha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+    "bytes": 4931
+  },
+  "oldSemanticProvenance": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
+    "sha256": "3a3ffdd786711a36f38e7c4b37734c8086b6911a2636166790d315cb462fd60e",
+    "bytes": 2111
+  },
+  "oldSemanticAndSmokeFAndAllOtherFiles": "Retained at original paths and unchanged bytes; current metadata correction does not reclassify historical results as fabrication.",
+  "readbackBoundary": "Snapshot at curation before current metadata edits. Final immutable/package/ref/Git-blob audits are separate delivery checks."
+}

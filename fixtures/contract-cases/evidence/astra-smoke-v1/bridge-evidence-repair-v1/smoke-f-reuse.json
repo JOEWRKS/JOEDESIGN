@@ -1,0 +1,151 @@
+{
+  "schemaVersion": 1,
+  "status": "REUSED",
+  "newModelRuns": 0,
+  "newBrowserRenders": 0,
+  "newVisualObservations": 0,
+  "reason": "Shipped package, fixture authority and render source are unchanged from pinned baseline. This repair verifies historical record/file links only; it does not reenact or upgrade the old visual observations.",
+  "baseline": "20953484ec089e3ebd1e0912233cd1fb08f23bc4",
+  "files": [
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/DESIGN.md",
+      "sha256": "96c7e941927fac14b5374ca0a42c3d42591008b8ff320c1ac26977fa90b22022",
+      "bytes": 2070
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/PRODUCT.md",
+      "sha256": "b72b864405ea48650582d9e192de668265d2f2553e0d13bd22bb23592ae026f5",
+      "bytes": 797
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/after/index.html",
+      "sha256": "7ee04cc9406d202681b3a1a09ed13007fe55fcf6831c7e22298f83bcc5756b33",
+      "bytes": 1385
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/after/styles.css",
+      "sha256": "ae75d9fb168165e33a1f05d436a17163a911a3444ff4eec1fb0ec85205f510ee",
+      "bytes": 2345
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/before/index.html",
+      "sha256": "2e4b4fe6df7f95dbd0f5bc68324fb86176827e3b6e4496bfd944a9a51f5446dd",
+      "bytes": 1386
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/before/styles.css",
+      "sha256": "93910a631279e9656aed42835a3a18425d56750402bc604478f624f25e11eae8",
+      "bytes": 2346
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/mapping-diff.json",
+      "sha256": "10ea7d8eb3c5b997ffb353a57abe58e25e6067378d3c3d870f70cad234849d49",
+      "bytes": 2372
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/mapping-plan.md",
+      "sha256": "d19b3764cb3e26b61b623cd1009ea8e2ae42b6800055cdf052dfb7dfbaeb83f7",
+      "bytes": 1574
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/proof.md",
+      "sha256": "67163d16826f0411e7352f0d67d2a5f6f9486631731e74a26f360f3a3abd7cc7",
+      "bytes": 3910
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/render-observation.json",
+      "sha256": "5e9829547f514dfbf63d06670497d5cfe6d3284ffc05f17687f999446d7037d3",
+      "bytes": 1951
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/desktop.png",
+      "sha256": "b783d684ca2da57330c4450256ef3de529440769c1968e2b28fb22cbc1eb769d",
+      "bytes": 45672
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/mobile.png",
+      "sha256": "37762aa0953f84df2d7c1419189c848d02cb096f4b8929a5fe5ec395dc1b7397",
+      "bytes": 33596
+    }
+  ],
+  "recordedObservation": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/render-observation.json",
+    "sha256": "5e9829547f514dfbf63d06670497d5cfe6d3284ffc05f17687f999446d7037d3",
+    "bytes": 1951
+  },
+  "recordedProof": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/proof.md",
+    "sha256": "67163d16826f0411e7352f0d67d2a5f6f9486631731e74a26f360f3a3abd7cc7",
+    "bytes": 3910
+  },
+  "recordedTargets": [
+    {
+      "name": "desktop",
+      "recordedViewport": {
+        "width": 1440,
+        "height": 1000
+      },
+      "recordedDocument": {
+        "width": 1440,
+        "height": 1000
+      },
+      "image": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/desktop.png",
+        "sha256": "b783d684ca2da57330c4450256ef3de529440769c1968e2b28fb22cbc1eb769d",
+        "bytes": 45672
+      },
+      "recordedHashAndBytesMatch": true,
+      "pngHeaderMatchesRecordedDocument": true
+    },
+    {
+      "name": "mobile",
+      "recordedViewport": {
+        "width": 390,
+        "height": 844
+      },
+      "recordedDocument": {
+        "width": 390,
+        "height": 844
+      },
+      "image": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/mobile.png",
+        "sha256": "37762aa0953f84df2d7c1419189c848d02cb096f4b8929a5fe5ec395dc1b7397",
+        "bytes": 33596
+      },
+      "recordedHashAndBytesMatch": true,
+      "pngHeaderMatchesRecordedDocument": true
+    }
+  ],
+  "productAndApprovedDesignHashMatch": true,
+  "beforeAfterHtmlByteEqual": false,
+  "htmlDifference": {
+    "before": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/before/index.html",
+      "sha256": "2e4b4fe6df7f95dbd0f5bc68324fb86176827e3b6e4496bfd944a9a51f5446dd",
+      "bytes": 1386
+    },
+    "after": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/after/index.html",
+      "sha256": "7ee04cc9406d202681b3a1a09ed13007fe55fcf6831c7e22298f83bcc5756b33",
+      "bytes": 1385
+    },
+    "exactRelation": "before bytes = after bytes + one LF byte (0a)",
+    "exactRelationVerified": true,
+    "originalProofClaim": "before and after HTML are byte-identical with hash2e4b4fe6...",
+    "finding": "That literal byte-identity claim is false. All original HTML bytes are retained; the new record supplies exact separate hashes and confines the observed difference to one terminal newline, without rewriting historical proof or claiming a new render."
+  },
+  "limitations": [
+    "F1-F10 are the existing recorded bounded Smoke F verdicts, not fresh visual judgments.",
+    "status.attention.icon remains unresolved as already recorded; no icon-specific verification is invented.",
+    "Other browser/platform/accessibility/user-acceptance or efficacy claims are not added."
+  ],
+  "additionalLinkageIssuesFound": [
+    {
+      "scope": "smoke-f/proof.md HTML byte-identity sentence",
+      "classification": "Historical reporting/hash-identity mismatch, exact terminal-LF-only delta established",
+      "status": "Reported and bounded in this additive evidence; original claim/source retained unchanged",
+      "sourceOrImageRepairAttempted": false
+    }
+  ],
+  "requiredScreenshotHashChecks": "Both existing render-observation screenshot hashes/lengths and PNG dimensions match the original files."
+}

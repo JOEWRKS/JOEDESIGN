@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "label": "bridge-evidence-repair-v1",
+  "resolution": "RECOVERED_EXISTING_RUN",
+  "newSemanticReplayInvocations": 0,
+  "model": "gpt-6-astra",
+  "reasoningEffort": "xhigh",
+  "runtime": {
+    "threadId": "01a077af-6ed8-7cd2-929b-88e8383ab663",
+    "threadIdKind": "runtime-native child thread ID from session_meta.id and parent SubAgentActivity.agent_thread_id",
+    "nativeSessionId": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+    "nativeSessionIdKind": "parent/root session namespace recorded separately by the collaboration runtime",
+    "parentThreadId": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+    "agentPath": "/root/bridge_semantic_14",
+    "cliVersion": "0.153.4",
+    "turns": [
+      {
+        "turnId": "01a077af-6fa8-7eb3-b3bb-46486a1c59b9",
+        "model": "gpt-6-astra",
+        "reasoningEffort": "xhigh",
+        "sourceLine": 8
+      },
+      {
+        "turnId": "01a077b0-419d-77f1-9267-e0009d1dfd80",
+        "model": "gpt-6-astra",
+        "reasoningEffort": "xhigh",
+        "sourceLine": 24
+      }
+    ],
+    "correlationId": "19d3ff97-553b-4745-b8ff-91282d218d6a",
+    "correlationIdKind": "historical controller-assigned correlation UUID only; not a native session/thread identifier"
+  },
+  "executionLog": {
+    "localPath": "C:/Users/tjdwo/.codex/sessions/2026/09/07/rollout-2026-09-07T02-06-21-01a077af-6ed8-7cd2-929b-88e8383ab663.jsonl",
+    "sha256": "065e43afeafecd5fff08f41ad09d1ca0b25ea0df143de4c8aa7ccb1b85444026",
+    "bytes": 309780,
+    "records": 35
+  },
+  "finalResponse": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+    "sha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+    "bytes": 4931
+  },
+  "nativeFinalResponse": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-final-response.json",
+    "sha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648",
+    "bytes": 4410
+  },
+  "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
+  "pinnedBaseline": "20953484ec089e3ebd1e0912233cd1fb08f23bc4",
+  "packageSha256": {
+    "SKILL.md": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+  },
+  "inputOutputLinkage": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-output-linkage.json",
+    "sha256": "1c50afc9845037af83d7a93cf4498dd325164ebc3919aa41f150d5632fcb99a1",
+    "bytes": 4343
+  },
+  "safeExecutionExcerpts": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/execution-excerpts.json",
+    "sha256": "afde24cb6d371f4b3f4a61c73a65206911947961b74e9cb7ae1a9889d5f9908c",
+    "bytes": 10532
+  },
+  "originalProvenance": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
+    "sha256": "3a3ffdd786711a36f38e7c4b37734c8086b6911a2636166790d315cb462fd60e",
+    "bytes": 2111
+  },
+  "originalObserved": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/observed.json",
+    "sha256": "b63cbb371682d6302808d3622fbba0a4f41d728171bc5fcad114587f5d934fb5",
+    "bytes": 7028
+  },
+  "originalReview": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/review-evidence.json",
+    "sha256": "1741bd13cbdefcf3dd6d2957d6fd8672e62f088d0655be69e1b5d3b12f8c1dfb",
+    "bytes": 5624
+  },
+  "schemaDiagnostic": {
+    "existingRecord": "One initial singular-action answer followed by a same-context schema correction.",
+    "actualRecoveredRecord": "Two model turns; one send_message and one followup_task delivered before turn2 answer; both bodies encrypted. Initial singular response and final actions-array response are preserved without retroactive rescoring.",
+    "initialResponse": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-initial-response.json",
+      "sha256": "4ba96cbae1ccc1b3486d7821c1021e8def8587f323839a0f071af5f81ae5c522",
+      "bytes": 3838
+    }
+  },
+  "limitations": [
+    "Message bodies remain encrypted in both parent arguments and child delivery records. Matching ciphertext establishes delivery linkage, not plaintext meaning.",
+    "The original claim that correction messages were schema-only and supplied no expected answers is preserved as historical reporting, not newly verified from plaintext.",
+    "Observed file/tool accesses contain only the fixed SKILL.md and decisions.json. Shared unrestricted filesystem does not establish OS isolation or comprehensive absence of all possible contextual influence.",
+    "This is recovery of one existing child thread with two turns, not a new replay, fourteen practical implementations, rendered verification, statistical stability or user acceptance."
+  ]
+}

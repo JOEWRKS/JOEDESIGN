@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "resolution": "RECOVERED_EXISTING_RUN",
+  "newReplayInvocations": 0,
+  "pinnedBaseline": "20953484ec089e3ebd1e0912233cd1fb08f23bc4",
+  "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
+  "actualThreadId": "01a077af-6ed8-7cd2-929b-88e8383ab663",
+  "executionLog": {
+    "localPath": "C:/Users/tjdwo/.codex/sessions/2026/09/07/rollout-2026-09-07T02-06-21-01a077af-6ed8-7cd2-929b-88e8383ab663.jsonl",
+    "sha256": "065e43afeafecd5fff08f41ad09d1ca0b25ea0df143de4c8aa7ccb1b85444026",
+    "bytes": 309780,
+    "records": 35
+  },
+  "inputRead": {
+    "callLine": 11,
+    "resultLine": 14,
+    "workdir": "D:/JOEWRKS/joedesign-implementation-bridge-validation",
+    "files": [
+      {
+        "path": "skills/joedesign/SKILL.md",
+        "sha256": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+        "bytes": 23573
+      },
+      {
+        "path": "fixtures/contract-cases/decisions.json",
+        "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+        "bytes": 6860
+      }
+    ],
+    "inputSourceCommitAndPinnedAndCurrentByteEqual": true,
+    "recordedStdout": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-readback.txt",
+      "sha256": "3be51dc46c33b889125608bf719f6cc51fe0663262957fb3deeecb1fc2530797",
+      "bytes": 30437
+    },
+    "exactDeliveryRelation": "UTF8(SKILL.md) + CRLF + UTF8(decisions.json) + CRLF; PowerShell Get-Content -Raw writes each raw file plus its output-record terminator.",
+    "exactDeliveryRelationVerified": true,
+    "scenarioDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23"
+  },
+  "output": {
+    "nativeFinal": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-final-response.json",
+      "sha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648",
+      "bytes": 4410
+    },
+    "nativeFinalRecord": {
+      "line": 32,
+      "timestamp": "2026-09-06T17:07:53.151Z",
+      "rawLineSha256": "80cf3883bb7df307043f1029c43b6aedd7be89b5918316c6f9442c41cf8e8e15"
+    },
+    "existingFinal": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+      "sha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+      "bytes": 4931
+    },
+    "nativeAndExistingParsedJsonEqual": true,
+    "existingFinalAndOriginalObservedResponsesDeepEqual": true,
+    "formatDifference": "The existing semantic-final.json is formatted JSON (4931 bytes); native final text is4410 bytes. The JSON values, all14 actions arrays and all reasons are identical. Their byte hashes are intentionally distinct.",
+    "initialResponsePreserved": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-initial-response.json",
+      "sha256": "4ba96cbae1ccc1b3486d7821c1021e8def8587f323839a0f071af5f81ae5c522",
+      "bytes": 3838
+    }
+  },
+  "originalMisbindings": {
+    "threadId": "19d3ff97-553b-4745-b8ff-91282d218d6a",
+    "threadIdKind": "controller-assigned correlation UUID for collaboration task /root/bridge_semantic_14",
+    "rolloutSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+    "originalIdEqualsActualNativeThread": false,
+    "originalRolloutHashEqualsActualLog": false,
+    "originalRolloutHashEqualsExistingResponseFile": true,
+    "correlationOrigin": "Controller-assigned UUID retained from the original provenance; not asserted to originate in runtime metadata."
+  },
+  "limits": [
+    "Message bodies remain encrypted in both parent arguments and child delivery records. Matching ciphertext establishes delivery linkage, not plaintext meaning.",
+    "The original claim that correction messages were schema-only and supplied no expected answers is preserved as historical reporting, not newly verified from plaintext.",
+    "Observed file/tool accesses contain only the fixed SKILL.md and decisions.json. Shared unrestricted filesystem does not establish OS isolation or comprehensive absence of all possible contextual influence.",
+    "This is recovery of one existing child thread with two turns, not a new replay, fourteen practical implementations, rendered verification, statistical stability or user acceptance."
+  ]
+}

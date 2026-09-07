@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "evidenceRoot": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/",
+  "pinnedBaseline": "20953484ec089e3ebd1e0912233cd1fb08f23bc4",
+  "fileCount": 16,
+  "totalBytes": 105469,
+  "pathBase": "This directory; current observed/review are outside the manifest to avoid self-reference.",
+  "selfHash": "Excluded; exact manifest hash is in current review-evidence.json#bridgeEvidenceRepair.manifest.",
+  "files": [
+    {
+      "path": "baseline-contract-tests.txt",
+      "sha256": "71f20fb3c9f01ae0cfc3c749c655e8400ad7a0938ad760296e27ebb74f487b4d",
+      "bytes": 6363
+    },
+    {
+      "path": "baseline-suite-execution.json",
+      "sha256": "d0d8f80074cdaa8889c99082c5935b29208f21084db39e2ca05c80edb7b77632",
+      "bytes": 1214
+    },
+    {
+      "path": "execution-excerpts.json",
+      "sha256": "afde24cb6d371f4b3f4a61c73a65206911947961b74e9cb7ae1a9889d5f9908c",
+      "bytes": 10532
+    },
+    {
+      "path": "final-contract-tests.txt",
+      "sha256": "ee733b88cc61550a018b53b79a2fcf6d5e2329932fec0b67b1020cd7c6e5494f",
+      "bytes": 6364
+    },
+    {
+      "path": "final-suite-execution.json",
+      "sha256": "d02f20ccfa49c09fe1d351021654878047da6333136d77b5c794e8184525b3fe",
+      "bytes": 1208
+    },
+    {
+      "path": "input-output-linkage.json",
+      "sha256": "1c50afc9845037af83d7a93cf4498dd325164ebc3919aa41f150d5632fcb99a1",
+      "bytes": 4343
+    },
+    {
+      "path": "input-readback.txt",
+      "sha256": "3be51dc46c33b889125608bf719f6cc51fe0663262957fb3deeecb1fc2530797",
+      "bytes": 30437
+    },
+    {
+      "path": "native-final-response.json",
+      "sha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648",
+      "bytes": 4410
+    },
+    {
+      "path": "native-initial-response.json",
+      "sha256": "4ba96cbae1ccc1b3486d7821c1021e8def8587f323839a0f071af5f81ae5c522",
+      "bytes": 3838
+    },
+    {
+      "path": "originals/observed.json",
+      "sha256": "b63cbb371682d6302808d3622fbba0a4f41d728171bc5fcad114587f5d934fb5",
+      "bytes": 7028
+    },
+    {
+      "path": "originals/review-evidence.json",
+      "sha256": "1741bd13cbdefcf3dd6d2957d6fd8672e62f088d0655be69e1b5d3b12f8c1dfb",
+      "bytes": 5624
+    },
+    {
+      "path": "preservation.json",
+      "sha256": "e031da7929122e9196f7de296d42a57606cae1fba4b8418851449132772b023a",
+      "bytes": 1972
+    },
+    {
+      "path": "proof.md",
+      "sha256": "f3011a879993e7fe1a11afff4b7830a1d3c71597803508d61344a0c546076bef",
+      "bytes": 9236
+    },
+    {
+      "path": "recovery-check-diagnostic.json",
+      "sha256": "4f8b5528644f8a833f41de2860c1faca52ff7bed73698b2464fb9e13ac319e07",
+      "bytes": 1595
+    },
+    {
+      "path": "runtime-provenance.json",
+      "sha256": "8ddf1ff82a2d300ea6bf180f0d16b16d746e83fb21d66942db27be5acc5b7571",
+      "bytes": 5059
+    },
+    {
+      "path": "smoke-f-reuse.json",
+      "sha256": "e222105c5f38bd5eb56cf75688605646b30ef12ed0cdcc29fb0170d1cf7baef6",
+      "bytes": 6246
+    }
+  ]
+}

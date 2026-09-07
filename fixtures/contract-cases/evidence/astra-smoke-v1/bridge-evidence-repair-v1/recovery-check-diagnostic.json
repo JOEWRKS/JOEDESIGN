@@ -1,0 +1,31 @@
+{
+  "kind": "historical-smoke-f-byte-identity-mismatch",
+  "command": "node recover.mjs",
+  "initialExitCode": 1,
+  "initialFailure": {
+    "type": "AssertionError [ERR_ASSERTION]",
+    "location": "external recover.mjs:94:8",
+    "actualBeforeHtmlSha256": "2e4b4fe6df7f95dbd0f5bc68324fb86176827e3b6e4496bfd944a9a51f5446dd",
+    "expectedAfterHtmlSha256ComparedForEquality": "7ee04cc9406d202681b3a1a09ed13007fe55fcf6831c7e22298f83bcc5756b33",
+    "explanation": "The helper's equality assertion contradicted the original Smoke F proof's byte-identity claim. This was a real historical reporting discrepancy, not a failed model invocation."
+  },
+  "readOnlyFollowup": {
+    "beforeBytes": 1386,
+    "afterBytes": 1385,
+    "exactRelation": "before bytes = after bytes + one LF byte (0a)",
+    "exactRelationVerified": true,
+    "sourceChanged": false,
+    "oldProofChanged": false,
+    "newBrowserRenderOrObservation": false
+  },
+  "continuation": {
+    "sameRecoveryCurationResumed": true,
+    "newModelReplayInvocations": 0,
+    "existingCuratedFiles": "Verified byte-identical before reuse, not overwritten or deleted.",
+    "finalExitCode": 0,
+    "result": "RECOVERED_EXISTING_RUN, separate exact Smoke F hashes and bounded discrepancy reported in smoke-f-reuse.json.",
+    "originalHelperLocalPath": "D:/JOEWRKS/joedesign-bridge-evidence-repair-20260907/recover-v1-diagnostic.mjs",
+    "originalHelperSha256": "8979b5d7d3e829495f47a998639f5f0328e49255daa945be2418f52a5a567265"
+  },
+  "preservation": "No original failure, source, screenshot or historical claim was removed or rewritten."
+}

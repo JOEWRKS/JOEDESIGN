@@ -1,0 +1,101 @@
+{
+  "kind": "actual-astra-decision-replay",
+  "limitations": "One fresh supplied-choice replay of all fourteen unchanged scenarios against the bounded Implementation Bridge skill. The collaboration producer shared the repository filesystem but was instructed to read only SKILL.md and decisions.json; expected actions, tests, prior responses, and correction hints were not supplied. This is not per-scenario execution, rendered Smoke F proof, statistical stability, environmental isolation, user acceptance, or a superiority claim.",
+  "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
+  "skillSha256": {
+    "SKILL.md": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+  },
+  "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+  "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
+  "caseFormattingNote": "The producer read the unchanged repository decisions.json. Expected actions and tests were not supplied and remain unchanged.",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "19d3ff97-553b-4745-b8ff-91282d218d6a",
+    "threadIdKind": "controller-assigned correlation UUID for collaboration task /root/bridge_semantic_14",
+    "version": "Codex collaboration subagent",
+    "rolloutSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938"
+  },
+  "evidence": {
+    "producerTask": "/root/bridge_semantic_14",
+    "repositoryFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+    "repositoryFinalSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+    "repositoryProvenance": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
+    "priorObserved": "fixtures/contract-cases/history/astra-composition-anti-template-v1/observed.json",
+    "priorReview": "fixtures/contract-cases/history/astra-composition-anti-template-v1/review-evidence.json"
+  },
+  "responses": [
+    {
+      "id": "02",
+      "actions": ["preserve-retry-and-state-semantics", "refine-presentation-within-product-truth"],
+      "reason": "Product authority owns required actions and meaningful states; visual cleanup must retain Retry and distinct pending/failed semantics while refining their presentation."
+    },
+    {
+      "id": "03",
+      "actions": ["absent-create-draft", "retain-approved-rev3-and-propose-draft-rev4", "require-explicit-approval-for-promotion"],
+      "reason": "Create an absent root DESIGN.md as DRAFT Rev 1. Preserve APPROVED Rev 3 while proposing a separate DRAFT Rev 4 in the same file; promotion requires explicit user approval."
+    },
+    {
+      "id": "04",
+      "actions": ["produce-2-or-3-materially-distinct-directions", "keep-product-facts-identical-across-candidates"],
+      "reason": "Unresolved visual direction warrants two or three meaningful alternatives with identical Product Truth, followed by bounded proof and user response before promotion."
+    },
+    {
+      "id": "05",
+      "actions": ["bounded-refinement", "preserve-approved-direction"],
+      "reason": "The request authorizes direct headline hierarchy refinement within the approved direction; neither alternative fanout nor a new direction approval gate is needed."
+    },
+    {
+      "id": "06",
+      "actions": ["identify-take-do-not-take-why-applies-to", "treat-reference-as-advisory"],
+      "reason": "Adopt the useful asymmetrical relationship with clear scope and rationale while excluding unrelated brand and product facts; the reference cannot override project authority."
+    },
+    {
+      "id": "07",
+      "actions": ["bounded-browser-render-proof-before-expansion", "inspect-actual-render", "show-candidate-without-self-approval"],
+      "reason": "Use the available web runtime for a bounded proof, inspect its actual render, and show the candidate for user response before dependent expansion or promotion."
+    },
+    {
+      "id": "08",
+      "actions": ["inspect-exact-current-render", "bounded-hero-typography-change", "rerender-same-surface-state-viewport"],
+      "reason": "Inspect the desktop initial hero, adjust only the headline/artwork hierarchy relationship, and rerender the same surface, state, and viewport to verify the change."
+    },
+    {
+      "id": "09",
+      "actions": ["retain-composition-and-adjust-type-hierarchy", "preserve-unrelated-components"],
+      "reason": "Typography refinement must preserve the approved left-type/right-artwork composition and unrelated components; the request does not authorize a material redesign."
+    },
+    {
+      "id": "10",
+      "actions": ["diagnose-direction-against-rejected-evidence", "reenter-bounded-exploration-and-proof", "stop-dependent-expansion"],
+      "reason": "After two material rejections, diagnose the direction against the failed evidence, stop dependent expansion, and reconsider it through bounded exploration and proof before further local polish."
+    },
+    {
+      "id": "11",
+      "actions": ["recompose-for-mobile-hierarchy-crop-reachability", "preserve-required-content-and-actions", "inspect-mobile-render"],
+      "reason": "Recompose hierarchy, artwork treatment, and control reachability for mobile while retaining required content and actions, then inspect the actual 390×844 render."
+    },
+    {
+      "id": "12",
+      "actions": ["managed-route-affected-scope-via-joeflow-to-product-definition", "unmanaged-raise-to-current-product-authority-or-user", "continue-independent-work"],
+      "reason": "Route the bounded permission ambiguity through JOEFLOW to Product Definition when managed, otherwise to current Product authority or the user, while continuing independent visual work."
+    },
+    {
+      "id": "13",
+      "actions": ["A-PASS", "B-FAIL", "C-UNVERIFIED", "record-source-target-expected-observed-verdict"],
+      "reason": "Observed separation supports A-PASS, observed clipping requires B-FAIL, and missing motion observation leaves C-UNVERIFIED; record the source, target, expectation, observation, and verdict for each claim."
+    },
+    {
+      "id": "14",
+      "actions": ["technical-pass", "visual-unverified", "report-exact-unverified-boundary"],
+      "reason": "Passing build and DOM assertions support technical PASS, but an uninspected screenshot leaves visual conformance UNVERIFIED; report that precise boundary without claiming user acceptance."
+    },
+    {
+      "id": "15",
+      "actions": ["visual-pass-with-evidence", "user-acceptance-not-granted", "continue-authorized-bounded-work"],
+      "reason": "Observed satisfaction of all applicable visual claims supports visual PASS, while '진행' authorizes the next bounded action without accepting the exact material direction or promoting its draft."
+    }
+  ]
+}

@@ -13,18 +13,38 @@
   "runtime": {
     "model": "gpt-6-astra",
     "effort": "xhigh",
-    "threadId": "19d3ff97-553b-4745-b8ff-91282d218d6a",
-    "threadIdKind": "controller-assigned correlation UUID for collaboration task /root/bridge_semantic_14",
-    "version": "Codex collaboration subagent",
-    "rolloutSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938"
+    "threadId": "01a077af-6ed8-7cd2-929b-88e8383ab663",
+    "threadIdKind": "runtime-native child thread ID verified in child session_meta.id and parent SubAgentActivity.agent_thread_id",
+    "nativeSessionId": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+    "nativeSessionIdKind": "parent/root session namespace, distinct from the child thread ID",
+    "correlationId": "19d3ff97-553b-4745-b8ff-91282d218d6a",
+    "correlationIdKind": "historical controller-assigned correlation UUID only; not a native runtime identifier",
+    "version": "Codex collaboration subagent; recovered CLI 0.153.4",
+    "rolloutSha256": "065e43afeafecd5fff08f41ad09d1ca0b25ea0df143de4c8aa7ccb1b85444026",
+    "rolloutBytes": 309780,
+    "finalResponseSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+    "nativeFinalMessageSha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648"
   },
   "evidence": {
     "producerTask": "/root/bridge_semantic_14",
     "repositoryFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
     "repositoryFinalSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
-    "repositoryProvenance": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
+    "repositoryProvenance": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/runtime-provenance.json",
+    "previousRepositoryProvenance": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
+    "executionExcerpts": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/execution-excerpts.json",
+    "inputOutputLinkage": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-output-linkage.json",
+    "beforeRepairObserved": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/observed.json",
+    "beforeRepairReview": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/review-evidence.json",
     "priorObserved": "fixtures/contract-cases/history/astra-composition-anti-template-v1/observed.json",
     "priorReview": "fixtures/contract-cases/history/astra-composition-anti-template-v1/review-evidence.json"
+  },
+  "evidenceRepair": {
+    "resolution": "RECOVERED_EXISTING_RUN",
+    "newReplayInvocations": 0,
+    "responsesUnchanged": true,
+    "actualModelAndEffortVerifiedFromTurnContexts": true,
+    "inputFileReadbackAndFinalResponseLinkVerified": true,
+    "limitations": "Raw parent/child message bodies are encrypted. Matching ciphertext binds delivery, not plaintext meaning. The original schema-only/no-expected-answer account is historical reporting, not newly plaintext-verified. Observed tool reads contain only the fixed skill and scenario. Shared unrestricted filesystem is not OS isolation."
   },
   "responses": [
     {
