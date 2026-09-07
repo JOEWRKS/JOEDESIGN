@@ -1,15 +1,17 @@
 {
-  "status": "JOEDESIGN_BRIDGE_EVIDENCE_REPAIR_READY_FOR_PROGRAM_REVIEW",
-  "statusScope": "EVIDENCE_REPAIR_ONLY",
-  "statusReason": "Recovered the original actual Astra child execution, model/effort, log hash and exact skill/scenario/output linkage; corrected runtime metadata without replay or implementation changes. Final documented suite72/0. Original Smoke F reused with a disclosed, exactly bounded terminal-LF byte-identity reporting discrepancy. Prompt/correction plaintext remains encrypted, so prior schema-only/no-answer-hint reporting is not newly plaintext-attested. No closure, freeze or competition verdict.",
+  "status": "JOEDESIGN_PURE_CORE_FREEZE_READY_FOR_PROGRAM_REVIEW",
+  "statusScope": "PURE_CORE_FREEZE_REVIEW_PREPARATION_ONLY",
+  "statusReason": "All requested documents/evidence-only preparation checks passed: baseline/final72/0, shipped package/tests/scenarios/responses unchanged, exact Composition supplement imported, current metadata qualified and active pointers aligned. Historical evidence remains version-scoped. Program Lead alone declares Pure Core Freeze or competition readiness.",
+  "limitations": "Recovered Bridge execution identity, separate log/response hashes, fixed input tool readback and JSON response equality are VERIFIED. Encrypted request/correction plaintext and independent exclusion of expected answers, prior responses or hints remain UNVERIFIED; original non-provision claims are HISTORICALLY_REPORTED only. Shared unrestricted filesystem is not OS isolation. Historical semantic and rendered evidence is reused only for its recorded source package, fixture, state and viewport; no new model or browser run occurs in this consolidation.",
   "repository": {
     "name": "JOEWRKS/JOEDESIGN",
-    "branch": "codex/joedesign-v0.1-bridge-evidence-repair",
-    "startingHead": "20953484ec089e3ebd1e0912233cd1fb08f23bc4",
+    "branch": "codex/joedesign-v0.1-pure-core-freeze",
+    "startingHead": "4ae644128a71f514ea10564400d6dc70e70ae0fa",
+    "compositionSupplementSource": "6a499807826ca41a68616a0faa5d1f4007b60596",
     "historicalCandidate": "f51a9f70b39d49bb023a3ffc080fe7a05227b9e8",
     "boundedImplementationCommit": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
     "smokeAuthorityCommit": "2498ce60f2aad021331fae855fbc113ff55caf3d",
-    "pinnedTree": "1211dc6cf5744fcbc60a2f93bbfe92c5a951350b"
+    "pinnedTree": "77197aa9894de7c3691c28adf70df20b9fbf6fca"
   },
   "executionSequence": [
     {
@@ -76,8 +78,12 @@
     "failed": 0,
     "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
     "expectedActionsUnchanged": true,
-    "expectedActionsSuppliedToProducer": false,
-    "priorResponsesSuppliedToProducer": false,
+    "expectedActionsSuppliedToProducer": null,
+    "priorResponsesSuppliedToProducer": null,
+    "testsSuppliedToProducer": null,
+    "correctionHintsSuppliedToProducer": null,
+    "inputExclusionIndependentVerification": "UNVERIFIED",
+    "historicalInputExclusionReport": "HISTORICALLY_REPORTED: expected actions, tests, prior responses and correction hints were not supplied; schema-only correction was reported. This account is retained, not independently plaintext-verified.",
     "environmentIsolationClaimed": false,
     "observed": "fixtures/contract-cases/observed.json",
     "normalizedFinal": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
@@ -93,7 +99,9 @@
     "finalResponseSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
     "nativeFinalMessageSha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648",
     "previousProvenance": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
-    "expectedAnswerExclusionEvidenceScope": "Existing false flags above retain historical reporting, not a new plaintext attestation. Actual file reads were only the fixed skill/scenarios. Parent/child prompt and correction bodies are encrypted; only delivery identity/ciphertext equality is newly verified."
+    "expectedAnswerExclusionEvidenceScope": "Current non-provision fields are null/UNVERIFIED. Original false flags are preserved in the pre-qualification metadata archive as HISTORICALLY_REPORTED. Actual observed tool reads contain the fixed skill/scenarios; encrypted request/correction bodies prevent independent plaintext attestation of input exclusion.",
+    "reuseThisConsolidation": true,
+    "newInvocationsThisConsolidation": 0
   },
   "smokeF": {
     "product": "Operations Status Console",
@@ -125,7 +133,9 @@
     "reuseStatus": "REUSED",
     "newRendersOrVisualObservationsThisRepair": 0,
     "reuseEvidence": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/smoke-f-reuse.json",
-    "historicalHtmlByteIdentityCorrection": "Old smoke-f/proof.md claims before/after HTML byte identity. Actual files differ by exactly one terminal LF: before1386bytes /2e4b4fe6..., after1385bytes /7ee04cc9.... Both original sources/proof remain unchanged; separate full hashes are in reuseEvidence. No rerender or new visual judgment."
+    "historicalHtmlByteIdentityCorrection": "Old smoke-f/proof.md claims before/after HTML byte identity. Actual files differ by exactly one terminal LF: before1386bytes /2e4b4fe6..., after1385bytes /7ee04cc9.... Both original sources/proof remain unchanged; separate full hashes are in reuseEvidence. No rerender or new visual judgment.",
+    "reuseScope": "Historical Smoke F only. Its render/observation counts above refer to the original run, not this consolidation.",
+    "newRendersOrVisualObservationsThisConsolidation": 0
   },
   "packageBoundary": {
     "skillSha256": {
@@ -146,7 +156,7 @@
   },
   "knownFailures": [
     "Bridge RED before implementation: 1 compatibility PASS and 7 expected FAIL; failure evidence retained.",
-    "The fresh semantic producer initially returned a singular action field because of the initial requested schema; a same-context schema-only correction produced actions[] without expected outputs or new files.",
+    "The historical semantic producer initially returned a singular action field, then actions[] in the same child execution. HISTORICALLY_REPORTED cause/account: initial requested schema followed by a schema-only correction without expected outputs or new files. The two outputs and fixed-file readback are verified; encrypted request/correction plaintext and independent input exclusion remain UNVERIFIED. The original unqualified report is preserved in the metadata archive.",
     "A read-only Smoke assertion command had a PowerShell if-expression syntax error; root cause was corrected and the identical no-mutation assertions then passed.",
     "Evidence repair detected an additional historical Smoke F reporting mismatch: before/after HTML are not byte-identical; exact difference is one terminal LF. Initial recovery assertion exit1 and bounded read-only diagnosis are retained. Sources and original proof are not edited."
   ],
@@ -162,7 +172,7 @@
     "Encrypted original prompt/correction plaintext and independent plaintext verification of the historical schema-only/no-expected-answer account",
     "OS-level filesystem isolation (not claimed)"
   ],
-  "executionSequenceScope": "Historical Bridge implementation/validation sequence preserved from the original review. The current repair sequence and fresh Node suite are recorded under bridgeEvidenceRepair; no historical model or render is claimed rerun.",
+  "executionSequenceScope": "Historical Bridge implementation/validation sequence preserved from the original review. bridgeEvidenceRepair describes the completed repair at source baseline 4ae644128a71f514ea10564400d6dc70e70ae0fa; pureCoreFreezeReview describes this consolidation. Their Node suite reruns do not rerun historical models or renders.",
   "bridgeEvidenceRepair": {
     "resolution": "RECOVERED_EXISTING_RUN",
     "newSemanticReplayInvocations": 0,
@@ -189,8 +199,8 @@
       }
     },
     "changes": "Only current observed runtime/provenance metadata and current review summary change; responses, scenarios, expected actions, skill, existing tests and all286 other baseline files remain unchanged. New evidence lives only in this bounded directory.",
-    "currentObserved": {
-      "path": "fixtures/contract-cases/observed.json",
+    "observedAtRepairCommit": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/observed.json",
       "sha256": "4499d1cf79d34dffdd711767e60054ffec78293eed799ca5d01e3bdb1a37c901",
       "bytes": 8886
     },
@@ -281,5 +291,96 @@
       "bytesExcludingManifest": 105469,
       "excluded": "Raw credentials/home, full parent/child logs, ciphertext, hidden reasoning, temporary tools and any new runtime/evaluation subsystem."
     }
+  },
+  "validationSupplement": {
+    "sourceCommit": "6a499807826ca41a68616a0faa5d1f4007b60596",
+    "sourcePackageSha256": {
+      "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+      "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+    },
+    "status": "ACCEPTED_BY_PROGRAM_LEAD_ORIGINAL_COMPOSITION_SCOPE_ONLY",
+    "scope": "One historical Fieldlight Rentals countercase; not fresh validation of the Bridge package. Source bytes, diagnostics and limitations preserved.",
+    "proof": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md",
+      "sha256": "1d53b94045b9aa4c60bf0857a1bed773c8fdb67fb4d51085eee326cc156c8d19",
+      "bytes": 13015
+    },
+    "manifest": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/manifest.json",
+      "sha256": "86ca2fcef46a745a4df9b0487a0fb6eef736e646072430aa91f75eed4019a999",
+      "bytes": 7521
+    },
+    "runtimeProvenance": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/runtime-provenance.json",
+      "sha256": "b8032f27f0587f9658ff1cd96f3318e50f83fdb11f54b258648e129747ec7c81",
+      "bytes": 7431
+    },
+    "import": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/supplement-import.json",
+      "sha256": "e75383a3975ec58390b7e86b711155f1b31abc6bbab1ba038c6da01248200c9e",
+      "bytes": 11529
+    },
+    "newInvocationsThisConsolidation": 0,
+    "newRendersThisConsolidation": 0
+  },
+  "pureCoreFreezeReview": {
+    "status": "JOEDESIGN_PURE_CORE_FREEZE_READY_FOR_PROGRAM_REVIEW",
+    "sourceBaseline": "4ae644128a71f514ea10564400d6dc70e70ae0fa",
+    "scope": "Review preparation only; no Freeze/competition/user-acceptance declaration.",
+    "record": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/freeze-review.json",
+      "sha256": "a2defe4180b746fc9c215d696e5d8f6beb303df092bee1f30c5c9904c4a2a3c7",
+      "bytes": 45945
+    },
+    "manifest": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/manifest.json",
+      "sha256": "fe2c3a0018ba11f355ca7b6e166f5d07999ffc78d05452a28993b5c6c82837f5",
+      "bytes": 2727
+    },
+    "beforeQualificationObserved": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/observed.json",
+      "sha256": "4499d1cf79d34dffdd711767e60054ffec78293eed799ca5d01e3bdb1a37c901",
+      "bytes": 8886
+    },
+    "beforeQualificationReview": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/review-evidence.json",
+      "sha256": "1a314b78efa51998f3300eb23bf896ef6f2a69cc97612d236a21274d000478fd",
+      "bytes": 14794
+    },
+    "baselineSuite": {
+      "pass": 72,
+      "fail": 0,
+      "exitCode": 0,
+      "execution": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-suite-execution.json",
+        "sha256": "29768cf93ac8c4b3662e7f666f77ebdbe9f64e83621a7d26e0d9d808484c8360",
+        "bytes": 1140
+      },
+      "fullOutput": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-contract-tests.txt",
+        "sha256": "12ac8e82df7b508e7d6adb469f370fb98b2422158c20296373118bfe10cdd848",
+        "bytes": 6369
+      }
+    },
+    "finalSuite": {
+      "pass": 72,
+      "fail": 0,
+      "exitCode": 0,
+      "execution": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-suite-execution.json",
+        "sha256": "348ec0ffdf6fe33444503baaa9d13037e85f78228537f6f033485d0dad805daf",
+        "bytes": 1137
+      },
+      "fullOutput": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-contract-tests.txt",
+        "sha256": "5d3a1fb2914e2d5511d17061e180439145f46ae25655c02f67316ba0fabff4fe",
+        "bytes": 6368
+      }
+    },
+    "currentMetadataQualification": "Historical non-provision reports retained; current independent verification UNVERIFIED and non-provision booleans null.",
+    "shippedPackageUnchanged": true,
+    "supplementSourceBytesUnchanged": true,
+    "semanticAndSmokesReusedWithinOriginalVersions": true
   }
 }

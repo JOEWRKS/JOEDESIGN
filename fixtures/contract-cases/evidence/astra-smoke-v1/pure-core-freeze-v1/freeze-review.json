@@ -1,0 +1,897 @@
+{
+  "status": "JOEDESIGN_PURE_CORE_FREEZE_READY_FOR_PROGRAM_REVIEW",
+  "statusScope": "REVIEW_PREPARATION_ONLY",
+  "pureCoreFreeze": "NOT_DECLARED_PROGRAM_LEAD_DECISION_REQUIRED",
+  "competitionReadiness": "NOT_DECLARED_PROGRAM_LEAD_DECISION_REQUIRED",
+  "userAcceptance": "NOT_GRANTED",
+  "repository": "JOEWRKS/JOEDESIGN",
+  "branch": "codex/joedesign-v0.1-pure-core-freeze",
+  "sourceBaseline": "4ae644128a71f514ea10564400d6dc70e70ae0fa",
+  "sourceBaselineTree": "77197aa9894de7c3691c28adf70df20b9fbf6fca",
+  "compositionSupplementSource": "6a499807826ca41a68616a0faa5d1f4007b60596",
+  "sourceAuthority": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+    "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+    "bytes": 8473
+  },
+  "package": [
+    {
+      "path": "skills/joedesign/SKILL.md",
+      "sha256": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+      "bytes": 23573
+    },
+    {
+      "path": "skills/joedesign/agents/openai.yaml",
+      "sha256": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "bytes": 207
+    },
+    {
+      "path": "skills/joedesign/templates/DESIGN.md",
+      "sha256": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237",
+      "bytes": 3743
+    }
+  ],
+  "packageUnchanged": true,
+  "approvals": [
+    {
+      "core": "Process / Authority",
+      "status": "CLOSED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
+        "sha256": "ca9106a58ad4f76fbe8deb2f05c9219b8a4b94f8f8384177cc9343d26ba0dcfa",
+        "bytes": 21556
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Craft / Spatial / Hierarchy",
+      "status": "CLOSED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
+        "sha256": "67027ad974a89b466172ff98be328bb9b165eb2c066931474ac461e1114e0a47",
+        "bytes": 41728
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Typography / Scale",
+      "status": "CLOSED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/history/astra-case14-regression-v1/review-evidence.json",
+        "sha256": "44db3402b1f3c3738b2629e9eee6a28ca2da0a7a6125de296421c9613aca9488",
+        "bytes": 62538
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Reference Intelligence",
+      "status": "CLOSED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/review-evidence.json",
+        "sha256": "1ccdb7e7e8b69cb3f45b54f4896f04d865215d16bc07dbf4730e5b837bf6e11b",
+        "bytes": 32316
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Color / Contrast",
+      "status": "CLOSED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/proof.md",
+        "sha256": "e2ba055e4e5aee02b52d6d0370488a11708b134144eeb0505c3df79c91bfa3c4",
+        "bytes": 7774
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Imagery / Focal Ownership",
+      "status": "CLOSED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/smoke-h-final-summary.md",
+        "sha256": "c128d633e73001b42cc596bca4f6a614333902f409fe432a3b84cdd1f394182e",
+        "bytes": 2702
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Composition / Anti-template",
+      "status": "CLOSED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/proof.md",
+        "sha256": "8d3de523aff5c79157b09cb8c314ffa60cefff5aa9c34504dfb8cf9b92cfef28",
+        "bytes": 7957
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Composition validation supplement",
+      "status": "ACCEPTED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md",
+        "sha256": "1d53b94045b9aa4c60bf0857a1bed773c8fdb67fb4d51085eee326cc156c8d19",
+        "bytes": 13015
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Implementation Bridge v0.1",
+      "status": "CLOSED_WITHIN_EXISTING_CONTRACTS_AND_SMOKE_F",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/proof.md",
+        "sha256": "f3011a879993e7fe1a11afff4b7830a1d3c71597803508d61344a0c546076bef",
+        "bytes": 9236
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    },
+    {
+      "core": "Optical / Detail Polish",
+      "status": "DEFERRED",
+      "approvalAuthority": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+        "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+        "bytes": 8473
+      },
+      "priorPhaseStatus": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+        "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+        "bytes": 9993
+      },
+      "evidence": {
+        "path": "docs/decisions/JOEDESIGN_OPTICAL_GATE_V1.md",
+        "sha256": "e72b74679c77357857ba80619eb4c37624ce0d1846562c2e74ce22aee3abed8c",
+        "bytes": 1506
+      },
+      "qualification": "Closure/acceptance is supplied Program Lead authority, not inferred from passing tests. Read the linked evidence only within its original scope; original pending/failed reports remain unchanged."
+    }
+  ],
+  "evidenceClasses": {
+    "wordingAndPackage": "Existing source/phrase/package assertions. Presence of required phrases is not comprehensive semantic-regression detection.",
+    "savedSemanticResponses": "Fourteen existing supplied-choice responses match frozen expected actions and current package/scenario hashes. A Node rerun is not a fresh model invocation.",
+    "actualScreenVerification": "Historical actual observations only for recorded source, fixture, state, browser and viewport. No new render/image inspection in this task."
+  },
+  "semantic": {
+    "resolution": "RECOVERED_EXISTING_RUN",
+    "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
+    "model": "gpt-6-astra",
+    "reasoning": "xhigh",
+    "actualRuntimeThreadId": "01a077af-6ed8-7cd2-929b-88e8383ab663",
+    "parentRuntimeSessionId": "01a02fbe-0a39-76c1-bda3-075f0ba74d9f",
+    "correlationId": "19d3ff97-553b-4745-b8ff-91282d218d6a",
+    "correlationIdScope": "Historical auxiliary controller UUID only.",
+    "actualExecutionLogSha256": "065e43afeafecd5fff08f41ad09d1ca0b25ea0df143de4c8aa7ccb1b85444026",
+    "finalResponseSha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+    "nativeFinalMessageSha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648",
+    "provenance": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/runtime-provenance.json",
+      "sha256": "8ddf1ff82a2d300ea6bf180f0d16b16d746e83fb21d66942db27be5acc5b7571",
+      "bytes": 5059
+    },
+    "inputOutputLinkage": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-output-linkage.json",
+      "sha256": "1c50afc9845037af83d7a93cf4498dd325164ebc3919aa41f150d5632fcb99a1",
+      "bytes": 4343
+    },
+    "finalResponse": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+      "sha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938",
+      "bytes": 4931
+    },
+    "currentObserved": {
+      "path": "fixtures/contract-cases/observed.json",
+      "sha256": "dd9a8486093126a75aa249f1a2c35acce37d735d7ee7cdd2db80526282740cfa",
+      "bytes": 10072
+    },
+    "result": {
+      "pass": 14,
+      "fail": 0,
+      "source": "Existing saved responses; no new model execution."
+    },
+    "newReplayInvocations": 0,
+    "verified": [
+      "Actual native identity/model/reasoning",
+      "Separate original execution-log and response hashes",
+      "Observed exact fixed skill/scenario tool readback",
+      "Native and saved final JSON equality; actions/reasons unchanged"
+    ],
+    "historicallyReported": "Expected actions, tests, prior responses and hints not supplied; correction schema-only.",
+    "unverified": [
+      "Encrypted request/correction plaintext",
+      "Independent input-exclusion/no-answer-hint attestation",
+      "OS/filesystem isolation"
+    ],
+    "currentNonProvisionFields": null
+  },
+  "evidenceReuse": [
+    {
+      "scope": "Original MVP Smoke A/B direction and bounded refinement.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceImplementation": null,
+      "sourceIdentityNote": "No sourceImplementation field in the original observed record; use the exact archived package snapshot, not an invented commit.",
+      "packageSha256": {
+        "SKILL.md": "67484efe717e3fb4aa4409b338268facbaeed05dec62faf85cb2b12fb25b4def",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "e670671655bf2d9eba9e13273c28d025d0c00138b9a0029a3694f336d9d2bd75"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/history/astra-mvp-v1/observed.json",
+        "sha256": "fba833d4d54a3f91c26a23c8ed24e6e8f3a15d9ee0800fb2ac240329dc9598c7",
+        "bytes": 6610
+      },
+      "reviewRecord": {
+        "path": "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
+        "sha256": "ca9106a58ad4f76fbe8deb2f05c9219b8a4b94f8f8384177cc9343d26ba0dcfa",
+        "bytes": 21556
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-desktop.png",
+          "sha256": "3b7b4ce2493dd3e1e867e96f95a37320a44cc7d0e81b6aee6effa10deb19df25",
+          "bytes": 69249
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-mobile.png",
+          "sha256": "30c1a20ca526b62556e44ec1f56c6aaf18712e398737c35fe2c8c0d2796a697b",
+          "bytes": 49181
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-desktop.png",
+          "sha256": "4ee902148ab3cec17ebd3173f96f8a3604b76e97233da33ed65ac5fd880a1f27",
+          "bytes": 56197
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-mobile.png",
+          "sha256": "5fc802b432687a30d0ff63462ab041b18f35087770b72767d76454d17fd6afb5",
+          "bytes": 46151
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-desktop.png",
+          "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31",
+          "bytes": 58313
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-mobile.png",
+          "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612",
+          "bytes": 48669
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-desktop.png",
+          "sha256": "ac92004a64e91cfde91c6489c4f4bedc1be318827d3b790217d25ab3ef5572b5",
+          "bytes": 55261
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-mobile.png",
+          "sha256": "e8f02803fb40fed712e706227dc49811029970f17c91ebf35755d12fbe4a06cb",
+          "bytes": 48377
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/changes.json",
+          "sha256": "25e2438eb150070daa7bb13d8e2d6ac035a15ed89757b549b83f6a2f5d311356",
+          "bytes": 3541
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0
+    },
+    {
+      "scope": "Craft-package Smoke A/B/C; original neutral direction/refinement/spatial targets.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceImplementation": "1b01984982d5108902b2a597b043a2dac2ed225b",
+      "sourceIdentityNote": "Original source implementation from the archived observed record.",
+      "packageSha256": {
+        "SKILL.md": "44d39d819e82b7d01d7c2e0850035b24f13bd3a1075a5fc874b7e53d3948b59b",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "4c4523f674cf6dd979e1b18d7840013d12cfb3cc5e0c85ab55d2bb75b887254d"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
+        "sha256": "04a1b6f87688ba43cdbcfc2ebb6db19a0d890ca3a6d063dc70358a2cfb8a21fe",
+        "bytes": 6775
+      },
+      "reviewRecord": {
+        "path": "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
+        "sha256": "67027ad974a89b466172ff98be328bb9b165eb2c066931474ac461e1114e0a47",
+        "bytes": 41728
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
+          "sha256": "048b3f9b3fd46c5ee7cb1a9ca2982823499e6076ab8d82bcde318f618203d998",
+          "bytes": 97331
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
+          "sha256": "0b4702ed58f993654a8fdc1d802c3f574486ebcf78afefb88cbce1c93fcda13a",
+          "bytes": 42088
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
+          "sha256": "ce21b1ba2ded0cf93a92dea87edd6332820afb172583cf3b6f6aa6fbdc3414e9",
+          "bytes": 53845
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
+          "sha256": "631f2d8e0ccfb65c61cdbf0fcf1ee8fb025e00f1b8db2b898fdefc97f450a1ab",
+          "bytes": 35867
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
+          "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31",
+          "bytes": 58313
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
+          "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612",
+          "bytes": 48669
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
+          "sha256": "61b69abe232e914c3e3990bae03bb58044a77758a15d9a7c8e3ca506343ec144",
+          "bytes": 55223
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
+          "sha256": "a7594efab2ebbc5903ae220a95a8ad26792fe439eb134eb77c774414623c0f71",
+          "bytes": 47995
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
+          "sha256": "83cd47462a544b1e5388049908d8ff11f606037985cc5088facf2ac654992ccc",
+          "bytes": 135144
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
+          "sha256": "7cabf5a6cfb84dc6efd052a9c45846aad478547734c1a91069d24ed960dbd304",
+          "bytes": 112827
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
+          "sha256": "7e2d928dde46cf2654718503eb8da393b3e2f8b0d7643c805050440b5554ce95",
+          "bytes": 129809
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
+          "sha256": "991226f7701aa8a518f97b052229118502f039c2853f262bb913e26aa2621207",
+          "bytes": 113315
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
+          "sha256": "390a7e020f0529128f7dbe2d56bf5d42a41c30511f1262cd60c2f5e12873cd77",
+          "bytes": 11057
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0
+    },
+    {
+      "scope": "Typography package: Smoke A/B/C/D were rendered earlier at implementation 10f04a47e94499003f0336980fdd54fc33965eaf and reused by the separate case-14 replay. Historical failed replay remains separate.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceImplementation": "62220f9c9382cbd189d64076d88071fb53cc52b4",
+      "sourceIdentityNote": "Original source implementation from the archived observed record.",
+      "packageSha256": {
+        "SKILL.md": "3620558694b35fdc86fc37d146cb1b8eb8ea60c630d60f42a2c09555b2ccf9d3",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "8d0a942f1ab70f07ec3739d0e3901f3b9d1c88d5d599978232671270b33bbd76"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/history/astra-case14-regression-v1/observed.json",
+        "sha256": "06da2f9d958c40592191f2147fcf04c4a661171f409586c9ed8989e2bca5e3ba",
+        "bytes": 7436
+      },
+      "reviewRecord": {
+        "path": "fixtures/contract-cases/history/astra-case14-regression-v1/review-evidence.json",
+        "sha256": "44db3402b1f3c3738b2629e9eee6a28ca2da0a7a6125de296421c9613aca9488",
+        "bytes": 62538
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-desktop.png",
+          "sha256": "574455af5941ba19a0e060091b02a61b2a404343fc89ef656bc3aa2c518f38c3",
+          "bytes": 66775
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-mobile.png",
+          "sha256": "cbff959fbe8458ae310fdceb7162954374daf140ff86bd8215a038f6262cfff2",
+          "bytes": 43222
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-desktop.png",
+          "sha256": "bbf22c1c7906a837e06ebbb52af268a1f40e9ba32db29628f5b5919adcd6ad05",
+          "bytes": 53066
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-mobile.png",
+          "sha256": "9c7bc01d4383f9bf252de7360ff6a811aa28c8c993981f0be324bf253edc8813",
+          "bytes": 42296
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-desktop.png",
+          "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31",
+          "bytes": 58313
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-mobile.png",
+          "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612",
+          "bytes": 48669
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-desktop.png",
+          "sha256": "1268d67e499e0f7728c9b601b0d19d016b6446e5757f221d32aed6eb9d37e99b",
+          "bytes": 53119
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-mobile.png",
+          "sha256": "880197ee05d6b44be83381797ba35cf9c2b130792eb4605aa676c6a9d0c22486",
+          "bytes": 43784
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-desktop.png",
+          "sha256": "83cd47462a544b1e5388049908d8ff11f606037985cc5088facf2ac654992ccc",
+          "bytes": 135144
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-mobile.png",
+          "sha256": "7cabf5a6cfb84dc6efd052a9c45846aad478547734c1a91069d24ed960dbd304",
+          "bytes": 112827
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-desktop.png",
+          "sha256": "ef18d3ba5330219beb350f1b058929aeb0b3cf488eda259cf754e2cff5b5c8a7",
+          "bytes": 136272
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-mobile.png",
+          "sha256": "6d7d6eabf30e99f90d3ab9965841e7798e498076d40b10db2367aa8c83858c91",
+          "bytes": 117359
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-desktop.png",
+          "sha256": "443cac040da7eb8c5da927526088e1b4ea31517621d75c24fac0c77cf0f782da",
+          "bytes": 202283
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-mobile.png",
+          "sha256": "3043ce75686dcc2bfd36014ccd92f066325627f3d340332be9bbd6056a7706fe",
+          "bytes": 142029
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-desktop.png",
+          "sha256": "f9a328d8aa64ea23960090c17ef0ac8cdb4c57ffd5fead7e9fd09847cd89e671",
+          "bytes": 213458
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-mobile.png",
+          "sha256": "88381ddfba63ad398e17a329545efa6d878bebda786eca6c26deff3cac9afddc",
+          "bytes": 171262
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/type-role-manifest.json",
+          "sha256": "1cf06c3afc0614caf47d3f078001ef1c15e2fd44459c4e46056a6fb4a27bfdcf",
+          "bytes": 98769
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0,
+      "smokeSourceImplementation": "10f04a47e94499003f0336980fdd54fc33965eaf",
+      "historicalFailedReplay": {
+        "path": "fixtures/contract-cases/history/astra-typography-scale-v1/review-evidence.json",
+        "sha256": "7c6a676458647b9a45e550af46a900bb1080aebcd0a463b90f24782d85a3ff65",
+        "bytes": 58653
+      }
+    },
+    {
+      "scope": "Reference package Smoke E; conflicting reference/unknown facts/approved authority on the recorded Research Briefing Portal targets.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceImplementation": "d8b35c67205e837318ae49b17333c293ebe44290",
+      "sourceIdentityNote": "Original source implementation from the archived observed record.",
+      "packageSha256": {
+        "SKILL.md": "f4395b40d01f0d73ecf869bed17fa0903eab27582556efc71eec49f7bc6e9ea1",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "f22e55be18a0de8a3e44237025a13efde73598662083cfd92f86e35553991353"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/observed.json",
+        "sha256": "4eac1a9d3eaa180342cd927b7cf5a63f7aaca923cfec6774e6986c6ead02a519",
+        "bytes": 7309
+      },
+      "reviewRecord": {
+        "path": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/review-evidence.json",
+        "sha256": "1ccdb7e7e8b69cb3f45b54f4896f04d865215d16bc07dbf4730e5b837bf6e11b",
+        "bytes": 32316
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/proof.md",
+          "sha256": "14474a7b827508366708ff32973141a55946273f87e0fcd848dfc5238f6517de",
+          "bytes": 8389
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-adoption-manifest.json",
+          "sha256": "afd81c5c9ff000aeef9f9bcd8289bbc7e85b313b12ea3edef563f777078f1c5c",
+          "bytes": 21656
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0,
+      "historicalStaticFailure": {
+        "path": "fixtures/contract-cases/history/astra-reference-intelligence-v1/review-evidence.json",
+        "sha256": "ff63c551b669563e784ac81bc26e71299f3f40cc983d89b0e4a5c5cca21fac02",
+        "bytes": 26498
+      }
+    },
+    {
+      "scope": "Color package Smoke G; recorded viewport/state contrast claims, not full accessibility certification.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceImplementation": "b15d77946862df0f8c1ebc41f43319d17e1c11a5",
+      "sourceIdentityNote": "Original source implementation from the archived observed record.",
+      "packageSha256": {
+        "SKILL.md": "0ba7b4cb7e8dd0169bbf1cfcecab98b4c1fdf45aff6b0010b0c4a4ed731f86e1",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "fe89676895c752a65730d3626e724d35e13f5586c94884ddf0535b600121e791"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/history/astra-color-contrast-v1/observed.json",
+        "sha256": "b4a556078ce9a8e07e10feb93fae38631cc2ed947d46ae0c1fe71a52ebf9fd67",
+        "bytes": 6307
+      },
+      "reviewRecord": {
+        "path": "fixtures/contract-cases/history/astra-color-contrast-v1/review-evidence.json",
+        "sha256": "5926a86ab956910ba2b9c9901f3f5e9a3a1542edbfcf40f909f89ef953c689e1",
+        "bytes": 19973
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/proof.md",
+          "sha256": "e2ba055e4e5aee02b52d6d0370488a11708b134144eeb0505c3df79c91bfa3c4",
+          "bytes": 7774
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/color-role-manifest.json",
+          "sha256": "869bdf49546462b031c5ff4c67ad00f8574b790ac0d62a0fa9760b67ddb7fb3a",
+          "bytes": 11031
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final-links.md",
+          "sha256": "6611d95e9f7e8703273086212e1420a8a25be952ecb402639a292761731d3fb2",
+          "bytes": 1175
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0,
+      "canonicalEvidenceCommit": "7417ef037062f27272c3d3527713475b7d97c6f3"
+    },
+    {
+      "scope": "Imagery package Smoke H H1-H9; original archived NOT_READY review is retained, not silently rewritten as a later Program Lead verdict.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceImplementation": "2877d0f5dc4d02124111e8ef4f1cdee6ad38926c",
+      "sourceIdentityNote": "Original source implementation from the archived observed record.",
+      "packageSha256": {
+        "SKILL.md": "467ff9cb889b2c17b25c246e8d2433aecbe71d89ca806b14ba81dcac52374aed",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "b98cc398163bd148dd8d8b28fa0d73dc34b642bd5b4b00614500f89d62a4068b"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
+        "sha256": "e15312699ce3baaed88d5a524b34dcd3ca3a2f98a54b9609c160fbbb6f6b5ea6",
+        "bytes": 7342
+      },
+      "reviewRecord": {
+        "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json",
+        "sha256": "c37493f7054024b2ac45799434fc6d4abb003a913b6364cc39d01564c9e44277",
+        "bytes": 20080
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/proof.md",
+          "sha256": "b0b7fa199c1c7687aee7bb4bde124d6a3eccb0b7b464aa5f4eb15c7ccd75e51d",
+          "bytes": 6266
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/manifest.json",
+          "sha256": "db3f4fdcdb69b81cf093d4dc4f2572b1cbaf366778d0500ea0eaa7b18211c94b",
+          "bytes": 4162
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/smoke-h-final-summary.md",
+          "sha256": "c128d633e73001b42cc596bca4f6a614333902f409fe432a3b84cdd1f394182e",
+          "bytes": 2702
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0,
+      "canonicalEvidenceCommit": "ad22a9a761eb89ec03ace3fd94625f6a6db6927e"
+    },
+    {
+      "scope": "Composition package Smoke I I1-I9, one detailed-guidance Incident Decision Brief repair; candidate-01 failure retained.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceImplementation": "100f24bbe90cedf1b0b6d261e571aa372b290949",
+      "sourceIdentityNote": "Original source implementation from the archived observed record.",
+      "packageSha256": {
+        "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/history/astra-composition-anti-template-v1/observed.json",
+        "sha256": "4dfd3b18763a8c667b1ca79a1f3e45ce935f8ff143d6a225696cff85967f9a42",
+        "bytes": 7110
+      },
+      "reviewRecord": {
+        "path": "fixtures/contract-cases/history/astra-composition-anti-template-v1/review-evidence.json",
+        "sha256": "a5a9ed1a9f2f3314ed1a66a1fb55eed466d57b5cf55d99b3812f7c0a340ed9bd",
+        "bytes": 25796
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/proof.md",
+          "sha256": "8d3de523aff5c79157b09cb8c314ffa60cefff5aa9c34504dfb8cf9b92cfef28",
+          "bytes": 7957
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/manifest.json",
+          "sha256": "3f38f3fc287f37fd6d4f09725f1afcbe765d0da410fc68809fb6c9f43c152ec7",
+          "bytes": 6939
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0,
+      "canonicalEvidenceCommit": "2b75ca76d6fcadb8aedbc7c7f1390b3bc760ec28"
+    },
+    {
+      "scope": "Accepted Composition validation supplement: one preregistered Fieldlight Rentals countercase, original Composition package only.",
+      "status": "REUSED_HISTORICAL_VERSION_ONLY",
+      "sourceCommit": "6a499807826ca41a68616a0faa5d1f4007b60596",
+      "packageSha256": {
+        "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/runtime-provenance.json",
+        "sha256": "b8032f27f0587f9658ff1cd96f3318e50f83fdb11f54b258648e129747ec7c81",
+        "bytes": 7431
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md",
+          "sha256": "1d53b94045b9aa4c60bf0857a1bed773c8fdb67fb4d51085eee326cc156c8d19",
+          "bytes": 13015
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/evidence-reporting.md",
+          "sha256": "7856c70b85d18f9a73373282b893b69aa81a1e9b9a7df1c8cb28dac3bb2a111c",
+          "bytes": 4698
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/manifest.json",
+          "sha256": "86ca2fcef46a745a4df9b0487a0fb6eef736e646072430aa91f75eed4019a999",
+          "bytes": 7521
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0,
+      "notBridgePackageReplay": true,
+      "historicalRelativeObservedLinkCorrectTarget": {
+        "path": "fixtures/contract-cases/history/astra-composition-anti-template-v1/observed.json",
+        "sha256": "4dfd3b18763a8c667b1ca79a1f3e45ce935f8ff143d6a225696cff85967f9a42",
+        "bytes": 7110
+      }
+    },
+    {
+      "scope": "Bridge package Smoke F: historical mapping and actual desktop1440x1000/mobile390x844 observations only.",
+      "status": "REUSED_SAME_PACKAGE_NO_FRESH_OBSERVATION",
+      "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
+      "sourceEvidenceCommit": "4ae644128a71f514ea10564400d6dc70e70ae0fa",
+      "packageSha256": {
+        "SKILL.md": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+        "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+        "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+      },
+      "sourceRecord": {
+        "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/review-evidence.json",
+        "sha256": "1a314b78efa51998f3300eb23bf896ef6f2a69cc97612d236a21274d000478fd",
+        "bytes": 14794
+      },
+      "portableEvidence": [
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/proof.md",
+          "sha256": "67163d16826f0411e7352f0d67d2a5f6f9486631731e74a26f360f3a3abd7cc7",
+          "bytes": 3910
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/render-observation.json",
+          "sha256": "5e9829547f514dfbf63d06670497d5cfe6d3284ffc05f17687f999446d7037d3",
+          "bytes": 1951
+        },
+        {
+          "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/smoke-f-reuse.json",
+          "sha256": "e222105c5f38bd5eb56cf75688605646b30ef12ed0cdcc29fb0170d1cf7baef6",
+          "bytes": 6246
+        }
+      ],
+      "newInvocationsOrObservationsThisConsolidation": 0,
+      "htmlByteIdentity": false,
+      "exactHtmlDifference": "before = after + terminal LF (0a)",
+      "intentionallyUnresolved": "status.attention.icon",
+      "userAcceptance": "NOT_GRANTED"
+    }
+  ],
+  "originalMetadata": {
+    "observed": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/observed.json",
+      "sha256": "4499d1cf79d34dffdd711767e60054ffec78293eed799ca5d01e3bdb1a37c901",
+      "bytes": 8886
+    },
+    "review": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/review-evidence.json",
+      "sha256": "1a314b78efa51998f3300eb23bf896ef6f2a69cc97612d236a21274d000478fd",
+      "bytes": 14794
+    },
+    "changes": "Only limitations, caseFormattingNote and current non-provision qualifications are corrected; actions/reasons/native runtime/hash fields remain unchanged. Old metadata/provenance/failures remain accessible byte-exact."
+  },
+  "baselineSuite": {
+    "pass": 72,
+    "fail": 0,
+    "exitCode": 0,
+    "execution": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-suite-execution.json",
+      "sha256": "29768cf93ac8c4b3662e7f666f77ebdbe9f64e83621a7d26e0d9d808484c8360",
+      "bytes": 1140
+    },
+    "fullOutput": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-contract-tests.txt",
+      "sha256": "12ac8e82df7b508e7d6adb469f370fb98b2422158c20296373118bfe10cdd848",
+      "bytes": 6369
+    }
+  },
+  "finalSuite": {
+    "pass": 72,
+    "fail": 0,
+    "exitCode": 0,
+    "execution": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-suite-execution.json",
+      "sha256": "348ec0ffdf6fe33444503baaa9d13037e85f78228537f6f033485d0dad805daf",
+      "bytes": 1137
+    },
+    "fullOutput": {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-contract-tests.txt",
+      "sha256": "5d3a1fb2914e2d5511d17061e180439145f46ae25655c02f67316ba0fabff4fe",
+      "bytes": 6368
+    }
+  },
+  "preservation": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/preservation.json",
+    "sha256": "ea5b12e9bbab3cf3a068fe28488e5e9496c49ccc0dea5a881f9ef8be477f836d",
+    "bytes": 3958
+  },
+  "supplementImport": {
+    "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/supplement-import.json",
+    "sha256": "e75383a3975ec58390b7e86b711155f1b31abc6bbab1ba038c6da01248200c9e",
+    "bytes": 11529
+  },
+  "boundaries": {
+    "publicEntrypoint": 1,
+    "competitorRuntimeDependency": 0,
+    "runtimeDependency": 0,
+    "vendorPayload": 0,
+    "databaseBundle": 0,
+    "automaticRouter": 0,
+    "bioAccessOrWorkThisTask": 0,
+    "newSemanticReplay": 0,
+    "newSmokeOrImageObservation": 0,
+    "otherBranchesPersonalInstallMainUnchanged": true
+  },
+  "activeDocuments": [
+    "AGENTS.md",
+    "docs/roadmaps/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md"
+  ],
+  "nextAction": "Program Lead final judgment, then TrackC handoff only as authorized; do not restart closed implementation/transplant or deferred Optical work.",
+  "knownFailures": [
+    "Bridge RED before implementation: 1 compatibility PASS and 7 expected FAIL; failure evidence retained.",
+    "Historical initial singular-action output and later actions[] output are preserved. Schema-only/no-hint explanation is HISTORICALLY_REPORTED; encrypted-message plaintext and independent input exclusion remain UNVERIFIED.",
+    "A read-only Smoke assertion command had a PowerShell if-expression syntax error; root cause was corrected and the identical no-mutation assertions then passed.",
+    "Evidence repair detected an additional historical Smoke F reporting mismatch: before/after HTML are not byte-identical; exact difference is one terminal LF. Initial recovery assertion exit1 and bounded read-only diagnosis are retained. Sources and original proof are not edited.",
+    "Historical Bridge schema-only/no-hint cause/account above is HISTORICALLY_REPORTED, not independently plaintext-verified.",
+    "Typography failed case14, Reference39/1 stale-allowlist failure, Imagery historical NOT_READY review, SmokeI candidate01 failure and Composition countercase rejected patch/controller diagnostics are preserved at linked original records.",
+    "Read-only history inventory initially assumed an observed file in every archive; the review-only Reference failure archive caused ENOENT. Corrected inventory checks actual file presence; no repository file was edited to compensate."
+  ],
+  "unverified": [
+    "real-project efficacy",
+    "statistical stability",
+    "other browsers, devices, viewports, and themes",
+    "exhaustive accessibility and assistive-technology behavior",
+    "user acceptance",
+    "Pure Core Freeze",
+    "competition readiness",
+    "causal or comparative superiority",
+    "Encrypted original prompt/correction plaintext and independent plaintext verification of the historical schema-only/no-expected-answer account",
+    "OS-level filesystem isolation (not claimed)",
+    "Historical Typography preimplementation RED remains unrecorded/unverified.",
+    "General autonomy/causality from one short-request Composition countercase.",
+    "No current-package fresh rerender of older-version Smokes; reuse is explicitly version-scoped."
+  ],
+  "changedFiles": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/changed-files.json",
+  "manifest": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/manifest.json",
+  "resultCommitPolicy": "Final result HEAD/tree is reported externally after commit/push/readback, not stored recursively in this commit."
+}

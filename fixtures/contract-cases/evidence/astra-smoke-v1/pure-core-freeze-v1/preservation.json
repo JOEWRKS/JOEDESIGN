@@ -1,0 +1,104 @@
+{
+  "baseline": "4ae644128a71f514ea10564400d6dc70e70ae0fa",
+  "baselineTree": "77197aa9894de7c3691c28adf70df20b9fbf6fca",
+  "allowedExistingChanges": [
+    "AGENTS.md",
+    "docs/roadmaps/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+    "fixtures/contract-cases/observed.json",
+    "fixtures/contract-cases/review-evidence.json"
+  ],
+  "baselineTrackedFiles": 305,
+  "unchangedBaselineFiles": 301,
+  "wholeShippedPackageByteExact": true,
+  "package": [
+    {
+      "path": "skills/joedesign/SKILL.md",
+      "sha256": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+      "bytes": 23573
+    },
+    {
+      "path": "skills/joedesign/agents/openai.yaml",
+      "sha256": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "bytes": 207
+    },
+    {
+      "path": "skills/joedesign/templates/DESIGN.md",
+      "sha256": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237",
+      "bytes": 3743
+    }
+  ],
+  "existingTests": [
+    {
+      "path": "tests/joedesign-color-contrast-core.tests.mjs",
+      "sha256": "a8f8655ceea671ef936216d582ed7f5ff44154e35ae6eb8dcee0542a676ced4f",
+      "bytes": 3040
+    },
+    {
+      "path": "tests/joedesign-composition-anti-template-core.tests.mjs",
+      "sha256": "95068baf0d50aa6988330f10773ccb725271632ac61958766351286bd11d9932",
+      "bytes": 3263
+    },
+    {
+      "path": "tests/joedesign-contract.tests.mjs",
+      "sha256": "dfbf31656f89947e3aa69b1f6e6e621620b1ade5fdb2f482f2e06fd59014f0eb",
+      "bytes": 8134
+    },
+    {
+      "path": "tests/joedesign-craft-core.tests.mjs",
+      "sha256": "df3327fcc4a7275b349514d469d57a8006beabeebac5ee39513951b49c6edace",
+      "bytes": 2354
+    },
+    {
+      "path": "tests/joedesign-imagery-focal-core.tests.mjs",
+      "sha256": "a13cea630ffdfa11914cbeeb2e6eeaa78637bb9b9a33648ad98876ee53176e46",
+      "bytes": 3820
+    },
+    {
+      "path": "tests/joedesign-implementation-bridge.tests.mjs",
+      "sha256": "67f8bcc540dc9f15bb377d9831ff1e5962dcc34432e1aae4d7f9fad18ecb1474",
+      "bytes": 2662
+    },
+    {
+      "path": "tests/joedesign-reference-intelligence-core.tests.mjs",
+      "sha256": "4058cdc9254641ca2525b9b4f62005158a41e66573e628924fde99eb6dc7cabc",
+      "bytes": 2855
+    },
+    {
+      "path": "tests/joedesign-typography-scale-core.tests.mjs",
+      "sha256": "0744c4ceaf13bb704bcfbfeb42d3bc503c01ca89b661f5babbf6077d25da7e7e",
+      "bytes": 2687
+    }
+  ],
+  "scenario": {
+    "path": "fixtures/contract-cases/decisions.json",
+    "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
+    "bytes": 6860
+  },
+  "responsesJsonSha256": "595479773026ac20395cfd0b23685ad10e6ee9e0df36e3a1db2dc6fd28d8932d",
+  "responseActionsReasonsAndSourceBlockUnchanged": true,
+  "runtimeIdentityAndOriginalHashesUnchanged": true,
+  "fixedInputReadbackAndFinalJsonEquality": true,
+  "originalMetadataAndActiveDocsArchivedByteExact": true,
+  "originalSmokeFFiles": 12,
+  "originalSmokeFHashesUnchanged": true,
+  "smokeFHtmlDifference": "before = after + one terminal LF (0a); not byte-identical",
+  "importedFileCount": 44,
+  "importedSourceByteExact": true,
+  "originalManifestHashesMatched": true,
+  "publicEntrypointCount": 1,
+  "competitorRuntimeDependencyCount": 0,
+  "runtimeDependencyCount": 0,
+  "vendorPayloadCount": 0,
+  "databaseBundleCount": 0,
+  "automaticRouterCount": 0,
+  "bioAccessOrWorkThisTask": 0,
+  "newSemanticInvocationsThisTask": 0,
+  "newSmokeRendersOrImageObservationsThisTask": 0,
+  "protectedOtherWorktreeCount": 7,
+  "otherBranchesAndWorktreesUnchanged": true,
+  "personalInstallUnchanged": true,
+  "personalInstallScope": "Both standard JOEDESIGN install directories were absent at start and remain absent; no installation/configuration writes were performed.",
+  "harnessUnchanged": true,
+  "remoteMainUnchanged": true,
+  "scope": "Read-only file/hash/Git checks and source inspection, not an execution sandbox attestation or new visual/model evaluation."
+}

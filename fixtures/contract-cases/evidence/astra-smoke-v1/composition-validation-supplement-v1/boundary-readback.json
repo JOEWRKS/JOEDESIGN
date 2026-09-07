@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "pinnedBaseline": "2b75ca76d6fcadb8aedbc7c7f1390b3bc760ec28",
+  "preregistrationCommit": "43852b422adaee8662e753ba178bce468855fe11",
+  "unchangedPreregisteredFiles": 14,
+  "unchangedExistingTrackedFiles": 262,
+  "immutableExistingHashInventorySha256": "94e04e232796c20f999d43b9141bc14a097152d626f95ebfb820acb2b6b3c16b",
+  "shippedPackageSha256": {
+    "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+  },
+  "producerPackageMatchesRepository": true,
+  "product": {
+    "path": "producer/PRODUCT.md",
+    "unchanged": true,
+    "sha256": "0b7d966b4ef145826c77e34b59a7bb0a6abe6f2186018d213f255ae6a12934d3"
+  },
+  "selectionLogic": {
+    "path": "producer/app.js",
+    "unchanged": true,
+    "sha256": "4bcad84be50d99138c9d8496a0fbc5efb7ab0b0cae06ef50bb949e9eba6b08cf"
+  },
+  "projectDesign": {
+    "path": "producer/DESIGN.md",
+    "wholeFileUnchanged": false,
+    "approvedOriginalPrefixByteExact": true,
+    "approvedPrefixBytes": 1009,
+    "approvedPrefixSha256": "668516669f9da652a9ac2537d39e5d90577019634c66faa5d5fb17bb9fd8a1bb",
+    "finalBytes": 6963,
+    "finalSha256": "916bfb67d8bc6370734727b3666b3c7d5a08ab2c76ecb7e1bf74e7aea7af1536",
+    "appendStatus": "Unapproved implementation/evidence record; original APPROVED Rev1 intent preserved; User Acceptance NOT_GRANTED."
+  },
+  "sourceChanges": [
+    "DESIGN.md",
+    "index.html",
+    "styles.css"
+  ],
+  "lastSourceEditAfterProducerImages": {
+    "callLine": 106,
+    "resultLine": 110,
+    "path": "index.html",
+    "removedLineCount": 18,
+    "addedLineCount": 18,
+    "trimmedLinesIdentical": true,
+    "classification": "Indentation-only; Controller rendered final source after exit."
+  },
+  "finalRenderBindings": [
+    {
+      "label": "desktop",
+      "producer": "producer/artifacts/refined-desktop.png",
+      "controller": "controller-after/desktop.png",
+      "sha256": "7cdb0fae3668955d8226818f80ec9ded2ace1194d3fac961c853e8d157381fed",
+      "byteIdentical": true
+    },
+    {
+      "label": "mobile",
+      "producer": "producer/artifacts/refined-mobile.png",
+      "controller": "controller-after/mobile.png",
+      "sha256": "f82bc55f7b01d47d0090d9eaa2425d5bf77fa3d882a63c4a41bab490e246a007",
+      "byteIdentical": true
+    }
+  ],
+  "reusedEvidence": {
+    "semantic": true,
+    "smokeI": true,
+    "reason": "All shipped package, existing test, scenario, observed response and Smoke I bytes unchanged. The new native invocation is the separate rental countercase, not a semantic or Smoke I rerun."
+  },
+  "scope": "Readback before final suite/commit. Final HEAD, clean worktree, exact Git blobs and remote equality are delivery readbacks, not this pre-commit record."
+}

@@ -1,0 +1,7 @@
+정보 위계와 읽기 흐름을 개선했습니다.
+
+- **제목 → 키트·가격 → 장비 → 이용 가능일·선택** 순으로 강조를 정리했습니다.
+- 세 옵션의 정렬과 간격을 통일하고, 모바일 본문을 16px로 키웠습니다.
+- 실제 데스크톱·모바일 화면, 선택 동작, 키보드 포커스와 색상 대비를 확인했습니다.
+
+[데스크톱 결과](D:/JOEWRKS/joedesign-composition-validation-supplement-20260907/runs/rental/workspace/artifacts/refined-desktop.png) · [모바일 결과](D:/JOEWRKS/joedesign-composition-validation-supplement-20260907/runs/rental/workspace/artifacts/refined-mobile.png)

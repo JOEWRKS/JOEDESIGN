@@ -1,0 +1,80 @@
+{
+  "evidenceRoot": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/",
+  "sourceBaseline": "4ae644128a71f514ea10564400d6dc70e70ae0fa",
+  "compositionSupplementSource": "6a499807826ca41a68616a0faa5d1f4007b60596",
+  "fileCountExcludingManifest": 14,
+  "totalBytesExcludingManifest": 139325,
+  "scope": "Paths below are relative to this directory. Self hash excluded; current review binds this manifest. No current-review hash is embedded to avoid cycles.",
+  "files": [
+    {
+      "path": "baseline-contract-tests.txt",
+      "sha256": "12ac8e82df7b508e7d6adb469f370fb98b2422158c20296373118bfe10cdd848",
+      "bytes": 6369
+    },
+    {
+      "path": "baseline-suite-execution.json",
+      "sha256": "29768cf93ac8c4b3662e7f666f77ebdbe9f64e83621a7d26e0d9d808484c8360",
+      "bytes": 1140
+    },
+    {
+      "path": "changed-files.json",
+      "sha256": "0020a3f929e3f4a0de3589e27228942144bbb846f2c2aea1112b6c5ab3c23b32",
+      "bytes": 10046
+    },
+    {
+      "path": "final-contract-tests.txt",
+      "sha256": "5d3a1fb2914e2d5511d17061e180439145f46ae25655c02f67316ba0fabff4fe",
+      "bytes": 6368
+    },
+    {
+      "path": "final-suite-execution.json",
+      "sha256": "348ec0ffdf6fe33444503baaa9d13037e85f78228537f6f033485d0dad805daf",
+      "bytes": 1137
+    },
+    {
+      "path": "freeze-review.json",
+      "sha256": "a2defe4180b746fc9c215d696e5d8f6beb303df092bee1f30c5c9904c4a2a3c7",
+      "bytes": 45945
+    },
+    {
+      "path": "originals/AGENTS.md",
+      "sha256": "b69fe4d6aeb9e283275d8d4b33ca0073c5106c04cf466223d843ee8fea892278",
+      "bytes": 1680
+    },
+    {
+      "path": "originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+      "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673",
+      "bytes": 9993
+    },
+    {
+      "path": "originals/observed.json",
+      "sha256": "4499d1cf79d34dffdd711767e60054ffec78293eed799ca5d01e3bdb1a37c901",
+      "bytes": 8886
+    },
+    {
+      "path": "originals/review-evidence.json",
+      "sha256": "1a314b78efa51998f3300eb23bf896ef6f2a69cc97612d236a21274d000478fd",
+      "bytes": 14794
+    },
+    {
+      "path": "preservation.json",
+      "sha256": "ea5b12e9bbab3cf3a068fe28488e5e9496c49ccc0dea5a881f9ef8be477f836d",
+      "bytes": 3958
+    },
+    {
+      "path": "program-lead-instruction.md",
+      "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9",
+      "bytes": 8473
+    },
+    {
+      "path": "README.md",
+      "sha256": "942c853ce2b5b10551061ba5301923fac7df7033c3f1d7474d7138a8488a34b0",
+      "bytes": 9007
+    },
+    {
+      "path": "supplement-import.json",
+      "sha256": "e75383a3975ec58390b7e86b711155f1b31abc6bbab1ba038c6da01248200c9e",
+      "bytes": 11529
+    }
+  ]
+}

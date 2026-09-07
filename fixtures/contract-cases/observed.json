@@ -1,6 +1,6 @@
 {
   "kind": "actual-astra-decision-replay",
-  "limitations": "One fresh supplied-choice replay of all fourteen unchanged scenarios against the bounded Implementation Bridge skill. The collaboration producer shared the repository filesystem but was instructed to read only SKILL.md and decisions.json; expected actions, tests, prior responses, and correction hints were not supplied. This is not per-scenario execution, rendered Smoke F proof, statistical stability, environmental isolation, user acceptance, or a superiority claim.",
+  "limitations": "REUSED: one historical supplied-choice replay of fourteen unchanged scenarios against the bounded Implementation Bridge skill, recovered without a new model invocation. Native runtime identity, separate execution-log/response hashes, fixed skill/scenario tool readback and JSON response equality are VERIFIED. Encrypted request/correction plaintext and independent exclusion of expected actions, tests, prior responses or hints are UNVERIFIED; their non-provision is HISTORICALLY_REPORTED only. The shared unrestricted filesystem is not OS/filesystem isolation. This record is not per-scenario execution, rendered Smoke F proof, statistical stability, user acceptance or a superiority claim.",
   "sourceImplementation": "ce8dff818088a4925bb7e138bdb4a20a61c81abc",
   "skillSha256": {
     "SKILL.md": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
@@ -9,7 +9,17 @@
   },
   "casesSha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80",
   "casesDataSha256": "3dae809d98d789c9a7a13f30b8afd9d8a65b55f0e3db571026ce2475073fcb23",
-  "caseFormattingNote": "The producer read the unchanged repository decisions.json. Expected actions and tests were not supplied and remain unchanged.",
+  "caseFormattingNote": "Observed tool readback contains the unchanged repository decisions.json and SKILL.md. Scenario bytes and repository expected actions remain unchanged. Their non-provision through encrypted request/correction messages is HISTORICALLY_REPORTED, with independent plaintext verification UNVERIFIED; no exclusion guarantee follows from the observed file reads.",
+  "producerInputExclusion": {
+    "expectedActionsSuppliedToProducer": null,
+    "testsSuppliedToProducer": null,
+    "priorResponsesSuppliedToProducer": null,
+    "correctionHintsSuppliedToProducer": null,
+    "independentVerification": "UNVERIFIED",
+    "historicalReport": "HISTORICALLY_REPORTED: expected actions, tests, prior responses and correction hints were not supplied; correction was described as schema-only.",
+    "reason": "Request/correction message bodies remain encrypted. Observed fixed-file readback does not establish their plaintext contents or comprehensive input exclusion.",
+    "beforeQualificationObserved": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/observed.json"
+  },
   "runtime": {
     "model": "gpt-6-astra",
     "effort": "xhigh",

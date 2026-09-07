@@ -33,17 +33,19 @@ JOEDESIGN v0.1은 다음 다섯 층을 가진 작고 독립적인 AI 디자인 �
 | Color / Contrast Core | CLOSED |
 | Imagery / Focal Ownership Core | CLOSED |
 | Composition / Anti-template Core | CLOSED |
+| Composition validation supplement | ACCEPTED by Program Lead — original Composition package scope |
 | Optical / Detail Polish | DEFERRED — no demonstrated need before competition |
-| Implementation Bridge | ACTIVE NEXT |
-| Pure Core Freeze | PENDING |
-| BIO 5-way Competition | PENDING |
+| Implementation Bridge | CLOSED by Program Lead — existing contracts and Smoke F scope only |
+| Pure Core Freeze | REVIEW PREPARATION — not declared |
+| BIO 5-way Competition | NOT AUTHORIZED by this task; readiness not declared |
 
 현재 순서:
 
 ```text
-Implementation Bridge validation
-→ Pure Core freeze
-→ BIO 5-way competition
+Pure Core Freeze review preparation (documents/evidence only)
+→ Program Lead final Freeze / readiness judgment
+→ TrackC handoff only after that judgment and authorization
+→ competition only when separately authorized
 → v0.2 decision
 ```
 
@@ -132,6 +134,8 @@ Canonical evidence HEAD: `ad22a9a761eb89ec03ace3fd94625f6a6db6927e`.
 
 Canonical Composition evidence HEAD: `2b75ca76d6fcadb8aedbc7c7f1390b3bc760ec28`.
 
+Program Lead accepted the validation supplement from `6a499807826ca41a68616a0faa5d1f4007b60596`. Portable evidence: [Composition supplement](../../fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md). It covers the original Composition package (`SKILL.md` SHA-256 `2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04`) and one Fieldlight Rentals countercase, not a new Bridge-package run. Earlier Smoke I remains a detailed-guidance bounded repair; neither case proves general autonomy or comparative superiority.
+
 ---
 
 ## 4. Optical / Detail Polish Gate
@@ -154,7 +158,15 @@ Reopen only if competition or real-project evidence shows a recurring gap not co
 
 ---
 
-## 5. ACTIVE — Implementation Bridge Validation
+## 5. CLOSED — Implementation Bridge (historical validation)
+
+Program Lead: **Implementation Bridge v0.1 CLOSED — existing contracts and Smoke F scope only**. Evidence-repair baseline: `4ae644128a71f514ea10564400d6dc70e70ae0fa`. [Recovered execution proof](../../fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/proof.md), [Smoke F reuse/correction](../../fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/smoke-f-reuse.json).
+
+Actual runtime identity, separate log/response hashes, fixed input readback and JSON response equality are verified. Encrypted request/correction plaintext and independent expected-answer/prior-response exclusion remain UNVERIFIED; earlier non-provision reports are HISTORICALLY_REPORTED only. Shared unrestricted filesystem is not OS isolation.
+
+Smoke F HTML before/after is not byte-identical: before equals after plus one terminal LF. Separate hashes and original proof are preserved in the correction record. `status.attention.icon` remains intentionally unresolved; no future icon-specific claim is verified.
+
+Everything below in this section describes the completed historical integration/validation. **Do not execute these transplant or validation steps again.** The original handoff remains a historical document; the active task is Section 6.
 
 ### Existing candidate
 
@@ -196,7 +208,7 @@ current Composition CLOSED core
 → preserve every newer Craft section and current evidence history
 ```
 
-### Required validation order
+### Historical validation order (completed; not active instructions)
 
 Because Bridge changes shipped skill bytes:
 
@@ -234,14 +246,14 @@ APPROVED DESIGN.md
 
 Required observables:
 
-- [ ] approved authority preserved
-- [ ] existing project-native role reused where equivalent
-- [ ] unnecessary token renaming/rearchitecture avoided
-- [ ] missing values remain unresolved rather than invented
-- [ ] custom JOEDESIGN sections survive interchange/handoff
-- [ ] material mapping change has bounded before/after evidence
-- [ ] actual target render observed
-- [ ] Token Mapping PASS remains separate from Visual PASS and User Acceptance
+- [x] approved authority preserved
+- [x] existing project-native role reused where equivalent
+- [x] unnecessary token renaming/rearchitecture avoided
+- [x] missing values remain unresolved rather than invented
+- [x] custom JOEDESIGN sections survive interchange/handoff
+- [x] material mapping change has bounded before/after evidence, with the terminal-LF reporting correction above
+- [x] actual target render observed historically, not rerendered in this consolidation
+- [x] Token Mapping PASS remains separate from Visual PASS and User Acceptance
 
 Gate:
 
@@ -260,34 +272,30 @@ Do not build these unless the bounded Bridge contract cannot be proven without t
 
 ---
 
-## 6. Pure Core Freeze
+## 6. ACTIVE — Pure Core Freeze review preparation
 
-After Bridge closes:
+Review baseline: `4ae644128a71f514ea10564400d6dc70e70ae0fa`, tree `77197aa9894de7c3691c28adf70df20b9fbf6fca`. Composition supplement source: `6a499807826ca41a68616a0faa5d1f4007b60596`.
 
-- [ ] public entrypoint = 1
-- [ ] competitor runtime dependency = 0
-- [ ] vendor payload = 0
-- [ ] reference/template/asset DB bundle = 0
-- [ ] automatic router = 0
-- [ ] BIO exposure during core building = 0
-- [ ] canonical doctrines and operating model have no material contradiction
-- [ ] current full contract suite PASS
-- [ ] current fresh Astra replay PASS
-- [ ] required rendered smokes PASS
-- [ ] current skill/template SHA recorded
-- [ ] freeze commit recorded
+Active resume/evidence pointer: [Pure Core Freeze review record](../../fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md). This documents source identities, package hashes, approval pointers, versioned reuse, actual suite outputs, preserved failures and current limitations. The final result HEAD/tree belongs in the delivery report, not recursively inside its own commit.
 
-Gate:
+Preparation checks are evidence/document checks, not a Freeze declaration:
 
-```text
-JOEDESIGN_PURE_CORE_FROZEN = PASS
-```
+- package/public checks: one public entrypoint; zero competitor/runtime dependency, vendor payload, DB bundle or automatic router; fixed three-file shipped package;
+- existing eight-file suite: baseline and final 72 PASS / 0 FAIL, with command/exit/full output in the review record;
+- saved semantic responses: recovered Bridge execution 14/14, no new model invocation; actual identity/log/input/output linkage is separate from unverified encrypted-message exclusion;
+- actual-screen evidence: reuse each historical Smoke only for its recorded source package, fixture, state and viewport; Composition supplement uses its original Composition package, not Bridge;
+- no shipped skill/test/scenario/response/Smoke-source changes; no new BIO access or work;
+- preserve Product authority, APPROVED DESIGN invariants and User Acceptance NOT_GRANTED.
+
+The operating model remains the role/authority map; its original expansion-candidate list is not today's phase schedule. Closed Craft/Reference/Bridge and deferred Optical status are governed here. No role, philosophy, doctrine or skill behavior is changed by this update.
+
+**Pure Core Freeze and competition readiness remain undeclared. Program Lead alone makes the final judgment.** Preparation READY means ready for that review only.
 
 ---
 
 ## 7. BIO 5-way Competition
 
-Run only after Pure Core Freeze.
+Future TrackC scope, not active execution instructions: run only after Program Lead's final judgment and separate authorization. This preparation neither accesses BIO inputs nor runs competition.
 
 Competitors:
 
@@ -359,16 +367,18 @@ Read in this order:
 1. AGENTS.md
 2. docs/roadmaps/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md
 3. docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md
-4. current phase handoff/spec
+4. fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md
 5. current branch HEAD + diff + latest review evidence
 ```
 
-Then continue from the first open gate in this roadmap.
+Resume the current review-preparation gate only. Previous phase handoffs/specs preserve history and authority, not permission to repeat CLOSED implementation or old transplant steps. Optical stays DEFERRED. A preparation READY report does not grant Freeze, competition readiness or User Acceptance.
 
 ---
 
 ## 11. Immediate Next Action
 
 ```text
-Implementation Bridge candidate transplant + validation on top of Composition CLOSED core
+Complete Pure Core Freeze review packet
+→ Program Lead final judgment
+→ TrackC handoff only after that judgment and authorization
 ```

@@ -1,0 +1,258 @@
+{
+  "baseline": "4ae644128a71f514ea10564400d6dc70e70ae0fa",
+  "scope": "Four existing documents/metadata files plus byte-exact supplement and bounded freeze record only.",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "docs/roadmaps/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-browser-readback-v2.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-browser-readback.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-contract-tests.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/app.js",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/desktop.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/index.html",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/mobile.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/styles.css",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/boundary-readback.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after-readback.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after/desktop.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after/mobile.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-rubric.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/curation-diagnostic.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/evidence-reporting.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/final-contract-tests.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/inputs/DESIGN.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/inputs/PRODUCT.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/pre-registration.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/preflight-diagnostics.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-final.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-observations.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-prompt.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-tool-records.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/DESIGN.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/PRODUCT.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/app.js",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/before-desktop.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/before-mobile.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop-focus.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop-selected.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile-focus.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile-selected.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-width-1001.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-width-320.png",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/verification.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/index.html",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/styles.css",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/runtime-provenance.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/source.diff",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-contract-tests.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-suite-execution.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/changed-files.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-contract-tests.txt",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-suite-execution.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/freeze-review.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/manifest.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/AGENTS.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/observed.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/review-evidence.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/preservation.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/supplement-import.json",
+      "change": "ADDED"
+    },
+    {
+      "path": "fixtures/contract-cases/observed.json",
+      "change": "MODIFIED"
+    },
+    {
+      "path": "fixtures/contract-cases/review-evidence.json",
+      "change": "MODIFIED"
+    }
+  ]
+}

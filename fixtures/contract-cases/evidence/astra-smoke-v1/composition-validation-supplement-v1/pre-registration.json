@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "pinnedBaseline": "2b75ca76d6fcadb8aedbc7c7f1390b3bc760ec28",
+  "frozenAt": "2026-09-06T19:07:31.606Z",
+  "producerRunsAuthorized": 1,
+  "producerRunsSoFar": 0,
+  "prompt": "$joedesign 이 화면의 정보 위계와 읽기 흐름을 개선해.",
+  "promptFileSha256": "7dcf96191c127e58a17a1752798312d20ab99afacdfb587db6bbe2f6009d6a35",
+  "promptStringSha256": "c295843c446b6ef005afcb93d6114f0823ba1b8e061746778329fa3824b0691b",
+  "controllerRubricSha256": "8bf2c2eccd81354d55debffc193aa38700a93c72cb2ca9388a84245b94dfa9f1",
+  "seedSha256": {
+    "app.js": "4bcad84be50d99138c9d8496a0fbc5efb7ab0b0cae06ef50bb949e9eba6b08cf",
+    "current-desktop.png": "2c3e7b8de11c1bdfc68d6e059c4b7c148193866bfc55ed30b88e023f99b4da95",
+    "current-mobile.png": "8a246d4fa710db93e0982e3e7d2a937190e13f330ce48d01b7ab07224562aee9",
+    "DESIGN.md": "668516669f9da652a9ac2537d39e5d90577019634c66faa5d5fb17bb9fd8a1bb",
+    "index.html": "ac27fcee652911d008db8624f97ae1f24f7ebaa233914bf5f26684f011699c13",
+    "PRODUCT.md": "0b7d966b4ef145826c77e34b59a7bb0a6abe6f2186018d213f255ae6a12934d3",
+    "render.mjs": "a6c3283de91f30917317f52aed00e73f6002750d2e8fc6646bf4cb4266ee93cb",
+    "styles.css": "f5249936089c527ad4746543094d949e0bbba8cdb91c2b974c46ec8232fe86ff"
+  },
+  "shippedPackageSha256": {
+    "SKILL.md": "2440962d1be29e8274722efa86d8271327206ecdef9e9566bd30fc226002cc04",
+    "agents/openai.yaml": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+    "templates/DESIGN.md": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+  },
+  "inputBoundary": {
+    "provided": [
+      "fixed JOEDESIGN package",
+      "PRODUCT.md",
+      "DESIGN.md",
+      "index.html",
+      "styles.css",
+      "app.js",
+      "current-desktop.png",
+      "current-mobile.png",
+      "general render.mjs tool",
+      "exact short user prompt"
+    ],
+    "notProvided": [
+      "this supplement instruction",
+      "controller rubric",
+      "previous Smoke I",
+      "previous reports",
+      "tests",
+      "expected answers",
+      "other agents responses"
+    ],
+    "configuration": "fresh context and home, personal plugins/skills disabled",
+    "filesystem": "shared danger-full-access; not an OS or filesystem access barrier"
+  },
+  "controllerInspectorSha256": "09420a526e592f884c437b43ef13751cf80568a31937e9a7302f1ef468c0dc51",
+  "runnerSha256": "64a57a1028538eac3d029a556d34bd03f86a5f011a53be5369dddf3cb16b9f87",
+  "externalPreflightSha256": "83ecef5c4539cfbf7c812175c7e64c3695c2b4173e28557b4872d5658892b344",
+  "controllerBeforeObserved": {
+    "desktop": {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "png": [
+        1440,
+        1000
+      ]
+    },
+    "mobile": {
+      "viewport": [
+        390,
+        844
+      ],
+      "png": [
+        390,
+        1415
+      ]
+    },
+    "fact": "Viable independent option groups. Relative name/price/action emphasis can improve; no need to destroy suitable grouping."
+  }
+}
