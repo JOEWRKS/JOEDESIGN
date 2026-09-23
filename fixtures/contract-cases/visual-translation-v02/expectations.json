@@ -1,0 +1,15 @@
+{
+  "frozenBeforeExecution": true,
+  "scope": "Reviewer-only qualitative decision checks; never candidate input; no real visual observation or design-quality inference",
+  "cases": [
+    {"id":"B01","required":["Proceed with the specified bounded title-role delta, preserve other regions and direct source access","No compulsory alternatives, redundant reapproval or full design rewrite","Observe relevant actual result before a visual claim; existing approval does not imply acceptance of new output"]},
+    {"id":"B02","required":["One authorized reversible unapproved draft, no forced two/three candidate fanout","Concrete heading/grid alignment and structural-versus-caption gap relationship tied to supplied observations","Exact values/typeface not claimed as extracted; proposals distinct from facts; preserve product/sorting"]},
+    {"id":"B03","required":["References advisory, preserve approved text-led layout and expose incompatible dominance","Select scoped relationships instead of automatic blend","Unknown values/mobile/hover/scroll remain unknown; concrete project proposal does not masquerade as source fact"]},
+    {"id":"B04","required":["Pass original source and real illustration pointers directly, do not replace them with prose or unauthorized placeholder","Concrete alignment/crop/rhythm decisions linked to supplied notes, value status honest","Desktop approval scope only; source files/render unobserved here, mobile/state facts unverified"]},
+    {"id":"B05","required":["Bounded mobile crop correction; preserve title/actions, six records, retry/details and pending semantics","Viewport is observation area, not total page-height cap or content removal authority","Inspect exact current and corrected mobile target, including label and protected areas; no claim of unseen render"]},
+    {"id":"B06","required":["Ask current Product authority/user about cancellation semantics only","Continue independent approved caption fix without inventing cancellation meaning","No mandatory framework, extra agent or whole-project restart"]},
+    {"id":"B07","required":["Technical pass; A observed pass, B fail, C unverified; overall covered visual result cannot be PASS","User acceptance not granted, no fabricated mobile observation","Do not compensate with unrelated checks or abandon completed implementation; correct bounded clipping and verify missing target when available"]},
+    {"id":"B08","required":["Preserve approved 20/6/15 values and healthy native roles instead of snapping to defaults","For unresolved appendix use restricted 4px-based spatial roles tied to semantic relationships; distinguish structural/binding; type not restricted to 4px","Recompose responsive hierarchy and verify actual target; no visual pass without render"]},
+    {"id":"B09","required":["Keep approved rev 7 authoritative while separately marking draft amendment in one root DESIGN.md","Authorized draft/proof may proceed; no extra pre-draft approval gate","Explicit user approval needed for material promotion; token/build pass not visual pass or acceptance"]}
+  ]
+}

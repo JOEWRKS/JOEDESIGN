@@ -1,0 +1,1822 @@
+{
+  "baseline": "2a815ee49d8f7ca6a7c1e483df315eda1fa709d7",
+  "tree": "8b738bac277a700deb0efab73baa122c56c2f264",
+  "baselineCommand": "node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs tests/joedesign-color-contrast-core.tests.mjs tests/joedesign-imagery-focal-core.tests.mjs tests/joedesign-composition-anti-template-core.tests.mjs tests/joedesign-implementation-bridge.tests.mjs",
+  "baselineExitCode": 0,
+  "baselinePass": 72,
+  "baselineFail": 0,
+  "preserved": [
+    {
+      "original": "docs/decisions/JOEDESIGN_OPTICAL_GATE_V1.md",
+      "path": "docs/decisions/JOEDESIGN_OPTICAL_GATE_V1.md",
+      "sha256": "e72b74679c77357857ba80619eb4c37624ce0d1846562c2e74ce22aee3abed8c"
+    },
+    {
+      "original": "docs/handoffs/JOEDESIGN_COLOR_CONTRAST_CORE_V1.md",
+      "path": "docs/handoffs/JOEDESIGN_COLOR_CONTRAST_CORE_V1.md",
+      "sha256": "ed23eb6ddb7c89e4cc812e5dd9f0f8fa46d790d390d7739fb6d6544d8c29dad7"
+    },
+    {
+      "original": "docs/handoffs/JOEDESIGN_COMPOSITION_ANTI_TEMPLATE_CORE_V1.md",
+      "path": "docs/handoffs/JOEDESIGN_COMPOSITION_ANTI_TEMPLATE_CORE_V1.md",
+      "sha256": "b7f225ec054912bf87e94712401f16de387799303e46903f8ebc2986d33aac1b"
+    },
+    {
+      "original": "docs/handoffs/JOEDESIGN_IMAGERY_FOCAL_CORE_V1.md",
+      "path": "docs/handoffs/JOEDESIGN_IMAGERY_FOCAL_CORE_V1.md",
+      "sha256": "4ffc346cc7c85650589ab9e5874bec03822a78294e1374e00f31d6bc2f3fb751"
+    },
+    {
+      "original": "docs/handoffs/JOEDESIGN_IMPLEMENTATION_BRIDGE_VALIDATION_V1.md",
+      "path": "docs/handoffs/JOEDESIGN_IMPLEMENTATION_BRIDGE_VALIDATION_V1.md",
+      "sha256": "45162ab4ff11f933df227e2db558fa9cae27aae668291cdf9cd9289962fd3cd8"
+    },
+    {
+      "original": "docs/handoffs/JOEDESIGN_REFERENCE_INTELLIGENCE_VALIDATION_V1.md",
+      "path": "docs/handoffs/JOEDESIGN_REFERENCE_INTELLIGENCE_VALIDATION_V1.md",
+      "sha256": "f7b36c91c6f9694632f61b1db62265b41b381a28a5281216fcca1532e973a743"
+    },
+    {
+      "original": "docs/specs/joedesign-color-contrast-core-v0.1.md",
+      "path": "docs/specs/joedesign-color-contrast-core-v0.1.md",
+      "sha256": "9f585d1d4979e026fa17709ee1d93306cef3dee778ee4d513ff73cec8c863c01"
+    },
+    {
+      "original": "docs/specs/joedesign-composition-anti-template-core-v0.1.md",
+      "path": "docs/specs/joedesign-composition-anti-template-core-v0.1.md",
+      "sha256": "2a6bf55a0756d3a8c67e7648fc98f47b1b4e19826544c6db735aaf5a7fe3f890"
+    },
+    {
+      "original": "docs/specs/joedesign-craft-core-v0.1.md",
+      "path": "docs/specs/joedesign-craft-core-v0.1.md",
+      "sha256": "539881164a178d0dfa1516c4847320ca9e71079bf82dba0a35159eca1da36ff5"
+    },
+    {
+      "original": "docs/specs/joedesign-imagery-focal-core-v0.1.md",
+      "path": "docs/specs/joedesign-imagery-focal-core-v0.1.md",
+      "sha256": "62c72b82288f1850ce3d0baf0846688d72ffa548158d8f5912fddd0020227ee4"
+    },
+    {
+      "original": "docs/specs/joedesign-implementation-bridge-v0.1.md",
+      "path": "docs/specs/joedesign-implementation-bridge-v0.1.md",
+      "sha256": "b04492e794303c95a324e8e7f31252a611898bea2c4be07aee51b0414e3f4682"
+    },
+    {
+      "original": "docs/specs/joedesign-reference-intelligence-core-v0.1.md",
+      "path": "docs/specs/joedesign-reference-intelligence-core-v0.1.md",
+      "sha256": "ae4933b5d5a91ad69ed3f2089f3609da1ea7f9380c89183717fa161cb017950b"
+    },
+    {
+      "original": "docs/specs/joedesign-typography-scale-core-v0.1.md",
+      "path": "docs/specs/joedesign-typography-scale-core-v0.1.md",
+      "sha256": "9a4eaa5209766490a5fb3867aeac792ec03b79860d6055321ab4bcbb37c12c07"
+    },
+    {
+      "original": "docs/specs/joedesign-v0.1.md",
+      "path": "docs/specs/joedesign-v0.1.md",
+      "sha256": "e246a5940bde4ff57006eec492496e0d8dec5adadb4d48221ad967793ecf76c7"
+    },
+    {
+      "original": "docs/superpowers/plans/2026-09-06-joedesign-color-contrast-core-v0.1.md",
+      "path": "docs/superpowers/plans/2026-09-06-joedesign-color-contrast-core-v0.1.md",
+      "sha256": "e6d0d53e41f65ea7fb35346f682aaf548338e696f38652a3b16d075bbef52b14"
+    },
+    {
+      "original": "docs/superpowers/plans/2026-09-06-joedesign-composition-anti-template-core-v0.1.md",
+      "path": "docs/superpowers/plans/2026-09-06-joedesign-composition-anti-template-core-v0.1.md",
+      "sha256": "4559d7c4b1561654e5b6aafa5a1959205f8e36330a59a60e4f60939c6f2b00ad"
+    },
+    {
+      "original": "docs/superpowers/plans/2026-09-06-joedesign-imagery-focal-core-v0.1.md",
+      "path": "docs/superpowers/plans/2026-09-06-joedesign-imagery-focal-core-v0.1.md",
+      "sha256": "514e0e305956a9a3312c988277de5ada8a37da1ffbca2015eb752242cf50e170"
+    },
+    {
+      "original": "fixtures/contract-cases/decisions.json",
+      "path": "fixtures/contract-cases/decisions.json",
+      "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/baseline-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/baseline-contract-tests.txt",
+      "sha256": "71f20fb3c9f01ae0cfc3c749c655e8400ad7a0938ad760296e27ebb74f487b4d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/baseline-suite-execution.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/baseline-suite-execution.json",
+      "sha256": "d0d8f80074cdaa8889c99082c5935b29208f21084db39e2ca05c80edb7b77632"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/execution-excerpts.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/execution-excerpts.json",
+      "sha256": "afde24cb6d371f4b3f4a61c73a65206911947961b74e9cb7ae1a9889d5f9908c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/final-contract-tests.txt",
+      "sha256": "ee733b88cc61550a018b53b79a2fcf6d5e2329932fec0b67b1020cd7c6e5494f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/final-suite-execution.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/final-suite-execution.json",
+      "sha256": "d02f20ccfa49c09fe1d351021654878047da6333136d77b5c794e8184525b3fe"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-output-linkage.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-output-linkage.json",
+      "sha256": "1c50afc9845037af83d7a93cf4498dd325164ebc3919aa41f150d5632fcb99a1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-readback.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/input-readback.txt",
+      "sha256": "3be51dc46c33b889125608bf719f6cc51fe0663262957fb3deeecb1fc2530797"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/manifest.json",
+      "sha256": "389e10130c2b2bc67fb4ec0390a958559e38da53e7cd32e3d1c7ccc078f62f05"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-final-response.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-final-response.json",
+      "sha256": "478afe7393ff8dd7e0ce5ce7c99ac87ac23e23f6554bc8a20abf3f94416c6648"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-initial-response.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/native-initial-response.json",
+      "sha256": "4ba96cbae1ccc1b3486d7821c1021e8def8587f323839a0f071af5f81ae5c522"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/observed.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/observed.json",
+      "sha256": "b63cbb371682d6302808d3622fbba0a4f41d728171bc5fcad114587f5d934fb5"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/review-evidence.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/originals/review-evidence.json",
+      "sha256": "1741bd13cbdefcf3dd6d2957d6fd8672e62f088d0655be69e1b5d3b12f8c1dfb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/preservation.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/preservation.json",
+      "sha256": "e031da7929122e9196f7de296d42a57606cae1fba4b8418851449132772b023a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/proof.md",
+      "sha256": "f3011a879993e7fe1a11afff4b7830a1d3c71597803508d61344a0c546076bef"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/recovery-check-diagnostic.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/recovery-check-diagnostic.json",
+      "sha256": "4f8b5528644f8a833f41de2860c1faca52ff7bed73698b2464fb9e13ac319e07"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/runtime-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/runtime-provenance.json",
+      "sha256": "8ddf1ff82a2d300ea6bf180f0d16b16d746e83fb21d66942db27be5acc5b7571"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/smoke-f-reuse.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/bridge-evidence-repair-v1/smoke-f-reuse.json",
+      "sha256": "e222105c5f38bd5eb56cf75688605646b30ef12ed0cdcc29fb0170d1cf7baef6"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/contract-tests.txt",
+      "sha256": "a96fe328c7d41366bc3693c9febe447e422c888c5ee6e36e50a6d6d2ce687f58"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/semantic-final.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/case14-regression-v1/semantic-final.json",
+      "sha256": "21ff9c2d390cd570cee7fd93fd19e049109401b899517f43587276dd2ffd4901"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/baseline-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/baseline-tests.txt",
+      "sha256": "d674bb745e0f0eaee645e4361917a3ca0e9524aded72c8df3922c946cad8ce79"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-green-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-green-tests.txt",
+      "sha256": "04f1c0338b6d7ab2b574b8d49bc33fc73e1e24cca1dae242799475d440495c26"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-intermediate-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-intermediate-tests.txt",
+      "sha256": "f6647ac694087e2adf2379b162235fc4cf600468c69ae14c552b84e551849845"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-red-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/color-red-tests.txt",
+      "sha256": "e5ac84f1e1998713a5d965d28fe1f2462252b6f7e1cf8efebf3d6d663c8576d4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/controller-integrity-diagnostic.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/controller-integrity-diagnostic.json",
+      "sha256": "687e0943f60d38115c12c19aa000ccdf5fd93a05aeda1c61bf197b3710eac7c3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/final-contract-tests.txt",
+      "sha256": "98f9a0d7ba6c6844517e1d3e662e7b07c25838706ed362aff8284d3b61160497"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/post-semantic-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/post-semantic-contract-tests.txt",
+      "sha256": "2a7b728e00c6dca2bfd8a8e3cc941647775674656668b2eb2215ea9a25a7a47d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-final.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-final.json",
+      "sha256": "7613327a8f96245fdbaffbde12df83d6e20053159d8c987fd7cd730105b1087e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/semantic-provenance.json",
+      "sha256": "e20f79c1bb74a41d063fe7e5f5ce87d6ef5347a11c96899111fce063a78b4160"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final-links.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final-links.md",
+      "sha256": "6611d95e9f7e8703273086212e1420a8a25be952ecb402639a292761731d3fb2"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-final.txt",
+      "sha256": "ff578a788d8fb0da5add0f8ed16913a8fb29c5a1adde7ff2bef26465647d094e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/smoke-g-provenance.json",
+      "sha256": "d34dbd68308942ecfcb814243f3505c295aef0168b0b7104ed9aa65eaed27773"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/validation-notes.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/color-contrast-v1/validation-notes.md",
+      "sha256": "c65d64143bbf76ae62d96954ea9dc04fc103eb9964be1b8899a658a8de4b46e3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/baseline-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/baseline-tests.txt",
+      "sha256": "b8b9bd3da82ba82711208145fb8a38adb35d9a0b48c08839a5f0a2e120b4a5d8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-green-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-green-tests.txt",
+      "sha256": "def335d3895d3c82aecfe19036a47fd0d9419b4543f94f849eee18aaaea1d3b0"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-red-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/composition-red-tests.txt",
+      "sha256": "12139cb90646b5237c33e2f05a22b27cff10d772118fb6d05b1ac22a569ce752"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-contract-tests.txt",
+      "sha256": "7b038b3ce4696e26f4fdf3e938c95a3519c08b3e8abffb367d6792b010344f15"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-validation-notes.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/final-validation-notes.md",
+      "sha256": "286d1914d325d873f7fa28e7ff60502c2bed43ba2da9c5339900c59a50b99734"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/post-semantic-contract-tests.txt",
+      "sha256": "d69ee48edaf8404cb614ab789181f84bd788c21af86884fb0606af14c7da6fbe"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-contract-tests.txt",
+      "sha256": "01d48ba052fc2d18830177a4904e86cdf189229f98b89f921100ac527d2b119b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-final.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-final.json",
+      "sha256": "202a1f0abc0142e7cd67880742c804de1f14f4e4813889675085e86f21e44c0c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/semantic-provenance.json",
+      "sha256": "1fae7dcd875c8897c13c6b68ec95c63d8676f13770ba39d96dd596b5e37d84f1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/smoke-i-final-summary.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-anti-template-v1/smoke-i-final-summary.md",
+      "sha256": "d26ce2e25cadb60f49b1cb241c4137f2c51ef091e765a6f5cddc553331dfd857"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-browser-readback-v2.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-browser-readback-v2.json",
+      "sha256": "83d2aed031026f8ce381411c14d8c4c8469c734f4dab057741a91b0ee0baa8fa"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-browser-readback.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-browser-readback.json",
+      "sha256": "883f8b65964f6afedb7cff2d523912d42306751f0b37abb3c4cedf618e5e81e8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/baseline-contract-tests.txt",
+      "sha256": "89582b8a2353033b792c86f9054d044c5c9bde6e08999314bb8ffff1c565ab5f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/app.js",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/app.js",
+      "sha256": "4bcad84be50d99138c9d8496a0fbc5efb7ab0b0cae06ef50bb949e9eba6b08cf"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/desktop.png",
+      "sha256": "2c3e7b8de11c1bdfc68d6e059c4b7c148193866bfc55ed30b88e023f99b4da95"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/index.html",
+      "sha256": "ac27fcee652911d008db8624f97ae1f24f7ebaa233914bf5f26684f011699c13"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/mobile.png",
+      "sha256": "8a246d4fa710db93e0982e3e7d2a937190e13f330ce48d01b7ab07224562aee9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/before/styles.css",
+      "sha256": "f5249936089c527ad4746543094d949e0bbba8cdb91c2b974c46ec8232fe86ff"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/boundary-readback.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/boundary-readback.json",
+      "sha256": "73c89f3675bee8fe1392f513fcc4d4a74548e0538c66249c26e923d32e00dffd"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after-readback.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after-readback.json",
+      "sha256": "57ead9f5eeb010d7e2e142d085943b4cf95d132b23b3ba573aa7ec7b72882c96"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after/desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after/desktop.png",
+      "sha256": "7cdb0fae3668955d8226818f80ec9ded2ace1194d3fac961c853e8d157381fed"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after/mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-after/mobile.png",
+      "sha256": "f82bc55f7b01d47d0090d9eaa2425d5bf77fa3d882a63c4a41bab490e246a007"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-rubric.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/controller-rubric.md",
+      "sha256": "8bf2c2eccd81354d55debffc193aa38700a93c72cb2ca9388a84245b94dfa9f1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/curation-diagnostic.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/curation-diagnostic.md",
+      "sha256": "83d680fb530ea79555975c3f21ee6203d12fe5cc65f7b1cde6b5595a55f4779a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/evidence-reporting.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/evidence-reporting.md",
+      "sha256": "7856c70b85d18f9a73373282b893b69aa81a1e9b9a7df1c8cb28dac3bb2a111c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/final-contract-tests.txt",
+      "sha256": "9bc41ae5a24f8717ba4e9c07824fa9c1dcee6a62bc73f43f230d366e0bd63102"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/inputs/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/inputs/DESIGN.md",
+      "sha256": "668516669f9da652a9ac2537d39e5d90577019634c66faa5d5fb17bb9fd8a1bb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/inputs/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/inputs/PRODUCT.md",
+      "sha256": "0b7d966b4ef145826c77e34b59a7bb0a6abe6f2186018d213f255ae6a12934d3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/manifest.json",
+      "sha256": "86ca2fcef46a745a4df9b0487a0fb6eef736e646072430aa91f75eed4019a999"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/pre-registration.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/pre-registration.json",
+      "sha256": "6d5bc0025f8451963fec8c44bb4edc43dfd2c39d3ddb7b7ca5ce156727f755d9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/preflight-diagnostics.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/preflight-diagnostics.md",
+      "sha256": "6cf1287b218112f5c8ba177f64dd7f5a442056911764484575956e787fff3c5e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-final.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-final.txt",
+      "sha256": "2df96910c09fb44fccd8df01a117dd9cd38bfc52a98c3dcb31232ab6ecbf3fe0"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-observations.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-observations.json",
+      "sha256": "703d385ba609620d62a3d1de20468a6deca653ad7dcd248f6af7708e80d26f26"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-prompt.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-prompt.txt",
+      "sha256": "7dcf96191c127e58a17a1752798312d20ab99afacdfb587db6bbe2f6009d6a35"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-tool-records.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer-tool-records.json",
+      "sha256": "e2d1ee63c770da9a06c425623b334b1c7d65df348e4a1dda75ab16f4d8354535"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/DESIGN.md",
+      "sha256": "916bfb67d8bc6370734727b3666b3c7d5a08ab2c76ecb7e1bf74e7aea7af1536"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/PRODUCT.md",
+      "sha256": "0b7d966b4ef145826c77e34b59a7bb0a6abe6f2186018d213f255ae6a12934d3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/app.js",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/app.js",
+      "sha256": "4bcad84be50d99138c9d8496a0fbc5efb7ab0b0cae06ef50bb949e9eba6b08cf"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/before-desktop.png",
+      "sha256": "2c3e7b8de11c1bdfc68d6e059c4b7c148193866bfc55ed30b88e023f99b4da95"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/before-mobile.png",
+      "sha256": "8a246d4fa710db93e0982e3e7d2a937190e13f330ce48d01b7ab07224562aee9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop-focus.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop-focus.png",
+      "sha256": "9d7e003b0935aeb832dc3d5d65a7b30f82aa06ff84cc504932787b09237d0e01"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop-selected.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop-selected.png",
+      "sha256": "908bd732d90c7ebf3e47d707b11917e3a09f621b594f003f5fccad8c10537e5a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-desktop.png",
+      "sha256": "7cdb0fae3668955d8226818f80ec9ded2ace1194d3fac961c853e8d157381fed"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile-focus.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile-focus.png",
+      "sha256": "82648c65cef2f233c1adb84ed99964061b30a849499f7be167929f85de3ea616"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile-selected.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile-selected.png",
+      "sha256": "6062dad47c7357a8f58611b92dcf3fb19107c7aa42e83b844d6d82bf68e97c30"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-mobile.png",
+      "sha256": "f82bc55f7b01d47d0090d9eaa2425d5bf77fa3d882a63c4a41bab490e246a007"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-width-1001.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-width-1001.png",
+      "sha256": "87ed5f164840ba3565edb606a9489bd4d72086e54a597a53cc115671db7915a7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-width-320.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/refined-width-320.png",
+      "sha256": "7fbc92b95a3dddbad309604023044c217ad058716c4714aa14b1b2ac19ad26b5"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/verification.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/artifacts/verification.json",
+      "sha256": "7a757b8e1e213aaa1f1426670908c6ef50c7828ac61d6640d9be11460bd48afd"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/index.html",
+      "sha256": "fcd518fbfd6ac76fe3bcda6a8a3978cf5677f62bcd2ec6666b94d5653cf45db0"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/producer/styles.css",
+      "sha256": "03895846e045e024dad34eefae8cc47624d039cb0260c457c6f60dd136f5f4b4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/proof.md",
+      "sha256": "1d53b94045b9aa4c60bf0857a1bed773c8fdb67fb4d51085eee326cc156c8d19"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/runtime-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/runtime-provenance.json",
+      "sha256": "b8032f27f0587f9658ff1cd96f3318e50f83fdb11f54b258648e129747ec7c81"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/source.diff",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/composition-validation-supplement-v1/source.diff",
+      "sha256": "3c2608af0e21b9b5c487479e2d2dc796246b5e5398cc26361b8c48e92f44315f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/baseline-rerun-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/baseline-rerun-tests.txt",
+      "sha256": "211f35101e47a8af7c3eb4610a4214af976c6745b203f361e88983ad36f73abc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/baseline-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/baseline-tests.txt",
+      "sha256": "1c8518e264992acc0d35f7b9be231e364f23f83c25082751afa99d4f05c3a317"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/final-contract-tests.txt",
+      "sha256": "4ed31e282e7120813b915f4f39d7d848e54cd0aac4c5959899bafd63e3c85221"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-green-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-green-tests.txt",
+      "sha256": "71add9b4c517132e539999152fad95db59fe4c77d7a63c542749638919fb8ebf"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-red-tests-fixed-extractor.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-red-tests-fixed-extractor.txt",
+      "sha256": "5e6abe854374234da1181ff97c8c86e195dab71fbe7403174b45befd2edaabf1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-red-tests-rerun.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-red-tests-rerun.txt",
+      "sha256": "c9d62466c106ff5dd03e1d6bb0c8acc8d30382d23b7906e31fd31ab0d421ad4a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-red-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/imagery-red-tests.txt",
+      "sha256": "da505ad981c25f4793ea5f07f25a2d6610f1f61d13cb26adb991992332845e67"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/post-semantic-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/post-semantic-contract-tests.txt",
+      "sha256": "5a69323745784e65cc90a49256e6871fcf2faefb04d8e72af8c93c97dfd68074"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-contract-tests.txt",
+      "sha256": "7d4d21e4f13ff568682474238ae6e2b974594a8ad91b6eae05f4aabb31a0a641"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-final.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-final.json",
+      "sha256": "cb8ca3ed9a96fac8f7d94e90c1b63bed7cc0212624cbc5ef492a8f7f3a06649f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/semantic-provenance.json",
+      "sha256": "69d728964d41b12294561cda9d35b37224a143e37e098396d8acbb97ec3e5378"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/smoke-h-final-summary.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/smoke-h-final-summary.md",
+      "sha256": "c128d633e73001b42cc596bca4f6a614333902f409fe432a3b84cdd1f394182e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/validation-notes.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/imagery-focal-v1/validation-notes.md",
+      "sha256": "3f3ef7e241cdf72f4cf3e7bb528a65e0c6f802bbb563a030a53c10fb299864e8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/bridge-green-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/bridge-green-tests.txt",
+      "sha256": "44b5e6f077272db0402c10f85a842eb48c1e7beec183d78b6d86bd79c6511e63"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/bridge-red-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/bridge-red-tests.txt",
+      "sha256": "3f02f7b4f14693c19ffb2b9e3ee094fe88c79f6f556076e20a11a67c4ec14172"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/final-contract-tests.txt",
+      "sha256": "5290f764d14087c93cd957faea59fba37075f17cafe0753698885702b085b62f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/post-semantic-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/post-semantic-contract-tests.txt",
+      "sha256": "f0709931f5592afce05d6b5abd6a967ca791028806d2d29b8331810e909e44cc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-contract-tests.txt",
+      "sha256": "30765dda516db7f7f59dfd02a27e9f0208271c306d71bb58b1803c9e08fe7cf4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-final.json",
+      "sha256": "9a2df0bb641bbd820263b9fe7919e77bc374bcd4e28e300b42143d4f82958938"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/implementation-bridge-v1/semantic-provenance.json",
+      "sha256": "3a3ffdd786711a36f38e7c4b37734c8086b6911a2636166790d315cb462fd60e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md",
+      "sha256": "942c853ce2b5b10551061ba5301923fac7df7033c3f1d7474d7138a8488a34b0"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-contract-tests.txt",
+      "sha256": "12ac8e82df7b508e7d6adb469f370fb98b2422158c20296373118bfe10cdd848"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-suite-execution.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/baseline-suite-execution.json",
+      "sha256": "29768cf93ac8c4b3662e7f666f77ebdbe9f64e83621a7d26e0d9d808484c8360"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/changed-files.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/changed-files.json",
+      "sha256": "0020a3f929e3f4a0de3589e27228942144bbb846f2c2aea1112b6c5ab3c23b32"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-contract-tests.txt",
+      "sha256": "5d3a1fb2914e2d5511d17061e180439145f46ae25655c02f67316ba0fabff4fe"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-suite-execution.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/final-suite-execution.json",
+      "sha256": "348ec0ffdf6fe33444503baaa9d13037e85f78228537f6f033485d0dad805daf"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/freeze-review.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/freeze-review.json",
+      "sha256": "a2defe4180b746fc9c215d696e5d8f6beb303df092bee1f30c5c9904c4a2a3c7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/manifest.json",
+      "sha256": "fe2c3a0018ba11f355ca7b6e166f5d07999ffc78d05452a28993b5c6c82837f5"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/AGENTS.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/AGENTS.md",
+      "sha256": "b69fe4d6aeb9e283275d8d4b33ca0073c5106c04cf466223d843ee8fea892278"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md",
+      "sha256": "3f8c71fc0f31429b3b2b6db20821f1f45f567f986ac1378d3af43e88f548f673"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/observed.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/observed.json",
+      "sha256": "4499d1cf79d34dffdd711767e60054ffec78293eed799ca5d01e3bdb1a37c901"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/review-evidence.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/originals/review-evidence.json",
+      "sha256": "1a314b78efa51998f3300eb23bf896ef6f2a69cc97612d236a21274d000478fd"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/preservation.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/preservation.json",
+      "sha256": "ea5b12e9bbab3cf3a068fe28488e5e9496c49ccc0dea5a881f9ef8be477f836d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/program-lead-instruction.md",
+      "sha256": "27c17b5e63856395c089d6ed1dbbb650ef49aa552f2d487860ea656a9efcc4f9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/supplement-import.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/supplement-import.json",
+      "sha256": "e75383a3975ec58390b7e86b711155f1b31abc6bbab1ba038c6da01248200c9e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/contract-tests.txt",
+      "sha256": "46b1997feca69243a3fbec112ffadc248f22052d471a11c15fba1c01dcc0ae53"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/static-rerun-manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-static-rerun-v1/static-rerun-manifest.json",
+      "sha256": "3087381d8a44efba6507230470f8e4589274258408ae5fd8c663b267b03c9344"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/final-contract-tests.txt",
+      "sha256": "842f4eaa0151b80661adace657759d4ec895f4edfda600b7d21543bd308be0b1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/initial-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/initial-contract-tests.txt",
+      "sha256": "721095ca4fd186564b1d70f72388173c52d1d91cee2701e1a2aa5431234e5a1f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/initial-validation-findings.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/initial-validation-findings.md",
+      "sha256": "417939a22f159bd3cf83801af708afa221da375b40f9a5d96946d2c2814696db"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/native-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/native-provenance.json",
+      "sha256": "7ae71857c8fab988757c478787019b78ba81ed08b62871bb09ae6f4fef7d45e7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/semantic-final.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/semantic-final.json",
+      "sha256": "353bd61762a151ddeceb5adf2b3b2c0777d63971ff4222f8fdbcd3f6ced7be9a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/smoke-e-final.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/reference-intelligence-v1/smoke-e-final.md",
+      "sha256": "0391992ddff419b77ee03aa28583c89c02b314c28a8d95669c0281ca4bcb1263"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-desktop.png",
+      "sha256": "3b7b4ce2493dd3e1e867e96f95a37320a44cc7d0e81b6aee6effa10deb19df25"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-a-mobile.png",
+      "sha256": "30c1a20ca526b62556e44ec1f56c6aaf18712e398737c35fe2c8c0d2796a697b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-desktop.png",
+      "sha256": "4ee902148ab3cec17ebd3173f96f8a3604b76e97233da33ed65ac5fd880a1f27"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/candidate-b-mobile.png",
+      "sha256": "5fc802b432687a30d0ff63462ab041b18f35087770b72767d76454d17fd6afb5"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-desktop.png",
+      "sha256": "048b3f9b3fd46c5ee7cb1a9ca2982823499e6076ab8d82bcde318f618203d998"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-a-mobile.png",
+      "sha256": "0b4702ed58f993654a8fdc1d802c3f574486ebcf78afefb88cbce1c93fcda13a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-desktop.png",
+      "sha256": "ce21b1ba2ded0cf93a92dea87edd6332820afb172583cf3b6f6aa6fbdc3414e9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/craft-core-v1/candidate-b-mobile.png",
+      "sha256": "631f2d8e0ccfb65c61cdbf0fcf1ee8fb025e00f1b8db2b898fdefc97f450a1ab"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-desktop.png",
+      "sha256": "574455af5941ba19a0e060091b02a61b2a404343fc89ef656bc3aa2c518f38c3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-a-mobile.png",
+      "sha256": "cbff959fbe8458ae310fdceb7162954374daf140ff86bd8215a038f6262cfff2"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-desktop.png",
+      "sha256": "bbf22c1c7906a837e06ebbb52af268a1f40e9ba32db29628f5b5919adcd6ad05"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-a/typography-scale-v1/candidate-b-mobile.png",
+      "sha256": "9c7bc01d4383f9bf252de7360ff6a811aa28c8c993981f0be324bf253edc8813"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-desktop.png",
+      "sha256": "ac92004a64e91cfde91c6489c4f4bedc1be318827d3b790217d25ab3ef5572b5"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/after-mobile.png",
+      "sha256": "e8f02803fb40fed712e706227dc49811029970f17c91ebf35755d12fbe4a06cb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-desktop.png",
+      "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/before-mobile.png",
+      "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/changes.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/changes.json",
+      "sha256": "25e2438eb150070daa7bb13d8e2d6ac035a15ed89757b549b83f6a2f5d311356"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-desktop.png",
+      "sha256": "61b69abe232e914c3e3990bae03bb58044a77758a15d9a7c8e3ca506343ec144"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/after-mobile.png",
+      "sha256": "a7594efab2ebbc5903ae220a95a8ad26792fe439eb134eb77c774414623c0f71"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-desktop.png",
+      "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/before-mobile.png",
+      "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/craft-core-v1/changes.json",
+      "sha256": "61e719297095b3044ab91edf635fcc4fbab4eace6a8bd669a55197007326a7b4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-desktop.png",
+      "sha256": "1268d67e499e0f7728c9b601b0d19d016b6446e5757f221d32aed6eb9d37e99b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/after-mobile.png",
+      "sha256": "880197ee05d6b44be83381797ba35cf9c2b130792eb4605aa676c6a9d0c22486"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-desktop.png",
+      "sha256": "7332f7592592db2b89ab7ce2ddbbcbfc6763498da12f49abdffb36893a2fbe31"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/before-mobile.png",
+      "sha256": "dca96550cb2b4207a5c10a9485687753d1723bacd3d1fe797f996b2dfbe5f612"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/changes.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-b/typography-scale-v1/changes.json",
+      "sha256": "016458e9c07c8e764981831f4b0f81c321d5f3b31c47a3560b0ff264ee332eb9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/DESIGN.md",
+      "sha256": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/PRODUCT.md",
+      "sha256": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-desktop.png",
+      "sha256": "7e2d928dde46cf2654718503eb8da393b3e2f8b0d7643c805050440b5554ce95"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after-mobile.png",
+      "sha256": "991226f7701aa8a518f97b052229118502f039c2853f262bb913e26aa2621207"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/after.css",
+      "sha256": "a267333502b73ac3b2b195389e910c466df7101d8e78d7987f8ff397fe2dcfe4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-desktop.png",
+      "sha256": "83cd47462a544b1e5388049908d8ff11f606037985cc5088facf2ac654992ccc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before-mobile.png",
+      "sha256": "7cabf5a6cfb84dc6efd052a9c45846aad478547734c1a91069d24ed960dbd304"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/before.css",
+      "sha256": "cc6d4e7d80757391bd45cd1e97f4d265f7fa42a54cb9319008f23e4d33a33fdb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/fixture.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/fixture.html",
+      "sha256": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/spatial-role-manifest.json",
+      "sha256": "390a7e020f0529128f7dbe2d56bf5d42a41c30511f1262cd60c2f5e12873cd77"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/DESIGN.md",
+      "sha256": "d071c838d765099cf6c5eb5b447838af45f33746233e95133c6d68f7adedd77f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/PRODUCT.md",
+      "sha256": "4ff1b597ed0dc9a43e7cda75caf2137906def92f4069097ffbb17a8a81b3d329"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-desktop.png",
+      "sha256": "ef18d3ba5330219beb350f1b058929aeb0b3cf488eda259cf754e2cff5b5c8a7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after-mobile.png",
+      "sha256": "6d7d6eabf30e99f90d3ab9965841e7798e498076d40b10db2367aa8c83858c91"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/after.css",
+      "sha256": "deaaee297b6de75ffd26571eb2a767b6df6b58b57df8d316ed36851f6bf883b7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-desktop.png",
+      "sha256": "83cd47462a544b1e5388049908d8ff11f606037985cc5088facf2ac654992ccc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before-mobile.png",
+      "sha256": "7cabf5a6cfb84dc6efd052a9c45846aad478547734c1a91069d24ed960dbd304"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/before.css",
+      "sha256": "cc6d4e7d80757391bd45cd1e97f4d265f7fa42a54cb9319008f23e4d33a33fdb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/fixture.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/fixture.html",
+      "sha256": "ad09d7e38eb741ac5e0ff71fde86f4a09c06828d33b34a8909abedae405cd958"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/spatial-role-manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-c/typography-scale-v1/spatial-role-manifest.json",
+      "sha256": "2b5a59031a90353c55a6d93d774bbded7415c4f96e9b65062761e1b8bfb21a48"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/DESIGN.md",
+      "sha256": "ed583646ff7e080ab961db8f695309bddc21e60708e2a94d5e5904566930535c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/PRODUCT.md",
+      "sha256": "25c86eec9814d66a844c7232f8cf122eda9d9845a9937d96ef0db8aecf92e4d1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-desktop.png",
+      "sha256": "f9a328d8aa64ea23960090c17ef0ac8cdb4c57ffd5fead7e9fd09847cd89e671"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after-mobile.png",
+      "sha256": "88381ddfba63ad398e17a329545efa6d878bebda786eca6c26deff3cac9afddc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/after.css",
+      "sha256": "6ec437ed193aa95cdb76ae8f52ae1eb5c7636e32bc920b7744ee55f219793a09"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-desktop.png",
+      "sha256": "443cac040da7eb8c5da927526088e1b4ea31517621d75c24fac0c77cf0f782da"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before-mobile.png",
+      "sha256": "3043ce75686dcc2bfd36014ccd92f066325627f3d340332be9bbd6056a7706fe"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/before.css",
+      "sha256": "b4221560169ea66e115d1129c884e3cecf7db46e2988ac81e67d13f9e07ff816"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/fixture.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/fixture.html",
+      "sha256": "931f49a9eaafcf8fec2b7e438d179a0add97bbc9dac0d5b0606689fb9413a827"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/type-role-manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-d/type-role-manifest.json",
+      "sha256": "1cf06c3afc0614caf47d3f078001ef1c15e2fd44459c4e46056a6fb4a27bfdcf"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/DESIGN.md",
+      "sha256": "051c1738764d460755170f34ba575266bf5f0d398ae781ee3e54bf402360b5b8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/PRODUCT.md",
+      "sha256": "8a4002f6cd6530bec0c45732a7cf0a9581a091f3d7cfb0e2326aea4d420979cc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after-desktop.png",
+      "sha256": "06fe7e490da5b34b8ac4ae2fde9ecab00afff154bc6fdb84a9c9201a6518aa3a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after-mobile.png",
+      "sha256": "bf729539be0e976810407e86dcee08e4daa843c018f35c7d5a62a09c16ec97ab"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after/index.html",
+      "sha256": "da373dc008647892b34b7c58a65896a3a4ee0482fef9f5fe5faf69b9566aa659"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/after/styles.css",
+      "sha256": "18b1b6c17ad740e784d1feffed0c32799a43552ba30893311403f96bb981bee1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-desktop.png",
+      "sha256": "de74756570ee7cba1c6befb3868f88af5f9b7f91264d3f3b87a7e1a4bc94e56c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-hashes.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-hashes.json",
+      "sha256": "c6a5a0791ba357c79bcfb701322b0f75c1f332e738e87d376b2e94111af79917"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before-mobile.png",
+      "sha256": "114cbfa8a5a1a8e8b122682d2174fb2e3e822a45d728090cf8160685d7fba7b6"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before/index.html",
+      "sha256": "45610f2ff59d588090bf7cec180d471251a2e6706b55727bf0edf8f6efce35bf"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/before/styles.css",
+      "sha256": "2ac85cec8a0824a72cbcd803b490dd123bbd279ec5bf4deb73d79b90091cc14f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/checks.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/checks.json",
+      "sha256": "7b94d881bc2f9e29875311c97b1a22ae599fd9ed98b028c602dc7ec6b6ac6a76"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/focus-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/focus-desktop.png",
+      "sha256": "9907bf26897fab91dd7e5feee5f2cb1e1b16597fb746799feb8a919b4901b40d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/focus-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/focus-mobile.png",
+      "sha256": "9907bf26897fab91dd7e5feee5f2cb1e1b16597fb746799feb8a919b4901b40d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/independent-inspection-note.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/independent-inspection-note.json",
+      "sha256": "3772ac02f0691bacd6eca7838f9b3263fc3e7df72a8c3fdff8fe5aae51437d73"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/iteration-1-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/iteration-1-mobile.png",
+      "sha256": "9f8783a739aff1a0bc5e6fb3df33980a73a5884de35cf9ca363d82e5c001144b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/proof.md",
+      "sha256": "14474a7b827508366708ff32973141a55946273f87e0fcd848dfc5238f6517de"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-a.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-a.md",
+      "sha256": "cb73a92a009c35e228003738dfb2c42309664d557d87baf73346e2e2403073f2"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-adoption-manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-adoption-manifest.json",
+      "sha256": "afd81c5c9ff000aeef9f9bcd8289bbc7e85b313b12ea3edef563f777078f1c5c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-b.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-e/reference-b.md",
+      "sha256": "51d3bffcd063aff461df06fbddeeaa5181802eb21087f982da786236c010c5d9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/DESIGN.md",
+      "sha256": "96c7e941927fac14b5374ca0a42c3d42591008b8ff320c1ac26977fa90b22022"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/PRODUCT.md",
+      "sha256": "b72b864405ea48650582d9e192de668265d2f2553e0d13bd22bb23592ae026f5"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/after/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/after/index.html",
+      "sha256": "7ee04cc9406d202681b3a1a09ed13007fe55fcf6831c7e22298f83bcc5756b33"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/after/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/after/styles.css",
+      "sha256": "ae75d9fb168165e33a1f05d436a17163a911a3444ff4eec1fb0ec85205f510ee"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/before/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/before/index.html",
+      "sha256": "2e4b4fe6df7f95dbd0f5bc68324fb86176827e3b6e4496bfd944a9a51f5446dd"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/before/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/before/styles.css",
+      "sha256": "93910a631279e9656aed42835a3a18425d56750402bc604478f624f25e11eae8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/mapping-diff.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/mapping-diff.json",
+      "sha256": "10ea7d8eb3c5b997ffb353a57abe58e25e6067378d3c3d870f70cad234849d49"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/mapping-plan.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/mapping-plan.md",
+      "sha256": "d19b3764cb3e26b61b623cd1009ea8e2ae42b6800055cdf052dfb7dfbaeb83f7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/proof.md",
+      "sha256": "67163d16826f0411e7352f0d67d2a5f6f9486631731e74a26f360f3a3abd7cc7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/render-observation.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/render-observation.json",
+      "sha256": "5e9829547f514dfbf63d06670497d5cfe6d3284ffc05f17687f999446d7037d3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/desktop.png",
+      "sha256": "b783d684ca2da57330c4450256ef3de529440769c1968e2b28fb22cbc1eb769d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-f/renders/mobile.png",
+      "sha256": "37762aa0953f84df2d7c1419189c848d02cb096f4b8929a5fe5ec395dc1b7397"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/DESIGN.md",
+      "sha256": "9430d0c2d37e6953b223e5500a27cef7c6fe546beb21deb20e9633d636e4b864"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/PRODUCT.md",
+      "sha256": "46679484668fa7e36c79afa015118694ef779a0b3075c2ba4634eef4fc836e9b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-computed.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-computed.json",
+      "sha256": "e2dab11a9a35d6ab0f993e6486a65f85d031eb430f122cbc7a81231113d44fd3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-contrast.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-contrast.md",
+      "sha256": "90da9ec9d7361cd5354242d5611d515263cf7524b81f2996f15eba72ecba5ab0"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-desktop.png",
+      "sha256": "01368b15217fc22315817ee8b6845f0e0b213275c6537b4ae976c963e6031466"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-mobile.png",
+      "sha256": "d75a2260b5fb178a0309bc21ac8572edfe6cf41514720475dbca97995a0ce22b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-states-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-states-desktop.png",
+      "sha256": "8fcce2915054304083b443d79514513e70fdfeddd5cd5b0301b9884d72240a7a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-states-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after-states-mobile.png",
+      "sha256": "541c3e3507b9b7ab1e7fbba6c3fc44158bdc9d990039627725b19884563f804d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after/index.html",
+      "sha256": "23c3f8b3be87998d6a628f3c564d6a65cd2f1e4690ef9c8d0f1b930b4c131074"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/after/styles.css",
+      "sha256": "9936cbb16b61e2f2f1f84f0c586ef1479a86689e8c90df8abcfd371522c3e1a9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-computed.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-computed.json",
+      "sha256": "922df82d297bd2754598f09c5cb171c6a9645bf3e7611490edf65b68a520aa67"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-contrast.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-contrast.md",
+      "sha256": "94ac3416c09cbf4724373a29afe5defa6ce9a77153c9fe29506c12a8568d0890"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-desktop.png",
+      "sha256": "149aa57ae5dcf2e61b41a5678e1f7a29c5f9b43ee87626a8d2556e78a1adffe6"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-mobile.png",
+      "sha256": "1225d70f9e7fa67ed3a4adadbae7d99ca9b1a218f7c6d5fcc80cbbb82a1846ce"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-states-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-states-desktop.png",
+      "sha256": "24c3fe4a3b963f0f2b4b92f73ceb86791bc84405c7f19e2ba5da19c51756c7dc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-states-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before-states-mobile.png",
+      "sha256": "bc31ec5825ddc816d5d81a94a2f6682b283990d93a83a9ee4979e9ec806e57d2"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before/index.html",
+      "sha256": "23c3f8b3be87998d6a628f3c564d6a65cd2f1e4690ef9c8d0f1b930b4c131074"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/before/styles.css",
+      "sha256": "5710b6e327daabc70c3e6edea197a35e3f5df32c78e495604f5909a6e083f484"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/color-role-manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/color-role-manifest.json",
+      "sha256": "869bdf49546462b031c5ff4c67ad00f8574b790ac0d62a0fa9760b67ddb7fb3a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/controller-g-observations.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/controller-g-observations.md",
+      "sha256": "0148a5b3c86f2239330f9313ef1c443e1430362b8ee89aeebc58719c6973cdf8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/independent-g-summary.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/independent-g-summary.json",
+      "sha256": "0d35cff643e5cd051c9bdab50af6c0c699273cde54963d336b6f4ba152c804f0"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/native-intermediate-failure.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/native-intermediate-failure.md",
+      "sha256": "2b61f168faa6c5a8c5f8e6f056aa90cd19a77f0b3360ad4ddb2f9261c9a65fa7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/proof.md",
+      "sha256": "e2ba055e4e5aee02b52d6d0370488a11708b134144eeb0505c3df79c91bfa3c4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/role-map-before.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-g/role-map-before.md",
+      "sha256": "649e5b867444f05429ad87fe876dc788298075f9da5e71bb49c68b4b5af274f8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/AGENTS.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/AGENTS.md",
+      "sha256": "892cea5e1ee73668bbad0489368adc8a62adcb31dff7758e885deedbab6c2a1b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/DESIGN.md",
+      "sha256": "4ac4717cb5c1f2eab59c1db5f2c6fd72684ee2ab80cc581556ea69b58ca571fe"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/PRODUCT.md",
+      "sha256": "c3200908ae62c4993c6c6c0ce4d1c70cc1e8710a3dd20536c48f08c5771b7627"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after-desktop.png",
+      "sha256": "56789c49bcbb00b86ddc963b1865b2ba03ad74ae01a1195a37e06d55f6941f81"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after-mobile.png",
+      "sha256": "91f5a77689a25314afa8f190eda7e76c889fa9687b1877eb41a15ccc2a6593d3"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after/assets/specimen-s17.svg",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after/assets/specimen-s17.svg",
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after/index.html",
+      "sha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/after/styles.css",
+      "sha256": "9d71fe197a9094cdb2203d755b12a62dda7681f3c716e220f63be67bceabcafc"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/assets/specimen-s17.svg",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/assets/specimen-s17.svg",
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before-desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before-desktop.png",
+      "sha256": "2fc7efec9ae0240b4b6c9a4b2ec242e7049459b4cb4f8538cad41ddf97b95ac5"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before-mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before-mobile.png",
+      "sha256": "54619ace6e4c8d86edd911ba8321a1c605f65d482816d4d2222876ec5599b086"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before/assets/specimen-s17.svg",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before/assets/specimen-s17.svg",
+      "sha256": "7cd4487dd9198034c853e06b29755a34f32aa3fbca2dddf042adb694b7575a12"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before/index.html",
+      "sha256": "00bd324772a8cde52f613c97ce1dba71187dfc64f9bc250a64e3a4968d9c9120"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/before/styles.css",
+      "sha256": "d8694abf0dedc93a9fa03a79733bc6e7dda68ce1f75cd0b8fac52b8a3eae306f"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/controller-browser-observation.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/controller-browser-observation.json",
+      "sha256": "8f7fcb2234962a714967add6f2d487c166793cc912fdc0f859e2f0c6d9286ec1"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/controller-observations.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/controller-observations.md",
+      "sha256": "065dbabc7e1fe7320defff2207d135df283ebfb35e934b31bdd423001adc35c9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/manifest.json",
+      "sha256": "db3f4fdcdb69b81cf093d4dc4f2572b1cbaf366778d0500ea0eaa7b18211c94b"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/native-final.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/native-final.txt",
+      "sha256": "b7808a5a052d871c7f157cc2ac2493f25ac889112855f0a6f62b80c227a1158c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/native-proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/native-proof.md",
+      "sha256": "d676ddb5f64d59b48aa33981e6adfd9c3bb59c4f15011ba46b3b394d8fbd3b3e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/native-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/native-provenance.json",
+      "sha256": "7fe6acffc49e5bcd9d40b872c54fed3cd31b6863a1fdc3e2d48a0d7ced74d507"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/proof.md",
+      "sha256": "b0b7fa199c1c7687aee7bb4bde124d6a3eccb0b7b464aa5f4eb15c7ccd75e51d"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/role-map-before.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/role-map-before.md",
+      "sha256": "3144051fdcdc04784c475994edf5da4b10b66d1649043d61958aaed543db8ad9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/source-specimen.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/source-specimen.png",
+      "sha256": "3b5d4c6cfb8e99ed249f2e2ea63da360a454a6708d90c0e360fa2a199d6213ff"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/styles.diff",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/styles.diff",
+      "sha256": "cc1236f55e08c8de2f9c8029a2ef8ee8005349476750b2dd464a7dc4945c922a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/verification.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-h/verification.json",
+      "sha256": "acfbff9028d930e76930c24cf8bc0464a8cf9b02fc0c6b5811de3e54f91e1d14"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/AGENTS.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/AGENTS.md",
+      "sha256": "181729aba0cc455b0331818668250ecf0b04d7229d05dff785ff0321007c0887"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/DESIGN.md",
+      "sha256": "ebc7aa6adfe41c1bae9f3c625323f64f89c7f752fc9155c29de35fb19af88348"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/PRODUCT.md",
+      "sha256": "9f689d0886e3147189d05e8ecec105818f383796e31a0cfc2be32f285bc773d7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01-images.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01-images.json",
+      "sha256": "6057f2900e8c8420fa695d0cc5698cb921277cb3744860b4597e4e8e5f3cb57a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01-observation.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01-observation.md",
+      "sha256": "183c61b1e6354fcf9f99130fb9f0c167b584a4c6e51b06e6c93218c07854f3d8"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/desktop.png",
+      "sha256": "07e95c4a8904de6dfe97284a3bb674affb254baf7239c313581c76e8c467cb85"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/index.html",
+      "sha256": "0eb88f436d78b318f1a08bd4ed295760d1c9c0dd50acd7c97587c1b0554e8f88"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/mobile.png",
+      "sha256": "00a49a248d9906852e1efdbade2df18a3a02918f78a6b7cbdb459451339b6deb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-01/styles.css",
+      "sha256": "72013ce3e18ebffd9c0683fb0f8609e5989f95d61292f4348d9eb24502d2d04c"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop-prepared-button-focus.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop-prepared-button-focus.png",
+      "sha256": "2e1e2c595f96d1f52b2e331777d1f90dbab9e6eacfa07006e48c71bc02e29794"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop-prepared-link-focus.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop-prepared-link-focus.png",
+      "sha256": "d9f26ee1911f78521fd9895df7932e07d615c91e5e4ba982351fdcfd025eb02a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/desktop.png",
+      "sha256": "296662469d601b3d035aff1ebf9ea1dbdb3231261221dc20945e7f8891c8f1f4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/index.html",
+      "sha256": "0eb88f436d78b318f1a08bd4ed295760d1c9c0dd50acd7c97587c1b0554e8f88"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile-prepared-button-focus.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile-prepared-button-focus.png",
+      "sha256": "101b211a4c57e393b1b4020b49e0f5e73bb3d5cd620de73c4e7503ee8cb661ad"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile-prepared-link-focus.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile-prepared-link-focus.png",
+      "sha256": "a7b632f5ca6a61384d4fe9b153a8297e1ef8078475568562179b9fd88be1460a"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/mobile.png",
+      "sha256": "00a49a248d9906852e1efdbade2df18a3a02918f78a6b7cbdb459451339b6deb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/after-02/styles.css",
+      "sha256": "19ffd289b78a6eebc75570c12759baa425a48074f24647751a674c6f751de698"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before-images.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before-images.json",
+      "sha256": "5a4649fc6e7c3a4d8cd8989797fbff9a47d78b7a4ef743da14dc43a2fe8e73c7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before-manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before-manifest.json",
+      "sha256": "25fb1c3584a854894297653d1d0280198982d6fd7b8f382f0573bbea4a2380de"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/AGENTS.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/AGENTS.md",
+      "sha256": "181729aba0cc455b0331818668250ecf0b04d7229d05dff785ff0321007c0887"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/DESIGN.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/DESIGN.md",
+      "sha256": "ebc7aa6adfe41c1bae9f3c625323f64f89c7f752fc9155c29de35fb19af88348"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/PRODUCT.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/PRODUCT.md",
+      "sha256": "9f689d0886e3147189d05e8ecec105818f383796e31a0cfc2be32f285bc773d7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/desktop.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/desktop.png",
+      "sha256": "48be2392f8f2fc4817071ae7047cf45ad692a536e37840e01cfa4d8987b89749"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/index.html",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/index.html",
+      "sha256": "5074277e39d0e58ae3ee0df93b012e406d42d4a43cbdfda361a7cd12c5b9ec28"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/mobile.png",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/mobile.png",
+      "sha256": "4dcf9ce5937219f365ac1c84d1068c718df5a647ca69be98e99ed5233e618f75"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/styles.css",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/before/styles.css",
+      "sha256": "8cc85c5f22e7578096c5bf88d9a7255f14952b384b9b2ebb4066cde967f8e0e4"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/render-log.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/render-log.json",
+      "sha256": "1bcf61c6bc2a14eef2fa4233b86c682961ddbb3e953df2b99355cac249d1f730"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/structural-map.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/structural-map.md",
+      "sha256": "a24155865e7cbcd250c43b43e056d3ae504b8124ca3bb2a7609886c82cf5e9ba"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/verification.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/20260906T153930Z/verification.json",
+      "sha256": "bbdcd90e23776af8286585883854a0db420688b20f6c4ab9112171e9170bd472"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/artifacts/proof.md",
+      "sha256": "6aa7302d035021ea0d805e7d486e47f45e07351d4d66b97c3dedfd23d6c8d86e"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/change-verification.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/change-verification.json",
+      "sha256": "d2bfc41a48b5f01213fe04fe430856d314bfd76f23a3c96a8160e6e247ad6305"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-browser-observation.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-browser-observation.json",
+      "sha256": "0e9dbb3d4bda29d3140825db2d43695ac0abf54b70c69d00c44af349c0ff75c9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-chronology.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-chronology.json",
+      "sha256": "1aea03b26d87c4f12852e83b7c6644dcc9aaa4c238413608fcaf9f81935a8c89"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-observations.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/controller-observations.md",
+      "sha256": "9095c813687f0458717ae47676db464a475e0da04ac35b390a4b8564ed5c6eb9"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/manifest.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/manifest.json",
+      "sha256": "3f38f3fc287f37fd6d4f09725f1afcbe765d0da410fc68809fb6c9f43c152ec7"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/native-final.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/native-final.txt",
+      "sha256": "bafb307ff1339a1df5cd2255cb660bfdd56be260a4acb956f0198044a23dfcfb"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/native-provenance.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/native-provenance.json",
+      "sha256": "cb2137351912c833ef961f411db11c90901caa3979d44a5b43b1a6269e350214"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/proof.md",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/proof.md",
+      "sha256": "8d3de523aff5c79157b09cb8c314ffa60cefff5aa9c34504dfb8cf9b92cfef28"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/source.diff",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/source.diff",
+      "sha256": "43dbef1202adac595869bf289689a09a57921415926dbd675226db8ac0fcc988"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/tool-order-verification.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/smoke-i/tool-order-verification.json",
+      "sha256": "fe8606f5eb6ff9a0a08b7ae045e8eda8c9beb20a4360b0eac0d882028d664998"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/final-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/final-contract-tests.txt",
+      "sha256": "f0db0eca7a5525cadec6ca964755db8df6b2af1ccd7a68bd4746d5c2340dfba6"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/initial-contract-tests.txt",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/initial-contract-tests.txt",
+      "sha256": "f4987e50a24ff412dedba10cb9334cf851719acce61429123c8dd22866f32bb0"
+    },
+    {
+      "original": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
+      "path": "fixtures/contract-cases/evidence/astra-smoke-v1/typography-scale-v1/semantic-final.json",
+      "sha256": "3e9ab1095759e2ff912bd26a005d91dd667a11c2db34313dd0ff8310279839a3"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-case14-regression-v1/decisions.json",
+      "path": "fixtures/contract-cases/history/astra-case14-regression-v1/decisions.json",
+      "sha256": "02b51d785c6e8ccbadc40d3949f0fbf38002581c6424265b5c3f4925b15f8b80"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-case14-regression-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-case14-regression-v1/observed.json",
+      "sha256": "06da2f9d958c40592191f2147fcf04c4a661171f409586c9ed8989e2bca5e3ba"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-case14-regression-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-case14-regression-v1/review-evidence.json",
+      "sha256": "44db3402b1f3c3738b2629e9eee6a28ca2da0a7a6125de296421c9613aca9488"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-color-contrast-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-color-contrast-v1/observed.json",
+      "sha256": "b4a556078ce9a8e07e10feb93fae38631cc2ed947d46ae0c1fe71a52ebf9fd67"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-color-contrast-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-color-contrast-v1/review-evidence.json",
+      "sha256": "5926a86ab956910ba2b9c9901f3f5e9a3a1542edbfcf40f909f89ef953c689e1"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-composition-anti-template-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-composition-anti-template-v1/observed.json",
+      "sha256": "4dfd3b18763a8c667b1ca79a1f3e45ce935f8ff143d6a225696cff85967f9a42"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-composition-anti-template-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-composition-anti-template-v1/review-evidence.json",
+      "sha256": "a5a9ed1a9f2f3314ed1a66a1fb55eed466d57b5cf55d99b3812f7c0a340ed9bd"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-craft-core-v1/observed.json",
+      "sha256": "04a1b6f87688ba43cdbcfc2ebb6db19a0d890ca3a6d063dc70358a2cfb8a21fe"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-craft-core-v1/review-evidence.json",
+      "sha256": "67027ad974a89b466172ff98be328bb9b165eb2c066931474ac461e1114e0a47"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/observed.json",
+      "sha256": "e15312699ce3baaed88d5a524b34dcd3ca3a2f98a54b9609c160fbbb6f6b5ea6"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-imagery-focal-v1/review-evidence.json",
+      "sha256": "c37493f7054024b2ac45799434fc6d4abb003a913b6364cc39d01564c9e44277"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-mvp-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-mvp-v1/observed.json",
+      "sha256": "fba833d4d54a3f91c26a23c8ed24e6e8f3a15d9ee0800fb2ac240329dc9598c7"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-mvp-v1/review-evidence.json",
+      "sha256": "ca9106a58ad4f76fbe8deb2f05c9219b8a4b94f8f8384177cc9343d26ba0dcfa"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/observed.json",
+      "sha256": "4eac1a9d3eaa180342cd927b7cf5a63f7aaca923cfec6774e6986c6ead02a519"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-static-rerun-v1/review-evidence.json",
+      "sha256": "1ccdb7e7e8b69cb3f45b54f4896f04d865215d16bc07dbf4730e5b837bf6e11b"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-reference-intelligence-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-reference-intelligence-v1/review-evidence.json",
+      "sha256": "ff63c551b669563e784ac81bc26e71299f3f40cc983d89b0e4a5c5cca21fac02"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-typography-scale-v1/decisions.json",
+      "path": "fixtures/contract-cases/history/astra-typography-scale-v1/decisions.json",
+      "sha256": "a777f9970e69f9a6768bea0aa1379c85f0c948b49aa7e0824dd9e54111288672"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-typography-scale-v1/observed.json",
+      "path": "fixtures/contract-cases/history/astra-typography-scale-v1/observed.json",
+      "sha256": "5ebcf9320404d25f76909b94f1bf4297b6dc2b906d748f5e9ae057b71f7514a4"
+    },
+    {
+      "original": "fixtures/contract-cases/history/astra-typography-scale-v1/review-evidence.json",
+      "path": "fixtures/contract-cases/history/astra-typography-scale-v1/review-evidence.json",
+      "sha256": "7c6a676458647b9a45e550af46a900bb1080aebcd0a463b90f24782d85a3ff65"
+    },
+    {
+      "original": "fixtures/contract-cases/observed.json",
+      "path": "fixtures/contract-cases/observed.json",
+      "sha256": "dd9a8486093126a75aa249f1a2c35acce37d735d7ee7cdd2db80526282740cfa"
+    },
+    {
+      "original": "fixtures/contract-cases/review-evidence.json",
+      "path": "fixtures/contract-cases/review-evidence.json",
+      "sha256": "f7b2f9a1e96fe73fe83cfd1129b70b2e6216a02f77b7433d06269bd640e72257"
+    },
+    {
+      "original": "tests/joedesign-color-contrast-core.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-color-contrast-core.tests.mjs",
+      "sha256": "a8f8655ceea671ef936216d582ed7f5ff44154e35ae6eb8dcee0542a676ced4f"
+    },
+    {
+      "original": "tests/joedesign-composition-anti-template-core.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-composition-anti-template-core.tests.mjs",
+      "sha256": "95068baf0d50aa6988330f10773ccb725271632ac61958766351286bd11d9932"
+    },
+    {
+      "original": "tests/joedesign-contract.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-contract.tests.mjs",
+      "sha256": "dfbf31656f89947e3aa69b1f6e6e621620b1ade5fdb2f482f2e06fd59014f0eb"
+    },
+    {
+      "original": "tests/joedesign-craft-core.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-craft-core.tests.mjs",
+      "sha256": "df3327fcc4a7275b349514d469d57a8006beabeebac5ee39513951b49c6edace"
+    },
+    {
+      "original": "tests/joedesign-imagery-focal-core.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-imagery-focal-core.tests.mjs",
+      "sha256": "a13cea630ffdfa11914cbeeb2e6eeaa78637bb9b9a33648ad98876ee53176e46"
+    },
+    {
+      "original": "tests/joedesign-implementation-bridge.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-implementation-bridge.tests.mjs",
+      "sha256": "67f8bcc540dc9f15bb377d9831ff1e5962dcc34432e1aae4d7f9fad18ecb1474"
+    },
+    {
+      "original": "tests/joedesign-reference-intelligence-core.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-reference-intelligence-core.tests.mjs",
+      "sha256": "4058cdc9254641ca2525b9b4f62005158a41e66573e628924fde99eb6dc7cabc"
+    },
+    {
+      "original": "tests/joedesign-typography-scale-core.tests.mjs",
+      "path": "fixtures/contract-cases/history/v01-test-sources/joedesign-typography-scale-core.tests.mjs",
+      "sha256": "0744c4ceaf13bb704bcfbfeb42d3bc503c01ca89b661f5babbf6077d25da7e7e"
+    }
+  ],
+  "package": [
+    {
+      "path": "skills/joedesign/SKILL.md",
+      "sha256": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652",
+      "bytes": 23573
+    },
+    {
+      "path": "skills/joedesign/agents/openai.yaml",
+      "sha256": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1",
+      "bytes": 207
+    },
+    {
+      "path": "skills/joedesign/templates/DESIGN.md",
+      "sha256": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237",
+      "bytes": 3743
+    }
+  ],
+  "frozen": [
+    {
+      "path": "fixtures/contract-cases/visual-translation-v02/inputs.json",
+      "sha256": "9282d97e01e77aa095e5837d6fdf99b792defe6b682233ad069cce7039f70a27"
+    },
+    {
+      "path": "fixtures/contract-cases/visual-translation-v02/expectations.json",
+      "sha256": "57c1e68ab2a51b62588a4e3236cc72de9d0b75bb1430b0252af114314908affb"
+    }
+  ]
+}

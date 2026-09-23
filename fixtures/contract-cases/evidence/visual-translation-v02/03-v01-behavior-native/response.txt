@@ -1,0 +1,40 @@
+{
+  "responses": [
+    {
+      "id": "B01",
+      "response": "I would hand off a narrowly scoped change: connect the existing detail component’s title to the already mapped native title role, using its exact approved values from root DESIGN.md rev 5. Preserve the caption, actions, layout and assets. The implementer can consult visual/collection-r5.fig and assets/harbor-original.webp directly. No alternatives, new tokens, reference dossier or design revision are needed. The change record only needs the authority pointer and affected component. Verify the title in the approved desktop and mobile resting targets; visual conformance remains UNVERIFIED here because no render is available."
+    },
+    {
+      "id": "B02",
+      "response": "I would hand off one reversible draft: place the heading/control group and cover grid on the same left content axis. For this proof, use a 24px heading-to-grid gap and an 8px cover-to-caption gap, mapping to equivalent native roles where available. These are proposed project values, not measurements recovered from the reference. Retain the existing typography, all catalogue content and sorting actions. The intended observable relationship is shared alignment with stronger separation between heading and grid than within each cover-caption pair. This remains an unapproved local draft; no broad exploration or permanent rule is needed. Its appearance would require browser observation."
+    },
+    {
+      "id": "B03",
+      "response": "I would preserve the approved text-led direction. From the first reference, borrow the association between an image and its short title; from the second, borrow the restrained reading-column relationship where compatible with the approved layout. I would not import image dominance or cramped prose. The implementer would retain approved type and spacing roles, use an authorized image as supporting content, and prepare a bounded reading-section proof. The handoff would identify the two static-note sources, their known relationships, unknown measurements and behavior, what is being borrowed, why, and its limited scope. Font identity, exact gaps, responsive behavior and interaction details remain unknown source facts. Any needed project choices must be proposed and observed. Making imagery dominant would reopen direction and require a separate material draft."
+    },
+    {
+      "id": "B04",
+      "response": "My handoff would name APPROVED rev 2, visual/guide-r2.fig, assets/wing.svg, and the desktop welcome-panel scope. Use the original SVG in a frame that preserves the doorway; begin with contain sizing rather than a destructive crop. Use a shared layout grid to position the title against the illustration’s lower ledge, deriving the actual alignment from the source file. Preserve the next reading section’s quieter hierarchy using approved roles. Before rendering, specify three checks: doorway visible, title aligned to the ledge, and the following section visually secondary. Record the implementation revision and the source’s desktop dimensions for comparison. The source notes define intended relationships but do not establish implementation fidelity. Desktop conformance is UNVERIFIED here; mobile is outside this approval."
+    },
+    {
+      "id": "B05",
+      "response": "I would change only the mobile illustration treatment under APPROVED rev 4: adjust its crop, focal position or fitting so the required label remains visible at 390x844. Preserve the title and action area, retry, details, the separate pending state and all six records. The viewport height does not require fitting the whole page into 844px; records can remain reachable through scrolling. I would inspect the current affected state, make the bounded correction, then observe the same state and dimensions for label visibility and interference with adjacent content or controls. The supplied evidence identifies a crop failure. I would report the exact adjustment and observed result when available; the corrected result is currently UNVERIFIED."
+    },
+    {
+      "id": "B06",
+      "response": "I would proceed with the independent approved caption-alignment fix and its target verification. Cancellation availability and behavior would remain unresolved. The bounded question goes to the current Product authority, or the user if they hold that authority: ‘Can a pending booking be cancelled? If so, who may cancel it, under what conditions, and what state and recovery behavior follow?’ I would not invent availability, permissions or transitions through the visual design. Once answered, I would express that decision in the control and relevant states. This requires neither a new agent/framework nor a whole-project restart."
+    },
+    {
+      "id": "B07",
+      "response": "On the supplied inspection record: Technical PASS; title-baseline claim A PASS; required image-label claim B FAIL; mobile target C UNVERIFIED. The covered visual result is FAIL because a required claim fails, and mobile coverage is incomplete. Broader Product conformance and exact-output user acceptance are not established. I would treat ‘finish’ as authorization to complete the remaining work: correct the clipping, observe the corrected target, and complete mobile inspection when browser access returns. Independent work can proceed meanwhile, with mobile explicitly unresolved. I would not declare completion, promote design authority, or run unrelated checks to compensate for missing visual evidence."
+    },
+    {
+      "id": "B08",
+      "response": "I would preserve the approved 20px peer-group spacing, 6px caption binding and 15px body role wherever their approval applies, using the existing native tokens. JOEDESIGN defaults do not override them. I would replace DOM-depth spacing with a semantic Visual Block Tree and assign gaps by relationship. For the appendix, I would propose existing roles for genuinely equivalent relationships, explicitly as an unapproved extension; genuinely new relationships would receive deliberate draft roles, using the restricted default profile where appropriate. Any durable extension would remain a separate draft amendment in the same root DESIGN.md until approved. Mobile would recompose hierarchy, measure, wrapping and spacing instead of proportionally shrinking everything. Browser proofs at recorded desktop/mobile dimensions must establish repeated-role consistency, readable text and preserved content. No visual PASS is available here."
+    },
+    {
+      "id": "B09",
+      "response": "APPROVED rev 7 remains authoritative. I would place the denser proposal in a clearly separate DRAFT Rev 8 within the same root DESIGN.md, retaining rev 7 and its original source pointer. No second permanent authority file is needed. Authorized work includes bounded exploration of 2–3 meaningfully different denser compositions, preserving identical Product content and behavior, followed by small target-medium proofs with observables defined beforehand. I would show the candidates and obtain the user’s response before dependent expansion. Token-mapping and build success establish only their respective checks; visual conformance requires actual observation, and replacing rev 7 requires explicit user approval of the proven material direction. The draft is not accepted yet."
+    }
+  ]
+}
