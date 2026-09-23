@@ -1,0 +1,49 @@
+{
+  "metric": "UTF-8 bytes, Unicode code points, whitespace-delimited words; not model token counts",
+  "before": {
+    "SKILL.md": {
+      "bytes": 23573,
+      "characters": 23483,
+      "whitespaceDelimitedWords": 3243,
+      "sha256": "d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652"
+    },
+    "templates/DESIGN.md": {
+      "bytes": 3743,
+      "characters": 3735,
+      "whitespaceDelimitedWords": 511,
+      "sha256": "4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237"
+    },
+    "agents/openai.yaml": {
+      "bytes": 207,
+      "characters": 207,
+      "whitespaceDelimitedWords": 22,
+      "sha256": "c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1"
+    }
+  },
+  "after": {
+    "SKILL.md": {
+      "bytes": 10930,
+      "characters": 10894,
+      "whitespaceDelimitedWords": 1447,
+      "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+    },
+    "templates/DESIGN.md": {
+      "bytes": 1583,
+      "characters": 1575,
+      "whitespaceDelimitedWords": 213,
+      "sha256": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+    },
+    "agents/openai.yaml": {
+      "bytes": 243,
+      "characters": 243,
+      "whitespaceDelimitedWords": 26,
+      "sha256": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd"
+    }
+  },
+  "load": {
+    "before": "Discovery metadata; full SKILL.md on invocation; DESIGN template structural seed when needed; external pinned shared authority contract conditional at new cross-system handoff/conflict/re-entry.",
+    "after": "Discovery metadata; full SKILL.md on invocation. DESIGN template only on creating/materially updating durable decisions. No shipped references, no mandatory sidecar or external instruction load. Existing project Product/DESIGN/source/assets still read as task requires.",
+    "functionalCheck": "Both batches intentionally receive full SKILL plus template; this is not a measurement of automatic/default prompt loading."
+  },
+  "interpretation": "No arbitrary size gate. Reduced authored volume is not evidence of causal visual-quality improvement; TrackE instruction-density causality remains INCONCLUSIVE."
+}

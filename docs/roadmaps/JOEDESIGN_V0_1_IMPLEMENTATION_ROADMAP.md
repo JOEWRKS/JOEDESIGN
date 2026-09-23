@@ -1,5 +1,14 @@
 # JOEDESIGN v0.1 Implementation Roadmap
 
+> **v0.2 branch resume point (2026-09-24):** The body below is preserved v0.1
+> phase history, not current execution authority. Current work is the
+> [Visual Translation candidate](../specs/joedesign-v0.2-visual-translation.md);
+> see [its evidence packet](../../fixtures/contract-cases/evidence/visual-translation-v02/README.md).
+> Baseline is `2a815ee49d8f7ca6a7c1e483df315eda1fa709d7`; v0.1-test stays unchanged.
+> TrackE is CLOSED, specialist value NOT TESTED, TEST B platform-blocked. Do not
+> resume comparison or TrackC BIO. Next decision is Program Review of v0.2;
+> real-project validation remains PENDING until new approved material/assets arrive.
+
 **Status:** `v0.1-test` — frozen working MVP for evaluation
 **Purpose:** 대화 기억이 없어져도 현재 완료 상태, 다음 gate, 금지선을 즉시 복구한다.  
 **Operating model:** `docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md`

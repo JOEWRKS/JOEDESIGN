@@ -1,0 +1,52 @@
+{
+  "stage": "09-v02-fresh",
+  "startedUtc": "2026-09-23T15:19:28.9093330Z",
+  "endedUtc": "2026-09-23T15:21:00.9636643Z",
+  "exitCode": 0,
+  "executable": "C:/Users/tjdwo/AppData/Local/OpenAI/Codex/bin/d375f7df50d3b421/codex.exe",
+  "executableSha256": "97d4d67419d0ac2f71342f9a5e850f9468aa622618de8ea823223edb9a91926a",
+  "cliVersion": "codex-cli 0.155.0-alpha.16",
+  "arguments": [
+    "exec",
+    "--ignore-user-config",
+    "--ignore-rules",
+    "--skip-git-repo-check",
+    "--json",
+    "--model",
+    "gpt-6-astra",
+    "--sandbox",
+    "read-only",
+    "-c",
+    "approval_policy=\"never\"",
+    "-c",
+    "model_reasoning_effort=\"xhigh\"",
+    "-c",
+    "project_doc_max_bytes=0",
+    "--cd",
+    "D:/JOEWRKS/joedesign-v02-visual-translation-20260924",
+    "-o",
+    "D:\\JOEWRKS\\joedesign-v02-visual-translation-worktree\\fixtures\\contract-cases\\evidence\\visual-translation-v02\\09-v02-fresh/response.txt",
+    "-"
+  ],
+  "inputSha256": "35098a2ac3ee8d7acceae49535c2911413f14770dfe7557e00c7dc4b15b10134",
+  "inputsSha256": "9282d97e01e77aa095e5837d6fdf99b792defe6b682233ad069cce7039f70a27",
+  "expectationsSha256": "57c1e68ab2a51b62588a4e3236cc72de9d0b75bb1430b0252af114314908affb",
+  "package": [
+    {
+      "path": "agents/openai.yaml",
+      "sha256": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd",
+      "bytes": 243
+    },
+    {
+      "path": "SKILL.md",
+      "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf",
+      "bytes": 10930
+    },
+    {
+      "path": "templates/DESIGN.md",
+      "sha256": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3",
+      "bytes": 1583
+    }
+  ],
+  "contextBoundary": "Fresh exec in external scratch, no tools requested, ignore user config/rules, project doc bytes 0. Not OS isolation; native base instructions and automatic metadata are not claimed excluded. No expectations/spec/PM report supplied in authored candidate input."
+}

@@ -1,4 +1,4 @@
 interface:
   display_name: "JOEDESIGN"
-  short_description: "Project visual direction, proof, and precise refinement"
-  default_prompt: "Use $joedesign to design or refine this project's visual experience."
+  short_description: "Approved visual targets to project implementation"
+  default_prompt: "Use $joedesign to translate this project's visual sources into a precise implementation or bounded refinement."

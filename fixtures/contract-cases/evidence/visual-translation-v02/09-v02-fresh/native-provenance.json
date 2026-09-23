@@ -1,0 +1,82 @@
+{
+  "nativeFileName": "rollout-2026-09-24T00-19-29-01a0ced9-b462-7e73-9c10-0c24aecb25df.jsonl",
+  "nativeRolloutSha256": "245c38f4a3481b1d1f45c9ab44202c58fd68d3fdf5012689655db22721cc41ad",
+  "nativeRolloutBytes": 125123,
+  "threadId": "01a0ced9-b462-7e73-9c10-0c24aecb25df",
+  "cliVersion": "0.155.0-alpha.16",
+  "modelProvider": "openai",
+  "model": "gpt-6-astra",
+  "effort": "xhigh",
+  "turnId": "01a0ced9-b50f-7861-994f-b9d49901b7b0",
+  "sessionTimestamp": "2026-09-23T15:19:29.329Z",
+  "turnTimestamp": "2026-09-23T15:19:31.307Z",
+  "input": {
+    "fileSha256": "35098a2ac3ee8d7acceae49535c2911413f14770dfe7557e00c7dc4b15b10134",
+    "nativeContentSha256": "eabd94d8798f1a50a444363f912e0d95a61f9282c31431a0c07f1003a311138a",
+    "normalizedMatch": true,
+    "normalization": "CRLF to LF, trim outer whitespace only (stdin transport trailing newline)"
+  },
+  "response": {
+    "fileSha256": "6146120b44895eb7972008b9487b83a4bec45e6892c9f027f04b547342098867",
+    "nativeContentSha256": "6146120b44895eb7972008b9487b83a4bec45e6892c9f027f04b547342098867",
+    "normalizedMatch": true
+  },
+  "nativeResponseItemTypes": [
+    "message",
+    "message",
+    "message",
+    "message",
+    "message",
+    "reasoning",
+    "message",
+    "reasoning",
+    "reasoning",
+    "message"
+  ],
+  "toolCalls": 0,
+  "messageInventory": [
+    {
+      "role": "developer",
+      "sha256": "ec1a1c8d5449a50976c84bb85ec0976c14748738588d6fde985794e4ce7241b4",
+      "characters": 7429,
+      "isAuthoredCandidateInput": false
+    },
+    {
+      "role": "developer",
+      "sha256": "47091490938505958b0c22ff42db6fd79b272a2af6923166f4c2cc53c4fe0df4",
+      "characters": 2429,
+      "isAuthoredCandidateInput": false
+    },
+    {
+      "role": "developer",
+      "sha256": "6ded806e3cdbb35599ecaf8742574bc5274908472b1729090010c404c2151e8e",
+      "characters": 271,
+      "isAuthoredCandidateInput": false
+    },
+    {
+      "role": "user",
+      "sha256": "50378cdac55c65f9b605ff45f3177e928b7afb7d1d9753d78b9ee402ce109057",
+      "characters": 1051,
+      "isAuthoredCandidateInput": false
+    },
+    {
+      "role": "user",
+      "sha256": "eabd94d8798f1a50a444363f912e0d95a61f9282c31431a0c07f1003a311138a",
+      "characters": 18158,
+      "isAuthoredCandidateInput": true
+    },
+    {
+      "role": "assistant",
+      "sha256": "f070f24ec82e715ff3e312304a25d1ceb36ed459e1eb7481f73c05cc2d139931",
+      "characters": 62,
+      "isAuthoredCandidateInput": false
+    },
+    {
+      "role": "assistant",
+      "sha256": "6146120b44895eb7972008b9487b83a4bec45e6892c9f027f04b547342098867",
+      "characters": 7123,
+      "isAuthoredCandidateInput": false
+    }
+  ],
+  "limits": "Compact extraction of local native rollout, not full provider request trace. Ambient messages are inventoried by hash, not claimed absent. Full Codex home/ambient instructions and encrypted reasoning are not shipped. No tool calls in functional batch."
+}

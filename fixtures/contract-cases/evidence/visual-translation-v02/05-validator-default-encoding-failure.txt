@@ -1,0 +1,10 @@
+Traceback (most recent call last):
+  File "C:\Users\tjdwo\.codex\skills\.system\skill-creator\scripts\quick_validate.py", line 125, in <module>
+    valid, message = validate_skill(sys.argv[1])
+                     ~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\tjdwo\.codex\skills\.system\skill-creator\scripts\quick_validate.py", line 23, in validate_skill
+    content = skill_md.read_text()
+  File "C:\Python314\Lib\pathlib\__init__.py", line 788, in read_text
+    return f.read()
+           ~~~~~~^^
+UnicodeDecodeError: 'cp949' codec can't decode byte 0xe2 in position 2688: illegal multibyte sequence

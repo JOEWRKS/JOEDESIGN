@@ -1,0 +1,22 @@
+✔ package — exactly one discoverable public skill and no extra runtime surface (3.1559ms)
+✔ package — a project-local copy resolves its shipped relative links without repo docs (15.6494ms)
+✔ history — original failures, semantic responses, Smokes, doctrines and test source bytes survive (232.3122ms)
+✔ inputs — pre-execution scenarios and reviewer expectations were not tuned after output (0.7746ms)
+✔ fresh evidence — response, input, actual execution and entire current package are linked (5.2609ms)
+✔ recorded decision B01 — fixed qualitative obligations satisfied (6.624ms)
+✔ recorded decision B02 — fixed qualitative obligations satisfied (4.9751ms)
+✔ recorded decision B03 — fixed qualitative obligations satisfied (5.1093ms)
+✔ recorded decision B04 — fixed qualitative obligations satisfied (6.1156ms)
+✔ recorded decision B05 — fixed qualitative obligations satisfied (5.8028ms)
+✔ recorded decision B06 — fixed qualitative obligations satisfied (5.3677ms)
+✔ recorded decision B07 — fixed qualitative obligations satisfied (4.1731ms)
+✔ recorded decision B08 — fixed qualitative obligations satisfied (4.7205ms)
+✔ recorded decision B09 — fixed qualitative obligations satisfied (4.6611ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 417.2051

@@ -1,0 +1,216 @@
+{
+  "status": "JOEDESIGN_V0_2_VISUAL_TRANSLATION_READY_FOR_PROGRAM_REVIEW",
+  "statusMeaning": "Implementation candidate and scoped functional review readiness only; final delivery requires commit/push and remote readback in final report.",
+  "baseline": "2a815ee49d8f7ca6a7c1e483df315eda1fa709d7",
+  "branch": "codex/joedesign-v0.2-visual-translation",
+  "expectationFreezeCommit": "5a10384",
+  "package": {
+    "agents/openai.yaml": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd",
+    "SKILL.md": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf",
+    "templates/DESIGN.md": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+  },
+  "static": {
+    "command": "node --test tests/joedesign-v02.tests.mjs",
+    "exitCode": 0,
+    "pass": 14,
+    "fail": 0,
+    "source": "fixtures/contract-cases/evidence/visual-translation-v02/11-final-suite.txt",
+    "interpretation": "4 package/history/input tests + 1 provenance test + 9 saved qualitative decisions; not live model or visual checks."
+  },
+  "packageValidator": {
+    "command": "python -X utf8 C:/Users/tjdwo/.codex/skills/.system/skill-creator/scripts/quick_validate.py skills/joedesign",
+    "exitCode": 0,
+    "source": "fixtures/contract-cases/evidence/visual-translation-v02/12-final-package-validator.txt"
+  },
+  "freshBehavior": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a0ced9-b462-7e73-9c10-0c24aecb25df",
+    "pass": 9,
+    "fail": 0,
+    "attemptsWithV02Package": 1,
+    "review": "fixtures/contract-cases/evidence/visual-translation-v02/fresh-review.json",
+    "scope": "Nine text-only functional cases in one fresh context; no rendered validation."
+  },
+  "knownFailures": {
+    "unresolved": [],
+    "preserved": [
+      "Old v0.1 failure history unchanged",
+      "02-v01-behavior: unsupported PATH CLI model, exit 1, no model answer",
+      "04-v02-red: readiness evidence absent, 4 pass / 10 fail, exit 1",
+      "05-validator-default-encoding-failure: Windows cp949, exit 1; -X utf8 passes",
+      "Pre-fresh review smallest-proof omission and scenario-specific example corrected; evidence-package assertion strengthened"
+    ],
+    "warnings": "PowerShell snapshot / native flush warning retained. Native input/context/final output were found and verified."
+  },
+  "historicalEvidence": "All prior fixtures and frozen doctrines unchanged; original test sources moved byte-exact; no old semantic/Smoke evidence rebound.",
+  "boundaries": {
+    "realProjectVisualValidation": "PENDING",
+    "trackE": "CLOSED",
+    "specialistValue": "NOT TESTED",
+    "userAcceptance": "NOT_GRANTED",
+    "productionReadiness": "NOT_CLAIMED",
+    "personalInstall": "UNCHANGED_BY_THIS_TASK",
+    "mainAndV01Test": "UNCHANGED_BY_THIS_TASK",
+    "newRuntimeDependencies": 0,
+    "publicEntrypoints": 1
+  },
+  "unverified": [
+    "Real-project approved source/assets implementation and actual render conformance",
+    "Generalization and design quality / comparative specialist value",
+    "Full provider request exclusion and OS-level isolation; discovery/default-prompt model behavior"
+  ],
+  "nextPMDecision": "Review candidate adoption; separately authorize operational validation with new approved source material and real assets.",
+  "artifacts": [
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/01-v01-baseline.tap",
+      "sha256": "a1651586318a4b7c43ee92e299211020f0c5b31e7561d5dc3fda353c3ace366b",
+      "bytes": 6453
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/02-v01-behavior/events.jsonl",
+      "sha256": "3e6a2805135543711d015471e3b5cfbbb7a90c3a58093ca637d05fca22bef14a",
+      "bytes": 1082
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/02-v01-behavior/execution.json",
+      "sha256": "ea01ab2b092c0cbf82cf9a7d4df6561c26ae186d36f53926fa64fef7d7eaa9b6",
+      "bytes": 2002
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/02-v01-behavior/input.txt",
+      "sha256": "dae7f8211743318bb5aaaeafd588ed60b292d8823b273d8efba6e77cfc970a57",
+      "bytes": 33003
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/02-v01-behavior/stderr.txt",
+      "sha256": "a2bdf3f670e43cdd2bc48645f3428029fdd31b5c475597c270302eb05e64908a",
+      "bytes": 1045
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/03-v01-behavior-native/events.jsonl",
+      "sha256": "2ec1de30acf05dc4c25c7ba4bbc91c343b432e631cff97c97c26dfa6e10a3810",
+      "bytes": 7972
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/03-v01-behavior-native/execution.json",
+      "sha256": "d0bd8cff602bf0df7ba08cd1e9b69cca8b61d87549cf4240a04a3753b4bc9ab5",
+      "bytes": 2024
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/03-v01-behavior-native/input.txt",
+      "sha256": "dae7f8211743318bb5aaaeafd588ed60b292d8823b273d8efba6e77cfc970a57",
+      "bytes": 33003
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/03-v01-behavior-native/native-provenance.json",
+      "sha256": "24481418d3602979e8861da3333bb41aafe5b65069a102ce3a33c7f8a9e5cb36",
+      "bytes": 2964
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/03-v01-behavior-native/response.txt",
+      "sha256": "2deb75160b9cb077af637c84fd2dcf3678b8582a7b0fe11a8b9f5a3a75d4dff8",
+      "bytes": 7336
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/03-v01-behavior-native/stderr.txt",
+      "sha256": "50abf484579f0136f7df1f462d94c8296a9e65ed6926cddbfae22adbc5be3359",
+      "bytes": 327
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/04-v02-red.txt",
+      "sha256": "981c2e40ada3c30046c11ae808c0e669744df3d7d7c9684c17cc0e535fe3c8dd",
+      "bytes": 14914
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/05-validator-default-encoding-failure.txt",
+      "sha256": "06e2abf8763ba831ecac44307af6e2ac023596469d036781e55091153f01198e",
+      "bytes": 613
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/06-validator-utf8.txt",
+      "sha256": "6cf9e7f0d34ccd36dbd28f270cd28dd04277b2e1516bd4333ce7bb501d7b18d4",
+      "bytes": 17
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/07-structural-green.txt",
+      "sha256": "bf60b932cec20d0e75c69c4d5d78a08a0d4da342d5863a349a2da552b2b9e49c",
+      "bytes": 540
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/08-post-review-structural.txt",
+      "sha256": "a3c8307287b81fae1563de07869f4c436d38958e96269e71bdadc98ad8c7ba32",
+      "bytes": 542
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/09-v02-fresh/events.jsonl",
+      "sha256": "7bcbab649aad8fe1f79f678665662b3207a4087cd688b894458e5fe8c4cb3bf0",
+      "bytes": 7757
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/09-v02-fresh/execution.json",
+      "sha256": "c6a78a48300e88d9010c8071a13555846127226c5f85404a6db9cd4c11a66324",
+      "bytes": 2004
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/09-v02-fresh/input.txt",
+      "sha256": "35098a2ac3ee8d7acceae49535c2911413f14770dfe7557e00c7dc4b15b10134",
+      "bytes": 18200
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/09-v02-fresh/native-provenance.json",
+      "sha256": "b0447ca2fc79a0d666bd8d183cb2d4ca2a55a9c3a5b34673e0e2a807d507cb1a",
+      "bytes": 2913
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/09-v02-fresh/response.txt",
+      "sha256": "6146120b44895eb7972008b9487b83a4bec45e6892c9f027f04b547342098867",
+      "bytes": 7149
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/09-v02-fresh/stderr.txt",
+      "sha256": "9ef7c51d4d804b732482bb35f3e72793a846cf66ee7d341bf783812a56da72b1",
+      "bytes": 327
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/10-v02-full-suite.txt",
+      "sha256": "9d45adb6f3bc91f4b1fc587e4833678e0c539b18f3e26ed8bbbcf97dc99ab9b2",
+      "bytes": 1388
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/11-final-suite.txt",
+      "sha256": "843482cd06a64a53d384122c58f9b30cf87d593942785b1a15dbcf910c8baa56",
+      "bytes": 1389
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/12-final-package-validator.txt",
+      "sha256": "6cf9e7f0d34ccd36dbd28f270cd28dd04277b2e1516bd4333ce7bb501d7b18d4",
+      "bytes": 17
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/README.md",
+      "sha256": "0353611d733aa8cc6633cc06fcab92abfaefa2c8eda16d42e700118c47b5ce41",
+      "bytes": 8232
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/baseline-and-freeze.json",
+      "sha256": "5f7564530b6185686905d29a3c7020bc1061e7c7acfd0d866ca54b0e37f600d0",
+      "bytes": 111074
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/fresh-review.json",
+      "sha256": "ed129e3c4eecc5afbb19d91f0ee02e1fbeba40bb33c7a248f80de9216d733ebf",
+      "bytes": 13342
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/instruction-size.json",
+      "sha256": "62b15a1fd2eeddcab8a404983efe39e52c7deab113a22cc86d242e8bad567ff7",
+      "bytes": 2192
+    },
+    {
+      "path": "fixtures/contract-cases/evidence/visual-translation-v02/review-notes.md",
+      "sha256": "6eb97aa025425c3d95dca68c70fafad5f0c3c8717ed7f86bf94c4904d65c75e5",
+      "bytes": 2156
+    }
+  ]
+}

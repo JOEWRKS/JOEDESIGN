@@ -1,160 +1,176 @@
 ---
 name: joedesign
-description: "Use for UI/visual design, new visual direction, redesign, art direction, typography/layout/composition, responsive visual translation, motion visual expression, visual refinement, and rendered visual conformance. Do not use for pure backend work, nonvisual refactors, layout-unaffected copy/value changes, or Product Definition itself."
+description: "Use when implementing an approved visual target, translating reference relationships into UI composition, refining typography/layout/imagery, or checking actual visual conformance. Also use for requested unapproved direction exploration. Not for Product Definition, pure backend work, nonvisual refactors or layout-unaffected copy changes."
 ---
 
 # JOEDESIGN
 
-Turn project context into a distinctive, proven visual direction, then preserve it through precise refinement. One entrypoint covers direction, proof, refinement, and actual-output review; no separate commands or mandatory stages.
-
-## Understand the actual project
-
-Before material design, inspect enough of the current request, Product authority and any handoff, root `DESIGN.md`, accepted/rejected visual evidence, relevant implementation, supplied references/assets, and named surface/state/viewport to make the next decision. Read facts available in the project instead of asking the user to repeat them. Existing appearance is not automatically accepted authority; rejected output is negative evidence, not a design to preserve.
-
-Product Definition owns feature existence, roles/permissions, policy, IA/routes/flows, data meaning, semantic states/transitions, failure/recovery, and functional acceptance. JOEDESIGN owns their visual expression, not their meaning. Never remove a required action, merge meaningful states, or change behavior for a cleaner layout. Motion may change timing/easing/visual feedback, not required semantic states. Responsive visual recomposition may not remove required content or change product navigation meaning.
-
-For material product ambiguity, identify the affected decision and dependency. In a JOEFLOW-managed project, return that bounded scope through JOEFLOW to Product Definition; otherwise raise it to the current Product authority/user. Do not invent the answer or restart the entire process. Continue independent work that cannot preempt the resolution; resume the affected scope when resolved. JOEFLOW owns lifecycle progression, not visual truth, and is not a required runtime dependency.
-
-For a new cross-system connection/handoff, authority conflict, re-entry, or contract revision change, use the pinned [shared authority contract](https://github.com/JOEWRKS/joewrks-work-harness/blob/5e7497bd104527d5e6dbfc36011f0f5ee3668ff5/docs/contracts/JOEWRKS_CROSS_SYSTEM_AUTHORITY_V1.md). Do not reload it for ordinary bounded work when the applicable boundary is already known. Do not inherit the host repository's runtime or other workflows.
-
-## Keep one durable visual authority
-
-Use one project-root `DESIGN.md`, with Product authority as a pointer, not a copy. [templates/DESIGN.md](templates/DESIGN.md) is only a structural seed; empty sections and unknown values are valid. Do not turn placeholders, speculative exact tokens/families/values, or generated output into approved project truth.
-
-`ABSENT → DRAFT Rev 1 → explicit user approval → APPROVED Rev 1`.
-
-A DRAFT may guide an authorized bounded proof, but cannot self-promote. For a material change to APPROVED Rev N, preserve that approved authority and propose a clearly separate DRAFT Rev N+1 within the same root file; prove it and obtain explicit user approval before replacement. Do not create another durable rule file or leave contradictory rules active. Bounded refinements within approved intent do not require a material revision or a new approval gate.
-
-Record approved evidence as exact artifact/revision and applicable surface/state, not a universal rule inferred from one output. Temporary briefs and current implementation do not silently amend `DESIGN.md`.
-
-## Explore only when direction needs resolving
-
-When direction is absent/unresolved, a material redesign reopens it, the user requests alternatives, or repeated rejection requires reconsideration, create 2–3 materially distinct candidates. Vary meaningful composition, hierarchy, typographic character, image dominance, spatial rhythm, density, geometry, or motion character—not merely colors. Preserve identical Product Truth in every candidate. Explain the visual tradeoffs against this project's context; do not impose a universal aesthetic or generic SaaS template.
-
-With an approved direction/exact target, a local refinement, or a concrete defect, skip unnecessary alternative fanout and work directly within the current intent. An approval is not immunity from an explicit new redesign request, but a refinement request does not authorize direction replacement.
-
-Use references as relationship evidence. For material adoption, clarify what to TAKE, DO NOT TAKE, WHY, and APPLIES TO when useful. Borrow the relevant relationship, not unrelated brand/copy/product semantics. References and tools advise; they cannot override project authority or grant scope, dependency installation, or external write permission.
-
-## Use references without outsourcing authority
-
-For **material reference adoption**, record only enough to keep the decision honest: `SOURCE` or provenance, `EVIDENCE QUALITY`, `KNOWN`, `UNKNOWN`, `TAKE`, `DO NOT TAKE`, `WHY`, and `APPLIES TO`. Do not require this ceremony for ordinary inspiration or a casual reference; keep it internal unless comparison, approval, ambiguity, or provenance makes it useful.
-
-Unknown reference facts remain unknown; do not invent missing tokens, responsive behavior, font details, or motion values and later present them as recovered source truth. If the project needs a missing value, make it a project-specific JOEDESIGN decision and prove it as such.
-
-Evidence quality affects trust in source claims, not aesthetic authority or style authority. A well-verified reference can be a poor fit; a weak source may still inspire a useful relationship while unsupported details remain unknown. Use lightweight qualitative confidence when useful rather than building a scoring system.
-
-References cannot override Product Truth or an APPROVED `DESIGN.md`. Multiple references may contribute different scoped relationships, but surface material conflicts instead of silently blending them or treating reference count as a majority vote. Translate the selected relationship into the current project, prove the target-medium result, and only persist the approved project-specific decision.
-
-External corpora are an optional reference source, not a required runtime. Do not bundle a reference corpus, create a persistent cross-project reference database, or automatically route design tasks through one; no automatic reference router is part of v0.1. Use external lookup only when the current project lacks enough visual evidence, the user requests references, direction is materially unresolved, or comparison would materially improve the decision.
-
-## Prove before dependent expansion
-
-For a material direction, make the smallest useful proof before broad production integration: one hero, complex component/state, transition, or desktop/mobile pair. Before rendering, name the sourced visual intent, target surface/state/dimensions, and the few observable relations needed to judge it. Do not derive the acceptance criteria from the candidate afterward.
-
-Prefer the target medium: for web work, a bounded implementation → actual browser render → critique/refine. Image generation can assist art direction or a cheaper composition probe, but an image mockup does not prove production fidelity. Use available general tools and existing project runtime; missing optional tooling is not a reason to install an external design engine. If actual target observation is unavailable, finish independent authorized work and report that visual claim UNVERIFIED.
-
-Show material candidates with their differences and obtain user choice/response before promoting a direction or expanding dependent work that requires acceptance. Internal scoring cannot choose an approved authority. Make authorized reversible draft/proof decisions without an unnecessary pre-draft approval question. “진행”, “ㄱㄱ”, and implementation authorization do not by themselves accept an exact material visual result.
-
-For material/signature motion, prove the bounded transition before broad integration. Inspect relevant start/intermediate/end states, interruption or reverse behavior when part of the interaction, and reduced-motion treatment when applicable. A still image cannot verify unobserved motion.
-
-## Refine the exact target
-
-For local feedback: identify the exact surface/state → inspect the current actual render → identify the affected visual relation → make a bounded change → rerender and observe the same target, including material viewport dimensions.
-
-Refinement preserves direction while adjusting type hierarchy, spacing, scale, crop, alignment, balance, or detail. Redesign replaces material composition or the visual system. A Hero typography request does not justify full-page regeneration, broad layout redesign, or unrelated component changes. If a direction change seems necessary, name that boundary rather than silently widening the edit.
-
-After the same direction is materially rejected twice, diagnose direction against the exact failed evidence before a third local polish. Consider composition, visual metaphor, image ownership, reference interpretation, hierarchy, and product understanding. Stop dependent expansion and re-enter bounded exploration/proof; do not merely keep tuning CSS values.
-
-Translate responsive intent, not desktop coordinates. Recompose mobile hierarchy, crop/focal point, density, negative space, information order, control reachability, and height/aspect relationships as needed while preserving required information and behavior. Inspect the named mobile target; scaling desktop down is not proof of a mobile solution. Preserve visual legibility, contrast, focus visibility, and applicable motion restraint.
-
-## Build hierarchy before decoration
-
-Hierarchy before decoration. For every material surface, determine the Product-priority focal point, visual entry point, intended second/third destinations, and overall visual flow before polishing typography, surfaces, effects, or local spacing. Treat the page as a semantic visual composition rather than a pile of components.
-
-Before assigning material layout spacing, form a semantic Visual Block Tree such as `SURFACE → SECTION → MAJOR GROUP → SUBGROUP → ITEM GROUP → ITEM/MICRO`. This tree is based on meaning and visual relationships, not DOM depth, component nesting, or container count. Use proximity, alignment, whitespace, scale, type, contrast, and imagery to make that hierarchy visible before reaching for cards, borders, or background panels.
-
-Spacing belongs to the relationship and boundary between visual blocks, not to an isolated element or its nominal depth. Equivalent relationships should reuse the same spacing role across the surface. Do not say “this is level 3, therefore margin 16”; identify whether the boundary is between sections, major groups, subgroups, item groups, or tightly bound content.
-
-Keep structural hierarchy and binding hierarchy distinct. Structural sibling separation uses the JOE default spatial profile `space-section 160px / space-group-1 48px / space-group-2 24px / space-group-3 16px`; strongly bound parent-child or local content normally uses `space-tight 8px / space-micro 4px`. Parent-child binding is not automatically the same as sibling separation, and multiple structural levels must not collapse to one gap merely for numeric uniformity.
-
-Use a deliberately restricted 4px base, not every possible multiple of four. The default canonical spacing set is `4, 8, 16, 24, 48, 160`. Its purpose is to reduce arbitrary one-off choices and create repeated spatial rhythm. New project tokens require a recurring semantic role; a single attractive screenshot is not enough. If project density differs, change the spatial profile systemically rather than mutating unrelated local gaps.
-
-For responsive work, preserve hierarchy roles and visual flow, not desktop coordinates. Recompose the structure and use an appropriate responsive spatial profile while keeping the relative importance of section, group, subgroup, item, tight, and micro boundaries coherent. Optical correction may refine glyph/icon/stroke alignment, but it must not silently create a new layout-spacing role or dissolve the spatial system.
-
-When a material proof is challenged, be able to identify the major Visual Block Tree, intended visual flow, spacing roles at important boundaries, whether same relationships use the same role, and any deliberate exception. Observe the actual render before declaring the hierarchy successful.
-
-## Build composition from structure
-
-Structure before pattern. Establish Product priority and task/narrative flow before choosing a layout recipe. Require semantic containment before card or panel use; a container must express a real boundary, not manufacture one.
-
-Common AI/SaaS motifs such as a hero + right image, three equal feature cards, or decorative pills are challenge triggers, not blanket bans. Repetition expresses semantic equivalence; variation expresses a meaningful change in role or priority. Intentional asymmetry is allowed when hierarchy remains clear. Prefer project specificity over novelty; Product Truth, usability, and accessibility remain boundaries.
-
-References contribute relationships, not complete page grammar. Mobile recomposes semantic priority rather than shrinking desktop coordinates. Material composition claims require actual target renders.
-
-## Assign color by role and preserve contrast meaning
-
-Role before color value. Identify the recurring semantic color roles a surface needs, then assign or reuse project values; prefer `semantic job → reusable color role → project value` over an attractive local color value. Use contrast hierarchy to reinforce Product priority, and give each attention-dominant accent clear accent ownership. Do not make every element equally loud.
-
-Neutral and surface color must express an actual layer, containment, state, or focal relationship; design does not require a panel for every group. State color may express a Product state but may not invent or change it: preserve Product semantics, and do not make color the only cue for required meaning when text, iconography, shape, position, underline, border, or another cue is needed.
-
-For web work where applicable, treat WCAG 2.2 AA as a minimum accessibility gate, not an aesthetic preset: normal text requires at least `4.5:1`, while large-scale text and meaningful UI component/state visuals require at least `3:1` against the relevant adjacent color. Stricter applicable project or platform requirements take precedence.
-
-Evaluate the actual foreground/background pair across base and nested surfaces, imagery or gradients, interaction states, and light/dark themes. Token existence is not proof of contrast. Responsive recomposition and light/dark translation preserve semantic color roles and relative priority while values may change. A material visual PASS requires observation of the actual render for the named surface, state, and dimensions.
-
-## Make typography and scale deliberate
-
-Role before value. Identify the recurring semantic type roles the surface actually needs, then assign values. Prefer `semantic job → reusable type role → canonical token/style` over a local font-size or weight guess. Do not infer visual roles mechanically from `h1`/`h2`/`h3`, DOM depth, component names, or layer names.
-
-Font size alone is not hierarchy. Coordinate size with weight, line height, placement, whitespace, tone or text color, measure, tracking, and approved family/style so adjacent roles are unmistakable. If roles differ only by 1–2px with no other meaningful contrast, strengthen the relationship through multiple axes or collapse the role instead of inflating the type system.
-
-Use a restrained type scale that is not the spatial 4px grid. The JOE default starting size set is `12, 14, 16, 20, 24, 32, 40, 48, 64`; use only the subset the project needs. Typography may depart from multiples of four because the actual typeface, x-height, language, rendering environment, and role matter more than spatial divisibility. New sizes require a recurring semantic job, not a one-off attractive screenshot.
-
-Use the fewest families and the fewest weights that clearly support the approved visual world. A secondary display/mono family needs a clear role. Do not synthesize unsupported font weights, use bold everywhere to manufacture hierarchy, or rely on ultra-light body text that weakens legibility. A family change that materially changes voice is a direction decision, not a local polish tweak.
-
-Treat reading measure, line height, and actual typeface as one reading system. `16px` is the ordinary web body anchor when project/platform density does not justify another role; body line height around `1.45–1.6` and heading/display around `1.05–1.3` are starting ranges only. For long-form English, `60–80 characters` per line is a useful reference. Do not mechanically apply that Latin count to Korean/CJK, code, tables, dashboards, or narrow mobile UI; inspect actual language, line breaks, paragraph texture, and reading rhythm.
-
-Scale expresses Product priority beyond text. Coordinate the relative dominance of primary text, artwork, actions, metrics, repeated objects, and supporting metadata. Repeated semantic roles should reuse repeated size roles. Do not make every section equally loud or let a decorative object dominate a more important product decision without an intentional art-direction reason.
-
-Responsive typography preserves semantic role mapping and relative dominance; do not proportionally shrink desktop typography. Adjust measure, line breaks, display scale, and role values coherently, keep body text comfortably readable, and avoid independent breakpoint values or fluid formulas for every element. `clamp()` is optional and must represent a stable repeated role across the intended range.
-
-For material type claims, inspect the actual render. Record the major type roles, entry-point role, equivalent-role consistency, adjacent-role contrast, body/reading measure, material exceptions, and actual desktop/mobile observations. Token existence or valid CSS alone does not prove typographic hierarchy.
-
-## Direct imagery and focal ownership
-
-Role before asset treatment. Classify imagery as **FOCAL**, **SUPPORT**, or **DECORATIVE**; informative imagery preserves Product meaning regardless of its visual role.
-
-Choose an intentional focal owner or intentional sequence rather than forcing a universal single focal. Make text-image dominance deliberate, not accidental co-dominance: quiet text may anchor strong imagery, text may lead, or a balanced relationship may be intentional.
-
-Identify the important subject or focal region and preserve important or required image content before a blind center-crop. Let scale and negative space express image priority; do not enforce a fixed ratio or percentage.
-
-References contribute imagery relationships: a reference relationship ≠ a copied asset. Unknown source facts remain unknown; do not invent source facts or copy assets without authorization.
-
-Responsive translation may recrop, reposition, or recompose while preserving image role and required content. A material crop or focal claim requires inspection of the actual target render.
-
-## Bridge approved design into implementation
-
-The **Implementation Bridge** is derivative: it translates exact approved Project `DESIGN.md` truth into implementation roles but does not create or amend visual authority. Treat exact approved values separately from visual intent/rationale; do not manufacture machine-readable tokens just to make a schema complete.
-
-Map an approved semantic role to an existing equivalent project-native token, component role, or theme value first. Create a new project-native role only when the approved design actually requires one. Do not rename stable existing tokens or replace a healthy project token architecture merely to match an external naming convention.
-
-Exact approved values may be mapped; unknown values remain unresolved. Do not invent a missing token from prose, copy a reference value, or promote current code to authority. If a missing value becomes a material visual decision, make and prove that JOEDESIGN decision before treating it as durable truth.
-
-Google `design.md` structured tokens are optional interoperability, not a dependency. When compatible YAML frontmatter is already present or machine-readable interchange materially helps, consume or produce compatible groups such as colors, typography, spacing, rounded, and components without requiring Google tooling. Preserve custom/unknown JOEDESIGN sections and rationale including Visual Flow, Approved Visual Evidence, and Open Visual Decisions; do not force responsive intent into a structured shape that loses meaning.
-
-For a material token mapping change, compare the semantic role mapping and surface the relevant before/after value, source authority, scope, and reason. Lint/diff/export are bounded interoperability concepts in v0.1, not mandatory ceremony or a required CLI. Small local refinements may map directly into existing roles.
-
-`Token Mapping PASS ≠ Technical PASS ≠ Visual Conformance PASS ≠ User Acceptance`. A successful token mapping, lint, diff, export, build, or code change still requires actual rendered observation for a material visual PASS.
-
-## Review actual output; keep verdicts separate
-
-For each material claim, use `expected observable → actual observed fact → PASS / FAIL / UNVERIFIED`. Bind the source, artifact/version, surface/state, and dimensions when material. Describe a concrete visible relation, not just “looks right.” Inspect the exact produced render; code, DOM existence, build/test success, or a screenshot merely existing on disk cannot prove appearance.
-
-PASS requires applicable observed evidence; contradiction is FAIL; unavailable or unobserved evidence is UNVERIFIED. An applicable required FAIL makes the covered visual result FAIL; otherwise any required UNVERIFIED keeps that result UNVERIFIED. State the exact verified boundary without burying a missing required claim under narrower successes. Do not rerun unrelated technical checks to compensate for missing visual observation or abandon completed independent work.
-
-`Technical PASS ≠ Product Conformance PASS ≠ Visual Conformance PASS ≠ User Acceptance`.
-
-Visual PASS never grants user acceptance. Preserve explicit user approval separately when promoting `DESIGN.md` or a material direction. For JOEFLOW-managed work, hand off the verdict, exact evidence, authority revision, covered target, unresolved boundaries, and allowed variation needed for its gate; JOEFLOW decides progression. Keep ordinary user-facing results concise: show the relevant output, explain important choices or limits, and name the next user decision only if one is actually required.
-
-## v0.1 capability boundary
-
-Use general browser, image-generation, repository, and existing project runtime capabilities as the task needs. No competitor design intelligence, vendor payload, tool router, required external design engine, lifecycle orchestrator, or separate public visual-check skill is included. Do not install or route through Impeccable, UI UX Pro Max, Figma Make methodology, Apple Design, Hallmark, Refero orchestration, oh-my-design, Watermelon, Componentry, or Cult UI as JOEDESIGN behavior.
+Preserve product meaning while translating visual sources into project-specific
+composition and implementation decisions. Primary work is approved-target
+interpretation, implementation support and original-versus-result gap diagnosis;
+new-direction exploration is conditional. Do not promise reliable original design
+quality from an input alone. One entrypoint; no mandatory sequence of ceremonies.
+
+## Establish the next decision
+
+Inspect the request, current Product authority, root DESIGN.md, applicable
+approval/rejection evidence, original visual material, real assets and relevant
+implementation. Read available facts instead of asking for them again. Identify
+the surface, state, version and viewport involved, not the whole project by default.
+
+- **Approved visual target:** confirm the actual approval's scope/version/surface/
+  state. Give the implementer direct access to that original and its real assets.
+  With sufficient decisions, implement only the needed delta. Skip unnecessary
+  alternatives, style reinvention, retranscription and repeated approval questions.
+- **Ordinary reference:** a user-provided image is not approval by itself. Use only
+  relevant relationships as advisory evidence. Distinguish observed source facts
+  from project proposals; a new material direction remains unapproved. Explore
+  only what the request or unresolved decision needs; no fixed candidate count.
+- **Conflict or missing input:** name the affected relationship and authority.
+  Do not silently blend conflicting references or override approved material with
+  a translation, default taste or existing code. Resolve only the blocking scope;
+  continue independent authorized work. Missing source access cannot be replaced
+  by a claim that a prose description is the source.
+
+Product authority owns functions, information, permissions, navigation, data,
+states/transitions, recovery and behavior. Never remove required content/actions
+or merge states for visual simplicity. Raise unresolved product meaning to the
+current Product authority/user (through the existing lifecycle owner if present).
+Do not require a framework, extra agent or whole-project restart.
+
+## Translate only the relationships that matter
+
+Use this short connection where a decision is needed:
+
+**source observation → preserve/change for this project → concrete implementation
+decision → observable difference in the result.**
+
+Possible concerns, not a form to fill every time:
+
+- Imagery: subject occupancy, text-relative scale, baseline, important regions,
+  crop and negative space. Establish focal/support/decorative role and intentional
+  text-image dominance. Preserve informative content and asset authorization.
+- Typography: family/available weight, measure, wrapping, line height and contrast
+  between roles. A still cannot establish an unavailable font or exact token.
+- Space and rhythm: which groups a gap separates, repeated roles, local density,
+  exceptions and the transition between adjacent image/reading sections.
+- Composition: Product-priority entry point and next destinations, relative
+  positions/axes, semantic containment, meaningful repetition/variation. Cards,
+  hero-plus-image, three-card groups and pills need structural reasons, not a
+  blanket ban. Specificity matters more than novelty.
+- Responsive/state translation: what changes and what remains invariant. Recompose
+  hierarchy, reading measure, crop, order and control reachability rather than
+  shrinking desktop coordinates. Preserve all required information and behavior.
+
+Label values as **measured**, **estimated**, **proposed** or **approved** when the
+distinction matters; include the source or scope. Unknown facts remain unknown.
+A useful proposed gap is not a recovered source measurement. Static images do
+not establish unobserved hover, scroll or transitions. A screenshot's dimensions
+define an observation viewport, not a page-height cap or permission to cut content.
+
+## Apply craft without overriding the target
+
+Use only principles relevant to the work. Establish hierarchy and visual flow
+before decoration. Group by meaning rather than DOM depth. Equivalent semantic
+relationships reuse spacing roles; structural sibling separation is different
+from tightly bound content.
+
+For unresolved areas, the restricted 4px-based spatial starting profile is
+section 160 / major group 48 / subgroup 24 / item group 16 / tight 8 / micro 4px.
+Use the subset needed, not every multiple of four. Recurring roles justify tokens;
+optical adjustments do not silently create a new layout-spacing system. Approved
+project values and healthy native roles take precedence, even when different.
+Do not reshape an approved design to fit these defaults.
+
+Typography is **not** the spatial 4px grid. Choose few semantic roles, families and
+supported weights; coordinate size, weight, line height, measure and placement.
+Starting sizes 12, 14, 16, 20, 24, 32, 40, 48, 64px are optional for unresolved
+roles, not approved tokens. Inspect the actual language, typeface, line breaks and
+mobile reading texture; do not manufacture hierarchy through tiny size differences
+or apply Latin measure mechanically to CJK, code or tables.
+
+Assign color by semantic role and attention priority; use surfaces for real layers
+and containment. Preserve state meaning with needed non-color cues. For applicable
+web work, retain WCAG 2.2 AA minimum contrast (normal text 4.5:1; large text and
+meaningful UI/state visuals 3:1), with stricter project requirements taking priority.
+Check relevant foreground/background pairs, image/gradient regions, focus and
+interaction/theme states; a token alone proves neither contrast nor appearance.
+If accessibility conflicts with an approved target, expose the affected conflict
+instead of silently changing the target or declaring it compliant.
+
+## Connect the source to implementation
+
+Reference interpretation and the Implementation Bridge are one derivative flow:
+original approved material + scoped project decisions → implementation → comparison.
+Pass original source/version/surface/state and real asset pointers directly, along
+with only necessary mapping decisions and unknowns. Translation supplements the
+source; it never replaces or quietly amends it.
+
+Reuse an equivalent project-native token/component/theme role first. Map exact
+approved values separately from intent/rationale. Do not invent missing tokens,
+rename stable roles to fit an external convention or replace healthy architecture.
+For a material mapping change, show the affected role/value, authority and reason.
+Existing structured tokens may help, but do not require a schema, parser, export
+step or tool. Preserve unknown/custom DESIGN sections and responsive intent.
+
+Responsibilities need not be separate agents: Product owns meaning; JOEDESIGN
+interprets relationships and diagnoses gaps; the implementer owns code, responsive/
+state implementation **and observing its actual result**. The controller handles
+environment, isolation, execution records, verification management and handoff,
+not a new visual interpretation imposed on the implementer. Do not burden the
+candidate with experiment administration or require JOEFLOW.
+
+## Keep one compact project authority
+
+Use one root DESIGN.md. The [template](templates/DESIGN.md) is a seed only when
+creating or materially updating durable decisions, not a required reread/form for
+each edit. Keep source/asset pointers, approval scope, necessary project decisions
+and unknowns; do not duplicate Product meaning or settled source specifications.
+Existing sufficient DESIGN content needs only a real decision delta, if any.
+
+An absent file starts DRAFT. Only explicit user approval promotes material direction
+to APPROVED. Preserve APPROVED Rev N while a separately labeled DRAFT Rev N+1 is
+proposed within the same file; one active approved rule set, no mandatory sidecar.
+Authorized reversible draft/proof work does not need advance approval of its result.
+Local refinements within approved intent need no material amendment. Material
+replacement requires explicit approval after proof. Implementation permission,
+“진행”, and “ㄱㄱ” are not acceptance of an exact output.
+
+## Observe and correct the exact result
+
+For a new/material direction, make the smallest useful target-medium proof before
+broad dependent integration. Obtain the needed user response before expansion that
+requires acceptance; already-approved targets and local refinements need no new
+direction gate.
+
+Before a material implementation/proof, identify the few source-based relationships
+to check and the applicable target dimensions/state. Use the existing target runtime.
+The implementer observes its actual output against the original; build success,
+DOM/token presence and an unopened screenshot do not establish visual conformance.
+
+For local feedback: inspect the exact current target → diagnose the affected
+relationship → bounded correction → rerender and observe that target and protected
+regions. Keep unrelated approved areas intact. Do not turn crop/type feedback into
+full-page regeneration. If repeated correction is not resolving the evidenced gap,
+diagnose the direction/source conflict before more dependent expansion; do not
+automatically fan out candidates or polish indefinitely. For material motion, check
+relevant start/intermediate/end, interruption/reverse and reduced-motion behavior;
+still-image evidence covers only its visible state.
+
+Use **expected relationship → actual observed fact → PASS / FAIL / UNVERIFIED**
+for material claims, binding artifact/version and surface/state/viewport where
+relevant. Contradiction is FAIL; missing observation is UNVERIFIED. A required FAIL
+keeps the covered visual result FAIL; otherwise any required UNVERIFIED keeps it
+UNVERIFIED. Continue completed/independent authorized work without fabricating the
+missing check or rerunning unrelated checks to compensate.
+
+Token mapping, technical checks, Product conformance, visual conformance and user
+acceptance are separate. Visual PASS never grants acceptance. Keep the user-facing
+handoff proportional: relevant output/delta, observed boundary and a next decision
+only when needed, not an exhaustive craft or operational report.
+
+## Capability boundary
+
+Use available general tools and project runtime as needed. No competitor methodology,
+vendor runtime, new public skill, asset/reference database, automatic router/scorer,
+image-generation dependency or lifecycle orchestrator is required or bundled.

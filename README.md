@@ -2,67 +2,63 @@
 
 > JOEDESIGN으로 디자인해.
 
-JOEDESIGN turns a project's approved product meaning and current context into visual direction, bounded proof, precise refinement, responsive translation, and rendered visual review. One skill covers all of these; you do not need separate direction, proof, or review commands.
+JOEDESIGN preserves product meaning while translating approved visual material and
+selected reference relationships into project-specific composition and implementation
+decisions, then diagnoses differences between the original and actual output.
 
-It owns visual expression and the project-root `DESIGN.md`: composition, typography, color, imagery, visual controls, motion expression, and responsive recomposition. Product Definition still owns what the product does. JOEFLOW, when present, owns lifecycle progression and routes bounded product ambiguities; it is not a runtime prerequisite. Visual PASS is not user acceptance.
+## v0.2 Visual Translation — implementation candidate
 
-## Test version — v0.1-test
+Primary: implement/refine an approved visual target using its original material and
+real assets. Conditional: propose an unapproved direction when a reference-based
+decision is unresolved. Sufficient inputs need only the implementation delta, not
+compulsory alternatives or a rewritten design brief. A supplied image is not approval.
 
-A working MVP frozen for practical evaluation, not a production release or a claim of design superiority.
+This is a candidate for Program Review, not a production release, user acceptance,
+design-quality guarantee or evidence of specialist superiority.
 
-| Item | Value |
-| --- | --- |
-| Version | `v0.1-test` |
-| Date | `2026-09-07` |
-| Test branch | `codex/joedesign-v0.1-test` |
-| Frozen core / evidence source | `7f890c60ed3837efc1693aeeba33759f12c85383` |
-| Source tree | `0945d2b7dafc671bd7afdd3b5b5daaf2678f8b6c` |
-| Program decision | Pure Core Freeze approved; JOEDESIGN arm may be handed off for comparison |
-| Package change in this snapshot | None; documentation only |
+- Branch: codex/joedesign-v0.2-visual-translation.
+- Pinned v0.1 baseline: 2a815ee49d8f7ca6a7c1e483df315eda1fa709d7;
+  preserved branch codex/joedesign-v0.1-test.
+- [Change spec / contract mapping](docs/specs/joedesign-v0.2-visual-translation.md).
+- [Current role map](docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md).
+- [Evidence, hashes, instruction sizes and limits](fixtures/contract-cases/evidence/visual-translation-v02/README.md).
 
-Pin the exact test commit used for an evaluation; do not follow a moving branch during the run. The immutable source commit above supplies the same three-file skill package. This version label is a branch/document designation, not a Git tag or a published GitHub Release.
+## Project-local use
 
-| File under `skills/joedesign/` | SHA-256 |
-| --- | --- |
-| `SKILL.md` | `d73d1ce3067c6913abe5bd6d562bc87491f20e1b61c64a60cd9f522371715652` |
-| `templates/DESIGN.md` | `4ac8586fad0a8f964d4ace550f2706af49df0403f3618a5214dd17b98ee1c237` |
-| `agents/openai.yaml` | `c28a9f5e01c3ab39a5518c35d6cd6c41629f15edbadf696948339e58262e15c1` |
+Copy only skills/joedesign into your project's .agents/skills/joedesign, preserving
+the three files and relative paths. No installer or global behavior overlay is needed.
+This repository's spec, AGENTS, tests, operational reports and diagnostic history are
+not candidate runtime input. This task does not perform a personal install.
 
-### Test ownership
+In a fresh project session invoke $joedesign or ask “JOEDESIGN으로 디자인해.”
+Point to Product authority, original visual material/assets and the exact request.
+Identify what is actually approved, including version/surface/state, versus ordinary
+references. The skill reads existing decisions and keeps a single root DESIGN.md;
+the compact template is needed only for creating/materially updating those decisions.
 
-| Owner | Responsibility |
-| --- | --- |
-| JOEDESIGN lead / TrackB | Preserve the frozen core; assess demonstrated defects after evaluation |
-| TrackC implementation agent | BIO production implementation; remains paused until its own resumption is authorized |
-| Existing TrackC lead chat | BIO brief, product priorities, evaluation criteria and adoption decisions |
-| New TrackE agent | Comparison execution, independent run contexts, evidence collection and anonymization; does not select a winner itself |
+Source observation → project preserve/change → implementation decision → observable
+result difference. This connection supplements the originals; a controller must not
+replace them with a taste paragraph. Native project tokens/components remain useful.
+The implementer still observes its actual render. Build/token success is not visual
+conformance, and visual conformance is not user acceptance.
 
-Publishing this snapshot does not start the comparison or resume BIO production. See the [roadmap](docs/roadmaps/JOEDESIGN_V0_1_IMPLEMENTATION_ROADMAP.md) for the current phase and corrected track roles. Historical review packets retain their original pending statuses and role wording; they are not current execution instructions.
+## Verification and history
 
-## Install and use
+Current command: node --test tests/joedesign-v02.tests.mjs
 
-Copy only `skills/joedesign` from this repository to your project's `.agents/skills/joedesign`. Keep its three files and relative paths intact. This is a project-local copy, not an installer or a global behavior overlay. Do not copy the repository's `AGENTS.md`, tests, or specification into your project's runtime skill folder.
+The suite checks the three-file package, a temporary project-local copy, historical
+bytes, frozen inputs and linkage/review of fresh functional responses. It does not
+call a model and does not turn textual decisions into rendered proof. The evidence
+packet records actual executions separately, including failures and limitations.
 
-Start a fresh Codex session in that project. Ask **“JOEDESIGN으로 디자인해.”**, describe the target, or explicitly invoke `$joedesign`. Provide or point to current Product authority and any accepted visual evidence. JOEDESIGN will inspect what is already available.
+The pre-change original suite was run: 72 PASS / 0 FAIL. Its exact test sources now
+live under fixtures/contract-cases/history/v01-test-sources/; their relative imports
+are intentionally unmodified. To rerun that historical suite, use a separate checkout
+of the pinned v0.1 commit and the original command in the evidence packet. Do not run
+those archived tests against v0.2 or relabel v0.1 semantic/Smoke evidence as v0.2.
 
-With unresolved direction, expect distinct candidates and a small proof before expansion. With approved direction, ask for a specific refinement; unnecessary alternatives and page-wide regeneration are not required. A root `DESIGN.md` starts DRAFT, becomes APPROVED only through explicit user approval, and preserves approved authority while material revisions are proposed separately.
-
-## Boundaries
-
-Backend-only work, nonvisual refactors, layout-unaffected copy/value changes, and Product Definition itself do not call for JOEDESIGN. The exact [shared contract and revision](docs/specs/joedesign-v0.1.md#implementation-handoff-constraints-2026-09-06) define cross-system ownership without importing either system's internal workflow.
-
-v0.1 intentionally includes no Impeccable, UI UX Pro Max, Figma Make methodology, Apple Design, Hallmark, Refero orchestration, oh-my-design, Watermelon, Componentry, or Cult UI runtime. There is no vendor router, JOENESS Core/distribution machinery, mandatory seven-stage ceremony, Ponytail, Superpowers product workflow, separate visual-check skill, or installer framework. General browser/image/repository capabilities and an existing project runtime remain usable.
-
-## Verification
-
-The inherited freeze record contains **72 PASS / 0 FAIL** for the eight-file suite. This is an aggregate of wording/package assertions and saved semantic-response checks, not 72 practical design jobs. Documentation publication is not a new model replay, browser observation or test run.
-
-Run the full suite with Node.js:
-
-```sh
-node --test tests/joedesign-contract.tests.mjs tests/joedesign-craft-core.tests.mjs tests/joedesign-typography-scale-core.tests.mjs tests/joedesign-reference-intelligence-core.tests.mjs tests/joedesign-color-contrast-core.tests.mjs tests/joedesign-imagery-focal-core.tests.mjs tests/joedesign-composition-anti-template-core.tests.mjs tests/joedesign-implementation-bridge.tests.mjs
-```
-
-`tests/joedesign-contract.tests.mjs` alone remains the 16-test Process/Authority subset. Its fourteen saved-response checks do not call a model. An optional `JOEDESIGN_INSTALLED_SKILL` environment variable verifies a project-local installed copy against the shipped three-file package.
-
-[Freeze review evidence](fixtures/contract-cases/evidence/astra-smoke-v1/pure-core-freeze-v1/README.md) records original commands, outputs, package identities and version-scoped Smoke evidence. The recovered Bridge run verifies native identity and input/output linkage; independent exclusion of hints in encrypted messages and OS isolation remain UNVERIFIED. No new observation is implied by copying historical evidence. Real-project quality, generalization, comparative advantage and User Acceptance remain unverified.
+TrackE is CLOSED. JOEDESIGN and UI UX Pro Max specialist value remains NOT TESTED;
+TEST B was platform-blocked, not a method failure. No diagnostic rerun is authorized.
+Real-project visual validation with newly approved designs and actual assets is
+PENDING; none were supplied here. No BIO production, comparison, personal install,
+main merge, release tag or new runtime dependency is part of this candidate.

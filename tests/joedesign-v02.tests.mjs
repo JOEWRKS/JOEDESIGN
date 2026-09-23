@@ -67,8 +67,19 @@ function fresh() {
   assert.deepEqual(Object.keys(record.package).sort(),files);
   for(const file of files) assert.equal(record.package[file],hash(read(`skills/joedesign/${file}`)),'Changed package needs fresh behavior evidence');
   for(const f of Object.values(record.artifacts)) assert.equal(hash(read(`${ev}/${f.path}`)),f.sha256,f.path);
-  assert.notEqual(record.artifacts.rollout.sha256,record.artifacts.response.sha256,'Rollout and response are different artifacts');
-  const events=read(`${ev}/${record.artifacts.rollout.path}`).toString().trim().split(/\r?\n/).map(JSON.parse);
+  assert.notEqual(record.artifacts.eventStream.sha256,record.artifacts.response.sha256,'Execution stream and response are different artifacts');
+  const native=json(`${ev}/${record.artifacts.nativeProvenance.path}`);
+  assert.equal(native.threadId,record.runtime.threadId);
+  assert.equal(native.model,record.runtime.model);
+  assert.equal(native.effort,record.runtime.effort);
+  assert.match(native.nativeRolloutSha256,/^[a-f0-9]{64}$/);
+  assert.notEqual(native.nativeRolloutSha256,record.artifacts.response.sha256);
+  assert.equal(native.input.normalizedMatch,true);
+  assert.equal(native.response.normalizedMatch,true);
+  assert.equal(native.input.fileSha256,record.artifacts.input.sha256);
+  assert.equal(native.response.fileSha256,record.artifacts.response.sha256);
+  assert.equal(native.toolCalls,0);
+  const events=read(`${ev}/${record.artifacts.eventStream.path}`).toString().trim().split(/\r?\n/).map(JSON.parse);
   assert.equal(events.find(e=>e.type==='thread.started').thread_id,record.runtime.threadId);
   assert.ok(events.some(e=>e.type==='turn.completed'));
   assert.ok(!events.some(e=>e.type==='turn.failed'||e.type==='error'));
@@ -76,6 +87,11 @@ function fresh() {
   assert.equal(agents.at(-1).item.text.trim(),read(`${ev}/${record.artifacts.response.path}`).toString().trim());
   const execution=json(`${ev}/${record.artifacts.execution.path}`);
   assert.equal(execution.exitCode,0);
+  assert.deepEqual(execution.package.map(f=>f.path).sort(),files);
+  for(const f of execution.package) {
+    assert.equal(f.sha256,record.package[f.path],'Execution package cannot be rebound by reviewer metadata');
+    assert.equal(f.bytes,read(`skills/joedesign/${f.path}`).length);
+  }
   assert.equal(execution.inputSha256,record.artifacts.input.sha256);
   assert.equal(execution.inputsSha256,hash(read(`${fixture}/inputs.json`)));
   assert.equal(execution.expectationsSha256,record.expectationsSha256);

@@ -1,0 +1,268 @@
+{
+  "kind": "text-only functional decisions; not visual quality",
+  "reviewer": "Primary TrackB implementation agent; explicit qualitative review against pre-execution expectations, not a regex evaluator",
+  "runtime": {
+    "model": "gpt-6-astra",
+    "effort": "xhigh",
+    "threadId": "01a0ced9-b462-7e73-9c10-0c24aecb25df",
+    "cliVersion": "0.155.0-alpha.16",
+    "nativeRolloutSha256": "245c38f4a3481b1d1f45c9ab44202c58fd68d3fdf5012689655db22721cc41ad"
+  },
+  "package": {
+    "agents/openai.yaml": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd",
+    "SKILL.md": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf",
+    "templates/DESIGN.md": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+  },
+  "expectationsSha256": "57c1e68ab2a51b62588a4e3236cc72de9d0b75bb1430b0252af114314908affb",
+  "artifacts": {
+    "input": {
+      "path": "09-v02-fresh/input.txt",
+      "sha256": "35098a2ac3ee8d7acceae49535c2911413f14770dfe7557e00c7dc4b15b10134"
+    },
+    "response": {
+      "path": "09-v02-fresh/response.txt",
+      "sha256": "6146120b44895eb7972008b9487b83a4bec45e6892c9f027f04b547342098867"
+    },
+    "eventStream": {
+      "path": "09-v02-fresh/events.jsonl",
+      "sha256": "7bcbab649aad8fe1f79f678665662b3207a4087cd688b894458e5fe8c4cb3bf0"
+    },
+    "execution": {
+      "path": "09-v02-fresh/execution.json",
+      "sha256": "c6a78a48300e88d9010c8071a13555846127226c5f85404a6db9cd4c11a66324"
+    },
+    "nativeProvenance": {
+      "path": "09-v02-fresh/native-provenance.json",
+      "sha256": "b0447ca2fc79a0d666bd8d183cb2d4ca2a55a9c3a5b34673e0e2a807d507cb1a"
+    },
+    "stderr": {
+      "path": "09-v02-fresh/stderr.txt",
+      "sha256": "9ef7c51d4d804b732482bb35f3e72793a846cf66ee7d341bf783812a56da72b1"
+    }
+  },
+  "cases": [
+    {
+      "id": "B01",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "Proceed with the specified bounded title-role delta, preserve other regions and direct source access",
+          "satisfied": true,
+          "quote": "I would hand off a wiring-only change",
+          "note": "Only the mapped title role is changed; rev 5 and both direct source pointers are retained."
+        },
+        {
+          "requirement": "No compulsory alternatives, redundant reapproval or full design rewrite",
+          "satisfied": true,
+          "quote": "No alternatives, new approval or DESIGN.md amendment are needed",
+          "note": "No forced exploration, documentation rewrite or redundant approval for the authorized delta."
+        },
+        {
+          "requirement": "Observe relevant actual result before a visual claim; existing approval does not imply acceptance of new output",
+          "satisfied": true,
+          "quote": "that observation has not occurred here",
+          "note": "Actual target observation remains outstanding; no new-output acceptance is asserted."
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "One authorized reversible unapproved draft, no forced two/three candidate fanout",
+          "satisfied": true,
+          "quote": "one reversible draft affecting only the heading-to-grid connection",
+          "note": "Exactly the requested bounded draft, no fixed multi-candidate fanout."
+        },
+        {
+          "requirement": "Concrete heading/grid alignment and structural-versus-caption gap relationship tied to supplied observations",
+          "satisfied": true,
+          "quote": "aligning the heading and grid to the same container edge",
+          "note": "Concrete shared-axis layout and proposed larger structural gap linked to source notes; cover-caption styling protected."
+        },
+        {
+          "requirement": "Exact values/typeface not claimed as extracted; proposals distinct from facts; preserve product/sorting",
+          "satisfied": true,
+          "quote": "The 24px value is proposed, not measured.",
+          "note": "No invented font extraction; existing typography, content and sorting preserved, draft unapproved."
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "References advisory, preserve approved text-led layout and expose incompatible dominance",
+          "satisfied": true,
+          "quote": "I would retain the approved text-led hierarchy and reading measure.",
+          "note": "Image-led dominance is explicitly treated as a material change requiring approval, rather than silently blended."
+        },
+        {
+          "requirement": "Select scoped relationships instead of automatic blend",
+          "satisfied": true,
+          "quote": "one bounded supporting-image placement without compressing required reading content",
+          "note": "Selected supporting relationship fits approved priority; references remain advisory."
+        },
+        {
+          "requirement": "Unknown values/mobile/hover/scroll remain unknown; concrete project proposal does not masquerade as source fact",
+          "satisfied": true,
+          "quote": "Exact fonts, gaps, crop, mobile composition and interaction behavior remain unknown",
+          "note": "Unknown source values/states are not fabricated; the support placement is a project proposal."
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "Pass original source and real illustration pointers directly, do not replace them with prose or unauthorized placeholder",
+          "satisfied": true,
+          "quote": "Use the original SVG, preserve the doorway",
+          "note": "Original fig/SVG paths reach implementer, not a new placeholder or prose-only authority."
+        },
+        {
+          "requirement": "Concrete alignment/crop/rhythm decisions linked to supplied notes, value status honest",
+          "satisfied": true,
+          "quote": "using a shared layout anchor established from the actual source",
+          "note": "Concrete alignment/uncropped containment and adjacent-section transition; values deferred to real source inspection."
+        },
+        {
+          "requirement": "Desktop approval scope only; source files/render unobserved here, mobile/state facts unverified",
+          "satisfied": true,
+          "quote": "These are supplied source notes, not my observations",
+          "note": "Desktop rev 2 scope retained; no claimed file/render observation, mobile and interactive states outside approval."
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "Bounded mobile crop correction; preserve title/actions, six records, retry/details and pending semantics",
+          "satisfied": true,
+          "quote": "Preserve the title, action area, retry, details, separate pending state and all six records.",
+          "note": "Only crop/fit/position adjusted; all named semantic and visual invariants explicitly protected."
+        },
+        {
+          "requirement": "Viewport is observation area, not total page-height cap or content removal authority",
+          "satisfied": true,
+          "quote": "The viewport height permits page scrolling; it does not justify removing content.",
+          "note": "390x844 treated as viewport, not a whole-page height cap."
+        },
+        {
+          "requirement": "Inspect exact current and corrected mobile target, including label and protected areas; no claim of unseen render",
+          "satisfied": true,
+          "quote": "rerender and observe label visibility and the protected title/action regions at the same target",
+          "note": "Before/after exact mobile version and protected regions inspected; no invented corrected render."
+        }
+      ]
+    },
+    {
+      "id": "B06",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "Ask current Product authority/user about cancellation semantics only",
+          "satisfied": true,
+          "quote": "I would ask the current Product authority",
+          "note": "Bounded cancellation/permission/state/recovery question, not invented semantics."
+        },
+        {
+          "requirement": "Continue independent approved caption fix without inventing cancellation meaning",
+          "satisfied": true,
+          "quote": "The independent approved caption-alignment fix can proceed",
+          "note": "Independent authorized implementation and observation continue."
+        },
+        {
+          "requirement": "No mandatory framework, extra agent or whole-project restart",
+          "satisfied": true,
+          "quote": "No new agent, lifecycle framework or whole-project restart is required.",
+          "note": "No unnecessary orchestration or whole-work abandonment."
+        }
+      ]
+    },
+    {
+      "id": "B07",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "Technical pass; A observed pass, B fail, C unverified; overall covered visual result cannot be PASS",
+          "satisfied": true,
+          "quote": "The covered visual result remains FAIL because a required relationship fails.",
+          "note": "Technical pass, A pass, B fail and C unverified all reported distinctly; required failure is not averaged away."
+        },
+        {
+          "requirement": "User acceptance not granted, no fabricated mobile observation",
+          "satisfied": true,
+          "quote": "Exact-output user acceptance is unrecorded",
+          "note": "Finish pressure does not supply user acceptance or missing mobile observation."
+        },
+        {
+          "requirement": "Do not compensate with unrelated checks or abandon completed implementation; correct bounded clipping and verify missing target when available",
+          "satisfied": true,
+          "quote": "More unrelated checks would not resolve either boundary.",
+          "note": "Bounded clipping correction and later C inspection, independent work continues; no compensating unrelated tests."
+        }
+      ]
+    },
+    {
+      "id": "B08",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "Preserve approved 20/6/15 values and healthy native roles instead of snapping to defaults",
+          "satisfied": true,
+          "quote": "approved 20px between peer reading groups, 6px within caption pairs and 15px body text",
+          "note": "Approved values and existing equivalent native roles retained, including values outside defaults."
+        },
+        {
+          "requirement": "For unresolved appendix use restricted 4px-based spatial roles tied to semantic relationships; distinguish structural/binding; type not restricted to 4px",
+          "satisfied": true,
+          "quote": "typography is not constrained to a 4px grid",
+          "note": "Structural peer vs bound-caption semantics explicit; native reuse first, new subgroup example 24px uses the restricted starting profile. This is one functional choice, not exhaustive spacing policy validation."
+        },
+        {
+          "requirement": "Recompose responsive hierarchy and verify actual target; no visual pass without render",
+          "satisfied": true,
+          "quote": "rather than proportionally shrinking desktop coordinates",
+          "note": "Responsive hierarchy/measure/controls recomposed, content retained, actual target evidence still UNVERIFIED."
+        }
+      ]
+    },
+    {
+      "id": "B09",
+      "verdict": "PASS",
+      "findings": [
+        {
+          "requirement": "Keep approved rev 7 authoritative while separately marking draft amendment in one root DESIGN.md",
+          "satisfied": true,
+          "quote": "Keep APPROVED rev 7 as the active rule set in the single root DESIGN.md.",
+          "note": "Separate draft rev 8 in same file retains approved source and custom content."
+        },
+        {
+          "requirement": "Authorized draft/proof may proceed; no extra pre-draft approval gate",
+          "satisfied": true,
+          "quote": "Authorized work includes a reversible draft and the smallest useful target-runtime proof",
+          "note": "Draft/proof work proceeds without a pre-draft approval gate or fixed candidate count."
+        },
+        {
+          "requirement": "Explicit user approval needed for material promotion; token/build pass not visual pass or acceptance",
+          "satisfied": true,
+          "quote": "Passing token mapping and build checks establishes neither visual conformance nor user acceptance.",
+          "note": "Material expansion waits for explicit approval after proof; no build-based promotion."
+        }
+      ]
+    }
+  ],
+  "realProjectVisualValidation": "PENDING",
+  "limits": [
+    "Nine text-only requests in one fresh batch; not nine isolated projects or actual implementation operations.",
+    "Authored input excludes expectations, rubric, spec and diagnostic report; ambient platform instructions are not claimed absent.",
+    "Actual package includes invocation metadata, but this batch injects only SKILL and template; discovery/default-prompt behavior is not a fresh model claim.",
+    "No rendered source/target comparisons, independent quality scoring, specialist superiority, production readiness or user acceptance."
+  ]
+}

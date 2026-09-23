@@ -1,0 +1,12 @@
+✔ package — exactly one discoverable public skill and no extra runtime surface (3.1943ms)
+✔ package — a project-local copy resolves its shipped relative links without repo docs (14.8787ms)
+✔ history — original failures, semantic responses, Smokes, doctrines and test source bytes survive (246.6588ms)
+✔ inputs — pre-execution scenarios and reviewer expectations were not tuned after output (1.0284ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 4
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 392.1782
