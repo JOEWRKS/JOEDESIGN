@@ -1,0 +1,14 @@
+{
+  "projectRoot": "C:/Users/tjdwo/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted",
+  "method": "Approved PNG → unchanged proof source/component/CSS → import, image URL and srcSet references → repository asset existence and SHA-256",
+  "assets": [
+    {"path": "public/assets/bio02-scientific-system-mobile-far-780.webp", "evidenceCopy": "assets/bio02-scientific-system-mobile-far-780.webp", "usedBy": ["KF-01"], "type": "image/webp", "exists": true, "sha256": "0f75800bb95da0a49e9f0066664ca0730f76fe058161ae36b2323e99e126088a"},
+    {"path": "public/assets/bio02-scientific-system-mobile-far.webp", "evidenceCopy": "assets/bio02-scientific-system-mobile-far.webp", "usedBy": ["KF-01"], "type": "image/webp", "exists": true, "sha256": "07c84289baef1546f9d3b1e8bff34924d47597ecd81a0cdce75729443b7dc3a5"},
+    {"path": "public/assets/bio02-scientific-system-desktop-far-1440.webp", "evidenceCopy": "assets/bio02-scientific-system-desktop-far-1440.webp", "usedBy": ["KF-01", "KF-02", "KF-03"], "type": "image/webp", "exists": true, "sha256": "32c7c0759f4e2c3bd435e5a0201a0491194874f3a826fdef3618f6365f3f762d"},
+    {"path": "public/assets/bio02-scientific-system-desktop-far.webp", "evidenceCopy": "assets/bio02-scientific-system-desktop-far.webp", "usedBy": ["KF-01", "KF-02", "KF-03"], "type": "image/webp", "exists": true, "sha256": "fc073e5c392f5c118c5559325e984d15c4427a1be4600579e2e55966080ce871"},
+    {"path": "public/assets/bio02-mineral-transition-v2.png", "evidenceCopy": "assets/bio02-mineral-transition-v2.png", "usedBy": ["KF-03"], "type": "image/png", "exists": true, "sha256": "42ea61558011d6f836cf0c666c3f8fd87d2ca58639754cbbeaf6da7392777b70"}
+  ],
+  "fontDelivery": "Proof CSS imports project-used Google Fonts (Instrument Sans and IBM Plex Mono); no local font file was referenced by these proofs. Runtime font delivery must be checked separately.",
+  "missingRequiredAssets": [],
+  "evidenceCopyNote": "All five files under assets/ are byte-preserved copies of the BIO repository originals for independent reviewer inspection; no placeholder or new asset was generated."
+}

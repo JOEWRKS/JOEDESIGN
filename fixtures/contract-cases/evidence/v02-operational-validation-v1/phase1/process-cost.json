@@ -1,0 +1,14 @@
+{
+  "candidateFacingUserPromptCount": 1,
+  "candidateFacingLogisticalFollowupCount": 1,
+  "controllerCorrectionPromptCount": 0,
+  "candidateClarificationQuestions": 0,
+  "materialAlternativesGenerated": 0,
+  "joedesignGeneratedDesignMdAddedLines": 0,
+  "phase1ImplementationAttempts": 1,
+  "phase1SelfCorrection": "Within the single attempt: shell geometry and KF-03 mobile metadata wrap after direct render inspection",
+  "phase2CorrectionAttempts": 0,
+  "sourceBaselineCommit": "b35cc11fbcb5fb64dbd55f37f34a1d7deadac3bf",
+  "phase1Commit": "4d2fbf4287a38439e32ecc26db480a8b87d21d0a",
+  "notes": "The candidate received original image paths and assets directly; no alternate design candidates, prolonged authority document or repeated prompt tuning were used. The one follow-up message only confirmed input preflight and asked to preserve the actual-browser observation boundary; it contained no aesthetic advice."
+}

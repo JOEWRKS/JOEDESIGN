@@ -1,0 +1,37 @@
+{
+  "track": "TrackB",
+  "status": "JOEDESIGN_V0_2_OPERATIONAL_VALIDATION_BLOCKED_BY_INPUT",
+  "repository": "JOEWRKS/JOEDESIGN",
+  "branch": "codex/joedesign-v0.2-operational-validation",
+  "sourceCommit": "2ccb229353ebb2776ebed793056158efffb50b33",
+  "instructionAttachmentSha256": "53567853c90f20d09920df0b77974f00aa94558b2aa1847d66569d17680010f4",
+  "packageSha256": {
+    "skills/joedesign/SKILL.md": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf",
+    "skills/joedesign/templates/DESIGN.md": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3",
+    "skills/joedesign/agents/openai.yaml": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd"
+  },
+  "inputGate": {
+    "project": "MISSING",
+    "productTruth": "MISSING",
+    "approvedVisualAuthority": "MISSING",
+    "realAssets": "ASSET_MISSING_IN_SUPPLIED_INPUTS",
+    "assetSetCanBeDetermined": false
+  },
+  "functionalSuite": {
+    "command": "node --test tests/joedesign-v02.tests.mjs",
+    "preflight": { "exitCode": 0, "pass": 14, "fail": 0 },
+    "postflight": { "exitCode": 0, "pass": 14, "fail": 0 },
+    "interpretation": "Saved v0.2 contract and evidence integrity, not an operational or rendered visual result"
+  },
+  "candidatePromptCount": 0,
+  "phase1Attempts": 0,
+  "phase2Attempts": 0,
+  "hypotheses": { "H1": "UNVERIFIED", "H2": "UNVERIFIED", "H3": "UNVERIFIED", "H4": "UNVERIFIED" },
+  "files": [
+    { "path": "README.md", "sha256": "bea01feb424719ce5c93d51831241acec179f78a29f7ac1810e9d111b9bd387c" },
+    { "path": "authority/input-audit.md", "sha256": "8ecd60824ebc227ca174414c5463e52df5c277db3cce5c8211e21713e912c688" },
+    { "path": "final/pm-report.md", "sha256": "abf507b075722dd6e8d284047e35f7b5e97ee56baa2fc7a1317a26eaab514001" },
+    { "path": "preflight-suite.txt", "sha256": "721c7f1009a487708e042cbe741d5d0eb9fc2b7aafa514c790114e4398ba7c66" },
+    { "path": "postflight-suite.txt", "sha256": "684f41d1a751ce5b4b186059f9c31078f992ffb786544f5cf5a83cbe611a90f8" }
+  ]
+}
