@@ -1,0 +1,14 @@
+[
+  {
+    "path": "skills/joedesign/SKILL.md",
+    "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+  },
+  {
+    "path": "skills/joedesign/agents/openai.yaml",
+    "sha256": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd"
+  },
+  {
+    "path": "skills/joedesign/templates/DESIGN.md",
+    "sha256": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+  }
+]
