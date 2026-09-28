@@ -4,7 +4,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from .io import digest, read_artifact, write_artifact
 from .contracts import validate_intent, validate_lock, validate_contract
-from .evidence import assess, snapshot, validate_matrix
+from .evidence import assess, snapshot, validate_matrix, repair_disposition
 
 ARTIFACTS = {'intent': 'DESIGN_INTENT.json', 'candidates': 'REFERENCE_CANDIDATES.json',
              'lock': 'REFERENCE_LOCK.md', 'contract': 'DESIGN_CONTRACT.md',
@@ -77,21 +77,6 @@ def current_stage(bundle):
     return stage
 
 
-def repair_disposition(attempts, findings):
-    if any(f.get('kind') == 'structural' and f.get('verdict') == 'FAIL' for f in findings):
-        return 'MATERIAL_REWORK_REQUIRED'
-    consecutive = {}
-    for attempt in attempts:
-        cause = attempt.get('cause_id')
-        if attempt.get('outcome') in ('FAIL', 'UNVERIFIED', 'REGRESSION'):
-            if not attempt.get('hypothesis'):
-                return 'UNRESOLVED'
-            consecutive[cause] = consecutive.get(cause, 0) + 1
-        elif attempt.get('outcome') == 'IMPROVED':
-            consecutive[cause] = 0
-    return 'MATERIAL_REWORK_REQUIRED' if any(v >= 2 for v in consecutive.values()) else 'CONTINUE'
-
-
 def contract_errors(bundle):
     errors = validate_intent(bundle['intent'])
     if not errors:
@@ -104,7 +89,7 @@ def contract_errors(bundle):
 def transition(bundle, target, host=None):
     stage = current_stage(bundle)
     report = assess(bundle, host)
-    disposition = repair_disposition(bundle['evidence'].get('repairs', []), bundle['critique'].get('findings', []))
+    disposition = report['disposition']
     if target in ('CRAFTED', 'APPROVED') and (disposition != 'CONTINUE' or report['categories']['Structure'] == 'FAIL'):
         raise ValueError('MATERIAL_REWORK_REQUIRED: unresolved structure/repair must return to synthesis')
     if target not in ('USER_REVIEW', 'REWORK'):
@@ -151,8 +136,9 @@ def make_role_bundle(bundle, role, host=None):
     if errors:
         raise ValueError(str(errors))
     if role in ('craft', 'expand'):
-        disposition = repair_disposition(bundle['evidence'].get('repairs', []), bundle['critique'].get('findings', []))
-        if disposition != 'CONTINUE' or assess(bundle, host)['categories']['Structure'] == 'FAIL':
+        report = assess(bundle, host)
+        disposition = report['disposition']
+        if disposition != 'CONTINUE' or report['categories']['Structure'] == 'FAIL':
             raise ValueError('MATERIAL_REWORK_REQUIRED: stop polishing and diagnose structure')
     if role == 'expand':
         report = assess(bundle, host)

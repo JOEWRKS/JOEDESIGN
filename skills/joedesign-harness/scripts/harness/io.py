@@ -4,6 +4,7 @@ import json
 import os
 import re
 import tempfile
+import shutil
 from pathlib import Path
 
 
@@ -58,3 +59,37 @@ def write_artifact(path, data, overwrite=False):
     finally:
         if os.path.exists(temporary):
             os.unlink(temporary)
+
+
+def write_artifacts_transaction(updates):
+    """Stage all outputs; roll back a failed replacement, retaining recovery bytes
+    if the OS also prevents rollback. Not a filesystem crash-atomic transaction.
+    """
+    paths = [Path(p).resolve() for p in updates]
+    if not paths or len({p.parent for p in paths}) != 1:
+        raise ValueError('transaction requires one artifact directory')
+    parent = paths[0].parent
+    stage = Path(tempfile.mkdtemp(dir=parent, prefix='.harness-transaction-'))
+    committed = []
+    recovered = True
+    try:
+        for destination, value in zip(paths, updates.values()):
+            if not destination.is_file():
+                raise FileNotFoundError(destination)
+            (stage / (destination.name + '.backup')).write_bytes(destination.read_bytes())
+            write_artifact(stage / destination.name, value)
+        for destination in paths:
+            os.replace(stage / destination.name, destination)
+            committed.append(destination)
+    except BaseException:
+        for destination in reversed(committed):
+            try:
+                os.replace(stage / (destination.name + '.backup'), destination)
+            except OSError:
+                recovered = False
+        if not recovered:
+            raise OSError(f'rollback blocked by OS; recovery copies retained at {stage}')
+        raise
+    finally:
+        if recovered and stage.resolve().is_relative_to(parent):
+            shutil.rmtree(stage)

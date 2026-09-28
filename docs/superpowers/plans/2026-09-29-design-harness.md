@@ -39,11 +39,11 @@ tests/test_harness_references.py, test_harness_cli.py.
 Interfaces: read_artifact(Path)->dict; build_index(Path)->dict;
 retrieve(index, intent, limit=10)->dict; CLI init/index/retrieve.
 
-- [ ] Write tests for Unicode, duplicate JSON keys, duplicate reference IDs, missing quality,
+- [x] Write tests for Unicode, duplicate JSON keys, duplicate reference IDs, missing quality,
   real OMD frontmatter, structural needs versus superficial keyword matches, no overwrite.
-- [ ] Run `python -m unittest discover -s tests -p 'test_harness_references.py' -v`; observe RED.
-- [ ] Implement bounded metadata extraction retaining source pointer/hash/unknowns; never parse YAML as executable instructions.
-- [ ] Run tests GREEN and commit.
+- [x] Run `python -m unittest discover -s tests -p 'test_harness_references.py' -v`; observe RED.
+- [x] Implement bounded metadata extraction retaining source pointer/hash/unknowns; never parse YAML as executable instructions.
+- [x] Run tests GREEN and commit.
 
 ### Task 2: Product, reference, synthesis, scope and craft gates
 
@@ -51,23 +51,23 @@ Files: scripts/harness/contracts.py; tests/test_harness_contracts.py.
 Interfaces: validate_intent, validate_lock, validate_contract -> list of issues;
 guard_change(intent, contract, change)->list of issues.
 
-- [ ] Write F1/F2/F3/F10/F11 plus BIO structural-grounding regression tests.
-- [ ] Observe RED; implement coverage of content/action IDs, constraints, concrete spatial,
+- [x] Write F1/F2/F3/F10/F11 plus BIO structural-grounding regression tests.
+- [x] Observe RED; implement coverage of content/action IDs, constraints, concrete spatial,
   responsive and applicable motion rules, nondecorative relationships, invariants and axis ownership.
-- [ ] Require early structural proof before expansion; structural FAIL immediately REWORK.
-- [ ] Run task tests GREEN and commit.
+- [x] Require early structural proof before expansion; structural FAIL immediately REWORK.
+- [x] Run task tests GREEN and commit.
 
 ### Task 3: Evidence, critic, calibration, user and scope-bound gates
 
 Files: scripts/harness/evidence.py; tests/test_harness_evidence.py.
 Interfaces: assess(bundle, host=None)->structured report; HostVerifier.resolve(id)->receipt|None.
 
-- [ ] Write F4–F9/F12, tampered bytes, stale revision, mismatched target, missing matrix row,
+- [x] Write F4–F9/F12, tampered bytes, stale revision, mismatched target, missing matrix row,
   same-context critic, uncalibrated critic, false approval and scope-laundering tests.
-- [ ] Observe RED; implement host receipts checked against local evidence hash/exact target,
+- [x] Observe RED; implement host receipts checked against local evidence hash/exact target,
   separate categories, fail precedence, approved calibration and exact user event requirements.
-- [ ] Keep default host unavailable; do not claim writable local JSON authenticates a run.
-- [ ] Run task tests GREEN and commit.
+- [x] Keep default host unavailable; do not claim writable local JSON authenticates a run.
+- [x] Run task tests GREEN and commit.
 
 ### Task 4: Stateful CLI, adapters, repair and truthful handoff
 
@@ -75,26 +75,29 @@ Files: scripts/harness/pipeline.py, cli.py; templates/; tests/test_harness_pipel
 Interfaces: load_bundle(Path)->dict; transition(bundle, stage, host=None)->dict;
 repair_disposition(attempts, findings)->str; commands check/advance/bundle/handoff.
 
-- [ ] Write transition, candidate isolation, first structural failure, two failed local repairs,
+- [x] Write transition, candidate isolation, first structural failure, two failed local repairs,
   no hypothesis, historical FAIL preservation, fabricated report and CLI roundtrip tests.
-- [ ] Observe RED; implement precondition gates and stage invalidation from current artifacts.
-- [ ] Emit synthesis/craft/critic input bundles; critic excludes builder verdicts and rationale.
-- [ ] Generate reports only from assessed fields. Preserve all attempts; never overwrite approved DESIGN.md.
-- [ ] Run task tests GREEN and commit.
+- [x] Observe RED; implement precondition gates and stage invalidation from current artifacts.
+- [x] Emit synthesis/craft/critic input bundles; critic excludes builder verdicts and rationale.
+- [x] Generate reports only from assessed fields. Preserve all attempts; never overwrite approved DESIGN.md.
+- [x] Run task tests GREEN and commit.
 
 ### Task 5: Skill package and integrated verification
 
 Files: SKILL.md, agents/openai.yaml, references/operation.md, README.md,
 evals/harness-v0.1/{README.md,verification.md}, tests/test_harness_package.py.
 
-- [ ] Add package discovery/copy/CLI tests and byte-for-byte v0.2 regression; observe RED.
-- [ ] Create concise skill using skill-creator; RACI and OMD grounding are execution guidance.
-- [ ] Update only the old whole-repository one-skill inventory assertion for the authorized second package;
+- [x] Add package discovery/copy/CLI tests and byte-for-byte v0.2 regression; observe RED.
+- [x] Create concise skill using skill-creator; RACI and OMD grounding are execution guidance.
+- [x] Update only the old whole-repository one-skill inventory assertion for the authorized second package;
   preserve all original package and evidence checks.
-- [ ] Exercise real pinned OMD metadata outside repo, CLI initialized project, blocked decorative-only
+- [x] Exercise real pinned OMD metadata outside repo, CLI initialized project, blocked decorative-only
   contract, corrected structural contract, missing runtime/host evidence, and standalone copy.
-- [ ] Run Python suite, Node v0.2 suite, compile, package validation and git diff --check.
-- [ ] Fresh whole-branch review; fix important findings with RED→GREEN; record limitations and commit.
+- [x] Run Python suite, Node v0.2 suite, compile, package validation and git diff --check.
+- [x] Fresh whole-branch review; fix important findings with RED→GREEN; record limitations and commit.
 
 No claim that automated string/coverage checks determine aesthetic quality. A valid
 contract only permits scoped proof creation; host/user/visual evidence still governs closure.
+
+## Execution boundary
+All listed code/test tasks were performed. Full implementation readiness is withheld: see evals/harness-v0.1/verification.md for missing host/browser/Critic integration and quality evidence. Consolidated CLI and executable contracts replace duplicated forwarding scripts/schemas. This plan completion is not product readiness.

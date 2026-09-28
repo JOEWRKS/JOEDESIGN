@@ -45,6 +45,11 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(self.api.repair_disposition(attempts, []), 'MATERIAL_REWORK_REQUIRED')
         self.assertEqual(self.api.repair_disposition([{'cause_id': 'density', 'outcome': 'FAIL', 'hypothesis': ''}], []), 'UNRESOLVED')
 
+    def test_later_observed_improvement_can_close_prior_unresolved_cycle(self):
+        attempts = [{'cause_id': 'density', 'outcome': 'FAIL', 'hypothesis': ''},
+                    {'cause_id': 'density', 'outcome': 'IMPROVED', 'hypothesis': 'Recompose related evidence'}]
+        self.assertEqual(self.api.repair_disposition(attempts, []), 'CONTINUE')
+
     def test_structural_proof_required_before_expansion(self):
         with self.assertRaisesRegex(ValueError, 'STRUCTURE'):
             self.api.make_role_bundle(self.b, 'expand')

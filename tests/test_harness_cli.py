@@ -65,6 +65,29 @@ class CLITests(unittest.TestCase):
         self.assertEqual(report['host_verifier'], 'UNAVAILABLE')
         self.assertEqual(list(empty.iterdir()), [])
 
+    def test_bind_second_replace_failure_restores_both_original_artifacts(self):
+        import importlib
+        from unittest.mock import patch
+        import os
+        cli = importlib.import_module('harness_cli')
+        target = self.root / 'proof'
+        self.run_cli('init', target, '--intent', self.source)
+        before = {p.name: p.read_bytes() for p in target.iterdir()}
+        real_replace = os.replace
+        failed = False
+
+        def fail_manifest_once(source, destination):
+            nonlocal failed
+            if Path(destination).name == 'EVIDENCE_MANIFEST.json' and not failed:
+                failed = True
+                raise OSError('simulated Windows sharing violation')
+            return real_replace(source, destination)
+
+        with patch('harness.io.os.replace', side_effect=fail_manifest_once):
+            with self.assertRaises(OSError):
+                cli.main(['bind', str(target), '--run-id', 'run', '--build-id', 'build', '--context-id', 'builder'])
+        self.assertEqual(before, {p.name: p.read_bytes() for p in target.iterdir() if p.is_file()})
+
 
 if __name__ == '__main__':
     unittest.main()

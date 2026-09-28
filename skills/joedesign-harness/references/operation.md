@@ -34,7 +34,10 @@ the assessed gates govern certification.
 Exit 0: command succeeded (for check/handoff, all approval conditions passed).
 Exit 2: useful result generated but incomplete/blocked. Exit 1: invalid input or I/O.
 Output files use exclusive creation. Init refuses a nonempty destination. Failed
-advance does not modify the manifest. Seven runtime artifacts use UTF-8; Markdown
+advance does not modify the manifest. Bind stages both matrix and manifest and rolls
+back a failed replacement. If the OS also blocks rollback, recovery copies are retained
+in a reported `.harness-transaction-*` directory; no success is reported. This is not a
+filesystem power-loss atomicity guarantee. Seven runtime artifacts use UTF-8; Markdown
 artifacts contain exactly one fenced JSON payload, which is the machine contract.
 Additional prose is not machine-validated or authoritative over that payload.
 
@@ -60,7 +63,7 @@ from a style name. All examples below are field descriptions, not observations.
 | DESIGN_CONTRACT.md | product_invariants (exact requirement IDs), reference_ids, patterns, structure_claims, protected_regions, translations described below |
 | STATE_MATRIX.md | exact intent targets, claims, bindings of intent/lock/contract canonical hashes |
 | CRITIQUE.md | context_id, receipt_id, snapshot, calibration_id, results[{claim_id,verdict,observed,evidence_ids}], findings[{kind:structural/local,verdict,reason}] |
-| EVIDENCE_MANIFEST.json | run, items, reviews, repairs, append-only history, acceptance_receipt_id |
+| EVIDENCE_MANIFEST.json | run, items, reviews, repairs, resolutions, append-only history, acceptance_receipt_id |
 
 Target: `{id, route, surface, family, viewport:[width,height], state, theme, locale,
 required_kinds:[render/interaction/technical]}`. Each target is one exact state; include
@@ -78,8 +81,11 @@ proposed interaction hypothesis, which must be tested on the actual result.
 
 Claim: `{id,category,target_id,kind,required:true/false,expected,reviewers}`.
 Material target categories: Technical, Accessibility, Responsive, Craft, Structure,
-VisualConformance, VisualQuality. Technical requires technical evidence. Required
-Structure claim IDs include those in the contract. Structure tests the relationship
+VisualConformance, VisualQuality. Technical requires technical evidence, Accessibility
+requires interaction, and the other categories require render evidence. Every target
+requires render; when Product includes actions/states it also requires interaction.
+Contract-listed Structure claims must remain required Structure/render claims.
+Structure tests the relationship
 and task flow, not just individual component appearance.
 
 Asset: `{id,status:VERIFIED/PROVISIONAL/MISSING/REJECTED,critical,source,role}`.
@@ -97,6 +103,8 @@ Repair: `{cause_id,hypothesis,outcome:IMPROVED/FAIL/UNVERIFIED/REGRESSION,
 before_evidence,after_evidence,protected_regions,observation}`. Preserve original attempts.
 An unresolved structural finding blocks craft/expansion; do not delete it to proceed.
 Rework needs a new hypothesis/revision and new observations, not a renamed same repair.
+An IMPROVED record used for certification requires current evidence binding and a
+host repair receipt. New self-authored success text does not clear failed attempts.
 
 ## Evidence service and trust boundary
 
@@ -117,10 +125,11 @@ The host must refuse mixed/changed-build captures and preserve prior unresolved 
   The receipt has kind=capture, evidence_kind matching item.kind, and matching fields.
   Local bytes are hashed again; receipt existence alone does not validate a target.
 - Review: id, claim_id, verdict, observed, evidence_ids, reviewer, context_id,
-  receipt_id, snapshot. Its host receipt has kind=review and matching fields.
+  receipt_id, snapshot, run_id, build_id, evidence_hash. Its host receipt has kind=review and matching fields.
   An unobserved/self-authored PASS never authenticates itself. Reported FAIL is
   conservatively blocking until revision/re-observation; unrelated PASS cannot erase it.
-- Critic: corresponding receipt kind=critic with exact input snapshot/results/context.
+- Critic: corresponding receipt kind=critic with exact input snapshot/results/context,
+  run_id, build_id, evidence_ids and evidence_hash for all reviewed captures.
   Context must differ from builder and prior reviewers. The bundle excludes builder
   scores/rationale, but the host must actually launch the fresh context.
 - Calibration: kind=calibration, status=IN_SCOPE, snapshot, approved_by,
@@ -129,6 +138,21 @@ The host must refuse mixed/changed-build captures and preserve prior unresolved 
 - Acceptance: kind=user_acceptance, actor=user, decision=APPROVE_EXACT_OUTPUT,
   snapshot, candidate_id, revision, scope_id, build_id, message. Host authenticates the
   actual user event and exact scope; a user-like string in an artifact is insufficient.
+
+`capture_binding(items,evidence_ids)` computes evidence_hash over the selected capture
+records sorted by ID, projecting id/target/kind/sha256/run_id/build_id/snapshot into
+canonical JSON. Reusing an evidence ID cannot authenticate new content or a new build.
+The host must produce/verify this binding independently of the implementation writer.
+
+Preserve historical reviews; old PASS is stale rather than a competing current review.
+Old FAIL remains unresolved until a host-attested resolution. Resolution fields:
+`{id,receipt_id,resolves:[failure IDs],observed,snapshot,run_id,build_id,evidence_ids,evidence_hash}`;
+receipt kind=resolution. It must use current evidence of the appropriate claim kind;
+structural findings cannot be cleared by technical-only observations. A stable finding
+ID is recommended; legacy unkeyed findings use `finding:<index>`, repairs `repair:<index>`.
+Original failed records remain intact. Required findings and additional consultants'
+FAILs feed the same assessment used by transitions and handoff. Active dangling claim/
+target IDs block completion. A removed claim's historical FAIL still needs resolution.
 
 These are integration contracts. Synthetic test receipts demonstrate policy behavior,
 not that a real host has been connected or is tamper-proof. Missing host → UNVERIFIED.

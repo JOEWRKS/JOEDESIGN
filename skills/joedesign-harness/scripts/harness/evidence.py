@@ -49,6 +49,30 @@ def snapshot(bundle):
     return digest({k: bundle[k] for k in ('intent', 'lock', 'contract', 'matrix')})
 
 
+def capture_binding(items, evidence_ids):
+    """Bind observations to exact capture content, targets, build and run."""
+    return digest([{k: item[k] for k in ('id', 'target', 'kind', 'sha256', 'run_id', 'build_id', 'snapshot')}
+                   for item in sorted(items, key=lambda row: row['id']) if item['id'] in evidence_ids])
+
+
+def repair_disposition(attempts, findings):
+    if any(f.get('kind') == 'structural' and f.get('verdict') == 'FAIL' for f in findings):
+        return 'MATERIAL_REWORK_REQUIRED'
+    consecutive, unresolved = {}, set()
+    for attempt in attempts:
+        cause = attempt.get('cause_id')
+        if attempt.get('outcome') in ('FAIL', 'UNVERIFIED', 'REGRESSION'):
+            if not attempt.get('hypothesis'):
+                unresolved.add(cause)
+            consecutive[cause] = consecutive.get(cause, 0) + 1
+        elif attempt.get('outcome') == 'IMPROVED':
+            consecutive[cause] = 0
+            unresolved.discard(cause)
+    if unresolved:
+        return 'UNRESOLVED'
+    return 'MATERIAL_REWORK_REQUIRED' if any(v >= 2 for v in consecutive.values()) else 'CONTINUE'
+
+
 def validate_matrix(bundle):
     intent, matrix = bundle['intent'], bundle['matrix']
     errors = identity(intent, matrix)
@@ -72,13 +96,16 @@ def validate_matrix(bundle):
             continue
         if not set(REVIEWERS[category]) <= set(reviewers):
             errors.append(issue('MISSING_REVIEWER', str(claim['id'])))
-        if category == 'Technical' and claim['kind'] != 'technical':
-            errors.append(issue('INVALID_CLAIM', 'technical result requires technical evidence'))
+        expected_kind = 'technical' if category == 'Technical' else 'interaction' if category == 'Accessibility' else 'render'
+        if claim['kind'] != expected_kind:
+            errors.append(issue('INVALID_CLAIM', f'{category} requires {expected_kind} evidence'))
     for target_id in target_ids:
         categories = {c.get('category') for c in claims if c.get('target_id') == target_id and c.get('required') is True}
         if not set(REVIEWERS) <= categories:
             errors.append(issue('REQUIRED_CLAIM_MISSING', target_id))
-    if not set(bundle['contract'].get('structure_claims', [])) <= claim_ids:
+    mandated = set(bundle['contract'].get('structure_claims', []))
+    eligible = {c['id'] for c in claims if c.get('category') == 'Structure' and c.get('required') is True and c.get('kind') == 'render'}
+    if not mandated <= eligible:
         errors.append(issue('STRUCTURE_PROOF_REQUIRED', 'structure claims missing in matrix'))
     return errors
 
@@ -88,6 +115,7 @@ def assess(bundle, host=None):
     report = {'categories': categories, 'proof_complete': False, 'approved': False,
               'user_acceptance': 'PENDING', 'critic_reviewed': False,
               'issues': [], 'claims': {}, 'verified_evidence': [],
+              'disposition': 'UNRESOLVED', 'active_findings': [],
               'trust': 'HOST_ADAPTER' if host else 'LOCAL_UNAUTHENTICATED',
               'operational_validation': 'UNVERIFIED'}
     errors = report['issues']
@@ -146,6 +174,9 @@ def assess(bundle, host=None):
             errors.append(issue('EVIDENCE_UNVERIFIED', str(item.get('id'))))
     report['verified_evidence'] = list(verified)
     required_pairs = {(t['id'], kind) for t in targets.values() for kind in t['required_kinds']}
+    required_pairs.update((t['id'], 'render') for t in targets.values())
+    if any(r['kind'] in ('action', 'state') for r in intent['requirements']):
+        required_pairs.update((t['id'], 'interaction') for t in targets.values())
     required_pairs.update((c['target_id'], c['kind']) for c in bundle['matrix']['claims'] if c['required'])
     present_pairs = {(e['target_id'], e['kind']) for e in verified.values()}
     report['proof_complete'] = required_pairs <= present_pairs
@@ -158,22 +189,82 @@ def assess(bundle, host=None):
                 any(verified[k]['target_id'] == claim['target_id'] and
                     verified[k]['kind'] == claim['kind'] for k in keys))
 
+    def current_observation(record):
+        keys = record.get('evidence_ids')
+        return (all(record.get(k) == run[k] for k in ('snapshot', 'run_id', 'build_id')) and
+                strings(keys) and all(k in verified for k in keys) and
+                record.get('evidence_hash') == capture_binding(verified.values(), keys))
+
     grouped = {key: [] for key in REVIEWERS}
     claims = {c['id']: c for c in bundle['matrix']['claims']}
+    findings = rows(critic.get('findings', []), 'critic.findings', errors, False)
+    repairs = rows(manifest.get('repairs', []), 'repairs', errors, False)
+    resolutions = rows(manifest.get('resolutions', []), 'resolutions', errors, False)
+    ids(resolutions, 'resolutions', errors)
+    invalid_active = False
+    for item in items:
+        if item.get('snapshot') == current and item.get('target_id') not in targets:
+            errors.append(issue('UNKNOWN_TARGET', str(item.get('id'))))
+            invalid_active = True
+    for review in reviews:
+        if review.get('snapshot') == current and (review.get('claim_id') not in claims or
+                review.get('verdict') not in VERDICTS or not text(review.get('reviewer'))):
+            errors.append(issue('INVALID_REVIEW', str(review.get('id'))))
+            invalid_active = True
+    failure_ids = {r['id'] for r in reviews if r.get('verdict') == 'FAIL'}
+    failure_ids.update(f.get('id', f'finding:{i}') for i, f in enumerate(findings) if f.get('verdict') == 'FAIL')
+    failure_ids.update(r.get('id', f'repair:{i}') for i, r in enumerate(repairs) if r.get('outcome') != 'IMPROVED')
+    failures = {r['id']: r for r in reviews if r.get('verdict') == 'FAIL'}
+    failures.update({f.get('id', f'finding:{i}'): f for i, f in enumerate(findings) if f.get('verdict') == 'FAIL'})
+
+    def resolution_matches(resolution, links):
+        for link in links:
+            failure = failures.get(link, {})
+            claim = claims.get(failure.get('claim_id'))
+            if claim and not evidence_matches(resolution, claim):
+                return False
+            if failure.get('kind') == 'structural' and not any(
+                    verified[e]['kind'] == 'render' for e in resolution['evidence_ids']):
+                return False
+        return True
+
+    resolved = set()
+    for resolution in resolutions:
+        links = resolution.get('resolves')
+        if (strings(links) and set(links) <= failure_ids and text(resolution.get('observed')) and
+                current_observation(resolution) and resolution_matches(resolution, links) and
+                attested(resolution, host, 'resolution')):
+            resolved.update(links)
+        else:
+            errors.append(issue('RESOLUTION_UNVERIFIED', str(resolution.get('id'))))
+    report['active_findings'] = [f for i, f in enumerate(findings) if f.get('id', f'finding:{i}') not in resolved]
+    if any(r.get('verdict') == 'FAIL' and r['id'] not in resolved and r.get('claim_id') not in claims for r in reviews):
+        invalid_active = True
+        errors.append(issue('UNRESOLVED_HISTORY', 'removed claim still has an unresolved failure'))
+    active_repairs = []
+    for i, repair in enumerate(repairs):
+        if repair.get('id', f'repair:{i}') in resolved:
+            continue
+        if repair.get('outcome') == 'IMPROVED' and not (current_observation(repair) and attested(repair, host, 'repair')):
+            repair = dict(repair, outcome='UNVERIFIED')
+        active_repairs.append(repair)
+    report['disposition'] = repair_disposition(active_repairs, report['active_findings'])
     for claim_id, claim in claims.items():
         results = []
-        claim_reviews = [r for r in reviews if r.get('claim_id') == claim_id]
+        claim_reviews = [r for r in reviews if r.get('claim_id') == claim_id and r['id'] not in resolved]
+        unresolved_failures = [r for r in claim_reviews if r.get('verdict') == 'FAIL']
         for reviewer in claim['reviewers']:
-            matching = [r for r in claim_reviews if r.get('reviewer') == reviewer]
+            matching = [r for r in claim_reviews if r.get('reviewer') == reviewer and current_observation(r)]
             verdict = 'UNVERIFIED'
-            # Reported failures cannot be laundered by adding a later PASS.
-            if any(r.get('verdict') == 'FAIL' for r in matching):
+            # Historical FAIL requires an attested resolution; historical PASS
+            # is simply stale. Any consultant can report a blocking current failure.
+            if unresolved_failures:
                 verdict = 'FAIL'
-            elif len(matching) == 1:
-                r = matching[0]
-                if (r.get('verdict') in VERDICTS and text(r.get('observed')) and text(r.get('context_id')) and
-                        r.get('snapshot') == current and evidence_matches(r, claim) and attested(r, host, 'review')):
-                    verdict = r['verdict']
+            elif matching:
+                checked = [r['verdict'] if r.get('verdict') in VERDICTS and text(r.get('observed')) and
+                           text(r.get('context_id')) and evidence_matches(r, claim) and attested(r, host, 'review')
+                           else 'UNVERIFIED' for r in matching]
+                verdict = aggregate(checked)
             results.append(verdict)
         verdict = aggregate(results)
         report['claims'][claim_id] = verdict
@@ -181,6 +272,21 @@ def assess(bundle, host=None):
             grouped[claim['category']].append(verdict)
     for category, values in grouped.items():
         categories[category] = aggregate(values)
+    for finding in report['active_findings']:
+        claim = claims.get(finding.get('claim_id'), {})
+        category = 'Structure' if finding.get('kind') == 'structural' else claim.get('category', finding.get('category'))
+        required = claim.get('required', finding.get('required', True))
+        if finding.get('claim_id') and not claim:
+            invalid_active = True
+            errors.append(issue('INVALID_FINDING', 'unknown claim'))
+        if required:
+            if category not in categories or finding.get('verdict') not in VERDICTS:
+                invalid_active = True
+                errors.append(issue('INVALID_FINDING', 'category/verdict required'))
+            else:
+                categories[category] = aggregate([categories[category], finding['verdict']])
+                if category == 'Structure' and finding['verdict'] == 'FAIL':
+                    categories['VisualQuality'] = 'FAIL'
     # Missing any declared interaction also blocks responsive completion, even if
     # a still-frame responsive review passed.
     if not report['proof_complete'] and categories['Responsive'] == 'PASS':
@@ -193,12 +299,16 @@ def assess(bundle, host=None):
                 categories[category] = 'UNVERIFIED'
     context_ids = {r.get('context_id') for r in reviews} | {run['implementation_context']}
     critic_valid = (not identity(intent, critic) and text(critic.get('context_id')) and
-                    critic['context_id'] not in context_ids and critic.get('snapshot') == current and
+                    critic['context_id'] not in context_ids and current_observation(critic) and
                     attested(critic, host, 'critic'))
     report['critic_reviewed'] = bool(critic_valid)
     critic_results = critic.get('results', [])
     if not isinstance(critic_results, list) or any(not isinstance(r, dict) for r in critic_results):
         critic_results = []
+        invalid_active = True
+    if any(r.get('claim_id') not in claims or r.get('verdict') not in VERDICTS for r in critic_results):
+        errors.append(issue('INVALID_CRITIC_RESULT', 'unknown claim or verdict'))
+        invalid_active = True
     for category in ('VisualConformance', 'VisualQuality'):
         expected_claims = [c for c in claims.values() if c['category'] == category and c['required']]
         verdicts = []
@@ -226,6 +336,9 @@ def assess(bundle, host=None):
             acceptance.get('snapshot') == current and acceptance.get('build_id') == run['build_id'] and
             not identity(intent, acceptance)):
         report['user_acceptance'] = 'APPROVED'
-    report['approved'] = (report['proof_complete'] and all(v == 'PASS' for v in categories.values()) and
+    report['approved'] = (not invalid_active and report['disposition'] == 'CONTINUE' and
+                          report['proof_complete'] and all(v == 'PASS' for v in categories.values()) and
                           report['user_acceptance'] == 'APPROVED')
+    if invalid_active:
+        report['proof_complete'] = False
     return report

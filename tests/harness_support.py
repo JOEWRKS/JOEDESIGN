@@ -124,6 +124,10 @@ def proof_bundle(folder):
                       'observed': 'Synthetic observation', 'evidence_ids': [claim['target_id'] + '-' + claim['kind']],
                       'reviewer': reviewer, 'context_id': reviewer, 'receipt_id': review_id,
                       'snapshot': snapshot}
+            review.update(run_id='run-1', build_id='build-1')
+            review['evidence_hash'] = canonical_hash([{k: item[k] for k in
+                ('id', 'target', 'kind', 'sha256', 'run_id', 'build_id', 'snapshot')}
+                for item in sorted(b['evidence']['items'], key=lambda i: i['id']) if item['id'] in review['evidence_ids']])
             b['evidence']['reviews'].append(review)
             host.records[review_id] = copy.deepcopy(review) | {'kind': 'review'}
     b['critique'] = {'candidate_id': 'A', 'revision': 'r1', 'scope_id': 'evidence',
@@ -132,6 +136,11 @@ def proof_bundle(folder):
                          {'claim_id': c['id'], 'verdict': 'PASS', 'observed': 'Synthetic critic observation',
                           'evidence_ids': [c['target_id'] + '-' + c['kind']]}
                          for c in b['matrix']['claims'] if c['category'] in ('VisualConformance', 'VisualQuality')]}
+    b['critique'].update(run_id='run-1', build_id='build-1')
+    b['critique']['evidence_ids'] = sorted({eid for row in b['critique']['results'] for eid in row['evidence_ids']})
+    b['critique']['evidence_hash'] = canonical_hash([{k: item[k] for k in
+        ('id', 'target', 'kind', 'sha256', 'run_id', 'build_id', 'snapshot')}
+        for item in sorted(b['evidence']['items'], key=lambda i: i['id']) if item['id'] in b['critique']['evidence_ids']])
     host.records['critic'] = copy.deepcopy(b['critique']) | {'kind': 'critic'}
     host.records['calibration'] = {'kind': 'calibration', 'status': 'IN_SCOPE',
                                   'snapshot': snapshot, 'approved_by': 'design-authority',

@@ -1,0 +1,67 @@
+{
+  "kind": "CLI integration with synthetic artifacts; no browser/model/visual evaluation",
+  "results": [
+    {
+      "command": "advance INTENT_READY",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "command": "advance REFERENCES_FOUND",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "command": "advance REFERENCE_LOCKED",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "command": "advance CONTRACT_READY",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "command": "advance IMPLEMENTED",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "command": "advance CRAFTED",
+      "exit": 0,
+      "error": null
+    },
+    {
+      "command": "advance PROOF_COMPLETE",
+      "exit": 1,
+      "error": {
+        "error": "PROOF_INCOMPLETE",
+        "status": "NOT_READY"
+      }
+    },
+    {
+      "command": "handoff",
+      "exit": 2,
+      "approved": false,
+      "categories": {
+        "Technical": "UNVERIFIED",
+        "Accessibility": "UNVERIFIED",
+        "Responsive": "UNVERIFIED",
+        "Craft": "UNVERIFIED",
+        "Structure": "UNVERIFIED",
+        "VisualConformance": "UNVERIFIED",
+        "VisualQuality": "UNVERIFIED",
+        "VisualInternal": "UNVERIFIED"
+      },
+      "user_acceptance": "PENDING"
+    },
+    {
+      "command": "bundle craft after structural FAIL",
+      "exit": 1,
+      "error": {
+        "error": "MATERIAL_REWORK_REQUIRED: stop polishing and diagnose structure",
+        "status": "NOT_READY"
+      }
+    }
+  ]
+}

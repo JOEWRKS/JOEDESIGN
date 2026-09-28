@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from harness.io import read_artifact, write_artifact, digest, file_hash
+from harness.io import read_artifact, write_artifact, write_artifacts_transaction, digest, file_hash
 from harness.references import build_index, retrieve
 from harness.contracts import guard_change
 from harness.evidence import assess, snapshot
@@ -63,7 +63,7 @@ def main(argv=None):
             result = {'issues': guard_change(bundle['intent'], bundle['contract'], read_artifact(args.change))}
             code = 2 if result['issues'] else 0
         elif args.command == 'repair':
-            result = {'disposition': repair_disposition(bundle['evidence'].get('repairs', []), bundle['critique'].get('findings', []))}
+            result = {'disposition': assess(bundle)['disposition']}
             code = 0 if result['disposition'] == 'CONTINUE' else 2
         elif args.command == 'bind':
             # Binding records identity, never authenticity. Existing observations
@@ -72,8 +72,8 @@ def main(argv=None):
             bundle['evidence']['run'] = {k: bundle['intent'][k] for k in ('candidate_id', 'revision', 'scope_id')} | {
                 'run_id': args.run_id, 'build_id': args.build_id, 'implementation_context': args.context_id,
                 'snapshot': snapshot(bundle)}
-            write_artifact(args.root / ARTIFACTS['matrix'], bundle['matrix'], overwrite=True)
-            write_artifact(args.root / ARTIFACTS['evidence'], bundle['evidence'], overwrite=True)
+            write_artifacts_transaction({args.root / ARTIFACTS['matrix']: bundle['matrix'],
+                                         args.root / ARTIFACTS['evidence']: bundle['evidence']})
             result = {'bound': bundle['evidence']['run'], 'trust': 'LOCAL_UNAUTHENTICATED'}
     if getattr(args, 'output', None):
         write_artifact(args.output, result)
