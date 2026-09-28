@@ -4,7 +4,7 @@ import argparse
 import json
 import sys
 from pathlib import Path
-from harness.io import read_artifact, write_artifact, digest
+from harness.io import read_artifact, write_artifact, digest, file_hash
 from harness.references import build_index, retrieve
 from harness.contracts import guard_change
 from harness.evidence import assess, snapshot
@@ -14,6 +14,7 @@ from harness.pipeline import ARTIFACTS, init_bundle, load_bundle, transition, cu
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
+    p = sub.add_parser('doctor'); p.add_argument('--skills-root', type=Path, action='append')
     p = sub.add_parser('init'); p.add_argument('root', type=Path); p.add_argument('--intent', type=Path, required=True)
     p = sub.add_parser('index'); p.add_argument('corpus', type=Path); p.add_argument('--output', type=Path)
     p = sub.add_parser('retrieve'); p.add_argument('index', type=Path); p.add_argument('--intent', type=Path, required=True); p.add_argument('--limit', type=int, default=10); p.add_argument('--output', type=Path)
@@ -27,7 +28,23 @@ def main(argv=None):
         if name == 'bind': p.add_argument('--run-id', required=True); p.add_argument('--build-id', required=True); p.add_argument('--context-id', required=True)
     args = parser.parse_args(argv)
     code = 0
-    if args.command == 'init':
+    if args.command == 'doctor':
+        roots = args.skills_root or [Path.home() / '.codex/skills', Path.home() / '.agents/skills']
+        dependencies = {}
+        for name in ('joedesign', 'impeccable', 'ui-ux-pro-max', 'web-design-guidelines',
+                     'react-best-practices', 'optimize-web-animations'):
+            candidates = [root / name / 'SKILL.md' for root in roots]
+            found = next((p for p in candidates if p.is_file()), None)
+            dependencies[name] = {'status': 'AVAILABLE' if found else 'UNAVAILABLE',
+                                  'path': str(found) if found else None,
+                                  'sha256': file_hash(found) if found else None}
+        ready = all(dependencies[n]['status'] == 'AVAILABLE' for n in
+                    ('joedesign', 'impeccable', 'ui-ux-pro-max', 'web-design-guidelines'))
+        result = {'dependencies': dependencies, 'ready_for_synthesis': ready,
+                  'host_verifier': 'UNAVAILABLE', 'automatic_certification': False,
+                  'note': 'Availability and file identity do not prove skill invocation or behavior.'}
+        code = 0 if ready else 2
+    elif args.command == 'init':
         init_bundle(args.root, read_artifact(args.intent)); result = {'initialized': str(args.root), 'artifacts': list(ARTIFACTS.values())}
     elif args.command == 'index': result = build_index(args.corpus)
     elif args.command == 'retrieve': result = retrieve(read_artifact(args.index), read_artifact(args.intent), args.limit)

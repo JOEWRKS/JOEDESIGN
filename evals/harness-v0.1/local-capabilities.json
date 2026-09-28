@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "joedesign": {
+      "status": "AVAILABLE",
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\joedesign\\SKILL.md",
+      "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+    },
+    "impeccable": {
+      "status": "AVAILABLE",
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\SKILL.md",
+      "sha256": "c2c0d8e5ea5dc3f36b879f099e72d83f506a6e626dcc075c1a7e14763f200d4d"
+    },
+    "ui-ux-pro-max": {
+      "status": "AVAILABLE",
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\SKILL.md",
+      "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9"
+    },
+    "web-design-guidelines": {
+      "status": "AVAILABLE",
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\web-design-guidelines\\SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    "react-best-practices": {
+      "status": "AVAILABLE",
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\react-best-practices\\SKILL.md",
+      "sha256": "71ed7794962fa6e803ee83030517b5b93a9f70fbfeb431ec4535c5480a8d8355"
+    },
+    "optimize-web-animations": {
+      "status": "AVAILABLE",
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\optimize-web-animations\\SKILL.md",
+      "sha256": "37a8f512bb22a4f2112e4ed388068c0cd184d312d64ee00a993da5bf04ded947"
+    }
+  },
+  "ready_for_synthesis": true,
+  "host_verifier": "UNAVAILABLE",
+  "automatic_certification": false,
+  "note": "Availability and file identity do not prove skill invocation or behavior."
+}

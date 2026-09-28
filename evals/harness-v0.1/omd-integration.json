@@ -1,0 +1,29 @@
+{
+  "source_commit": "bb0d89ca8dcddf0bf1019d8fe8d25dcfaa567c70",
+  "corpus_fingerprint": "2700f55a775010bbc4b02d5df4c10769188e20bd5f46720598457adc6be4b3f7",
+  "documents": [
+    {
+      "id": "linear.app",
+      "sha256": "4f6ff9b6c80e8a7c12e3cf095eda4b0edb032524db05cc71544fbf88346053ac",
+      "quality": "UNKNOWN"
+    },
+    {
+      "id": "stripe",
+      "sha256": "7b37a2705badb58c1173a1b019218ad817fee919b06d59800ac001fe5409015d",
+      "quality": "UNKNOWN"
+    },
+    {
+      "id": "vercel",
+      "sha256": "5d4e285d48586d8f1ed5613d97ffa7e9c2d076437ca51bf4e3875bfb11f092ce",
+      "quality": "UNKNOWN"
+    }
+  ],
+  "candidate_ids": [
+    "stripe",
+    "linear.app",
+    "vercel"
+  ],
+  "status": "SHORTLIST_ONLY",
+  "visual_fit": "UNVERIFIED",
+  "source_visual_inspection": "NOT_RUN"
+}

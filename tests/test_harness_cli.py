@@ -54,6 +54,17 @@ class CLITests(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         self.assertEqual(json.loads(result.stdout)['candidates'][0]['name'], '한글')
 
+    def test_doctor_reports_missing_dependencies_without_installing(self):
+        empty = self.root / 'skills'
+        empty.mkdir()
+        result = self.run_cli('doctor', '--skills-root', empty)
+        self.assertEqual(result.returncode, 2)
+        self.assertTrue(result.stdout.strip(), 'Doctor capability is not implemented')
+        report = json.loads(result.stdout)
+        self.assertFalse(report['ready_for_synthesis'])
+        self.assertEqual(report['host_verifier'], 'UNAVAILABLE')
+        self.assertEqual(list(empty.iterdir()), [])
+
 
 if __name__ == '__main__':
     unittest.main()

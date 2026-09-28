@@ -9,6 +9,7 @@ Each candidate owns a separate artifact directory; the examples use
 `.design-harness/candidate-a`. The CLI never changes the target application's code.
 
 ```powershell
+python <skill>/scripts/harness_cli.py doctor
 python <skill>/scripts/harness_cli.py init .design-harness/candidate-a --intent intent.json
 python <skill>/scripts/harness_cli.py index <local-omd-references-root> --output index.json
 python <skill>/scripts/harness_cli.py retrieve index.json --intent intent.json --output shortlist.json
