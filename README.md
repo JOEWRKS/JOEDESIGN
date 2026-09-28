@@ -1,5 +1,23 @@
 # JOEDESIGN
 
+## Design Harness v0.1 implementation candidate
+
+The separate [joedesign-harness skill](skills/joedesign-harness/SKILL.md) implements
+OMD corpus retrieval, grounded design contracts, scoped transitions, structural
+rework and evidence/approval policy. The original joedesign v0.2 package is unchanged.
+See [usage and trust boundaries](skills/joedesign-harness/references/operation.md)
+and [verification/limitations](evals/harness-v0.1/README.md).
+
+Run `python skills/joedesign-harness/scripts/harness_cli.py --help`.
+Tests: `python -m unittest discover -s tests -v` and
+`node --test tests/joedesign-v02.tests.mjs`.
+No global install is performed. Copy the harness folder project-locally beside the
+existing joedesign skill when adopting this candidate. A trusted host evidence adapter
+is not bundled; local-only use cannot issue final APPROVED. Design quality improvement
+and operational readiness remain unverified.
+
+## Preserved v0.2 documentation
+
 > JOEDESIGN으로 디자인해.
 
 JOEDESIGN preserves product meaning while translating approved visual material and

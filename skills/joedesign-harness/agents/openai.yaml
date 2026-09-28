@@ -1,0 +1,4 @@
+interface:
+  display_name: "JOEDESIGN Harness"
+  short_description: "Ground UI structure in references and verify scoped proof"
+  default_prompt: "Use $joedesign-harness to translate relevant references into a product-grounded UI and verify the actual result."

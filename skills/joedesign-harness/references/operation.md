@@ -1,0 +1,165 @@
+# Operation and artifact contracts
+
+Contents: CLI; artifact fields; evidence service; RACI; known boundaries.
+
+## CLI
+
+Requires Python 3.11+. Use the script's absolute path from any project directory.
+Each candidate owns a separate artifact directory; the examples use
+`.design-harness/candidate-a`. The CLI never changes the target application's code.
+
+```powershell
+python <skill>/scripts/harness_cli.py init .design-harness/candidate-a --intent intent.json
+python <skill>/scripts/harness_cli.py index <local-omd-references-root> --output index.json
+python <skill>/scripts/harness_cli.py retrieve index.json --intent intent.json --output shortlist.json
+python <skill>/scripts/harness_cli.py bundle .design-harness/candidate-a synthesis --output synthesis.json
+python <skill>/scripts/harness_cli.py bind .design-harness/candidate-a --run-id run-1 --build-id <actual-build-id> --context-id <actual-builder-context>
+python <skill>/scripts/harness_cli.py advance .design-harness/candidate-a INTENT_READY
+python <skill>/scripts/harness_cli.py check .design-harness/candidate-a
+python <skill>/scripts/harness_cli.py guard .design-harness/candidate-a --change change.json
+python <skill>/scripts/harness_cli.py repair .design-harness/candidate-a
+python <skill>/scripts/harness_cli.py handoff .design-harness/candidate-a --output report.json
+```
+
+Fill the artifacts between commands. `bind` records current identity after the lock,
+contract and matrix are complete; it does not approve or authenticate anything.
+Every transition must be requested in sequence: DRAFT → INTENT_READY → REFERENCES_FOUND
+→ REFERENCE_LOCKED → CONTRACT_READY → IMPLEMENTED → CRAFTED → PROOF_COMPLETE
+→ CRITIC_REVIEWED → APPROVED. USER_REVIEW is allowed early and records an event,
+without claiming intermediate stages completed. REWORK returns to DRAFT.
+An input change invalidates downstream recorded stages. States are execution records;
+the assessed gates govern certification.
+
+Exit 0: command succeeded (for check/handoff, all approval conditions passed).
+Exit 2: useful result generated but incomplete/blocked. Exit 1: invalid input or I/O.
+Output files use exclusive creation. Init refuses a nonempty destination. Failed
+advance does not modify the manifest. Seven runtime artifacts use UTF-8; Markdown
+artifacts contain exactly one fenced JSON payload, which is the machine contract.
+Additional prose is not machine-validated or authoritative over that payload.
+
+No network call is performed by index/retrieve. Point to the OMD local reference
+directory containing company DESIGN.md files. Top-level scalar YAML metadata is
+read without evaluating YAML directives; nested verification claims remain in the
+source document. Unknown quality is UNKNOWN even if a verification section exists.
+Duplicate IDs and escaped symlinks fail. Source paths and hashes permit reinspection.
+Term matching is document retrieval, not aesthetic fit. Hard metadata filters use
+explicit `reference_filters` lists (for example category); missing fields do not match.
+
+## Artifact fields
+
+Every scoped artifact carries candidate_id, revision and scope_id. IDs must be unique
+within each collection. Source identity and product requirements are never inferred
+from a style name. All examples below are field descriptions, not observations.
+
+| Artifact | Required content |
+|---|---|
+| DESIGN_INTENT.json | product_source; requirements[{id,kind:content/action/state,description}]; constraints[{id,description}]; required_axes; exact targets; assets; search_terms; rejected_patterns |
+| REFERENCE_CANDIDATES.json | retrieval output, catalog fingerprint, unresolved requirements. Not a lock |
+| REFERENCE_LOCK.md | references[{id,role:primary/secondary,owns,source,source_sha256,observation:{kind:render/interaction,pointer,description},take,do_not_take,applies_to,unknown}] |
+| DESIGN_CONTRACT.md | product_invariants (exact requirement IDs), reference_ids, patterns, structure_claims, protected_regions, translations described below |
+| STATE_MATRIX.md | exact intent targets, claims, bindings of intent/lock/contract canonical hashes |
+| CRITIQUE.md | context_id, receipt_id, snapshot, calibration_id, results[{claim_id,verdict,observed,evidence_ids}], findings[{kind:structural/local,verdict,reason}] |
+| EVIDENCE_MANIFEST.json | run, items, reviews, repairs, append-only history, acceptance_receipt_id |
+
+Target: `{id, route, surface, family, viewport:[width,height], state, theme, locale,
+required_kinds:[render/interaction/technical]}`. Each target is one exact state; include
+opening/below-fold/error/loading/selected/narrow cases where the real brief requires them.
+Do not drop required rows to pass. A true scope revision requires Product authority and
+new bindings, review and approval. No OUT_OF_SCOPE laundering switch exists.
+
+Translation: `{id, reference_id, axis, requirement_ids, constraint_ids,
+source_observation, source_kind, rationale, spatial_rule, responsive_rule,
+implementation:{component,selector}, expected, falsifier, target_ids}`.
+All required content/actions/constraints and design axes must be covered.
+Interaction/motion adds `motion:{origin:proposed/observed,trigger,start,end,interrupt,reduced}`.
+Observed motion requires an interaction source; a static source can support a new
+proposed interaction hypothesis, which must be tested on the actual result.
+
+Claim: `{id,category,target_id,kind,required:true/false,expected,reviewers}`.
+Material target categories: Technical, Accessibility, Responsive, Craft, Structure,
+VisualConformance, VisualQuality. Technical requires technical evidence. Required
+Structure claim IDs include those in the contract. Structure tests the relationship
+and task flow, not just individual component appearance.
+
+Asset: `{id,status:VERIFIED/PROVISIONAL/MISSING/REJECTED,critical,source,role}`.
+VERIFIED means actual intended resource rendered; a font download alone is insufficient.
+Inspect actual family/weight/glyphs, unexpected fallback, crop and language/content length.
+Keep fixtures explicit; do not turn synthetic results into factual product evidence.
+
+Change guard input: `{role:craft/implementer,changed_axes,routes,families,selectors,
+product_mutation,ownership_mutation}`. Guard reports broad selector risks; it is not
+a complete CSS parser and cannot detect impacts the caller did not supply. Inspect
+the real diff and protected surfaces. Material imagery/color/interaction changes
+belong to synthesis; local optical refinements stay within the locked contract.
+
+Repair: `{cause_id,hypothesis,outcome:IMPROVED/FAIL/UNVERIFIED/REGRESSION,
+before_evidence,after_evidence,protected_regions,observation}`. Preserve original attempts.
+An unresolved structural finding blocks craft/expansion; do not delete it to proceed.
+Rework needs a new hypothesis/revision and new observations, not a renamed same repair.
+
+## Evidence service and trust boundary
+
+`scripts/harness/evidence.py` exposes `assess(bundle, host=None)` and HostVerifier.
+The CLI deliberately supplies no host. An embedding host must implement
+`resolve(receipt_id)` using its own immutable execution and authenticated user-event
+store. It must protect the verifier/policy from the implementation writer. A JSON
+file reader, same-process separation or an agent-provided signature key is insufficient.
+No trust plugin or host service is installed by this package.
+
+Canonical snapshot: SHA256 of sorted compact UTF-8 JSON of intent, lock, contract,
+matrix. Matrix bindings hash intent/lock/contract. Actual build/run IDs must correspond
+to the captured implementation, fonts/assets/content and target data, not caller labels.
+The host must refuse mixed/changed-build captures and preserve prior unresolved failures.
+
+- Capture item: id, target_id, exact target object, kind, path, sha256, receipt_id,
+  run_id, build_id, snapshot, action and result. Interaction requires action/result.
+  The receipt has kind=capture, evidence_kind matching item.kind, and matching fields.
+  Local bytes are hashed again; receipt existence alone does not validate a target.
+- Review: id, claim_id, verdict, observed, evidence_ids, reviewer, context_id,
+  receipt_id, snapshot. Its host receipt has kind=review and matching fields.
+  An unobserved/self-authored PASS never authenticates itself. Reported FAIL is
+  conservatively blocking until revision/re-observation; unrelated PASS cannot erase it.
+- Critic: corresponding receipt kind=critic with exact input snapshot/results/context.
+  Context must differ from builder and prior reviewers. The bundle excludes builder
+  scores/rationale, but the host must actually launch the fresh context.
+- Calibration: kind=calibration, status=IN_SCOPE, snapshot, approved_by,
+  evaluation_id, criteria_id, held_out=true. Host resolves whether the human-approved
+  evaluation applies to current model/rules/domain, not the implementation agent.
+- Acceptance: kind=user_acceptance, actor=user, decision=APPROVE_EXACT_OUTPUT,
+  snapshot, candidate_id, revision, scope_id, build_id, message. Host authenticates the
+  actual user event and exact scope; a user-like string in an artifact is insufficient.
+
+These are integration contracts. Synthetic test receipts demonstrate policy behavior,
+not that a real host has been connected or is tamper-proof. Missing host → UNVERIFIED.
+The controller cannot guarantee the honesty of arbitrary free-text chat; official
+handoff is generated from assessment and equality-checked if submitted for validation.
+
+## RACI and consultation
+
+| Claim family | First R | Second C | Third C |
+|---|---|---|---|
+| Composition/reference/image/mobile hierarchy/coherence | JOEDESIGN | Impeccable | UI UX Pro Max |
+| Type/spacing/icons/visual states/expressive motion | Impeccable | JOEDESIGN or UI UX Pro Max for state behavior | UI UX Pro Max or Vercel for accessibility |
+| Content/input/error/recovery | UI UX Pro Max | Vercel | Impeccable |
+| Semantics/focus/accessibility/overflow | Vercel | UI UX Pro Max | Impeccable |
+| Animation resource cost | Optimize Web Animations | Vercel | Impeccable |
+| React/Next performance | React Best Practices | Vercel | UI UX Pro Max |
+
+The CLI matrix enforces the minimum category consultations; specific claims can add
+reviewers. Third consultation is required when conflict/uncertainty/recurrence warrants
+it; record that reviewer in the claim. Role labels do not prove actual skill usage.
+Pin the skill/source version with real execution context in host records.
+
+A: Harness for evidence/procedural gates; implementation lead for code; JOEDESIGN
+for synthesis proposals; fresh Critic for internal quality diagnosis; user/designated
+Product authority for meaning; user for exact acceptance. No votes/score averaging.
+
+## What this does not prove
+
+The code validates coverage, identity and the declared relationships. It cannot judge
+whether a filled rationale is insightful or whether a composition is beautiful.
+Early actual render, integrated visual review and human evaluation remain necessary.
+No live OMD visual inspection, browser collector, calibrated Critic service or authenticated
+receipt backend is bundled. Use host/browser tools; do not label adapters as executed.
+The original seven artifact filenames are retained; handwritten duplicate JSON Schemas
+are avoided in favor of the executable validators and templates they consume.

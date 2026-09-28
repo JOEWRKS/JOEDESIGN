@@ -18,8 +18,8 @@ const skill=path.join(root,'skills/joedesign');
 const files=['SKILL.md','agents/openai.yaml','templates/DESIGN.md'];
 const inventory=()=>walk(skill).map(p=>path.relative(skill,p).replaceAll('\\','/')).sort();
 
-test('package — exactly one discoverable public skill and no extra runtime surface',()=>{
-  assert.deepEqual(walk(path.join(root,'skills')).filter(p=>path.basename(p)==='SKILL.md').map(p=>path.relative(root,p).replaceAll('\\','/')),['skills/joedesign/SKILL.md']);
+test('package — frozen v0.2 core plus the separately authorized harness entrypoint',()=>{
+  assert.deepEqual(walk(path.join(root,'skills')).filter(p=>path.basename(p)==='SKILL.md').map(p=>path.relative(root,p).replaceAll('\\','/')).sort(),['skills/joedesign-harness/SKILL.md','skills/joedesign/SKILL.md']);
   assert.deepEqual(inventory(),files);
   const source=read('skills/joedesign/SKILL.md').toString();
   assert.match(source,/^---\r?\nname: joedesign\r?\ndescription: [^\n]+\r?\n---/);
