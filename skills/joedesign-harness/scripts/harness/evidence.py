@@ -85,6 +85,9 @@ def validate_matrix(bundle):
     claims = rows(matrix.get('claims'), 'matrix.claims', errors)
     claim_ids = ids(claims, 'claims', errors)
     target_ids = {t['id'] for t in intent['targets']}
+    visual_categories = {'VisualConformance', 'VisualQuality'}
+    motion_translations = {r['id']: r for r in bundle['contract'].get('translations', [])
+                           if r.get('axis') == 'motion'}
     for claim in claims:
         category = claim.get('category')
         reviewers = claim.get('reviewers')
@@ -97,12 +100,30 @@ def validate_matrix(bundle):
         if not set(REVIEWERS[category]) <= set(reviewers):
             errors.append(issue('MISSING_REVIEWER', str(claim['id'])))
         expected_kind = 'technical' if category == 'Technical' else 'interaction' if category == 'Accessibility' else 'render'
-        if claim['kind'] != expected_kind:
+        visual_motion = category in visual_categories and claim['kind'] == 'interaction'
+        if visual_motion:
+            translation = motion_translations.get(claim.get('translation_id'), {})
+            if claim['target_id'] not in translation.get('target_ids', []):
+                errors.append(issue('INVALID_CLAIM', 'visual interaction claim requires an applicable motion translation'))
+        elif claim['kind'] != expected_kind:
             errors.append(issue('INVALID_CLAIM', f'{category} requires {expected_kind} evidence'))
     for target_id in target_ids:
         categories = {c.get('category') for c in claims if c.get('target_id') == target_id and c.get('required') is True}
         if not set(REVIEWERS) <= categories:
             errors.append(issue('REQUIRED_CLAIM_MISSING', target_id))
+        render_categories = {c.get('category') for c in claims if c.get('target_id') == target_id
+                             and c.get('required') is True and c.get('kind') == 'render'}
+        if not visual_categories <= render_categories:
+            errors.append(issue('VISUAL_RENDER_PROOF_REQUIRED', target_id))
+    # Endpoints and successful button presses do not establish expressive motion.
+    # Keep still-image review AND require a separate observation of each sequence.
+    for translation_id, translation in motion_translations.items():
+        for target_id in translation.get('target_ids', []):
+            categories = {c.get('category') for c in claims if c.get('target_id') == target_id
+                          and c.get('required') is True and c.get('kind') == 'interaction'
+                          and c.get('translation_id') == translation_id}
+            if not visual_categories <= categories:
+                errors.append(issue('MOTION_QUALITY_PROOF_REQUIRED', f'{translation_id}: {target_id}'))
     mandated = set(bundle['contract'].get('structure_claims', []))
     eligible = {c['id'] for c in claims if c.get('category') == 'Structure' and c.get('required') is True and c.get('kind') == 'render'}
     if not mandated <= eligible:
@@ -332,10 +353,14 @@ def assess(bundle, host=None):
     categories['VisualInternal'] = aggregate([categories['VisualConformance'], categories['VisualQuality']])
     acceptance = resolve(host, manifest.get('acceptance_receipt_id')) or {}
     if (acceptance.get('kind') == 'user_acceptance' and acceptance.get('actor') == 'user' and
-            acceptance.get('decision') == 'APPROVE_EXACT_OUTPUT' and text(acceptance.get('message')) and
+            acceptance.get('decision') in ('APPROVE_EXACT_OUTPUT', 'REJECT_EXACT_OUTPUT') and text(acceptance.get('message')) and
             acceptance.get('snapshot') == current and acceptance.get('build_id') == run['build_id'] and
             not identity(intent, acceptance)):
-        report['user_acceptance'] = 'APPROVED'
+        if acceptance['decision'] == 'APPROVE_EXACT_OUTPUT':
+            report['user_acceptance'] = 'APPROVED'
+        else:
+            report['user_acceptance'] = 'REJECTED'
+            report['disposition'] = 'MATERIAL_REWORK_REQUIRED'
     report['approved'] = (not invalid_active and report['disposition'] == 'CONTINUE' and
                           report['proof_complete'] and all(v == 'PASS' for v in categories.values()) and
                           report['user_acceptance'] == 'APPROVED')

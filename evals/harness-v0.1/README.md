@@ -1,5 +1,11 @@
 # Design Harness v0.1 — implementation evidence
 
+Current disposition (2026-09-30): the existing installed Harness is retained.
+The repository source now matches that runtime baseline, including the later visual
+production/motion-quality correction. See [the adoption decision](retention-decision.md).
+The record below describes the original implementation candidate and its evidence
+at that time; it does not establish rendered-design superiority.
+
 Baseline: 893e0181f77e1af87cf9a651f291b6929e5109b0.
 Branch: codex/joedesign-harness-v01. Existing v0.2 core hashes: baseline-package.json.
 Original v0.2 regression was 14/14 before changes. Its package-wide discovery assertion

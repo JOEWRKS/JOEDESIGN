@@ -15,6 +15,11 @@ Run `python <this-skill>/scripts/harness_cli.py --help`. Read
 [operation and artifact contracts](references/operation.md) before initializing a run.
 The CLI is stdlib-only. Project runtime/browser and installed specialists do the actual work.
 
+For a new/material visual direction, read [visual production](references/visual-production.md)
+before choosing the composition, focal asset method or motion implementation. Its output is
+an actual key scene and transition, not another prose-only design approval. For an approved
+target/local repair use only the affected guidance; do not restart direction exploration.
+
 ## Ground the structure before building it
 
 1. Create an intent from real content/action/state IDs, constraints and exact target
@@ -43,8 +48,11 @@ observed structural failures. Valid strings alone do not prove the relationship 
 Build a representative target-runtime slice with actual content, including the hard
 state and narrow layout. Check the entire reading/task flow and detail, not only a
 hero or attractive crop. Record the first render and every failed/discarded candidate.
-Before dependent expansion, use `bundle ... expand`: current structural observations
-must pass. Missing trusted evidence leaves expansion unverified, not implicitly approved.
+Before dependent expansion, use `bundle ... expand`: structure, visual conformance,
+whole-screen visual quality and the remaining required checks must pass. A completed
+capture set is not a quality verdict. Missing trusted evidence leaves automated expansion
+unverified; continue authorized bounded production experiments and show their actual results
+without claiming certification. Do not wait for unavailable infrastructure to make a proof.
 
 If the structure fails, return immediately to synthesis/reference interpretation.
 Do not try to rescue it with type, borders, shadows or repeated CSS tweaks.
@@ -80,6 +88,10 @@ Generate a `critic` bundle for a fresh context; do not send builder ratings/rati
 Critic diagnoses contract conformance and whole-screen quality separately. Calibration
 requires real user-rated examples and held-out evaluation, not the Critic's own marks.
 Uncalibrated absence of detected defects stays UNVERIFIED. A demonstrated failure stays FAIL.
+For material motion, declare the `motion` axis and require sequence-based visual claims
+alongside still views. Endpoint navigation and static reviews do not establish motion quality.
+An explicit user rejection remains REJECTED; internal passes cannot turn it into PENDING
+or acceptance. Preserve the rejected output and change the implicated production decision.
 
 Run `check`/`handoff`; report the generated states and limitations. The shipped CLI has
 **no authenticated host receipt provider**. Local JSON and hashes cannot authenticate

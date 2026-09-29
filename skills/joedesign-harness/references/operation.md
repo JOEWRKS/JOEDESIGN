@@ -29,7 +29,10 @@ Every transition must be requested in sequence: DRAFT → INTENT_READY → REFER
 → CRITIC_REVIEWED → APPROVED. USER_REVIEW is allowed early and records an event,
 without claiming intermediate stages completed. REWORK returns to DRAFT.
 An input change invalidates downstream recorded stages. States are execution records;
-the assessed gates govern certification.
+the assessed gates govern certification. `bundle ... expand` now requires complete
+proof, passing Structure and VisualInternal, a current independent Critic and all
+remaining categories passing. Technical/structural passes alone cannot authorize
+dependent visual expansion. Scoped experiments remain possible without certification.
 
 Exit 0: command succeeded (for check/handoff, all approval conditions passed).
 Exit 2: useful result generated but incomplete/blocked. Exit 1: invalid input or I/O.
@@ -82,7 +85,12 @@ proposed interaction hypothesis, which must be tested on the actual result.
 Claim: `{id,category,target_id,kind,required:true/false,expected,reviewers}`.
 Material target categories: Technical, Accessibility, Responsive, Craft, Structure,
 VisualConformance, VisualQuality. Technical requires technical evidence, Accessibility
-requires interaction, and the other categories require render evidence. Every target
+requires interaction, and the other categories require render evidence. Additionally,
+each translation whose axis is `motion` requires required VisualConformance and
+VisualQuality claims of kind `interaction` for each of its target_ids. These add
+`translation_id` pointing to that motion translation; they do not replace the required
+render claims. Observe actual temporal continuity/pacing, not merely an endpoint click.
+Ordinary non-motion actions do not incur expressive-motion claims. Every target
 requires render; when Product includes actions/states it also requires interaction.
 Contract-listed Structure claims must remain required Structure/render claims.
 Structure tests the relationship
@@ -135,9 +143,13 @@ The host must refuse mixed/changed-build captures and preserve prior unresolved 
 - Calibration: kind=calibration, status=IN_SCOPE, snapshot, approved_by,
   evaluation_id, criteria_id, held_out=true. Host resolves whether the human-approved
   evaluation applies to current model/rules/domain, not the implementation agent.
-- Acceptance: kind=user_acceptance, actor=user, decision=APPROVE_EXACT_OUTPUT,
+- Acceptance: kind=user_acceptance, actor=user,
+  decision=APPROVE_EXACT_OUTPUT or REJECT_EXACT_OUTPUT,
   snapshot, candidate_id, revision, scope_id, build_id, message. Host authenticates the
   actual user event and exact scope; a user-like string in an artifact is insufficient.
+  Exact rejection reports REJECTED and requires material rework even when internal
+  categories pass. A later revision is PENDING until its own scoped user decision;
+  preserve the earlier rejection as history rather than attaching it to new output.
 
 `capture_binding(items,evidence_ids)` computes evidence_hash over the selected capture
 records sorted by ID, projecting id/target/kind/sha256/run_id/build_id/snapshot into

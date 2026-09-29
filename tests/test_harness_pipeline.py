@@ -65,6 +65,27 @@ class PipelineTests(unittest.TestCase):
         self.assertNotIn('rationale', result['contract']['translations'][0])
         self.assertNotIn('reviews', result)
 
+    def test_structural_success_cannot_expand_a_visually_failed_proof(self):
+        self.b['critique']['results'][0]['verdict'] = 'FAIL'
+        report = self.api.assess(self.b, self.host)
+        self.assertEqual(report['categories']['Structure'], 'PASS')
+        self.assertTrue(report['proof_complete'])
+        with self.assertRaisesRegex(ValueError, 'VISUAL_PROOF_REQUIRED'):
+            self.api.make_role_bundle(self.b, 'expand', self.host)
+
+    def test_uncalibrated_visual_quality_cannot_expand(self):
+        del self.host.records['calibration']
+        with self.assertRaisesRegex(ValueError, 'VISUAL_PROOF_REQUIRED'):
+            self.api.make_role_bundle(self.b, 'expand', self.host)
+
+    def test_exact_user_rejection_blocks_expansion_despite_internal_passes(self):
+        self.host.records['acceptance']['decision'] = 'REJECT_EXACT_OUTPUT'
+        report = self.api.assess(self.b, self.host)
+        self.assertEqual(report['user_acceptance'], 'REJECTED')
+        self.assertFalse(report['approved'])
+        with self.assertRaisesRegex(ValueError, 'REWORK'):
+            self.api.make_role_bundle(self.b, 'expand', self.host)
+
     def test_handoff_must_equal_computed_scope_and_verdicts(self):
         proposed = {'categories': {'VisualInternal': 'PASS'}, 'approved': True, 'scope': {'scope_id': 'all-routes'}}
         with self.assertRaisesRegex(ValueError, 'HANDOFF'):

@@ -1,5 +1,18 @@
 # JOEDESIGN repository
 
+## Current Harness decision (2026-09-30)
+
+The existing installed `joedesign-harness` is retained. This branch's runtime source
+must match that installed baseline, including the visual-production/motion-quality
+correction. The later production-relationships, dependency-guard and
+`inspect-relations` experiment was not adopted: two bounded A/B tasks did not show
+unique design-quality value. See `evals/harness-v0.1/retention-decision.md`.
+The active design/RACI path below is updated with this decision; historical proposal
+language is background, not proof that every described visual judgment is automated.
+Do not modify installed skills or the preserved `skills/joedesign/` core while
+maintaining this source baseline. Keep repository tests, browser evidence, human
+quality judgment and user acceptance distinct.
+
 ## Active task: Design Harness v0.1 (2026-09-29)
 
 The user explicitly authorized implementing the r2 design, including a separate

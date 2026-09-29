@@ -144,6 +144,10 @@ def make_role_bundle(bundle, role, host=None):
         report = assess(bundle, host)
         if report['categories']['Structure'] != 'PASS' or not report['proof_complete']:
             raise ValueError('STRUCTURE_PROOF_REQUIRED: do not expand or polish a failed structure')
+        if report['categories']['VisualInternal'] != 'PASS' or not report['critic_reviewed']:
+            raise ValueError('VISUAL_PROOF_REQUIRED: structural success does not establish visual quality')
+        if any(v != 'PASS' for v in report['categories'].values()):
+            raise ValueError('PROOF_REPAIR_REQUIRED: unresolved craft, behavior or technical checks block expansion')
     result = {'role': role, 'intent': copy.deepcopy(bundle['intent']), 'lock': copy.deepcopy(bundle['lock'])}
     if role != 'synthesis':
         contract = bundle['contract']
@@ -159,11 +163,19 @@ def make_role_bundle(bundle, role, host=None):
                                                   for row in result['contract'].get('translations', [])]
             result['matrix'] = copy.deepcopy(bundle['matrix'])
             result['captures'] = copy.deepcopy(bundle['evidence'].get('items', []))
-            result['instruction'] = 'Fresh context: inspect original and actual captures; diagnose each claim. No new direction or self-score.'
+            result['instruction'] = ('Fresh context: inspect original and actual whole-screen captures at corresponding states, '
+                'plus actual sequences for motion claims. Judge visual quality separately from contract conformance. '
+                'Identify the dominant remaining visual gap, not only local defects. A click reaching an endpoint does not '
+                'prove pacing, depth or continuity. Missing sequence observation is UNVERIFIED. '
+                'Do not inherit builder ratings, invent scores or issue a blanket ship verdict.')
         elif role == 'craft':
             result['instruction'] = 'Refine local type/spacing/states within locked relationships. Material structure failure returns to synthesis immediately.'
     else:
-        result['instruction'] = 'Use JOEDESIGN with original sources. Map every required content/action/constraint to concrete spatial, responsive and interaction rules. No brand/style copying as rationale.'
+        result['instruction'] = ('Use JOEDESIGN with original sources and references/visual-production.md from this skill. '
+            'Identify the dominant visual risk and test its production method before dependent page construction. '
+            'Map actual source frames/sequences to project content, composition, asset treatment and motion beats. '
+            'A working generic zoom or placeholder focal graphic is not visual success. '
+            'No brand/style copying as rationale; preserve product meaning.')
     return result
 
 
