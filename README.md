@@ -7,21 +7,28 @@
 | 승인된 화면·원본을 구현하거나 국소 수정 | [`joedesign`](skills/joedesign/SKILL.md) | 제품 의미를 보존하며 원본의 시각 관계를 구현하고 실제 화면을 확인 |
 | 참조를 조사·번역해 새로운 시각 방향을 만들거나 큰 범위의 검증 수행 | [`joedesign-harness`](skills/joedesign-harness/SKILL.md)와 `joedesign` | Harness가 참조·계약·증거·검수 절차를 관리하고 JOEDESIGN이 시각 판단을 수행 |
 
-Impeccable은 타이포·간격·광학 정렬·표현 모션, UI UX Pro Max는 콘텐츠·상태·입력·복구,
-web-design-guidelines는 시맨틱·키보드·접근성·반응형 구현을 교차 점검한다.
-React·애니메이션 성능 스킬은 해당 구현 문제가 있을 때만 사용한다. 이들은
-별도 승인권자나 자동 실행 에이전트가 아니다. OMD는 필요한 참조를 찾는 자료원이다.
+Harness 작업은 [RACI 실행 경로](skills/joedesign-harness/references/operation.md#raci-as-the-work-route)를
+기본으로 삼는다. 항목별 R이 먼저 검사하고 C1이 교차검사하며, 충돌·불확실성·
+반복 실패 때 C2가 진단한다. A는 결과에 책임지고 I는 결과와 한계를 전달받는다.
+계약을 묶은 뒤 `harness_cli.py raci <run-dir> --claim-id <id>`로 해당 항목의
+작업 순서를 확인할 수 있다. 이 명령은 스킬을
+대신 실행하지 않는다.
+Impeccable은 시각 craft, UI UX Pro Max는 콘텐츠·입력·복구, web-design-guidelines는
+웹 접근성·반응형 구현을 맡는다. React·애니메이션 성능 스킬은 해당 문제가 있을
+때만 사용한다. 이들은 자동 실행 에이전트나 사용자 승인권자가 아니다.
+OMD는 필요한 참조를 찾는 자료원이다.
 사용자와 Product 요구, 승인된 `DESIGN.md`와 원본을 대체하지 않는다.
 
-현재 Harness 소스는 설치된 **기존판**의 런타임 파일과 일치한다. 전체 화면과
+현재 Harness는 RACI의 검토 순서와 스킬 사용 기록을 증거 계약에 반영했다. 전체 화면과
 모션 검증을 보완한 [시각 제작 지침](skills/joedesign-harness/references/visual-production.md)은
 포함한다. 별도 실험의 관계 진단·의존성 검사 확장안은 품질 이득이 확인되지 않아
 채택하지 않았다. [설계·RACI·현재 상태](docs/superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md)와
 [A/B 채택 판단](evals/harness-v0.1/retention-decision.md)을 참조한다.
 
-이 저장소 커밋은 스킬을 설치하거나 기존 설치본을 바꾸지 않는다. Harness CLI는
-로컬 참조·계약·증거의 일관성을 검사하지만 렌더링이나 미감을 자동 판정하지
-않는다. 인증된 호스트 receipt가 없어 로컬 실행만으로 최종 `APPROVED`도 발행하지
+저장소를 복제하는 것만으로 스킬이 설치되지는 않는다. Harness CLI는
+로컬 참조·계약·증거와 선언된 RACI 경로를 검사하지만 스킬을 대신 호출하거나
+렌더링·미감을 자동 판정하지 않는다. 인증된 호스트 receipt가 없어 로컬
+실행만으로 실제 스킬 사용이나 최종 `APPROVED`를 증명하지
 못한다. 실제 디자인 품질과 정확한 사용자 승인은 별도 관찰·판단 대상이다.
 
 ## 저장소 실행·검증

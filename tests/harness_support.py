@@ -91,12 +91,12 @@ def proof_bundle(folder):
     reviewer_map = {'Technical': ['implementer'], 'Accessibility': ['V', 'U'],
                     'Responsive': ['V', 'U'], 'Craft': ['I', 'J'],
                     'Structure': ['J', 'I'], 'VisualConformance': ['J', 'I'],
-                    'VisualQuality': ['J', 'I']}
+                    'VisualQuality': ['J', 'I'], 'Experience': ['U', 'V']}
     for category, reviewers in reviewer_map.items():
         for target in b['intent']['targets']:
             claim_id = 'structure' if category == 'Structure' and target['id'] == 'wide' else category + '-' + target['id']
             b['matrix']['claims'].append({'id': claim_id, 'category': category, 'target_id': target['id'],
-                'kind': 'technical' if category == 'Technical' else 'interaction' if category == 'Accessibility' else 'render',
+                'kind': 'technical' if category == 'Technical' else 'interaction' if category in ('Accessibility', 'Experience') else 'render',
                 'required': True, 'expected': 'Expected ' + claim_id, 'reviewers': reviewers})
     b['matrix']['bindings'] = {k: canonical_hash(b[k]) for k in ('intent', 'lock', 'contract')}
     snapshot = canonical_hash({k: b[k] for k in ('intent', 'lock', 'contract', 'matrix')})
@@ -117,14 +117,27 @@ def proof_bundle(folder):
                     'snapshot': snapshot}
             b['evidence']['items'].append(item)
             host.records[eid] = copy.deepcopy(item) | {'kind': 'capture', 'evidence_kind': kind}
+    sequence = 0
+    skill_ids = {'J': 'joedesign', 'I': 'impeccable', 'U': 'ui-ux-pro-max',
+                 'V': 'web-design-guidelines'}
     for claim in b['matrix']['claims']:
-        for reviewer in claim['reviewers']:
+        for index, reviewer in enumerate(claim['reviewers']):
             review_id = claim['id'] + '-' + reviewer
+            sequence += 2
             review = {'id': review_id, 'claim_id': claim['id'], 'verdict': 'PASS',
                       'observed': 'Synthetic observation', 'evidence_ids': [claim['target_id'] + '-' + claim['kind']],
                       'reviewer': reviewer, 'context_id': reviewer, 'receipt_id': review_id,
-                      'snapshot': snapshot}
+                      'snapshot': snapshot, 'raci_step': ('R', 'C1', 'C2')[index],
+                      'sequence': sequence}
             review.update(run_id='run-1', build_id='build-1')
+            if reviewer in skill_ids:
+                review.update(skill_id=skill_ids[reviewer], skill_sha256='a' * 64,
+                              skill_receipt_id=review_id + '-skill-use')
+                host.records[review['skill_receipt_id']] = {
+                    'kind': 'skill_use', 'reviewer': reviewer, 'skill_id': review['skill_id'],
+                    'source_sha256': review['skill_sha256'], 'claim_id': claim['id'],
+                    'context_id': reviewer, 'snapshot': snapshot, 'run_id': 'run-1',
+                    'build_id': 'build-1', 'sequence': sequence - 1}
             review['evidence_hash'] = canonical_hash([{k: item[k] for k in
                 ('id', 'target', 'kind', 'sha256', 'run_id', 'build_id', 'snapshot')}
                 for item in sorted(b['evidence']['items'], key=lambda i: i['id']) if item['id'] in review['evidence_ids']])

@@ -4,7 +4,7 @@ import sys
 import tempfile
 import unittest
 from pathlib import Path
-from harness_support import SCRIPTS, intent
+from harness_support import SCRIPTS, intent, proof_bundle
 
 
 class CLITests(unittest.TestCase):
@@ -33,6 +33,21 @@ class CLITests(unittest.TestCase):
         report = self.run_cli('check', target)
         self.assertEqual(report.returncode, 2)
         self.assertFalse(json.loads(report.stdout)['approved'])
+
+    def test_raci_command_returns_assignment_without_claiming_execution(self):
+        from harness.io import write_artifact
+        from harness.pipeline import ARTIFACTS
+        target = self.root / 'proof'
+        self.run_cli('init', target, '--intent', self.source)
+        bundle, _ = proof_bundle(self.root)
+        for key in ('intent', 'lock', 'contract', 'matrix', 'critique', 'evidence'):
+            write_artifact(target / ARTIFACTS[key], bundle[key], overwrite=True)
+        result = self.run_cli('raci', target, '--claim-id', 'structure')
+        self.assertEqual(result.returncode, 0, result.stderr)
+        plan = json.loads(result.stdout)
+        self.assertEqual([step['step'] for step in plan['steps']], ['R', 'C1'])
+        self.assertEqual([step['skill_id'] for step in plan['steps']], ['joedesign', 'impeccable'])
+        self.assertEqual(plan['execution'], 'UNVERIFIED')
 
     def test_failed_transition_preserves_manifest(self):
         target = self.root / 'proof'

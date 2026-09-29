@@ -8,9 +8,19 @@ from .io import digest, file_hash
 from .contracts import identity, issue, ids, rows, strings, text, validate_intent, validate_lock, validate_contract
 
 VERDICTS = {'PASS', 'FAIL', 'UNVERIFIED'}
-REVIEWERS = {'Technical': ['implementer'], 'Accessibility': ['V', 'U'],
-             'Responsive': ['V', 'U'], 'Craft': ['I', 'J'], 'Structure': ['J', 'I'],
-             'VisualConformance': ['J', 'I'], 'VisualQuality': ['J', 'I']}
+RACI_ROUTES = {'Technical': ('implementer',), 'Accessibility': ('V', 'U', 'I'),
+               'Responsive': ('V', 'U', 'I'), 'Craft': ('I', 'J', 'U'),
+               'Structure': ('J', 'I', 'U'), 'VisualConformance': ('J', 'I', 'U'),
+               'VisualQuality': ('J', 'I', 'U'), 'Experience': ('U', 'V', 'I'),
+               'AnimationPerformance': ('M', 'V', 'I'),
+               'ReactPerformance': ('R', 'V', 'U')}
+REVIEWERS = {category: list(route[:2]) for category, route in RACI_ROUTES.items()}
+SKILL_IDS = {'J': 'joedesign', 'I': 'impeccable', 'U': 'ui-ux-pro-max',
+             'V': 'web-design-guidelines', 'M': 'optimize-web-animations',
+             'R': 'vercel-react-best-practices'}
+RACI_STEPS = ('R', 'C1', 'C2')
+BASE_CATEGORIES = {'Technical', 'Accessibility', 'Responsive', 'Craft', 'Structure',
+                   'VisualConformance', 'VisualQuality'}
 
 
 class HostVerifier(Protocol):
@@ -97,9 +107,15 @@ def validate_matrix(bundle):
                 not strings(reviewers)):
             errors.append(issue('INVALID_CLAIM', str(claim.get('id'))))
             continue
-        if not set(REVIEWERS[category]) <= set(reviewers):
-            errors.append(issue('MISSING_REVIEWER', str(claim['id'])))
-        expected_kind = 'technical' if category == 'Technical' else 'interaction' if category == 'Accessibility' else 'render'
+        route = RACI_ROUTES[category]
+        if (reviewers[:len(REVIEWERS[category])] != REVIEWERS[category] or
+                len(reviewers) > len(route) or len(set(reviewers)) != len(reviewers) or
+                reviewers != list(route[:len(reviewers)])):
+            errors.append(issue('RACI_ORDER_REQUIRED', str(claim['id'])))
+        if claim.get('escalation_reason') and len(route) > 2 and len(reviewers) < 3:
+            errors.append(issue('RACI_ESCALATION_REQUIRED', str(claim['id'])))
+        expected_kind = ('technical' if category in ('Technical', 'AnimationPerformance', 'ReactPerformance')
+                         else 'interaction' if category in ('Accessibility', 'Experience') else 'render')
         visual_motion = category in visual_categories and claim['kind'] == 'interaction'
         if visual_motion:
             translation = motion_translations.get(claim.get('translation_id'), {})
@@ -109,7 +125,9 @@ def validate_matrix(bundle):
             errors.append(issue('INVALID_CLAIM', f'{category} requires {expected_kind} evidence'))
     for target_id in target_ids:
         categories = {c.get('category') for c in claims if c.get('target_id') == target_id and c.get('required') is True}
-        if not set(REVIEWERS) <= categories:
+        required_categories = BASE_CATEGORIES | ({'Experience'} if any(
+            r['kind'] in ('action', 'state') for r in intent['requirements']) else set())
+        if not required_categories <= categories:
             errors.append(issue('REQUIRED_CLAIM_MISSING', target_id))
         render_categories = {c.get('category') for c in claims if c.get('target_id') == target_id
                              and c.get('required') is True and c.get('kind') == 'render'}
@@ -131,11 +149,27 @@ def validate_matrix(bundle):
     return errors
 
 
+def raci_plan(bundle, claim_id):
+    """Return the declared work route; never assert that any role was executed."""
+    errors = validate_matrix(bundle)
+    if errors:
+        raise ValueError(str(errors))
+    claim = next((row for row in bundle['matrix']['claims'] if row['id'] == claim_id), None)
+    if claim is None:
+        raise ValueError('UNKNOWN_CLAIM: ' + claim_id)
+    return {'claim_id': claim_id, 'category': claim['category'], 'target_id': claim['target_id'],
+            'steps': [{'step': RACI_STEPS[index], 'reviewer': reviewer,
+                       'skill_id': SKILL_IDS.get(reviewer)}
+                      for index, reviewer in enumerate(claim['reviewers'])],
+            'escalation_reason': claim.get('escalation_reason'),
+            'execution': 'UNVERIFIED', 'requires_host_skill_use_and_review_receipts': True}
+
+
 def assess(bundle, host=None):
-    categories = {key: 'UNVERIFIED' for key in REVIEWERS} | {'VisualInternal': 'UNVERIFIED'}
+    categories = {key: 'UNVERIFIED' for key in BASE_CATEGORIES} | {'VisualInternal': 'UNVERIFIED'}
     report = {'categories': categories, 'proof_complete': False, 'approved': False,
-              'user_acceptance': 'PENDING', 'critic_reviewed': False,
-              'issues': [], 'claims': {}, 'verified_evidence': [],
+               'user_acceptance': 'PENDING', 'critic_reviewed': False,
+               'issues': [], 'claims': {}, 'raci_escalations': [], 'verified_evidence': [],
               'disposition': 'UNRESOLVED', 'active_findings': [],
               'trust': 'HOST_ADAPTER' if host else 'LOCAL_UNAUTHENTICATED',
               'operational_validation': 'UNVERIFIED'}
@@ -155,6 +189,9 @@ def assess(bundle, host=None):
     errors.extend(validate_matrix(bundle))
     if errors:
         return report
+    for claim in bundle['matrix']['claims']:
+        if claim['required']:
+            categories.setdefault(claim['category'], 'UNVERIFIED')
     current = snapshot(bundle)
     report.update(snapshot=current, scope={k: intent[k] for k in ('candidate_id', 'revision', 'scope_id')})
     manifest, critic = bundle['evidence'], bundle['critique']
@@ -216,7 +253,28 @@ def assess(bundle, host=None):
                 strings(keys) and all(k in verified for k in keys) and
                 record.get('evidence_hash') == capture_binding(verified.values(), keys))
 
-    grouped = {key: [] for key in REVIEWERS}
+    def raci_review(record, claim, step):
+        if (record.get('raci_step') != step or type(record.get('sequence')) is not int or
+                record['sequence'] < 1 or not text(record.get('context_id')) or
+                not text(record.get('observed')) or not evidence_matches(record, claim) or
+                not current_observation(record) or not attested(record, host, 'review')):
+            return False
+        skill_id = SKILL_IDS.get(record['reviewer'])
+        if not skill_id:
+            return record['reviewer'] == 'implementer'
+        source_hash = record.get('skill_sha256')
+        if (record.get('skill_id') != skill_id or not isinstance(source_hash, str) or
+                len(source_hash) != 64 or any(c not in '0123456789abcdef' for c in source_hash.lower())):
+            return False
+        use = resolve(host, record.get('skill_receipt_id'))
+        expected = {'kind': 'skill_use', 'reviewer': record['reviewer'], 'skill_id': skill_id,
+                    'source_sha256': source_hash, 'claim_id': record['claim_id'],
+                    'context_id': record['context_id'], 'snapshot': current,
+                    'run_id': run['run_id'], 'build_id': run['build_id']}
+        return bool(use and all(use.get(k) == v for k, v in expected.items()) and
+                    type(use.get('sequence')) is int and 0 < use['sequence'] < record['sequence'])
+
+    grouped = {key: [] for key in categories if key != 'VisualInternal'}
     claims = {c['id']: c for c in bundle['matrix']['claims']}
     findings = rows(critic.get('findings', []), 'critic.findings', errors, False)
     repairs = rows(manifest.get('repairs', []), 'repairs', errors, False)
@@ -272,9 +330,10 @@ def assess(bundle, host=None):
     report['disposition'] = repair_disposition(active_repairs, report['active_findings'])
     for claim_id, claim in claims.items():
         results = []
+        sequences = []
         claim_reviews = [r for r in reviews if r.get('claim_id') == claim_id and r['id'] not in resolved]
         unresolved_failures = [r for r in claim_reviews if r.get('verdict') == 'FAIL']
-        for reviewer in claim['reviewers']:
+        for index, reviewer in enumerate(claim['reviewers']):
             matching = [r for r in claim_reviews if r.get('reviewer') == reviewer and current_observation(r)]
             verdict = 'UNVERIFIED'
             # Historical FAIL requires an attested resolution; historical PASS
@@ -282,12 +341,27 @@ def assess(bundle, host=None):
             if unresolved_failures:
                 verdict = 'FAIL'
             elif matching:
-                checked = [r['verdict'] if r.get('verdict') in VERDICTS and text(r.get('observed')) and
-                           text(r.get('context_id')) and evidence_matches(r, claim) and attested(r, host, 'review')
-                           else 'UNVERIFIED' for r in matching]
+                checked = [r['verdict'] if r.get('verdict') in VERDICTS and
+                           raci_review(r, claim, RACI_STEPS[index]) else 'UNVERIFIED' for r in matching]
                 verdict = aggregate(checked)
+                valid = [r['sequence'] for r in matching if raci_review(r, claim, RACI_STEPS[index])]
+                if valid:
+                    sequences.append(max(valid))
             results.append(verdict)
         verdict = aggregate(results)
+        if (len(sequences) == len(claim['reviewers']) and
+                any(a >= b for a, b in zip(sequences, sequences[1:]))):
+            errors.append(issue('RACI_SEQUENCE_UNVERIFIED', claim_id))
+            verdict = 'FAIL' if verdict == 'FAIL' else 'UNVERIFIED'
+        if len(RACI_ROUTES[claim['category']]) > 2 and len(claim['reviewers']) < 3:
+            observed = []
+            for index, reviewer in enumerate(claim['reviewers'][:2]):
+                checked = [r['verdict'] for r in claim_reviews if r.get('reviewer') == reviewer and
+                           raci_review(r, claim, RACI_STEPS[index])]
+                observed.append(aggregate(checked) if checked else None)
+            if len(observed) == 2 and all(v is not None for v in observed) and observed[0] != observed[1]:
+                report['raci_escalations'].append(claim_id)
+                errors.append(issue('RACI_ESCALATION_REQUIRED', claim_id))
         report['claims'][claim_id] = verdict
         if claim['required']:
             grouped[claim['category']].append(verdict)

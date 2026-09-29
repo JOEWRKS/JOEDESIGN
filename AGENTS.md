@@ -1,16 +1,25 @@
 # JOEDESIGN repository
 
+## Current RACI directive (2026-09-30)
+
+The user explicitly made RACI the work principle and requested a duplication audit
+of the main skill instructions. This supersedes the prior source/install parity
+and no-install rule only for the scoped `joedesign-harness` RACI update. Keep
+`skills/joedesign/`, JOENESS, JOEFLOW and unrelated installed skills unchanged.
+R → C1 → conditional C2 is an execution route, not a vote. A owns the integrated
+result and I receives it. A role label alone cannot prove that a specialist skill
+was used; the CLI requires trusted skill-use/review receipts and still ships no
+host adapter. Do not claim live RACI enforcement from synthetic tests.
+
 ## Current Harness decision (2026-09-30)
 
-The existing installed `joedesign-harness` is retained. This branch's runtime source
-must match that installed baseline, including the visual-production/motion-quality
+The existing Harness baseline retained its visual-production/motion-quality
 correction. The later production-relationships, dependency-guard and
 `inspect-relations` experiment was not adopted: two bounded A/B tasks did not show
 unique design-quality value. See `evals/harness-v0.1/retention-decision.md`.
 The active design/RACI path below is updated with this decision; historical proposal
 language is background, not proof that every described visual judgment is automated.
-Do not modify installed skills or the preserved `skills/joedesign/` core while
-maintaining this source baseline. Keep repository tests, browser evidence, human
+Keep repository tests, browser evidence, human
 quality judgment and user acceptance distinct.
 
 ## Active task: Design Harness v0.1 (2026-09-29)
@@ -21,7 +30,7 @@ authorization supersedes the earlier candidate-only prohibition on new public
 skills/parsers. Preserve every byte of `skills/joedesign/` and historical evidence.
 The active spec is docs/superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md;
 the accompanying original handoff is subordinate where r2 changes it.
-Do not modify JOENESS, JOEFLOW, installed skills, or the user's BIO working files.
+Do not modify JOENESS, JOEFLOW, unrelated installed skills, or the user's BIO working files.
 Run both the v0.2 Node regression and `python -m unittest discover -s tests -v`.
 Static validation, live host attestation, human visual quality and user acceptance
 remain separate. No quality or tamper-resistance claim from fixtures alone.

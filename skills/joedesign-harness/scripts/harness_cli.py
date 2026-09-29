@@ -7,7 +7,7 @@ from pathlib import Path
 from harness.io import read_artifact, write_artifact, write_artifacts_transaction, digest, file_hash
 from harness.references import build_index, retrieve
 from harness.contracts import guard_change
-from harness.evidence import assess, snapshot
+from harness.evidence import assess, snapshot, raci_plan
 from harness.pipeline import ARTIFACTS, init_bundle, load_bundle, transition, current_stage, make_role_bundle, validate_handoff, repair_disposition
 
 
@@ -18,13 +18,14 @@ def main(argv=None):
     p = sub.add_parser('init'); p.add_argument('root', type=Path); p.add_argument('--intent', type=Path, required=True)
     p = sub.add_parser('index'); p.add_argument('corpus', type=Path); p.add_argument('--output', type=Path)
     p = sub.add_parser('retrieve'); p.add_argument('index', type=Path); p.add_argument('--intent', type=Path, required=True); p.add_argument('--limit', type=int, default=10); p.add_argument('--output', type=Path)
-    for name in ('check', 'handoff', 'advance', 'bundle', 'bind', 'guard', 'repair'):
+    for name in ('check', 'handoff', 'advance', 'bundle', 'bind', 'guard', 'repair', 'raci'):
         p = sub.add_parser(name); p.add_argument('root', type=Path)
         if name == 'advance': p.add_argument('stage')
         if name == 'bundle': p.add_argument('role', choices=['synthesis', 'craft', 'critic', 'expand'])
         if name in ('handoff', 'bundle'): p.add_argument('--output', type=Path)
         if name == 'handoff': p.add_argument('--validate', type=Path)
         if name == 'guard': p.add_argument('--change', type=Path, required=True)
+        if name == 'raci': p.add_argument('--claim-id', required=True)
         if name == 'bind': p.add_argument('--run-id', required=True); p.add_argument('--build-id', required=True); p.add_argument('--context-id', required=True)
     args = parser.parse_args(argv)
     code = 0
@@ -59,6 +60,7 @@ def main(argv=None):
             result = transition(bundle, args.stage)
             write_artifact(args.root / ARTIFACTS['evidence'], result, overwrite=True)
         elif args.command == 'bundle': result = make_role_bundle(bundle, args.role)
+        elif args.command == 'raci': result = raci_plan(bundle, args.claim_id)
         elif args.command == 'guard':
             result = {'issues': guard_change(bundle['intent'], bundle['contract'], read_artifact(args.change))}
             code = 2 if result['issues'] else 0

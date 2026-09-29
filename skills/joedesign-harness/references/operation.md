@@ -15,6 +15,7 @@ python <skill>/scripts/harness_cli.py index <local-omd-references-root> --output
 python <skill>/scripts/harness_cli.py retrieve index.json --intent intent.json --output shortlist.json
 python <skill>/scripts/harness_cli.py bundle .design-harness/candidate-a synthesis --output synthesis.json
 python <skill>/scripts/harness_cli.py bind .design-harness/candidate-a --run-id run-1 --build-id <actual-build-id> --context-id <actual-builder-context>
+python <skill>/scripts/harness_cli.py raci .design-harness/candidate-a --claim-id <claim-id>
 python <skill>/scripts/harness_cli.py advance .design-harness/candidate-a INTENT_READY
 python <skill>/scripts/harness_cli.py check .design-harness/candidate-a
 python <skill>/scripts/harness_cli.py guard .design-harness/candidate-a --change change.json
@@ -22,7 +23,9 @@ python <skill>/scripts/harness_cli.py repair .design-harness/candidate-a
 python <skill>/scripts/harness_cli.py handoff .design-harness/candidate-a --output report.json
 ```
 
-Fill the artifacts between commands. `bind` records current identity after the lock,
+Fill the artifacts between commands. `raci` prints the ordered work assignment
+for one bound claim and says execution is UNVERIFIED; it neither invokes a skill
+nor certifies its use. `bind` records current identity after the lock,
 contract and matrix are complete; it does not approve or authenticate anything.
 Every transition must be requested in sequence: DRAFT → INTENT_READY → REFERENCES_FOUND
 → REFERENCE_LOCKED → CONTRACT_READY → IMPLEMENTED → CRAFTED → PROOF_COMPLETE
@@ -82,10 +85,18 @@ Interaction/motion adds `motion:{origin:proposed/observed,trigger,start,end,inte
 Observed motion requires an interaction source; a static source can support a new
 proposed interaction hypothesis, which must be tested on the actual result.
 
-Claim: `{id,category,target_id,kind,required:true/false,expected,reviewers}`.
-Material target categories: Technical, Accessibility, Responsive, Craft, Structure,
-VisualConformance, VisualQuality. Technical requires technical evidence, Accessibility
-requires interaction, and the other categories require render evidence. Additionally,
+Claim: `{id,category,target_id,kind,required:true/false,expected,reviewers,
+escalation_reason?}`. `reviewers` is the ordered R → C1 → C2 route, not a set of
+interchangeable names. The first two roles are required for every non-Technical claim;
+Technical starts with its implementer. A declared escalation requires the route's
+third role. Existing evidence is not silently promoted to this newer review contract.
+
+Base target categories: Technical, Accessibility, Responsive, Craft, Structure,
+VisualConformance, VisualQuality. Product actions/states also require Experience for
+each target. AnimationPerformance and ReactPerformance are conditional claims when
+the relevant implementation or cost is in scope. Technical and performance claims
+require technical evidence; Accessibility/Experience require interaction; the other
+categories require render evidence. Additionally,
 each translation whose axis is `motion` requires required VisualConformance and
 VisualQuality claims of kind `interaction` for each of its target_ids. These add
 `translation_id` pointing to that motion translation; they do not replace the required
@@ -133,9 +144,15 @@ The host must refuse mixed/changed-build captures and preserve prior unresolved 
   The receipt has kind=capture, evidence_kind matching item.kind, and matching fields.
   Local bytes are hashed again; receipt existence alone does not validate a target.
 - Review: id, claim_id, verdict, observed, evidence_ids, reviewer, context_id,
-  receipt_id, snapshot, run_id, build_id, evidence_hash. Its host receipt has kind=review and matching fields.
-  An unobserved/self-authored PASS never authenticates itself. Reported FAIL is
-  conservatively blocking until revision/re-observation; unrelated PASS cannot erase it.
+  receipt_id, snapshot, run_id, build_id, evidence_hash, raci_step, sequence. A
+  specialist review also has skill_id, skill_sha256 and skill_receipt_id. Its host
+  receipt has kind=review and matching fields. `sequence` must be host-issued and
+  monotonic within the run. The host must separately resolve the
+  skill receipt as kind=skill_use, with the same claim/reviewer/context/snapshot/
+  run/build and actual source hash; its host event sequence precedes the review.
+  R precedes C1, and C1 precedes C2 when present. A name or locally written hash
+  alone is not proof the skill was read. An unobserved/self-authored PASS never
+  authenticates itself. Reported FAIL remains blocking until attested resolution.
 - Critic: corresponding receipt kind=critic with exact input snapshot/results/context,
   run_id, build_id, evidence_ids and evidence_hash for all reviewed captures.
   Context must differ from builder and prior reviewers. The bundle excludes builder
@@ -171,25 +188,38 @@ not that a real host has been connected or is tamper-proof. Missing host → UNV
 The controller cannot guarantee the honesty of arbitrary free-text chat; official
 handoff is generated from assessment and equality-checked if submitted for validation.
 
-## RACI and consultation
+## RACI as the work route
 
-| Claim family | First R | Second C | Third C |
+Classify each material finding before review. The matrix locks the ordered route:
+
+| Claim category | R | C1 | C2 when escalated |
 |---|---|---|---|
-| Composition/reference/image/mobile hierarchy/coherence | JOEDESIGN | Impeccable | UI UX Pro Max |
-| Type/spacing/icons/visual states/expressive motion | Impeccable | JOEDESIGN or UI UX Pro Max for state behavior | UI UX Pro Max or Vercel for accessibility |
-| Content/input/error/recovery | UI UX Pro Max | Vercel | Impeccable |
-| Semantics/focus/accessibility/overflow | Vercel | UI UX Pro Max | Impeccable |
-| Animation resource cost | Optimize Web Animations | Vercel | Impeccable |
-| React/Next performance | React Best Practices | Vercel | UI UX Pro Max |
+| Structure, VisualConformance, VisualQuality | JOEDESIGN (J) | Impeccable (I) | UI UX Pro Max (U) |
+| Craft | Impeccable (I) | JOEDESIGN (J) | UI UX Pro Max (U) |
+| Experience: content, input, error, recovery | UI UX Pro Max (U) | web-design-guidelines (V) | Impeccable (I) |
+| Accessibility, Responsive implementation | web-design-guidelines (V) | UI UX Pro Max (U) | Impeccable (I) |
+| AnimationPerformance, when applicable | Optimize Web Animations (M) | web-design-guidelines (V) | Impeccable (I) |
+| ReactPerformance, when applicable | React Best Practices (R) | web-design-guidelines (V) | UI UX Pro Max (U) |
+| Technical | Implementer | — | — |
 
-The CLI matrix enforces the minimum category consultations; specific claims can add
-reviewers. Third consultation is required when conflict/uncertainty/recurrence warrants
-it; record that reviewer in the claim. Role labels do not prove actual skill usage.
-Pin the skill/source version with real execution context in host records.
+The R owns the observation and draft verdict; C1 checks the same claim with a
+distinct perspective. Use C2 for a recorded conflict, uncertainty or recurring
+failure, and add `escalation_reason` plus the third reviewer to the claim. C2 helps
+diagnose; it never votes away a demonstrated FAIL. Other specialists may submit
+additional findings, but cannot replace R or C1. The claim route is a minimum,
+not permission to ignore a material defect outside these labels.
+The CLI flags an attested R/C1 verdict conflict even if the author omitted an
+escalation reason. It cannot infer unrecorded uncertainty or a relationship between
+free-text repair causes and claims; the implementation lead must surface those.
 
-A: Harness for evidence/procedural gates; implementation lead for code; JOEDESIGN
-for synthesis proposals; fresh Critic for internal quality diagnosis; user/designated
-Product authority for meaning; user for exact acceptance. No votes/score averaging.
+A is distinct from rank: the implementation lead owns integrated code and scene
+review, Harness owns evidence/gates, JOEDESIGN owns visual synthesis, the fresh
+Critic owns independent internal diagnosis, Product authority owns meaning, and
+the user owns exact visual acceptance. I receives the scoped result and unresolved
+limits; it is not another review pass. Neither A nor a majority of specialists can
+overrule an observed failure or user rejection. The shipped CLI can validate this
+route and attested records when a trusted host is supplied; it does not launch the
+skills or include that host. Local runs stay UNVERIFIED.
 
 ## What this does not prove
 
