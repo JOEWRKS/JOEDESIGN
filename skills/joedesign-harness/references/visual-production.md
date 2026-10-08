@@ -94,6 +94,13 @@ Separate these judgments:
    together with this actual content, beyond satisfying the written contract?
 3. Function/accessibility: can the visitor operate and understand the experience?
 
+For information-heavy screens, use the
+[handoff's visual roles](operation.md#product-meaning-to-visual-roles) to compare
+what draws attention first with what the task makes important. Check notice weight,
+repeated secondary information and narrow-screen grouping with actual content.
+Information being present does not establish that the key information is graspable;
+record that observation separately and preserve required warning/error exposure.
+
 State the dominant remaining gap with visible evidence. A compliant weak contract
 can still produce a weak design. A functional transition can still have poor pacing.
 Review whole compositions and moving sequences, not only circles, borders or isolated

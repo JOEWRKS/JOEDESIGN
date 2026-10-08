@@ -1,0 +1,42 @@
+{
+  "base_head": "641749312471325071be62c3a3dd1a0ddf4d4010",
+  "tested_rules_tree": "1293c4aa5a4067d33943a9aa4e9427144180c0c2",
+  "tested_package_sha256": {
+    "skills/joedesign-harness/SKILL.md": "0ea034156af9311fc42e885cd96c65198bd4e6547b34264b080040b69a2eaab3",
+    "skills/joedesign-harness/references/operation.md": "33b314f517b7a7af4dbc512d9f3e0acaf22b4ae4060c760d645d7eee40b4ca4b",
+    "skills/joedesign-harness/references/visual-production.md": "ff4dbd37f2245ddd3deec6d0c5437f5066d1058c20f9a7f7394868bb5101a7ae"
+  },
+  "scoped_candidate_tests": {
+    "python": {
+      "passed": 80,
+      "skipped": 0,
+      "failed": 0,
+      "log": "commit-python-tests.txt"
+    },
+    "node": {
+      "passed": 14,
+      "skipped": 0,
+      "failed": 0,
+      "log": "commit-node-tests.txt"
+    }
+  },
+  "product_review": {
+    "method": "Read the existing product review and updatedGuidanceReview record; matched the three installed skill hashes to the scoped commit candidate. No product files or prior evidence copied or modified. No new browser test performed here.",
+    "record_path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\examples\\geo-fresh-market\\wireframes\\REVIEW.md",
+    "record_sha256": "3acd91221baf22fdcd8daeea3cd29848793f0d9c2bfcb8ea5ad696f28bcc4e65",
+    "manifest_path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\examples\\geo-fresh-market\\wireframes\\evidence\\final-evidence-r19.json",
+    "manifest_sha256": "82c78f9cd515c4ef9c3c17157f64ab7c3eb82c1408c0352cac2e95efc4db928f",
+    "reported_status": "Specified changed sections directly read and mapped to existing implementation/evidence",
+    "reported_new_implementation_defects": 0,
+    "reported_documentation_gap_closed": "Added explicit expected relationship and falsifier for card/PDP/review hierarchy, separate from content availability",
+    "product_tests_rerun": false,
+    "user_visual_acceptance": "PENDING",
+    "causal_tool_effect": "NOT_CLAIMED",
+    "pm_report": "PM reports all 229 product evidence hashes matched and no blocking defect in the scoped guideline use review; the tool maintainer did not independently rerun that whole inventory."
+  },
+  "limits": [
+    "No previous execution-workflow code or tests in this candidate.",
+    "94 passing checks apply to this scoped candidate; the earlier 117 PASS/1 skip belongs to the larger dirty working tree.",
+    "No user visual acceptance, causal design improvement, full Harness certification, or release-readiness claim."
+  ]
+}

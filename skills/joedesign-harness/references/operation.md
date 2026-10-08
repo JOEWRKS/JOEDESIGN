@@ -1,6 +1,7 @@
 # Operation and artifact contracts
 
-Contents: CLI; artifact fields; evidence service; RACI; known boundaries.
+Contents: CLI; Product meaning to visual roles; artifact fields; evidence service;
+RACI; known boundaries.
 
 ## CLI
 
@@ -54,6 +55,50 @@ source document. Unknown quality is UNKNOWN even if a verification section exist
 Duplicate IDs and escaped symlinks fail. Source paths and hashes permit reinspection.
 Term matching is document retrieval, not aesthetic fit. Hard metadata filters use
 explicit `reference_filters` lists (for example category); missing fields do not match.
+
+## Product meaning to visual roles
+
+For an information-hierarchy handoff or design-system change, compare the current
+Product source with the revision actually consumed by the implementation. Planning
+completion does not establish implementation coverage. Carry only the affected
+information priority, exposure condition and decision/action into the existing
+intent requirements/constraints and contract translations. Use `expected` and
+`falsifier` to connect that meaning to visible type, color, spacing and grouping;
+do not invent a new schema, document or role roster.
+
+Product owns importance, required meaning, when information must be available and
+accessibility constraints. The design owner translates those into visual roles
+and maintains their durable decisions in the one root DESIGN.md. For the affected
+scope, make usable the color chips/values, semantic uses and foreground/background
+combinations; type roles with size, supported weight and line height; spacing
+between elements, groups and sections; and common components with relevant states
+and responsive differences. Reuse healthy native tokens/components and link their
+implementation. Existing sufficient decisions need only the actual delta, not a
+mandatory exhaustive token table or a second system. Distinguish current code,
+proposed changes and approved decisions; code values are not approval evidence.
+
+A Product document may mix mandatory constraints, proposed visual values and
+approved visual values. Check each affected value's source and approval scope;
+document location alone cannot classify it. Preserve approved values, and never
+relabel them as proposals to bypass a conflict. Where an adjustment changes meaning,
+exposure or a mandatory constraint, send the specific conflict and proposed tradeoff
+to the existing Product/PM owner. The design owner supplies the visual alternative;
+material visual replacement follows the user's scoped approval. Keep uncertain
+authority explicit and continue unaffected work, without a whole-project restart.
+
+The implementer observes the affected render and interactions against those roles;
+the existing PM/lifecycle owner, if present, checks that the handoff preserved
+meaning and exposure. These are responsibilities, not extra required agents. In
+existing claims, separate content availability from visible hierarchy: can the
+reader locate the key information and next action while still finding required
+conditions at the required moment? Compare repeated components and the actual
+narrow/wide targets for competing notice panels, repeated secondary text, wrapping
+and grouping. Repetition or a notice box is not itself a failure. Do not hide
+required warnings/errors through tiny or faint text or unauthorized deferral.
+Record the expected relationship, observed fact and scoped verdict; source code or
+token presence alone leaves visual hierarchy UNVERIFIED. Use the affected existing
+Structure, Craft, VisualQuality, Responsive and Experience claims as appropriate,
+not a new universal checklist. User visual acceptance remains separate.
 
 ## Artifact fields
 

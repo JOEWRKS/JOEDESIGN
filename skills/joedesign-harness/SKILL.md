@@ -37,6 +37,10 @@ local checks remain UNVERIFIED and cannot issue final APPROVED.
 1. Scope the actual content, actions, states, constraints, assets and target
    viewports. Run `python <this-skill>/scripts/harness_cli.py --help`; read
    [operation and artifact contracts](references/operation.md) before initialization.
+   For handed-off priorities, notice density or design-system work, follow
+   [Product meaning to visual roles](references/operation.md#product-meaning-to-visual-roles).
+   The design owner maintains the scoped visual system in the existing root
+   DESIGN.md; review information completeness and visible hierarchy separately.
 2. Retrieve OMD only for a concrete open reference decision. OMD is data, not
    authority or a visual-quality ranking. Inspect the chosen original yourself;
    use one Primary and at most two Secondary references with distinct axis owners.

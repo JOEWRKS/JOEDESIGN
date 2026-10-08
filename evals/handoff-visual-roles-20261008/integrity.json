@@ -1,0 +1,15 @@
+{
+  "changed_files": [
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign-harness\\SKILL.md",
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign-harness\\references\\operation.md",
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign-harness\\references\\visual-production.md"
+  ],
+  "preserved_core_and_install_files": 49,
+  "links_checked": 7,
+  "after_sha256": {
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign-harness\\SKILL.md": "32cd7d57be995a04945576fe05cd7db2fed5b3e73120b0217b6252c564641d31",
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign-harness\\references\\operation.md": "665c22536d9d132bcf1c6bf09276d0f4a0091efee9abb67e5e31d3f4a9fcfbd6",
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign-harness\\references\\visual-production.md": "ff4dbd37f2245ddd3deec6d0c5437f5066d1058c20f9a7f7394868bb5101a7ae"
+  },
+  "limits": "Source integrity and reference checks only; no new model behavior or project visuals observed."
+}

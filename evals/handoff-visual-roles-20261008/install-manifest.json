@@ -1,0 +1,209 @@
+{
+  "timestamp_utc": "20261008T111512Z",
+  "source_base_head": "641749312471325071be62c3a3dd1a0ddf4d4010",
+  "version": "local handoff-visual-roles-20261008 delta (uncommitted)",
+  "backup": "D:\\JOEWRKS\\JOEDESIGN\\.local\\install-backups\\handoff-rules-20261008T111512Z",
+  "changed": [
+    {
+      "destination": "project",
+      "relative": "SKILL.md",
+      "target": "D:\\JOEWRKS\\JOEDESIGN\\.agents\\skills\\joedesign-harness\\SKILL.md",
+      "backup": "D:\\JOEWRKS\\JOEDESIGN\\.local\\install-backups\\handoff-rules-20261008T111512Z\\project\\SKILL.md",
+      "before_sha256": "c65797262588daa53143c45a594be23e878a06b5ef83c93b4ca7bc3e2fa52c19",
+      "after_sha256": "32cd7d57be995a04945576fe05cd7db2fed5b3e73120b0217b6252c564641d31"
+    },
+    {
+      "destination": "project",
+      "relative": "references/operation.md",
+      "target": "D:\\JOEWRKS\\JOEDESIGN\\.agents\\skills\\joedesign-harness\\references\\operation.md",
+      "backup": "D:\\JOEWRKS\\JOEDESIGN\\.local\\install-backups\\handoff-rules-20261008T111512Z\\project\\references\\operation.md",
+      "before_sha256": "3cbe2a1f817251cc1a86d95f285a936a70012ce78e9733b8a9ef49843859ff90",
+      "after_sha256": "665c22536d9d132bcf1c6bf09276d0f4a0091efee9abb67e5e31d3f4a9fcfbd6"
+    },
+    {
+      "destination": "project",
+      "relative": "references/visual-production.md",
+      "target": "D:\\JOEWRKS\\JOEDESIGN\\.agents\\skills\\joedesign-harness\\references\\visual-production.md",
+      "backup": "D:\\JOEWRKS\\JOEDESIGN\\.local\\install-backups\\handoff-rules-20261008T111512Z\\project\\references\\visual-production.md",
+      "before_sha256": "5e9f8fbd0bc4354b36117d07f5440ef70b840503183871fa6057a49858e24fc0",
+      "after_sha256": "ff4dbd37f2245ddd3deec6d0c5437f5066d1058c20f9a7f7394868bb5101a7ae"
+    },
+    {
+      "destination": "personal",
+      "relative": "SKILL.md",
+      "target": "C:\\Users\\tjdwo\\.codex\\skills\\joedesign-harness\\SKILL.md",
+      "backup": "D:\\JOEWRKS\\JOEDESIGN\\.local\\install-backups\\handoff-rules-20261008T111512Z\\personal\\SKILL.md",
+      "before_sha256": "9e6317039552a287b76985e2cc9c20128e3dfea0f9aface327c7f3a3b85ee837",
+      "after_sha256": "0ea034156af9311fc42e885cd96c65198bd4e6547b34264b080040b69a2eaab3"
+    },
+    {
+      "destination": "personal",
+      "relative": "references/operation.md",
+      "target": "C:\\Users\\tjdwo\\.codex\\skills\\joedesign-harness\\references\\operation.md",
+      "backup": "D:\\JOEWRKS\\JOEDESIGN\\.local\\install-backups\\handoff-rules-20261008T111512Z\\personal\\references\\operation.md",
+      "before_sha256": "67e9806e8cf288134520616891d65e67990cd6a508f06591d9e139f862733565",
+      "after_sha256": "33b314f517b7a7af4dbc512d9f3e0acaf22b4ae4060c760d645d7eee40b4ca4b"
+    },
+    {
+      "destination": "personal",
+      "relative": "references/visual-production.md",
+      "target": "C:\\Users\\tjdwo\\.codex\\skills\\joedesign-harness\\references\\visual-production.md",
+      "backup": "D:\\JOEWRKS\\JOEDESIGN\\.local\\install-backups\\handoff-rules-20261008T111512Z\\personal\\references\\visual-production.md",
+      "before_sha256": "5e9f8fbd0bc4354b36117d07f5440ef70b840503183871fa6057a49858e24fc0",
+      "after_sha256": "ff4dbd37f2245ddd3deec6d0c5437f5066d1058c20f9a7f7394868bb5101a7ae"
+    }
+  ],
+  "source_sha256": {
+    "SKILL.md": "32cd7d57be995a04945576fe05cd7db2fed5b3e73120b0217b6252c564641d31",
+    "agents/openai.yaml": "5ad810474bc443198bcfaf12f7627e76340f66098ab8a5511558796176a5ffc6",
+    "references/execution.md": "57ce2694384a4d0619ed33d287ed5c1cfb97efa494cae926053f6b6fdfe94d0c",
+    "references/operation.md": "665c22536d9d132bcf1c6bf09276d0f4a0091efee9abb67e5e31d3f4a9fcfbd6",
+    "references/visual-production.md": "ff4dbd37f2245ddd3deec6d0c5437f5066d1058c20f9a7f7394868bb5101a7ae",
+    "scripts/capture.mjs": "505eb367879d7738c82864110357c09838f1f3ae8ea47d707c5dce069c02eee9",
+    "scripts/harness_cli.py": "f18ee730cf2d363d33c26e3a724488be5ca3c6517dee8f1543bc43a2580e4388",
+    "templates/CRITIQUE.md": "23fd2ae421436c0010fe9cc5d3190f831c2d6df6cf5687ca183b2ecb7db1f6eb",
+    "templates/DESIGN_CONTRACT.md": "64dab3fe316695b4a6bedaa368ee455467b72cb1e17b133320ac569baece398c",
+    "templates/DESIGN_INTENT.json": "98171e0b36ffd15aa1ece07ba8ba56b96c58b9f5cad7f364aefbc0cf036cbc87",
+    "templates/EVIDENCE_MANIFEST.json": "77ec1a03eef0b8fe0cf7dc90bccf131360ba1803e92a8e1e869e4f0dbd1d10de",
+    "templates/REFERENCE_CANDIDATES.json": "dea9915937b9a16ea26a22c664641045386b99a706b3d815acb3f5e3d38a382b",
+    "templates/REFERENCE_LOCK.md": "5cc459c4372b75b0c99e485e1cc105815f9d695fec47590fac63cddf8822b8f3",
+    "templates/STATE_MATRIX.md": "feaa871116a3bcca6d22c8c505cef1097ffe12d7ac55ec4b0e685a4d1e148e1c",
+    "scripts/harness/contracts.py": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a",
+    "scripts/harness/evidence.py": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22",
+    "scripts/harness/execution.py": "b77fc19273a4646f2de6e7970d708987810c75e56f2b84ba7a3b68ba5de97cf1",
+    "scripts/harness/io.py": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4",
+    "scripts/harness/pipeline.py": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6",
+    "scripts/harness/references.py": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20",
+    "scripts/harness/runner.py": "7a07f6f8e996c845c36136fcf6562164275c7bffd873afc4d733babb29b470ca",
+    "scripts/harness/__init__.py": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778"
+  },
+  "installed_before": {
+    "project": {
+      "SKILL.md": "c65797262588daa53143c45a594be23e878a06b5ef83c93b4ca7bc3e2fa52c19",
+      "agents/openai.yaml": "5ad810474bc443198bcfaf12f7627e76340f66098ab8a5511558796176a5ffc6",
+      "references/execution.md": "57ce2694384a4d0619ed33d287ed5c1cfb97efa494cae926053f6b6fdfe94d0c",
+      "references/operation.md": "3cbe2a1f817251cc1a86d95f285a936a70012ce78e9733b8a9ef49843859ff90",
+      "references/visual-production.md": "5e9f8fbd0bc4354b36117d07f5440ef70b840503183871fa6057a49858e24fc0",
+      "scripts/capture.mjs": "505eb367879d7738c82864110357c09838f1f3ae8ea47d707c5dce069c02eee9",
+      "scripts/harness_cli.py": "f18ee730cf2d363d33c26e3a724488be5ca3c6517dee8f1543bc43a2580e4388",
+      "templates/CRITIQUE.md": "23fd2ae421436c0010fe9cc5d3190f831c2d6df6cf5687ca183b2ecb7db1f6eb",
+      "templates/DESIGN_CONTRACT.md": "64dab3fe316695b4a6bedaa368ee455467b72cb1e17b133320ac569baece398c",
+      "templates/DESIGN_INTENT.json": "98171e0b36ffd15aa1ece07ba8ba56b96c58b9f5cad7f364aefbc0cf036cbc87",
+      "templates/EVIDENCE_MANIFEST.json": "77ec1a03eef0b8fe0cf7dc90bccf131360ba1803e92a8e1e869e4f0dbd1d10de",
+      "templates/REFERENCE_CANDIDATES.json": "dea9915937b9a16ea26a22c664641045386b99a706b3d815acb3f5e3d38a382b",
+      "templates/REFERENCE_LOCK.md": "5cc459c4372b75b0c99e485e1cc105815f9d695fec47590fac63cddf8822b8f3",
+      "templates/STATE_MATRIX.md": "feaa871116a3bcca6d22c8c505cef1097ffe12d7ac55ec4b0e685a4d1e148e1c",
+      "scripts/harness/contracts.py": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a",
+      "scripts/harness/evidence.py": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22",
+      "scripts/harness/execution.py": "b77fc19273a4646f2de6e7970d708987810c75e56f2b84ba7a3b68ba5de97cf1",
+      "scripts/harness/io.py": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4",
+      "scripts/harness/pipeline.py": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6",
+      "scripts/harness/references.py": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20",
+      "scripts/harness/runner.py": "7a07f6f8e996c845c36136fcf6562164275c7bffd873afc4d733babb29b470ca",
+      "scripts/harness/__init__.py": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778"
+    },
+    "personal": {
+      "SKILL.md": "9e6317039552a287b76985e2cc9c20128e3dfea0f9aface327c7f3a3b85ee837",
+      "agents/openai.yaml": "5ad810474bc443198bcfaf12f7627e76340f66098ab8a5511558796176a5ffc6",
+      "references/operation.md": "67e9806e8cf288134520616891d65e67990cd6a508f06591d9e139f862733565",
+      "references/visual-production.md": "5e9f8fbd0bc4354b36117d07f5440ef70b840503183871fa6057a49858e24fc0",
+      "scripts/harness_cli.py": "972d46c4fbec193d9e20f7bcca01d3bcb52e5226bc7f18359efbf6a57ba0326a",
+      "templates/CRITIQUE.md": "23fd2ae421436c0010fe9cc5d3190f831c2d6df6cf5687ca183b2ecb7db1f6eb",
+      "templates/DESIGN_CONTRACT.md": "64dab3fe316695b4a6bedaa368ee455467b72cb1e17b133320ac569baece398c",
+      "templates/DESIGN_INTENT.json": "98171e0b36ffd15aa1ece07ba8ba56b96c58b9f5cad7f364aefbc0cf036cbc87",
+      "templates/EVIDENCE_MANIFEST.json": "77ec1a03eef0b8fe0cf7dc90bccf131360ba1803e92a8e1e869e4f0dbd1d10de",
+      "templates/REFERENCE_CANDIDATES.json": "dea9915937b9a16ea26a22c664641045386b99a706b3d815acb3f5e3d38a382b",
+      "templates/REFERENCE_LOCK.md": "5cc459c4372b75b0c99e485e1cc105815f9d695fec47590fac63cddf8822b8f3",
+      "templates/STATE_MATRIX.md": "feaa871116a3bcca6d22c8c505cef1097ffe12d7ac55ec4b0e685a4d1e148e1c",
+      "scripts/harness/contracts.py": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a",
+      "scripts/harness/evidence.py": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22",
+      "scripts/harness/io.py": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4",
+      "scripts/harness/pipeline.py": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6",
+      "scripts/harness/references.py": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20",
+      "scripts/harness/__init__.py": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778"
+    }
+  },
+  "installed_after": {
+    "project": {
+      "SKILL.md": "32cd7d57be995a04945576fe05cd7db2fed5b3e73120b0217b6252c564641d31",
+      "agents/openai.yaml": "5ad810474bc443198bcfaf12f7627e76340f66098ab8a5511558796176a5ffc6",
+      "references/execution.md": "57ce2694384a4d0619ed33d287ed5c1cfb97efa494cae926053f6b6fdfe94d0c",
+      "references/operation.md": "665c22536d9d132bcf1c6bf09276d0f4a0091efee9abb67e5e31d3f4a9fcfbd6",
+      "references/visual-production.md": "ff4dbd37f2245ddd3deec6d0c5437f5066d1058c20f9a7f7394868bb5101a7ae",
+      "scripts/capture.mjs": "505eb367879d7738c82864110357c09838f1f3ae8ea47d707c5dce069c02eee9",
+      "scripts/harness_cli.py": "f18ee730cf2d363d33c26e3a724488be5ca3c6517dee8f1543bc43a2580e4388",
+      "templates/CRITIQUE.md": "23fd2ae421436c0010fe9cc5d3190f831c2d6df6cf5687ca183b2ecb7db1f6eb",
+      "templates/DESIGN_CONTRACT.md": "64dab3fe316695b4a6bedaa368ee455467b72cb1e17b133320ac569baece398c",
+      "templates/DESIGN_INTENT.json": "98171e0b36ffd15aa1ece07ba8ba56b96c58b9f5cad7f364aefbc0cf036cbc87",
+      "templates/EVIDENCE_MANIFEST.json": "77ec1a03eef0b8fe0cf7dc90bccf131360ba1803e92a8e1e869e4f0dbd1d10de",
+      "templates/REFERENCE_CANDIDATES.json": "dea9915937b9a16ea26a22c664641045386b99a706b3d815acb3f5e3d38a382b",
+      "templates/REFERENCE_LOCK.md": "5cc459c4372b75b0c99e485e1cc105815f9d695fec47590fac63cddf8822b8f3",
+      "templates/STATE_MATRIX.md": "feaa871116a3bcca6d22c8c505cef1097ffe12d7ac55ec4b0e685a4d1e148e1c",
+      "scripts/harness/contracts.py": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a",
+      "scripts/harness/evidence.py": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22",
+      "scripts/harness/execution.py": "b77fc19273a4646f2de6e7970d708987810c75e56f2b84ba7a3b68ba5de97cf1",
+      "scripts/harness/io.py": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4",
+      "scripts/harness/pipeline.py": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6",
+      "scripts/harness/references.py": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20",
+      "scripts/harness/runner.py": "7a07f6f8e996c845c36136fcf6562164275c7bffd873afc4d733babb29b470ca",
+      "scripts/harness/__init__.py": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778"
+    },
+    "personal": {
+      "SKILL.md": "0ea034156af9311fc42e885cd96c65198bd4e6547b34264b080040b69a2eaab3",
+      "agents/openai.yaml": "5ad810474bc443198bcfaf12f7627e76340f66098ab8a5511558796176a5ffc6",
+      "references/operation.md": "33b314f517b7a7af4dbc512d9f3e0acaf22b4ae4060c760d645d7eee40b4ca4b",
+      "references/visual-production.md": "ff4dbd37f2245ddd3deec6d0c5437f5066d1058c20f9a7f7394868bb5101a7ae",
+      "scripts/harness_cli.py": "972d46c4fbec193d9e20f7bcca01d3bcb52e5226bc7f18359efbf6a57ba0326a",
+      "templates/CRITIQUE.md": "23fd2ae421436c0010fe9cc5d3190f831c2d6df6cf5687ca183b2ecb7db1f6eb",
+      "templates/DESIGN_CONTRACT.md": "64dab3fe316695b4a6bedaa368ee455467b72cb1e17b133320ac569baece398c",
+      "templates/DESIGN_INTENT.json": "98171e0b36ffd15aa1ece07ba8ba56b96c58b9f5cad7f364aefbc0cf036cbc87",
+      "templates/EVIDENCE_MANIFEST.json": "77ec1a03eef0b8fe0cf7dc90bccf131360ba1803e92a8e1e869e4f0dbd1d10de",
+      "templates/REFERENCE_CANDIDATES.json": "dea9915937b9a16ea26a22c664641045386b99a706b3d815acb3f5e3d38a382b",
+      "templates/REFERENCE_LOCK.md": "5cc459c4372b75b0c99e485e1cc105815f9d695fec47590fac63cddf8822b8f3",
+      "templates/STATE_MATRIX.md": "feaa871116a3bcca6d22c8c505cef1097ffe12d7ac55ec4b0e685a4d1e148e1c",
+      "scripts/harness/contracts.py": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a",
+      "scripts/harness/evidence.py": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22",
+      "scripts/harness/io.py": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4",
+      "scripts/harness/pipeline.py": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6",
+      "scripts/harness/references.py": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20",
+      "scripts/harness/__init__.py": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778"
+    }
+  },
+  "preserved_core": {
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign": {
+      "SKILL.md": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf",
+      "agents/openai.yaml": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd",
+      "templates/DESIGN.md": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+    },
+    "D:\\JOEWRKS\\JOEDESIGN\\.agents\\skills\\joedesign": {
+      "SKILL.md": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf",
+      "agents/openai.yaml": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd",
+      "templates/DESIGN.md": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+    },
+    "C:\\Users\\tjdwo\\.codex\\skills\\joedesign": {
+      "SKILL.md": "385dcafa692fa0c48f9ad6889c371dbe8e6785d3a8371192907ea606d29b9a28",
+      "agents/openai.yaml": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd",
+      "templates/DESIGN.md": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+    }
+  },
+  "rule_delta_sha256": {
+    "skill": "f92bcb02652c2ace09648fe23296753014b22d49613787eb1d5acb6e71fa9d0b",
+    "operation": "9b5bd5c15a911c5901d5c58fcef0613f17d22571c5ec1ba4062d5e398c886739",
+    "visual": "eefae58c00d736c0d1c38360ea8257ccf0b6f9c70193e7e7f1af07fad79de1b2"
+  },
+  "project_full_source_parity": true,
+  "personal_rule_delta_parity": true,
+  "personal_full_source_parity": false,
+  "personal_missing_from_source": [
+    "references/execution.md",
+    "scripts/capture.mjs",
+    "scripts/harness/execution.py",
+    "scripts/harness/runner.py"
+  ],
+  "personal_different_from_source": [
+    "SKILL.md",
+    "references/operation.md",
+    "scripts/harness_cli.py"
+  ],
+  "scope": "Only three existing rule documents in each existing install. No runtime/code/core/product edits."
+}
