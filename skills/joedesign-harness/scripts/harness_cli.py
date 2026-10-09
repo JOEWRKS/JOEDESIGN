@@ -18,6 +18,11 @@ def main(argv=None):
     p = sub.add_parser('init'); p.add_argument('root', type=Path); p.add_argument('--intent', type=Path, required=True)
     p = sub.add_parser('index'); p.add_argument('corpus', type=Path); p.add_argument('--output', type=Path)
     p = sub.add_parser('retrieve'); p.add_argument('index', type=Path); p.add_argument('--intent', type=Path, required=True); p.add_argument('--limit', type=int, default=10); p.add_argument('--output', type=Path)
+    p = sub.add_parser('run', help='Execute bounded production/review; does not authenticate approval')
+    p.add_argument('root', type=Path); p.add_argument('--project', type=Path, required=True)
+    p.add_argument('--runtime', type=Path, required=True); p.add_argument('--resume', action='store_true')
+    p.add_argument('--check-only', action='store_true', help='Validate execution inputs without launching roles')
+    p.add_argument('--review-only', action='store_true', help='Capture/review current source without implementation or repair')
     for name in ('check', 'handoff', 'advance', 'bundle', 'bind', 'guard', 'repair', 'raci'):
         p = sub.add_parser(name); p.add_argument('root', type=Path)
         if name == 'advance': p.add_argument('stage')
@@ -45,6 +50,17 @@ def main(argv=None):
                   'host_verifier': 'UNAVAILABLE', 'automatic_certification': False,
                   'note': 'Availability and file identity do not prove skill invocation or behavior.'}
         code = 0 if ready else 2
+    elif args.command == 'run':
+        from harness.execution import Execution
+        execution = Execution(args.root, args.project, read_artifact(args.runtime))
+        if args.check_only:
+            if not args.review_only:
+                execution.production_targets()
+            result = {'execution': 'INPUTS_READY', 'approved': False, 'host_verifier': 'UNAVAILABLE',
+                      'specialists': {r: str(p) for r, p in execution.skills.items()}}
+        else:
+            result = execution.run(resume=args.resume, review_only=args.review_only)
+            code = 0 if result['execution'] == 'REVIEW_COMPLETE_UNCERTIFIED' else 2
     elif args.command == 'init':
         init_bundle(args.root, read_artifact(args.intent)); result = {'initialized': str(args.root), 'artifacts': list(ARTIFACTS.values())}
     elif args.command == 'index': result = build_index(args.corpus)

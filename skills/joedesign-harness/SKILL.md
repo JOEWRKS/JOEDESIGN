@@ -1,67 +1,91 @@
 ---
 name: joedesign-harness
-description: "Use for reference-grounded material UI design or redesign needing scoped synthesis, visual proof and evidence-bound review. Coordinates JOEDESIGN and targeted UI specialists; not a visual style or backend workflow."
+description: "Use with JOEDESIGN for new UI design, material screen/IA expansion or redesign, and evidence-bound visual review. Establish the visual source, prove the key composition, then expand through specialist review. Not a style or backend workflow."
 ---
 
 # JOEDESIGN Design Harness
 
-Design quality is the primary objective. Start from Product authority, approved
-DESIGN.md and originals, real content/assets, and the current implementation.
-Use `joedesign` for visual translation; this skill coordinates the work and its
-evidence. A reference, specialist recommendation or draft cannot replace an
-approved project decision or the user's exact acceptance.
+Make a coherent visual experience that serves the actual product. Product owns
+meaning, JOEDESIGN owns visual translation, and this Harness owns execution order.
+When the user selects JOEDESIGN, another skill's claim to be the default method
+does not replace this route. Specialists and research providers support it.
 
-## RACI is the work route
+## Decide the scope before making the screen
 
-For each material finding, identify its claim and route before review. The first
-role (R) makes the observation and draft judgment. The second (C1) checks that
-same result from its own expertise. In a recorded conflict, uncertainty or
-recurring failure, involve the third (C2) for diagnosis. C2 cannot vote away a
-FAIL. The implementation lead remains accountable for the integrated scene and
-code; Harness owns procedural gates, Product authority owns meaning, and the user
-owns exact visual acceptance. Inform affected roles of the result and limits.
+Read the current Product source, one root DESIGN.md, original visuals/assets,
+approval scope and actual implementation. State the work kind and next stage briefly;
+do not ask the user to fill forms. Reclassify when the request or product scope changes.
 
-Follow the [category routes and evidence contract](references/operation.md#raci-as-the-work-route).
-For a bound claim, `python <this-skill>/scripts/harness_cli.py raci <run-dir>
---claim-id <id>` prints the work assignment; it does not execute it.
-Read the applicable specialist skill, inspect the actual target, and record the
-skill source/version, context and observation. Skill names in a matrix are not
-execution evidence, and reading several skills in one context does not create
-independent reviewers. The CLI checks the planned role order locally; it counts
-actual reviews only when a trusted host attests skill use and sequence. This package
-has no such host adapter:
-local checks remain UNVERIFIED and cannot issue final APPROVED.
+| Work kind | Required route |
+|---|---|
+| New direction: no adequate visual target for the requested screen | Reference decision → representative composition → specialist review → expansion |
+| Material extension/redesign: changed IA, screen families, content scale, task hierarchy or dominant composition | Recheck the affected references and prove the changed composition before dependent expansion |
+| Local repair: an identified target and approved relationships remain valid; bounded type/spacing/crop/state correction | Preserve the target → correct the affected relation → observe it and protected regions |
 
-## Produce and test the difficult slice
+Keeping colors, fonts or components does not make new page structure a local repair.
+Product approval, a DRAFT label, a working wireframe or permission to implement is
+not approval of a visual composition. If local-repair conditions are not established,
+use the new/material route for the affected scope. Continue independent authorized
+work; do not use it to expand the unproved visual direction.
 
-1. Scope the actual content, actions, states, constraints, assets and target
-   viewports. Run `python <this-skill>/scripts/harness_cli.py --help`; read
-   [operation and artifact contracts](references/operation.md) before initialization.
-   For handed-off priorities, notice density or design-system work, follow
-   [Product meaning to visual roles](references/operation.md#product-meaning-to-visual-roles).
-   The design owner maintains the scoped visual system in the existing root
-   DESIGN.md; review information completeness and visible hierarchy separately.
-2. Retrieve OMD only for a concrete open reference decision. OMD is data, not
-   authority or a visual-quality ranking. Inspect the chosen original yourself;
-   use one Primary and at most two Secondary references with distinct axis owners.
-   Map each adopted source relationship to product meaning, spatial/responsive
-   implementation and a result that could disprove the choice.
-3. For a new or materially revised direction, use [visual production](references/visual-production.md)
-   to choose and prove the focal asset, composition and transition at display scale.
-   An approved local repair needs only affected guidance. Build the hard target
-   state and narrow layout before dependent expansion.
-4. Use the CLI's synthesis, contract, state matrix and scoped proof gates. Observe
-   the whole screen and required interaction sequence in the target runtime.
-   Structural failure returns to synthesis; repeated failed local repair requires
-   a new diagnosis. `bundle ... expand` needs current structural and visual proof,
-   not merely a capture set or passing technical checks.
-5. Route findings through RACI, then use a fresh-context `critic` for independent
-   internal diagnosis. Keep conformance, whole-screen quality, function,
-   technical checks and user acceptance separate. Preserve failed candidates and
-   exact build/state evidence. Report unsupported claims as UNVERIFIED.
+## Execute the design route
 
-Exact user rejection remains REJECTED for that output; implementation permission
-such as “진행” or “ㄱㄱ” is not visual acceptance. A provisional focal asset, static
-motion still or uncalibrated critic cannot establish finished quality. Present the
-actual result and dominant unresolved gap without claiming that a local CLI run
-authenticated skill use, visual success or user approval.
+1. **Establish the visual source.** Reuse an adequate approved original for its exact
+   scope. For unresolved reference decisions in new/material work, retrieve OMD,
+   inspect the selected originals and lock one Primary plus at most two Secondary
+   references with distinct responsibilities. A brand list, search result or copied
+   DESIGN description is not original inspection. Other reference tools may supplement
+   this step; a failed provider is not a reason to silently omit OMD or the source
+   comparison. Report unavailable sources and keep dependent visual work unresolved.
+2. **Translate the source into the product.** Use joedesign and
+   [visual production](references/visual-production.md). Define the intended attention
+   order, grouping, density, imagery and narrow-screen behavior with real content.
+   The design owner records the necessary shared color/type/spacing/component roles
+   in root DESIGN.md, reusing existing roles before introducing variations. Follow
+   [Product-to-visual responsibility](references/operation.md#product-meaning-to-visual-roles)
+   for importance, exposure conditions and mixed approved/proposed values.
+3. **Build the representative proof first.** Choose the family/state that exposes the
+   largest composition risk, including its required wide/narrow and interaction
+   states. Render it at useful fidelity before building dependent families. Observe
+   what dominates, what the reader sees next and whether controls/supporting material
+   compete with the product. A low-fidelity proof may defer finish, not hierarchy.
+4. **Review the actual proof before expansion.** JOEDESIGN leads composition/source
+   translation and Impeccable cross-checks it; Impeccable leads craft. UI UX Pro Max
+   leads content/input/recovery, and web-design-guidelines leads accessibility and
+   responsive implementation. Use the [R → C1 → conditional C2 routes](references/operation.md#raci-as-the-work-route)
+   for the affected claims, followed by a fresh-context critic. Read and apply the
+   actual specialist skills; a generic reviewer named C1 or critic is not a substitute.
+   C2 diagnoses conflict, uncertainty or recurring failure; it is not a vote.
+5. **Expand only from a reviewed composition.** Required failures and missing
+   observations block dependent expansion. Rework the composition when the dominant
+   gap is structural; do not hide it behind token polish or functional test counts.
+   Carry the proved relationships into other families, then re-observe the integrated
+   result and protected proof on the changed build. Material replacement of approved
+   direction still follows the user's scoped approval; internal review cannot grant it.
+
+At each review, keep **information/function preserved**, **selected relationships
+matched**, and **whole-screen design appropriate** as separate judgments. In the
+last judgment, challenge the composition itself: task emphasis, grouping, repeated
+roles, content scale and the dominant unresolved gap. A complete token table and no
+overflow do not answer that question. Semantic roles do not each require a unique
+color, size or gap. Explain necessary variation rather than multiplying values.
+
+## Run, resume and report honestly
+
+Prepare existing intent/lock/contract/matrix artifacts from source; the user need
+not author machine files. Read [operation](references/operation.md) for their fields.
+For the local runner, follow [execution](references/execution.md): production requires
+work_kind and proof_target_ids; it reviews the proof before launching expansion.
+Local repair uses the affected family only. Read-only review never grants write authority.
+
+Use the same sequence when host/browser tools are used directly, including in a
+non-Git project. Record source → decision → actual observation → scoped verdict in
+the existing DESIGN/review record. Missing runtime support does not waive the method
+or require a new document system. Do not call this direct path a completed CLI run.
+
+The runner gates its own launches; it cannot prevent external edits or certify human
+visual judgment. Local process/skill-use records are not trusted host receipts.
+Keep workflow completion, technical checks, visual judgment, certification and exact
+user acceptance separate. User rejection remains REJECTED for that output. Report
+the actual artifact, current stage and dominant gap; never substitute test counts
+or a specialist name for evidence. Implementation permission is not visual acceptance.

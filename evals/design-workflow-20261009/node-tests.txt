@@ -1,0 +1,22 @@
+✔ package — frozen v0.2 core plus the separately authorized harness entrypoint (5.6396ms)
+✔ package — a project-local copy resolves its shipped relative links without repo docs (17.3805ms)
+✔ history — original failures, semantic responses, Smokes, doctrines and test source bytes survive (2366.2513ms)
+✔ inputs — pre-execution scenarios and reviewer expectations were not tuned after output (2.5284ms)
+✔ fresh evidence — response, input, actual execution and entire current package are linked (52.8148ms)
+✔ recorded decision B01 — fixed qualitative obligations satisfied (13.7034ms)
+✔ recorded decision B02 — fixed qualitative obligations satisfied (13.2577ms)
+✔ recorded decision B03 — fixed qualitative obligations satisfied (13.2524ms)
+✔ recorded decision B04 — fixed qualitative obligations satisfied (11.7094ms)
+✔ recorded decision B05 — fixed qualitative obligations satisfied (11.9762ms)
+✔ recorded decision B06 — fixed qualitative obligations satisfied (10.9731ms)
+✔ recorded decision B07 — fixed qualitative obligations satisfied (9.7947ms)
+✔ recorded decision B08 — fixed qualitative obligations satisfied (11.6423ms)
+✔ recorded decision B09 — fixed qualitative obligations satisfied (10.8089ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 2688.9399

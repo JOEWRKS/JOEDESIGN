@@ -1,6 +1,11 @@
 # JOEDESIGN
 
-## 지금 사용할 스킬 (2026-09-30)
+## 지금 사용할 스킬 (2026-10-09)
+
+현재 구성 버전은 **JOEDESIGN 코어 v0.2 + Design Harness v0.1**이다.
+이번 업데이트는 2026-10-09 보강본이며, 정확한 소스는 Git 커밋으로 식별한다.
+별도 새 버전 번호나 릴리스 태그를 부여하지 않았다.
+[업데이트 내역](CHANGELOG.md)에 보강점, 실행 설정 변경과 검증 한계를 정리했다.
 
 | 요청 | 사용할 스킬 | 역할 |
 |---|---|---|
@@ -25,13 +30,32 @@ OMD는 필요한 참조를 찾는 자료원이다.
 채택하지 않았다. [설계·RACI·현재 상태](docs/superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md)와
 [A/B 채택 판단](evals/harness-v0.1/retention-decision.md)을 참조한다.
 
-저장소를 복제하는 것만으로 스킬이 설치되지는 않는다. Harness CLI는
-로컬 참조·계약·증거와 선언된 RACI 경로를 검사하지만 스킬을 대신 호출하거나
-렌더링·미감을 자동 판정하지 않는다. 인증된 호스트 receipt가 없어 로컬
+저장소를 복제하는 것만으로 스킬이 설치되지는 않는다. 기존 Harness 정책 명령은
+로컬 참조·계약·증거와 선언된 RACI 경로를 검사한다. 새 `run` 명령은 별도 Codex
+프로세스와 브라우저를 연결하지만, 인증된 호스트 receipt가 없어 로컬
 실행만으로 실제 스킬 사용이나 최종 `APPROVED`를 증명하지
 못한다. 실제 디자인 품질과 정확한 사용자 승인은 별도 관찰·판단 대상이다.
 
 ## 저장소 실행·검증
+
+2026-10-09 보강: 신규 방향·중요 확장·국소 수정을 구분하고, 참조 결정 → 대표
+화면 제작·전문 검수 → 확장 → 변경된 전체 화면 재검수 순서를 명확히 했다.
+로컬 실행기는 `work_kind`와 `proof_target_ids`를 요구하며, 대표 화면의 필수
+검수가 실패하거나 미확인인 동안 확장 실행을 차단한다. 모든 역할에 Harness
+지침을 전달하고 지침·증거 변경 시 이전 실행을 그대로 재사용하지 않는다.
+[보강 검증 기록](evals/design-workflow-20261009/README.md)의 Python 112개와
+Node 14개 통과는 로컬 규칙·실행기의 검증이며 새 지침의 실제 모델 준수나
+실프로젝트 디자인 품질을 보증하지 않는다. 기존 설치본은 별도로 갱신해야 한다.
+
+2026-10-06 실행 연동 작업: 기존 계약을 입력으로 실제 Codex 역할 실행, 로컬
+브라우저 수집, R/C1/조건부 C2 검토, 독립 Critic과 제한된 수정·재개를 연결하는
+`run` 명령을 추가했다. [실행 설정과 한계](skills/joedesign-harness/references/execution.md)를
+따른다. 로컬 실행 기록은 인증된 호스트 receipt가 아니며 자동 APPROVED는 여전히
+불가능하다. [실행 연동 검증 기록](evals/harness-execution-20261006/README.md)에
+자동 검사, 실제 관찰, 실패 수정과 남은 검증을 구분했다.
+[후속 병목 보강](evals/harness-bottleneck-20261006/README.md)에서는 검토 입력 전달과
+`--review-only`를 추가하고, 기존 구현을 보존한 실제 R/C1·Critic 검수 및
+시간 초과 이후 재개를 확인했다. 전체 디자인 품질 인증과는 구분한다.
 
 The separate [joedesign-harness skill](skills/joedesign-harness/SKILL.md) implements
 OMD corpus retrieval, grounded design contracts, scoped transitions, structural

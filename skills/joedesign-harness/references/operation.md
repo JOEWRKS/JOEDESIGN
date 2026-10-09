@@ -3,6 +3,13 @@
 Contents: CLI; Product meaning to visual roles; artifact fields; evidence service;
 RACI; known boundaries.
 
+For actual role execution, local browser collection and resumable bounded repair,
+see [local production execution](execution.md). The commands below retain their
+original policy semantics; `run` has a separate, explicitly uncertified work status.
+The [entry workflow](../SKILL.md#decide-the-scope-before-making-the-screen) governs
+new direction, material extension and local repair in both CLI and direct-tool work.
+These artifact and trust details do not replace the representative-proof sequence.
+
 ## CLI
 
 Requires Python 3.11+. Use the script's absolute path from any project directory.
@@ -36,7 +43,10 @@ An input change invalidates downstream recorded stages. States are execution rec
 the assessed gates govern certification. `bundle ... expand` now requires complete
 proof, passing Structure and VisualInternal, a current independent Critic and all
 remaining categories passing. Technical/structural passes alone cannot authorize
-dependent visual expansion. Scoped experiments remain possible without certification.
+dependent visual expansion. Scoped experiments remain possible without certification,
+but still follow source inspection, representative proof and actual specialist review.
+The trusted `bundle ... expand` gate and the local runner's operational expansion gate
+are different: local review can schedule authorized work without issuing APPROVED.
 
 Exit 0: command succeeded (for check/handoff, all approval conditions passed).
 Exit 2: useful result generated but incomplete/blocked. Exit 1: invalid input or I/O.
@@ -262,16 +272,18 @@ review, Harness owns evidence/gates, JOEDESIGN owns visual synthesis, the fresh
 Critic owns independent internal diagnosis, Product authority owns meaning, and
 the user owns exact visual acceptance. I receives the scoped result and unresolved
 limits; it is not another review pass. Neither A nor a majority of specialists can
-overrule an observed failure or user rejection. The shipped CLI can validate this
-route and attested records when a trusted host is supplied; it does not launch the
-skills or include that host. Local runs stay UNVERIFIED.
+overrule an observed failure or user rejection. The policy commands validate this
+route and attested records when a trusted host is supplied. The separate `run`
+command launches local specialist processes, but includes no authenticated host.
+Local runs stay uncertified.
 
 ## What this does not prove
 
 The code validates coverage, identity and the declared relationships. It cannot judge
 whether a filled rationale is insightful or whether a composition is beautiful.
 Early actual render, integrated visual review and human evaluation remain necessary.
-No live OMD visual inspection, browser collector, calibrated Critic service or authenticated
-receipt backend is bundled. Use host/browser tools; do not label adapters as executed.
+No live OMD visual inspection, calibrated Critic service or authenticated receipt
+backend is bundled. The optional local collector and Codex runner are described in
+the execution reference; their local records are not authenticated host receipts.
 The original seven artifact filenames are retained; handwritten duplicate JSON Schemas
 are avoided in favor of the executable validators and templates they consume.

@@ -1,5 +1,15 @@
 # JOEDESIGN repository
 
+## Integration directive (2026-10-09)
+
+The user authorized committing and pushing the completed reinforcement, documenting
+its improvements and limitations, and merging the current branch into main. This
+supersedes the historical no-main/no-push restriction for this integration only.
+Current component versions remain JOEDESIGN core v0.2 and Design Harness v0.1;
+identify this update by its Git commit and CHANGELOG.md. Do not treat main integration
+as installation, release certification, visual-quality validation or user acceptance.
+Preserve the frozen core, historical evidence and existing personal installations.
+
 ## Current RACI directive (2026-09-30)
 
 The user explicitly made RACI the work principle and requested a duplication audit

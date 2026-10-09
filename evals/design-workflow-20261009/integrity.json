@@ -1,0 +1,24 @@
+{
+  "changed_files": [
+    "skills\\joedesign-harness\\SKILL.md",
+    "skills\\joedesign-harness\\references\\execution.md",
+    "skills\\joedesign-harness\\references\\operation.md",
+    "skills\\joedesign-harness\\references\\visual-production.md",
+    "skills\\joedesign-harness\\scripts\\harness_cli.py",
+    "skills\\joedesign-harness\\scripts\\harness\\execution.py",
+    "tests\\test_harness_execution.py"
+  ],
+  "preserved_baseline_files": 66,
+  "core_and_installs_unchanged": true,
+  "links_and_anchors": "PASS",
+  "source_sha256": {
+    "skills/joedesign-harness/SKILL.md": "132bf19bbe1b71ac62b3cd60820e7e565da4f34fe421f1365bfb1b805ba115d2",
+    "skills/joedesign-harness/references/operation.md": "8a48c746939f726a136c11d956fd564a0ab6f4fff4adea88f27bb69c876231e1",
+    "skills/joedesign-harness/references/visual-production.md": "aa065f81e1c612059a7d70e34d725322844d6ec26289c8a8629f9744009fbe0d",
+    "skills/joedesign-harness/references/execution.md": "0990e0777d196df094546a055b26f24be5f9128bfd5e86c5ab42e597454042fb",
+    "skills/joedesign-harness/scripts/harness/execution.py": "801ba3c6b41c28aa48643444cc0e9f46a75fbf67dae292f9a0361c26f3e2051f",
+    "skills/joedesign-harness/scripts/harness_cli.py": "ddfe9b28a07a6047b2f54599f35fefde14ae559e880225dc6e928c26bae31cc0",
+    "tests/test_harness_execution.py": "fb25277e3658f78fd51bc38892dcdecec7db912f4c3c4078419a816977c47950"
+  },
+  "limits": "Only local rule and runner behavior checked. No fresh model compliance or project design-quality claim."
+}

@@ -4,6 +4,9 @@ Use for material visual direction and for a rejected proof whose central experie
 needs rebuilding. Reuse the existing intent/lock/contract and actual assets; do not
 add a second design system, compulsory ceremony or a new approval questionnaire.
 The purpose is to improve what gets made, not the amount of supporting paperwork.
+The [entry workflow](../SKILL.md#decide-the-scope-before-making-the-screen) determines
+when this proof is required. New IA, screen families or materially different content
+scale reopen the affected composition even when the palette and type scale stay fixed.
 
 ## Start with the visual bottleneck
 
@@ -68,6 +71,11 @@ Use real headline/body lengths and intended fonts/assets. Compose the whole view
 including the next reading/interaction destination. Determine the focal dominance,
 crop, type hierarchy and spacing together. A large heading next to an object is a
 possible composition, not a default solution for every editorial or scientific site.
+Show how the main task and product dominate navigation, filters, warnings and supporting
+content as appropriate to their actual importance. Evaluate the relationships at the
+real content scale; a tidy isolated component cannot prove a dense catalog or journey.
+Reuse a small coherent set of semantic roles. A new feature name alone does not justify
+a new color, type size or spacing value, and no fixed token count fits every project.
 
 When the art direction is unresolved, compare a small set of materially different
 visual treatments for the specific bottleneck. Avoid palette-only alternatives and
@@ -93,6 +101,12 @@ Separate these judgments:
 2. Whole-screen quality: do composition, focal asset, typography and motion work
    together with this actual content, beyond satisfying the written contract?
 3. Function/accessibility: can the visitor operate and understand the experience?
+
+For whole-screen quality, challenge the chosen composition even if it matches its
+own written rules. State the intended reading/task path, what actually dominates and
+the largest competing element or unresolved relationship. Lack of overflow, passing
+contrast and a matching token specimen cannot substitute for this judgment. A required
+unresolved visual judgment prevents expansion; a reviewer label alone does not clear it.
 
 For information-heavy screens, use the
 [handoff's visual roles](operation.md#product-meaning-to-visual-roles) to compare

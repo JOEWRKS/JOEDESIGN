@@ -1,0 +1,472 @@
+{
+  "baseline_commit": "641749312471325071be62c3a3dd1a0ddf4d4010",
+  "trust": "LOCAL_UNAUTHENTICATED",
+  "user_acceptance": "PENDING",
+  "scope": "Synthetic label fixture, one 390x844 selected state; no actual project quality claim.",
+  "regression": {
+    "python": {
+      "passed": 101,
+      "skipped": 0,
+      "log": {
+        "path": ".local/execution-integration-20261006/python-tests-final.txt",
+        "sha256": "a97d3a65d5998c347bde28208f90e88e4e23421aa2b0c5e739fb4b6daf3a1769"
+      }
+    },
+    "node": {
+      "passed": 14,
+      "log": {
+        "path": ".local/execution-integration-20261006/node-tests-final.txt",
+        "sha256": "bf39cbecd17fc055802fcdff569d707a89fc14cf854bb8c65d8078fad639950d"
+      }
+    }
+  },
+  "final_runtime_source_hashes": {
+    "skills/joedesign-harness/scripts/capture.mjs": "505eb367879d7738c82864110357c09838f1f3ae8ea47d707c5dce069c02eee9",
+    "skills/joedesign-harness/scripts/harness/__init__.py": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778",
+    "skills/joedesign-harness/scripts/harness/contracts.py": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a",
+    "skills/joedesign-harness/scripts/harness/evidence.py": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22",
+    "skills/joedesign-harness/scripts/harness/execution.py": "f6d9535633d50539774c4af0d47d3da5b933e481a39115e59025e9db1167a0b0",
+    "skills/joedesign-harness/scripts/harness/io.py": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4",
+    "skills/joedesign-harness/scripts/harness/pipeline.py": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6",
+    "skills/joedesign-harness/scripts/harness/references.py": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20",
+    "skills/joedesign-harness/scripts/harness/runner.py": "65c2e11564da091ed07c5c39d113add82cfe0ece4c56f33e33886aafc8babdce",
+    "skills/joedesign-harness/scripts/harness_cli.py": "b05266b3d4067c09f1dcde7edc988810033aec6ea00e4d88325b8e5f2241409f"
+  },
+  "scenarios": [
+    {
+      "scenario": "live",
+      "controller_status": "BLOCKED",
+      "state": {
+        "path": ".local/execution-integration-20261006/live/run/EXECUTION_STATE.json",
+        "sha256": "6ce3fbebfcf8616c2c7966d81a273e2194f705510171e04e56f0b046e75bc99c"
+      },
+      "result_files": [
+        {
+          "path": ".local/execution-integration-20261006/live/live-result.json",
+          "sha256": "e1cd72149f8fb2997a8945cf90be6d77e559406bdd815f6d3c857abc45006594"
+        }
+      ],
+      "attempts": [
+        {
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-capture-af6ec95723be",
+          "status": "EXITED",
+          "context_id": null,
+          "skills": [],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-capture-af6ec95723be/process/stdin.txt",
+              "sha256": "e4bca1d9d8ebd04ed9bf70b65cb2fbd3453337783c2b5065ab9b03b637859d8d"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-capture-af6ec95723be/process/stdout.jsonl",
+              "sha256": "a79280012bfb41f4fc9bde9128ecd6fae75ce5627df22b8b3c0d2e84456affd1"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-capture-af6ec95723be/process/stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-implement-a653a5264123",
+          "status": "EXITED",
+          "context_id": "01a110ad-963d-7e21-a047-e64482a05503",
+          "skills": [
+            {
+              "skill": "joedesign",
+              "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-implement-a653a5264123/process/stdin.txt",
+              "sha256": "8fd90f3da59a345b673c89175e5d2a322bde7c80e7292c310bec6fdac0625aaf"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-implement-a653a5264123/process/stdout.jsonl",
+              "sha256": "bb879e61f2c8168d0852900c36d3d67eb2d1fd3ae3af10e6a14a6dfdb080f423"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-implement-a653a5264123/process/stderr.txt",
+              "sha256": "81976a3dc1c9a1a344166aae6a1fc28d31ae750942d98f241f6d7ed026dc630b"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-review-0-implementer-f6a5ee86a9aa",
+          "status": "EXITED",
+          "context_id": "01a110af-03c5-7460-83c7-8f6cb9d183f2",
+          "skills": [],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-review-0-implementer-f6a5ee86a9aa/process/stdin.txt",
+              "sha256": "6240ec47d55e5f707d6cbe807c393bae12a09f0c7410e82049b34e1a4146ad81"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-review-0-implementer-f6a5ee86a9aa/process/stdout.jsonl",
+              "sha256": "d9d48796f6206af49271c995609c4b7baacbe1aca2e588f89ccd8a70b4e227dc"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-review-0-implementer-f6a5ee86a9aa/process/stderr.txt",
+              "sha256": "6ac7c893163ef31effb6053fc34b09db609d5b4b71620363b0b8c13000ebcf29"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-review-0-V-d6b04df9e865",
+          "status": "EXITED",
+          "context_id": "01a110af-5c8e-7941-b57d-ff05e11af742",
+          "skills": [
+            {
+              "skill": "web-design-guidelines",
+              "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-review-0-V-d6b04df9e865/process/stdin.txt",
+              "sha256": "e85cd4f2e575c54bfb7e10ed167963139d2955b6a716801c5cb5ac39096744b6"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-review-0-V-d6b04df9e865/process/stdout.jsonl",
+              "sha256": "67b171b755f4c043973f8961255443851ee2c7aa368e4eacbc903adea5640158"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/0-review-0-V-d6b04df9e865/process/stderr.txt",
+              "sha256": "7e540ea2e8d5869839fc18c7ba851d9e70d89a3ce32c0450c9b7f363eb7a8569"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live/run/execution/synthesis-b18bb1646f64",
+          "status": "EXITED",
+          "context_id": "01a110ac-e8ee-7341-8842-f259b4cd2ae8",
+          "skills": [
+            {
+              "skill": "joedesign",
+              "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/synthesis-b18bb1646f64/process/stdin.txt",
+              "sha256": "59c1e7a67eb80f2036a633485e2810a9eabc737ffc52517aaba6cd4566610cc5"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/synthesis-b18bb1646f64/process/stdout.jsonl",
+              "sha256": "d781494b0b72c091215ae7946a3eae33d45aed4f6d297538cfb0f682c174224c"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live/run/execution/synthesis-b18bb1646f64/process/stderr.txt",
+              "sha256": "78726dfdda9f22e309d8827c7d92adc45bb4b933e5b84a6b5fbdb2c3de325bbe"
+            }
+          ]
+        }
+      ],
+      "steps": {
+        "synthesis": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live/run/execution/synthesis-b18bb1646f64"
+        },
+        "0-implement": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-implement-a653a5264123"
+        },
+        "0-capture": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-capture-af6ec95723be"
+        },
+        "0-review-0-implementer": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-review-0-implementer-f6a5ee86a9aa"
+        },
+        "0-review-0-V": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live/run/execution/0-review-0-V-d6b04df9e865"
+        }
+      }
+    },
+    {
+      "scenario": "live-r2",
+      "controller_status": "BLOCKED",
+      "state": {
+        "path": ".local/execution-integration-20261006/live-r2/run/EXECUTION_STATE.json",
+        "sha256": "bbeb2d8efa992a49215affe830cc0983179ff1d4f098db8ccde74fcf133e1aa5"
+      },
+      "result_files": [
+        {
+          "path": ".local/execution-integration-20261006/live-r2/live-result-resume.json",
+          "sha256": "63f01366438c87b7bd4cb8b680afffba5d8d882b1c1e00154d83d77e595e3bfb"
+        },
+        {
+          "path": ".local/execution-integration-20261006/live-r2/live-result.json",
+          "sha256": "bfb79fb983e60b673e1a96e692b2a6a189612287d1e4cf2e5d264b978d84382d"
+        }
+      ],
+      "attempts": [
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-capture-2bbd32f33e37",
+          "status": "EXITED",
+          "context_id": null,
+          "skills": [],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-capture-2bbd32f33e37/process/stdin.txt",
+              "sha256": "8adbd61d56801cc8de007e6e45d1e697d0e4b9860f03dbd766ca4df9917637fa"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-capture-2bbd32f33e37/process/stdout.jsonl",
+              "sha256": "45728a814c661002210ba873de4d0d889676b7df125c17752ff44c5e7e46ccf4"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-capture-2bbd32f33e37/process/stderr.txt",
+              "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-implement-a6c060bbf8ee",
+          "status": "EXITED",
+          "context_id": "01a110b3-9428-7190-9124-a1ca426fd79e",
+          "skills": [
+            {
+              "skill": "joedesign",
+              "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-implement-a6c060bbf8ee/process/stdin.txt",
+              "sha256": "f3a82c2e7f78765466b47ccfeb340c7ac711fbc17373f6cef8f710bbdda271ad"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-implement-a6c060bbf8ee/process/stdout.jsonl",
+              "sha256": "9ea7acb89a27a5540cee326b18ae98a9845cbb4bf81709715de79f169224e8e2"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-implement-a6c060bbf8ee/process/stderr.txt",
+              "sha256": "ef68c30f3f19a691b2e1ba9c3a05e04d285f3a21a5729ef7feabe56e1f0d9780"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-I-c762068f2888",
+          "status": "EXITED",
+          "context_id": "01a110b5-87f6-7e82-a531-d1c4a5613e41",
+          "skills": [
+            {
+              "skill": "impeccable",
+              "sha256": "c2c0d8e5ea5dc3f36b879f099e72d83f506a6e626dcc075c1a7e14763f200d4d"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-I-c762068f2888/process/stdin.txt",
+              "sha256": "f8e385120b514198cd2f6304ace48926d05e0b027e41914ee5d4e8e7783a099c"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-I-c762068f2888/process/stdout.jsonl",
+              "sha256": "be618b8b77964ee59271dfde28952c38d445ce957bc55039fbd0048bd94f7969"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-I-c762068f2888/process/stderr.txt",
+              "sha256": "fe4ae16e56e7a2c3565f297267fac1a4370930b001a381da3c0f16e1c3510059"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-implementer-7200176f63e4",
+          "status": "EXITED",
+          "context_id": "01a110b4-d37c-75c1-afde-406f79bf21eb",
+          "skills": [],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-implementer-7200176f63e4/process/stdin.txt",
+              "sha256": "d91aa92192ca057bc6f29cb0d6bd5effdff3b4031022a3776d21b1bda092cccf"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-implementer-7200176f63e4/process/stdout.jsonl",
+              "sha256": "f023d1647aba73c4512b9c1456e857a6aa99a9c15ff09ac19fc76fc6d29e272d"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-implementer-7200176f63e4/process/stderr.txt",
+              "sha256": "a670375cb2513b9d58c1b86148320750c1cc16d71ab84f49afbb491bb6465eae"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-J-63606bbd2702",
+          "status": "EXITED",
+          "context_id": "01a110b6-1d24-7413-ae3e-0ee1f92e8bce",
+          "skills": [
+            {
+              "skill": "joedesign",
+              "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-J-63606bbd2702/process/stdin.txt",
+              "sha256": "0bebd5fbf45e8d6b8bdd8c232562acef07f8e9ca23e3e93e1841295932647c47"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-J-63606bbd2702/process/stdout.jsonl",
+              "sha256": "137a6ff6af9bde05144d182246232bd368c43247f86dc2f360476a67c82de23c"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-J-63606bbd2702/process/stderr.txt",
+              "sha256": "1718c075442e15cbf421cf3810e91988ca92da8653e512ae418d9f9c25bbdede"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-87fded3d05a0",
+          "status": "TIMED_OUT",
+          "context_id": null,
+          "skills": [],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-87fded3d05a0/process/stdin.txt",
+              "sha256": "ec8ada83f9bc6cd8168a962b27139d42a9f9efab36f5c9954aa8ccf4f7a5f27f"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-87fded3d05a0/process/stdout.jsonl",
+              "sha256": "22225a49b2eb79f510e40d711086542ad4c9e118113d814e2125c1aea6c99f7f"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-87fded3d05a0/process/stderr.txt",
+              "sha256": "48a259f5dc691adb9809fd716dc6b22aac138a2ba1886b4ad41bdf1614f6d76f"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-a66db56671e7",
+          "status": "TIMED_OUT",
+          "context_id": null,
+          "skills": [],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-a66db56671e7/process/stdin.txt",
+              "sha256": "ec8ada83f9bc6cd8168a962b27139d42a9f9efab36f5c9954aa8ccf4f7a5f27f"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-a66db56671e7/process/stdout.jsonl",
+              "sha256": "c48e79e14030a32714db0b9f4e70407dbd6125403a5c5113e248ff9f030eee44"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-a66db56671e7/process/stderr.txt",
+              "sha256": "28c8282eaea72d75cb6df8dfdc2e9b546909bc3aeb3653e0081afd94623e27ba"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-V-a88828c5497d",
+          "status": "EXITED",
+          "context_id": "01a110b5-1eac-7f90-932f-50fa130a7869",
+          "skills": [
+            {
+              "skill": "web-design-guidelines",
+              "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-V-a88828c5497d/process/stdin.txt",
+              "sha256": "7a9a0d2eab99a8213989fb66e6888c7914db573151b882f5a9af880950397046"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-V-a88828c5497d/process/stdout.jsonl",
+              "sha256": "8359397cb2af576ca530a7a67f0426ca5c2fcb895fbb778a5709c6a7e48cdf45"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-V-a88828c5497d/process/stderr.txt",
+              "sha256": "83315e359de6f145e8403a06098a078f15d537eb760a02720129f740047e47f6"
+            }
+          ]
+        },
+        {
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/synthesis-1e922aa134b0",
+          "status": "EXITED",
+          "context_id": "01a110b3-02a7-74c3-b0f1-64f7247aa081",
+          "skills": [
+            {
+              "skill": "joedesign",
+              "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+            }
+          ],
+          "files": [
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/synthesis-1e922aa134b0/process/stdin.txt",
+              "sha256": "7f3260ffdf7593dfc1956683ac1fa22dc65cf774899881a6cd0fa5d7c2683322"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/synthesis-1e922aa134b0/process/stdout.jsonl",
+              "sha256": "f8b0a97fd5899aabe7b92f8e20d501b66333b6293c92c292fbca57726b29f4cd"
+            },
+            {
+              "path": ".local/execution-integration-20261006/live-r2/run/execution/synthesis-1e922aa134b0/process/stderr.txt",
+              "sha256": "79120bcb0711debc465e52ae206688ae82ba78780e5d93b8e10234037d9ff491"
+            }
+          ]
+        }
+      ],
+      "steps": {
+        "synthesis": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/synthesis-1e922aa134b0"
+        },
+        "0-implement": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-implement-a6c060bbf8ee"
+        },
+        "0-capture": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-capture-2bbd32f33e37"
+        },
+        "0-review-0-implementer": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-implementer-7200176f63e4"
+        },
+        "0-review-0-V": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-V-a88828c5497d"
+        },
+        "0-review-0-I": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-I-c762068f2888"
+        },
+        "0-review-0-J": {
+          "status": "COMPLETED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-J-63606bbd2702"
+        },
+        "0-review-0-U": {
+          "status": "FAILED",
+          "directory": ".local/execution-integration-20261006/live-r2/run/execution/0-review-0-U-87fded3d05a0"
+        }
+      },
+      "live_runtime_source_hashes": {
+        "skills\\joedesign-harness\\scripts\\capture.mjs": "505eb367879d7738c82864110357c09838f1f3ae8ea47d707c5dce069c02eee9",
+        "skills\\joedesign-harness\\scripts\\harness_cli.py": "b05266b3d4067c09f1dcde7edc988810033aec6ea00e4d88325b8e5f2241409f",
+        "skills\\joedesign-harness\\scripts\\harness\\contracts.py": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a",
+        "skills\\joedesign-harness\\scripts\\harness\\evidence.py": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22",
+        "skills\\joedesign-harness\\scripts\\harness\\execution.py": "40310d0710773d1857c42cb98568087cc227fa294f1e682aea847f28d2a3c262",
+        "skills\\joedesign-harness\\scripts\\harness\\io.py": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4",
+        "skills\\joedesign-harness\\scripts\\harness\\pipeline.py": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6",
+        "skills\\joedesign-harness\\scripts\\harness\\references.py": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20",
+        "skills\\joedesign-harness\\scripts\\harness\\runner.py": "65c2e11564da091ed07c5c39d113add82cfe0ece4c56f33e33886aafc8babdce",
+        "skills\\joedesign-harness\\scripts\\harness\\__init__.py": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778"
+      },
+      "completed_steps_reused_on_resume": true,
+      "pre_resume_state": {
+        "path": ".local/execution-integration-20261006/live-r2/pre-resume-state.json",
+        "sha256": "64c227d1e0ae5309625654825a7a5f1e2c208c99c57062ff27b079ced80fccdb"
+      },
+      "fixture_change": {
+        "exact_label_only_change": true,
+        "before_bytes": 1202,
+        "after_bytes": 1203,
+        "note": "Baseline write_text uses Windows native CRLF."
+      }
+    }
+  ]
+}
