@@ -1,5 +1,68 @@
 # JOEDESIGN repository
 
+## Main integration authorization (2026-10-10, current)
+
+After the three scoped behavioral trials, the user explicitly authorized committing,
+pushing and merging this unified-core work into main before further real use.
+This supersedes earlier no-commit/no-push restrictions for this integration only.
+Include the improvements, preserved history, validation and limits. Version remains
+0.3.0-dev; integration is not a release tag, whole-product acceptance, another
+installation change or permission to message GEO. Report completion here.
+
+## Direct reporting correction (2026-10-10)
+
+The user explicitly directed that JOEDESIGN reinforcement and decisions be reported
+and assessed in this chat, not sent to the GEO Website design chat. Do not request
+further GEO work or delegate reinforcement judgments there. Existing completed
+activation remains recorded; do not roll it back or expand it without direction.
+Report scope, validation and remaining decisions directly to the user.
+
+## Scoped operational continuation (2026-10-10)
+
+After the real GEO snapshot validation, the user said to proceed with remaining
+criteria review, dependency scoping and completion integration. Coordinate with
+the JOENESS owner; that owner handles its installation and completion caller.
+JOEDESIGN owns its single-core installation transition with recoverable backups
+outside skill discovery and exact package verification. This supersedes the
+earlier no-install restriction for that scoped transition only. GEO shared record
+activation belongs to its designated design owner; do not edit product UI or
+declare whole-product completion. No new commit/push/release authorization.
+
+## Design conformance connection (2026-10-10)
+
+The user requested JOEDESIGN/JOENESS responsibility separation and executable
+missing/failed/stale-check gates after GEO's repeated spacing omissions. Integrate
+this inside the single core. JOEDESIGN owns source-rule/target coverage and rendered
+geometry/specialist judgments; JOENESS owns consuming the scoped result and limiting
+task completion. Use the independently pinned contract described in
+skills/joedesign/references/conformance.md. Do not duplicate product ledgers or edit
+the GEO shared files. Tests must include actual producer/consumer linkage, not just
+field presence. Local pins/evidence do not authenticate user approval or prevent
+direct file/chat bypass. Installations and project activation remain unchanged.
+
+## Single operating core directive (2026-10-09, current)
+
+The user requested one operating core governing all stages and role assignments.
+The active entrypoint and operating authority is skills/joedesign/SKILL.md. The
+harness is internal implementation in that same package, not a second public skill.
+This supersedes the previous freeze of the current skills/joedesign/ directory and
+the two-package routing instructions below. Preserve original v0.2/Harness bytes
+in fixtures/package-history/pre-unification-20261009/ and Git history; do not rebind
+old behavior evidence to the unified package. The unified source is 0.3.0-dev;
+the previous main integration remains core v0.2 + Harness v0.1.
+
+The coordinator is A and owns scope, assignments, transitions and integrated results.
+Role workers apply the same core within their assignment. Keep Product meaning,
+visual decisions, actual specialist use, observed proof and user acceptance distinct.
+Run Python regression and the Node v0.2 historical-evidence regression. New package
+copy/runtime checks must exercise the unified source; historical tests do not prove
+its live model behavior. Do not modify installations, JOENESS, JOEFLOW or product
+working files. The prior commit/push/main authorization was completed; this source
+integration step does not by itself publish a new release or update installations.
+Current change rationale and validation: evals/unified-core-20261009/README.md.
+
+## Historical directives (superseded where the current directive differs)
+
 ## Integration directive (2026-10-09)
 
 The user authorized committing and pushing the completed reinforcement, documenting

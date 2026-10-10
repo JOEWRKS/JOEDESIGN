@@ -1,0 +1,456 @@
+{
+  "context_id": "/root/specialist_c1",
+  "case": "new",
+  "method_note": "DEGRADED: single-context Impeccable assessment within assigned independent C1 role; coordinator prohibits nested agents. Bounded C1 review, not a complete standalone Impeccable critique or user acceptance.",
+  "skill_sources": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\SKILL.md",
+      "sha256": "a519986f66134a4919495ec407fdc96b3cd5ea4c3f117c2a112bb21dee27b7bf"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\operation.md",
+      "sha256": "56099b5cc4df90fac3e16c05115d33d626fbc18951841de65cd0a15e637e1601"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\visual-translation.md",
+      "sha256": "8a4b2e1866d0817c0f0ed7ef38a0252731d5738876c5fc71d29f4f15d86a53f9"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\SKILL.md",
+      "sha256": "c2c0d8e5ea5dc3f36b879f099e72d83f506a6e626dcc075c1a7e14763f200d4d"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\reference\\critique.md",
+      "sha256": "a763d1474f5c1125a937b5872abb1fc40b2bd44dd7d4a7701ac2147401bf4b2b"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\scripts\\context.mjs",
+      "sha256": "70abfb0923efe99950f6969b49f05f4e872b198f54ab8930a96ccbed9b4dc90f"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\scripts\\detect.mjs",
+      "sha256": "b2c5731c367c129e361bdfb28c4f697e84818c77e04d88ad21eeb89320f06a0e"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\SKILL.md",
+      "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\references\\quick-reference.md",
+      "sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\scripts\\search.py",
+      "sha256": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\data\\ux-guidelines.csv",
+      "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\web-design-guidelines\\SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\web-interface-guidelines.md",
+      "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
+    }
+  ],
+  "actual_use_details": {
+    "J": "Read pinned JOEDESIGN core, operation RACI, visual-translation. Applied source observation to semantic type, grouping, native roles and repeated-component states; inspected original HTML, original wide/narrow images, current HTML/CSS/JS and all four actual full-page targets.",
+    "I": "Used actual Impeccable SKILL.md and critique resource read in this continuing session. context.mjs was already run once this session; did not rerun it. Directly read this new case Product/Design/target instead. Inspected composition, cognitive load and hierarchy before running detect.mjs --json index.html. Detector produced [] in degraded regex fallback, not a clean bill of health. Brief-pinned visual language outranks generic style preferences.",
+    "U": "Used actual UI UX Pro Max skill/quick-reference. Prior targeted responsive horizontal overflow mobile domain search returned applicable Responsive/Horizontal Scroll guidance. New keyboard focus visibility --domain ux returned Focus States and minimum/enhanced Focus Not Obscured guidance; applied visible keyboard focus without claiming AAA certification. Independently tested exact viewports, contrast and keyboard sequence.",
+    "V": "Fetched fresh official Web Interface Guidelines into this case review folder, read full rules, applied native action/link semantics, meaningful labels, focus, feedback, navigation and state rules to source and independent interactions. Reported minor hover omission separately."
+  },
+  "reviews": [
+    {
+      "claim_id": "structure-wide-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Reserved state retains this organization.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "structure-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Reserved state retains this organization.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Reserved state retains this organization.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Reserved state retains this organization.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 25px and desktop column separation 28px. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 25px and desktop column separation 28px. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 21px with the approved single-column order. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 21px with the approved single-column order. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. The blank feedback region slightly loosens the panel bottom, but leaves all actions easy to locate and supports the later success state. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. Reserved labels and remaining availability retain useful state meaning; the specific status fits on one desktop line or two narrow lines without dominating. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. The blank feedback region slightly loosens the panel bottom, but leaves all actions easy to locate and supports the later success state. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. Reserved labels and remaining availability retain useful state meaning; the specific status fits on one desktop line or two narrow lines without dominating. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-initial",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 1240x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 1240x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 390x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 390x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab \u2192 skip link \u2192 Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\focus-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\ux-keyboard.txt"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab \u2192 skip link \u2192 Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\focus-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\ux-keyboard.txt"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab \u2192 skip link \u2192 Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\focus-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\ux-keyboard.txt"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab \u2192 skip link \u2192 Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\focus-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\ux-keyboard.txt"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 \u2192 1 \u2192 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\interaction-and-served-inputs-v1.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\reserved-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 \u2192 1 \u2192 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\interaction-and-served-inputs-v1.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\reserved-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 \u2192 1 \u2192 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\interaction-and-served-inputs-v1.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\reserved-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 \u2192 1 \u2192 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\interaction-and-served-inputs-v1.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\reserved-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    }
+  ],
+  "material_concerns": [],
+  "minor_observations": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\styles.css",
+      "line": 40,
+      "finding": "No explicit hover feedback for enabled booking and guide actions. This exists in supplied reference behavior too; it is optional polish relative to the pinned usability/conformance claims, not an inferred new state requirement from a still image."
+    }
+  ],
+  "scope_limitations": [
+    "Exact 1240x900 and 390x900 initial/reserved targets only.",
+    "Local unauthenticated review and evidence hashes; no host receipts or exact-output user acceptance.",
+    "Audible screen-reader delivery, physical mobile devices and unsupported widths not tested.",
+    "Impeccable detector lacked parser modules and used regex fallback; full standalone critique protocol, nested assessment, human overlay and heuristic scoring were outside assigned C1 scope. Questions skipped: return bounded findings to coordinator.",
+    "Transient HTTP server and headless Edge browser were closed after independent observations."
+  ],
+  "input_sha256": {
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\index.html": "a778146adeaff7338d925d4a13771bad848cf19a9f105015edb70c1b8ea4e6d8",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\styles.css": "6d9627606e7a75d52e3dcafd03e81f2b46f298a1c2be9ff3891a05a8d144996c",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\app.js": "03a957f261531ff938d178cdae2a6f5885de19335e0cf5cf694a100e9a3391d0",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\baseline.json": "f3ac61a3ec60dfa45526f31b955e8ebc60c6a960d81bf71d5eb50472435b740e",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\DESIGN.md": "79618cbbbc3ee17bb164e3e1fb63c9f7d7e5e0e8b0f307bd030765dbfa34c3c6",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\PRODUCT.md": "15987958f4e651786677e06f7e7b490e3691a3bcb5a3ee5d98798dfb23e025c1",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\reference\\approved.html": "826dac4820a7ddecb0177bd2e01f9cbe85e48ea97384387d08881636590e5164",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\interaction-and-served-inputs-v1.json": "d638b7eaa5603b8f3810dfdef0c6e9d5895765246f65e463fae8258274bae0d6"
+  }
+}

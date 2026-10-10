@@ -1,0 +1,929 @@
+{
+  "schema": "joeness.review-baseline.v1",
+  "scope_id": "visitor-note-local-spacing",
+  "authorization_ref": "REQUEST.md",
+  "authority": [
+    {
+      "path": "DESIGN.md",
+      "sha256": "5b0a4fe966ca34acf7effed31361b0fd18356349b3a353a20b9e8c4df9e7434e"
+    },
+    {
+      "path": "PRODUCT.md",
+      "sha256": "15987958f4e651786677e06f7e7b490e3691a3bcb5a3ee5d98798dfb23e025c1"
+    },
+    {
+      "path": "reference/approved.html",
+      "sha256": "826dac4820a7ddecb0177bd2e01f9cbe85e48ea97384387d08881636590e5164"
+    }
+  ],
+  "targets": [
+    {
+      "id": "wide-initial",
+      "route": "/index.html",
+      "surface": "session-desk",
+      "family": "overview",
+      "viewport": [
+        1240,
+        900
+      ],
+      "state": "initial",
+      "theme": "light",
+      "locale": "en",
+      "required_kinds": [
+        "render",
+        "interaction"
+      ]
+    },
+    {
+      "id": "wide-reserved",
+      "route": "/index.html",
+      "surface": "session-desk",
+      "family": "overview",
+      "viewport": [
+        1240,
+        900
+      ],
+      "state": "reserved",
+      "theme": "light",
+      "locale": "en",
+      "required_kinds": [
+        "render",
+        "interaction"
+      ]
+    },
+    {
+      "id": "narrow-initial",
+      "route": "/index.html",
+      "surface": "session-desk",
+      "family": "overview",
+      "viewport": [
+        390,
+        900
+      ],
+      "state": "initial",
+      "theme": "light",
+      "locale": "en",
+      "required_kinds": [
+        "render",
+        "interaction"
+      ]
+    },
+    {
+      "id": "narrow-reserved",
+      "route": "/index.html",
+      "surface": "session-desk",
+      "family": "overview",
+      "viewport": [
+        390,
+        900
+      ],
+      "state": "reserved",
+      "theme": "light",
+      "locale": "en",
+      "required_kinds": [
+        "render",
+        "interaction"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "visitor-gap",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "heading-gap",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "panel-inset",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "layout-gap",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "control-height",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "visual-preservation",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "specialist"
+      ]
+    },
+    {
+      "id": "responsive-preservation",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "specialist"
+      ]
+    },
+    {
+      "id": "reservation-preservation",
+      "source_ref": "PRODUCT.md",
+      "target_ids": [
+        "wide-initial",
+        "wide-reserved",
+        "narrow-initial",
+        "narrow-reserved"
+      ],
+      "methods": [
+        "specialist"
+      ]
+    }
+  ],
+  "required_checks": [
+    {
+      "check_id": "visitor-gap-wide-initial",
+      "rule_id": "visitor-gap",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note p",
+        "to": ".note .action",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "3351a752d4c17c1f2ae59911e5c251a35cbe4e0e19c4944a368a33746ac98b7f",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "visitor-gap-wide-reserved",
+      "rule_id": "visitor-gap",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note p",
+        "to": ".note .action",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "3351a752d4c17c1f2ae59911e5c251a35cbe4e0e19c4944a368a33746ac98b7f",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "visitor-gap-narrow-initial",
+      "rule_id": "visitor-gap",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note p",
+        "to": ".note .action",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "3351a752d4c17c1f2ae59911e5c251a35cbe4e0e19c4944a368a33746ac98b7f",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "visitor-gap-narrow-reserved",
+      "rule_id": "visitor-gap",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note p",
+        "to": ".note .action",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "3351a752d4c17c1f2ae59911e5c251a35cbe4e0e19c4944a368a33746ac98b7f",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "heading-gap-wide-initial",
+      "rule_id": "heading-gap",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note h2",
+        "to": ".note p",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "b4da2eb447b09d10aed9c811905bc5052a19977f03f180a14d481b6087a58926",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "heading-gap-wide-reserved",
+      "rule_id": "heading-gap",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note h2",
+        "to": ".note p",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "b4da2eb447b09d10aed9c811905bc5052a19977f03f180a14d481b6087a58926",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "heading-gap-narrow-initial",
+      "rule_id": "heading-gap",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note h2",
+        "to": ".note p",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "b4da2eb447b09d10aed9c811905bc5052a19977f03f180a14d481b6087a58926",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "heading-gap-narrow-reserved",
+      "rule_id": "heading-gap",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note h2",
+        "to": ".note p",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 18,
+        "max": 18,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "b4da2eb447b09d10aed9c811905bc5052a19977f03f180a14d481b6087a58926",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "panel-inset-wide-initial",
+      "rule_id": "panel-inset",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note",
+        "to": ".note h2",
+        "from_edge": "left",
+        "to_edge": "left",
+        "expected_count": 1,
+        "min": 25,
+        "max": 25,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "71f20a538059c95481af5391d944056ea037b51d92468f15bddd0ab926a05899",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "panel-inset-wide-reserved",
+      "rule_id": "panel-inset",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note",
+        "to": ".note h2",
+        "from_edge": "left",
+        "to_edge": "left",
+        "expected_count": 1,
+        "min": 25,
+        "max": 25,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "71f20a538059c95481af5391d944056ea037b51d92468f15bddd0ab926a05899",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "panel-inset-narrow-initial",
+      "rule_id": "panel-inset",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note",
+        "to": ".note h2",
+        "from_edge": "left",
+        "to_edge": "left",
+        "expected_count": 1,
+        "min": 21,
+        "max": 21,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "195d9e930df5414f9ad73694101c22b9bd8bf7e57755ac136e25bdb3fcc47923",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "panel-inset-narrow-reserved",
+      "rule_id": "panel-inset",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": ".note",
+        "to": ".note h2",
+        "from_edge": "left",
+        "to_edge": "left",
+        "expected_count": 1,
+        "min": 21,
+        "max": 21,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "195d9e930df5414f9ad73694101c22b9bd8bf7e57755ac136e25bdb3fcc47923",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "layout-gap-wide-initial",
+      "rule_id": "layout-gap",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "#sessions",
+        "to": "aside",
+        "from_edge": "right",
+        "to_edge": "left",
+        "expected_count": 1,
+        "min": 28,
+        "max": 28,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "85aee6c790d8ec683b501a4aeea742c2513b397beef7f4b01b24038dc9201304",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "layout-gap-wide-reserved",
+      "rule_id": "layout-gap",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "#sessions",
+        "to": "aside",
+        "from_edge": "right",
+        "to_edge": "left",
+        "expected_count": 1,
+        "min": 28,
+        "max": 28,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "85aee6c790d8ec683b501a4aeea742c2513b397beef7f4b01b24038dc9201304",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "layout-gap-narrow-initial",
+      "rule_id": "layout-gap",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "#sessions",
+        "to": "aside",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 24,
+        "max": 24,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "bd4aab732c1540e04b79d90dd72a8cad3542c215400434d3733a5e52ea082d9c",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "layout-gap-narrow-reserved",
+      "rule_id": "layout-gap",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "#sessions",
+        "to": "aside",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 24,
+        "max": 24,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "bd4aab732c1540e04b79d90dd72a8cad3542c215400434d3733a5e52ea082d9c",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "control-height-wide-initial",
+      "rule_id": "control-height",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "button, .note .action",
+        "to": "button, .note .action",
+        "from_edge": "top",
+        "to_edge": "bottom",
+        "expected_count": 4,
+        "min": 44,
+        "max": 44,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "42301df636b93628d711d98ae192e6468fcab254d79dede75c64c50719106811",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "control-height-wide-reserved",
+      "rule_id": "control-height",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "button, .note .action",
+        "to": "button, .note .action",
+        "from_edge": "top",
+        "to_edge": "bottom",
+        "expected_count": 4,
+        "min": 44,
+        "max": 44,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "42301df636b93628d711d98ae192e6468fcab254d79dede75c64c50719106811",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "control-height-narrow-initial",
+      "rule_id": "control-height",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "button, .note .action",
+        "to": "button, .note .action",
+        "from_edge": "top",
+        "to_edge": "bottom",
+        "expected_count": 4,
+        "min": 44,
+        "max": 44,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "42301df636b93628d711d98ae192e6468fcab254d79dede75c64c50719106811",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "control-height-narrow-reserved",
+      "rule_id": "control-height",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "geometry",
+      "criterion": {
+        "kind": "pair",
+        "from": "button, .note .action",
+        "to": "button, .note .action",
+        "from_edge": "top",
+        "to_edge": "bottom",
+        "expected_count": 4,
+        "min": 44,
+        "max": 44,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "42301df636b93628d711d98ae192e6468fcab254d79dede75c64c50719106811",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "visual-preservation-wide-initial",
+      "rule_id": "visual-preservation",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "visual-preservation-wide-initial",
+        "category": "VisualConformance",
+        "expected": "Visitor note sibling spacing matches approved 18px; approved green/cream identity, overview entry, prominent session list, secondary note and protected regions retain the reference relationships; the correction changes only the extra action margin and its necessary downstream flow."
+      },
+      "criterion_sha256": "1066a3a1d668359090b7527dde1e286286f0f6097a0c2cba0e479f210f7331ec",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "visual-preservation-wide-reserved",
+      "rule_id": "visual-preservation",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "visual-preservation-wide-reserved",
+        "category": "VisualConformance",
+        "expected": "Visitor note sibling spacing matches approved 18px; approved green/cream identity, overview entry, prominent session list, secondary note and protected regions retain the reference relationships; the correction changes only the extra action margin and its necessary downstream flow."
+      },
+      "criterion_sha256": "9863bb0095706e6238f455733061aa5c79713adad508710d977ebf48cfe56e7c",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "visual-preservation-narrow-initial",
+      "rule_id": "visual-preservation",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "visual-preservation-narrow-initial",
+        "category": "VisualConformance",
+        "expected": "Visitor note sibling spacing matches approved 18px; approved green/cream identity, overview entry, prominent session list, secondary note and protected regions retain the reference relationships; the correction changes only the extra action margin and its necessary downstream flow."
+      },
+      "criterion_sha256": "f8521363c72fcf509f5a9c29477b2f3b891e0a5c8d4096718db7ae7fb2ddaddd",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "visual-preservation-narrow-reserved",
+      "rule_id": "visual-preservation",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "visual-preservation-narrow-reserved",
+        "category": "VisualConformance",
+        "expected": "Visitor note sibling spacing matches approved 18px; approved green/cream identity, overview entry, prominent session list, secondary note and protected regions retain the reference relationships; the correction changes only the extra action margin and its necessary downstream flow."
+      },
+      "criterion_sha256": "7be04be99be48d5b422b940007c824870e8022535759ecdca7979f32b1e5bf14",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "responsive-preservation-wide-initial",
+      "rule_id": "responsive-preservation",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "responsive-preservation-wide-initial",
+        "category": "Responsive",
+        "expected": "At 1240x900 and 390x900, content remains readable and reachable without horizontal overflow; narrow single-column order and native responsive layout match the approved original."
+      },
+      "criterion_sha256": "83417deafb1eaae2f4baff0fe71c7ac0b2741d0b6aecaa2a4cc1636f5d74df68",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "responsive-preservation-wide-reserved",
+      "rule_id": "responsive-preservation",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "responsive-preservation-wide-reserved",
+        "category": "Responsive",
+        "expected": "At 1240x900 and 390x900, content remains readable and reachable without horizontal overflow; narrow single-column order and native responsive layout match the approved original."
+      },
+      "criterion_sha256": "3bcfff6da1efca955a838b6e2957df6236458284f31b96590d05ef40262baa8f",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "responsive-preservation-narrow-initial",
+      "rule_id": "responsive-preservation",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "responsive-preservation-narrow-initial",
+        "category": "Responsive",
+        "expected": "At 1240x900 and 390x900, content remains readable and reachable without horizontal overflow; narrow single-column order and native responsive layout match the approved original."
+      },
+      "criterion_sha256": "78f220b76c2c9c744f868f99b6f6ebb5b067c4f97e8671cbb27a935ddefa8f41",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "responsive-preservation-narrow-reserved",
+      "rule_id": "responsive-preservation",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "responsive-preservation-narrow-reserved",
+        "category": "Responsive",
+        "expected": "At 1240x900 and 390x900, content remains readable and reachable without horizontal overflow; narrow single-column order and native responsive layout match the approved original."
+      },
+      "criterion_sha256": "2180d5f929dd8b45fca0891e203553be4a63c955d5b894f37f61f57dfa624329",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "reservation-preservation-wide-initial",
+      "rule_id": "reservation-preservation",
+      "target_id": "wide-initial",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "reservation-preservation-wide-initial",
+        "category": "Experience",
+        "expected": "Both available sessions reserve only once; each disables and reads Reserved, summary increases to 1 then 2, status announces success; full session remains disabled, cannot change summary, and titles/time/location/availability remain visible."
+      },
+      "criterion_sha256": "c3378cca26df89b0c39b94d234fc1f21502c657128dfef49d5ed88dc4e077691",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "reservation-preservation-wide-reserved",
+      "rule_id": "reservation-preservation",
+      "target_id": "wide-reserved",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "reservation-preservation-wide-reserved",
+        "category": "Experience",
+        "expected": "Both available sessions reserve only once; each disables and reads Reserved, summary increases to 1 then 2, status announces success; full session remains disabled, cannot change summary, and titles/time/location/availability remain visible."
+      },
+      "criterion_sha256": "ca382bdadb7f77ad75dae4c4663825f15615e624f223ccf7508238d013914ffa",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "reservation-preservation-narrow-initial",
+      "rule_id": "reservation-preservation",
+      "target_id": "narrow-initial",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "reservation-preservation-narrow-initial",
+        "category": "Experience",
+        "expected": "Both available sessions reserve only once; each disables and reads Reserved, summary increases to 1 then 2, status announces success; full session remains disabled, cannot change summary, and titles/time/location/availability remain visible."
+      },
+      "criterion_sha256": "a563e50d68433e57ede08697b87d8e1f9808546d7596e7620d25112372bad038",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    },
+    {
+      "check_id": "reservation-preservation-narrow-reserved",
+      "rule_id": "reservation-preservation",
+      "target_id": "narrow-reserved",
+      "lane": "visual",
+      "method": "specialist",
+      "criterion": {
+        "claim_id": "reservation-preservation-narrow-reserved",
+        "category": "Experience",
+        "expected": "Both available sessions reserve only once; each disables and reads Reserved, summary increases to 1 then 2, status announces success; full session remains disabled, cannot change summary, and titles/time/location/availability remain visible."
+      },
+      "criterion_sha256": "eb5283d322d470f4f0dddf5da313ee274aeba17f707fb3881c021259fc3f7abc",
+      "inputs": [
+        "index.html",
+        "DESIGN.md",
+        "PRODUCT.md",
+        "reference/approved.html"
+      ]
+    }
+  ],
+  "required_lanes": [
+    "visual"
+  ],
+  "required_acceptance": true
+}

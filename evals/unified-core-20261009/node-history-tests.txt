@@ -1,0 +1,22 @@
+✔ history — archived v0.2 package identity and inventory (2.8934ms)
+✔ package — a project-local copy resolves its shipped relative links without repo docs (17.6268ms)
+✔ history — original failures, semantic responses, Smokes, doctrines and test source bytes survive (280.3787ms)
+✔ inputs — pre-execution scenarios and reviewer expectations were not tuned after output (3.0286ms)
+✔ historical evidence — response, input, actual execution and archived v0.2 package are linked (14.3726ms)
+✔ recorded decision B01 — fixed qualitative obligations satisfied (15.4981ms)
+✔ recorded decision B02 — fixed qualitative obligations satisfied (15.8416ms)
+✔ recorded decision B03 — fixed qualitative obligations satisfied (16.6965ms)
+✔ recorded decision B04 — fixed qualitative obligations satisfied (18.6557ms)
+✔ recorded decision B05 — fixed qualitative obligations satisfied (20.2379ms)
+✔ recorded decision B06 — fixed qualitative obligations satisfied (16.334ms)
+✔ recorded decision B07 — fixed qualitative obligations satisfied (16.3488ms)
+✔ recorded decision B08 — fixed qualitative obligations satisfied (15.9402ms)
+✔ recorded decision B09 — fixed qualitative obligations satisfied (14.6897ms)
+ℹ tests 14
+ℹ suites 0
+ℹ pass 14
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 584.2584

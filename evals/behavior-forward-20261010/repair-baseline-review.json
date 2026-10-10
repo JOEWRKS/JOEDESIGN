@@ -1,0 +1,7 @@
+{
+  "reviewer": "parent evaluator independent of implementation",
+  "scope": "morrow-local-repair",
+  "basis": "Exact requested note paragraph-to-action gap18, heading gap18 and scoped protected relationships. Four target states retain both reservation actions and full state. Other geometry preservation is corroborated by exact source diff and full render; single left inset is a sentinel, not exhaustive panel-padding certification. No broad design or user acceptance.",
+  "verdict": "ACCEPTED_FOR_BOUNDED_REPAIR",
+  "baseline_sha256": "ac8ff6b5952fc7e9a694055a939fc056e7ff8825216d7de679f878a9d5cc9432"
+}

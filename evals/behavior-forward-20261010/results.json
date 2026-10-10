@@ -1,0 +1,152 @@
+{
+  "version": "0.3.0-dev",
+  "trust": "LOCAL_UNAUTHENTICATED",
+  "acceptance": "NOT_GRANTED",
+  "cases": {
+    "new": {
+      "checks": 54,
+      "eligible": true,
+      "records": [
+        {
+          "label": "conformance",
+          "source": "cases\\new\\evidence\\final-conformance-fresh.json",
+          "saved": "records\\new-conformance.json",
+          "sha256": "81e562773d6598250f66e5034ce7d9d17a8fc79fe0fb89cf854242aa6f8d08e7"
+        },
+        {
+          "label": "baseline",
+          "source": "cases\\new\\evidence\\baseline.json",
+          "saved": "records\\new-baseline.json",
+          "sha256": "f3ac61a3ec60dfa45526f31b955e8ebc60c6a960d81bf71d5eb50472435b740e"
+        },
+        {
+          "label": "direct-reviews",
+          "source": "cases\\new\\evidence\\direct-reviewed-fresh.json",
+          "saved": "records\\new-direct-reviews.json",
+          "sha256": "ebace9a490f3dfb6a0d825081c105e7cb4eacd43e80e09a9584541d7ba0f4dd3"
+        },
+        {
+          "label": "r",
+          "source": "cases\\new\\evidence\\review-r\\results.json",
+          "saved": "records\\new-r.json",
+          "sha256": "1ff547b5eb388cfca747753d80bda0f0a2ed453add7a472d3741a36fbc5c4495"
+        },
+        {
+          "label": "c1",
+          "source": "cases\\new\\evidence\\review-c1\\results.json",
+          "saved": "records\\new-c1.json",
+          "sha256": "8ee336cb40b8f2b10a500764a9ac287255ef672af8476472fb2c014554b59d5c"
+        },
+        {
+          "label": "critic",
+          "source": "cases\\new\\evidence\\critic-fresh\\results.json",
+          "saved": "records\\new-critic.json",
+          "sha256": "3170560fd548d9a72ee316b74250668af03fa6d787287fcca97419b2f2315560"
+        }
+      ]
+    },
+    "repair": {
+      "checks": 32,
+      "eligible": true,
+      "records": [
+        {
+          "label": "conformance",
+          "source": "cases\\repair\\evidence\\final-conformance.json",
+          "saved": "records\\repair-conformance.json",
+          "sha256": "7d06cd54d83e6981501b93fd4354706f76dc85a519ee7c576a54e29974518663"
+        },
+        {
+          "label": "baseline",
+          "source": "cases\\repair\\evidence\\baseline.json",
+          "saved": "records\\repair-baseline.json",
+          "sha256": "ac8ff6b5952fc7e9a694055a939fc056e7ff8825216d7de679f878a9d5cc9432"
+        },
+        {
+          "label": "direct-reviews",
+          "source": "cases\\repair\\evidence\\direct-reviewed.json",
+          "saved": "records\\repair-direct-reviews.json",
+          "sha256": "1bafddc4f80f04935deb271a4c6eaede9e7b5fdc3d67be85a61e0dd31384273b"
+        },
+        {
+          "label": "r",
+          "source": "cases\\repair\\evidence\\review-r\\results.json",
+          "saved": "records\\repair-r.json",
+          "sha256": "75b0bea5e71ee2930762645520dbe80bdfa3b115a8cded0da10c8ee67a95fddb"
+        },
+        {
+          "label": "c1",
+          "source": "cases\\repair\\evidence\\review-c1\\results.json",
+          "saved": "records\\repair-c1.json",
+          "sha256": "5d4ca4eb4d1737c90e7604357bef5ce34862f8e33091c4be17ff4f177b77bc30"
+        },
+        {
+          "label": "critic",
+          "source": "cases\\repair\\evidence\\critic\\results.json",
+          "saved": "records\\repair-critic.json",
+          "sha256": "d6be9545258c675b4d82a9403cabba1808930c72a1cbaa3e0d6e2ae48f9d40e8"
+        }
+      ]
+    },
+    "extension": {
+      "checks": 249,
+      "eligible": true,
+      "records": [
+        {
+          "label": "conformance",
+          "source": "cases\\extension\\evidence\\final-integration-conformance.json",
+          "saved": "records\\extension-conformance.json",
+          "sha256": "6bc908db341f1e55f0b139d0b94f22d5350abd41ea18a8fe6e80b48697fdeba2"
+        },
+        {
+          "label": "baseline",
+          "source": "cases\\extension\\evidence\\integration-baseline.json",
+          "saved": "records\\extension-baseline.json",
+          "sha256": "71764afcb19b0d8121fb85f47496c1ff89cbe5e549bb3452f2a641cf91fff890"
+        },
+        {
+          "label": "direct-reviews",
+          "source": "cases\\extension\\evidence\\integration-direct-reviewed.json",
+          "saved": "records\\extension-direct-reviews.json",
+          "sha256": "f355a503a7899992f9724a1dab7a1459e24a7ab1ea13020ee118ad26e11dac7e"
+        },
+        {
+          "label": "r",
+          "source": "cases\\extension\\evidence\\integration-review-r\\results.json",
+          "saved": "records\\extension-r.json",
+          "sha256": "f2edfdcaf1df7e3d22d237b565c7a6c5a8ae1c3be5c289c1ac7616d941ed28d1"
+        },
+        {
+          "label": "c1",
+          "source": "cases\\extension\\evidence\\integration-review-c1\\results.json",
+          "saved": "records\\extension-c1.json",
+          "sha256": "fb8e91ae8582afedee6798faf8f6f6b54e2bff481688aa474d61383a1c38b891"
+        },
+        {
+          "label": "c1-behavior",
+          "source": "cases\\extension\\evidence\\integration-review-c1-behavior\\results.json",
+          "saved": "records\\extension-c1-behavior.json",
+          "sha256": "a1920b5651b5a2773449ef3c53027eb0dcfe0af1f42fe92d4750e865012ee62c"
+        },
+        {
+          "label": "critic",
+          "source": "cases\\extension\\evidence\\integration-critic-fresh\\results.json",
+          "saved": "records\\extension-critic.json",
+          "sha256": "2f897a143425f618c983a0249b258ea83ce836206c22103b559d9e75e85db663"
+        },
+        {
+          "label": "stale-proof",
+          "source": "cases\\extension\\evidence\\stale-proof-on-integrated-build.json",
+          "saved": "records\\extension-stale-proof.json",
+          "sha256": "3511bcf4b834527170a6cba4e2f75143798e3993173ff1da42c3ec5adf46036c"
+        },
+        {
+          "label": "dependencies",
+          "source": "cases\\extension\\evidence\\dependency-validation.json",
+          "saved": "records\\extension-dependencies.json",
+          "sha256": "551a8c36503739d1fb2de9343bd092f6d8f77650bd15226061537897065a1fa6"
+        }
+      ]
+    }
+  },
+  "local_artifact_count": 598
+}

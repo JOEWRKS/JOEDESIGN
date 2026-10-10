@@ -1,0 +1,7 @@
+{
+  "reviewer": "parent evaluator independent of case implementation",
+  "baseline_sha256": "f3ac61a3ec60dfa45526f31b955e8ebc60c6a960d81bf71d5eb50472435b740e",
+  "basis": "Read fixture Product/Design, source HTML, wide and narrow originals. Inventory covers mandated gap/padding/column/action relationships and composition, responsiveness and booking states. 25/21 outer insets interpret 24/20 padding plus 1px border in proposed normalized implementation; they are not claimed exact measurements of every original margin. Actual selector endpoints and counts remain subject to rendered verification. No output acceptance or authenticated receipt granted.",
+  "verdict": "ACCEPTED_FOR_PROOF",
+  "scope": "morrow-new-overview"
+}

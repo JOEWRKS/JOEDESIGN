@@ -1,0 +1,1752 @@
+{
+  "origin": "Evaluation adapter of actual direct-tool reviews; NOT a runner-produced or authenticated report",
+  "baseline_sha256": "f3ac61a3ec60dfa45526f31b955e8ebc60c6a960d81bf71d5eb50472435b740e",
+  "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+  "input_fingerprints": {
+    "visitor-siblings-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visitor-siblings-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visitor-siblings-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visitor-siblings-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-top-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-top-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-top-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-top-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-left-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-left-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-left-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-left-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-right-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-right-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-right-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-right-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-bottom-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-bottom-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-bottom-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "panel-bottom-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "desktop-columns-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "desktop-columns-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "action-height-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "action-height-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "action-height-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "action-height-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "structure-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "structure-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "structure-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "structure-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualconformance-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualconformance-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualconformance-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualconformance-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualquality-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualquality-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualquality-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "visualquality-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "craft-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "craft-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "craft-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "craft-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "responsive-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "responsive-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "responsive-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "responsive-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "accessibility-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "accessibility-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "accessibility-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "accessibility-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "experience-wide-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "experience-wide-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "experience-narrow-initial": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea",
+    "experience-narrow-reserved": "0dab81b09e3863751ee601f2ffb1643448df3325178f85f554c36cf8af6852ea"
+  },
+  "claims": [
+    {
+      "id": "structure-wide-initial",
+      "target_id": "wide-initial",
+      "category": "Structure",
+      "expected": "Overview introduces the task; sessions lead; visitor note is secondary; narrow order is sessions, note, summary, guide.",
+      "kind": "render"
+    },
+    {
+      "id": "structure-wide-reserved",
+      "target_id": "wide-reserved",
+      "category": "Structure",
+      "expected": "Overview introduces the task; sessions lead; visitor note is secondary; narrow order is sessions, note, summary, guide.",
+      "kind": "render"
+    },
+    {
+      "id": "structure-narrow-initial",
+      "target_id": "narrow-initial",
+      "category": "Structure",
+      "expected": "Overview introduces the task; sessions lead; visitor note is secondary; narrow order is sessions, note, summary, guide.",
+      "kind": "render"
+    },
+    {
+      "id": "structure-narrow-reserved",
+      "target_id": "narrow-reserved",
+      "category": "Structure",
+      "expected": "Overview introduces the task; sessions lead; visitor note is secondary; narrow order is sessions, note, summary, guide.",
+      "kind": "render"
+    },
+    {
+      "id": "visualconformance-wide-initial",
+      "target_id": "wide-initial",
+      "category": "VisualConformance",
+      "expected": "Calm green/cream identity, source type hierarchy and density, prominent list, subordinate visitor note and responsive source relationships remain visible.",
+      "kind": "render"
+    },
+    {
+      "id": "visualconformance-wide-reserved",
+      "target_id": "wide-reserved",
+      "category": "VisualConformance",
+      "expected": "Calm green/cream identity, source type hierarchy and density, prominent list, subordinate visitor note and responsive source relationships remain visible.",
+      "kind": "render"
+    },
+    {
+      "id": "visualconformance-narrow-initial",
+      "target_id": "narrow-initial",
+      "category": "VisualConformance",
+      "expected": "Calm green/cream identity, source type hierarchy and density, prominent list, subordinate visitor note and responsive source relationships remain visible.",
+      "kind": "render"
+    },
+    {
+      "id": "visualconformance-narrow-reserved",
+      "target_id": "narrow-reserved",
+      "category": "VisualConformance",
+      "expected": "Calm green/cream identity, source type hierarchy and density, prominent list, subordinate visitor note and responsive source relationships remain visible.",
+      "kind": "render"
+    },
+    {
+      "id": "visualquality-wide-initial",
+      "target_id": "wide-initial",
+      "category": "VisualQuality",
+      "expected": "Headline leads into usable real session content; task actions are locatable and whole composition remains calm at real content length.",
+      "kind": "render"
+    },
+    {
+      "id": "visualquality-wide-reserved",
+      "target_id": "wide-reserved",
+      "category": "VisualQuality",
+      "expected": "Headline leads into usable real session content; task actions are locatable and whole composition remains calm at real content length.",
+      "kind": "render"
+    },
+    {
+      "id": "visualquality-narrow-initial",
+      "target_id": "narrow-initial",
+      "category": "VisualQuality",
+      "expected": "Headline leads into usable real session content; task actions are locatable and whole composition remains calm at real content length.",
+      "kind": "render"
+    },
+    {
+      "id": "visualquality-narrow-reserved",
+      "target_id": "narrow-reserved",
+      "category": "VisualQuality",
+      "expected": "Headline leads into usable real session content; task actions are locatable and whole composition remains calm at real content length.",
+      "kind": "render"
+    },
+    {
+      "id": "craft-wide-initial",
+      "target_id": "wide-initial",
+      "category": "Craft",
+      "expected": "Consistent semantic type, spacing and component states; wrap points and whole-screen rhythm work on wide and narrow.",
+      "kind": "render"
+    },
+    {
+      "id": "craft-wide-reserved",
+      "target_id": "wide-reserved",
+      "category": "Craft",
+      "expected": "Consistent semantic type, spacing and component states; wrap points and whole-screen rhythm work on wide and narrow.",
+      "kind": "render"
+    },
+    {
+      "id": "craft-narrow-initial",
+      "target_id": "narrow-initial",
+      "category": "Craft",
+      "expected": "Consistent semantic type, spacing and component states; wrap points and whole-screen rhythm work on wide and narrow.",
+      "kind": "render"
+    },
+    {
+      "id": "craft-narrow-reserved",
+      "target_id": "narrow-reserved",
+      "category": "Craft",
+      "expected": "Consistent semantic type, spacing and component states; wrap points and whole-screen rhythm work on wide and narrow.",
+      "kind": "render"
+    },
+    {
+      "id": "responsive-wide-initial",
+      "target_id": "wide-initial",
+      "category": "Responsive",
+      "expected": "No clipping, horizontal overflow or missing below-fold content; all session facts and actions readable and reachable in narrow view.",
+      "kind": "render"
+    },
+    {
+      "id": "responsive-wide-reserved",
+      "target_id": "wide-reserved",
+      "category": "Responsive",
+      "expected": "No clipping, horizontal overflow or missing below-fold content; all session facts and actions readable and reachable in narrow view.",
+      "kind": "render"
+    },
+    {
+      "id": "responsive-narrow-initial",
+      "target_id": "narrow-initial",
+      "category": "Responsive",
+      "expected": "No clipping, horizontal overflow or missing below-fold content; all session facts and actions readable and reachable in narrow view.",
+      "kind": "render"
+    },
+    {
+      "id": "responsive-narrow-reserved",
+      "target_id": "narrow-reserved",
+      "category": "Responsive",
+      "expected": "No clipping, horizontal overflow or missing below-fold content; all session facts and actions readable and reachable in narrow view.",
+      "kind": "render"
+    },
+    {
+      "id": "accessibility-wide-initial",
+      "target_id": "wide-initial",
+      "category": "Accessibility",
+      "expected": "Semantic headings, unique action names, keyboard focus, live status, contrast and full/reserved disabled states remain operable and understandable.",
+      "kind": "interaction"
+    },
+    {
+      "id": "accessibility-wide-reserved",
+      "target_id": "wide-reserved",
+      "category": "Accessibility",
+      "expected": "Semantic headings, unique action names, keyboard focus, live status, contrast and full/reserved disabled states remain operable and understandable.",
+      "kind": "interaction"
+    },
+    {
+      "id": "accessibility-narrow-initial",
+      "target_id": "narrow-initial",
+      "category": "Accessibility",
+      "expected": "Semantic headings, unique action names, keyboard focus, live status, contrast and full/reserved disabled states remain operable and understandable.",
+      "kind": "interaction"
+    },
+    {
+      "id": "accessibility-narrow-reserved",
+      "target_id": "narrow-reserved",
+      "category": "Accessibility",
+      "expected": "Semantic headings, unique action names, keyboard focus, live status, contrast and full/reserved disabled states remain operable and understandable.",
+      "kind": "interaction"
+    },
+    {
+      "id": "experience-wide-initial",
+      "target_id": "wide-initial",
+      "category": "Experience",
+      "expected": "Each available session reserves once; full stays disabled; count and specific status update; facts and availability remain visible; guide/navigation work.",
+      "kind": "interaction"
+    },
+    {
+      "id": "experience-wide-reserved",
+      "target_id": "wide-reserved",
+      "category": "Experience",
+      "expected": "Each available session reserves once; full stays disabled; count and specific status update; facts and availability remain visible; guide/navigation work.",
+      "kind": "interaction"
+    },
+    {
+      "id": "experience-narrow-initial",
+      "target_id": "narrow-initial",
+      "category": "Experience",
+      "expected": "Each available session reserves once; full stays disabled; count and specific status update; facts and availability remain visible; guide/navigation work.",
+      "kind": "interaction"
+    },
+    {
+      "id": "experience-narrow-reserved",
+      "target_id": "narrow-reserved",
+      "category": "Experience",
+      "expected": "Each available session reserves once; full stays disabled; count and specific status update; facts and availability remain visible; guide/navigation work.",
+      "kind": "interaction"
+    }
+  ],
+  "captures": [
+    {
+      "id": "wide-initial-interaction-0",
+      "target": {
+        "id": "wide-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "interaction",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-observation.json",
+      "sha256": "8f9818c34c185760f2d9b624d5b7dda03ee8d2efe6c9eb734746ba9dfba42c41"
+    },
+    {
+      "id": "wide-initial-render-0",
+      "target": {
+        "id": "wide-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-start.png",
+      "sha256": "56234649312c80d39ef49c68e02d84431b4776a38e8c203b204c6520af3f0e04"
+    },
+    {
+      "id": "wide-initial-render-1",
+      "target": {
+        "id": "wide-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-action-0.png",
+      "sha256": "178459253dc33414ad15da4e34170624772f094667fd22cb283e2cfbfe3cd7ad"
+    },
+    {
+      "id": "wide-initial-render-2",
+      "target": {
+        "id": "wide-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-result.png",
+      "sha256": "178459253dc33414ad15da4e34170624772f094667fd22cb283e2cfbfe3cd7ad"
+    },
+    {
+      "id": "wide-initial-render-3",
+      "target": {
+        "id": "wide-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\0-full.png",
+      "sha256": "79d3c496b8911da4ca468705bcd20f922faa6d38830b757513d77d92ef30a212"
+    },
+    {
+      "id": "wide-reserved-interaction-0",
+      "target": {
+        "id": "wide-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "interaction",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-observation.json",
+      "sha256": "5215d38d477dbd8c63b2b725b300762d348b3ef855ae4b2eca3ee9a3824e6170"
+    },
+    {
+      "id": "wide-reserved-render-0",
+      "target": {
+        "id": "wide-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-start.png",
+      "sha256": "56234649312c80d39ef49c68e02d84431b4776a38e8c203b204c6520af3f0e04"
+    },
+    {
+      "id": "wide-reserved-render-1",
+      "target": {
+        "id": "wide-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-action-0.png",
+      "sha256": "26b785391f23486ca23cedd472c713f9f283fb0d3714cdbcb050ff5b263f3d97"
+    },
+    {
+      "id": "wide-reserved-render-2",
+      "target": {
+        "id": "wide-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-action-1.png",
+      "sha256": "16392bdf15827bac5da91e13d43b05b2c45d9f8d0c21f6166ebf0fd77653759c"
+    },
+    {
+      "id": "wide-reserved-render-3",
+      "target": {
+        "id": "wide-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-action-2.png",
+      "sha256": "16392bdf15827bac5da91e13d43b05b2c45d9f8d0c21f6166ebf0fd77653759c"
+    },
+    {
+      "id": "wide-reserved-render-4",
+      "target": {
+        "id": "wide-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-result.png",
+      "sha256": "16392bdf15827bac5da91e13d43b05b2c45d9f8d0c21f6166ebf0fd77653759c"
+    },
+    {
+      "id": "wide-reserved-render-5",
+      "target": {
+        "id": "wide-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          1240,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\1-full.png",
+      "sha256": "d4642d67ecc12907a66a62c72f1dd9ba4a91d9d5a66c9a6bad1af2d49e529b90"
+    },
+    {
+      "id": "narrow-initial-interaction-0",
+      "target": {
+        "id": "narrow-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "interaction",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-observation.json",
+      "sha256": "1ee1802d3a051377033ff65cf2cb57e2333ae715a2f9c113e91abbd07a7635ee"
+    },
+    {
+      "id": "narrow-initial-render-0",
+      "target": {
+        "id": "narrow-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-start.png",
+      "sha256": "6ba1e5df6c695c30e095aa7e2275d330c340a183830403ddc3b087e0d4137c9c"
+    },
+    {
+      "id": "narrow-initial-render-1",
+      "target": {
+        "id": "narrow-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-action-0.png",
+      "sha256": "61385ba0959300bfa544c180f47a07cad4f83e94bdc238c38aee9613aae21eaf"
+    },
+    {
+      "id": "narrow-initial-render-2",
+      "target": {
+        "id": "narrow-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-result.png",
+      "sha256": "61385ba0959300bfa544c180f47a07cad4f83e94bdc238c38aee9613aae21eaf"
+    },
+    {
+      "id": "narrow-initial-render-3",
+      "target": {
+        "id": "narrow-initial",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "initial",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\2-full.png",
+      "sha256": "14ad127b1a4ccbf33026b3cecb3537e34cc27d563ec84d91506bbd27147ff6a7"
+    },
+    {
+      "id": "narrow-reserved-interaction-0",
+      "target": {
+        "id": "narrow-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "interaction",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-observation.json",
+      "sha256": "9f8fae2ed608615df5eda1fa696c0aff2ed02a787f127cac47e6e16ecdb20884"
+    },
+    {
+      "id": "narrow-reserved-render-0",
+      "target": {
+        "id": "narrow-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-start.png",
+      "sha256": "6ba1e5df6c695c30e095aa7e2275d330c340a183830403ddc3b087e0d4137c9c"
+    },
+    {
+      "id": "narrow-reserved-render-1",
+      "target": {
+        "id": "narrow-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-action-0.png",
+      "sha256": "fb42b9bbfedafd6d63fa658d8111cafffa30ee11675b6f95fa61d1e86917bf26"
+    },
+    {
+      "id": "narrow-reserved-render-2",
+      "target": {
+        "id": "narrow-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-action-1.png",
+      "sha256": "0ce954cfb901f8241a8690fdba3b3796342ce917efdad8f2e27eedeb194bc699"
+    },
+    {
+      "id": "narrow-reserved-render-3",
+      "target": {
+        "id": "narrow-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-action-2.png",
+      "sha256": "0ce954cfb901f8241a8690fdba3b3796342ce917efdad8f2e27eedeb194bc699"
+    },
+    {
+      "id": "narrow-reserved-render-4",
+      "target": {
+        "id": "narrow-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-result.png",
+      "sha256": "0ce954cfb901f8241a8690fdba3b3796342ce917efdad8f2e27eedeb194bc699"
+    },
+    {
+      "id": "narrow-reserved-render-5",
+      "target": {
+        "id": "narrow-reserved",
+        "route": "/index.html",
+        "surface": "overview",
+        "family": "overview",
+        "viewport": [
+          390,
+          900
+        ],
+        "state": "reserved",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "interaction",
+          "technical"
+        ]
+      },
+      "kind": "render",
+      "build_id": "78e284bed53db0bdb3cb31f663ef4a13266cc9af338b5d752c2dd1f009398347",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\capture-v1\\3-full.png",
+      "sha256": "5aca2a8f8c1aa1c69ae4219798feff570d4295dc1029ca7ca41557efeadafad2"
+    }
+  ],
+  "reviews": [
+    {
+      "claim_id": "structure-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Overview eyebrow/headline/intro precede the primary session list. Three real session entries are legible and actions associate with their own row. The session panel occupies twice the aside column, keeping note and summary secondary.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "structure-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Overview eyebrow/headline/intro precede the primary session list. Three real session entries are legible and actions associate with their own row. The session panel occupies twice the aside column, keeping note and summary secondary.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Overview eyebrow/headline/intro precede the primary session list. Three real session entries are legible and actions associate with their own row. The full-page 390px render follows sessions, visitor note, reservation summary, then guide; no source-crop content was dropped.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Overview eyebrow/headline/intro precede the primary session list. Three real session entries are legible and actions associate with their own row. The full-page 390px render follows sessions, visitor note, reservation summary, then guide; no source-crop content was dropped.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected matching source image/HTML and complete actual render: green/cream identity, 42px wide/34px narrow headline, 24px section roles, 17px session titles, row rhythm and prominent list/subordinate note are retained. New skip link and contextual status/availability are deliberate functional translations. Note sibling gaps measure 18px; panel outer insets measure 25px wide/21px narrow including border; wide separation 28px.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected matching source image/HTML and complete actual render: green/cream identity, 42px wide/34px narrow headline, 24px section roles, 17px session titles, row rhythm and prominent list/subordinate note are retained. New skip link and contextual status/availability are deliberate functional translations. Note sibling gaps measure 18px; panel outer insets measure 25px wide/21px narrow including border; wide separation 28px.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected matching source image/HTML and complete actual render: green/cream identity, 42px wide/34px narrow headline, 24px section roles, 17px session titles, row rhythm and prominent list/subordinate note are retained. New skip link and contextual status/availability are deliberate functional translations. Note sibling gaps measure 18px; panel outer insets measure 25px wide/21px narrow including border; wide separation 28px.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected matching source image/HTML and complete actual render: green/cream identity, 42px wide/34px narrow headline, 24px section roles, 17px session titles, row rhythm and prominent list/subordinate note are retained. New skip link and contextual status/availability are deliberate functional translations. Note sibling gaps measure 18px; panel outer insets measure 25px wide/21px narrow including border; wide separation 28px.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "The headline provides the entry, then bold session titles and green actions form an obvious task path. Secondary studio note has lower width/position priority. Actual long workshop title remains grouped with its date/facts; no competing decorative block. The calm composition works with real content. Initial open space at panel bottom reserves success-feedback room; slightly looser than source but does not obscure available actions.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "The headline provides the entry, then bold session titles and green actions form an obvious task path. Secondary studio note has lower width/position priority. Actual long workshop title remains grouped with its date/facts; no competing decorative block. The calm composition works with real content. Reserved labels and specific status remain readable without taking over the list; narrow status wraps cleanly across two lines.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "The headline provides the entry, then bold session titles and green actions form an obvious task path. Secondary studio note has lower width/position priority. Actual long workshop title remains grouped with its date/facts; no competing decorative block. The calm composition works with real content. Initial open space at panel bottom reserves success-feedback room; slightly looser than source but does not obscure available actions.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "The headline provides the entry, then bold session titles and green actions form an obvious task path. Secondary studio note has lower width/position priority. Actual long workshop title remains grouped with its date/facts; no competing decorative block. The calm composition works with real content. Reserved labels and specific status remain readable without taking over the list; narrow status wraps cleanly across two lines.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Repeated dates, titles, metadata, availability and 44px action states form coherent semantic roles. Wide rows align; narrow long workshop title wraps at a phrase boundary and action stays attached to content. Visitor note uses equal 18px sibling rhythm; status and summary have consistent secondary treatment. Brief-pinned Arial, cream/green and native panel structure were preserved rather than replaced with generic Impeccable preferences.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Repeated dates, titles, metadata, availability and 44px action states form coherent semantic roles. Wide rows align; narrow long workshop title wraps at a phrase boundary and action stays attached to content. Visitor note uses equal 18px sibling rhythm; status and summary have consistent secondary treatment. Brief-pinned Arial, cream/green and native panel structure were preserved rather than replaced with generic Impeccable preferences.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Repeated dates, titles, metadata, availability and 44px action states form coherent semantic roles. Wide rows align; narrow long workshop title wraps at a phrase boundary and action stays attached to content. Visitor note uses equal 18px sibling rhythm; status and summary have consistent secondary treatment. Brief-pinned Arial, cream/green and native panel structure were preserved rather than replaced with generic Impeccable preferences.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Repeated dates, titles, metadata, availability and 44px action states form coherent semantic roles. Wide rows align; narrow long workshop title wraps at a phrase boundary and action stays attached to content. Visitor note uses equal 18px sibling rhythm; status and summary have consistent secondary treatment. Brief-pinned Arial, cream/green and native panel structure were preserved rather than replaced with generic Impeccable preferences.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected the complete 1240x900 target render and actual viewport interaction. No horizontal overflow, clipping or missing below-fold guide/summary/note; all title/time/location/availability facts are readable. Two-column layout and 28px inter-column gap remain stable. Equivalent narrow counterpart also inspected.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected the complete 1240x900 target render and actual viewport interaction. No horizontal overflow, clipping or missing below-fold guide/summary/note; all title/time/location/availability facts are readable. Two-column layout and 28px inter-column gap remain stable. Equivalent narrow counterpart also inspected.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected the complete 390x900 target render and actual viewport interaction. No horizontal overflow, clipping or missing below-fold guide/summary/note; all title/time/location/availability facts are readable. Single-column reading order and row-attached actions remain reachable by scrolling and keyboard.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected the complete 390x900 target render and actual viewport interaction. No horizontal overflow, clipping or missing below-fold guide/summary/note; all title/time/location/availability facts are readable. Single-column reading order and row-attached actions remain reachable by scrolling and keyboard.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Source has h1/h2/h3 hierarchy, native buttons/anchors and unique session action names. Independent keyboard probe tabs to first Reserve with visible 3px orange outline; Enter reserves it, next Tab skips Full and reaches clay; Space reserves clay. Status role=status and aria-atomic=true receive specific updates. Rendered text-pair contrast is 5.53:1 minimum among sampled enabled secondary roles, action white/green 8.63:1, disabled labels 4.90:1. Focus screenshots show unobscured button outline at both viewports. This is keyboard/DOM/contrast evidence, not audible screen-reader certification.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Source has h1/h2/h3 hierarchy, native buttons/anchors and unique session action names. Independent keyboard probe tabs to first Reserve with visible 3px orange outline; Enter reserves it, next Tab skips Full and reaches clay; Space reserves clay. Status role=status and aria-atomic=true receive specific updates. Rendered text-pair contrast is 5.53:1 minimum among sampled enabled secondary roles, action white/green 8.63:1, disabled labels 4.90:1. Focus screenshots show unobscured button outline at both viewports. This is keyboard/DOM/contrast evidence, not audible screen-reader certification.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-reserved-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Source has h1/h2/h3 hierarchy, native buttons/anchors and unique session action names. Independent keyboard probe tabs to first Reserve with visible 3px orange outline; Enter reserves it, next Tab skips Full and reaches clay; Space reserves clay. Status role=status and aria-atomic=true receive specific updates. Rendered text-pair contrast is 5.53:1 minimum among sampled enabled secondary roles, action white/green 8.63:1, disabled labels 4.90:1. Focus screenshots show unobscured button outline at both viewports. This is keyboard/DOM/contrast evidence, not audible screen-reader certification.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Source has h1/h2/h3 hierarchy, native buttons/anchors and unique session action names. Independent keyboard probe tabs to first Reserve with visible 3px orange outline; Enter reserves it, next Tab skips Full and reaches clay; Space reserves clay. Status role=status and aria-atomic=true receive specific updates. Rendered text-pair contrast is 5.53:1 minimum among sampled enabled secondary roles, action white/green 8.63:1, disabled labels 4.90:1. Focus screenshots show unobscured button outline at both viewports. This is keyboard/DOM/contrast evidence, not audible screen-reader certification.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-reserved-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched same-width initial/reserved renders and raw interaction probe: each available session increments count once (0 -> 1 -> 2), switches to Reserved/disabled and updates specific live-region text. Synthetic duplicate/full event attempts are guarded at count 1; native full button remains disabled. Session title/time/location remain intact, availability now includes own reservation and remaining places. Guide and Sessions anchor navigation are observed. Independent Enter/Space flow also succeeds.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched same-width initial/reserved renders and raw interaction probe: each available session increments count once (0 -> 1 -> 2), switches to Reserved/disabled and updates specific live-region text. Synthetic duplicate/full event attempts are guarded at count 1; native full button remains disabled. Session title/time/location remain intact, availability now includes own reservation and remaining places. Guide and Sessions anchor navigation are observed. Independent Enter/Space flow also succeeds.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "wide-reserved-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched same-width initial/reserved renders and raw interaction probe: each available session increments count once (0 -> 1 -> 2), switches to Reserved/disabled and updates specific live-region text. Synthetic duplicate/full event attempts are guarded at count 1; native full button remains disabled. Session title/time/location remain intact, availability now includes own reservation and remaining places. Guide and Sessions anchor navigation are observed. Independent Enter/Space flow also succeeds.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched same-width initial/reserved renders and raw interaction probe: each available session increments count once (0 -> 1 -> 2), switches to Reserved/disabled and updates specific live-region text. Synthetic duplicate/full event attempts are guarded at count 1; native full button remains disabled. Session title/time/location remain intact, availability now includes own reservation and remaining places. Guide and Sessions anchor navigation are observed. Independent Enter/Space flow also succeeds.",
+      "context_id": "/root/specialist_r",
+      "evidence_ids": [
+        "narrow-reserved-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "structure-wide-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Reserved state retains this organization.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "structure-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Reserved state retains this organization.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Reserved state retains this organization.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The overview headline introduces the task, followed by three real session records as the dominant group. Visitor help and reservation total remain secondary. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Reserved state retains this organization.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 25px and desktop column separation 28px. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 25px and desktop column separation 28px. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 21px with the approved single-column order. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Compared original HTML and source images with this exact target: green on cream, restrained white panels, source title hierarchy and list/aside priority are retained. Actual note sibling gaps are 18px; panel border-inclusive insets are 21px with the approved single-column order. The added skip link is visible only when focused in initial capture; it is an intentional accessible state, not a permanent replacement of the wordmark. Specific status/availability text is a deliberate Product-compatible translation.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. The blank feedback region slightly loosens the panel bottom, but leaves all actions easy to locate and supports the later success state. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. Reserved labels and remaining availability retain useful state meaning; the specific status fits on one desktop line or two narrow lines without dominating. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. The blank feedback region slightly loosens the panel bottom, but leaves all actions easy to locate and supports the later success state. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point, then bold session names and clearly attached actions support choosing a visit. Date, time and location are compact but legible; the visitor note does not compete with the session list. Reserved labels and remaining availability retain useful state meaning; the specific status fits on one desktop line or two narrow lines without dominating. Overall rhythm is calm with the actual content lengths; no decorative block distracts from booking.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-initial",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source-grounded semantic roles are coherent: 42px desktop/34px narrow headline, 24px panel headings, 17px session titles and smaller metadata. Repeated dates, fact lines and 44px controls align consistently; two equal 18px note gaps preserve sibling grouping. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Shared disabled styling keeps Full distinct from available actions while Reserved text gives its meaning. Contextual success text remains subordinate.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 1240x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 1240x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 1240px, the primary session panel takes twice the aside width; aligned dates, titles and right-hand actions make each row scanable. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 390x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-initial-render-3"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent Edge observation at 390x900 finds no horizontal overflow in initial or reserved state. Whole-page capture includes all below-fold note, summary and guide content. At 390px, the complete page follows sessions, visitor note, summary, then guide. Buttons move under their own session facts; the long workshop title wraps without detaching its date or action. Session title/time/location and availability text remain visible; controls are 44px high. Keyboard and guide navigation reach the below-fold content.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-reserved-render-5"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab → skip link → Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab → skip link → Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-reserved-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab → skip link → Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Source uses h1/h2/h3 hierarchy, native buttons/links, session-specific accessible names and descriptions, role=status with aria-atomic, and disabled Full/Reserved states. Independent keyboard sequence Tab → skip link → Enter reaches main, then Tab reaches first Reserve with a visible 3px outline; Enter reserves it; next Tab skips Full and reaches clay; Space reserves clay. Focus captures show the control unobscured. Computed contrast pairs are 5.53:1 minimum for sampled enabled secondary text, 8.63:1 for action white/green, and 4.90:1 for disabled text. This checks DOM, keyboard and rendered contrast; audible screen-reader delivery is untested.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-reserved-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 → 1 → 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 → 1 → 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "wide-reserved-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 → 1 → 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-initial-interaction-0"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent keyboard reservations produce counts 0 → 1 → 2 and unique session-specific status messages. Each button becomes Reserved/disabled and availability changes to own reservation plus remaining places. Duplicate and Full synthetic-event attempts preserve count at 1; ordinary Full is disabled. Session title/time/location remain present. Visitor-guide and Sessions links set the matching hash, move focus to their target and expose the destination. Supplied mouse-interaction evidence agrees. No remote booking or persistence promise is introduced.",
+      "context_id": "/root/specialist_c1",
+      "evidence_ids": [
+        "narrow-reserved-interaction-0"
+      ]
+    }
+  ],
+  "critic_context_id": "critic-new-fresh-20261010-independent",
+  "critic": {
+    "claims": [
+      {
+        "claim_id": "structure-wide-initial",
+        "verdict": "PASS",
+        "observed": "The headline introduces the overview. A 664px session panel leads the 332px visitor column across a 28px gap; note and summary stay secondary. Reservation state does not reorder the composition.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "structure-wide-reserved",
+        "verdict": "PASS",
+        "observed": "The headline introduces the overview. A 664px session panel leads the 332px visitor column across a 28px gap; note and summary stay secondary. Reservation state does not reorder the composition.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "structure-narrow-initial",
+        "verdict": "PASS",
+        "observed": "The headline introduces the studio task before the dominant session panel. Full-page rendering and measured document coordinates place sessions at y=298, visitor note at y=1021, summary at y=1242, and guide at y=1378, preserving the required single-column order.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "structure-narrow-reserved",
+        "verdict": "PASS",
+        "observed": "The headline introduces the studio task before the dominant session panel. Full-page rendering and measured document coordinates place sessions at y=298, visitor note at y=1021, summary at y=1242, and guide at y=1378, preserving the required single-column order.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "visualconformance-wide-initial",
+        "verdict": "PASS",
+        "observed": "Compared directly with the 1240px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. The source two-to-one list/aside proportion remains exact. The extra status space is modest and supports feedback without disrupting source hierarchy.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "visualconformance-wide-reserved",
+        "verdict": "PASS",
+        "observed": "Compared directly with the 1240px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. The source two-to-one list/aside proportion remains exact. Reserved labels and remaining places preserve rather than conceal the session facts.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "visualconformance-narrow-initial",
+        "verdict": "PASS",
+        "observed": "Compared directly with the 390px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. Actions move below session facts in the second grid column. The extra status space is modest and supports feedback without disrupting source hierarchy.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "visualconformance-narrow-reserved",
+        "verdict": "PASS",
+        "observed": "Compared directly with the 390px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. Actions move below session facts in the second grid column. Reserved labels and remaining places preserve rather than conceal the session facts.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "visualquality-wide-initial",
+        "verdict": "PASS",
+        "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and available/full states are readable; actions are consistently locatable. The large list balances the smaller note; the guide action does not compete with the session task. No whole-composition contradiction was found.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "visualquality-wide-reserved",
+        "verdict": "PASS",
+        "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and reserved/full states are readable; actions are consistently locatable. The large list balances the smaller note; the guide action does not compete with the session task. No whole-composition contradiction was found.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "visualquality-narrow-initial",
+        "verdict": "PASS",
+        "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and available/full states are readable; actions are consistently locatable. The long repair title wraps naturally to two lines and the below-fold note remains subordinate. No whole-composition contradiction was found.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "visualquality-narrow-reserved",
+        "verdict": "PASS",
+        "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and reserved/full states are readable; actions are consistently locatable. The long repair title wraps naturally to two lines and the below-fold note remains subordinate. No whole-composition contradiction was found.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "craft-wide-initial",
+        "verdict": "PASS",
+        "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. Dates, session facts and actions align across rows. The 0-reservation state reserves space for subsequent feedback. Measured note gaps are 18px and action heights 44px.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "craft-wide-reserved",
+        "verdict": "PASS",
+        "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. Dates, session facts and actions align across rows. The longer reservation feedback fits the reserved space; the 2-reservation state does not shift panel geometry. Measured note gaps are 18px and action heights 44px.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "craft-narrow-initial",
+        "verdict": "PASS",
+        "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. The two-line headline and repair title wrap without crowding; buttons align beneath the content column. The 0-reservation state reserves space for subsequent feedback. Measured note gaps are 18px and action heights 44px.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "craft-narrow-reserved",
+        "verdict": "PASS",
+        "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. The two-line headline and repair title wrap without crowding; buttons align beneath the content column. The longer reservation feedback fits the reserved space; the 2-reservation state does not shift panel geometry. Measured note gaps are 18px and action heights 44px.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "responsive-wide-initial",
+        "verdict": "PASS",
+        "observed": "The 1240px target has document scrollWidth 1240px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. The two-column layout uses the available width with no collided or hidden content. Initial availability and disabled Full state remain visible.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "responsive-wide-reserved",
+        "verdict": "PASS",
+        "observed": "The 1240px target has document scrollWidth 1240px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. The two-column layout uses the available width with no collided or hidden content. Remaining-place messages and the complete status stay readable.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "responsive-narrow-initial",
+        "verdict": "PASS",
+        "observed": "The 390px target has document scrollWidth 390px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. Single-column stacking and button relocation make the supplied real content usable at 390px; content below the original crop is retained. Initial availability and disabled Full state remain visible.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-initial-render-3"
+        ]
+      },
+      {
+        "claim_id": "responsive-narrow-reserved",
+        "verdict": "PASS",
+        "observed": "The 390px target has document scrollWidth 390px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. Single-column stacking and button relocation make the supplied real content usable at 390px; content below the original crop is retained. Remaining-place messages and the complete status stay readable.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-reserved-render-5"
+        ]
+      },
+      {
+        "claim_id": "accessibility-wide-initial",
+        "verdict": "PASS",
+        "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. Only Full is disabled; initial reservation count is 0. Guide and Sessions anchors move focus to their named targets.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-initial-interaction-0"
+        ]
+      },
+      {
+        "claim_id": "accessibility-wide-reserved",
+        "verdict": "PASS",
+        "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. All three actions are disabled with distinct Reserved/Full wording; live-region text identifies the last reserved session and total. Guide and Sessions anchors move focus to their named targets.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-reserved-interaction-0"
+        ]
+      },
+      {
+        "claim_id": "accessibility-narrow-initial",
+        "verdict": "PASS",
+        "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. Only Full is disabled; initial reservation count is 0. Guide and Sessions anchors move focus to their named targets.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-initial-interaction-0"
+        ]
+      },
+      {
+        "claim_id": "accessibility-narrow-reserved",
+        "verdict": "PASS",
+        "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. All three actions are disabled with distinct Reserved/Full wording; live-region text identifies the last reserved session and total. Guide and Sessions anchors move focus to their named targets.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-reserved-interaction-0"
+        ]
+      },
+      {
+        "claim_id": "experience-wide-initial",
+        "verdict": "PASS",
+        "observed": "Independent keyboard interaction at 1240px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Initial facts show 4 places, Fully booked and 2 places, with only the two available sessions actionable. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-initial-interaction-0"
+        ]
+      },
+      {
+        "claim_id": "experience-wide-reserved",
+        "verdict": "PASS",
+        "observed": "Independent keyboard interaction at 1240px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Final facts retain original titles, times and locations while availability explicitly states the reservation and 3/1 remaining places. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "wide-reserved-interaction-0"
+        ]
+      },
+      {
+        "claim_id": "experience-narrow-initial",
+        "verdict": "PASS",
+        "observed": "Independent keyboard interaction at 390px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Initial facts show 4 places, Fully booked and 2 places, with only the two available sessions actionable. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-initial-interaction-0"
+        ]
+      },
+      {
+        "claim_id": "experience-narrow-reserved",
+        "verdict": "PASS",
+        "observed": "Independent keyboard interaction at 390px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Final facts retain original titles, times and locations while availability explicitly states the reservation and 3/1 remaining places. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+        "context_id": "critic-new-fresh-20261010-independent",
+        "evidence_ids": [
+          "narrow-reserved-interaction-0"
+        ]
+      }
+    ]
+  },
+  "source_reports": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-r\\results.json",
+      "sha256": "1ff547b5eb388cfca747753d80bda0f0a2ed453add7a472d3741a36fbc5c4495"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\review-c1\\results.json",
+      "sha256": "8ee336cb40b8f2b10a500764a9ac287255ef672af8476472fb2c014554b59d5c"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\new\\evidence\\critic-fresh\\results.json",
+      "sha256": "3170560fd548d9a72ee316b74250668af03fa6d787287fcca97419b2f2315560"
+    }
+  ],
+  "trust": "LOCAL_UNAUTHENTICATED",
+  "acceptance": "NOT_GRANTED"
+}

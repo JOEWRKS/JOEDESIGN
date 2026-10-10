@@ -14,16 +14,18 @@ const ev='fixtures/contract-cases/evidence/visual-translation-v02';
 const freeze=json(`${ev}/baseline-and-freeze.json`);
 const fixture='fixtures/contract-cases/visual-translation-v02';
 const walk=dir=>fs.readdirSync(dir,{withFileTypes:true}).flatMap(e=>e.isDirectory()?walk(path.join(dir,e.name)):[path.join(dir,e.name)]);
-const skill=path.join(root,'skills/joedesign');
+// Historical evidence stays bound to the exact pre-unification package.
+// Current public package behavior is checked by the Python integration suite.
+const packageRoot='fixtures/package-history/pre-unification-20261009/skills/joedesign';
+const skill=path.join(root,packageRoot);
 const files=['SKILL.md','agents/openai.yaml','templates/DESIGN.md'];
 const inventory=()=>walk(skill).map(p=>path.relative(skill,p).replaceAll('\\','/')).sort();
 
-test('package — frozen v0.2 core plus the separately authorized harness entrypoint',()=>{
-  assert.deepEqual(walk(path.join(root,'skills')).filter(p=>path.basename(p)==='SKILL.md').map(p=>path.relative(root,p).replaceAll('\\','/')).sort(),['skills/joedesign-harness/SKILL.md','skills/joedesign/SKILL.md']);
+test('history — archived v0.2 package identity and inventory',()=>{
   assert.deepEqual(inventory(),files);
-  const source=read('skills/joedesign/SKILL.md').toString();
+  const source=read(`${packageRoot}/SKILL.md`).toString();
   assert.match(source,/^---\r?\nname: joedesign\r?\ndescription: [^\n]+\r?\n---/);
-  const meta=read('skills/joedesign/agents/openai.yaml').toString();
+  const meta=read(`${packageRoot}/agents/openai.yaml`).toString();
   assert.match(meta,/\$joedesign/);
   assert.doesNotMatch(meta,/dependencies:|transport:|url:/);
 });
@@ -65,7 +67,7 @@ function fresh() {
   assert.equal(record.realProjectVisualValidation,'PENDING');
   assert.equal(record.expectationsSha256,hash(read(`${fixture}/expectations.json`)));
   assert.deepEqual(Object.keys(record.package).sort(),files);
-  for(const file of files) assert.equal(record.package[file],hash(read(`skills/joedesign/${file}`)),'Changed package needs fresh behavior evidence');
+  for(const file of files) assert.equal(record.package[file],hash(read(`${packageRoot}/${file}`)),'Historical evidence must remain bound to the archived v0.2 package');
   for(const f of Object.values(record.artifacts)) assert.equal(hash(read(`${ev}/${f.path}`)),f.sha256,f.path);
   assert.notEqual(record.artifacts.eventStream.sha256,record.artifacts.response.sha256,'Execution stream and response are different artifacts');
   const native=json(`${ev}/${record.artifacts.nativeProvenance.path}`);
@@ -90,20 +92,20 @@ function fresh() {
   assert.deepEqual(execution.package.map(f=>f.path).sort(),files);
   for(const f of execution.package) {
     assert.equal(f.sha256,record.package[f.path],'Execution package cannot be rebound by reviewer metadata');
-    assert.equal(f.bytes,read(`skills/joedesign/${f.path}`).length);
+    assert.equal(f.bytes,read(`${packageRoot}/${f.path}`).length);
   }
   assert.equal(execution.inputSha256,record.artifacts.input.sha256);
   assert.equal(execution.inputsSha256,hash(read(`${fixture}/inputs.json`)));
   assert.equal(execution.expectationsSha256,record.expectationsSha256);
   const input=read(`${ev}/${record.artifacts.input.path}`).toString();
   assert.ok(input.includes(read(`${fixture}/inputs.json`).toString()));
-  assert.ok(input.includes(read('skills/joedesign/SKILL.md').toString()));
-  assert.ok(input.includes(read('skills/joedesign/templates/DESIGN.md').toString()));
+  assert.ok(input.includes(read(`${packageRoot}/SKILL.md`).toString()));
+  assert.ok(input.includes(read(`${packageRoot}/templates/DESIGN.md`).toString()));
   assert.ok(!input.includes(read(`${fixture}/expectations.json`).toString()));
   return record;
 }
 
-test('fresh evidence — response, input, actual execution and entire current package are linked',()=>{fresh();});
+test('historical evidence — response, input, actual execution and archived v0.2 package are linked',()=>{fresh();});
 
 // These replay a recorded qualitative review, not a policy engine or live model.
 // A PASS count here does not turn text-only decisions into rendered evidence.

@@ -1,0 +1,1417 @@
+{
+  "schema": "joedesign.conformance.v1",
+  "scope_id": "extension-planning-proof",
+  "baseline_sha256": "8ceffc9eaef9e2c2e5ff618b1b0d562658c8253622177b91eec39b5c98202137",
+  "results": [
+    {
+      "check_id": "panel-inset-left-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "d3ee35b2f4216fc79d5e7fba614e5b478e0ba5846cc76a185d815fb4d128bed6",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-left-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "geometry",
+      "criterion_sha256": "d3ee35b2f4216fc79d5e7fba614e5b478e0ba5846cc76a185d815fb4d128bed6",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-left-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "geometry",
+      "criterion_sha256": "d3ee35b2f4216fc79d5e7fba614e5b478e0ba5846cc76a185d815fb4d128bed6",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-left-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "ae96a308aafdb671eb04bf6ed62ca28146a1546438e960dc7cdc18b4e05efa76",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-left-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "geometry",
+      "criterion_sha256": "ae96a308aafdb671eb04bf6ed62ca28146a1546438e960dc7cdc18b4e05efa76",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-left-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "geometry",
+      "criterion_sha256": "ae96a308aafdb671eb04bf6ed62ca28146a1546438e960dc7cdc18b4e05efa76",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-left-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "d3ee35b2f4216fc79d5e7fba614e5b478e0ba5846cc76a185d815fb4d128bed6",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-left-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "ae96a308aafdb671eb04bf6ed62ca28146a1546438e960dc7cdc18b4e05efa76",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "e18a83ae2fad6e97109d22f6b48dde60533d5d58927573e4e73b04ac367caa7b",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "geometry",
+      "criterion_sha256": "e18a83ae2fad6e97109d22f6b48dde60533d5d58927573e4e73b04ac367caa7b",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "geometry",
+      "criterion_sha256": "e18a83ae2fad6e97109d22f6b48dde60533d5d58927573e4e73b04ac367caa7b",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "2c780e29b705016d4c3b3a8a1c2aadb5378488c9d4635277c8473b9af7990f73",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "geometry",
+      "criterion_sha256": "2c780e29b705016d4c3b3a8a1c2aadb5378488c9d4635277c8473b9af7990f73",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "geometry",
+      "criterion_sha256": "2c780e29b705016d4c3b3a8a1c2aadb5378488c9d4635277c8473b9af7990f73",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "e18a83ae2fad6e97109d22f6b48dde60533d5d58927573e4e73b04ac367caa7b",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-right-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "2c780e29b705016d4c3b3a8a1c2aadb5378488c9d4635277c8473b9af7990f73",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "939db2bc1c574194f894b5b2f3b24ae903bcd72b4b032b130b02dbe920a18ffe",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "geometry",
+      "criterion_sha256": "939db2bc1c574194f894b5b2f3b24ae903bcd72b4b032b130b02dbe920a18ffe",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "geometry",
+      "criterion_sha256": "939db2bc1c574194f894b5b2f3b24ae903bcd72b4b032b130b02dbe920a18ffe",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "29f5654a2affdd1dffe3f56ae72c6418763c63c42d29ac17561139511fa83b2c",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "geometry",
+      "criterion_sha256": "29f5654a2affdd1dffe3f56ae72c6418763c63c42d29ac17561139511fa83b2c",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "geometry",
+      "criterion_sha256": "29f5654a2affdd1dffe3f56ae72c6418763c63c42d29ac17561139511fa83b2c",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "939db2bc1c574194f894b5b2f3b24ae903bcd72b4b032b130b02dbe920a18ffe",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "panel-inset-top-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "29f5654a2affdd1dffe3f56ae72c6418763c63c42d29ac17561139511fa83b2c",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "d2d0d1ef91cda84c06f5785756262707ea0de7ecf6b43e798ea266321f2473e0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "geometry",
+      "criterion_sha256": "d2d0d1ef91cda84c06f5785756262707ea0de7ecf6b43e798ea266321f2473e0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "geometry",
+      "criterion_sha256": "d2d0d1ef91cda84c06f5785756262707ea0de7ecf6b43e798ea266321f2473e0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "7f0d80cffeec8f76ce63b044ae7defc68c0dfe823067e741eb719bba7708a470",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "geometry",
+      "criterion_sha256": "7f0d80cffeec8f76ce63b044ae7defc68c0dfe823067e741eb719bba7708a470",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "geometry",
+      "criterion_sha256": "7f0d80cffeec8f76ce63b044ae7defc68c0dfe823067e741eb719bba7708a470",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "d2d0d1ef91cda84c06f5785756262707ea0de7ecf6b43e798ea266321f2473e0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "session-bottom-inset-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "7f0d80cffeec8f76ce63b044ae7defc68c0dfe823067e741eb719bba7708a470",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "31f910cf1d2e882010eb1cff424e0435338138972005bcd937d273cf413718b9",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "geometry",
+      "criterion_sha256": "31f910cf1d2e882010eb1cff424e0435338138972005bcd937d273cf413718b9",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "geometry",
+      "criterion_sha256": "31f910cf1d2e882010eb1cff424e0435338138972005bcd937d273cf413718b9",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "7a3271288d1609d6ea0473138fe0da049705b3a73201e05986b8cb4b34c913a8",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "geometry",
+      "criterion_sha256": "7a3271288d1609d6ea0473138fe0da049705b3a73201e05986b8cb4b34c913a8",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "geometry",
+      "criterion_sha256": "7a3271288d1609d6ea0473138fe0da049705b3a73201e05986b8cb4b34c913a8",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "31f910cf1d2e882010eb1cff424e0435338138972005bcd937d273cf413718b9",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "note-bottom-inset-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "7a3271288d1609d6ea0473138fe0da049705b3a73201e05986b8cb4b34c913a8",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "visitor-note-gap-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "geometry",
+      "criterion_sha256": "97a80ac1981d059dd7509f4f21f20e1866ad84f0d31e2beafec78baed59fec8a",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "columns-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "84c4243847467352ee173bd382e88f8dc010caee76bcf0b26e7ed6fa6e8b26ad",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "columns-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "geometry",
+      "criterion_sha256": "84c4243847467352ee173bd382e88f8dc010caee76bcf0b26e7ed6fa6e8b26ad",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "columns-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "geometry",
+      "criterion_sha256": "84c4243847467352ee173bd382e88f8dc010caee76bcf0b26e7ed6fa6e8b26ad",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "columns-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "geometry",
+      "criterion_sha256": "84c4243847467352ee173bd382e88f8dc010caee76bcf0b26e7ed6fa6e8b26ad",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "aa659c9cc0280907bd88ed8b280f98e388fd5ecb368cd851d80d188495cfee03",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "specialist",
+      "criterion_sha256": "5ebe77011d01a258be75c490b846f1cc9c2aa882535b70872935c363fe6fe7b0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "specialist",
+      "criterion_sha256": "cb331d178b02e4231ce62b00d9a18e917972b10142040babb5d98df7277e7e22",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "b5aae40398927cd3d5e66e1e28a5fced8d301706213c4fad64cdbc2920a77204",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "specialist",
+      "criterion_sha256": "76e8f899e1b9567b9be01c51a5ebcf56cb918afebdb4c90176ee5e018f060e9b",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "specialist",
+      "criterion_sha256": "eb035b608b4cc8e16c8b5b22b41f5616654ecc1a624ebb581f9d0719252ff16c",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "11bc7fcba9370789bf566aea1e85f759158a08faace75abb0825e4ebd67a19f2",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "structure-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "e17d46178e53884c94d06abf4587ba82a5288d1bc3b20e221cdc907b53d10e68",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "87ae1a4c6b8c441549eece389fce1ca02c05440f08695afccf496af4a740da99",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "specialist",
+      "criterion_sha256": "52c1a243ff73606a28cfbf8e3dda896f52ae7a7d87ade6681a1d34d46230e51e",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "specialist",
+      "criterion_sha256": "efabad8adc8c759ac3c1dd04cf94f3dcd771f5ed416bb5b11adaaf65a1c3bc06",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "67025ec50f8aab29bd9a4be131967e66d4f7c654080958132f54427feed41b90",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "specialist",
+      "criterion_sha256": "1f187b285355e23e5522f343ed81ccaca468e19207c1cc5c4ff1f776e9d2c2d1",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "specialist",
+      "criterion_sha256": "d946f39f7e8a5d27360bafd8bd68c8cb1873f48f3ceb1468015ce749aa503a74",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "c2dd636ca37e787f2302ac9197e50dd4054bc74b66f0aa5a3d60f7285134a550",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "visualconformance-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "2fc7592b78e472e67f7a20a257fa0ebfd952855003f7ccdedb16ee68a2255567",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "42db52c911dc3204c2091cd634ac510f9ca4eb80e735ed0691458a383a251d52",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "specialist",
+      "criterion_sha256": "f0ca6858859b06321e39c4cff9e5e424c2889448a7f83f02123c74d83961cba7",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "specialist",
+      "criterion_sha256": "a5352e965eb91e6b9a49eb7799a194c21255dd59db6ddbb7ee47f300459f4f2f",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "da7fc7f2ce25bbbdfff1bb0a4c4c62c252d10f062864e03f088c10310e42cc77",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "specialist",
+      "criterion_sha256": "349c67ac148a84e48da96f0f6d3b82047d915982aed6ec461b35939fbb45081c",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "specialist",
+      "criterion_sha256": "9da3893c7ecf540af341289f4ca3124538f6c0198f361c9132e25541d9c63f53",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "c3998767b5a2f9faaf63d9e564b36e23f79448f367e3f03e062fd25cee02c1ce",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "visualquality-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "cfdbea86521e829ec6099536be03ae7840c6706dc16dccce81e1ad09b677d5ef",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "e5935115cf3ba11ef38252feb2ea192cd59b579b978eba657857d027ca7b9c1e",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "specialist",
+      "criterion_sha256": "9958ed77f88cf357f6463042a22139b4d06b1175f36f87aa3cae27473b0b5d64",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "specialist",
+      "criterion_sha256": "5c9b63144512b49e39ae7078611e0b6204bfe36f81485e5fe6a6a8fd5fe5ddc0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "9474e07d9da55153e01b7660953a309d331584a52db4636a67c1358a93c8e9c9",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "specialist",
+      "criterion_sha256": "f88baa647d108fd1b11f5d34df1b71472a2c197f101160f4455587ee27258f7e",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "specialist",
+      "criterion_sha256": "7c9b68a6eb31e6a79b81451ca798966f46a3fe5aabda6a39f901d586542fc1c9",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "08314e6c2a2e3fed060d8401d1561ddad6a17e35773313ab683d22348af0e47f",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "craft-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "48ebd4f0f88536c025d0094fee4a7bfa4d20f5a8aa8b8c3f36ee38e74d626ca7",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "ac4912bd7ee4f8f61214ae03cbff2e81e423a8148c39173a4d4b2088bed5accb",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "specialist",
+      "criterion_sha256": "1a67c0b0f29e114d9d48672b11a62374f5f655d2862f8f582c66f33acc0307db",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "specialist",
+      "criterion_sha256": "92ae7d2f303796362355d78a01289bbe4cf13857ce112f643bf07346599531aa",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "6dd6dce9d3b6890363fd580463aee2aae049de0ab9fc01d789cbe5fe5e9ab8c0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "specialist",
+      "criterion_sha256": "b2bd3f8ffe33b974f39233ab72f7a0ac72d8777a8f5fbbefeb4feded813ac792",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "specialist",
+      "criterion_sha256": "3645e0438051792d1fe0bc503da1a8c75fa878abcc01bfeb5dea920272902516",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "a6b8c3e2888ef6f7dfdb4445c9d49b46bc3ee75b2783950888ab4e0a340f514b",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "accessibility-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "ec5ba85bc55bcee196aa0c679c661c3b2bc124f780ee5dbffd75dd490414a2d7",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "9a6c249a9bcca77447e26d9cb261238c7ed550c24294fe5a54ee01bcd98a7808",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "specialist",
+      "criterion_sha256": "524a7e567c812d718ed3f8764b869ed58f343f2cff781c473c3cf7d8b6f56da5",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "specialist",
+      "criterion_sha256": "3f82afd798bb885b0747dcdada82221b9807d1a61f383d19a1e8f6e610ebeda0",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "c50ac6ee988e39c2c1829bd3a689c5b67152b3433527570c2965c9eb916beb67",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "specialist",
+      "criterion_sha256": "07d302b76e99beae22713d2497d1fc607a8dc36c36090a6188376d72530209c6",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "specialist",
+      "criterion_sha256": "9a7e7fe33965bd7ee9e5c1e358350f2d155f8a27529c9e662c21221b49adcc69",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "888d0fad27b80f16d0327fa3b1cf9b15fdd6d1f928157f4f7855e83c31e440c8",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "responsive-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "c019103c589218884a6f3517fee9e8faa683e1c051803dea498064b9b9e3251c",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "993c0e6633501fb99de277310844de53fa03b2d56f2add4b588a15c790ea6387",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "method": "specialist",
+      "criterion_sha256": "72f8f095896ce7462c0001b472e7430d96a635c3660580cbfe25836135020110",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "method": "specialist",
+      "criterion_sha256": "bc668114cb168f0c09851816d64b2aec4c23840841e8d1a8190de53c51658633",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "5c39b0eec88df7c5601d45fe400d9b6f89031d93439f178f4c5d454b62997ae4",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "method": "specialist",
+      "criterion_sha256": "e299ba2b3274ab5cb0f680cae56e4c032d96069dd53dbd5263ea063838f6db5b",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "method": "specialist",
+      "criterion_sha256": "155c4f5aa911ed2f25e93859cfcc8a49c7e21c7a612cc6c70d7f10c1b963a06e",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "781967d82f4ba9c997a7600aaa1685142d4d1ce182d42bf55fab4b0f5d79bda0",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "method": "specialist",
+      "criterion_sha256": "904291592bff54b84893f1fdabf37a0d45371570b158b30cb82bd69cb265dcf5",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    },
+    {
+      "check_id": "experience-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "method": "specialist",
+      "criterion_sha256": "18305697025187a969de0fecf6e5419dce5a9f313ad6bed8b658d2e85f74aad8",
+      "status": "UNVERIFIED",
+      "input_fingerprint": "96432205ef8366d60ce40329c37506f2ec1ba8efcaf27133c3532e143c638370",
+      "evidence": []
+    }
+  ],
+  "unresolved": [
+    {
+      "check_id": "panel-inset-left-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-left-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-left-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-left-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-left-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-left-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-left-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-left-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-right-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "panel-inset-top-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "session-bottom-inset-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "note-bottom-inset-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visitor-note-gap-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "columns-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "columns-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "columns-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "columns-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "structure-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualconformance-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "visualquality-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "craft-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "accessibility-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "responsive-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-planning-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-planning-wide-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-planning-wide-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-planning-narrow-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-planning-narrow-room-a",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-planning-narrow-reserved",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-overview-wide-initial",
+      "reason": "Required current observation missing"
+    },
+    {
+      "check_id": "experience-overview-narrow-initial",
+      "reason": "Required current observation missing"
+    }
+  ],
+  "acceptance": "NOT_GRANTED",
+  "trust": "LOCAL_UNAUTHENTICATED",
+  "eligible": false,
+  "unreviewed_check_ids": []
+}

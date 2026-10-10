@@ -1,0 +1,62 @@
+{
+  "observations": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign\\SKILL.md",
+      "sha256": "a519986f66134a4919495ec407fdc96b3cd5ea4c3f117c2a112bb21dee27b7bf",
+      "bytes": 8482
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\joedesign\\SKILL.md",
+      "sha256": "385dcafa692fa0c48f9ad6889c371dbe8e6785d3a8371192907ea606d29b9a28",
+      "bytes": 11454
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\joedesign-harness\\SKILL.md",
+      "sha256": "0ea034156af9311fc42e885cd96c65198bd4e6547b34264b080040b69a2eaab3",
+      "bytes": 4387
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.agents\\skills\\joedesign\\SKILL.md",
+      "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf",
+      "bytes": 10930
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.agents\\skills\\joedesign-harness\\SKILL.md",
+      "sha256": "32cd7d57be995a04945576fe05cd7db2fed5b3e73120b0217b6252c564641d31",
+      "bytes": 4892
+    },
+    {
+      "path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\AGENTS.md",
+      "sha256": "955e9851cefd309d60b4c51007c16bfc60ff529a5fa5bd3f89e51bdd90591075",
+      "bytes": 8575
+    },
+    {
+      "path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\DESIGN.md",
+      "sha256": "e35a0762b1f165be3a7e3603e83a93f754fb27b18c212d4dc8df07f952b6ea49",
+      "bytes": 19067
+    },
+    {
+      "path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\TASK.md",
+      "sha256": "543e1882992764b6bb0d4053fd85c100b6f66d03aa786371c1c8562420a21340",
+      "bytes": 425203
+    },
+    {
+      "path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\Library\\evidence\\service-design\\spacing-audit.json",
+      "sha256": "2d362747f24ea93fb9df44bd0ad9031dd6929e7ee54ac362715a407bdb095d82",
+      "bytes": 22705
+    },
+    {
+      "path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\Library\\evidence\\service-design\\spacing-catalog-390.png",
+      "sha256": "1d2f892929d4b5a7607a29f00ef8c343567866502fae59ca29e2a7bc79914e98",
+      "bytes": 231970
+    },
+    {
+      "path": "D:\\JOEWRKS\\GEOTest\\FnBShop\\Library\\evidence\\service-design\\spacing-collections-1440.png",
+      "sha256": "9f26236cd143582a2c1de76d9705b8005d7259acb0969c048b5eb1ef1d1d2d02",
+      "bytes": 334316
+    }
+  ],
+  "installations_unchanged_from_prior_snapshot": 46,
+  "geo_project_local_skill_paths": "No .agents skills directory at GEOTest or FnBShop",
+  "limits": "Read-only observations; existence is not proof a particular agent invoked that version."
+}

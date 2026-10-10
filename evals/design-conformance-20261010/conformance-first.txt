@@ -1,0 +1,12 @@
+test_changed_design_authority_blocks (test_design_conformance.ConformanceTests.test_changed_design_authority_blocks) ... ok
+test_missing_measurement_or_partial_pass_never_completes (test_design_conformance.ConformanceTests.test_missing_measurement_or_partial_pass_never_completes) ... ok
+test_old_output_or_corrupt_observation_is_not_a_pass (test_design_conformance.ConformanceTests.test_old_output_or_corrupt_observation_is_not_a_pass) ... ok
+test_pin_prevents_rule_relaxation_and_inventory_prevents_deletion (test_design_conformance.ConformanceTests.test_pin_prevents_rule_relaxation_and_inventory_prevents_deletion) ... ok
+test_real_rendered_stacking_auto_space_and_union_inset_then_recovery (test_design_conformance.ConformanceTests.test_real_rendered_stacking_auto_space_and_union_inset_then_recovery) ... ok
+test_repeated_roles_are_all_measured_and_consistency_is_checked (test_design_conformance.ConformanceTests.test_repeated_roles_are_all_measured_and_consistency_is_checked) ... ok
+test_unrelated_file_does_not_invalidate_scoped_inputs (test_design_conformance.ConformanceTests.test_unrelated_file_does_not_invalidate_scoped_inputs) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 5.849s
+
+OK

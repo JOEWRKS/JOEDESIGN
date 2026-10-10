@@ -1,0 +1,251 @@
+{
+  "freeze_errors": [],
+  "protected_files_checked": 56,
+  "changed_protected_inputs": [],
+  "pinned_package_files": 28,
+  "source_package_files": 28,
+  "source_vs_pinned_package_changes": [],
+  "observation_frame_integrity": [
+    {
+      "observation": "cases\\repair\\evidence\\after\\narrow-initial.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\repair\\evidence\\after\\narrow-reserved.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\repair\\evidence\\after\\wide-initial.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\repair\\evidence\\after\\wide-reserved.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\repair\\evidence\\before\\narrow-initial.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\repair\\evidence\\before\\narrow-reserved.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\repair\\evidence\\before\\wide-initial.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\repair\\evidence\\before\\wide-reserved.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\new\\evidence\\capture-v1\\0-observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\new\\evidence\\capture-v1\\1-observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\new\\evidence\\capture-v1\\2-observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\new\\evidence\\capture-v1\\3-observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\overview-narrow-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\overview-wide-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\planning-narrow-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\planning-narrow-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\planning-narrow-room-a\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\planning-wide-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\planning-wide-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-current\\planning-wide-room-a\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\overview-narrow-initial\\observation.json",
+      "changed_frames": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\overview-narrow-initial\\result.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\overview-narrow-initial\\full.png"
+      ]
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\overview-wide-initial\\observation.json",
+      "changed_frames": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\overview-wide-initial\\result.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\overview-wide-initial\\full.png"
+      ]
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\planning-narrow-initial\\observation.json",
+      "changed_frames": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-initial\\start.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-initial\\result.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-initial\\full.png"
+      ]
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\planning-narrow-reserved\\observation.json",
+      "changed_frames": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-reserved\\start.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-reserved\\result.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-reserved\\full.png"
+      ]
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\planning-narrow-room-a\\observation.json",
+      "changed_frames": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-room-a\\start.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-room-a\\filter-Studio-A.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-room-a\\filter-Studio-B.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-room-a\\filter-All.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-room-a\\result.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-narrow-room-a\\full.png"
+      ]
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\planning-wide-initial\\observation.json",
+      "changed_frames": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-wide-initial\\result.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\proof\\planning-wide-initial\\full.png"
+      ]
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\planning-wide-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof-attempt1\\planning-wide-room-a\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\overview-narrow-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\overview-wide-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\planning-narrow-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\planning-narrow-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\planning-narrow-room-a\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\planning-wide-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\planning-wide-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\proof\\planning-wide-room-a\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+      "changed_frames": []
+    },
+    {
+      "observation": "cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+      "changed_frames": []
+    }
+  ],
+  "limitations": "Byte integrity only; does not authenticate observations or visual judgment."
+}

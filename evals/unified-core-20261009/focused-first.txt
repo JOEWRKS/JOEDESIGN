@@ -1,0 +1,43 @@
+test_bad_contract_or_missing_specialist_cannot_launch_writer (test_harness_execution.ExecutionTests.test_bad_contract_or_missing_specialist_cannot_launch_writer) ... ok
+test_changed_operating_core_invalidates_resume (test_harness_execution.ExecutionTests.test_changed_operating_core_invalidates_resume) ... ok
+test_changed_source_cannot_resume (test_harness_execution.ExecutionTests.test_changed_source_cannot_resume) ... ok
+test_concurrent_execution_refused (test_harness_execution.ExecutionTests.test_concurrent_execution_refused) ... ok
+test_conflict_invokes_c2_and_cannot_vote_away_failure (test_harness_execution.ExecutionTests.test_conflict_invokes_c2_and_cannot_vote_away_failure) ... ok
+test_copied_package_production_keeps_one_core_through_proof_and_expansion (test_harness_execution.ExecutionTests.test_copied_package_production_keeps_one_core_through_proof_and_expansion) ... ok
+test_external_core_override_is_rejected_before_any_role (test_harness_execution.ExecutionTests.test_external_core_override_is_rejected_before_any_role) ... ok
+test_failed_proof_blocks_expansion_and_preserves_unreviewed_scope (test_harness_execution.ExecutionTests.test_failed_proof_blocks_expansion_and_preserves_unreviewed_scope) ... ok
+test_failed_read_only_step_can_resume_without_reimplementing (test_harness_execution.ExecutionTests.test_failed_read_only_step_can_resume_without_reimplementing) ... ok
+test_invalid_contract_cannot_launch_writer (test_harness_execution.ExecutionTests.test_invalid_contract_cannot_launch_writer) ... ok
+test_invalid_review_is_failed_and_retry_does_not_repeat_writer (test_harness_execution.ExecutionTests.test_invalid_review_is_failed_and_retry_does_not_repeat_writer) ... ok
+test_locked_reference_can_support_but_not_replace_capture (test_harness_execution.ExecutionTests.test_locked_reference_can_support_but_not_replace_capture) ... ok
+test_missing_internal_module_cannot_launch_a_role (test_harness_execution.ExecutionTests.test_missing_internal_module_cannot_launch_a_role) ... ok
+test_missing_or_partial_proof_scope_cannot_launch_writer (test_harness_execution.ExecutionTests.test_missing_or_partial_proof_scope_cannot_launch_writer) ... ok
+test_partial_writer_failure_is_preserved_and_not_blindly_replayed (test_harness_execution.ExecutionTests.test_partial_writer_failure_is_preserved_and_not_blindly_replayed) ... ok
+test_proof_review_precedes_expansion_and_new_build_rechecks_every_target (test_harness_execution.ExecutionTests.test_proof_review_precedes_expansion_and_new_build_rechecks_every_target) ... ok
+test_read_only_mutation_blocks_and_preserves_changed_project (test_harness_execution.ExecutionTests.test_read_only_mutation_blocks_and_preserves_changed_project) ... ok
+test_reference_only_cannot_prove_implementation (test_harness_execution.ExecutionTests.test_reference_only_cannot_prove_implementation) ... ok
+test_repair_recollects_and_rechecks_new_build (test_harness_execution.ExecutionTests.test_repair_recollects_and_rechecks_new_build) ... ok
+test_repeated_unresolved_claim_stops_even_with_larger_cycle_allowance (test_harness_execution.ExecutionTests.test_repeated_unresolved_claim_stops_even_with_larger_cycle_allowance) ... ok
+test_resume_does_not_repeat_completed_work_and_detects_changed_capture (test_harness_execution.ExecutionTests.test_resume_does_not_repeat_completed_work_and_detects_changed_capture) ... ok
+test_resume_expansion_reuses_proof_but_rejects_changed_proof_capture (test_harness_execution.ExecutionTests.test_resume_expansion_reuses_proof_but_rejects_changed_proof_capture) ... ok
+test_review_only_needs_no_production_scope (test_harness_execution.ExecutionTests.test_review_only_needs_no_production_scope) ... ok
+test_review_only_observes_current_build_without_any_writer (test_harness_execution.ExecutionTests.test_review_only_observes_current_build_without_any_writer) ... ok
+test_runs_ordered_roles_and_fresh_critic_without_certifying (test_harness_execution.ExecutionTests.test_runs_ordered_roles_and_fresh_critic_without_certifying) ... ok
+test_structural_failure_does_not_launch_local_repair (test_harness_execution.ExecutionTests.test_structural_failure_does_not_launch_local_repair) ... ok
+test_uncertain_visual_quality_cannot_be_replaced_by_technical_passes (test_harness_execution.ExecutionTests.test_uncertain_visual_quality_cannot_be_replaced_by_technical_passes) ... ok
+test_unknown_work_kind_and_multifamily_local_repair_are_blocked (test_harness_execution.ExecutionTests.test_unknown_work_kind_and_multifamily_local_repair_are_blocked) ... ok
+test_visual_modules_reach_J_roles_and_changes_invalidate_resume (test_harness_execution.ExecutionTests.test_visual_modules_reach_J_roles_and_changes_invalidate_resume) ... FAIL
+
+======================================================================
+FAIL: test_visual_modules_reach_J_roles_and_changes_invalidate_resume (test_harness_execution.ExecutionTests.test_visual_modules_reach_J_roles_and_changes_invalidate_resume)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\JOEWRKS\JOEDESIGN\tests\test_harness_execution.py", line 207, in test_visual_modules_reach_J_roles_and_changes_invalidate_resume
+    self.assertIn(p, paths)
+    ~~~~~~~~~~~~~^^^^^^^^^^
+AssertionError: WindowsPath('D:/JOEWRKS/JOEDESIGN/skills/joedesign/references/visual-translation.md') not found in [WindowsPath('D:/JOEWRKS/JOEDESIGN/skills/joedesign/SKILL.md')]
+
+----------------------------------------------------------------------
+Ran 29 tests in 57.468s
+
+FAILED (failures=1)

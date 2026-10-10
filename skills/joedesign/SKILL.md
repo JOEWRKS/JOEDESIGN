@@ -1,176 +1,119 @@
 ---
 name: joedesign
-description: "Use when implementing an approved visual target, translating reference relationships into UI composition, refining typography/layout/imagery, or checking actual visual conformance. Also use for requested unapproved direction exploration. Not for Product Definition, pure backend work, nonvisual refactors or layout-unaffected copy changes."
+description: "Design, implement and review UI through one operating workflow: inspect visual sources, translate them into the product, prove the key composition, and expand through specialist review. Also use for scoped visual repairs. Not for Product Definition, pure backend work or nonvisual refactors."
 ---
 
 # JOEDESIGN
 
-Preserve product meaning while translating visual sources into project-specific
-composition and implementation decisions. Primary work is approved-target
-interpretation, implementation support and original-versus-result gap diagnosis;
-new-direction exploration is conditional. Do not promise reliable original design
-quality from an input alone. One entrypoint; no mandatory sequence of ceremonies.
+This is the single operating core for JOEDESIGN. It governs design decisions,
+implementation, observation and specialist review. The harness is an internal
+execution mechanism, not another skill or authority the user must select.
+User authority and Product meaning govern the work; specialist defaults do not
+replace this operating route. Read detailed modules only for the current stage.
 
-## Establish the next decision
+## One owner, bounded roles
 
-Inspect the request, current Product authority, root DESIGN.md, applicable
-approval/rejection evidence, original visual material, real assets and relevant
-implementation. Read available facts instead of asking for them again. Identify
-the surface, state, version and viewport involved, not the whole project by default.
+The coordinating agent is A: it owns scope, assignments, stage transitions and the
+integrated result. Product owns meaning; the user owns exact visual acceptance.
+A preserves these authorities and cannot vote away a failure or rejection.
+I receives the result and remaining limits; it is not an extra reviewer.
 
-- **Approved visual target:** confirm the actual approval's scope/version/surface/
-  state. Give the implementer direct access to that original and its real assets.
-  With sufficient decisions, implement only the needed delta. Skip unnecessary
-  alternatives, style reinvention, retranscription and repeated approval questions.
-- **Ordinary reference:** a user-provided image is not approval by itself. Use only
-  relevant relationships as advisory evidence. Distinguish observed source facts
-  from project proposals; a new material direction remains unapproved. Explore
-  only what the request or unresolved decision needs; no fixed candidate count.
-- **Conflict or missing input:** name the affected relationship and authority.
-  Do not silently blend conflicting references or override approved material with
-  a translation, default taste or existing code. Resolve only the blocking scope;
-  continue independent authorized work. Missing source access cannot be replaced
-  by a claim that a prose description is the source.
+**If you received a role assignment**, apply this core within that assignment.
+Use its stage, targets, originals, allowed changes and required observations.
+Return the scoped result and gaps to the coordinator. Do not restart the workflow,
+launch more roles, reinterpret a locked direction or expand the assignment.
+A material conflict returns to the coordinator; it does not authorize a workaround.
 
-Product authority owns functions, information, permissions, navigation, data,
-states/transitions, recovery and behavior. Never remove required content/actions
-or merge states for visual simplicity. Raise unresolved product meaning to the
-current Product authority/user (through the existing lifecycle owner if present).
-Do not require a framework, extra agent or whole-project restart.
+| Responsibility | Owner and stage input |
+|---|---|
+| Scope, source selection, stage transitions and integration | Coordinator, using the route below |
+| Visual interpretation, composition and source comparison (J) | JOEDESIGN's [visual translation module](references/visual-translation.md); add [visual production](references/visual-production.md) for material composition/assets/motion |
+| Implementation and actual observation | Assigned implementer, using originals, the scoped decision and visual modules; responsible for rendered/state behavior |
+| Craft (I) | Actual Impeccable skill |
+| Content, input and recovery (U) | Actual UI UX Pro Max skill |
+| Accessibility and responsive implementation (V) | Actual web-design-guidelines skill |
+| Animation or React performance (M/R) | Respective performance skill only when applicable |
+| Independent diagnosis | Fresh-context critic, actual evidence and scoped criteria; no builder/reviewer conclusions |
 
-## Translate only the relationships that matter
+Responsibilities are not a requirement to create an agent for every step. Material
+review uses actual specialist skills and the ordered R → C1 → conditional C2 route
+in [operation](references/operation.md#raci-as-the-work-route). Role names alone do
+not establish skill use. C2 diagnoses conflict, uncertainty or recurring failure.
 
-Use this short connection where a decision is needed:
+## Decide the scope before making the screen
 
-**source observation → preserve/change for this project → concrete implementation
-decision → observable difference in the result.**
+Read the request, Product source, root DESIGN.md, originals/assets, scoped approval
+or rejection and actual implementation. State the work kind and next stage briefly;
+do not ask for facts already available. Reclassify when product or visual scope changes.
 
-Possible concerns, not a form to fill every time:
+| Work kind | Route |
+|---|---|
+| New direction: no adequate visual target | Source decision → representative composition → review → expansion |
+| Material extension/redesign: changed IA, screen families, content scale, task hierarchy or dominant composition | Recheck affected sources → prove changed composition → review → expansion |
+| Local repair: identified target and approved relationships remain valid | Inspect exact target → bounded correction → observe affected/protected regions; involve relevant specialists for material claims |
+| Review only | Inspect current source and output → scoped specialist review → findings; no implementation or repair authority |
 
-- Imagery: subject occupancy, text-relative scale, baseline, important regions,
-  crop and negative space. Establish focal/support/decorative role and intentional
-  text-image dominance. Preserve informative content and asset authorization.
-- Typography: family/available weight, measure, wrapping, line height and contrast
-  between roles. A still cannot establish an unavailable font or exact token.
-- Space and rhythm: which groups a gap separates, repeated roles, local density,
-  exceptions and the transition between adjacent image/reading sections.
-- Composition: Product-priority entry point and next destinations, relative
-  positions/axes, semantic containment, meaningful repetition/variation. Cards,
-  hero-plus-image, three-card groups and pills need structural reasons, not a
-  blanket ban. Specificity matters more than novelty.
-- Responsive/state translation: what changes and what remains invariant. Recompose
-  hierarchy, reading measure, crop, order and control reachability rather than
-  shrinking desktop coordinates. Preserve all required information and behavior.
+Unchanged colors/fonts/components do not make a new structure a local repair.
+Product approval, DRAFT, a wireframe or permission to implement is not approval
+of a visual composition. Unestablished local-repair conditions use the new/material
+route. Continue independent authorized work without expanding an unproved direction.
 
-Label values as **measured**, **estimated**, **proposed** or **approved** when the
-distinction matters; include the source or scope. Unknown facts remain unknown.
-A useful proposed gap is not a recovered source measurement. Static images do
-not establish unobserved hover, scroll or transitions. A screenshot's dimensions
-define an observation viewport, not a page-height cap or permission to cut content.
+## Execute the applicable stages
 
-## Apply craft without overriding the target
+1. **Establish the source.** Reuse an adequate approved original for its exact scope.
+   For unresolved reference decisions in new/material work, retrieve OMD and inspect
+   originals. Select one Primary and at most two Secondary with distinct roles.
+   Search results, brand names and prose summaries are not original inspection.
+   Other tools may supplement this work; provider failure does not silently waive
+   OMD or source comparison. Keep dependent work unresolved when sources are unavailable.
+2. **Translate into the product.** Apply the visual translation module to attention
+   order, grouping, density, imagery and narrow-screen behavior using real content.
+   Preserve required functions, information, states and recovery. Keep one compact
+   root DESIGN.md with sources, approval scope and necessary semantic role decisions;
+   reuse native roles before introducing variations. Use the [template](templates/DESIGN.md)
+   only when needed. Proposed and approved values remain distinct.
+3. **Prove the representative composition.** Build the family exposing the largest
+   visual risk at useful fidelity, including required wide/narrow and interaction
+   states. Observe what dominates and what comes next. Low fidelity may defer finish,
+   not hierarchy. Do not build dependent families before this proof is reviewed.
+   Before implementation, the design owner maps the applicable DESIGN rules to
+   required targets and geometric/specialist checks using the existing scoped
+   [conformance contract](references/conformance.md). Have the scope/criteria
+   reviewed independently of the implementation and pin that baseline in the
+   consuming workflow. Missing checks cannot disappear from a completion report.
+4. **Review the actual proof.** Use R/C1 and conditional C2 for affected claims, then
+   fresh independent critique. Distinguish information/function preservation, source
+   relationship conformance and whole-screen design quality. Challenge the composition
+   itself, even if tokens match and nothing overflows. Missing observation is UNVERIFIED;
+   contradiction is FAIL. Required failures or unknowns block dependent expansion.
+5. **Correct, expand and integrate.** Rework structural gaps at composition level;
+   use bounded correction for local gaps and stop repeated ineffective polishing.
+   Expand from the reviewed relationships, then re-observe all affected targets and
+   the protected proof on the changed build. Material replacement of an approved
+   direction needs scoped user approval after proof; internal review cannot grant it.
+6. **Report the actual outcome.** Present the artifact, meaningful visual change,
+   observed scope and dominant remaining gap. Technical checks, visual judgment,
+   workflow completion, certification and exact user acceptance remain distinct.
+   User rejection remains REJECTED for that output; no counts or role labels erase it.
 
-Use only principles relevant to the work. Establish hierarchy and visual flow
-before decoration. Group by meaning rather than DOM depth. Equivalent semantic
-relationships reuse spacing roles; structural sibling separation is different
-from tightly bound content.
+## Execution support
 
-For unresolved areas, the restricted 4px-based spatial starting profile is
-section 160 / major group 48 / subgroup 24 / item group 16 / tight 8 / micro 4px.
-Use the subset needed, not every multiple of four. Recurring roles justify tokens;
-optical adjustments do not silently create a new layout-spacing system. Approved
-project values and healthy native roles take precedence, even when different.
-Do not reshape an approved design to fit these defaults.
+For CLI-managed work, the coordinator prepares source-grounded contracts using
+[operation](references/operation.md), then follows [execution](references/execution.md).
+Production requires work_kind and proof_target_ids; the runner reviews the proof
+before launching expansion. A pinned design_validation baseline is required for
+production and review. Rendered relationships include combined margin/padding/gap,
+control height, wrapping and repeated-role consistency; CSS values alone are not
+measurements. Missing/failed/stale conformance blocks the relevant phase even when
+generic specialist claims pass. Use verify-design for direct/non-Git observations,
+and pass its result to JOENESS's completion consumer where connected; JOEDESIGN
+does not own that work ledger or grant user acceptance.
+Review-only never gains write authority. The user need
+not prepare machine files or choose between a core and harness.
 
-Typography is **not** the spatial 4px grid. Choose few semantic roles, families and
-supported weights; coordinate size, weight, line height, measure and placement.
-Starting sizes 12, 14, 16, 20, 24, 32, 40, 48, 64px are optional for unresolved
-roles, not approved tokens. Inspect the actual language, typeface, line breaks and
-mobile reading texture; do not manufacture hierarchy through tiny size differences
-or apply Latin measure mechanically to CJK, code or tables.
-
-Assign color by semantic role and attention priority; use surfaces for real layers
-and containment. Preserve state meaning with needed non-color cues. For applicable
-web work, retain WCAG 2.2 AA minimum contrast (normal text 4.5:1; large text and
-meaningful UI/state visuals 3:1), with stricter project requirements taking priority.
-Check relevant foreground/background pairs, image/gradient regions, focus and
-interaction/theme states; a token alone proves neither contrast nor appearance.
-If accessibility conflicts with an approved target, expose the affected conflict
-instead of silently changing the target or declaring it compliant.
-
-## Connect the source to implementation
-
-Reference interpretation and the Implementation Bridge are one derivative flow:
-original approved material + scoped project decisions → implementation → comparison.
-Pass original source/version/surface/state and real asset pointers directly, along
-with only necessary mapping decisions and unknowns. Translation supplements the
-source; it never replaces or quietly amends it.
-
-Reuse an equivalent project-native token/component/theme role first. Map exact
-approved values separately from intent/rationale. Do not invent missing tokens,
-rename stable roles to fit an external convention or replace healthy architecture.
-For a material mapping change, show the affected role/value, authority and reason.
-Existing structured tokens may help, but do not require a schema, parser, export
-step or tool. Preserve unknown/custom DESIGN sections and responsive intent.
-
-Responsibilities need not be separate agents: Product owns meaning; JOEDESIGN
-interprets relationships and diagnoses gaps; the implementer owns code, responsive/
-state implementation **and observing its actual result**. The controller handles
-environment, isolation, execution records, verification management and handoff,
-not a new visual interpretation imposed on the implementer. Do not burden the
-candidate with experiment administration or require JOEFLOW.
-
-## Keep one compact project authority
-
-Use one root DESIGN.md. The [template](templates/DESIGN.md) is a seed only when
-creating or materially updating durable decisions, not a required reread/form for
-each edit. Keep source/asset pointers, approval scope, necessary project decisions
-and unknowns; do not duplicate Product meaning or settled source specifications.
-Existing sufficient DESIGN content needs only a real decision delta, if any.
-
-An absent file starts DRAFT. Only explicit user approval promotes material direction
-to APPROVED. Preserve APPROVED Rev N while a separately labeled DRAFT Rev N+1 is
-proposed within the same file; one active approved rule set, no mandatory sidecar.
-Authorized reversible draft/proof work does not need advance approval of its result.
-Local refinements within approved intent need no material amendment. Material
-replacement requires explicit approval after proof. Implementation permission,
-“진행”, and “ㄱㄱ” are not acceptance of an exact output.
-
-## Observe and correct the exact result
-
-For a new/material direction, make the smallest useful target-medium proof before
-broad dependent integration. Obtain the needed user response before expansion that
-requires acceptance; already-approved targets and local refinements need no new
-direction gate.
-
-Before a material implementation/proof, identify the few source-based relationships
-to check and the applicable target dimensions/state. Use the existing target runtime.
-The implementer observes its actual output against the original; build success,
-DOM/token presence and an unopened screenshot do not establish visual conformance.
-
-For local feedback: inspect the exact current target → diagnose the affected
-relationship → bounded correction → rerender and observe that target and protected
-regions. Keep unrelated approved areas intact. Do not turn crop/type feedback into
-full-page regeneration. If repeated correction is not resolving the evidenced gap,
-diagnose the direction/source conflict before more dependent expansion; do not
-automatically fan out candidates or polish indefinitely. For material motion, check
-relevant start/intermediate/end, interruption/reverse and reduced-motion behavior;
-still-image evidence covers only its visible state.
-
-Use **expected relationship → actual observed fact → PASS / FAIL / UNVERIFIED**
-for material claims, binding artifact/version and surface/state/viewport where
-relevant. Contradiction is FAIL; missing observation is UNVERIFIED. A required FAIL
-keeps the covered visual result FAIL; otherwise any required UNVERIFIED keeps it
-UNVERIFIED. Continue completed/independent authorized work without fabricating the
-missing check or rerunning unrelated checks to compensate.
-
-Token mapping, technical checks, Product conformance, visual conformance and user
-acceptance are separate. Visual PASS never grants acceptance. Keep the user-facing
-handoff proportional: relevant output/delta, observed boundary and a next decision
-only when needed, not an exhaustive craft or operational report.
-
-## Capability boundary
-
-Use available general tools and project runtime as needed. No competitor methodology,
-vendor runtime, new public skill, asset/reference database, automatic router/scorer,
-image-generation dependency or lifecycle orchestrator is required or bundled.
+Direct host/browser tools and non-Git projects follow the same operating route,
+recording source → decision → observation → verdict in existing DESIGN/review records.
+They need no new document system and must not be reported as a completed CLI run.
+The runner gates its own launches, not arbitrary external edits or actual adherence
+inside a role. Local records are not authenticated host receipts or proof of human
+visual judgment. Unavailable specialists or evidence stay explicit, never invented.

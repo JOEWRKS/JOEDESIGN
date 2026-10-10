@@ -1,0 +1,8 @@
+{
+  "reviewer": "parent",
+  "scope": "morrow-extension-proof",
+  "baseline_sha256": "8ceffc9eaef9e2c2e5ff618b1b0d562658c8253622177b91eec39b5c98202137",
+  "basis": "Parsed comparison confirmed only source_ref strings changed to authority path plus fragment. No targets, criteria, inputs or authority hashes changed. Earlier failed mapping and captures remain historical.",
+  "previous_pin": "f8e432c0b9b288787e04f37b484e548237d58baf8dfb10e3b3931eb4ff66114f",
+  "verdict": "ACCEPTED_SYNTAX_CORRECTION"
+}

@@ -1,0 +1,52 @@
+{
+  "source_files": {
+    "evals/design-conformance-20261010/run-connection.py": "791518584d4ca84ddc051e374a8abd98f6f7b44f546bfde52887f723f45609ef",
+    "tests/test_design_conformance.py": "f7d51c3fcb7e5b826ffe9d244f26840e2f1efdc44ca0b8109ba5db3f84d036bc",
+    "skills/joedesign/scripts/capture.mjs": "ff996d4de3347ee632f839b1fbbaa99b0ff8e213a6598840996479ecf1cb43b3",
+    "skills/joedesign/scripts/measure-layout.mjs": "703d232e626c2a059d4f753a9082bd04893cb61042ea1cd509bebe58dda1ba79",
+    "skills/joedesign/scripts/harness/conformance.py": "b98b2f485699da47e775b9a7c7923484610203db25fe5ddf6f50887373e7d199",
+    "skills/joedesign/scripts/harness/execution.py": "692c66d613debea9f26111907f84f2d1b492985250937690439b562b607fa7ef",
+    "skills/joedesign/scripts/harness_cli.py": "520fbb80a99b1860c816a557593800a184a270e119fd894b997808c39586fe52"
+  },
+  "runs": {
+    "connection-r1": {
+      "results.json": "182062c98f74ec64c9543e3aac9cae060c8fe93fbb715e5777e646d27811188f",
+      "artifacts/broken.json": "be302461cda285db3ed2d45fb767b23e08ca8808b35a638009937df22b332d73",
+      "artifacts/corrected-receipt.json": "fe8f3dbddcc21c9ab52f888363da63f3394260445ac9e958d96ac8a263cb6e02",
+      "artifacts/partial.json": "00ddb92b0d248874f00ac1197454c2f636fc7f329b4394f3850384b13a184ae3",
+      "artifacts/stacked-receipt.json": "6943ac24c66cf3dc72160d1ec1b8e8a529323bc50bff508faf2c4b381aa53024",
+      "project/baseline.json": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+      "project/DESIGN.md": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5",
+      "project/index.html": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8",
+      "project/unrelated.txt": "272005b424ec533788cc1f57409596ef3b36bf69921d3ed7cc9d0bb3eded7bea",
+      "artifacts/corrected/0-full.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "artifacts/corrected/0-observation.json": "eb75941259978f1f746e40f71db7a60b5427d76a2f217a2f2a0bfe51fada7941",
+      "artifacts/corrected/0-result.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "artifacts/corrected/0-start.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "artifacts/stacked/0-full.png": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6",
+      "artifacts/stacked/0-observation.json": "9eb5edbe0eb799f2201888de0def85ad3df41f66c7ef60bdb100b62847bade75",
+      "artifacts/stacked/0-result.png": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6",
+      "artifacts/stacked/0-start.png": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+    },
+    "connection-r2": {
+      "results.json": "39426dc340db153159aa13c1edd14584b6dfa33af5bc8972328a856dba98f869",
+      "artifacts/broken.json": "be302461cda285db3ed2d45fb767b23e08ca8808b35a638009937df22b332d73",
+      "artifacts/corrected-receipt.json": "67c8cb0f99976d5690d592529d277f993ca98d5097921855066541b6f7a575cb",
+      "artifacts/partial.json": "ac577679ca1cd22ee419225e0dada9aa3ed5d8e74e7be00d918e8b95e57e1710",
+      "artifacts/stacked-receipt.json": "670871584ce25b1860293ee20c9ee6cceadc80928546f5e36113505a1f67280d",
+      "project/baseline.json": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+      "project/DESIGN.md": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5",
+      "project/index.html": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8",
+      "project/unrelated.txt": "272005b424ec533788cc1f57409596ef3b36bf69921d3ed7cc9d0bb3eded7bea",
+      "artifacts/corrected/0-full.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "artifacts/corrected/0-observation.json": "13df4bc1da372cf08f45d0dc6b8a76c112a898afbe7926e80885a818d81c12e5",
+      "artifacts/corrected/0-result.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "artifacts/corrected/0-start.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "artifacts/stacked/0-full.png": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6",
+      "artifacts/stacked/0-observation.json": "0fcaec5e45ee1670fd6db05c6806045c3c535facb7298fce78d460d30651407c",
+      "artifacts/stacked/0-result.png": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6",
+      "artifacts/stacked/0-start.png": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+    }
+  },
+  "limits": "Raw runtime files stay in .local; browser screenshots are copied here byte-for-byte. The shipped reconstruction script creates a new isolated run, not a rebinding of old absolute-path observations."
+}

@@ -1,0 +1,5 @@
+{
+  "candidate_id": "", "revision": "", "scope_id": "", "product_source": "",
+  "requirements": [], "constraints": [], "required_axes": ["composition"],
+  "targets": [], "assets": [], "search_terms": [], "rejected_patterns": []
+}

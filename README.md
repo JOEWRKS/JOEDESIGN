@@ -1,136 +1,105 @@
 # JOEDESIGN
 
-## 지금 사용할 스킬 (2026-10-09)
+## 하나의 운영 코어
 
-현재 구성 버전은 **JOEDESIGN 코어 v0.2 + Design Harness v0.1**이다.
-이번 업데이트는 2026-10-09 보강본이며, 정확한 소스는 Git 커밋으로 식별한다.
-별도 새 버전 번호나 릴리스 태그를 부여하지 않았다.
-[업데이트 내역](CHANGELOG.md)에 보강점, 실행 설정 변경과 검증 한계를 정리했다.
+**JOEDESIGN** 하나를 호출한다. [최상위 운영지침](skills/joedesign/SKILL.md)이
+작업 범위와 단계를 정하고, 조정 담당자가 각 역할의 결과를 통합한다.
+하네스는 그 안의 실행·증거 관리 기능이며 별도로 선택할 스킬이 아니다.
 
-| 요청 | 사용할 스킬 | 역할 |
-|---|---|---|
-| 승인된 화면·원본을 구현하거나 국소 수정 | [`joedesign`](skills/joedesign/SKILL.md) | 제품 의미를 보존하며 원본의 시각 관계를 구현하고 실제 화면을 확인 |
-| 참조를 조사·번역해 새로운 시각 방향을 만들거나 큰 범위의 검증 수행 | [`joedesign-harness`](skills/joedesign-harness/SKILL.md)와 `joedesign` | Harness가 참조·계약·증거·검수 절차를 관리하고 JOEDESIGN이 시각 판단을 수행 |
+현재 작업본: **0.3.0-dev 통합 개발본**. 단일 버전 원본은
+[VERSION](skills/joedesign/VERSION)이다. 이전 main 반영본 `0efacd8`은
+코어 v0.2 + Harness v0.1이었다. 이번 main 통합 대상은 단일 코어와
+디자인 준수 검증 보강이며, 정식 릴리스·사용자 시각 수용과는 별개다.
+[전체 업데이트 내역](CHANGELOG.md)과 [통합 검증 기록](evals/unified-core-20261009/README.md)을 참조한다.
 
-Harness 작업은 [RACI 실행 경로](skills/joedesign-harness/references/operation.md#raci-as-the-work-route)를
-기본으로 삼는다. 항목별 R이 먼저 검사하고 C1이 교차검사하며, 충돌·불확실성·
-반복 실패 때 C2가 진단한다. A는 결과에 책임지고 I는 결과와 한계를 전달받는다.
-계약을 묶은 뒤 `harness_cli.py raci <run-dir> --claim-id <id>`로 해당 항목의
-작업 순서를 확인할 수 있다. 이 명령은 스킬을
-대신 실행하지 않는다.
-Impeccable은 시각 craft, UI UX Pro Max는 콘텐츠·입력·복구, web-design-guidelines는
-웹 접근성·반응형 구현을 맡는다. React·애니메이션 성능 스킬은 해당 문제가 있을
-때만 사용한다. 이들은 자동 실행 에이전트나 사용자 승인권자가 아니다.
-OMD는 필요한 참조를 찾는 자료원이다.
-사용자와 Product 요구, 승인된 `DESIGN.md`와 원본을 대체하지 않는다.
+## 작업 흐름과 책임
 
-현재 Harness는 RACI의 검토 순서와 스킬 사용 기록을 증거 계약에 반영했다. 전체 화면과
-모션 검증을 보완한 [시각 제작 지침](skills/joedesign-harness/references/visual-production.md)은
-포함한다. 별도 실험의 관계 진단·의존성 검사 확장안은 품질 이득이 확인되지 않아
-채택하지 않았다. [설계·RACI·현재 상태](docs/superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md)와
-[A/B 채택 판단](evals/harness-v0.1/retention-decision.md)을 참조한다.
+신규 디자인과 중요한 확장은 **참조 결정 → 시각 번역 → 대표 화면 제작 →
+전문 검수 → 확장 → 통합 관찰**로 진행한다. 승인된 관계 안의 국소 수정은
+정확한 대상 진단·수정·관찰로 범위를 줄인다. 검토만 요청하면 쓰기 권한은 없다.
+기존 색상·폰트를 썼다는 이유로 화면 구조 변경이 국소 수정이 되지는 않는다.
 
-저장소를 복제하는 것만으로 스킬이 설치되지는 않는다. 기존 Harness 정책 명령은
-로컬 참조·계약·증거와 선언된 RACI 경로를 검사한다. 새 `run` 명령은 별도 Codex
-프로세스와 브라우저를 연결하지만, 인증된 호스트 receipt가 없어 로컬
-실행만으로 실제 스킬 사용이나 최종 `APPROVED`를 증명하지
-못한다. 실제 디자인 품질과 정확한 사용자 승인은 별도 관찰·판단 대상이다.
+| 담당 | 책임 |
+|---|---|
+| 조정 담당자 A | 작업 범위, 역할 배정, 단계 전환, 통합 결과 |
+| Product | 기능·정보·상태·행동의 의미와 필수 조건 |
+| 시각 역할 J | 원본 해석, 구도·위계·시각 관계와 구현 비교 |
+| 구현 담당 | 코드·상태·반응형 구현과 실제 결과 관찰 |
+| 전문 검수 | Impeccable, UI UX Pro Max, web-design-guidelines와 필요한 성능 전문가 |
+| 독립 Critic | 새 컨텍스트에서 현재 증거와 기준으로 진단 |
+| 사용자 | 정확한 결과에 대한 최종 시각 수용 |
 
-## 저장소 실행·검증
+전문 역할은 같은 운영 코어 아래 배정된 단계만 수행한다. R → C1 → 필요 시
+C2는 검토 순서이며 투표가 아니다. 대표 화면의 필수 실패·미확인은 의존하는
+확장을 막는다. 확장 뒤에는 바뀐 빌드에서 기존 대표 화면까지 다시 확인한다.
 
-2026-10-09 보강: 신규 방향·중요 확장·국소 수정을 구분하고, 참조 결정 → 대표
-화면 제작·전문 검수 → 확장 → 변경된 전체 화면 재검수 순서를 명확히 했다.
-로컬 실행기는 `work_kind`와 `proof_target_ids`를 요구하며, 대표 화면의 필수
-검수가 실패하거나 미확인인 동안 확장 실행을 차단한다. 모든 역할에 Harness
-지침을 전달하고 지침·증거 변경 시 이전 실행을 그대로 재사용하지 않는다.
-[보강 검증 기록](evals/design-workflow-20261009/README.md)의 Python 112개와
-Node 14개 통과는 로컬 규칙·실행기의 검증이며 새 지침의 실제 모델 준수나
-실프로젝트 디자인 품질을 보증하지 않는다. 기존 설치본은 별도로 갱신해야 한다.
+## 패키지 사용과 이전 설치 마이그레이션
 
-2026-10-06 실행 연동 작업: 기존 계약을 입력으로 실제 Codex 역할 실행, 로컬
-브라우저 수집, R/C1/조건부 C2 검토, 독립 Critic과 제한된 수정·재개를 연결하는
-`run` 명령을 추가했다. [실행 설정과 한계](skills/joedesign-harness/references/execution.md)를
-따른다. 로컬 실행 기록은 인증된 호스트 receipt가 아니며 자동 APPROVED는 여전히
-불가능하다. [실행 연동 검증 기록](evals/harness-execution-20261006/README.md)에
-자동 검사, 실제 관찰, 실패 수정과 남은 검증을 구분했다.
-[후속 병목 보강](evals/harness-bottleneck-20261006/README.md)에서는 검토 입력 전달과
-`--review-only`를 추가하고, 기존 구현을 보존한 실제 R/C1·Critic 검수 및
-시간 초과 이후 재개를 확인했다. 전체 디자인 품질 인증과는 구분한다.
+설치 단위는 `skills/joedesign/` 폴더 **전체**다. 이를 프로젝트 또는 개인의
+스킬 경로에 `joedesign`으로 배치하고 `$joedesign` 또는 “JOEDESIGN으로 디자인해”로
+호출한다. 필요한 전문 스킬은 실제로 사용 가능한 상태여야 한다.
+저장소 문서·평가 자료는 설치할 필요가 없다.
 
-The separate [joedesign-harness skill](skills/joedesign-harness/SKILL.md) implements
-OMD corpus retrieval, grounded design contracts, scoped transitions, structural
-rework and evidence/approval policy. The original joedesign v0.2 package is unchanged.
-See [usage and trust boundaries](skills/joedesign-harness/references/operation.md)
-and [verification/limitations](evals/harness-v0.1/README.md).
+기존의 `joedesign`과 `joedesign-harness`를 함께 설치한 환경에서는, 설치를 갱신할
+때 두 구 폴더를 발견 경로 밖에 보존하고 통합 `joedesign` 하나로 교체한다.
+폴더를 덧씌우기만 해 구 Harness 진입점을 남기지 않는다. 2026-10-10 후속 지시로
+이 PC의 개인 설치는 통합 0.3.0-dev로 전환했다. 기존 개인·프로젝트 구 설치본은
+발견 경로 밖에 보존했다. Git 갱신은 설치 갱신이 아니며, 다른 PC의 설치 상태를
+뜻하지 않는다. [운영 연결 기록](evals/design-conformance-20261010/operational.md).
 
-Run `python skills/joedesign-harness/scripts/harness_cli.py --help`.
-Tests: `python -m unittest discover -s tests -v` and
-`node --test tests/joedesign-v02.tests.mjs`.
-새 프로젝트에서 소스를 사용할 때는 두 스킬 폴더를 프로젝트의 스킬 경로에
-함께 배치한다. 저장소의 spec·AGENTS·평가 기록은 런타임 스킬 입력이 아니다.
-실제 제품·원본·자산·상태를 제공하고 필요한 스킬만 호출한다.
+CLI와 캡처 경로는 이제 `joedesign/scripts/` 아래다. 기존 runtime JSON의
+외부 `skills.J` 재정의는 제거한다. J는 항상 같은 패키지 내부를 사용한다.
+옛 실행을 새 정책으로 재개하지 말고 기존 증거를 보존한 새 후보를 준비한다.
 
-## 보존된 v0.2 기록 — 현재 사용 안내는 위 표
+```powershell
+python skills/joedesign/scripts/harness_cli.py version
+python skills/joedesign/scripts/harness_cli.py doctor
+python skills/joedesign/scripts/harness_cli.py --help
+```
 
-> JOEDESIGN으로 디자인해.
+[실행 설정](skills/joedesign/references/execution.md)과
+[계약·RACI 상세](skills/joedesign/references/operation.md)는 해당 작업에서 읽는다.
+브라우저 수집과 역할 실행에는 이미 제공된 런타임을 사용하며 자동 설치하지 않는다.
+직접 도구를 쓰거나 Git이 없는 프로젝트도 같은 운영 순서를 적용하되 CLI 실행으로
+주장하지 않는다.
 
-JOEDESIGN preserves product meaning while translating approved visual material and
-selected reference relationships into project-specific composition and implementation
-decisions, then diagnoses differences between the original and actual output.
+## 검증과 한계
 
-## v0.2 Visual Translation — implementation candidate
+```powershell
+python -m unittest discover -s tests -v
+node --test tests/joedesign-v02.tests.mjs
+```
 
-Primary: implement/refine an approved visual target using its original material and
-real assets. Conditional: propose an unapproved direction when a reference-based
-decision is unresolved. Sufficient inputs need only the implementation delta, not
-compulsory alternatives or a rewritten design brief. A supplied image is not approval.
+Python은 현재 실행·계약 정책과 단일 패키지 복사·역할 전달을 검사한다.
+브라우저 통합 검사는 기존 Playwright/브라우저 경로를 환경변수로 제공했을 때 실행된다.
+Node v0.2 검사는 [보존된 패키지](fixtures/package-history/pre-unification-20261009/manifest.json)에
+과거 행동 증거가 그대로 연결되는지만 확인한다. 새 운영지침의 모델 준수나 디자인
+품질 증거로 이전 결과를 재사용하지 않는다.
 
-This is a candidate for Program Review, not a production release, user acceptance,
-design-quality guarantee or evidence of specialist superiority.
+로컬 실행 완료는 `REVIEW_COMPLETE_UNCERTIFIED`이며 최종 APPROVED가 아니다.
+인증된 호스트 receipt는 제공하지 않는다. 실행 순서·자동 검사·실제 모델 준수·
+시각 품질·사용자 수용은 서로 다른 검증이다. 원본을 제공한 격리 과제 3건에서
+실제 에이전트의 신규 제작·확장·국소 수정과 전문 검토를 확인했다.
+신규54·수정32·확장249개 필수 검사가 통과했으며, 기준 검토 중 발견한 누락과
+페이지 이동 시 상태 초기화의 수정 이력도 보존했다.
+[행동 검증과 한계](evals/behavior-forward-20261010/README.md)를 참조한다.
+조정 담당자의 개입 없는 준수 보장이나 실제 제품 전체의 시각 수용을 뜻하지 않는다.
 
-- Branch: codex/joedesign-v0.2-visual-translation.
-- Pinned v0.1 baseline: 2a815ee49d8f7ca6a7c1e483df315eda1fa709d7;
-  preserved branch codex/joedesign-v0.1-test.
-- [Change spec / contract mapping](docs/specs/joedesign-v0.2-visual-translation.md).
-- [v0.2 당시 역할표](docs/architecture/JOEDESIGN_OPERATING_MODEL_V1.md).
-- [Evidence, hashes, instruction sizes and limits](fixtures/contract-cases/evidence/visual-translation-v02/README.md).
+2026-10-10 소스 보강은 DESIGN 규칙별 필수 대상·검사방법을 별도 기준점에
+고정하고, 실제 렌더의 합산 여백과 전문 판정을 검사한다. `run`은 이제
+`design_validation` 기준 파일과 독립적으로 보존한 SHA256이 필요하다.
+`verify-design`은 비Git/직접 도구 관찰도 같은 기준으로 판정하여 JOENESS가
+소비할 결과를 낸다. 누락·실패·오래된 근거는 관련 디자인 단계와 확장을 막는다.
+[필드·실행·책임 경계](skills/joedesign/references/conformance.md)와
+[실제 생산자→소비자 연결 검증](evals/design-conformance-20261010/README.md)을 참조한다.
+개인 설치 전환과 지정 담당자의 GEO 검수 경로 활성화는 완료했다.
+최종 범위와 한계는 [운영 연결 기록](evals/design-conformance-20261010/operational.md)을 참조한다.
 
-## v0.2 당시 코어 단독 설치 안내
+## 보존한 설계와 증거
 
-Copy only skills/joedesign into your project's .agents/skills/joedesign, preserving
-the three files and relative paths. No installer or global behavior overlay is needed.
-This repository's spec, AGENTS, tests, operational reports and diagnostic history are
-not candidate runtime input. This task does not perform a personal install.
+- [v0.2 설계](docs/specs/joedesign-v0.2-visual-translation.md)와 [당시 행동 증거](fixtures/contract-cases/evidence/visual-translation-v02/README.md)
+- [이전 Harness 설계](docs/superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md)와 [채택 판단](evals/harness-v0.1/retention-decision.md)
+- [실행 연동의 실패·수정](evals/harness-execution-20261006/README.md), [병목 개선](evals/harness-bottleneck-20261006/README.md), [대표 화면 선검수 보강](evals/design-workflow-20261009/README.md)
 
-In a fresh project session invoke $joedesign or ask “JOEDESIGN으로 디자인해.”
-Point to Product authority, original visual material/assets and the exact request.
-Identify what is actually approved, including version/surface/state, versus ordinary
-references. The skill reads existing decisions and keeps a single root DESIGN.md;
-the compact template is needed only for creating/materially updating those decisions.
-
-Source observation → project preserve/change → implementation decision → observable
-result difference. This connection supplements the originals; a controller must not
-replace them with a taste paragraph. Native project tokens/components remain useful.
-The implementer still observes its actual render. Build/token success is not visual
-conformance, and visual conformance is not user acceptance.
-
-## Verification and history
-
-Current command: node --test tests/joedesign-v02.tests.mjs
-
-The suite checks the three-file package, a temporary project-local copy, historical
-bytes, frozen inputs and linkage/review of fresh functional responses. It does not
-call a model and does not turn textual decisions into rendered proof. The evidence
-packet records actual executions separately, including failures and limitations.
-
-The pre-change original suite was run: 72 PASS / 0 FAIL. Its exact test sources now
-live under fixtures/contract-cases/history/v01-test-sources/; their relative imports
-are intentionally unmodified. To rerun that historical suite, use a separate checkout
-of the pinned v0.1 commit and the original command in the evidence packet. Do not run
-those archived tests against v0.2 or relabel v0.1 semantic/Smoke evidence as v0.2.
-
-TrackE is CLOSED. JOEDESIGN and UI UX Pro Max specialist value remains NOT TESTED;
-TEST B was platform-blocked, not a method failure. No diagnostic rerun is authorized.
-Real-project visual validation with newly approved designs and actual assets is
-PENDING; none were supplied here. No BIO production, comparison, personal install,
-main merge, release tag or new runtime dependency is part of this candidate.
+이 기록은 각 시점의 소스와 범위를 설명한다. 과거 두 스킬 설치 안내와 동결
+지시는 현재 운영 경로가 아니며, 실패·미채택 실험·과거 관찰은 그대로 보존한다.

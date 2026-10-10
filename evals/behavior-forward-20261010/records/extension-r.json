@@ -1,0 +1,1971 @@
+{
+  "context_id": "/root/specialist_r",
+  "case": "extension-final-integration",
+  "build_id": "f9c4e6d973775bc2e69d9aa64d05124dedbdd7f690c60c596e604c856ac29ac1",
+  "skill_sources": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\SKILL.md",
+      "sha256": "a519986f66134a4919495ec407fdc96b3cd5ea4c3f117c2a112bb21dee27b7bf"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\operation.md",
+      "sha256": "56099b5cc4df90fac3e16c05115d33d626fbc18951841de65cd0a15e637e1601"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\visual-translation.md",
+      "sha256": "8a4b2e1866d0817c0f0ed7ef38a0252731d5738876c5fc71d29f4f15d86a53f9"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\visual-production.md",
+      "sha256": "aa065f81e1c612059a7d70e34d725322844d6ec26289c8a8629f9744009fbe0d"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\SKILL.md",
+      "sha256": "c2c0d8e5ea5dc3f36b879f099e72d83f506a6e626dcc075c1a7e14763f200d4d"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\reference\\critique.md",
+      "sha256": "a763d1474f5c1125a937b5872abb1fc40b2bd44dd7d4a7701ac2147401bf4b2b"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\scripts\\detect.mjs",
+      "sha256": "b2c5731c367c129e361bdfb28c4f697e84818c77e04d88ad21eeb89320f06a0e"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\web-design-guidelines\\SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\SKILL.md",
+      "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\data\\ux-guidelines.csv",
+      "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\web-interface-guidelines.md",
+      "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
+    }
+  ],
+  "actual_use_details": {
+    "J": "Applied already-read pinned core/RACI and visual translation/production. Read current scope/criterion proposal, source/runtime/data and all18 exact raw observations. Visually inspected all18 current full renders plus route action frames; separately assessed source conformance, full-list composition and participant meaning. Reference originals previously inspected in this same case/session and byte identities retained below.",
+    "I": "Actual Impeccable skill/critique guidance applied as bounded R craft contribution, not standalone critique. Setup ran once earlier in same session. Assessed repeated row roles, group separation, wrapping and calm Operate composition before running detector once on current three markup targets. Regex-only detector warning about Arial is subordinate to explicit approved source; parser degradation recorded. No nested agents/overlay/archive.",
+    "V": "Fresh official Web Interface Guidelines fetched for current review. Applied semantic HTML, native labeled controls, actual target control size, focus, dynamic status, content wrapping and native grid rules. Supplemental keyboard participant selection and planning/overview reservation ran at both widths on current build.",
+    "U": "Applied actual UI UX Pro Max Success Feedback, Disabled States and Contextual Live Badge Updates guidance already retrieved earlier this session. New targeted empty state missing data search returned Empty States as fitting top result; used to judge explicit Not supplied and unknown waitlist instead of blank/false-zero output. Rejected unrelated bulk-edit/video suggestions; no promotion/cancellation features inferred."
+  },
+  "reviews": [
+    {
+      "claim_id": "Structure-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-initial (1240x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Screen title/filter precede primary list; aside note and summary remain secondary. Two-to-one desktop columns preserve list dominance.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-room-a (1240x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Screen title/filter precede primary list; aside note and summary remain secondary. Two-to-one desktop columns preserve list dominance.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-reserved (1240x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Screen title/filter precede primary list; aside note and summary remain secondary. Two-to-one desktop columns preserve list dominance.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-initial (390x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Screen title/filter precede primary list; aside note and summary remain secondary.Entire list precedes visitor note, shared summary and guide.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-room-a (390x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Screen title/filter precede primary list; aside note and summary remain secondary.Entire list precedes visitor note, shared summary and guide.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-reserved (390x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Screen title/filter precede primary list; aside note and summary remain secondary.Entire list precedes visitor note, shared summary and guide.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-initial (1240x900, initial); three protected overview session rows retain title/date/time/room/availability; Original headline/intro precede the primary three-session panel; extended navigation stays subordinate. Two-to-one desktop columns preserve list dominance.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-initial (390x900, initial); three protected overview session rows retain title/date/time/room/availability; Original headline/intro precede the primary three-session panel; extended navigation stays subordinate.Entire list precedes visitor note, shared summary and guide.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-initial (1240x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets25px including border and columns28px. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-room-a (1240x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets25px including border and columns28px. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-reserved (1240x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets25px including border and columns28px. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-initial (390x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets21px including border; actions move beneath facts in the single column. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-room-a (390x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets21px including border; actions move beneath facts in the single column. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-reserved (390x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets21px including border; actions move beneath facts in the single column. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-initial (1240x900, initial); three protected overview session rows retain title/date/time/room/availability; Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets25px including border and columns28px. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-initial (390x900, initial); three protected overview session rows retain title/date/time/room/availability; Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets21px including border; actions move beneath facts in the single column. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-initial (1240x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Small aside stays visually secondary across list length.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-room-a (1240x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Small aside stays visually secondary across list length.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-reserved (1240x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Small aside stays visually secondary across list length.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-initial (390x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Long workshop titles wrap cleanly; no note interrupts row flow. Long-page feedback remains locally visible through Reserved/availability changes.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-room-a (390x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Long workshop titles wrap cleanly; no note interrupts row flow. Long-page feedback remains locally visible through Reserved/availability changes.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-reserved (390x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Long workshop titles wrap cleanly; no note interrupts row flow. Long-page feedback remains locally visible through Reserved/availability changes.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-initial (1240x900, initial); three protected overview session rows retain title/date/time/room/availability; The original short list remains the primary task after the headline. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Small aside stays visually secondary across list length.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-initial (390x900, initial); three protected overview session rows retain title/date/time/room/availability; The original short list remains the primary task after the headline. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Long workshop titles wrap cleanly; no note interrupts row flow. Long-page feedback remains locally visible through Reserved/availability changes.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-initial (1240x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Rows align across the task column; note hierarchy remains distinct. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-room-a (1240x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Rows align across the task column; note hierarchy remains distinct. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-reserved (1240x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Rows align across the task column; note hierarchy remains distinct. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-initial (390x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Actions remain attached below their own facts; long titles and nav labels fit without clipping. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-room-a (390x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Actions remain attached below their own facts; long titles and nav labels fit without clipping. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-reserved (390x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Actions remain attached below their own facts; long titles and nav labels fit without clipping. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-initial (1240x900, initial); three protected overview session rows retain title/date/time/room/availability; Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Rows align across the task column; note hierarchy remains distinct. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-initial (390x900, initial); three protected overview session rows retain title/date/time/room/availability; Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Actions remain attached below their own facts; long titles and nav labels fit without clipping. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-initial (1240x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-room-a (1240x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-reserved (1240x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-initial (390x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-room-a (390x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-reserved (390x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-initial (1240x900, initial); three protected overview session rows retain title/date/time/room/availability; All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-initial (390x900, initial); three protected overview session rows retain title/date/time/room/availability; All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-initial (1240x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Raw scrollWidth=1240 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Matching narrow state was also visually inspected.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-room-a (1240x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Raw scrollWidth=1240 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Matching narrow state was also visually inspected.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-reserved (1240x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Raw scrollWidth=1240 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Matching narrow state was also visually inspected.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-initial (390x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Raw scrollWidth=390 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Single-column layout preserves all rows and readable wrapping; three navigation links fit at390px.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-room-a (390x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Raw scrollWidth=390 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Single-column layout preserves all rows and readable wrapping; three navigation links fit at390px.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-reserved (390x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Raw scrollWidth=390 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Single-column layout preserves all rows and readable wrapping; three navigation links fit at390px.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-initial (1240x900, initial); three protected overview session rows retain title/date/time/room/availability; Raw scrollWidth=1240 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Matching narrow state was also visually inspected.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-initial (390x900, initial); three protected overview session rows retain title/date/time/room/availability; Raw scrollWidth=390 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Single-column layout preserves all rows and readable wrapping; three navigation links fit at390px.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-initial",
+      "target_id": "planning-wide-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-initial (1240x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-room-a",
+      "target_id": "planning-wide-room-a",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-room-a (1240x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-reserved",
+      "target_id": "planning-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-reserved (1240x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-initial",
+      "target_id": "planning-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-initial (390x900, initial); 12 chronological planning rows retain date/time/room/capacity/availability; Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-room-a",
+      "target_id": "planning-narrow-room-a",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-room-a (390x900, room-a); 6 chronological planning rows retain date/time/room/capacity/availability; Studio A selection contains six correct-room rows after A/B/all/A checks. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-room-a\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-reserved",
+      "target_id": "planning-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-reserved (390x900, reserved); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is Reserved with3 places remaining and shared total1. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-wide-initial",
+      "target_id": "overview-wide-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-initial (1240x900, initial); three protected overview session rows retain title/date/time/room/availability; Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-narrow-initial",
+      "target_id": "overview-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-initial (390x900, initial); three protected overview session rows retain title/date/time/room/availability; Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Structure-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Screen title/filter precede primary list; aside note and summary remain secondary. Two-to-one desktop columns preserve list dominance.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets25px including border and columns28px. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Small aside stays visually secondary across list length.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Rows align across the task column; note hierarchy remains distinct. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Raw scrollWidth=1240 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Matching narrow state was also visually inspected.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Structure-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Screen title/filter precede primary list; aside note and summary remain secondary.Entire list precedes visitor note, shared summary and guide.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets21px including border; actions move beneath facts in the single column. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Date anchors and bold titles make the twelve/six-row scale scannable; correct-room filter reduces decision load. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Long workshop titles wrap cleanly; no note interrupts row flow. Long-page feedback remains locally visible through Reserved/availability changes.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Craft-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Actions remain attached below their own facts; long titles and nav labels fit without clipping. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Raw scrollWidth=390 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Single-column layout preserves all rows and readable wrapping; three navigation links fit at390px.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); 12 chronological planning rows retain date/time/room/capacity/availability; planning1 is still Reserved with3 places remaining after all-page navigation/reload; shared total2 includes separate overview bookbinding. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Structure-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Original headline/intro precede the primary three-session panel; extended navigation stays subordinate. Two-to-one desktop columns preserve list dominance.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets25px including border and columns28px. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. The original short list remains the primary task after the headline. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Small aside stays visually secondary across list length.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Craft-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Rows align across the task column; note hierarchy remains distinct. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Raw scrollWidth=1240 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Matching narrow state was also visually inspected.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Structure-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Original headline/intro precede the primary three-session panel; extended navigation stays subordinate.Entire list precedes visitor note, shared summary and guide.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Source green/cream, Arial, date-first rows and title/metadata/action grouping persist on the changed build. Actual note gaps18px; panel top/side insets21px including border; actions move beneath facts in the single column. New Participants nav remains readable with protected overview hierarchy intact.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. The original short list remains the primary task after the headline. Repeated supporting facts do not overpower titles/actions; green versus disabled labeled buttons support fast availability scanning. Long workshop titles wrap cleanly; no note interrupts row flow. Long-page feedback remains locally visible through Reserved/availability changes.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Craft-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Repeated dates, titles, metadata, separators and44px action states preserve consistent roles and rhythm. Actions remain attached below their own facts; long titles and nav labels fit without clipping. Approved source choices override generic typography novelty advice.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. All controls in target raw geometry are44px high; native anchor/button/select names are present. Independent current-build keyboard sequence reaches planning1 through Tab and reserves with Enter; overview bookbinding reserves with Space. Visible focus is recorded before activation; contextual success uses role=status, and disabled Full/Reserved remain distinct. Native room select label and contextual count support filtering. No audible assistive-technology claim.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Raw scrollWidth=390 equals viewport; complete capture includes support panel/summary/footer with no horizontal overflow. Single-column layout preserves all rows and readable wrapping; three navigation links fit at390px.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); three protected overview session rows retain title/date/time/room/availability; bookbinding is Reserved with3 places remaining; clay is still Reserve with2 places; shared total2 includes planning1. Current raw filter/reservation observations and independent journey confirm one-time reservations, disabled full controls, visible availability and contextual status. Shared module stores namespaced planning:1 and overview:bookbinding; navigation/reload retains state, duplicate/full events do not increment it, and overview capacity does not alter planning1. The original overview semantics apply to overview; new capacity/filter criteria apply to planning.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Structure-participants-wide-initial",
+      "target_id": "participants-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-initial (1240x900, initial); The selector and complete selected-session context precede separately labeled Confirmed and Waitlisted groups. Named record panel occupies the dominant two-thirds column; capacity is a secondary right panel. six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); The selector and complete selected-session context precede separately labeled Confirmed and Waitlisted groups. Named record panel occupies the dominant two-thirds column; capacity is a secondary right panel. six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-participants-wide-no-records",
+      "target_id": "participants-wide-no-records",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-no-records (1240x900, no-records); The selector and complete selected-session context precede separately labeled Confirmed and Waitlisted groups. Named record panel occupies the dominant two-thirds column; capacity is a secondary right panel. session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-participants-narrow-initial",
+      "target_id": "participants-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-initial (390x900, initial); The selector and complete selected-session context precede separately labeled Confirmed and Waitlisted groups. Both participant groups precede the separate capacity panel and shared total in the single column. six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); The selector and complete selected-session context precede separately labeled Confirmed and Waitlisted groups. Both participant groups precede the separate capacity panel and shared total in the single column. six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Structure-participants-narrow-no-records",
+      "target_id": "participants-narrow-no-records",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-no-records (390x900, no-records); The selector and complete selected-session context precede separately labeled Confirmed and Waitlisted groups. Both participant groups precede the separate capacity panel and shared total in the single column. session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-participants-wide-initial",
+      "target_id": "participants-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-initial (1240x900, initial); Green/cream, Arial, original header/title and bordered-panel roles are preserved in the new family. Actual padding insets 25px including border, note sibling gaps18px and group separation24px; columns28px. Waitlisted labeling explicitly excludes booked capacity; six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); Green/cream, Arial, original header/title and bordered-panel roles are preserved in the new family. Actual padding insets 25px including border, note sibling gaps18px and group separation24px; columns28px. Waitlisted labeling explicitly excludes booked capacity; six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-participants-wide-no-records",
+      "target_id": "participants-wide-no-records",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-no-records (1240x900, no-records); Green/cream, Arial, original header/title and bordered-panel roles are preserved in the new family. Actual padding insets 25px including border, note sibling gaps18px and group separation24px; columns28px. Waitlisted labeling explicitly excludes booked capacity; session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-participants-narrow-initial",
+      "target_id": "participants-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-initial (390x900, initial); Green/cream, Arial, original header/title and bordered-panel roles are preserved in the new family. Actual padding insets 21px including border, note sibling gaps18px and group separation24px; source single-column order retained. Waitlisted labeling explicitly excludes booked capacity; six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); Green/cream, Arial, original header/title and bordered-panel roles are preserved in the new family. Actual padding insets 21px including border, note sibling gaps18px and group separation24px; source single-column order retained. Waitlisted labeling explicitly excludes booked capacity; six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualConformance-participants-narrow-no-records",
+      "target_id": "participants-narrow-no-records",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-no-records (390x900, no-records); Green/cream, Arial, original header/title and bordered-panel roles are preserved in the new family. Actual padding insets 21px including border, note sibling gaps18px and group separation24px; source single-column order retained. Waitlisted labeling explicitly excludes booked capacity; session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-participants-wide-initial",
+      "target_id": "participants-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-initial (1240x900, initial); The prominent group headings and bold names establish the people as the subject. Capacity facts have a distinct supporting block, and the discrepancy/unknown-data disclosure is readable alongside its numeric context. The list and note remain balanced without a competing warning panel. six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); The prominent group headings and bold names establish the people as the subject. Capacity facts have a distinct supporting block, and the discrepancy/unknown-data disclosure is readable alongside its numeric context. The list and note remain balanced without a competing warning panel. six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-participants-wide-no-records",
+      "target_id": "participants-wide-no-records",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-no-records (1240x900, no-records); The prominent group headings and bold names establish the people as the subject. Capacity facts have a distinct supporting block, and the discrepancy/unknown-data disclosure is readable alongside its numeric context. The list and note remain balanced without a competing warning panel. session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-participants-narrow-initial",
+      "target_id": "participants-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-initial (390x900, initial); The prominent group headings and bold names establish the people as the subject. Capacity facts have a distinct supporting block, and the discrepancy/unknown-data disclosure is readable alongside its numeric context. The full selected title beneath the native selector remains readable even when the selector display truncates. Names/statuses, both groups and capacity disclosure remain readable through the scroll. six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); The prominent group headings and bold names establish the people as the subject. Capacity facts have a distinct supporting block, and the discrepancy/unknown-data disclosure is readable alongside its numeric context. The full selected title beneath the native selector remains readable even when the selector display truncates. Names/statuses, both groups and capacity disclosure remain readable through the scroll. six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "VisualQuality-participants-narrow-no-records",
+      "target_id": "participants-narrow-no-records",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-no-records (390x900, no-records); The prominent group headings and bold names establish the people as the subject. Capacity facts have a distinct supporting block, and the discrepancy/unknown-data disclosure is readable alongside its numeric context. The full selected title beneath the native selector remains readable even when the selector display truncates. Names/statuses, both groups and capacity disclosure remain readable through the scroll. session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png"
+      ]
+    },
+    {
+      "claim_id": "Craft-participants-wide-initial",
+      "target_id": "participants-wide-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-initial (1240x900, initial); Rows reuse consistent bold-name/smaller-status roles, separators and meaningful group spacing; selected context uses the existing session-title/metadata roles. Long disclosure wraps at a readable note measure. Empty records use explanatory paragraphs rather than blank lists or false zero counts.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); Rows reuse consistent bold-name/smaller-status roles, separators and meaningful group spacing; selected context uses the existing session-title/metadata roles. Long disclosure wraps at a readable note measure. Empty records use explanatory paragraphs rather than blank lists or false zero counts.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-participants-wide-no-records",
+      "target_id": "participants-wide-no-records",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-no-records (1240x900, no-records); Rows reuse consistent bold-name/smaller-status roles, separators and meaningful group spacing; selected context uses the existing session-title/metadata roles. Long disclosure wraps at a readable note measure. Empty records use explanatory paragraphs rather than blank lists or false zero counts.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-participants-narrow-initial",
+      "target_id": "participants-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-initial (390x900, initial); Rows reuse consistent bold-name/smaller-status roles, separators and meaningful group spacing; selected context uses the existing session-title/metadata roles. Local demo name and long discrepancy copy wrap within their assigned group without crowding status labels. Empty records use explanatory paragraphs rather than blank lists or false zero counts.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); Rows reuse consistent bold-name/smaller-status roles, separators and meaningful group spacing; selected context uses the existing session-title/metadata roles. Local demo name and long discrepancy copy wrap within their assigned group without crowding status labels. Empty records use explanatory paragraphs rather than blank lists or false zero counts.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Craft-participants-narrow-no-records",
+      "target_id": "participants-narrow-no-records",
+      "reviewer": "I",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-no-records (390x900, no-records); Rows reuse consistent bold-name/smaller-status roles, separators and meaningful group spacing; selected context uses the existing session-title/metadata roles. Local demo name and long discrepancy copy wrap within their assigned group without crowding status labels. Empty records use explanatory paragraphs rather than blank lists or false zero counts.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\impeccable-stderr.txt"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-wide-initial",
+      "target_id": "participants-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-initial (1240x900, initial); Native Session select is associated with its visible label and selected-details description; every control in the raw capture is44px high. Independent Tab reaches select with visible focus; ArrowDown changes to session4, Home returns to session1, preserving select focus. Each change updates role=status with title/date/booked and supplied-record context. Group headings and explicit text distinguish statuses without color-only meaning. DOM/keyboard evidence does not claim audible screen-reader testing.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\participants-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); Native Session select is associated with its visible label and selected-details description; every control in the raw capture is44px high. Independent Tab reaches select with visible focus; ArrowDown changes to session4, Home returns to session1, preserving select focus. Each change updates role=status with title/date/booked and supplied-record context. Group headings and explicit text distinguish statuses without color-only meaning. DOM/keyboard evidence does not claim audible screen-reader testing.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\participants-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-wide-no-records",
+      "target_id": "participants-wide-no-records",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-no-records (1240x900, no-records); Native Session select is associated with its visible label and selected-details description; every control in the raw capture is44px high. Independent Tab reaches select with visible focus; ArrowDown changes to session4, Home returns to session1, preserving select focus. Each change updates role=status with title/date/booked and supplied-record context. Group headings and explicit text distinguish statuses without color-only meaning. DOM/keyboard evidence does not claim audible screen-reader testing.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\participants-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-narrow-initial",
+      "target_id": "participants-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-initial (390x900, initial); Native Session select is associated with its visible label and selected-details description; every control in the raw capture is44px high. Independent Tab reaches select with visible focus; ArrowDown changes to session4, Home returns to session1, preserving select focus. Each change updates role=status with title/date/booked and supplied-record context. Group headings and explicit text distinguish statuses without color-only meaning. DOM/keyboard evidence does not claim audible screen-reader testing.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\participants-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); Native Session select is associated with its visible label and selected-details description; every control in the raw capture is44px high. Independent Tab reaches select with visible focus; ArrowDown changes to session4, Home returns to session1, preserving select focus. Each change updates role=status with title/date/booked and supplied-record context. Group headings and explicit text distinguish statuses without color-only meaning. DOM/keyboard evidence does not claim audible screen-reader testing.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\participants-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-narrow-no-records",
+      "target_id": "participants-narrow-no-records",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-no-records (390x900, no-records); Native Session select is associated with its visible label and selected-details description; every control in the raw capture is44px high. Independent Tab reaches select with visible focus; ArrowDown changes to session4, Home returns to session1, preserving select focus. Each change updates role=status with title/date/booked and supplied-record context. Group headings and explicit text distinguish statuses without color-only meaning. DOM/keyboard evidence does not claim audible screen-reader testing.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\participants-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-wide-initial",
+      "target_id": "participants-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-initial (1240x900, initial); Actual scrollWidth=1240 matches viewport; all names/statuses and disclosure remain inside the columns. Matching 390px state was also inspected. All below-fold names, waitlist exclusions and booking facts remain available.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); Actual scrollWidth=1240 matches viewport; all names/statuses and disclosure remain inside the columns. Matching 390px state was also inspected. All below-fold names, waitlist exclusions and booking facts remain available.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-wide-no-records",
+      "target_id": "participants-wide-no-records",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-no-records (1240x900, no-records); Actual scrollWidth=1240 matches viewport; all names/statuses and disclosure remain inside the columns. Matching 390px state was also inspected. All below-fold names, waitlist exclusions and booking facts remain available.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-narrow-initial",
+      "target_id": "participants-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-initial (390x900, initial); Actual scrollWidth=390 matches viewport; all names/statuses and disclosure remain inside the columns. Native select is350px wide within20px page margins; its selected title is repeated in full immediately below. Groups precede capacity at narrow width. All below-fold names, waitlist exclusions and booking facts remain available.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); Actual scrollWidth=390 matches viewport; all names/statuses and disclosure remain inside the columns. Native select is350px wide within20px page margins; its selected title is repeated in full immediately below. Groups precede capacity at narrow width. All below-fold names, waitlist exclusions and booking facts remain available.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-narrow-no-records",
+      "target_id": "participants-narrow-no-records",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-no-records (390x900, no-records); Actual scrollWidth=390 matches viewport; all names/statuses and disclosure remain inside the columns. Native select is350px wide within20px page margins; its selected title is repeated in full immediately below. Groups precede capacity at narrow width. All below-fold names, waitlist exclusions and booking facts remain available.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\full.png"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-wide-initial",
+      "target_id": "participants-wide-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-initial (1240x900, initial); Matched data and actual state: six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places. Session choice updates corresponding title/date/time/room, groups and capacity without inventing names. Independent cross-page journey shows planning1 alone adds one demo confirmed record and one booked place; overview bookbinding only increments shared total. Two waitlisted people never become booked.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); Matched data and actual state: six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places. Session choice updates corresponding title/date/time/room, groups and capacity without inventing names. Independent cross-page journey shows planning1 alone adds one demo confirmed record and one booked place; overview bookbinding only increments shared total. Two waitlisted people never become booked.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-wide-no-records",
+      "target_id": "participants-wide-no-records",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-no-records (1240x900, no-records); Matched data and actual state: session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown. Session choice updates corresponding title/date/time/room, groups and capacity without inventing names. Independent cross-page journey shows planning1 alone adds one demo confirmed record and one booked place; overview bookbinding only increments shared total. Two waitlisted people never become booked.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-narrow-initial",
+      "target_id": "participants-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-initial (390x900, initial); Matched data and actual state: six supplied Confirmed names and two separate Waitlisted names; capacity8/12, availability4, total0, and explicit two unnamed booked places. Session choice updates corresponding title/date/time/room, groups and capacity without inventing names. Independent cross-page journey shows planning1 alone adds one demo confirmed record and one booked place; overview bookbinding only increments shared total. Two waitlisted people never become booked.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-initial\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); Matched data and actual state: six supplied Confirmed names plus one explicitly labeled local demo reservation, two unchanged Waitlisted names; capacity9/12, availability3, shared total2, and explicit two unnamed booked places. Session choice updates corresponding title/date/time/room, groups and capacity without inventing names. Independent cross-page journey shows planning1 alone adds one demo confirmed record and one booked place; overview bookbinding only increments shared total. Two waitlisted people never become booked.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-narrow-no-records",
+      "target_id": "participants-narrow-no-records",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-no-records (390x900, no-records); Matched data and actual state: session4 (October18): no supplied name rows, both groups say Not supplied, capacity12/12/Fully booked; disclosure says records were not supplied and waitlist is unknown. Session choice updates corresponding title/date/time/room, groups and capacity without inventing names. Independent cross-page journey shows planning1 alone adds one demo confirmed record and one booked place; overview bookbinding only increments shared total. Two waitlisted people never become booked.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-no-records\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-planning-wide-returned",
+      "target_id": "planning-wide-returned",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-wide-returned (1240x900, returned); Raw same-width route journey and independent fresh-context keyboard journey confirm planning1 Reserve -> Participants (9/12 booked,3 available,6 supplied+1 demo,2 waitlisted,total1) -> Overview(total1) -> Planning/reload (Reserved,total1). Original overview bookbinding adds a separate entry: total2 on all pages, planning1 remains9/12,3 available and waitlisted2. Duplicate/full attempts leave totals unchanged. Locally resolves the previously reported cross-page reset on this exact current build; old proof record is unchanged.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-planning-narrow-returned",
+      "target_id": "planning-narrow-returned",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current planning-narrow-returned (390x900, returned); Raw same-width route journey and independent fresh-context keyboard journey confirm planning1 Reserve -> Participants (9/12 booked,3 available,6 supplied+1 demo,2 waitlisted,total1) -> Overview(total1) -> Planning/reload (Reserved,total1). Original overview bookbinding adds a separate entry: total2 on all pages, planning1 remains9/12,3 available and waitlisted2. Duplicate/full attempts leave totals unchanged. Locally resolves the previously reported cross-page reset on this exact current build; old proof record is unchanged.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-overview-wide-reserved",
+      "target_id": "overview-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-wide-reserved (1240x900, reserved); Raw same-width route journey and independent fresh-context keyboard journey confirm planning1 Reserve -> Participants (9/12 booked,3 available,6 supplied+1 demo,2 waitlisted,total1) -> Overview(total1) -> Planning/reload (Reserved,total1). Original overview bookbinding adds a separate entry: total2 on all pages, planning1 remains9/12,3 available and waitlisted2. Duplicate/full attempts leave totals unchanged. Locally resolves the previously reported cross-page reset on this exact current build; old proof record is unchanged.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-overview-narrow-reserved",
+      "target_id": "overview-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current overview-narrow-reserved (390x900, reserved); Raw same-width route journey and independent fresh-context keyboard journey confirm planning1 Reserve -> Participants (9/12 booked,3 available,6 supplied+1 demo,2 waitlisted,total1) -> Overview(total1) -> Planning/reload (Reserved,total1). Original overview bookbinding adds a separate entry: total2 on all pages, planning1 remains9/12,3 available and waitlisted2. Duplicate/full attempts leave totals unchanged. Locally resolves the previously reported cross-page reset on this exact current build; old proof record is unchanged.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\overview-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-participants-wide-reserved",
+      "target_id": "participants-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-wide-reserved (1240x900, reserved); Raw same-width route journey and independent fresh-context keyboard journey confirm planning1 Reserve -> Participants (9/12 booked,3 available,6 supplied+1 demo,2 waitlisted,total1) -> Overview(total1) -> Planning/reload (Reserved,total1). Original overview bookbinding adds a separate entry: total2 on all pages, planning1 remains9/12,3 available and waitlisted2. Duplicate/full attempts leave totals unchanged. Locally resolves the previously reported cross-page reset on this exact current build; old proof record is unchanged.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-wide-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-wide-returned\\observation.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-participants-narrow-reserved",
+      "target_id": "participants-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Observed current participants-narrow-reserved (390x900, reserved); Raw same-width route journey and independent fresh-context keyboard journey confirm planning1 Reserve -> Participants (9/12 booked,3 available,6 supplied+1 demo,2 waitlisted,total1) -> Overview(total1) -> Planning/reload (Reserved,total1). Original overview bookbinding adds a separate entry: total2 on all pages, planning1 remains9/12,3 available and waitlisted2. Duplicate/full attempts leave totals unchanged. Locally resolves the previously reported cross-page reset on this exact current build; old proof record is unchanged.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\observation.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\participants-narrow-reserved\\full.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-current\\planning-narrow-returned\\observation.json"
+      ]
+    }
+  ],
+  "material_concerns": [],
+  "resolved_concerns": [
+    {
+      "id": "cross-page-reservation-reset",
+      "status": "LOCALLY_OBSERVED_CORRECTED",
+      "observed": "Shared sessionStorage state survives local page navigation and reload; namespace isolation keeps overview booking from double-counting planning capacity. Six current CrossPage claims and independent journey pass at1240/390.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-review-r\\independent-journey.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\demo-state.js"
+      ]
+    }
+  ],
+  "minor_observations": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\participants.html",
+      "line": 1,
+      "observed": "Narrow native select visually truncates the long option; complete selected title and date/time/room are repeated directly below, preserving meaning."
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\planning.html",
+      "line": 1,
+      "observed": "Long planning list puts full success text and narrow shared summary below many rows; local Reserved/availability changes remain immediately visible."
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\extension.css",
+      "line": 1,
+      "observed": "No explicit hover enhancement and no skip link; current keyboard sequence and visible focus work. Optional polish, outside blocking baseline criteria."
+    }
+  ],
+  "scope_limitations": [
+    "Local R review of132 specialist claims on18 pinned states, not exact user acceptance, authenticated host attestation or whole-product certification.",
+    "Shared persistence is sessionStorage within the current browser tab/session; separate-tab and browser-restart persistence is not claimed.",
+    "Role=status and keyboard updates observed; no audible screen-reader/mobile hardware testing.",
+    "Impeccable parser dependencies unavailable; regex detector does not prove comprehensive quality or accessibility.",
+    "Participant handling is viewing/status distinction only; no promotion, cancellation, or external booking service."
+  ],
+  "run_notes": {
+    "historical_records": "Original review-r and historical proof files remain unchanged. New results apply only to current integration inputs.",
+    "capture_history": "Raw planning-wide-returned/failed.json retains an earlier connection-refused attempt with no actions/assertions. Current observation and independently executed successful journey provide new evidence; historical failure not deleted.",
+    "browser": "Fresh isolated Edge contexts at1240/390 through temporary localhost8749 Python exec session; stopped exact server session after probe.",
+    "bounds": "Only integration-review-r written. No UI edits, sibling conclusions, other chats or agents."
+  },
+  "input_sha256": {
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\REQUEST.md": "df33811883727ef1c737440c9ace9c0722c73ab70749b11faee130434fd12f50",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\PRODUCT.md": "15987958f4e651786677e06f7e7b490e3691a3bcb5a3ee5d98798dfb23e025c1",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\DESIGN.md": "c160e40654996ccd05988e423fe0ecdfec901e7fa4808cbe5e556b6717b38194",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\planning.html": "195ff4cc0ca0d6b7aa903db30658e30c370a8cde5ca590b0f081456e567c7114",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\planning.js": "91c7bac76f92fd22802a91af5d1351c0b65fa0ae47db9dd2ece43cbe4aa5b289",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\participants.html": "6197e64ef723a6df697bfddb89848e80e5ff11c241a2a94c2d151e1d9cb27d31",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\participants.js": "0ef22acb2dc4990f2da5a59e7beff73118519e2042fa8f53611918cc2918f2c2",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\demo-state.js": "99ecd149911a1a3b022fcc1c2d644775bc283881df7b7f874604104ad1ed1400",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\index.html": "77bd2ce70f0cbf0fcbb8a4911c6c73395d2cd13e825ff6805808f308193d46a4",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\overview.js": "20dbf586aa4cfaa9577305adfc448a5d744fb66ba18631a9e0c670c0e0aa9f5b",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\extension.css": "99de673445644e5ddec4baae646e74e9e6d8de91644d6b7b28b1a8faeeb70712",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\data.json": "2416ba7dc2312abf04bbae488b4d38f3722ab41792ba75f8623bdd05015b0311",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\approved.html": "826dac4820a7ddecb0177bd2e01f9cbe85e48ea97384387d08881636590e5164",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\wide.png": "23e0974a352479409c63ebc5cd29cd77ad3387b6d49e1bd2afd495bbf29291d9",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\reference\\narrow.png": "bc206ef6d477eda5f9a95d60066a28c9d67de4c9f7298c6c60f3d139668c9d0d",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\extension\\evidence\\integration-baseline.json": "71764afcb19b0d8121fb85f47496c1ff89cbe5e549bb3452f2a641cf91fff890"
+  }
+}

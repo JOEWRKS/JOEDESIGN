@@ -1,0 +1,1004 @@
+{
+  "consumer": "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+  "consumer_sha256": "65a8c611e37c4e24f5bd50d111c86208ce7afd73c46f66886e96da07e176c5f0",
+  "project": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+  "baseline": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project\\baseline.json",
+  "baseline_sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+  "scenarios": {
+    "producer-stacked": {
+      "exit_code": 2,
+      "receipt": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked-receipt.json",
+      "result": {
+        "schema": "joedesign.conformance.v1",
+        "scope_id": "spacing-fixture",
+        "baseline_sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "results": [
+          {
+            "check_id": "c0",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "745fb7a0ca62c648dbf4eaf5df0609d4d3fbbd04ae08b665e9def6749e774cea",
+            "status": "FAIL",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-observation.json",
+                "sha256": "0fcaec5e45ee1670fd6db05c6806045c3c535facb7298fce78d460d30651407c"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-start.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-result.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-full.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              }
+            ],
+            "measured_values": [
+              24
+            ]
+          },
+          {
+            "check_id": "c1",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "86708292961e3c1de8ec2cc05454c1b6cf788b28f2a08e3a5fed5518a7dc5f3d",
+            "status": "FAIL",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-observation.json",
+                "sha256": "0fcaec5e45ee1670fd6db05c6806045c3c535facb7298fce78d460d30651407c"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-start.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-result.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-full.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              }
+            ],
+            "measured_values": [
+              80
+            ]
+          },
+          {
+            "check_id": "c2",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "c24c1178d8fb374ce823888e4718c60aa7fbec6dd38bc8db071c6af7bea1de92",
+            "status": "FAIL",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-observation.json",
+                "sha256": "0fcaec5e45ee1670fd6db05c6806045c3c535facb7298fce78d460d30651407c"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-start.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-result.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-full.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              }
+            ],
+            "measured_values": [
+              160
+            ]
+          },
+          {
+            "check_id": "c3",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "4a3c50dec32b5ccfaabf05a774c92be2b514188ea0bb2f37498a57ccc675a14a",
+            "status": "PASS",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-observation.json",
+                "sha256": "0fcaec5e45ee1670fd6db05c6806045c3c535facb7298fce78d460d30651407c"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-start.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-result.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked\\0-full.png",
+                "sha256": "ccb0a8f22fd1e98040f64a56c131780234c925651ab0ba159dc0e55846f7b3e6"
+              }
+            ],
+            "measured_values": [
+              32
+            ]
+          }
+        ],
+        "unresolved": [
+          {
+            "check_id": "c0",
+            "reason": "Rendered relationship outside pinned criterion"
+          },
+          {
+            "check_id": "c1",
+            "reason": "Rendered relationship outside pinned criterion"
+          },
+          {
+            "check_id": "c2",
+            "reason": "Rendered relationship outside pinned criterion"
+          }
+        ],
+        "acceptance": "NOT_GRANTED",
+        "trust": "LOCAL_UNAUTHENTICATED",
+        "eligible": false,
+        "unreviewed_check_ids": []
+      }
+    },
+    "stacked-gap-blocked": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "FAIL",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "FAIL",
+            "reason": "Specialist failure/unresolved item",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "FAIL",
+            "reason": "Specialist failure/unresolved item",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "FAIL",
+            "reason": "Specialist failure/unresolved item",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\stacked-receipt.json"
+      ]
+    },
+    "producer-corrected": {
+      "exit_code": 0,
+      "receipt": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json",
+      "result": {
+        "schema": "joedesign.conformance.v1",
+        "scope_id": "spacing-fixture",
+        "baseline_sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "results": [
+          {
+            "check_id": "c0",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "745fb7a0ca62c648dbf4eaf5df0609d4d3fbbd04ae08b665e9def6749e774cea",
+            "status": "PASS",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-observation.json",
+                "sha256": "13df4bc1da372cf08f45d0dc6b8a76c112a898afbe7926e80885a818d81c12e5"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-start.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-result.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-full.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              }
+            ],
+            "measured_values": [
+              16
+            ]
+          },
+          {
+            "check_id": "c1",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "86708292961e3c1de8ec2cc05454c1b6cf788b28f2a08e3a5fed5518a7dc5f3d",
+            "status": "PASS",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-observation.json",
+                "sha256": "13df4bc1da372cf08f45d0dc6b8a76c112a898afbe7926e80885a818d81c12e5"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-start.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-result.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-full.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              }
+            ],
+            "measured_values": [
+              40
+            ]
+          },
+          {
+            "check_id": "c2",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "c24c1178d8fb374ce823888e4718c60aa7fbec6dd38bc8db071c6af7bea1de92",
+            "status": "PASS",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-observation.json",
+                "sha256": "13df4bc1da372cf08f45d0dc6b8a76c112a898afbe7926e80885a818d81c12e5"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-start.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-result.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-full.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              }
+            ],
+            "measured_values": [
+              8
+            ]
+          },
+          {
+            "check_id": "c3",
+            "target_id": "wide",
+            "method": "geometry",
+            "criterion_sha256": "4a3c50dec32b5ccfaabf05a774c92be2b514188ea0bb2f37498a57ccc675a14a",
+            "status": "PASS",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+            "evidence": [
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-observation.json",
+                "sha256": "13df4bc1da372cf08f45d0dc6b8a76c112a898afbe7926e80885a818d81c12e5"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-start.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-result.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              },
+              {
+                "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected\\0-full.png",
+                "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+              }
+            ],
+            "measured_values": [
+              32
+            ]
+          }
+        ],
+        "unresolved": [],
+        "acceptance": "NOT_GRANTED",
+        "trust": "LOCAL_UNAUTHENTICATED",
+        "eligible": true,
+        "unreviewed_check_ids": []
+      }
+    },
+    "corrected-visual-pass": {
+      "exit_code": 0,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": true,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "PASS",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json"
+      ]
+    },
+    "visual-is-not-user-acceptance": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "complete",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "PASS",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "complete",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json"
+      ]
+    },
+    "missing-result-blocked": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "UNVERIFIED",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual"
+      ]
+    },
+    "one-check-missing-blocked": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "UNVERIFIED",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\partial.json"
+      ]
+    },
+    "corrupt-result-blocked": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "UNVERIFIED",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Required result missing",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [
+          "Result unavailable/invalid: D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\broken.json (Expected property name or '}' in JSON at position 1 (line 1 column 2))"
+        ],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\broken.json"
+      ]
+    },
+    "old-output-blocked": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "STALE",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "STALE",
+            "reason": "Target inputs changed",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "STALE",
+            "reason": "Target inputs changed",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "STALE",
+            "reason": "Target inputs changed",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "STALE",
+            "reason": "Target inputs changed",
+            "input_fingerprint": "b4ba58b3f88ad2047a5e8c15eec1924b5e16642946ab518762ae6a08178ebce5"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json"
+      ]
+    },
+    "relaxed-baseline-blocked": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "errors": [
+          "Pinned baseline/acceptance changed"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json"
+      ]
+    },
+    "changed-evidence-blocked": {
+      "exit_code": 2,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": false,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "UNVERIFIED",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Evidence missing, damaged or outside allowed roots",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Evidence missing, damaged or outside allowed roots",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Evidence missing, damaged or outside allowed roots",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "UNVERIFIED",
+            "reason": "Evidence missing, damaged or outside allowed roots",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json"
+      ]
+    },
+    "unrelated-work-keeps-valid-proof": {
+      "exit_code": 0,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": true,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "PASS",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json"
+      ]
+    },
+    "normal-recovery": {
+      "exit_code": 0,
+      "result": {
+        "schema": "joeness.review-gate.v1",
+        "scope_id": "spacing-fixture",
+        "claim": "visual",
+        "allowed": true,
+        "required_scope_complete": false,
+        "project_complete": false,
+        "lanes": {
+          "implementation": "UNVERIFIED",
+          "technical": "UNVERIFIED",
+          "visual": "PASS",
+          "user_acceptance": "NOT_GRANTED"
+        },
+        "checks": [
+          {
+            "check_id": "c0",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c1",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c2",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          },
+          {
+            "check_id": "c3",
+            "lane": "visual",
+            "status": "PASS",
+            "reason": "Current bound specialist result; evidence integrity only",
+            "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+          }
+        ],
+        "errors": [],
+        "limits": [
+          "No visual re-judgment or user-identity authentication",
+          "Pinned scope completeness and dependency discovery require authorized review",
+          "Explicit CLI only; direct Markdown edits and natural-language claims are not intercepted"
+        ]
+      },
+      "command": [
+        "node",
+        "D:\\JOEWRKS\\작업하네스\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "--root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\project",
+        "--baseline",
+        "baseline.json",
+        "--baseline-sha256",
+        "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+        "--evidence-root",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts",
+        "--claim",
+        "visual",
+        "--result",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\design-conformance-20261010\\connection-r2\\artifacts\\corrected-receipt.json"
+      ]
+    }
+  }
+}

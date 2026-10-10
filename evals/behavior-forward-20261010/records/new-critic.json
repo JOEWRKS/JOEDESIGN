@@ -1,0 +1,352 @@
+{
+  "context_id": "critic-new-fresh-20261010-independent",
+  "claims": [
+    {
+      "claim_id": "structure-wide-initial",
+      "verdict": "PASS",
+      "observed": "The headline introduces the overview. A 664px session panel leads the 332px visitor column across a 28px gap; note and summary stay secondary. Reservation state does not reorder the composition.",
+      "evidence_paths": [
+        "evidence/capture-v1/0-observation.json",
+        "evidence/capture-v1/0-full.png",
+        "evidence/critic-fresh/1240-initial.json",
+        "evidence/critic-fresh/1240-initial.png"
+      ]
+    },
+    {
+      "claim_id": "structure-wide-reserved",
+      "verdict": "PASS",
+      "observed": "The headline introduces the overview. A 664px session panel leads the 332px visitor column across a 28px gap; note and summary stay secondary. Reservation state does not reorder the composition.",
+      "evidence_paths": [
+        "evidence/capture-v1/1-observation.json",
+        "evidence/capture-v1/1-full.png",
+        "evidence/critic-fresh/1240-reserved.json",
+        "evidence/critic-fresh/1240-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-initial",
+      "verdict": "PASS",
+      "observed": "The headline introduces the studio task before the dominant session panel. Full-page rendering and measured document coordinates place sessions at y=298, visitor note at y=1021, summary at y=1242, and guide at y=1378, preserving the required single-column order.",
+      "evidence_paths": [
+        "evidence/capture-v1/2-observation.json",
+        "evidence/capture-v1/2-full.png",
+        "evidence/critic-fresh/390-initial.json",
+        "evidence/critic-fresh/390-initial.png"
+      ]
+    },
+    {
+      "claim_id": "structure-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "The headline introduces the studio task before the dominant session panel. Full-page rendering and measured document coordinates place sessions at y=298, visitor note at y=1021, summary at y=1242, and guide at y=1378, preserving the required single-column order.",
+      "evidence_paths": [
+        "evidence/capture-v1/3-observation.json",
+        "evidence/capture-v1/3-full.png",
+        "evidence/critic-fresh/390-reserved.json",
+        "evidence/critic-fresh/390-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-initial",
+      "verdict": "PASS",
+      "observed": "Compared directly with the 1240px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. The source two-to-one list/aside proportion remains exact. The extra status space is modest and supports feedback without disrupting source hierarchy.",
+      "evidence_paths": [
+        "evidence/capture-v1/0-observation.json",
+        "evidence/capture-v1/0-full.png",
+        "evidence/critic-fresh/1240-initial.json",
+        "evidence/critic-fresh/1240-initial.png",
+        "reference/wide.png"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-wide-reserved",
+      "verdict": "PASS",
+      "observed": "Compared directly with the 1240px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. The source two-to-one list/aside proportion remains exact. Reserved labels and remaining places preserve rather than conceal the session facts.",
+      "evidence_paths": [
+        "evidence/capture-v1/1-observation.json",
+        "evidence/capture-v1/1-full.png",
+        "evidence/critic-fresh/1240-reserved.json",
+        "evidence/critic-fresh/1240-reserved.png",
+        "reference/wide.png"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-initial",
+      "verdict": "PASS",
+      "observed": "Compared directly with the 390px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. Actions move below session facts in the second grid column. The extra status space is modest and supports feedback without disrupting source hierarchy.",
+      "evidence_paths": [
+        "evidence/capture-v1/2-observation.json",
+        "evidence/capture-v1/2-full.png",
+        "evidence/critic-fresh/390-initial.json",
+        "evidence/critic-fresh/390-initial.png",
+        "reference/narrow.png"
+      ]
+    },
+    {
+      "claim_id": "visualconformance-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "Compared directly with the 390px original, cream canvas, green ink/actions, type scale, date/content grouping, panel alignment and source density remain recognizable. Actions move below session facts in the second grid column. Reserved labels and remaining places preserve rather than conceal the session facts.",
+      "evidence_paths": [
+        "evidence/capture-v1/3-observation.json",
+        "evidence/capture-v1/3-full.png",
+        "evidence/critic-fresh/390-reserved.json",
+        "evidence/critic-fresh/390-reserved.png",
+        "reference/narrow.png"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-initial",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and available/full states are readable; actions are consistently locatable. The large list balances the smaller note; the guide action does not compete with the session task. No whole-composition contradiction was found.",
+      "evidence_paths": [
+        "evidence/capture-v1/0-observation.json",
+        "evidence/capture-v1/0-full.png",
+        "evidence/critic-fresh/1240-initial.json",
+        "evidence/critic-fresh/1240-initial.png"
+      ]
+    },
+    {
+      "claim_id": "visualquality-wide-reserved",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and reserved/full states are readable; actions are consistently locatable. The large list balances the smaller note; the guide action does not compete with the session task. No whole-composition contradiction was found.",
+      "evidence_paths": [
+        "evidence/capture-v1/1-observation.json",
+        "evidence/capture-v1/1-full.png",
+        "evidence/critic-fresh/1240-reserved.json",
+        "evidence/critic-fresh/1240-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-initial",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and available/full states are readable; actions are consistently locatable. The long repair title wraps naturally to two lines and the below-fold note remains subordinate. No whole-composition contradiction was found.",
+      "evidence_paths": [
+        "evidence/capture-v1/2-observation.json",
+        "evidence/capture-v1/2-full.png",
+        "evidence/critic-fresh/390-initial.json",
+        "evidence/critic-fresh/390-initial.png"
+      ]
+    },
+    {
+      "claim_id": "visualquality-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "The headline is the entry point and the session list is the dominant work area. Real titles, dates, time/location and reserved/full states are readable; actions are consistently locatable. The long repair title wraps naturally to two lines and the below-fold note remains subordinate. No whole-composition contradiction was found.",
+      "evidence_paths": [
+        "evidence/capture-v1/3-observation.json",
+        "evidence/capture-v1/3-full.png",
+        "evidence/critic-fresh/390-reserved.json",
+        "evidence/critic-fresh/390-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-initial",
+      "verdict": "PASS",
+      "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. Dates, session facts and actions align across rows. The 0-reservation state reserves space for subsequent feedback. Measured note gaps are 18px and action heights 44px.",
+      "evidence_paths": [
+        "evidence/capture-v1/0-observation.json",
+        "evidence/capture-v1/0-full.png",
+        "evidence/critic-fresh/1240-initial.json",
+        "evidence/critic-fresh/1240-initial.png"
+      ]
+    },
+    {
+      "claim_id": "craft-wide-reserved",
+      "verdict": "PASS",
+      "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. Dates, session facts and actions align across rows. The longer reservation feedback fits the reserved space; the 2-reservation state does not shift panel geometry. Measured note gaps are 18px and action heights 44px.",
+      "evidence_paths": [
+        "evidence/capture-v1/1-observation.json",
+        "evidence/capture-v1/1-full.png",
+        "evidence/critic-fresh/1240-reserved.json",
+        "evidence/critic-fresh/1240-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-initial",
+      "verdict": "PASS",
+      "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. The two-line headline and repair title wrap without crowding; buttons align beneath the content column. The 0-reservation state reserves space for subsequent feedback. Measured note gaps are 18px and action heights 44px.",
+      "evidence_paths": [
+        "evidence/capture-v1/2-observation.json",
+        "evidence/capture-v1/2-full.png",
+        "evidence/critic-fresh/390-initial.json",
+        "evidence/critic-fresh/390-initial.png"
+      ]
+    },
+    {
+      "claim_id": "craft-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "Heading/body/metadata roles and repeated row separators maintain a consistent rhythm. The two-line headline and repair title wrap without crowding; buttons align beneath the content column. The longer reservation feedback fits the reserved space; the 2-reservation state does not shift panel geometry. Measured note gaps are 18px and action heights 44px.",
+      "evidence_paths": [
+        "evidence/capture-v1/3-observation.json",
+        "evidence/capture-v1/3-full.png",
+        "evidence/critic-fresh/390-reserved.json",
+        "evidence/critic-fresh/390-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-initial",
+      "verdict": "PASS",
+      "observed": "The 1240px target has document scrollWidth 1240px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. The two-column layout uses the available width with no collided or hidden content. Initial availability and disabled Full state remain visible.",
+      "evidence_paths": [
+        "evidence/capture-v1/0-observation.json",
+        "evidence/capture-v1/0-full.png",
+        "evidence/critic-fresh/1240-initial.json",
+        "evidence/critic-fresh/1240-initial.png"
+      ]
+    },
+    {
+      "claim_id": "responsive-wide-reserved",
+      "verdict": "PASS",
+      "observed": "The 1240px target has document scrollWidth 1240px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. The two-column layout uses the available width with no collided or hidden content. Remaining-place messages and the complete status stay readable.",
+      "evidence_paths": [
+        "evidence/capture-v1/1-observation.json",
+        "evidence/capture-v1/1-full.png",
+        "evidence/critic-fresh/1240-reserved.json",
+        "evidence/critic-fresh/1240-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-initial",
+      "verdict": "PASS",
+      "observed": "The 390px target has document scrollWidth 390px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. Single-column stacking and button relocation make the supplied real content usable at 390px; content below the original crop is retained. Initial availability and disabled Full state remain visible.",
+      "evidence_paths": [
+        "evidence/capture-v1/2-observation.json",
+        "evidence/capture-v1/2-full.png",
+        "evidence/critic-fresh/390-initial.json",
+        "evidence/critic-fresh/390-initial.png"
+      ]
+    },
+    {
+      "claim_id": "responsive-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "The 390px target has document scrollWidth 390px. Full-page pixels show all three session facts/actions, note, summary and guide without clipping. Single-column stacking and button relocation make the supplied real content usable at 390px; content below the original crop is retained. Remaining-place messages and the complete status stay readable.",
+      "evidence_paths": [
+        "evidence/capture-v1/3-observation.json",
+        "evidence/capture-v1/3-full.png",
+        "evidence/critic-fresh/390-reserved.json",
+        "evidence/critic-fresh/390-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-initial",
+      "verdict": "PASS",
+      "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. Only Full is disabled; initial reservation count is 0. Guide and Sessions anchors move focus to their named targets.",
+      "evidence_paths": [
+        "evidence/capture-v1/0-observation.json",
+        "evidence/capture-v1/0-full.png",
+        "evidence/critic-fresh/1240-initial.json",
+        "evidence/critic-fresh/1240-initial.png",
+        "evidence/critic-fresh/1240-keyboard.json",
+        "evidence/critic-fresh/1240-keyboard-focus.png"
+      ]
+    },
+    {
+      "claim_id": "accessibility-wide-reserved",
+      "verdict": "PASS",
+      "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. All three actions are disabled with distinct Reserved/Full wording; live-region text identifies the last reserved session and total. Guide and Sessions anchors move focus to their named targets.",
+      "evidence_paths": [
+        "evidence/capture-v1/1-observation.json",
+        "evidence/capture-v1/1-full.png",
+        "evidence/critic-fresh/1240-reserved.json",
+        "evidence/critic-fresh/1240-reserved.png",
+        "evidence/critic-fresh/1240-keyboard.json",
+        "evidence/critic-fresh/1240-keyboard-focus.png"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-initial",
+      "verdict": "PASS",
+      "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. Only Full is disabled; initial reservation count is 0. Guide and Sessions anchors move focus to their named targets.",
+      "evidence_paths": [
+        "evidence/capture-v1/2-observation.json",
+        "evidence/capture-v1/2-full.png",
+        "evidence/critic-fresh/390-initial.json",
+        "evidence/critic-fresh/390-initial.png",
+        "evidence/critic-fresh/390-keyboard.json",
+        "evidence/critic-fresh/390-keyboard-focus.png"
+      ]
+    },
+    {
+      "claim_id": "accessibility-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "Rendered headings follow h1/h2/h3 hierarchy; buttons have unique contextual accessible names and associated availability text. Independent keyboard traversal shows a visible 3px focus ring and skips the disabled full session; Enter reserves bookbinding and the next Tab reaches clay, where Space reserves it. Status uses role=status and aria-atomic=true. Sampled rendered text/background contrast is at least 4.90:1, including disabled text. All three actions are disabled with distinct Reserved/Full wording; live-region text identifies the last reserved session and total. Guide and Sessions anchors move focus to their named targets.",
+      "evidence_paths": [
+        "evidence/capture-v1/3-observation.json",
+        "evidence/capture-v1/3-full.png",
+        "evidence/critic-fresh/390-reserved.json",
+        "evidence/critic-fresh/390-reserved.png",
+        "evidence/critic-fresh/390-keyboard.json",
+        "evidence/critic-fresh/390-keyboard-focus.png"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-initial",
+      "verdict": "PASS",
+      "observed": "Independent keyboard interaction at 1240px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Initial facts show 4 places, Fully booked and 2 places, with only the two available sessions actionable. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+      "evidence_paths": [
+        "evidence/capture-v1/0-observation.json",
+        "evidence/capture-v1/0-full.png",
+        "evidence/critic-fresh/1240-initial.json",
+        "evidence/critic-fresh/1240-initial.png",
+        "evidence/critic-fresh/1240-keyboard.json",
+        "evidence/critic-fresh/1240-keyboard-focus.png"
+      ]
+    },
+    {
+      "claim_id": "experience-wide-reserved",
+      "verdict": "PASS",
+      "observed": "Independent keyboard interaction at 1240px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Final facts retain original titles, times and locations while availability explicitly states the reservation and 3/1 remaining places. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+      "evidence_paths": [
+        "evidence/capture-v1/1-observation.json",
+        "evidence/capture-v1/1-full.png",
+        "evidence/critic-fresh/1240-reserved.json",
+        "evidence/critic-fresh/1240-reserved.png",
+        "evidence/critic-fresh/1240-keyboard.json",
+        "evidence/critic-fresh/1240-keyboard-focus.png"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-initial",
+      "verdict": "PASS",
+      "observed": "Independent keyboard interaction at 390px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Initial facts show 4 places, Fully booked and 2 places, with only the two available sessions actionable. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+      "evidence_paths": [
+        "evidence/capture-v1/2-observation.json",
+        "evidence/capture-v1/2-full.png",
+        "evidence/critic-fresh/390-initial.json",
+        "evidence/critic-fresh/390-initial.png",
+        "evidence/critic-fresh/390-keyboard.json",
+        "evidence/critic-fresh/390-keyboard-focus.png"
+      ]
+    },
+    {
+      "claim_id": "experience-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "Independent keyboard interaction at 390px changes count 0→1→2, with a specific session message after each booking. Synthetic duplicate and full clicks leave count at 2; all actions then remain disabled. Final facts retain original titles, times and locations while availability explicitly states the reservation and 3/1 remaining places. Guide and Sessions navigation resolve to the correct anchors. Local demo wording is visible.",
+      "evidence_paths": [
+        "evidence/capture-v1/3-observation.json",
+        "evidence/capture-v1/3-full.png",
+        "evidence/critic-fresh/390-reserved.json",
+        "evidence/critic-fresh/390-reserved.png",
+        "evidence/critic-fresh/390-keyboard.json",
+        "evidence/critic-fresh/390-keyboard-focus.png"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "informational",
+      "observed": "No material contradiction found against the 28 supplied specialist target criteria. This is an independent scoped judgment of the raw renderings, implementation and fresh browser probes; it is not exact user acceptance.",
+      "evidence_paths": [
+        "evidence/critic-fresh/1240-initial.png",
+        "evidence/critic-fresh/1240-reserved.png",
+        "evidence/critic-fresh/390-initial.png",
+        "evidence/critic-fresh/390-reserved.png"
+      ]
+    }
+  ],
+  "limitations": [
+    "Scope is this isolated new overview at 1240×900 and 390×900, light/en, initial and both available sessions reserved. Intermediate viewport widths and other browsers were not evaluated.",
+    "Keyboard behavior, DOM semantics, visible focus and computed text contrast were observed. Actual screen-reader speech and a comprehensive accessibility certification were not tested.",
+    "The critic used the pinned core within its bounded assignment. These claims do not attest that separate named specialist skills were invoked by other workers.",
+    "No builder/reviewer conclusions, sibling cases or acceptance event were read. No implementation, source, baseline or installation files were modified.",
+    "Source resemblance does not independently establish authorship history. No behavior beyond the local demo contract, persistence or real bookings is claimed."
+  ]
+}

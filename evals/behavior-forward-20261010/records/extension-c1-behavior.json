@@ -1,0 +1,927 @@
+{
+  "context_id": "/root/integration_c1_behavior",
+  "scope_id": "extension-final-integration",
+  "baseline_sha256": "71764afcb19b0d8121fb85f47496c1ff89cbe5e549bb3452f2a641cf91fff890",
+  "skill_sources": [
+    {
+      "id": "joedesign",
+      "path": "D:/JOEWRKS/JOEDESIGN/.local/behavior-forward-20261010/package/joedesign/SKILL.md",
+      "sha256": "a519986f66134a4919495ec407fdc96b3cd5ea4c3f117c2a112bb21dee27b7bf"
+    },
+    {
+      "id": "operation",
+      "path": "D:/JOEWRKS/JOEDESIGN/.local/behavior-forward-20261010/package/joedesign/references/operation.md",
+      "sha256": "56099b5cc4df90fac3e16c05115d33d626fbc18951841de65cd0a15e637e1601"
+    },
+    {
+      "id": "ui-ux-pro-max",
+      "path": "C:/Users/tjdwo/.codex/skills/ui-ux-pro-max/SKILL.md",
+      "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9"
+    },
+    {
+      "id": "ui-ux-quick-reference",
+      "path": "C:/Users/tjdwo/.codex/skills/ui-ux-pro-max/references/quick-reference.md",
+      "sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876"
+    },
+    {
+      "id": "web-design-guidelines",
+      "path": "C:/Users/tjdwo/.codex/skills/web-design-guidelines/SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    {
+      "id": "web-interface-guidelines-current",
+      "url": "https://raw.githubusercontent.com/vercel-labs/web-interface-guidelines/main/command.md",
+      "retrieved": "2026-10-10",
+      "method": "web open; read full169-line current guideline"
+    }
+  ],
+  "actual_use_details": [
+    "Applied pinned JOEDESIGN review-only scope and ordered R/C1 responsibility table. Read assigned R drafts, raw sources/data, authority and criteria. Did not read builder integration-observations.md, another C1, critic output or evaluation rubric.",
+    "Used UI UX Pro Max for C1 U Accessibility/Responsive: explicit ux searches keyboard focus visible and responsive horizontal overflow both returned relevant first results (Focus States and Horizontal Scroll); read quick-reference guidance for naming, focus, native controls, status feedback, reachable content and viewport behavior. No new design-system generation because this is bounded review.",
+    "Used actual web-design-guidelines for C1 V Experience including CrossPage; fetched the current primary guideline and applied forms/semantics, state feedback, content handling and navigation/state rules to the assigned pinned criteria. No universal guideline-compliance certification.",
+    "Inspected supplied reference wide/narrow originals and all18 full target renders in labeled contact sheets, plus current narrow journey action frames and own focus screenshots. Read current app source, target raw observations and independent per-target DOM/keyboard recordings.",
+    "Ran own Edge/Playwright against an in-process ephemeral HTTP server, isolated contexts per target; all18 recreated row lists and sessionStorage IDs match original raw evidence. Replayed two complete keyboard and cross-page journeys. Server closed after the probes."
+  ],
+  "reviews": [
+    {
+      "claim_id": "Accessibility-planning-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 18 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-initial/observation.json",
+        "evidence/integration-current/planning-wide-initial/result.png",
+        "evidence/integration-current/planning-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-wide-room-a",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-room-a at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 12 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-room-a/observation.json",
+        "evidence/integration-current/planning-wide-room-a/result.png",
+        "evidence/integration-current/planning-wide-room-a/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 18 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-reserved/observation.json",
+        "evidence/integration-current/planning-wide-reserved/result.png",
+        "evidence/integration-current/planning-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 18 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-initial/observation.json",
+        "evidence/integration-current/planning-narrow-initial/result.png",
+        "evidence/integration-current/planning-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-room-a",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-room-a at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 12 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-room-a/observation.json",
+        "evidence/integration-current/planning-narrow-room-a/result.png",
+        "evidence/integration-current/planning-narrow-room-a/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 18 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-reserved/observation.json",
+        "evidence/integration-current/planning-narrow-reserved/result.png",
+        "evidence/integration-current/planning-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 8 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Space activates the original overview reservation and updates its role=status success message. Original overview buttons retain their source text names; no claim of uniquely contextualized overview names is made. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-wide-initial/observation.json",
+        "evidence/integration-current/overview-wide-initial/result.png",
+        "evidence/integration-current/overview-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 8 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Space activates the original overview reservation and updates its role=status success message. Original overview buttons retain their source text names; no claim of uniquely contextualized overview names is made. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-narrow-initial/observation.json",
+        "evidence/integration-current/overview-narrow-initial/result.png",
+        "evidence/integration-current/overview-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 12 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-initial/observation.json",
+        "evidence/integration-current/planning-wide-initial/result.png",
+        "evidence/integration-current/planning-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/planning-narrow-initial/full.png",
+        "evidence/integration-current/planning-narrow-initial/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-room-a",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-room-a at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 6 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-room-a/observation.json",
+        "evidence/integration-current/planning-wide-room-a/result.png",
+        "evidence/integration-current/planning-wide-room-a/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/planning-narrow-room-a/full.png",
+        "evidence/integration-current/planning-narrow-room-a/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 12 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-reserved/observation.json",
+        "evidence/integration-current/planning-wide-reserved/result.png",
+        "evidence/integration-current/planning-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/planning-narrow-reserved/full.png",
+        "evidence/integration-current/planning-narrow-reserved/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 12 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-initial/observation.json",
+        "evidence/integration-current/planning-narrow-initial/result.png",
+        "evidence/integration-current/planning-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-room-a",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-room-a at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 6 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-room-a/observation.json",
+        "evidence/integration-current/planning-narrow-room-a/result.png",
+        "evidence/integration-current/planning-narrow-room-a/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 12 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-reserved/observation.json",
+        "evidence/integration-current/planning-narrow-reserved/result.png",
+        "evidence/integration-current/planning-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 3 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-wide-initial/observation.json",
+        "evidence/integration-current/overview-wide-initial/result.png",
+        "evidence/integration-current/overview-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/overview-narrow-initial/full.png",
+        "evidence/integration-current/overview-narrow-initial/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 3 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-narrow-initial/observation.json",
+        "evidence/integration-current/overview-narrow-initial/result.png",
+        "evidence/integration-current/overview-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 12 chronological session rows and shared total0. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-initial/observation.json",
+        "evidence/integration-current/planning-wide-initial/result.png",
+        "evidence/integration-current/planning-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-room-a",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-room-a at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 6 chronological session rows and shared total0. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-room-a/observation.json",
+        "evidence/integration-current/planning-wide-room-a/result.png",
+        "evidence/integration-current/planning-wide-room-a/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 12 chronological session rows and shared total1. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-reserved/observation.json",
+        "evidence/integration-current/planning-wide-reserved/result.png",
+        "evidence/integration-current/planning-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 12 chronological session rows and shared total0. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-initial/observation.json",
+        "evidence/integration-current/planning-narrow-initial/result.png",
+        "evidence/integration-current/planning-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-room-a",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-room-a at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 6 chronological session rows and shared total0. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-room-a/observation.json",
+        "evidence/integration-current/planning-narrow-room-a/result.png",
+        "evidence/integration-current/planning-narrow-room-a/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 12 chronological session rows and shared total1. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-reserved/observation.json",
+        "evidence/integration-current/planning-narrow-reserved/result.png",
+        "evidence/integration-current/planning-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-wide-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 3 chronological session rows and shared total0. The three original overview dates/times/rooms/availability remain intact; bookbinding reserves once and reduces its availability from4 to3. Its full middle session remains disabled. Capacity and room-filter additions belong to planning, not a retroactive change to the approved overview. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-wide-initial/observation.json",
+        "evidence/integration-current/overview-wide-initial/result.png",
+        "evidence/integration-current/overview-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 3 chronological session rows and shared total0. The three original overview dates/times/rooms/availability remain intact; bookbinding reserves once and reduces its availability from4 to3. Its full middle session remains disabled. Capacity and room-filter additions belong to planning, not a retroactive change to the approved overview. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-narrow-initial/observation.json",
+        "evidence/integration-current/overview-narrow-initial/result.png",
+        "evidence/integration-current/overview-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-wide-returned",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-returned at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 18 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-returned/observation.json",
+        "evidence/integration-current/planning-wide-returned/result.png",
+        "evidence/integration-current/planning-wide-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-wide-returned",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-returned at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 12 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-returned/observation.json",
+        "evidence/integration-current/planning-wide-returned/result.png",
+        "evidence/integration-current/planning-wide-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/planning-narrow-returned/full.png",
+        "evidence/integration-current/planning-narrow-returned/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-wide-returned",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-returned at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 12 chronological session rows and shared total2. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-returned/observation.json",
+        "evidence/integration-current/planning-wide-returned/result.png",
+        "evidence/integration-current/planning-wide-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-planning-narrow-returned",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-returned at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 18 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Keyboard room filtering updates the role=status count; Enter reserves once and updates the polite success message with session title/date and remaining places. The contextual planning button names distinguish repeated titles by date. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-returned/observation.json",
+        "evidence/integration-current/planning-narrow-returned/result.png",
+        "evidence/integration-current/planning-narrow-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/planning-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-planning-narrow-returned",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-returned at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 12 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-returned/observation.json",
+        "evidence/integration-current/planning-narrow-returned/result.png",
+        "evidence/integration-current/planning-narrow-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-planning-narrow-returned",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-returned at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 12 chronological session rows and shared total2. Each row exposes date/time/room/capacity/availability. Native room filtering produces the correct six Studio A rows and restores twelve on All rooms. Planning1 reserves once, displays3 remaining and Reserved; full sessions remain disabled. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-returned/observation.json",
+        "evidence/integration-current/planning-narrow-returned/result.png",
+        "evidence/integration-current/planning-narrow-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 8 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Space activates the original overview reservation and updates its role=status success message. Original overview buttons retain their source text names; no claim of uniquely contextualized overview names is made. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-wide-reserved/observation.json",
+        "evidence/integration-current/overview-wide-reserved/result.png",
+        "evidence/integration-current/overview-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 3 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-wide-reserved/observation.json",
+        "evidence/integration-current/overview-wide-reserved/result.png",
+        "evidence/integration-current/overview-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/overview-narrow-reserved/full.png",
+        "evidence/integration-current/overview-narrow-reserved/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 3 chronological session rows and shared total2. The three original overview dates/times/rooms/availability remain intact; bookbinding reserves once and reduces its availability from4 to3. Its full middle session remains disabled. Capacity and room-filter additions belong to planning, not a retroactive change to the approved overview. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-wide-reserved/observation.json",
+        "evidence/integration-current/overview-wide-reserved/result.png",
+        "evidence/integration-current/overview-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-overview-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 8 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. Space activates the original overview reservation and updates its role=status success message. Original overview buttons retain their source text names; no claim of uniquely contextualized overview names is made. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-narrow-reserved/observation.json",
+        "evidence/integration-current/overview-narrow-reserved/result.png",
+        "evidence/integration-current/overview-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-overview-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. The 3 visible session rows preserve date, title, time, room and availability; planning also preserves capacity. Narrow rows wrap their titles, place actions below their details, and leave the visitor note/summary reachable after the list.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-narrow-reserved/observation.json",
+        "evidence/integration-current/overview-narrow-reserved/result.png",
+        "evidence/integration-current/overview-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-overview-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target has 3 chronological session rows and shared total2. The three original overview dates/times/rooms/availability remain intact; bookbinding reserves once and reduces its availability from4 to3. Its full middle session remains disabled. Capacity and room-filter additions belong to planning, not a retroactive change to the approved overview. Shared namespaced reservations survive local-page navigation and reload. The independent two-width journey confirms overview reservations do not alter planning availability a second time.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-narrow-reserved/observation.json",
+        "evidence/integration-current/overview-narrow-reserved/result.png",
+        "evidence/integration-current/overview-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 5 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. The Session label and selected-details description are associated with the native selector. ArrowDown/Home changed the session and retained keyboard operation; the polite status includes selected title/date, booking count and supplied-record context. Status groups are explicit text, not color alone. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-initial/observation.json",
+        "evidence/integration-current/participants-wide-initial/result.png",
+        "evidence/integration-current/participants-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/participant-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 5 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. The Session label and selected-details description are associated with the native selector. ArrowDown/Home changed the session and retained keyboard operation; the polite status includes selected title/date, booking count and supplied-record context. Status groups are explicit text, not color alone. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-reserved/observation.json",
+        "evidence/integration-current/participants-wide-reserved/result.png",
+        "evidence/integration-current/participants-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/participant-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-wide-no-records",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-no-records at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. All 5 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. The Session label and selected-details description are associated with the native selector. ArrowDown/Home changed the session and retained keyboard operation; the polite status includes selected title/date, booking count and supplied-record context. Status groups are explicit text, not color alone. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-no-records/observation.json",
+        "evidence/integration-current/participants-wide-no-records/result.png",
+        "evidence/integration-current/participants-wide-no-records/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/participant-focus-1240.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 5 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. The Session label and selected-details description are associated with the native selector. ArrowDown/Home changed the session and retained keyboard operation; the polite status includes selected title/date, booking count and supplied-record context. Status groups are explicit text, not color alone. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-initial/observation.json",
+        "evidence/integration-current/participants-narrow-initial/result.png",
+        "evidence/integration-current/participants-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/participant-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 5 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. The Session label and selected-details description are associated with the native selector. ArrowDown/Home changed the session and retained keyboard operation; the polite status includes selected title/date, booking count and supplied-record context. Status groups are explicit text, not color alone. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-reserved/observation.json",
+        "evidence/integration-current/participants-narrow-reserved/result.png",
+        "evidence/integration-current/participants-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/participant-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Accessibility-participants-narrow-no-records",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-no-records at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. All 5 native links/buttons/selects have a text or associated-label accessible name and measured height at least44px. Tab traversal shows 3px visible focus on observed interactive elements and scrolls controls into view; Full and Reserved are disabled. The Session label and selected-details description are associated with the native selector. ArrowDown/Home changed the session and retained keyboard operation; the polite status includes selected title/date, booking count and supplied-record context. Status groups are explicit text, not color alone. Announcement verdict covers live-region semantics and actual DOM updates, not audible assistive-technology testing.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-no-records/observation.json",
+        "evidence/integration-current/participants-narrow-no-records/result.png",
+        "evidence/integration-current/participants-narrow-no-records/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-review-c1-behavior/participant-focus-390.png"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. All supplied names, Confirmed/Waitlisted labels, booking facts and missing-record disclosure remain readable. At390px the native selector fits350px; its shortened selected option is repeated in full directly below, with date/time/room. Both groups precede the capacity note.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-initial/observation.json",
+        "evidence/integration-current/participants-wide-initial/result.png",
+        "evidence/integration-current/participants-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/participants-narrow-initial/full.png",
+        "evidence/integration-current/participants-narrow-initial/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. All supplied names, Confirmed/Waitlisted labels, booking facts and missing-record disclosure remain readable. At390px the native selector fits350px; its shortened selected option is repeated in full directly below, with date/time/room. Both groups precede the capacity note.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-reserved/observation.json",
+        "evidence/integration-current/participants-wide-reserved/result.png",
+        "evidence/integration-current/participants-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/participants-narrow-reserved/full.png",
+        "evidence/integration-current/participants-narrow-reserved/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-wide-no-records",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-no-records at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 1240 equals viewport 1240. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. All supplied names, Confirmed/Waitlisted labels, booking facts and missing-record disclosure remain readable. At390px the native selector fits350px; its shortened selected option is repeated in full directly below, with date/time/room. Both groups precede the capacity note.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-no-records/observation.json",
+        "evidence/integration-current/participants-wide-no-records/result.png",
+        "evidence/integration-current/participants-wide-no-records/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json",
+        "evidence/integration-current/participants-narrow-no-records/full.png",
+        "evidence/integration-current/participants-narrow-no-records/observation.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. All supplied names, Confirmed/Waitlisted labels, booking facts and missing-record disclosure remain readable. At390px the native selector fits350px; its shortened selected option is repeated in full directly below, with date/time/room. Both groups precede the capacity note.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-initial/observation.json",
+        "evidence/integration-current/participants-narrow-initial/result.png",
+        "evidence/integration-current/participants-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. All supplied names, Confirmed/Waitlisted labels, booking facts and missing-record disclosure remain readable. At390px the native selector fits350px; its shortened selected option is repeated in full directly below, with date/time/room. Both groups precede the capacity note.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-reserved/observation.json",
+        "evidence/integration-current/participants-narrow-reserved/result.png",
+        "evidence/integration-current/participants-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Responsive-participants-narrow-no-records",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-no-records at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Measured document width 390 equals viewport 390. The complete target capture and corresponding390px state retain required content without horizontal clipping; keyboard traversal reaches below-fold actions. All supplied names, Confirmed/Waitlisted labels, booking facts and missing-record disclosure remain readable. At390px the native selector fits350px; its shortened selected option is repeated in full directly below, with date/time/room. Both groups precede the capacity note.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-no-records/observation.json",
+        "evidence/integration-current/participants-narrow-no-records/result.png",
+        "evidence/integration-current/participants-narrow-no-records/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-wide-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-initial at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target: 8 of 12 booked, 4 places available; 6 displayed confirmed rows, 2 waitlisted rows; shared total0. Six supplied confirmed names and two waitlisted names are separated; two additional booked places explicitly have no supplied named record. Keyboard session changes and the independent reservation journey reproduce these meanings from data.json without promotion or invented attendee identity.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-initial/observation.json",
+        "evidence/integration-current/participants-wide-initial/result.png",
+        "evidence/integration-current/participants-wide-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target: 9 of 12 booked, 3 places available; 7 displayed confirmed rows, 2 waitlisted rows; shared total2. The seventh confirmed row is explicitly Your local demo reservation, separate from six supplied names. Two booked places remain unnamed; both waitlisted names remain unchanged. Keyboard session changes and the independent reservation journey reproduce these meanings from data.json without promotion or invented attendee identity.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-reserved/observation.json",
+        "evidence/integration-current/participants-wide-reserved/result.png",
+        "evidence/integration-current/participants-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-wide-no-records",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-no-records at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target: 12 of 12 booked, Fully booked; 0 displayed confirmed rows, 0 waitlisted rows; shared total0. Session4 has no supplied participant rows, both groups say Not supplied, and the disclosure explicitly says the waitlist is unknown despite12/12 booked. Empty lists are not presented as zero bookings. Keyboard session changes and the independent reservation journey reproduce these meanings from data.json without promotion or invented attendee identity.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-no-records/observation.json",
+        "evidence/integration-current/participants-wide-no-records/result.png",
+        "evidence/integration-current/participants-wide-no-records/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-initial at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target: 8 of 12 booked, 4 places available; 6 displayed confirmed rows, 2 waitlisted rows; shared total0. Six supplied confirmed names and two waitlisted names are separated; two additional booked places explicitly have no supplied named record. Keyboard session changes and the independent reservation journey reproduce these meanings from data.json without promotion or invented attendee identity.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-initial/observation.json",
+        "evidence/integration-current/participants-narrow-initial/result.png",
+        "evidence/integration-current/participants-narrow-initial/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target: 9 of 12 booked, 3 places available; 7 displayed confirmed rows, 2 waitlisted rows; shared total2. The seventh confirmed row is explicitly Your local demo reservation, separate from six supplied names. Two booked places remain unnamed; both waitlisted names remain unchanged. Keyboard session changes and the independent reservation journey reproduce these meanings from data.json without promotion or invented attendee identity.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-reserved/observation.json",
+        "evidence/integration-current/participants-narrow-reserved/result.png",
+        "evidence/integration-current/participants-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "Experience-participants-narrow-no-records",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-no-records at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. Current target: 12 of 12 booked, Fully booked; 0 displayed confirmed rows, 0 waitlisted rows; shared total0. Session4 has no supplied participant rows, both groups say Not supplied, and the disclosure explicitly says the waitlist is unknown despite12/12 booked. Empty lists are not presented as zero bookings. Keyboard session changes and the independent reservation journey reproduce these meanings from data.json without promotion or invented attendee identity.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-no-records/observation.json",
+        "evidence/integration-current/participants-narrow-no-records/result.png",
+        "evidence/integration-current/participants-narrow-no-records/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-planning-wide-returned",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-wide-returned at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. At1240px and390px a real Enter reservation of planning1 survived Participants→Overview→Sessions and reload. Summary stayed1, planning1 stayed Reserved with3 available, and Participants showed9/12 booked with six supplied confirmed names plus one demo and two separate waitlisted names. Disabled duplicate/full DOM clicks left the count unchanged. Space reservation of overview bookbinding raised shared total to2 under a separate ID; Participants still showed9/12 and3 available, and final planning return retained its reservation. Current target total=2.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-wide-returned/observation.json",
+        "evidence/integration-current/planning-wide-returned/result.png",
+        "evidence/integration-current/planning-wide-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-planning-narrow-returned",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed planning-narrow-returned at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. At1240px and390px a real Enter reservation of planning1 survived Participants→Overview→Sessions and reload. Summary stayed1, planning1 stayed Reserved with3 available, and Participants showed9/12 booked with six supplied confirmed names plus one demo and two separate waitlisted names. Disabled duplicate/full DOM clicks left the count unchanged. Space reservation of overview bookbinding raised shared total to2 under a separate ID; Participants still showed9/12 and3 available, and final planning return retained its reservation. Current target total=2.",
+      "evidence_paths": [
+        "evidence/integration-current/planning-narrow-returned/observation.json",
+        "evidence/integration-current/planning-narrow-returned/result.png",
+        "evidence/integration-current/planning-narrow-returned/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-overview-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. At1240px and390px a real Enter reservation of planning1 survived Participants→Overview→Sessions and reload. Summary stayed1, planning1 stayed Reserved with3 available, and Participants showed9/12 booked with six supplied confirmed names plus one demo and two separate waitlisted names. Disabled duplicate/full DOM clicks left the count unchanged. Space reservation of overview bookbinding raised shared total to2 under a separate ID; Participants still showed9/12 and3 available, and final planning return retained its reservation. Current target total=2.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-wide-reserved/observation.json",
+        "evidence/integration-current/overview-wide-reserved/result.png",
+        "evidence/integration-current/overview-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-overview-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed overview-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. At1240px and390px a real Enter reservation of planning1 survived Participants→Overview→Sessions and reload. Summary stayed1, planning1 stayed Reserved with3 available, and Participants showed9/12 booked with six supplied confirmed names plus one demo and two separate waitlisted names. Disabled duplicate/full DOM clicks left the count unchanged. Space reservation of overview bookbinding raised shared total to2 under a separate ID; Participants still showed9/12 and3 available, and final planning return retained its reservation. Current target total=2.",
+      "evidence_paths": [
+        "evidence/integration-current/overview-narrow-reserved/observation.json",
+        "evidence/integration-current/overview-narrow-reserved/result.png",
+        "evidence/integration-current/overview-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-participants-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-wide-reserved at 1240x900. Independent recreation matches the original target's rows and stored reservation IDs. At1240px and390px a real Enter reservation of planning1 survived Participants→Overview→Sessions and reload. Summary stayed1, planning1 stayed Reserved with3 available, and Participants showed9/12 booked with six supplied confirmed names plus one demo and two separate waitlisted names. Disabled duplicate/full DOM clicks left the count unchanged. Space reservation of overview bookbinding raised shared total to2 under a separate ID; Participants still showed9/12 and3 available, and final planning return retained its reservation. Current target total=2.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-wide-reserved/observation.json",
+        "evidence/integration-current/participants-wide-reserved/result.png",
+        "evidence/integration-current/participants-wide-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    },
+    {
+      "claim_id": "CrossPage-participants-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Observed participants-narrow-reserved at 390x900. Independent recreation matches the original target's rows and stored reservation IDs. At1240px and390px a real Enter reservation of planning1 survived Participants→Overview→Sessions and reload. Summary stayed1, planning1 stayed Reserved with3 available, and Participants showed9/12 booked with six supplied confirmed names plus one demo and two separate waitlisted names. Disabled duplicate/full DOM clicks left the count unchanged. Space reservation of overview bookbinding raised shared total to2 under a separate ID; Participants still showed9/12 and3 available, and final planning return retained its reservation. Current target total=2.",
+      "evidence_paths": [
+        "evidence/integration-current/participants-narrow-reserved/observation.json",
+        "evidence/integration-current/participants-narrow-reserved/result.png",
+        "evidence/integration-current/participants-narrow-reserved/full.png",
+        "evidence/integration-review-c1-behavior/targets.json",
+        "evidence/integration-review-c1-behavior/journeys.json"
+      ]
+    }
+  ],
+  "material_concerns": [],
+  "scope_limitations": [
+    "PASS is restricted to these60 pinned Accessibility/Responsive/Experience claims at1240x900 and390x900; no judgments on other categories, product completion, exact visual acceptance or host receipts.",
+    "No audible screen-reader session, real mobile device, other browser, storage-denial or fetch-failure target was tested. Announcements were checked through native semantics and actual live-region content updates.",
+    "sessionStorage persistence is the supplied same-tab local-page/reload scope, not persistence across closing the tab/browser or independent tabs.",
+    "The first generic traversal in reserved planning/overview states continued from the prior activation slot and included BODY on browser focus wrap. BODY has no focus outline and is not an interactive failure; actual observed controls had visible3px focus. Separate keyboard journeys verified the room and participant selectors and reservation actions.",
+    "Existing overview generic Reserve names remain as in the supplied source; the scoped criterion requires accessible names, and this report does not claim contextual uniqueness for those names. No new field, backend or promotion behavior was authorized."
+  ]
+}

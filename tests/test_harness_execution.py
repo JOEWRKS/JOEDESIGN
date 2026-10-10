@@ -83,22 +83,50 @@ class ExecutionTests(unittest.TestCase):
         skill = self.base / 'SKILL.md'
         skill.write_text('Synthetic specialist fixture')
         collector = self.base / 'collector.py'
-        collector.write_text('''import json, sys
+        collector.write_text('''import json, sys, hashlib
 from pathlib import Path
 r=json.load(sys.stdin)
 p=Path(r['output_dir']); p.mkdir(parents=True)
 items=[]
 for target in r['targets']:
+ image=p/(target['id']+'-render.txt'); image.write_text('Synthetic capture')
+ log=dict(target=target,build_id=r['build_id'],frames=[str(image)],
+  frame_hashes={str(image):hashlib.sha256(image.read_bytes()).hexdigest()},design=dict(r['design'],measurements=[]))
+ for check in r['design']['checks']:
+  if check['target_id']==target['id'] and check['method']=='geometry':
+   log['design']['measurements'].append(dict(check_id=check['check_id'],criterion_sha256=check['criterion_sha256'],
+     values=[check['criterion']['min']+r['browser'].get('geometry_offset',0)]*check['criterion']['expected_count']))
  for kind in ('render','interaction','technical'):
-  f=p/(target['id']+'-'+kind+'.txt'); f.write_text('Synthetic capture')
+  f=image if kind=='render' else p/(target['id']+'-observation.json')
+  if kind!='render': f.write_text(json.dumps(log))
   items.append(dict(target_id=target['id'],kind=kind,path=str(f),action='select',result='observed',frames=[]))
 print(json.dumps(dict(captures=items,errors=[])))
 ''')
         self.settings = {'request': 'Implement the bounded fixture', 'codex_executable': sys.executable,
                          'work_kind': 'new_direction', 'proof_target_ids': ['wide', 'narrow'],
                          'collector_command': [sys.executable, str(collector)], 'max_cycles': 1,
-                         'skills': {role: str(skill) for role in ('J', 'I', 'U', 'V')}}
+                         'skills': {role: str(skill) for role in ('I', 'U', 'V')}}
         self.runner = FakeRunner()
+        (self.project / 'DESIGN.md').write_text('Synthetic approved design fixture')
+        self.freeze_design_baseline(bundle)
+
+    def freeze_design_baseline(self, bundle):
+        from harness.io import digest, file_hash, write_artifact
+        targets = bundle['intent']['targets']
+        checks = []
+        for target in targets:
+            claim = next(c for c in bundle['matrix']['claims'] if c['target_id']==target['id'] and c['category']=='VisualQuality')
+            criterion = {'claim_id': claim['id'], 'category': claim['category'], 'expected': claim['expected']}
+            checks.append(dict(check_id='design-'+target['id'], target_id=target['id'], rule_id='composition',
+                method='specialist', lane='visual', criterion=criterion, criterion_sha256=digest(criterion), inputs=['input.txt']))
+        baseline = dict(schema='joeness.review-baseline.v1', scope_id=bundle['intent']['scope_id'],
+            authority=[dict(path='DESIGN.md', sha256=file_hash(self.project/'DESIGN.md'))],
+            authorization_ref='Synthetic test scope, not user approval', targets=targets,
+            rules=[dict(id='composition',source_ref='DESIGN.md',target_ids=[t['id'] for t in targets],methods=['specialist'])],
+            required_checks=checks)
+        self.baseline_path = self.base / 'design-baseline.json'
+        write_artifact(self.baseline_path, baseline, overwrite=True)
+        self.settings['design_validation'] = dict(baseline=str(self.baseline_path),baseline_sha256=file_hash(self.baseline_path))
 
     def execution(self):
         return self.api.Execution(self.root, self.project, self.settings, self.runner)
@@ -120,6 +148,7 @@ print(json.dumps(dict(captures=items,errors=[])))
         b['matrix']['bindings'] = {k: digest(b[k]) for k in ('intent', 'lock', 'contract')}
         for key, name in ARTIFACTS.items():
             write_artifact(self.root / name, b[key], overwrite=True)
+        self.freeze_design_baseline(b)
 
     def test_missing_or_partial_proof_scope_cannot_launch_writer(self):
         for selection in (None, [], ['wide'], ['missing'], ['wide', 'wide']):
@@ -128,6 +157,36 @@ print(json.dumps(dict(captures=items,errors=[])))
                 with self.assertRaisesRegex(ValueError, 'PROOF_'):
                     self.execution().run()
                 self.assertEqual(self.runner.calls, [])
+
+    def test_missing_design_baseline_cannot_launch_writer(self):
+        self.settings.pop('design_validation')
+        with self.assertRaisesRegex(ValueError, 'DESIGN_VALIDATION_REQUIRED'):
+            self.execution()
+        self.assertEqual(self.runner.calls, [])
+
+    def test_failed_measured_gap_blocks_expansion_even_when_all_reviewers_pass(self):
+        from harness.io import read_artifact, write_artifact, digest, file_hash
+        self.add_second_family()
+        baseline = read_artifact(self.baseline_path)
+        criterion = dict(kind='gap',container='.fixture',items=':scope > *',axis='y',
+                         expected_count=1,min=16,max=16,tolerance=0)
+        baseline['rules'].append(dict(id='spacing',source_ref='DESIGN.md',target_ids=['wide'],methods=['geometry']))
+        baseline['required_checks'].append(dict(check_id='spacing-wide',rule_id='spacing',target_id='wide',
+            method='geometry',lane='visual',criterion=criterion,criterion_sha256=digest(criterion),inputs=['input.txt']))
+        write_artifact(self.baseline_path,baseline,overwrite=True)
+        self.settings['design_validation']['baseline_sha256']=file_hash(self.baseline_path)
+        self.settings['browser']={'geometry_offset':8}
+        result=self.execution().run()
+        self.assertEqual(result['execution'],'NEEDS_REPAIR')
+        self.assertTrue(all(r['verdict']=='PASS' for r in result['reviews']))
+        self.assertTrue(any(r['status']=='FAIL' for r in result['design_conformance']['results']))
+        self.assertFalse(any(c.get('phase')=='expansion' for c in self.runner.calls))
+
+    def test_changed_conformance_output_cannot_be_reused_on_resume(self):
+        result=self.execution().run()
+        Path(result['design_conformance_path']).write_text('{"eligible":true}')
+        with self.assertRaisesRegex(ValueError,'CHANGED_DESIGN_RESULT'):
+            self.execution().run(resume=True)
 
     def test_unknown_work_kind_and_multifamily_local_repair_are_blocked(self):
         self.settings.pop('work_kind')
@@ -161,7 +220,7 @@ print(json.dumps(dict(captures=items,errors=[])))
         self.assertEqual(result['unreviewed_target_ids'], [])
         self.assertFalse(result['approved'])
         self.assertTrue(all(self.api.Path(p[0]).name == 'SKILL.md' and
-                            self.api.Path(p[0]).parent.name == 'joedesign-harness'
+                            self.api.Path(p[0]).parent.name == 'joedesign'
                             for p in self.runner.skill_paths))
 
     def test_failed_proof_blocks_expansion_and_preserves_unreviewed_scope(self):
@@ -181,14 +240,79 @@ print(json.dumps(dict(captures=items,errors=[])))
         self.assertTrue(any(c.get('raci_step') == 'C2' for c in self.runner.calls))
         self.assertFalse(any(c.get('phase') == 'expansion' for c in self.runner.calls))
 
-    def test_changed_harness_guidance_invalidates_resume(self):
+    def test_changed_operating_core_invalidates_resume(self):
         execution = self.execution()
         execution.run()
         original = self.api.file_hash
         with patch.object(self.api, 'file_hash', side_effect=lambda p:
-                          'b'*64 if Path(p) == execution.harness_skill else original(p)):
+                          'b'*64 if Path(p) == execution.operating_core else original(p)):
             with self.assertRaisesRegex(ValueError, 'STALE_EXECUTION'):
                 self.execution().run(resume=True)
+
+    def test_external_core_override_is_rejected_before_any_role(self):
+        self.settings['skills']['J'] = str(self.base / 'SKILL.md')
+        with self.assertRaisesRegex(ValueError, 'OPERATING_CORE_OVERRIDE'):
+            self.execution()
+        self.assertFalse(self.runner.calls)
+
+    def test_visual_modules_reach_J_roles_and_changes_invalidate_resume(self):
+        execution = self.execution()
+        execution.run()
+        for task, paths in zip(self.runner.calls, self.runner.skill_paths):
+            self.assertEqual(paths[0], execution.operating_core)
+            self.assertEqual(paths.count(execution.operating_core), 1)
+            if task['role'] in ('synthesis', 'repair', 'critic', 'J') or (
+                    task['role'] == 'implementer' and not task.get('claims')):
+                for p in execution.visual_modules:
+                    self.assertIn(p, paths)
+        original = self.api.file_hash
+        with patch.object(self.api, 'file_hash', side_effect=lambda p:
+                          'c'*64 if Path(p) == execution.visual_modules[0] else original(p)):
+            with self.assertRaisesRegex(ValueError, 'STALE_EXECUTION'):
+                self.execution().run(resume=True)
+
+    def test_missing_internal_module_cannot_launch_a_role(self):
+        original = Path.is_file
+        with patch.object(Path, 'is_file', lambda p:
+                          False if p.name == 'visual-translation.md' else original(p)):
+            with self.assertRaisesRegex(ValueError, 'JOEDESIGN_MODULE_UNAVAILABLE'):
+                self.execution()
+        self.assertFalse(self.runner.calls)
+
+    def test_copied_package_production_keeps_one_core_through_proof_and_expansion(self):
+        import shutil
+        from harness_support import ROOT
+        self.add_second_family()
+        dest = self.base / 'installed/joedesign'
+        shutil.copytree(ROOT / 'skills/joedesign', dest, ignore=shutil.ignore_patterns('__pycache__'))
+        runtime = self.base / 'runtime.json'
+        runtime.write_text(json.dumps(self.settings), encoding='utf-8')
+        result_file = self.base / 'copied-result.json'
+        # Fixture role responses are synthetic. All runtime modules must come from
+        # the copied package; the original repo contributes test fixtures only.
+        script = '''import json,sys
+from pathlib import Path
+sys.path.insert(0,sys.argv[1])
+from harness.execution import Execution
+sys.path.insert(0,sys.argv[2])
+from test_harness_execution import FakeRunner
+runner=FakeRunner()
+execution=Execution(sys.argv[3],sys.argv[4],json.loads(Path(sys.argv[5]).read_text()),runner)
+report=execution.run()
+Path(sys.argv[6]).write_text(json.dumps(dict(report=report,
+    sources=[[str(p) for p in paths] for paths in runner.skill_paths],
+    modules={k:v.__file__ for k,v in sys.modules.items() if k.startswith('harness.')})))
+'''
+        result = subprocess.run([sys.executable, '-c', script, str(dest / 'scripts'), str(ROOT / 'tests'),
+                                 str(self.root), str(self.project), str(runtime), str(result_file)],
+                                capture_output=True, text=True, encoding='utf-8', cwd=self.base)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        data = json.loads(result_file.read_text())
+        self.assertEqual(data['report']['execution'], 'REVIEW_COMPLETE_UNCERTIFIED')
+        self.assertEqual(data['report']['phase'], 'expansion')
+        self.assertFalse(data['report']['approved'])
+        self.assertTrue(all(Path(paths[0]) == dest / 'SKILL.md' for paths in data['sources']))
+        self.assertTrue(all(Path(p).is_relative_to(dest) for p in data['modules'].values()))
 
     def test_review_only_needs_no_production_scope(self):
         self.settings.pop('work_kind')

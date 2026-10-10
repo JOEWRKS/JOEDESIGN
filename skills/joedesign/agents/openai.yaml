@@ -1,4 +1,4 @@
 interface:
   display_name: "JOEDESIGN"
-  short_description: "Approved visual targets to project implementation"
-  default_prompt: "Use $joedesign to translate this project's visual sources into a precise implementation or bounded refinement."
+  short_description: "One workflow for UI design, implementation and review"
+  default_prompt: "Use $joedesign to coordinate this UI task from visual sources through scoped implementation and specialist review."

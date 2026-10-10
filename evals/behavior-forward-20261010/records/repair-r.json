@@ -1,0 +1,195 @@
+{
+  "context_id": "/root/specialist_r",
+  "case": "repair",
+  "skill_sources": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\SKILL.md",
+      "sha256": "a519986f66134a4919495ec407fdc96b3cd5ea4c3f117c2a112bb21dee27b7bf"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\visual-translation.md",
+      "sha256": "8a4b2e1866d0817c0f0ed7ef38a0252731d5738876c5fc71d29f4f15d86a53f9"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\operation.md",
+      "sha256": "56099b5cc4df90fac3e16c05115d33d626fbc18951841de65cd0a15e637e1601"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\web-design-guidelines\\SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\SKILL.md",
+      "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\data\\ux-guidelines.csv",
+      "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-r\\web-interface-guidelines.md",
+      "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
+    }
+  ],
+  "actual_use_details": {
+    "J": "Read pinned core, operation RACI and visual-translation; compared all four actual captures with source HTML and same-width original; preserved approved 18px rather than default spacing.",
+    "V": "Fetched latest official Web Interface Guidelines; reviewed responsive CSS, viewport policy, native layout, wrapping and actual full-page captures/raw overflow. Generic typography/hover suggestions do not override bounded preservation authority.",
+    "U": "Read actual skill and ran search.py disabled button success feedback --domain ux; matching Success Feedback and Disabled States guidance applied to raw reservation actions, displayed labels/status and full/duplicate prevention."
+  },
+  "reviews": [
+    {
+      "claim_id": "visual-preservation-wide-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected wide-initial full-page render against the same-width approved original: headline leads, sessions remain the dominant panel, visitor note stays secondary, green/cream and type roles preserved. Raw rendered note paragraph-to-action and heading-to-paragraph gaps are both 18px. Current index.html equals approved.html byte-for-byte; reserved state changes labels/status/count only, with necessary text-flow effect.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-wide-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected wide-reserved full-page render against the same-width approved original: headline leads, sessions remain the dominant panel, visitor note stays secondary, green/cream and type roles preserved. Raw rendered note paragraph-to-action and heading-to-paragraph gaps are both 18px. Current index.html equals approved.html byte-for-byte; reserved state changes labels/status/count only, with necessary text-flow effect.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-narrow-initial",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected narrow-initial full-page render against the same-width approved original: headline leads, sessions remain the dominant panel, visitor note stays secondary, green/cream and type roles preserved. Raw rendered note paragraph-to-action and heading-to-paragraph gaps are both 18px. Current index.html equals approved.html byte-for-byte; reserved state changes labels/status/count only, with necessary text-flow effect.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-narrow-reserved",
+      "reviewer": "J",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Inspected narrow-reserved full-page render against the same-width approved original: headline leads, sessions remain the dominant panel, visitor note stays secondary, green/cream and type roles preserved. Raw rendered note paragraph-to-action and heading-to-paragraph gaps are both 18px. Current index.html equals approved.html byte-for-byte; reserved state changes labels/status/count only, with necessary text-flow effect.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-wide-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "At 1240x900, raw observation has overflow=false. The inspected complete render retains readable title/time/location/availability and all controls; two-column 2:1 session/aside layout retains 28px separation.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.png"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "At 1240x900, raw observation has overflow=false. The inspected complete render retains readable title/time/location/availability and all controls; two-column 2:1 session/aside layout retains 28px separation.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "At 390x900, raw observation has overflow=false. The inspected complete render retains readable title/time/location/availability and all controls; single-column order is sessions, note, summary, guide with actions beneath each session content.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.png"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "At 390x900, raw observation has overflow=false. The inspected complete render retains readable title/time/location/availability and all controls; single-column order is sessions, note, summary, guide with actions beneath each session content.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.png"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-wide-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched initial render and same-width reserved interaction observation: count 0 -> 1 -> 2, available buttons become Reserved and disabled, duplicate/native Full attempts leave count at 1, final Full remains disabled. Session facts persist. Visible success status is present and source uses role=status; this confirms DOM live-region semantics, not audible screen-reader output.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched initial render and same-width reserved interaction observation: count 0 -> 1 -> 2, available buttons become Reserved and disabled, duplicate/native Full attempts leave count at 1, final Full remains disabled. Session facts persist. Visible success status is present and source uses role=status; this confirms DOM live-region semantics, not audible screen-reader output.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched initial render and same-width reserved interaction observation: count 0 -> 1 -> 2, available buttons become Reserved and disabled, duplicate/native Full attempts leave count at 1, final Full remains disabled. Session facts persist. Visible success status is present and source uses role=status; this confirms DOM live-region semantics, not audible screen-reader output.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "R",
+      "verdict": "PASS",
+      "observed": "Matched initial render and same-width reserved interaction observation: count 0 -> 1 -> 2, available buttons become Reserved and disabled, duplicate/native Full attempts leave count at 1, final Full remains disabled. Session facts persist. Visible success status is present and source uses role=status; this confirms DOM live-region semantics, not audible screen-reader output.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json"
+      ]
+    }
+  ],
+  "material_concerns": [],
+  "scope_limitations": [
+    "Local unauthenticated review; no host receipts or user acceptance.",
+    "Exact 1240x900 and 390x900 initial/reserved targets only.",
+    "Audible assistive-technology announcement and unsupported viewport ranges not tested."
+  ],
+  "input_sha256": {
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\index.html": "826dac4820a7ddecb0177bd2e01f9cbe85e48ea97384387d08881636590e5164",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\baseline.json": "ac8ff6b5952fc7e9a694055a939fc056e7ff8825216d7de679f878a9d5cc9432"
+  }
+}

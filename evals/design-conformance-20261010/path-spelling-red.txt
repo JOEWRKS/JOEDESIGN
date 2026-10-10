@@ -1,0 +1,15 @@
+test_frame_hash_uses_recorded_path_spelling (test_design_conformance.ConformanceTests.test_frame_hash_uses_recorded_path_spelling) ... FAIL
+
+======================================================================
+FAIL: test_frame_hash_uses_recorded_path_spelling (test_design_conformance.ConformanceTests.test_frame_hash_uses_recorded_path_spelling)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\JOEWRKS\JOEDESIGN\tests\test_design_conformance.py", line 104, in test_frame_hash_uses_recorded_path_spelling
+    self.assertTrue(evaluate(self.baseline,self.pin,self.project,[p])['eligible'])
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 1 test in 0.038s
+
+FAILED (failures=1)

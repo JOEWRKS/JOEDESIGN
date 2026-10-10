@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SCRIPTS = ROOT / 'skills/joedesign-harness/scripts'
+SCRIPTS = ROOT / 'skills/joedesign/scripts'
 sys.path.insert(0, str(SCRIPTS))
 
 

@@ -1,0 +1,109 @@
+{
+  "commit": "0efacd8e6db52235b07b9d5b570a8aa0ca9d6a1a",
+  "files": [
+    {
+      "path": "skills/joedesign-harness/SKILL.md",
+      "sha256": "132bf19bbe1b71ac62b3cd60820e7e565da4f34fe421f1365bfb1b805ba115d2"
+    },
+    {
+      "path": "skills/joedesign-harness/agents/openai.yaml",
+      "sha256": "5ad810474bc443198bcfaf12f7627e76340f66098ab8a5511558796176a5ffc6"
+    },
+    {
+      "path": "skills/joedesign-harness/references/execution.md",
+      "sha256": "0990e0777d196df094546a055b26f24be5f9128bfd5e86c5ab42e597454042fb"
+    },
+    {
+      "path": "skills/joedesign-harness/references/operation.md",
+      "sha256": "8a48c746939f726a136c11d956fd564a0ab6f4fff4adea88f27bb69c876231e1"
+    },
+    {
+      "path": "skills/joedesign-harness/references/visual-production.md",
+      "sha256": "aa065f81e1c612059a7d70e34d725322844d6ec26289c8a8629f9744009fbe0d"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/capture.mjs",
+      "sha256": "505eb367879d7738c82864110357c09838f1f3ae8ea47d707c5dce069c02eee9"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/__init__.py",
+      "sha256": "065c95c4c3cb07e74eca0807874c2bfb6b974950a14ff808c05d8a2abcbf1778"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/contracts.py",
+      "sha256": "b2806c4d3145b4b7a5196a475a7c329068549ea47ff3865ec413250cd9abc44a"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/evidence.py",
+      "sha256": "e3e0d1bd1f841dbee369009692e02e50dff184f26dc53cd48359793dee920b22"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/execution.py",
+      "sha256": "801ba3c6b41c28aa48643444cc0e9f46a75fbf67dae292f9a0361c26f3e2051f"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/io.py",
+      "sha256": "6579dda892f684319897ae8ca87f0f192bc32715ae6a5d5921966137a5dfaba4"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/pipeline.py",
+      "sha256": "9608a7367cb40cf60fb17ba5d2da12bde9b88fac5410a369e52fe78a7e8accd6"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/references.py",
+      "sha256": "50f44f6b8bd4509f8918b52141f3232b95040a3bd5db9d766b205813ec93ea20"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness/runner.py",
+      "sha256": "7a07f6f8e996c845c36136fcf6562164275c7bffd873afc4d733babb29b470ca"
+    },
+    {
+      "path": "skills/joedesign-harness/scripts/harness_cli.py",
+      "sha256": "ddfe9b28a07a6047b2f54599f35fefde14ae559e880225dc6e928c26bae31cc0"
+    },
+    {
+      "path": "skills/joedesign-harness/templates/CRITIQUE.md",
+      "sha256": "23fd2ae421436c0010fe9cc5d3190f831c2d6df6cf5687ca183b2ecb7db1f6eb"
+    },
+    {
+      "path": "skills/joedesign-harness/templates/DESIGN_CONTRACT.md",
+      "sha256": "64dab3fe316695b4a6bedaa368ee455467b72cb1e17b133320ac569baece398c"
+    },
+    {
+      "path": "skills/joedesign-harness/templates/DESIGN_INTENT.json",
+      "sha256": "98171e0b36ffd15aa1ece07ba8ba56b96c58b9f5cad7f364aefbc0cf036cbc87"
+    },
+    {
+      "path": "skills/joedesign-harness/templates/EVIDENCE_MANIFEST.json",
+      "sha256": "77ec1a03eef0b8fe0cf7dc90bccf131360ba1803e92a8e1e869e4f0dbd1d10de"
+    },
+    {
+      "path": "skills/joedesign-harness/templates/REFERENCE_CANDIDATES.json",
+      "sha256": "dea9915937b9a16ea26a22c664641045386b99a706b3d815acb3f5e3d38a382b"
+    },
+    {
+      "path": "skills/joedesign-harness/templates/REFERENCE_LOCK.md",
+      "sha256": "5cc459c4372b75b0c99e485e1cc105815f9d695fec47590fac63cddf8822b8f3"
+    },
+    {
+      "path": "skills/joedesign-harness/templates/STATE_MATRIX.md",
+      "sha256": "feaa871116a3bcca6d22c8c505cef1097ffe12d7ac55ec4b0e685a4d1e148e1c"
+    },
+    {
+      "path": "skills/joedesign/SKILL.md",
+      "sha256": "d28c089ae8cbbdffcc2744970bbfffd1808fe91a7a5aaa50cabc5836c25ae9cf"
+    },
+    {
+      "path": "skills/joedesign/agents/openai.yaml",
+      "sha256": "56915b6ea28710d1a8143c206285bd12a5ef7f56c27599cde7c74f64090cf9fd"
+    },
+    {
+      "path": "skills/joedesign/templates/DESIGN.md",
+      "sha256": "388a5e55320beb8d22ba5568b558455ed9ec2d9dfac27e42e68d34b4e6301dd3"
+    },
+    {
+      "path": "tests/joedesign-v02.tests.mjs",
+      "sha256": "57935e81fc0ed581130b09807594f62eadb503b20e53c179f4fae20c993568cd"
+    }
+  ]
+}

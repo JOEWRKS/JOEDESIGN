@@ -1,0 +1,139 @@
+{
+  "context_id": "critic_initial-repair-20261010",
+  "claims": [
+    {
+      "claim_id": "visual-preservation-wide-initial",
+      "verdict": "PASS",
+      "observed": "Inspected original and actual images. The green/cream identity, overview introduction, dominant session list and subordinate visitor note retain their relationships. The session panel occupies twice the note column width with a 28px separation. Both note sibling gaps render at 18px. Direct source comparison finds only action margin-top 12px changed to 0; current HTML is byte-identical to approved HTML. Initial action availability and count 0 remain visible.",
+      "evidence_paths": [
+        "evidence/after/wide-initial.json",
+        "evidence/after/wide-initial.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-wide-initial",
+      "verdict": "PASS",
+      "observed": "At 1240x900, text and actions are readable, with no observed horizontal overflow. The long workshop title fits within its row; controls remain separate from descriptive text. The native visitor-guide anchor reaches the footer in an independent browser probe.",
+      "evidence_paths": [
+        "evidence/after/wide-initial.json",
+        "evidence/after/wide-initial.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-wide-initial",
+      "verdict": "PASS",
+      "observed": "The initial target preserves title, time, location and availability text. Independent browser probing at 1240x900 observed counts 0 -> 1 -> 1 on repeat -> 1 after attempting Full -> 2 -> 2 on second repeat. Both available buttons become disabled and read Reserved; Full stays disabled. Success text appears in the existing role=status region. Matching reserved-target raw observations also record the transitions.",
+      "evidence_paths": [
+        "evidence/after/wide-initial.json",
+        "evidence/after/wide-initial.png",
+        "evidence/critic/observations.json",
+        "evidence/after/wide-reserved.json"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-wide-reserved",
+      "verdict": "PASS",
+      "observed": "Inspected original and actual images. The green/cream identity, overview introduction, dominant session list and subordinate visitor note retain their relationships. The session panel occupies twice the note column width with a 28px separation. Both note sibling gaps render at 18px. Direct source comparison finds only action margin-top 12px changed to 0; current HTML is byte-identical to approved HTML. Reserved labels, count 2 and visible success message fit without obscuring content.",
+      "evidence_paths": [
+        "evidence/after/wide-reserved.json",
+        "evidence/after/wide-reserved.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-wide-reserved",
+      "verdict": "PASS",
+      "observed": "At 1240x900, text and actions are readable, with no observed horizontal overflow. The long workshop title fits within its row; controls remain separate from descriptive text. The native visitor-guide anchor reaches the footer in an independent browser probe.",
+      "evidence_paths": [
+        "evidence/after/wide-reserved.json",
+        "evidence/after/wide-reserved.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-wide-reserved",
+      "verdict": "PASS",
+      "observed": "The reserved target preserves title, time, location and availability text. Independent browser probing at 1240x900 observed counts 0 -> 1 -> 1 on repeat -> 1 after attempting Full -> 2 -> 2 on second repeat. Both available buttons become disabled and read Reserved; Full stays disabled. Success text appears in the existing role=status region. Matching reserved-target raw observations also record the transitions.",
+      "evidence_paths": [
+        "evidence/after/wide-reserved.json",
+        "evidence/after/wide-reserved.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-narrow-initial",
+      "verdict": "PASS",
+      "observed": "Inspected original and actual images. The green/cream identity, overview introduction, dominant session list and subordinate visitor note retain their relationships. The list precedes the note, summary and guide in one column. Both note sibling gaps render at 18px. Direct source comparison finds only action margin-top 12px changed to 0; current HTML is byte-identical to approved HTML. Initial action availability and count 0 remain visible.",
+      "evidence_paths": [
+        "evidence/after/narrow-initial.json",
+        "evidence/after/narrow-initial.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-narrow-initial",
+      "verdict": "PASS",
+      "observed": "At 390x900, text and actions are readable, with no observed horizontal overflow. The longer workshop title wraps cleanly; buttons remain under their session details, and the visitor note is reachable below the list. The original narrow screenshot covers only the first 900px; the supplied reference HTML and actual full-page capture support the lower ordering. The native visitor-guide anchor reaches the footer in an independent browser probe.",
+      "evidence_paths": [
+        "evidence/after/narrow-initial.json",
+        "evidence/after/narrow-initial.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-narrow-initial",
+      "verdict": "PASS",
+      "observed": "The initial target preserves title, time, location and availability text. Independent browser probing at 390x900 observed counts 0 -> 1 -> 1 on repeat -> 1 after attempting Full -> 2 -> 2 on second repeat. Both available buttons become disabled and read Reserved; Full stays disabled. Success text appears in the existing role=status region. Matching reserved-target raw observations also record the transitions.",
+      "evidence_paths": [
+        "evidence/after/narrow-initial.json",
+        "evidence/after/narrow-initial.png",
+        "evidence/critic/observations.json",
+        "evidence/after/narrow-reserved.json"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "Inspected original and actual images. The green/cream identity, overview introduction, dominant session list and subordinate visitor note retain their relationships. The list precedes the note, summary and guide in one column. Both note sibling gaps render at 18px. Direct source comparison finds only action margin-top 12px changed to 0; current HTML is byte-identical to approved HTML. Reserved labels, count 2 and visible success message fit without obscuring content.",
+      "evidence_paths": [
+        "evidence/after/narrow-reserved.json",
+        "evidence/after/narrow-reserved.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "At 390x900, text and actions are readable, with no observed horizontal overflow. The longer workshop title wraps cleanly; buttons remain under their session details, and the visitor note is reachable below the list. The original narrow screenshot covers only the first 900px; the supplied reference HTML and actual full-page capture support the lower ordering. The native visitor-guide anchor reaches the footer in an independent browser probe.",
+      "evidence_paths": [
+        "evidence/after/narrow-reserved.json",
+        "evidence/after/narrow-reserved.png",
+        "evidence/critic/observations.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-narrow-reserved",
+      "verdict": "PASS",
+      "observed": "The reserved target preserves title, time, location and availability text. Independent browser probing at 390x900 observed counts 0 -> 1 -> 1 on repeat -> 1 after attempting Full -> 2 -> 2 on second repeat. Both available buttons become disabled and read Reserved; Full stays disabled. Success text appears in the existing role=status region. Matching reserved-target raw observations also record the transitions.",
+      "evidence_paths": [
+        "evidence/after/narrow-reserved.json",
+        "evidence/after/narrow-reserved.png",
+        "evidence/critic/observations.json"
+      ]
+    }
+  ],
+  "findings": [
+    {
+      "severity": "info",
+      "observed": "No scoped contradiction found. The repair restores the requested 18px relationship while preserving the original composition and local demo actions. The broad empty status reserve in the initial list and the separate summary below the note are inherited approved relationships, not grounds to redesign this local repair."
+    }
+  ],
+  "limitations": [
+    "Exact user acceptance was not supplied or inferred.",
+    "Independent visual judgment and local Edge probes cover the four requested targets; this is not cross-browser, assistive-technology or production certification.",
+    "The role=status text was observed in DOM and screenshots; actual spoken screen-reader announcements were not tested.",
+    "No builder handoff, reviewer conclusions, conformance verdicts, sibling cases or evaluation rubric was read."
+  ]
+}

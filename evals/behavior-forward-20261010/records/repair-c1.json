@@ -1,0 +1,253 @@
+{
+  "context_id": "/root/specialist_c1",
+  "case": "repair",
+  "method_note": "DEGRADED: single-context Impeccable assessment within assigned independent C1 role; no nested agents because coordinator explicitly prohibited spawning. This is bounded C1 conformance review, not a complete Impeccable critique or user acceptance.",
+  "skill_sources": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\SKILL.md",
+      "sha256": "a519986f66134a4919495ec407fdc96b3cd5ea4c3f117c2a112bb21dee27b7bf"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\package\\joedesign\\references\\operation.md",
+      "sha256": "56099b5cc4df90fac3e16c05115d33d626fbc18951841de65cd0a15e637e1601"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\SKILL.md",
+      "sha256": "c2c0d8e5ea5dc3f36b879f099e72d83f506a6e626dcc075c1a7e14763f200d4d"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\reference\\critique.md",
+      "sha256": "a763d1474f5c1125a937b5872abb1fc40b2bd44dd7d4a7701ac2147401bf4b2b"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\scripts\\context.mjs",
+      "sha256": "70abfb0923efe99950f6969b49f05f4e872b198f54ab8930a96ccbed9b4dc90f"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.agents\\skills\\impeccable\\scripts\\detect.mjs",
+      "sha256": "b2c5731c367c129e361bdfb28c4f697e84818c77e04d88ad21eeb89320f06a0e"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\SKILL.md",
+      "sha256": "ea087c341bfb5b23195c7302027268ede86da802554c18a5c4896a6017b439f9"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\references\\quick-reference.md",
+      "sha256": "0609bc7c89dacb40472465d8fc14257b56b2c43439660fc8d6fa3b8c022e1876"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\scripts\\search.py",
+      "sha256": "d54e648fe0ec2932cac66684220cc17be4bd4b4eba1d23d3195d509d398db374"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\ui-ux-pro-max\\data\\ux-guidelines.csv",
+      "sha256": "ff81ec613f70ba9fc3fcce52dbe4ae35d44b2079dbe6dc066d2d6e38c28facd5"
+    },
+    {
+      "path": "C:\\Users\\tjdwo\\.codex\\skills\\web-design-guidelines\\SKILL.md",
+      "sha256": "f4647ca866a3accf763777f83e7682954f0187cd6bea7eea0399796652414e8f"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\web-interface-guidelines.md",
+      "sha256": "d246b026f4f29b5823a9cc857f9edf3d2507002e055e32040cadeaf3b38e0234"
+    }
+  ],
+  "actual_use_details": {
+    "I": "Read actual Impeccable skill and critique reference. Ran context.mjs --target index.html once from the repair directory. Independently inspected source originals and all supplied after screenshots before running detect.mjs --json index.html. Applied brief-wins/refinement-preserves and hierarchy/grouping criteria. Detector ran in degraded regex mode because HTML parser modules were unavailable; its single Arial warning is outside approved local spacing scope.",
+    "U": "Read actual UI UX Pro Max skill and quick-reference. Executed search.py \"responsive horizontal overflow mobile\" --domain ux. Top match Responsive/Horizontal Scroll/Web is applicable; table result not applicable. Compared source CSS and complete narrow/wide captures, independently measured overflow and control sizes; preserved project-specific spacing rather than generic defaults.",
+    "V": "Read actual web-design-guidelines skill, fetched fresh official command.md via web and saved its exact downloaded bytes. Reviewed applicable semantic-button, keyboard/focus, feedback, content handling and interaction rules against source and independent Edge run. No full-site accessibility certification."
+  },
+  "reviews": [
+    {
+      "claim_id": "visual-preservation-wide-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent source and image inspection: approved green/cream identity, large opening headline, prominent session list, secondary visitor note and protected content are preserved at 1240px. Rendered paragraph-to-action and heading-to-paragraph gaps are both 18px before and after reservation. The two-column 28px separation is retained. Current source SHA256 exactly matches reference/approved.html. Initial reference and current captures match visually; reserved labels/count/status introduce no competing visual hierarchy. Detector Arial warning conflicts with approved preservation scope and is not a repair failure.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\detector.json"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-wide-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent source and image inspection: approved green/cream identity, large opening headline, prominent session list, secondary visitor note and protected content are preserved at 1240px. Rendered paragraph-to-action and heading-to-paragraph gaps are both 18px before and after reservation. The two-column 28px separation is retained. Current source SHA256 exactly matches reference/approved.html. Initial reference and current captures match visually; reserved labels/count/status introduce no competing visual hierarchy. Detector Arial warning conflicts with approved preservation scope and is not a repair failure.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-1240.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\detector.json"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-narrow-initial",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent source and image inspection: approved green/cream identity, large opening headline, prominent session list, secondary visitor note and protected content are preserved at 390px. Rendered paragraph-to-action and heading-to-paragraph gaps are both 18px before and after reservation. The two-column 28px separation becomes the approved single-column 24px separation on this narrow target. Current source SHA256 exactly matches reference/approved.html. Initial reference and current captures match visually; reserved labels/count/status introduce no competing visual hierarchy. Detector Arial warning conflicts with approved preservation scope and is not a repair failure.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\detector.json"
+      ]
+    },
+    {
+      "claim_id": "visual-preservation-narrow-reserved",
+      "reviewer": "I",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent source and image inspection: approved green/cream identity, large opening headline, prominent session list, secondary visitor note and protected content are preserved at 390px. Rendered paragraph-to-action and heading-to-paragraph gaps are both 18px before and after reservation. The two-column 28px separation becomes the approved single-column 24px separation on this narrow target. Current source SHA256 exactly matches reference/approved.html. Initial reference and current captures match visually; reserved labels/count/status introduce no competing visual hierarchy. Detector Arial warning conflicts with approved preservation scope and is not a repair failure.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\reference-390.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\detector.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-wide-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "At 1240x900, independently observed initial and reserved states have no horizontal overflow, readable unchanged session titles/time/location/availability, and 44px controls. Sessions and aside retain the 2:1 two-column relationship with 28px separation and 25px border-inclusive panel inset. The targeted UI UX Pro Max Horizontal Scroll guidance applies; table guidance is inapplicable.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-wide-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "At 1240x900, independently observed initial and reserved states have no horizontal overflow, readable unchanged session titles/time/location/availability, and 44px controls. Sessions and aside retain the 2:1 two-column relationship with 28px separation and 25px border-inclusive panel inset. The targeted UI UX Pro Max Horizontal Scroll guidance applies; table guidance is inapplicable.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-narrow-initial",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "At 390x900, independently observed initial and reserved states have no horizontal overflow, readable unchanged session titles/time/location/availability, and 44px controls. Session actions move under content; sessions, note, summary, guide retain the approved single-column order with 24px separation and 21px border-inclusive panel inset. Long workshop title wraps without clipping. The targeted UI UX Pro Max Horizontal Scroll guidance applies; table guidance is inapplicable.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "responsive-preservation-narrow-reserved",
+      "reviewer": "U",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "At 390x900, independently observed initial and reserved states have no horizontal overflow, readable unchanged session titles/time/location/availability, and 44px controls. Session actions move under content; sessions, note, summary, guide retain the approved single-column order with 24px separation and 21px border-inclusive panel inset. Long workshop title wraps without clipping. The targeted UI UX Pro Max Horizontal Scroll guidance applies; table guidance is inapplicable.",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-wide-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent native-button keyboard activation (Enter then Space) increases count 0 to 1 to 2; each available button changes to Reserved and becomes disabled. Native click attempts on disabled Reserved and Full leave count at 1. Full remains disabled. Session facts remain unchanged. Focus has a visible 3px outline; success text is present in role=status. Supplied mouse interaction logs agree. This verifies visible feedback and live-region semantics, not audible screen-reader delivery (including repeated identical text).",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\index.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-wide-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent native-button keyboard activation (Enter then Space) increases count 0 to 1 to 2; each available button changes to Reserved and becomes disabled. Native click attempts on disabled Reserved and Full leave count at 1. Full remains disabled. Session facts remain unchanged. Focus has a visible 3px outline; success text is present in role=status. Supplied mouse interaction logs agree. This verifies visible feedback and live-region semantics, not audible screen-reader delivery (including repeated identical text).",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\wide-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\index.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-narrow-initial",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent native-button keyboard activation (Enter then Space) increases count 0 to 1 to 2; each available button changes to Reserved and becomes disabled. Native click attempts on disabled Reserved and Full leave count at 1. Full remains disabled. Session facts remain unchanged. Focus has a visible 3px outline; success text is present in role=status. Supplied mouse interaction logs agree. This verifies visible feedback and live-region semantics, not audible screen-reader delivery (including repeated identical text).",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-initial.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\index.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    },
+    {
+      "claim_id": "reservation-preservation-narrow-reserved",
+      "reviewer": "V",
+      "raci_step": "C1",
+      "verdict": "PASS",
+      "observed": "Independent native-button keyboard activation (Enter then Space) increases count 0 to 1 to 2; each available button changes to Reserved and becomes disabled. Native click attempts on disabled Reserved and Full leave count at 1. Full remains disabled. Session facts remain unchanged. Focus has a visible 3px outline; success text is present in role=status. Supplied mouse interaction logs agree. This verifies visible feedback and live-region semantics, not audible screen-reader delivery (including repeated identical text).",
+      "evidence_paths": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\after\\narrow-reserved.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\independent-observations.json",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\index.html",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\review-c1\\web-interface-guidelines.md"
+      ]
+    }
+  ],
+  "material_concerns": [],
+  "preexisting_out_of_scope": [
+    {
+      "location": "index.html:3",
+      "finding": "No explicit hover feedback for buttons/action link; approved source has the same behavior. Not introduced by spacing repair."
+    },
+    {
+      "location": "index.html:5",
+      "finding": "No skip-to-main link; approved source has the same markup. Not introduced by spacing repair."
+    }
+  ],
+  "scope_limitations": [
+    "Exact 1240x900 and 390x900 initial/reserved scope only.",
+    "No user acceptance or authenticated host/skill receipts created. Local hashes identify inspected bytes only.",
+    "Audible assistive-technology announcement was not tested.",
+    "Impeccable full critique protocol intentionally not claimed: nested assessments, human browser overlay, heuristic scoring and improvement questions would exceed assigned C1 scope. Questions skipped: scoped reviewer must return findings to coordinator.",
+    "Headless Edge/Playwright independently observed current build; no visible browser overlay was presented. Ephemeral HTTP server and browser were closed after the run."
+  ],
+  "input_sha256": {
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\index.html": "826dac4820a7ddecb0177bd2e01f9cbe85e48ea97384387d08881636590e5164",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\evidence\\baseline.json": "ac8ff6b5952fc7e9a694055a939fc056e7ff8825216d7de679f878a9d5cc9432",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\DESIGN.md": "5b0a4fe966ca34acf7effed31361b0fd18356349b3a353a20b9e8c4df9e7434e",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\PRODUCT.md": "15987958f4e651786677e06f7e7b490e3691a3bcb5a3ee5d98798dfb23e025c1",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\behavior-forward-20261010\\cases\\repair\\reference\\approved.html": "826dac4820a7ddecb0177bd2e01f9cbe85e48ea97384387d08881636590e5164"
+  }
+}

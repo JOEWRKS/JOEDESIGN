@@ -1,0 +1,12 @@
+{
+  "a": {
+    "exit_code": 0,
+    "checks": 51,
+    "eligible": true
+  },
+  "b": {
+    "exit_code": 0,
+    "checks": 51,
+    "eligible": true
+  }
+}
