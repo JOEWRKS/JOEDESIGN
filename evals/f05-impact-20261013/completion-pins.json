@@ -1,0 +1,31 @@
+{
+  "source_commit": "735befde71d03a60f1de2c1ebd94eae4acaf9a90",
+  "records": [
+    {
+      "original": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\isolated-r2\\summary.json",
+      "archive": "evals\\f05-impact-20261013\\isolated-r2-summary.json",
+      "sha256": "c3f92d58ad0d5d1f29415bacecc162bfd19e7f22957214e288aa4425d5e48b6d"
+    },
+    {
+      "original": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\joint-source-r1\\summary.json",
+      "archive": "evals\\f05-impact-20261013\\joint-source-r1-summary.json",
+      "sha256": "12b91c13da0b5400c5f68970febfd45f164e2034c38a34fda326007a9c15c034"
+    },
+    {
+      "original": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\joint-isolated-r1\\summary.json",
+      "archive": "evals\\f05-impact-20261013\\joint-isolated-r1-summary.json",
+      "sha256": "e4873cbf3af34cdb77c619d1f86fc893b8093d5201abca8ac388880df4c9a005"
+    },
+    {
+      "original": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\joint-managed-r1\\summary.json",
+      "archive": "evals\\f05-impact-20261013\\joint-managed-r1-summary.json",
+      "sha256": "3651ca2401fedf96acee004a6987b1365ab401cf6e0114c1f58f23e3d2c02682"
+    }
+  ],
+  "installation_receipt_sha256": "d440248fbfb42af0dd1900b2fd2ec8aac25333d6d99d610e8155cbc895386985",
+  "installed_source_files": 30,
+  "preserved_cache_files": 14,
+  "installed_total_files": 44,
+  "backup_total_files": 42,
+  "post_execution_inventory_matches": true
+}
