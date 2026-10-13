@@ -1,0 +1,32 @@
+[
+  {
+    "case": "apply-rollback",
+    "passed": true,
+    "scope": "Temporary directories only"
+  },
+  {
+    "case": "target-drift",
+    "passed": true,
+    "scope": "Temporary directories only"
+  },
+  {
+    "case": "source-drift",
+    "passed": true,
+    "scope": "Temporary directories only"
+  },
+  {
+    "case": "backup-drift",
+    "passed": true,
+    "scope": "Temporary directories only"
+  },
+  {
+    "case": "new-file-drift",
+    "passed": true,
+    "scope": "Temporary directories only"
+  },
+  {
+    "case": "unexpected-file",
+    "passed": true,
+    "scope": "Temporary directories only"
+  }
+]

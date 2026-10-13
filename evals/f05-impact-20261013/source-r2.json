@@ -1,0 +1,15 @@
+{
+  "skills/joedesign/scripts/harness/impact.py": "8454b4fd8df5ebb97d04e015ecc35edd4a21651f2cfaf049943da3e2bd4b774f",
+  "skills/joedesign/scripts/harness_cli.py": "a4b7a5597ca2fb7df1209cabe78b781569a2ac4f9d910258d060844a93024e8e",
+  "skills/joedesign/references/conformance.md": "19068adc501770d4ee8930b4a94245fad8bbfcaed8c8b10b62cd0ff95ccf00bf",
+  "skills/joedesign/references/impact.md": "143889839dc9f52284f5cafe8b2129690ab54993821854cfbee5cd973f694be2",
+  "tests/test_design_impact.py": "af064e618f10b5524c1f9bbe213f160599170c0dcec839febf236f0d6ada895e",
+  "evals/f05-impact-20261013/build-fixtures.py": "03ea7bcdb1087b070bfa7fa5603cf4d5655ceefb36b2e01d44ab6b7702e85728",
+  "evals/f05-impact-20261013/collect-served.mjs": "5cc311b737d4f1cca5094118c104d4d96c54ec8e44f2b4604ff81316a520595b",
+  "evals/f05-impact-20261013/CONTRACT.md": "92e16742bdec82faf37c0d87e3b0163443393b6f89a9364f0fe37d82fab28464",
+  "evals/f05-impact-20261013/impact-regression.txt": "8be13ef546b40095a8897d625bc3b7c522e6b1b4cf9d29ec13a8b0990b2d22cf",
+  "evals/f05-impact-20261013/node-regression.txt": "ce68f6394419ab1f6a1a1676037cb3003e466428508498b80f46baf66407054a",
+  "evals/f05-impact-20261013/python-regression.txt": "8d2db23c88b3964464f0f1187384d46921131786f00b43927a04cd2e41a2d562",
+  "evals/f05-impact-20261013/README.md": "3ff1474e1da04c731a60f513e8a4b46b2a7c8f6f992c206cdee7fbffcc0ab7e8",
+  "evals/f05-impact-20261013/verify-isolated.py": "ea13367afe2a0d7c5679d0c3baa53c9f6edcf498f61021859325db29087da706"
+}

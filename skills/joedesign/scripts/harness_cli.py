@@ -15,6 +15,13 @@ def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('version', help='Identify the single JOEDESIGN package')
+    p = sub.add_parser('inspect-impact', help='Read-only bounded DESIGN impact candidates; no reuse authorization')
+    p.add_argument('--project', type=Path, required=True)
+    p.add_argument('--request', type=Path, required=True)
+    p.add_argument('--request-sha256', required=True)
+    p.add_argument('--review-sha256')
+    p.add_argument('--evidence-root', type=Path, action='append', default=[])
+    p.add_argument('--output', type=Path)
     p = sub.add_parser('verify-design', help='Evaluate pinned rule coverage and actual observations; no acceptance')
     p.add_argument('--baseline', type=Path, required=True)
     p.add_argument('--baseline-sha256', required=True)
@@ -43,7 +50,13 @@ def main(argv=None):
     args = parser.parse_args(argv)
     code = 0
     package = Path(__file__).resolve().parents[1]
-    if args.command == 'verify-design':
+    if args.command == 'inspect-impact':
+        from harness.impact import inspect_impact
+        result = inspect_impact(args.project, args.request, args.request_sha256,
+                                args.review_sha256, args.evidence_root)
+        code = 0 if result['checks'] and not result['findings'] and all(
+            c['classification'] == 'reusable-candidate' for c in result['checks']) else 2
+    elif args.command == 'verify-design':
         from harness.conformance import load_baseline, evaluate
         baseline = load_baseline(args.baseline, args.baseline_sha256, args.project)
         result = evaluate(baseline, args.baseline_sha256, args.project, args.observation, args.reviews)

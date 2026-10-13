@@ -1,0 +1,602 @@
+diff --git a/skills/joedesign/references/conformance.md b/skills/joedesign/references/conformance.md
+index bfab86d..fe5dd64 100644
+--- a/skills/joedesign/references/conformance.md
++++ b/skills/joedesign/references/conformance.md
+@@ -137,6 +137,13 @@ canonical TASK/ROADMAP for it. Use separate scoped baselines so independent work
+ continues; the consumer may explicitly reuse unchanged checks under reviewed new
+ baselines. Never claim an uninstalled/unconnected consumer is protecting a project.
+ 
++For an append-only DESIGN comment or an independently reviewed unrelated section,
++the read-only [bounded impact diagnosis](impact.md) can identify old geometry
++evidence that remains applicable. It produces candidates, never a new PASS receipt
++or reuse permission. CSS/runtime changes and specialist judgments need fresh proof.
++Use only a separately reviewed, explicitly pinned consumer transition to reuse a
++candidate; ordinary stale-evidence checks still apply without that transition.
++
+ Local files and process records remain unauthenticated. Neither tool prevents
+ someone changing both pin and baseline, forging observations, bypassing the CLI,
+ editing a work record directly or saying “done” in chat. Protected host/CI enforcement
+diff --git a/skills/joedesign/scripts/harness_cli.py b/skills/joedesign/scripts/harness_cli.py
+index 1963616..03a3eb3 100644
+--- a/skills/joedesign/scripts/harness_cli.py
++++ b/skills/joedesign/scripts/harness_cli.py
+@@ -15,6 +15,13 @@ def main(argv=None):
+     parser = argparse.ArgumentParser(description=__doc__)
+     sub = parser.add_subparsers(dest='command', required=True)
+     sub.add_parser('version', help='Identify the single JOEDESIGN package')
++    p = sub.add_parser('inspect-impact', help='Read-only bounded DESIGN impact candidates; no reuse authorization')
++    p.add_argument('--project', type=Path, required=True)
++    p.add_argument('--request', type=Path, required=True)
++    p.add_argument('--request-sha256', required=True)
++    p.add_argument('--review-sha256')
++    p.add_argument('--evidence-root', type=Path, action='append', default=[])
++    p.add_argument('--output', type=Path)
+     p = sub.add_parser('verify-design', help='Evaluate pinned rule coverage and actual observations; no acceptance')
+     p.add_argument('--baseline', type=Path, required=True)
+     p.add_argument('--baseline-sha256', required=True)
+@@ -43,7 +50,13 @@ def main(argv=None):
+     args = parser.parse_args(argv)
+     code = 0
+     package = Path(__file__).resolve().parents[1]
+-    if args.command == 'verify-design':
++    if args.command == 'inspect-impact':
++        from harness.impact import inspect_impact
++        result = inspect_impact(args.project, args.request, args.request_sha256,
++                                args.review_sha256, args.evidence_root)
++        code = 0 if result['checks'] and not result['findings'] and all(
++            c['classification'] == 'reusable-candidate' for c in result['checks']) else 2
++    elif args.command == 'verify-design':
+         from harness.conformance import load_baseline, evaluate
+         baseline = load_baseline(args.baseline, args.baseline_sha256, args.project)
+         result = evaluate(baseline, args.baseline_sha256, args.project, args.observation, args.reviews)
+diff --git a/skills/joedesign/scripts/harness/impact.py b/skills/joedesign/scripts/harness/impact.py
+new file mode 100644
+index 0000000..7104b83
+--- /dev/null
++++ b/skills/joedesign/scripts/harness/impact.py
+@@ -0,0 +1,276 @@
++"""Bounded, read-only DESIGN impact diagnosis. Never authorizes evidence reuse."""
++import hashlib
++import json
++from pathlib import Path
++import re
++
++from .conformance import evaluate, input_fingerprint, input_path, load_baseline
++from .io import digest, unique_pairs
++
++
++def _need(ok, message):
++    if not ok:
++        raise ValueError(message)
++
++
++def _text(value):
++    return isinstance(value, str) and bool(value.strip())
++
++
++def _sha(value):
++    return isinstance(value, str) and re.fullmatch('[a-f0-9]{64}', value) is not None
++
++
++def _unique(rows, key):
++    _need(isinstance(rows, list), 'Expected list: ' + key)
++    result = {}
++    for row in rows:
++        _need(isinstance(row, dict) and _text(row.get(key)) and row[key] not in result,
++              'Missing/duplicate identity: ' + key)
++        result[row[key]] = row
++    return result
++
++
++class Reader:
++    def __init__(self, project, evidence_roots):
++        self.project = Path(project).resolve(strict=True)
++        self.roots = [self.project, *(Path(p).resolve(strict=True) for p in evidence_roots)]
++        self.seen = {}
++        self.aliases = {}
++
++    def read(self, name, expected=None, evidence=False):
++        _need(isinstance(name, str), 'Invalid path')
++        if evidence and Path(name).is_absolute():
++            path = Path(name).resolve(strict=True)
++            _need(any(path.is_relative_to(p) for p in self.roots), 'Evidence outside allowed roots')
++        else:
++            path = input_path(self.project, name)
++        _need(path.is_file() and path.stat().st_size <= 64 * 1024 * 1024, 'Invalid/oversize input')
++        raw = path.read_bytes()
++        actual = hashlib.sha256(raw).hexdigest()
++        if expected is not None:
++            _need(_sha(expected) and actual == expected, 'Pinned bytes changed: ' + name)
++        _need(path not in self.seen or self.seen[path] == actual, 'Input changed during diagnosis')
++        self.seen[path] = actual
++        self.aliases[(name, evidence)] = path
++        return raw
++
++    def ref(self, value):
++        _need(isinstance(value, dict) and _sha(value.get('sha256')), 'Invalid pinned reference')
++        return self.read(value['path'], value['sha256'])
++
++    def json(self, value):
++        data = json.loads(self.ref(value).decode('utf-8-sig'), object_pairs_hook=unique_pairs,
++                          parse_constant=lambda x: (_ for _ in ()).throw(ValueError(x)))
++        _need(isinstance(data, dict), 'Expected JSON object')
++        return data
++
++    def verify(self):
++        for (name, evidence), previous in self.aliases.items():
++            current = (Path(name).resolve(strict=True) if evidence and Path(name).is_absolute()
++                       else input_path(self.project, name))
++            _need(current == previous, 'Input path changed during diagnosis')
++        for path, expected in self.seen.items():
++            _need(path.resolve(strict=True) == path and
++                  hashlib.sha256(path.read_bytes()).hexdigest() == expected,
++                  'Input changed during diagnosis: ' + str(path))
++
++
++def inspect_impact(project, request_path, request_sha256, review_sha256=None, evidence_roots=()):
++    """Return candidates and reasons; no mutation, pin refresh or new PASS receipt."""
++    report = {'schema': 'joedesign.impact.v1', 'scope_id': None, 'reuse_authorized': False,
++              'acceptance': 'NOT_GRANTED', 'trust': 'LOCAL_UNAUTHENTICATED',
++              'checks': [], 'authority_delta': [], 'findings': [],
++              'limits': ['Append-only reviewed DESIGN changes; no selector/CSS impact precision',
++                         'Local pins/contexts do not authenticate reviewers or approval',
++                         'Served dependency completeness requires actual scoped collection and review',
++                         'Candidate only; existing gate remains authoritative until separately reviewed consumption']}
++    reader = Reader(project, evidence_roots)
++    def finding(kind, code, detail):
++        report['findings'].append({'kind': kind, 'code': code, 'detail': str(detail)})
++    try:
++        request_path = Path(request_path).resolve(strict=True)
++        request_ref = {'path': request_path.relative_to(reader.project).as_posix(), 'sha256': request_sha256}
++        request = reader.json(request_ref)
++        _need(request.get('schema') == 'joedesign.impact-request.v1', 'Unsupported request schema')
++        report['request'] = request_ref
++        for name in ('old_baseline', 'new_baseline', 'old_result', 'served', 'review', 'authority_before'):
++            report[name] = request.get(name)
++        transition = digest({k: v for k, v in request.items() if k != 'review'})
++        report['transition_sha256'] = transition
++        old, new = reader.json(request['old_baseline']), reader.json(request['new_baseline'])
++        # Current source must validate normally; the old baseline is checked for exact
++        # structural equivalence below, without weakening load_baseline's authority check.
++        load_baseline(input_path(reader.project, request['new_baseline']['path']),
++                      request['new_baseline']['sha256'], reader.project)
++        report['scope_id'] = new['scope_id']
++        old_checks = _unique(old['required_checks'], 'check_id')
++        new_checks = _unique(new['required_checks'], 'check_id')
++        report['checks'] = [dict(check_id=c['check_id'], target_id=c['target_id'],
++            method=c['method'], criterion_sha256=c['criterion_sha256'],
++            classification='unknown', reasons=[]) for c in new['required_checks']]
++        _need(set(old_checks) == set(new_checks), 'Required coverage changed')
++        context = lambda b: {k: v for k, v in b.items() if k not in ('authority', 'authorization_ref')}
++        _need(digest(context(old)) == digest(context(new)), 'Baseline context/criterion/target/acceptance changed')
++        old_authority, new_authority = _unique(old['authority'], 'path'), _unique(new['authority'], 'path')
++        snapshots = _unique(request['authority_before'], 'path')
++        _need(set(old_authority) == set(new_authority) == set(snapshots), 'Authority coverage changed')
++        # No opaque authority field can be silently waived by the hash exception.
++        for name, before in old_authority.items():
++            _need({k: v for k, v in before.items() if k != 'sha256'} ==
++                  {k: v for k, v in new_authority[name].items() if k != 'sha256'},
++                  'Authority definition changed')
++        if not review_sha256:
++            finding('unknown', 'REVIEW_REQUIRED', 'Independent semantic-review pin missing')
++            return report
++        _need(request['review']['sha256'] == review_sha256, 'Independent review pin mismatch')
++        review = reader.json(request['review'])
++        _need(review.get('schema') == 'joedesign.impact-review.v1' and
++              review.get('scope_id') == new['scope_id'] and review.get('transition_sha256') == transition,
++              'Semantic review transition mismatch')
++        _need(_text(review.get('implementation_context')) and _text(review.get('review_context')) and
++              review['implementation_context'] != review['review_context'] and _text(review.get('scope_analysis')),
++              'Substantive independent review missing')
++        analyses = _unique(review.get('authority_analysis'), 'path')
++        _need(set(analyses) == set(old_authority), 'Authority review incomplete')
++        reviewed = _unique(review.get('checks'), 'check_id')
++        _need(set(reviewed) <= set(new_checks), 'Unknown review check')
++        for name, before in old_authority.items():
++            snapshot = snapshots[name]['snapshot']
++            _need(snapshot['sha256'] == before['sha256'], 'Old authority snapshot binding mismatch')
++            a = reader.ref(snapshot)
++            b = reader.read(name, new_authority[name]['sha256'])
++            analysis = analyses[name]
++            _need(_text(analysis.get('rationale')), 'Authority rationale missing')
++            kind = analysis.get('kind')
++            suffix = b[len(a):] if b.startswith(a) else b''
++            if a == b:
++                _need(kind == 'UNCHANGED', 'Authority review contradicts unchanged bytes')
++            else:
++                _need(name == 'DESIGN.md', 'Only root DESIGN.md changes supported')
++                _need(b.startswith(a) and suffix, 'Existing DESIGN bytes changed; fresh review required')
++                content = suffix.decode('utf-8').strip()
++                if kind == 'COMMENT_APPEND':
++                    _need(content.startswith('<!--') and content.endswith('-->') and
++                          '-->' not in content[4:-3], 'Not one append-only comment')
++                elif kind == 'UNRELATED_SECTION_APPEND':
++                    _need(suffix.startswith((b'\n', b'\r\n')) and content.startswith('## '), 'Not an appended section')
++                    heading = content.splitlines()[0]
++                    _need(heading not in a.decode('utf-8').splitlines(), 'Appended heading duplicates existing section')
++                else:
++                    raise ValueError('Unsupported authority change')
++            report['authority_delta'].append({'path': name, 'old_sha256': before['sha256'],
++                'new_sha256': new_authority[name]['sha256'], 'kind': kind,
++                'appended_sha256': hashlib.sha256(suffix).hexdigest(), 'rationale': analysis['rationale']})
++
++        receipt = reader.json(request['old_result'])
++        _need(receipt.get('schema') == 'joedesign.conformance.v1' and
++              receipt.get('scope_id') == new['scope_id'] and
++              receipt.get('baseline_sha256') == request['old_baseline']['sha256'] and
++              receipt.get('acceptance') == 'NOT_GRANTED', 'Old result identity/acceptance mismatch')
++        prior = _unique(receipt.get('results'), 'check_id')
++        _need(set(prior) == set(old_checks), 'Old result incomplete/extra coverage')
++        unresolved = _unique(receipt.get('unresolved'), 'check_id')
++        _need(set(unresolved) <= set(old_checks), 'Unknown unresolved check')
++        served = reader.json(request['served'])
++        _need(served.get('schema') == 'joedesign.served-build.v1' and
++              served.get('scope_id') == new['scope_id'] and
++              served.get('baseline_sha256') == request['new_baseline']['sha256'], 'Served scope/baseline mismatch')
++        target_map = _unique(new['targets'], 'id')
++        served_map = {}
++        for target in served.get('targets', []):
++            tid = target['target']['id']
++            _need(tid not in served_map and tid in target_map, 'Duplicate/unknown served target')
++            served_map[tid] = target
++        _need(set(served_map) == set(target_map), 'Served target coverage missing')
++
++        for row in report['checks']:
++            cid = row['check_id']; check = new_checks[cid]; previous = prior[cid]
++            row['previous_result'] = previous
++            try:
++                for name in check['inputs']:
++                    reader.read(name)
++                fingerprint = input_fingerprint(reader.project, check['inputs'])
++                row['input_fingerprint'] = fingerprint
++                _need(all(previous.get(k) == check[k] for k in ('check_id', 'target_id', 'method', 'criterion_sha256')),
++                      'Previous criterion identity mismatch')
++                if previous.get('input_fingerprint') != fingerprint:
++                    row.update(classification='rerun', reasons=['Runtime input bytes changed; no CSS precision claimed'])
++                    continue
++                _need(previous.get('status') == 'PASS' and cid not in unresolved,
++                      'Previous failure/unverified/unresolved result retained')
++                _need(check['method'] == 'geometry', 'v1 reuses geometry only; specialist claims need fresh scoped review')
++                decision = reviewed.get(cid)
++                _need(decision and _text(decision.get('rationale')) and
++                      isinstance(decision.get('blocking_findings'), list), 'Per-check reviewed rationale missing')
++                _need(decision.get('verdict') in ('UNAFFECTED', 'AFFECTED', 'UNKNOWN'), 'Invalid impact verdict')
++                _need(decision.get('source_refs'), 'Per-check actual source references missing')
++                for evidence in decision['source_refs']:
++                    reader.ref(evidence)
++                if decision['verdict'] == 'AFFECTED':
++                    row.update(classification='rerun', reasons=[decision['rationale']]); continue
++                _need(decision['verdict'] == 'UNAFFECTED' and not decision['blocking_findings'],
++                      'Review unknown or blocking finding/rejection retained')
++                target = served_map[check['target_id']]
++                _need(target['target'] == target_map[check['target_id']] and _text(target.get('build_id')),
++                      'Served target/build identity mismatch')
++                _need(target.get('dependencies_complete') is True and target.get('limitations') == [],
++                      'Conditional/late/served dependencies unverified')
++                resources = _unique(target.get('resources'), 'path')
++                expected_inputs = set().union(*(set(c['inputs']) for c in new_checks.values()
++                                               if c['target_id'] == check['target_id']))
++                _need(set(resources) == expected_inputs, 'Served dependency coverage mismatch')
++                for name, resource in resources.items():
++                    reader.read(name, resource['sha256'])
++                    _need(resource.get('response_sha256') == resource['sha256'], 'Served response differs from current file')
++                _need(isinstance(previous.get('evidence'), list) and previous['evidence'], 'Previous evidence missing')
++                logs = []
++                bound_paths = set()
++                for proof in previous['evidence']:
++                    raw = reader.read(proof['path'], proof['sha256'], evidence=True)
++                    bound_paths.add(Path(proof['path']).resolve() if Path(proof['path']).is_absolute()
++                                    else input_path(reader.project, proof['path']))
++                    try:
++                        log = json.loads(raw.decode('utf-8-sig'), object_pairs_hook=unique_pairs)
++                    except (ValueError, UnicodeError):
++                        continue
++                    if isinstance(log, dict) and 'target' in log and 'design' in log:
++                        logs.append((proof['path'], log))
++                _need(len(logs) == 1, 'Missing/ambiguous previous target observation')
++                log_path, log = logs[0]
++                _need(isinstance(log.get('design'), dict), 'Malformed previous design observation')
++                _need(log.get('target') == target['target'] and log.get('build_id') == target['build_id'] and
++                      log.get('design', {}).get('baseline_sha256') == request['old_baseline']['sha256'] and
++                      log.get('design', {}).get('input_fingerprints', {}).get(cid) == fingerprint,
++                      'Observed target/baseline/build/input mismatch')
++                _need(isinstance(log.get('frames'), list) and log['frames'], 'Rendered frame missing')
++                _need(isinstance(log.get('frame_hashes'), dict), 'Rendered frame hashes missing')
++                for frame in log['frames']:
++                    _need(_sha(log['frame_hashes'].get(frame)), 'Rendered frame hash missing')
++                    reader.read(frame, log['frame_hashes'][frame], evidence=True)
++                    resolved = Path(frame).resolve() if Path(frame).is_absolute() else input_path(reader.project, frame)
++                    _need(resolved in bound_paths, 'Frame not bound in old result')
++                absolute_log = Path(log_path) if Path(log_path).is_absolute() else input_path(reader.project, log_path)
++                evaluated = evaluate(old, request['old_baseline']['sha256'], reader.project, [absolute_log],
++                                     target_ids=[check['target_id']])
++                proof_row = next(r for r in evaluated['results'] if r['check_id'] == cid)
++                _need(proof_row['status'] == 'PASS', 'Prior measured result not reproducible from immutable evidence')
++                row.update(classification='reusable-candidate', reasons=[decision['rationale']],
++                           target=target['target'], build_id=target['build_id'])
++            except (ValueError, OSError, KeyError, TypeError, StopIteration) as error:
++                row.update(classification='unknown', reasons=[str(error)])
++    except (ValueError, OSError, KeyError, TypeError) as error:
++        finding('invalid', 'IMPACT_INPUT_INVALID', error)
++        for row in report['checks']:
++            row.update(classification='unknown', reasons=[str(error)])
++    finally:
++        try:
++            reader.verify()
++        except (ValueError, OSError) as error:
++            finding('unknown', 'CHANGED_DURING_READ', error)
++            for row in report['checks']:
++                row.update(classification='unknown', reasons=['Inputs changed during diagnosis'])
++        report['integrity'] = [{'path': str(p), 'sha256': h} for p, h in sorted(reader.seen.items())]
++        report['counts'] = {k: sum(c['classification'] == k for c in report['checks'])
++                            for k in ('reusable-candidate', 'rerun', 'unknown')}
++    return report
+diff --git a/skills/joedesign/references/impact.md b/skills/joedesign/references/impact.md
+new file mode 100644
+index 0000000..6f39d0d
+--- /dev/null
++++ b/skills/joedesign/references/impact.md
+@@ -0,0 +1,64 @@
++# Bounded DESIGN impact diagnosis
++
++Use this only when existing DESIGN bytes are preserved and a comment or unrelated
++section is appended. Review applicability, defaults, exceptions and new requirements
++against the original before treating it as unrelated. A heading or HTML comment is
++not evidence of semantic independence. Original authority changes still need their
++own authorization; this tool does not grant it.
++
++```text
++python <joedesign>/scripts/harness_cli.py inspect-impact --project <root> --request <file> --request-sha256 <pin> --review-sha256 <independent-pin> --output <new-report>
++```
++
++Repeat `--evidence-root` to admit old absolute capture paths outside the project.
++Request/source paths stay inside the project. Inputs are pinned and reread before
++return; output cannot overwrite an existing file. Exit 0 means every required check
++is a candidate; exit 2 means invalid, unknown or rerun checks; exit 1 is an execution
++or output error. No exit value authorizes reuse or user acceptance.
++
++Request `joedesign.impact-request.v1` contains pinned `{path,sha256}` references
++`old_baseline`, `new_baseline`, `old_result`, `served`, `review`, and
++`authority_before:[{path,snapshot:{path,sha256}}]`. The snapshots preserve original
++authority bytes. Old/new baseline definitions must be identical except authority
++hashes and `authorization_ref`; rules, targets, coverage, criteria, acceptance and
++opaque fields cannot change. Only root `DESIGN.md` may change in this version.
++
++`review` has schema `joedesign.impact-review.v1`, `scope_id`, `transition_sha256`
++(canonical JSON SHA256 of the request excluding `review`), distinct nonempty
++`implementation_context`/`review_context`, and substantive `scope_analysis`.
++`authority_analysis` covers every authority path exactly once with `path`, `kind`
++(`UNCHANGED`, `COMMENT_APPEND` or `UNRELATED_SECTION_APPEND`), and `rationale`.
++`checks` contains unique known `check_id`, `verdict` (`UNAFFECTED`, `AFFECTED`,
++`UNKNOWN`), `rationale`, pinned `source_refs`, and `blocking_findings`.
++Missing review stays unknown. Current rejection/blockers cannot become reuse.
++The independent review pin is a separate CLI expectation, not inferred from the
++request. Context labels and local pins do not authenticate the reviewer.
++
++`served` has schema `joedesign.served-build.v1`, `scope_id`, current
++`baseline_sha256`, and one row per target in `targets`. Each row has the complete
++`target`, observed `build_id`, `dependencies_complete`, `limitations`, and
++`resources:[{path,sha256,response_sha256}]`. Actual served response bytes must equal
++current runtime inputs; coverage must include exactly all declared inputs for that
++target. Collect and review the real scoped dependency set. Never fill these fields
++from source hashes alone or infer completeness from an initial request list. Late,
++conditional or unmapped resources remain unknown until observed. A record is local
++evidence, not proof of server identity or future responses.
++
++Output `joedesign.impact.v1` binds these refs (semantic review under key `review`),
++authority raw deltas, complete current check coverage, current fingerprints,
++previous results/evidence, read integrity and counts. Per-check classification is
++`reusable-candidate`, `rerun` or `unknown` with reasons. Its `reuse_authorized` is
++always false, `acceptance` is `NOT_GRANTED`, `trust` is `LOCAL_UNAUTHENTICATED`.
++
++Geometry candidates require the old PASS and its exact criterion/target/input/build,
++unchanged frames, and a fresh evaluation of the immutable old measurements against
++the unchanged criteria. This is not a new browser measurement. Previous failure or
++unresolved evidence remains nonreusable. Specialist checks require fresh scoped
++review. CSS, font, asset or other runtime byte changes require observation; this
++version does not analyze CSS/cascade/selector precision.
++
++JOENESS owns the separate pinned consumer review and transition. Until that
++transition is implemented, reviewed and connected, old authority-stale receipts
++remain blocked. Keep old receipt/baseline/frames immutable; do not repin them or
++write a replacement PASS receipt to bypass the consumer. Reuse can satisfy only the
++unchanged technical checks, never product closure or exact user acceptance.
+diff --git a/tests/test_design_impact.py b/tests/test_design_impact.py
+new file mode 100644
+index 0000000..84754da
+--- /dev/null
++++ b/tests/test_design_impact.py
+@@ -0,0 +1,193 @@
++"""F05 boundary tests. Synthetic logs here do not establish rendered quality."""
++import copy
++import json
++from pathlib import Path
++import subprocess
++import sys
++import tempfile
++import unittest
++
++from harness_support import SCRIPTS
++from harness.conformance import bindings, evaluate
++from harness.impact import inspect_impact
++from harness.io import digest, file_hash, write_artifact
++from test_design_conformance import baseline_fixture, GOOD_HTML
++
++
++class ImpactFixture:
++    def __init__(self, root):
++        self.root = Path(root)
++        self.root.mkdir(parents=True, exist_ok=True)
++        (self.root/'index.html').write_text(GOOD_HTML, encoding='utf-8')
++        self.old = baseline_fixture(self.root)
++        self.put('old.json', self.old)
++        (self.root/'authority-before.md').write_bytes((self.root/'DESIGN.md').read_bytes())
++        (self.root/'frame.txt').write_text('Synthetic unit-test frame; NOT browser evidence')
++        frame = str(self.root/'frame.txt')
++        self.log = dict(target=self.old['targets'][0], build_id='static-fixture', frames=[frame],
++            frame_hashes={frame:file_hash(Path(frame))}, design=dict(
++                baseline_sha256=self.ref('old.json')['sha256'],
++                input_fingerprints=bindings(self.old, self.root, ['wide']),
++                measurements=[dict(check_id=c['check_id'],criterion_sha256=c['criterion_sha256'],
++                    values=[c['criterion']['min']]) for c in self.old['required_checks']]))
++        self.put('observation.json', self.log)
++        self.receipt = evaluate(self.old,self.ref('old.json')['sha256'],self.root,[self.root/'observation.json'])
++        self.put('old-result.json', self.receipt)
++        self.new = copy.deepcopy(self.old)
++        self.append('\n<!-- Editorial note; no rule change. -->\n')
++        self.served = dict(schema='joedesign.served-build.v1',scope_id=self.old['scope_id'],
++            baseline_sha256=self.ref('new.json')['sha256'],targets=[dict(
++                target=copy.deepcopy(self.old['targets'][0]),build_id='static-fixture',
++                dependencies_complete=True,limitations=[],resources=[dict(path='index.html',
++                    sha256=file_hash(self.root/'index.html'),response_sha256=file_hash(self.root/'index.html'))])])
++        self.review = dict(schema='joedesign.impact-review.v1',scope_id=self.old['scope_id'],
++            implementation_context='synthetic-implementer',review_context='synthetic-reviewer',
++            scope_analysis='Synthetic scoped assessment: existing criteria, defaults and coverage are unchanged.',
++            authority_analysis=[dict(path='DESIGN.md',kind='COMMENT_APPEND',rationale='Only an appended editorial comment.')],
++            checks=[dict(check_id=c['check_id'],verdict='UNAFFECTED',rationale='Existing spacing and inputs are unchanged.',
++                source_refs=[self.ref('DESIGN.md')],blocking_findings=[]) for c in self.old['required_checks']])
++        self.sync()
++
++    def put(self, name, data):
++        write_artifact(self.root/name, data, overwrite=True)
++
++    def ref(self, name):
++        return dict(path=name,sha256=file_hash(self.root/name))
++
++    def append(self, text):
++        (self.root/'DESIGN.md').write_bytes((self.root/'authority-before.md').read_bytes()+text.encode())
++        self.new['authority'][0]['sha256']=file_hash(self.root/'DESIGN.md')
++        self.put('new.json',self.new)
++
++    def sync(self):
++        self.put('new.json',self.new)
++        self.put('old-result.json',self.receipt)
++        self.served['baseline_sha256']=self.ref('new.json')['sha256']
++        self.put('served.json',self.served)
++        self.request=dict(schema='joedesign.impact-request.v1',old_baseline=self.ref('old.json'),
++            new_baseline=self.ref('new.json'),old_result=self.ref('old-result.json'),served=self.ref('served.json'),
++            authority_before=[dict(path='DESIGN.md',snapshot=self.ref('authority-before.md'))])
++        self.review['transition_sha256']=digest(self.request)
++        self.put('review.json',self.review)
++        self.request['review']=self.ref('review.json')
++        self.put('request.json',self.request)
++
++    def run(self, review_pin=True):
++        return inspect_impact(self.root,self.root/'request.json',self.ref('request.json')['sha256'],
++                              self.ref('review.json')['sha256'] if review_pin else None)
++
++
++class ImpactTests(unittest.TestCase):
++    def setUp(self):
++        self.temp=tempfile.TemporaryDirectory()
++        self.addCleanup(self.temp.cleanup)
++        self.f=ImpactFixture(Path(self.temp.name)/'project')
++
++    def assert_no_reuse(self, result):
++        self.assertFalse(result['reuse_authorized'])
++        self.assertEqual(result['counts']['reusable-candidate'],0,result)
++
++    def test_comment_and_reviewed_unrelated_section_candidates_are_read_only(self):
++        for suffix,kind in [('\n<!-- Editorial only -->\n','COMMENT_APPEND'),
++                            ('\n## Print export\nFuture print-only notes, outside this screen.\n','UNRELATED_SECTION_APPEND'),
++                            ('\r\n## Print export\r\nFuture print-only notes, outside this screen.\r\n','UNRELATED_SECTION_APPEND')]:
++            with self.subTest(kind=kind):
++                self.f.append(suffix)
++                self.f.review['authority_analysis'][0]['kind']=kind
++                for c in self.f.review['checks']:c['source_refs']=[self.f.ref('DESIGN.md')]
++                self.f.sync()
++                before={p:file_hash(p) for p in self.f.root.iterdir() if p.is_file()}
++                result=self.f.run()
++                self.assertEqual(result['counts']['reusable-candidate'],4,result)
++                self.assertFalse(result['reuse_authorized'])
++                self.assertEqual(result['acceptance'],'NOT_GRANTED')
++                self.assertEqual(before,{p:file_hash(p) for p in self.f.root.iterdir() if p.is_file()})
++
++    def test_missing_review_pin_and_mismatched_request_pin_fail_closed(self):
++        self.assert_no_reuse(self.f.run(False))
++        self.assert_no_reuse(inspect_impact(self.f.root,self.f.root/'request.json','0'*64))
++        self.assert_no_reuse(inspect_impact(self.f.root,self.f.root/'request.json',self.f.ref('request.json')['sha256'],'0'*64))
++
++    def test_criterion_relaxation_coverage_target_and_acceptance_changes_block(self):
++        original=copy.deepcopy(self.f.new)
++        for change in ('criterion','delete','duplicate','target','acceptance','opaque'):
++            with self.subTest(change=change):
++                self.f.new=copy.deepcopy(original)
++                if change=='criterion':
++                    c=self.f.new['required_checks'][0];c['criterion']['max']=100
++                    c['criterion_sha256']=digest(c['criterion'])
++                elif change=='delete':self.f.new['required_checks'].pop()
++                elif change=='duplicate':self.f.new['required_checks'].append(self.f.new['required_checks'][0])
++                elif change=='target':self.f.new['targets'][0]['viewport']=[390,844]
++                elif change=='acceptance':self.f.new['required_acceptance']=False
++                else:self.f.new['opaque_override']=True
++                self.f.sync();self.assert_no_reuse(self.f.run())
++
++    def test_changed_existing_authority_cannot_be_called_an_append(self):
++        (self.f.root/'DESIGN.md').write_text('Relax all spacing rules.\n<!-- unchanged -->')
++        self.f.new['authority'][0]['sha256']=file_hash(self.f.root/'DESIGN.md')
++        self.f.sync();self.assert_no_reuse(self.f.run())
++
++    def test_css_even_comment_requires_rerun(self):
++        with (self.f.root/'index.html').open('a') as out:out.write('<!-- runtime comment -->')
++        result=self.f.run();self.assert_no_reuse(result)
++        self.assertEqual(result['counts']['rerun'],4)
++
++    def test_unverified_dependencies_changed_build_and_served_bytes_block(self):
++        saved=copy.deepcopy(self.f.served)
++        for change in ('late','build','response','missing','extra','target'):
++            with self.subTest(change=change):
++                self.f.served=copy.deepcopy(saved);target=self.f.served['targets'][0]
++                if change=='late':target['dependencies_complete']=False
++                elif change=='build':target['build_id']='new-build'
++                elif change=='response':target['resources'][0]['response_sha256']='0'*64
++                elif change=='missing':target['resources']=[]
++                elif change=='extra':target['resources'].append(dict(path='extra.css',sha256='0'*64,response_sha256='0'*64))
++                else:target['target']['state']='different'
++                self.f.sync();self.assert_no_reuse(self.f.run())
++
++    def test_failure_and_current_rejection_never_promoted(self):
++        self.f.receipt['results'][0]['status']='FAIL'
++        self.f.receipt['unresolved']=[dict(check_id='c0',status='FAIL')]
++        self.f.review['checks'][1]['blocking_findings']=['Current user rejection']
++        self.f.sync();result=self.f.run()
++        self.assertEqual(result['counts']['reusable-candidate'],2,result)
++        self.assertEqual(result['checks'][0]['previous_result']['status'],'FAIL')
++
++    def test_partial_review_preserves_only_independently_reviewed_checks(self):
++        self.f.review['checks']=self.f.review['checks'][:1]
++        self.f.sync();result=self.f.run()
++        self.assertEqual(result['counts'],{'reusable-candidate':1,'rerun':0,'unknown':3})
++
++    def test_affected_review_requires_fresh_observation(self):
++        self.f.review['checks'][0]['verdict']='AFFECTED'
++        self.f.sync();self.assertEqual(self.f.run()['checks'][0]['classification'],'rerun')
++
++    def test_corrupted_frame_blocks_old_evidence(self):
++        (self.f.root/'frame.txt').write_text('changed after observation')
++        self.assert_no_reuse(self.f.run())
++
++    def test_forged_pass_cannot_override_failing_raw_measurement(self):
++        self.f.log['design']['measurements'][0]['values']=[500]
++        self.f.put('observation.json',self.f.log)
++        for row in self.f.receipt['results']:
++            for proof in row['evidence']:
++                if Path(proof['path']).name=='observation.json':proof['sha256']=file_hash(self.f.root/'observation.json')
++        self.f.sync();result=self.f.run()
++        self.assertEqual(result['checks'][0]['classification'],'unknown',result)
++        self.assertEqual(result['counts']['reusable-candidate'],3)
++
++    def test_cli_emits_candidates_without_writing_inputs_or_overwriting_output(self):
++        command=[sys.executable,str(SCRIPTS/'harness_cli.py'),'inspect-impact','--project',str(self.f.root),
++            '--request',str(self.f.root/'request.json'),'--request-sha256',self.f.ref('request.json')['sha256'],
++            '--review-sha256',self.f.ref('review.json')['sha256'],'--output',str(self.f.root/'impact.json')]
++        run=subprocess.run(command,capture_output=True,text=True,encoding='utf-8')
++        self.assertEqual(run.returncode,0,run.stderr+run.stdout)
++        self.assertFalse(json.loads(run.stdout)['reuse_authorized'])
++        saved=file_hash(self.f.root/'impact.json')
++        run=subprocess.run(command,capture_output=True,text=True,encoding='utf-8')
++        self.assertNotEqual(run.returncode,0)
++        self.assertEqual(file_hash(self.f.root/'impact.json'),saved)
++
++
++if __name__=='__main__':unittest.main()

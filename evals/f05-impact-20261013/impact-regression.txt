@@ -1,0 +1,17 @@
+test_affected_review_requires_fresh_observation (test_design_impact.ImpactTests.test_affected_review_requires_fresh_observation) ... ok
+test_changed_existing_authority_cannot_be_called_an_append (test_design_impact.ImpactTests.test_changed_existing_authority_cannot_be_called_an_append) ... ok
+test_cli_emits_candidates_without_writing_inputs_or_overwriting_output (test_design_impact.ImpactTests.test_cli_emits_candidates_without_writing_inputs_or_overwriting_output) ... ok
+test_comment_and_reviewed_unrelated_section_candidates_are_read_only (test_design_impact.ImpactTests.test_comment_and_reviewed_unrelated_section_candidates_are_read_only) ... ok
+test_corrupted_frame_blocks_old_evidence (test_design_impact.ImpactTests.test_corrupted_frame_blocks_old_evidence) ... ok
+test_criterion_relaxation_coverage_target_and_acceptance_changes_block (test_design_impact.ImpactTests.test_criterion_relaxation_coverage_target_and_acceptance_changes_block) ... ok
+test_css_even_comment_requires_rerun (test_design_impact.ImpactTests.test_css_even_comment_requires_rerun) ... ok
+test_failure_and_current_rejection_never_promoted (test_design_impact.ImpactTests.test_failure_and_current_rejection_never_promoted) ... ok
+test_forged_pass_cannot_override_failing_raw_measurement (test_design_impact.ImpactTests.test_forged_pass_cannot_override_failing_raw_measurement) ... ok
+test_missing_review_pin_and_mismatched_request_pin_fail_closed (test_design_impact.ImpactTests.test_missing_review_pin_and_mismatched_request_pin_fail_closed) ... ok
+test_partial_review_preserves_only_independently_reviewed_checks (test_design_impact.ImpactTests.test_partial_review_preserves_only_independently_reviewed_checks) ... ok
+test_unverified_dependencies_changed_build_and_served_bytes_block (test_design_impact.ImpactTests.test_unverified_dependencies_changed_build_and_served_bytes_block) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 2.090s
+
+OK

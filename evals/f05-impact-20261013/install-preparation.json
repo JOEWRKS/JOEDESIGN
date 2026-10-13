@@ -1,0 +1,12 @@
+{
+  "first_inventory_attempt": {
+    "status": "STOPPED_BEFORE_MUTATION",
+    "reason": "14 existing Python cache files were not in source package; blanket replacement would classify them as unexpected"
+  },
+  "correction": "Preserve all 14 caches with exact hashes alongside 28 existing source files. No deletion. Expected after inventory: 30 source files plus the same 14 caches.",
+  "package_frozen": "source-r2 / isolated-r2 raw 30 files",
+  "plan": "managed-plan-r2.json",
+  "plan_sha256": "bc0e59d47550ebcb88395cfb4e9eda5e57e5b99b215c8e857ed3937bfd9d8129",
+  "temporary_recovery_tests": "managed-plan-tests.json",
+  "personal_installation": "NOT_STARTED"
+}

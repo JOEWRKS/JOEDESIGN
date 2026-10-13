@@ -137,6 +137,13 @@ canonical TASK/ROADMAP for it. Use separate scoped baselines so independent work
 continues; the consumer may explicitly reuse unchanged checks under reviewed new
 baselines. Never claim an uninstalled/unconnected consumer is protecting a project.
 
+For an append-only DESIGN comment or an independently reviewed unrelated section,
+the read-only [bounded impact diagnosis](impact.md) can identify old geometry
+evidence that remains applicable. It produces candidates, never a new PASS receipt
+or reuse permission. CSS/runtime changes and specialist judgments need fresh proof.
+Use only a separately reviewed, explicitly pinned consumer transition to reuse a
+candidate; ordinary stale-evidence checks still apply without that transition.
+
 Local files and process records remain unauthenticated. Neither tool prevents
 someone changing both pin and baseline, forging observations, bypassing the CLI,
 editing a work record directly or saying “done” in chat. Protected host/CI enforcement

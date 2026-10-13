@@ -1,0 +1,20 @@
+{
+  "command": [
+    "C:\\Python314\\python.exe",
+    "-B",
+    "D:\\JOEWRKS\\JOEDESIGN\\skills\\joedesign\\scripts\\harness_cli.py",
+    "inspect-impact",
+    "--project",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
+    "--request",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\request.json",
+    "--request-sha256",
+    "79539f15cece9a7008c9c5732bb9d0a8027c6143302ff999b32e718c29ce1b9d",
+    "--review-sha256",
+    "d343b1ac0bd46124dcf718f93072b95bc30c78846028f25e55e90cff5a4fabe7",
+    "--output",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\impact.json"
+  ],
+  "exit": 0,
+  "stderr": ""
+}

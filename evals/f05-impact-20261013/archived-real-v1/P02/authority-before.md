@@ -1,0 +1,1 @@
+Fixture authority: sibling gap 16, section gap 40, card gap 8, inset 32. Not a universal design rule.

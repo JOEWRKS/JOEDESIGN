@@ -1,0 +1,351 @@
+{
+  "schema": "joedesign.impact.v1",
+  "scope_id": "spacing-fixture",
+  "reuse_authorized": false,
+  "acceptance": "NOT_GRANTED",
+  "trust": "LOCAL_UNAUTHENTICATED",
+  "checks": [
+    {
+      "check_id": "c0",
+      "target_id": "wide",
+      "method": "geometry",
+      "criterion_sha256": "745fb7a0ca62c648dbf4eaf5df0609d4d3fbbd04ae08b665e9def6749e774cea",
+      "classification": "reusable-candidate",
+      "reasons": [
+        "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception."
+      ],
+      "previous_result": {
+        "check_id": "c0",
+        "target_id": "wide",
+        "method": "geometry",
+        "criterion_sha256": "745fb7a0ca62c648dbf4eaf5df0609d4d3fbbd04ae08b665e9def6749e774cea",
+        "status": "PASS",
+        "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+        "evidence": [
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-observation.json",
+            "sha256": "7d74a20f33c9ed7ddf21b0a0165dc790ee39e48e83af1939b521e3f25c7459f7"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          }
+        ],
+        "measured_values": [
+          16
+        ]
+      },
+      "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+      "target": {
+        "id": "wide",
+        "route": "/",
+        "surface": "fixture",
+        "family": "fixture",
+        "viewport": [
+          1000,
+          700
+        ],
+        "state": "default",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "technical"
+        ]
+      },
+      "build_id": "f05-static-v1"
+    },
+    {
+      "check_id": "c1",
+      "target_id": "wide",
+      "method": "geometry",
+      "criterion_sha256": "86708292961e3c1de8ec2cc05454c1b6cf788b28f2a08e3a5fed5518a7dc5f3d",
+      "classification": "reusable-candidate",
+      "reasons": [
+        "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception."
+      ],
+      "previous_result": {
+        "check_id": "c1",
+        "target_id": "wide",
+        "method": "geometry",
+        "criterion_sha256": "86708292961e3c1de8ec2cc05454c1b6cf788b28f2a08e3a5fed5518a7dc5f3d",
+        "status": "PASS",
+        "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+        "evidence": [
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-observation.json",
+            "sha256": "7d74a20f33c9ed7ddf21b0a0165dc790ee39e48e83af1939b521e3f25c7459f7"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          }
+        ],
+        "measured_values": [
+          40
+        ]
+      },
+      "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+      "target": {
+        "id": "wide",
+        "route": "/",
+        "surface": "fixture",
+        "family": "fixture",
+        "viewport": [
+          1000,
+          700
+        ],
+        "state": "default",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "technical"
+        ]
+      },
+      "build_id": "f05-static-v1"
+    },
+    {
+      "check_id": "c2",
+      "target_id": "wide",
+      "method": "geometry",
+      "criterion_sha256": "c24c1178d8fb374ce823888e4718c60aa7fbec6dd38bc8db071c6af7bea1de92",
+      "classification": "reusable-candidate",
+      "reasons": [
+        "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception."
+      ],
+      "previous_result": {
+        "check_id": "c2",
+        "target_id": "wide",
+        "method": "geometry",
+        "criterion_sha256": "c24c1178d8fb374ce823888e4718c60aa7fbec6dd38bc8db071c6af7bea1de92",
+        "status": "PASS",
+        "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+        "evidence": [
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-observation.json",
+            "sha256": "7d74a20f33c9ed7ddf21b0a0165dc790ee39e48e83af1939b521e3f25c7459f7"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          }
+        ],
+        "measured_values": [
+          8
+        ]
+      },
+      "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+      "target": {
+        "id": "wide",
+        "route": "/",
+        "surface": "fixture",
+        "family": "fixture",
+        "viewport": [
+          1000,
+          700
+        ],
+        "state": "default",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "technical"
+        ]
+      },
+      "build_id": "f05-static-v1"
+    },
+    {
+      "check_id": "c3",
+      "target_id": "wide",
+      "method": "geometry",
+      "criterion_sha256": "4a3c50dec32b5ccfaabf05a774c92be2b514188ea0bb2f37498a57ccc675a14a",
+      "classification": "reusable-candidate",
+      "reasons": [
+        "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception."
+      ],
+      "previous_result": {
+        "check_id": "c3",
+        "target_id": "wide",
+        "method": "geometry",
+        "criterion_sha256": "4a3c50dec32b5ccfaabf05a774c92be2b514188ea0bb2f37498a57ccc675a14a",
+        "status": "PASS",
+        "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+        "evidence": [
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-observation.json",
+            "sha256": "7d74a20f33c9ed7ddf21b0a0165dc790ee39e48e83af1939b521e3f25c7459f7"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          },
+          {
+            "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png",
+            "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+          }
+        ],
+        "measured_values": [
+          32
+        ]
+      },
+      "input_fingerprint": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+      "target": {
+        "id": "wide",
+        "route": "/",
+        "surface": "fixture",
+        "family": "fixture",
+        "viewport": [
+          1000,
+          700
+        ],
+        "state": "default",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "technical"
+        ]
+      },
+      "build_id": "f05-static-v1"
+    }
+  ],
+  "authority_delta": [
+    {
+      "path": "DESIGN.md",
+      "old_sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5",
+      "new_sha256": "4d50fca29ad2384d0b887b25b2c42b3a46b105a56f43239ce865ac2a02378614",
+      "kind": "UNRELATED_SECTION_APPEND",
+      "appended_sha256": "a9212eba6d7d1a727f0ba9242d868c9843ae5a599f512d6cd2fb1bb4861256fa",
+      "rationale": "Append-only fixture text; existing screen spacing and defaults unchanged."
+    }
+  ],
+  "findings": [],
+  "limits": [
+    "Append-only reviewed DESIGN changes; no selector/CSS impact precision",
+    "Local pins/contexts do not authenticate reviewers or approval",
+    "Served dependency completeness requires actual scoped collection and review",
+    "Candidate only; existing gate remains authoritative until separately reviewed consumption"
+  ],
+  "request": {
+    "path": "request.json",
+    "sha256": "79539f15cece9a7008c9c5732bb9d0a8027c6143302ff999b32e718c29ce1b9d"
+  },
+  "old_baseline": {
+    "path": "old.json",
+    "sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc"
+  },
+  "new_baseline": {
+    "path": "new.json",
+    "sha256": "25df3db03810f4487223f9518a64f6a7acf1ffc156a15f1a366285e4fd9b9b52"
+  },
+  "old_result": {
+    "path": "old-result.json",
+    "sha256": "82a9a6e4d1767884c7b4c0be13bdee0624bb50112adc49fc95cca78e753d489b"
+  },
+  "served": {
+    "path": "served.json",
+    "sha256": "55d851debb758f1134df26703ad85bf5d0565f448fd64fff2220a61d807162a3"
+  },
+  "review": {
+    "path": "review.json",
+    "sha256": "d343b1ac0bd46124dcf718f93072b95bc30c78846028f25e55e90cff5a4fabe7"
+  },
+  "authority_before": [
+    {
+      "path": "DESIGN.md",
+      "snapshot": {
+        "path": "authority-before.md",
+        "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+      }
+    }
+  ],
+  "transition_sha256": "03299565630a5da83aaac719079eab820e111a55389e2778d71097be3759dec7",
+  "integrity": [
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\authority-before.md",
+      "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\DESIGN.md",
+      "sha256": "4d50fca29ad2384d0b887b25b2c42b3a46b105a56f43239ce865ac2a02378614"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\index.html",
+      "sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\new.json",
+      "sha256": "25df3db03810f4487223f9518a64f6a7acf1ffc156a15f1a366285e4fd9b9b52"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png",
+      "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-observation.json",
+      "sha256": "7d74a20f33c9ed7ddf21b0a0165dc790ee39e48e83af1939b521e3f25c7459f7"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+      "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png",
+      "sha256": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-result.json",
+      "sha256": "82a9a6e4d1767884c7b4c0be13bdee0624bb50112adc49fc95cca78e753d489b"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old.json",
+      "sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\request.json",
+      "sha256": "79539f15cece9a7008c9c5732bb9d0a8027c6143302ff999b32e718c29ce1b9d"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\review.json",
+      "sha256": "d343b1ac0bd46124dcf718f93072b95bc30c78846028f25e55e90cff5a4fabe7"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\served.json",
+      "sha256": "55d851debb758f1134df26703ad85bf5d0565f448fd64fff2220a61d807162a3"
+    }
+  ],
+  "counts": {
+    "reusable-candidate": 4,
+    "rerun": 0,
+    "unknown": 0
+  }
+}

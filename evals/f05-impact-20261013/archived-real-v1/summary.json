@@ -1,0 +1,72 @@
+[
+  {
+    "case": "P01",
+    "project": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01",
+    "pins": {
+      "old.json": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+      "new.json": "8523be5fda38367ea1463f581388b69dd47c44438a20116a11fa5003eaeb1174",
+      "old-result.json": "01760c5dee4bb8a2bd3224fac3a12cff9c3ca485023551798ce7800419afad9e",
+      "served.json": "73795fce1affb478c4b6c7e9aa524905c750a9f4eba0eab639512a9a3d496a33",
+      "review.json": "e0d75f467bf6b0b868eabec608d772876c19881f1832c255b660f9da433cc4fb",
+      "request.json": "7341d964516cbf63a5f9ce334a3fccb386921bb7fcce93aa5951d4aa70d5d445",
+      "impact.json": "06ec3a44cd997726be4659323636ae76f5d309dd1848b1761de836e089a41c03"
+    },
+    "counts": {
+      "reusable-candidate": 4,
+      "rerun": 0,
+      "unknown": 0
+    },
+    "old_geometry_checks": 4,
+    "new_geometry_checks": 0,
+    "new_screenshots": 0,
+    "old_inputs_unchanged": {
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\authority-before.md": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\capture-manifest.json": "214e1d967165d079786ed06c6ae4c4edc8259547607c471ebd3da9c13020d7d4",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\capture-process.json": "0734f70e8e81d0427abd5b257f2876a36dda78aa3701eb0073f24689a6eccd1b",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\index.html": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\old-result.json": "01760c5dee4bb8a2bd3224fac3a12cff9c3ca485023551798ce7800419afad9e",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\old.json": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\old-capture\\0-full.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\old-capture\\0-observation.json": "756809776d7509b18da1ce9c16e1ce158bed15ea128107d93a976c76da3acb85",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\old-capture\\0-result.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\old-capture\\0-start.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+    },
+    "independent_review": "PENDING Manager inspection; draft semantic review only",
+    "reuse_authorized": false
+  },
+  {
+    "case": "P02",
+    "project": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
+    "pins": {
+      "old.json": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+      "new.json": "25df3db03810f4487223f9518a64f6a7acf1ffc156a15f1a366285e4fd9b9b52",
+      "old-result.json": "82a9a6e4d1767884c7b4c0be13bdee0624bb50112adc49fc95cca78e753d489b",
+      "served.json": "55d851debb758f1134df26703ad85bf5d0565f448fd64fff2220a61d807162a3",
+      "review.json": "d343b1ac0bd46124dcf718f93072b95bc30c78846028f25e55e90cff5a4fabe7",
+      "request.json": "79539f15cece9a7008c9c5732bb9d0a8027c6143302ff999b32e718c29ce1b9d",
+      "impact.json": "0ac04df6aa41204148b88ae11580b767556141072063241a10dc5e2ae4527c5e"
+    },
+    "counts": {
+      "reusable-candidate": 4,
+      "rerun": 0,
+      "unknown": 0
+    },
+    "old_geometry_checks": 4,
+    "new_geometry_checks": 0,
+    "new_screenshots": 0,
+    "old_inputs_unchanged": {
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\authority-before.md": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\capture-manifest.json": "7114d719424a66fa3808b041861a03e1b29940434fa62f269d48a2cda7508e2d",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\capture-process.json": "0734f70e8e81d0427abd5b257f2876a36dda78aa3701eb0073f24689a6eccd1b",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\index.html": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-result.json": "82a9a6e4d1767884c7b4c0be13bdee0624bb50112adc49fc95cca78e753d489b",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old.json": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-observation.json": "7d74a20f33c9ed7ddf21b0a0165dc790ee39e48e83af1939b521e3f25c7459f7",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+      "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+    },
+    "independent_review": "PENDING Manager inspection; draft semantic review only",
+    "reuse_authorized": false
+  }
+]

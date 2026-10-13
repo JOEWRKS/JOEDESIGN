@@ -1,0 +1,25 @@
+{
+  "captures": [
+    {
+      "target_id": "wide",
+      "kind": "render",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+      "action": "",
+      "result": "Configured state predicates observed",
+      "frames": [
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+        "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png"
+      ]
+    },
+    {
+      "target_id": "wide",
+      "kind": "technical",
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-observation.json",
+      "action": "browser diagnostics",
+      "result": "[]",
+      "frames": []
+    }
+  ],
+  "errors": []
+}

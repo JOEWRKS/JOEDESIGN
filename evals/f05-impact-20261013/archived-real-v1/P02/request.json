@@ -1,0 +1,32 @@
+{
+  "schema": "joedesign.impact-request.v1",
+  "old_baseline": {
+    "path": "old.json",
+    "sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc"
+  },
+  "new_baseline": {
+    "path": "new.json",
+    "sha256": "25df3db03810f4487223f9518a64f6a7acf1ffc156a15f1a366285e4fd9b9b52"
+  },
+  "old_result": {
+    "path": "old-result.json",
+    "sha256": "82a9a6e4d1767884c7b4c0be13bdee0624bb50112adc49fc95cca78e753d489b"
+  },
+  "served": {
+    "path": "served.json",
+    "sha256": "55d851debb758f1134df26703ad85bf5d0565f448fd64fff2220a61d807162a3"
+  },
+  "authority_before": [
+    {
+      "path": "DESIGN.md",
+      "snapshot": {
+        "path": "authority-before.md",
+        "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+      }
+    }
+  ],
+  "review": {
+    "path": "review.json",
+    "sha256": "d343b1ac0bd46124dcf718f93072b95bc30c78846028f25e55e90cff5a4fabe7"
+  }
+}
