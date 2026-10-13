@@ -1,5 +1,136 @@
 # JOEDESIGN
 
+[English](#english) | [한국어](#korean)
+
+<a name="english"></a>
+
+**English**
+
+## 1. Summary
+
+- **Role:** UI creation, implementation, and design review in Codex.
+- **Operation:** One operating core, with stage-specific role assignments and integrated results.
+- **Version:** **1.0.0** — defined in [VERSION](skills/joedesign/VERSION).
+- **Use cases:** New UI creation, existing UI extensions and repairs, and design conformance review.
+
+## 2. Design Purpose
+
+- Designed to reduce gaps between approved requirements, reference screens, design standards, and actual implementation.
+- Focus: representative screen → desktop/mobile observation → specialist review → scoped expansion.
+- Support for recurring spacing, typography, layout, and state checks, with review records.
+- Product requirements and final user acceptance retained as separate responsibilities.
+
+## 3. Key Features
+
+| Feature | Scope | Output |
+|---|---|---|
+| UI creation and implementation | New website/app screens and UI code within the requested scope | Implemented screens and desktop/mobile checks |
+| Existing UI improvements | Spacing, typography, layout, mobile usability, and screen extensions | Updated screens and change rationale |
+| Design review | Comparison of defined visual standards with actual results | Review evidence, issues, and unverified items |
+| Standards management | Project design standards | Project `DESIGN.md` |
+
+Review-only requests: an issue list instead of screen changes. The following is an example report, not actual verification evidence.
+
+```text
+Scope: Contact page on desktop and mobile
+Changes: Input order, error guidance, and mobile button placement
+Checked: Invalid-input and successful-submission states; spacing standards by screen
+Remaining: Actual email delivery not verified
+User acceptance: Final screen review required
+```
+
+## 4. Usage
+
+### Installation
+
+- Environment: Windows PowerShell, **Codex, Git, and Python 3**.
+- Repository access: Read permission for this private repository and GitHub authentication.
+- First installation: Run the clone commands below from your working folder.
+- Existing clone: Open the repository folder and start with the second block.
+
+```powershell
+git clone https://github.com/JOEWRKS/JOEDESIGN.git
+cd JOEDESIGN
+```
+
+```powershell
+$ErrorActionPreference = 'Stop'
+$JoeCodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }
+$JoeSkills = Join-Path $JoeCodexHome 'skills'
+$JoeTarget = Join-Path $JoeSkills 'joedesign'
+if ((Test-Path -LiteralPath $JoeTarget) -or (Test-Path -LiteralPath (Join-Path $JoeSkills 'joedesign-harness'))) {
+    throw '기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.'
+}
+New-Item -ItemType Directory -Path $JoeSkills -Force | Out-Null
+Copy-Item -LiteralPath '.\skills\joedesign' -Destination $JoeTarget -Recurse
+python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') version
+python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') doctor
+```
+
+| Check | Scope |
+|---|---|
+| `version` | Actual installed version |
+| `doctor` | Discovery and availability of required specialist skills |
+| `UNAVAILABLE` | Setup required; see [installation and dependencies (Korean)](docs/INSTALL.md) |
+
+Installation success and readiness for specialist review require separate checks.
+Updates, migration from the older split packages, and recovery: [installation guide (Korean)](docs/INSTALL.md).
+Updating the repository and updating an already copied personal installation are separate procedures.
+
+### Example request
+
+Start a new Codex conversation with the request below. Include reference screens and materials when available.
+
+```text
+$joedesign
+Build a contact page for this project.
+First review the existing requirements, DESIGN.md, and the reference screens I provided.
+Build a representative screen, review it on desktop and mobile, then expand within the required scope.
+Finish with separate lists of changes, verified results, and items not yet verified.
+```
+
+## 5. Tool Integration
+
+| Tool | Role |
+|---|---|
+| [JOEFLOW](https://github.com/JOEWRKS/JOEFLOW) | Requirements, rules, exceptions, and acceptance criteria |
+| **JOEDESIGN** | UI creation, visual standards, and design review |
+| [JOENESS](https://github.com/JOEWRKS/JOENESS) | Task sequence, progress, and completion evidence |
+
+**JOENESS task organization → JOEFLOW requirements definition → JOEDESIGN UI creation and review
+→ implementation by the assigned developer → result verification → JOENESS completion and remaining-work records**
+
+- JOENESS: Task status management throughout the process.
+- Standalone use: Each tool usable independently as needed.
+- Implementation roles: UI code implementation may accompany screen creation; assignments depend on task scope.
+- Contact form handoff: JOEFLOW's **required inputs, error conditions, and acceptance criteria** passed to JOEDESIGN.
+  JOEDESIGN's **screen-specific review evidence, unverified items, and user acceptance status** passed to the implementer and JOENESS.
+- Automated consumption of review results: [Producer/consumer configuration](skills/joedesign/references/conformance.md) required.
+  Installing all three tools alone does not establish automatic integration or approval.
+
+## 6. Limitations
+
+- Supported scope: UI creation, extension, local repair, and review. Product requirements and final user acceptance remain separate.
+  **1.0.0 identifies the package's supported scope, not a guarantee of defect-free results.**
+- Specialist review dependencies: Applicable skills such as Impeccable, UI UX Pro Max, and web-design-guidelines.
+  Automated execution and browser collection: Existing Codex executor, Node, Playwright, and a browser required.
+  Automatic installation of those tools is outside the package's scope.
+- Reuse of previous checks: **Geometry checks only, following independently reviewed additions of unrelated comments or sections at the end of DESIGN**.
+  Changed CSS, runtime files, or served builds, and unknown dependencies require fresh observations.
+  Specialist design judgments require fresh review. [Exact conditions](skills/joedesign/references/impact.md).
+- Missing, failed, or stale evidence cannot be promoted to a pass or acceptance.
+  Local hashes and review records do not authenticate user identity or guarantee protection against direct file/chat bypass.
+
+[Installation and recovery (Korean)](docs/INSTALL.md) · [Operating instructions](skills/joedesign/SKILL.md) ·
+[Execution setup](skills/joedesign/references/execution.md) · [Changelog (Korean)](CHANGELOG.md) ·
+[Validation records and limits (Korean)](docs/VALIDATION.md)
+
+---
+
+<a name="korean"></a>
+
+**한국어**
+
 ## 1. 핵심 요약
 
 - **역할:** Codex 기반 화면 제작·구현·디자인 검수 지원.
