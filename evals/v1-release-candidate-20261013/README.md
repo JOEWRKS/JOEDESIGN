@@ -1,4 +1,4 @@
-# JOEDESIGN 1.0.0 candidate — T039, 2026-10-13
+# JOEDESIGN 1.0.0 validation and integration — T039, 2026-10-13
 
 User approval verified in Manager message `01a13543-e72a-71f0-a326-5c768336ab91`.
 Base `1d9502ea74d6a0fbbad730450e85f0b327b2906e`; candidate branch
@@ -65,6 +65,30 @@ rebind or replace old evidence. No failure occurred in these candidate checks.
 This candidate changes discovery text, but does not claim a fresh autonomous model
 trial of that prompt, new visual-quality acceptance, automatic integration or an
 authenticated approval boundary. Earlier behavioral results retain their original
-package association. Personal installation remains 0.3.0-dev. The 1.0.0 candidate
-is local until QA cross-review; ordinary push/main integration, personal installation,
-tags and GitHub Release have not been performed in this candidate step.
+package association. Personal installation remains 0.3.0-dev. Source1.0.0 and
+personal installation are separate. Tags and GitHub Release are outside this scope.
+
+## Cross-review and main integration
+
+Manager completed the independent review of candidate
+`7069f34846bcdea4741e1a122f468347ba5c5dbf` and notified the authorized integration
+stage. The new combined Codex home is
+`D:/JOEWRKS/JOEWRKS-Product-isolated-installs/joe-1x-t039-manager`.
+Manager verified all 17/30/172 package file hashes, JOENESS Check/Apply/Check,
+JOEDESIGN version1.0.0, JOEFLOW-to-JOENESS11/11 and JOEDESIGN-to-JOENESS13/13
+with19 gate invocations. The tested negative cases and original fixtures, personal
+installations and protected configuration remained intact. These are scoped
+integration results, not new real-product visual acceptance.
+
+The separately owned audit is recorded under
+`D:/JOEWRKS/JOEQASAM/evidence/t039-joe-1x-release/` in `candidate-audit.json`,
+`joint-install.json`, `joint-operation.json` and `joint-impact.json`.
+The final follow-up changes only documentation and `.gitattributes`; package and
+raw-evidence Git blobs must equal candidate7069f34. The attributes preserve raw
+CRLF/spacing without exempting this README or verifier code from whitespace checks.
+
+The integration uses normal branch push and fast-forward main; no force push,
+history rewrite, new worktree, personal installation, tag or GitHub Release.
+The repository version is read from VERSION and the exact integrated revision from
+Git main. Earlier candidate-stage restrictions above describe the verification order,
+not an outstanding request for another approval.

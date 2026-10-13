@@ -1,0 +1,6 @@
+# Preserve recorded output bytes; do not normalize evidence or lint its whitespace.
+/evals/v1-release-candidate-20261013/install-r1/*.txt -text -whitespace
+/evals/v1-release-candidate-20261013/install-r1/summary.json -text -whitespace
+/evals/v1-release-candidate-20261013/joint-r1/** -text -whitespace
+/evals/v1-release-candidate-20261013/python-regression.txt -text -whitespace
+/evals/v1-release-candidate-20261013/node-regression.txt -text -whitespace

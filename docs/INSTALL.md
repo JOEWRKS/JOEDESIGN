@@ -41,7 +41,7 @@ python -B <설치폴더>/scripts/harness_cli.py doctor
 - 자동 실행에는 기존 Codex 실행기와 Python 3가 필요하다. 브라우저 수집에는 기존
   Node, Playwright 패키지와 브라우저 경로가 추가로 필요하다. Python 표준 라이브러리만
   쓰는 진단 CLI에 pip 설치는 필요 없다. [실행 설정](../skills/joedesign/references/execution.md).
-  검증 환경은 [후보 검증 기록](../evals/v1-release-candidate-20261013/README.md)에 남긴다.
+  검증 환경은 [1.0.0 검증 기록](../evals/v1-release-candidate-20261013/README.md)에 남긴다.
 
 ## 기존 설치 업데이트
 

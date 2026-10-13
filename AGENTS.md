@@ -1,16 +1,17 @@
 # JOEDESIGN repository
 
-## JOE tools 1.x candidate directive (2026-10-13, current)
+## JOE tools 1.x integration directive (2026-10-13, current)
 
 The user approved T039 in Local QA Manager: common simple Korean README, package
 version alignment and verified main integration. JOEDESIGN targets 1.0.0 from
 1d9502ea74d6a0fbbad730450e85f0b327b2906e. This supersedes earlier 0.3.0-dev freezes
 only for this version/documentation candidate; skill IDs, schema versions, runtime
 contracts, preserved source/evidence and F05 limits remain unchanged.
-First deliver candidate commit, regression and isolated fresh-install evidence.
-Ordinary branch push/main integration follow QA cross-review notification. Do not
-update personal installations, create tags or GitHub releases in this candidate
-step. No new worktree, generic feature expansion, other JOE source edits, product
+Candidate7069f34 passed repository and Manager isolated cross-review. Manager
+notified completion and authorized the user's ordinary branch push/main integration.
+Finalize documentation and raw-evidence attributes only; preserve package bytes.
+Do not update personal installations, create tags or GitHub releases in this
+integration step. No new worktree, generic feature expansion, other JOE source edits, product
 changes or GEO messages. Preserve/exclude the two existing untracked feedback dirs.
 Report exact source/version/install hashes and limits here and to the user-authorized
 Manager. T039/Q5 belongs to Manager; repository candidate evidence belongs here.
