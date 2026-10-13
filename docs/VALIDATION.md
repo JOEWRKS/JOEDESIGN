@@ -1,8 +1,13 @@
-# 검증 기록 읽는 법
+# 검증 기록·판정 범위
 
-설치 성공, 자동 검사, 실제 모델 행동, 시각 품질, 사용자 수락은 서로 다른 결과다.
-1.0.0은 현재 지원 범위의 패키지 버전이며 기존 JSON 규격의 개정이나
-모든 프로젝트의 품질 보장이 아니다. [1.0.0 검증·통합 기록](../evals/v1-release-candidate-20261013/README.md).
+## 핵심 요약
+
+- 판정 구분: 설치 성공 / 자동 검사 / 실제 모델 행동 / 시각 품질 / 사용자 수락.
+- 1.0.0 의미: 현재 지원 범위의 패키지 버전.
+- 보장 제외: 기존 JSON 규격 개정, 모든 프로젝트의 품질 보장.
+- 통합 근거: [1.0.0 검증·통합 기록](../evals/v1-release-candidate-20261013/README.md).
+
+## 검증 근거
 
 | 기록 | 확인한 범위 |
 |---|---|
@@ -14,24 +19,25 @@
 | [단일 코어 통합](../evals/unified-core-20261009/README.md) | 하나의 운영 코어와 내부 실행기, 옛 두 패키지 원본 보존 |
 | [대표 화면 먼저 검수](../evals/design-workflow-20261009/README.md) | 확장 전에 대표 화면을 관찰·검토하도록 한 보강 |
 
-소스 회귀 명령:
+## 소스 회귀 검사
 
 ```powershell
 python -B -m unittest discover -s tests -v
 node --test tests/joedesign-v02.tests.mjs
 ```
 
-Python의 실제 브라우저 검사는 기존 Playwright/브라우저 경로 환경변수가 필요하다.
-구체 환경은 실행 기록에 남긴다. Node v0.2 회귀는 보존된 과거 패키지·증거의
-무결성을 확인하며 현재 1.0.0 모델의 자율 준수나 시각 품질을 새로 검증하지 않는다.
-실행기 완료값 `REVIEW_COMPLETE_UNCERTIFIED`도 사용자 최종 승인과 다르다.
+- Python 실제 브라우저 검사: 기존 Playwright·브라우저 경로 환경변수 필요.
+  구체 환경은 해당 실행 기록 참고.
+- Node v0.2 회귀: 보존된 과거 패키지·증거의 무결성 확인.
+  현재 1.0.0 모델의 자율 준수·시각 품질에 대한 새 검증과 구분.
+- 실행기 완료값 `REVIEW_COMPLETE_UNCERTIFIED`: 사용자 최종 승인과 구분.
 
-## 과거 설계와 실패 보존
+## 과거 설계·실패 보존
 
-- [v0.2 설계](specs/joedesign-v0.2-visual-translation.md)와 [당시 행동 증거](../fixtures/contract-cases/evidence/visual-translation-v02/README.md)
-- [옛 Harness 설계](superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md)와 [채택 판단](../evals/harness-v0.1/retention-decision.md)
+- [v0.2 설계](specs/joedesign-v0.2-visual-translation.md) 및 [당시 행동 증거](../fixtures/contract-cases/evidence/visual-translation-v02/README.md)
+- [옛 Harness 설계](superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md) 및 [채택 판단](../evals/harness-v0.1/retention-decision.md)
 - [실행 연동의 실패·수정](../evals/harness-execution-20261006/README.md), [병목 개선](../evals/harness-bottleneck-20261006/README.md)
 
-예전 문서의 두 스킬 설치·동결·대기 지시는 해당 시점의 기록이다. 현재 운영은
-[단일 코어](../skills/joedesign/SKILL.md)와 최신 승인 범위를 따른다. 실패·미채택 실험·
-원래 캡처를 지우거나 새 패키지에 재결속하지 않는다.
+- 예전 두 스킬 설치·동결·대기 지시: 해당 시점의 기록으로 보존.
+- 현재 운영 기준: [단일 코어](../skills/joedesign/SKILL.md) 및 최신 승인 범위.
+- 실패·미채택 실험·원래 캡처: 삭제 또는 새 패키지로의 재결속 금지.

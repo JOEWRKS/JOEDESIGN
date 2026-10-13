@@ -1,5 +1,17 @@
 # JOEDESIGN repository
 
+## T041 현행 사용자 안내 문체 정비 (2026-10-13, 현재)
+
+- 사용자 지시: 보고서 형식·명사형 종결 적용. Manager 채팅의
+  01a13577-0da5-7002-922a-0a17a4a80b4b 및 01a13577-619f-7772-b1b2-09b06328b35c 확인.
+- 대상: README.md, docs/INSTALL.md, docs/VALIDATION.md의 현행 사용자 안내.
+- README 구성: 핵심 요약 → 설계 목적 → 주요 기능 → 사용 방법 → 도구 간 연결 → 한계.
+- 보존: 명령·프롬프트 예시, 지원 범위, 검증 수치, 과거 이력·설계·evidence,
+  skills/ 전체·코드·버전·개인 설치·기존 태그. 다른 제품 파일·전역 설정 변경 금지.
+- 변경 기록: 현행 범위의 최소 기록 추가만 허용. 과거 기록 재작성 금지.
+- 완료 순서: 문서 검증 → 일반 로컬 커밋 → Manager 검토 → 통지 후 일반 푸시.
+  검토 전 푸시, 태그 재지정, 새 worktree 금지. Release 본문 수정은 Manager 담당.
+
 ## Personal installation and release directive (2026-10-13, current)
 
 The user explicitly approved T040 in Local QA Manager, message
