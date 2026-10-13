@@ -1,0 +1,163 @@
+{
+  "schema": "joeness.review-baseline.v1",
+  "scope_id": "spacing-fixture",
+  "authority": [
+    {
+      "path": "DESIGN.md",
+      "sha256": "4d50fca29ad2384d0b887b25b2c42b3a46b105a56f43239ce865ac2a02378614"
+    }
+  ],
+  "authorization_ref": "Synthetic fixture scope; not real user approval",
+  "targets": [
+    {
+      "id": "wide",
+      "route": "/",
+      "surface": "fixture",
+      "family": "fixture",
+      "viewport": [
+        1000,
+        700
+      ],
+      "state": "default",
+      "theme": "light",
+      "locale": "en",
+      "required_kinds": [
+        "render",
+        "technical"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "r0",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "r1",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "r2",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    },
+    {
+      "id": "r3",
+      "source_ref": "DESIGN.md",
+      "target_ids": [
+        "wide"
+      ],
+      "methods": [
+        "geometry"
+      ]
+    }
+  ],
+  "required_checks": [
+    {
+      "check_id": "c0",
+      "target_id": "wide",
+      "method": "geometry",
+      "rule_id": "r0",
+      "lane": "visual",
+      "criterion": {
+        "kind": "gap",
+        "container": ".group",
+        "items": ":scope > div",
+        "axis": "y",
+        "expected_count": 1,
+        "min": 16,
+        "max": 16,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "745fb7a0ca62c648dbf4eaf5df0609d4d3fbbd04ae08b665e9def6749e774cea",
+      "inputs": [
+        "index.html"
+      ]
+    },
+    {
+      "check_id": "c1",
+      "target_id": "wide",
+      "method": "geometry",
+      "rule_id": "r1",
+      "lane": "visual",
+      "criterion": {
+        "kind": "pair",
+        "from": ".before",
+        "to": ".after > div",
+        "from_edge": "bottom",
+        "to_edge": "top",
+        "expected_count": 1,
+        "min": 40,
+        "max": 40,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "86708292961e3c1de8ec2cc05454c1b6cf788b28f2a08e3a5fed5518a7dc5f3d",
+      "inputs": [
+        "index.html"
+      ]
+    },
+    {
+      "check_id": "c2",
+      "target_id": "wide",
+      "method": "geometry",
+      "rule_id": "r2",
+      "lane": "visual",
+      "criterion": {
+        "kind": "gap",
+        "container": ".card",
+        "items": ":scope > div",
+        "axis": "y",
+        "expected_count": 1,
+        "min": 8,
+        "max": 8,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "c24c1178d8fb374ce823888e4718c60aa7fbec6dd38bc8db071c6af7bea1de92",
+      "inputs": [
+        "index.html"
+      ]
+    },
+    {
+      "check_id": "c3",
+      "target_id": "wide",
+      "method": "geometry",
+      "rule_id": "r3",
+      "lane": "visual",
+      "criterion": {
+        "kind": "inset",
+        "container": ".panel",
+        "items": ":scope > div",
+        "edge": "bottom",
+        "expected_count": 1,
+        "min": 32,
+        "max": 32,
+        "tolerance": 0.1
+      },
+      "criterion_sha256": "4a3c50dec32b5ccfaabf05a774c92be2b514188ea0bb2f37498a57ccc675a14a",
+      "inputs": [
+        "index.html"
+      ]
+    }
+  ],
+  "required_lanes": [
+    "visual"
+  ],
+  "required_acceptance": true
+}

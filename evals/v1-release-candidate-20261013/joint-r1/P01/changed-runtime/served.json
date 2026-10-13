@@ -1,0 +1,44 @@
+{
+  "schema": "joedesign.served-build.v1",
+  "scope_id": "spacing-fixture",
+  "baseline_sha256": "8523be5fda38367ea1463f581388b69dd47c44438a20116a11fa5003eaeb1174",
+  "targets": [
+    {
+      "target": {
+        "id": "wide",
+        "route": "/",
+        "surface": "fixture",
+        "family": "fixture",
+        "viewport": [
+          1000,
+          700
+        ],
+        "state": "default",
+        "theme": "light",
+        "locale": "en",
+        "required_kinds": [
+          "render",
+          "technical"
+        ]
+      },
+      "build_id": "f05-static-v1",
+      "dependencies_complete": true,
+      "resources": [
+        {
+          "path": "index.html",
+          "sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8",
+          "response_sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8",
+          "url": "http://127.0.0.1:12017/",
+          "status": 200
+        }
+      ],
+      "limitations": []
+    }
+  ],
+  "collector": {
+    "kind": "actual-playwright-response-bytes",
+    "geometry_reads": 0,
+    "screenshots": 0,
+    "scope": "Single static inline-CSS document only; no dynamic dependency coverage claim"
+  }
+}

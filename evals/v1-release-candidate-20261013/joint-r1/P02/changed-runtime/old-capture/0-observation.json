@@ -1,0 +1,344 @@
+{
+  "target": {
+    "id": "wide",
+    "route": "/",
+    "surface": "fixture",
+    "family": "fixture",
+    "viewport": [
+      1000,
+      700
+    ],
+    "state": "default",
+    "theme": "light",
+    "locale": "en",
+    "required_kinds": [
+      "render",
+      "technical"
+    ]
+  },
+  "requested_url": "http://127.0.0.1:12055/",
+  "build_id": "f05-static-v1",
+  "actions": [],
+  "assertions": [
+    {
+      "selector": "#page",
+      "visible": true
+    }
+  ],
+  "console_errors": [],
+  "frames": [
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png"
+  ],
+  "motion_observation": "FRAME_SAMPLES_ONLY",
+  "actual_url": "http://127.0.0.1:12055/",
+  "design": {
+    "baseline_sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+    "input_fingerprints": {
+      "c0": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+      "c1": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+      "c2": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e",
+      "c3": "b9d820a2fee802af3484d9405e46adfdc14c454c99488837e700499e7bc98a8e"
+    },
+    "measurements": [
+      {
+        "check_id": "c0",
+        "criterion_sha256": "745fb7a0ca62c648dbf4eaf5df0609d4d3fbbd04ae08b665e9def6749e774cea",
+        "values": [
+          16
+        ],
+        "boxes": [
+          {
+            "container": {
+              "top": 0,
+              "bottom": 56,
+              "left": 0,
+              "right": 1000,
+              "width": 1000,
+              "height": 56,
+              "margin": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "padding": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "gap": "16px",
+              "lineHeight": "normal"
+            },
+            "children": [
+              {
+                "top": 0,
+                "bottom": 20,
+                "left": 0,
+                "right": 1000,
+                "width": 1000,
+                "height": 20,
+                "margin": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "padding": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "gap": "normal",
+                "lineHeight": "normal"
+              },
+              {
+                "top": 36,
+                "bottom": 56,
+                "left": 0,
+                "right": 1000,
+                "width": 1000,
+                "height": 20,
+                "margin": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "padding": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "gap": "normal",
+                "lineHeight": "normal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "check_id": "c1",
+        "criterion_sha256": "86708292961e3c1de8ec2cc05454c1b6cf788b28f2a08e3a5fed5518a7dc5f3d",
+        "values": [
+          40
+        ],
+        "boxes": [
+          [
+            {
+              "top": 56,
+              "bottom": 76,
+              "left": 0,
+              "right": 1000,
+              "width": 1000,
+              "height": 20,
+              "margin": [
+                "0px",
+                "0px",
+                "40px",
+                "0px"
+              ],
+              "padding": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "gap": "normal",
+              "lineHeight": "normal"
+            },
+            {
+              "top": 116,
+              "bottom": 136,
+              "left": 0,
+              "right": 1000,
+              "width": 1000,
+              "height": 20,
+              "margin": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "padding": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "gap": "normal",
+              "lineHeight": "normal"
+            }
+          ]
+        ]
+      },
+      {
+        "check_id": "c2",
+        "criterion_sha256": "c24c1178d8fb374ce823888e4718c60aa7fbec6dd38bc8db071c6af7bea1de92",
+        "values": [
+          8
+        ],
+        "boxes": [
+          {
+            "container": {
+              "top": 136,
+              "bottom": 184,
+              "left": 0,
+              "right": 1000,
+              "width": 1000,
+              "height": 48,
+              "margin": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "padding": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "gap": "8px",
+              "lineHeight": "normal"
+            },
+            "children": [
+              {
+                "top": 136,
+                "bottom": 156,
+                "left": 0,
+                "right": 1000,
+                "width": 1000,
+                "height": 20,
+                "margin": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "padding": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "gap": "normal",
+                "lineHeight": "normal"
+              },
+              {
+                "top": 164,
+                "bottom": 184,
+                "left": 0,
+                "right": 1000,
+                "width": 1000,
+                "height": 20,
+                "margin": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "padding": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "gap": "normal",
+                "lineHeight": "normal"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "check_id": "c3",
+        "criterion_sha256": "4a3c50dec32b5ccfaabf05a774c92be2b514188ea0bb2f37498a57ccc675a14a",
+        "values": [
+          32
+        ],
+        "boxes": [
+          {
+            "container": {
+              "top": 184,
+              "bottom": 328,
+              "left": 0,
+              "right": 1000,
+              "width": 1000,
+              "height": 144,
+              "margin": [
+                "0px",
+                "0px",
+                "0px",
+                "0px"
+              ],
+              "padding": [
+                "32px",
+                "32px",
+                "32px",
+                "32px"
+              ],
+              "gap": "16px",
+              "lineHeight": "normal"
+            },
+            "children": [
+              {
+                "top": 216,
+                "bottom": 296,
+                "left": 32,
+                "right": 56.65625,
+                "width": 24.65625,
+                "height": 80,
+                "margin": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "padding": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "gap": "normal",
+                "lineHeight": "normal"
+              },
+              {
+                "top": 216,
+                "bottom": 236,
+                "left": 72.65625,
+                "right": 107.328125,
+                "width": 34.671875,
+                "height": 20,
+                "margin": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "padding": [
+                  "0px",
+                  "0px",
+                  "0px",
+                  "0px"
+                ],
+                "gap": "normal",
+                "lineHeight": "normal"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "frame_hashes": {
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-start.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-result.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007",
+    "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02\\old-capture\\0-full.png": "336a4eceaaad50b207f379875b68524385d47b11c8276b8630b9470df872d007"
+  }
+}

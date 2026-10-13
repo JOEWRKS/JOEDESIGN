@@ -1,0 +1,40 @@
+{
+  "schema": "joeness.impact-reuse-review.v1",
+  "scope_id": "spacing-fixture",
+  "impact_sha256": "06ec3a44cd997726be4659323636ae76f5d309dd1848b1761de836e089a41c03",
+  "old_baseline_sha256": "cc17b0d20246191ca7ee0622c78dcdae0945b9466cca2439fd71b8d6c632b4bc",
+  "new_baseline_sha256": "8523be5fda38367ea1463f581388b69dd47c44438a20116a11fa5003eaeb1174",
+  "old_result_sha256": "01760c5dee4bb8a2bd3224fac3a12cff9c3ca485023551798ce7800419afad9e",
+  "semantic_review_sha256": "e0d75f467bf6b0b868eabec608d772876c19881f1832c255b660f9da433cc4fb",
+  "implementation_context": "JOEDESIGN-fixture-producer",
+  "review_context": "joedesign-joint-review-of-manager-reviewed-transition",
+  "confirmed_candidate_check_ids": [
+    "c0",
+    "c1",
+    "c2",
+    "c3"
+  ],
+  "source_refs": [
+    {
+      "path": "D:/JOEWRKS/JOEQASAM/evidence/t035-joe-implementation/f05-actual-manager.json",
+      "sha256": "edd5c3b09bb04b32dea6885dca8c6e2830a87459805d9573f0ff0ade50521026"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\DESIGN.md",
+      "sha256": "f24e501ff180d7c4ac175b9518b3040b7915fc84052a1e1c4f73aa2d824a1041"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\authority-before.md",
+      "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\index.html",
+      "sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8"
+    },
+    {
+      "path": "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01\\served.json",
+      "sha256": "73795fce1affb478c4b6c7e9aa524905c750a9f4eba0eab639512a9a3d496a33"
+    }
+  ],
+  "rationale": "Manager inspected these exact P01/P02 pins, source append, actual PNG and four box distances. Consuming that independent diagnostic review only; no approval or reuse activation. Independently matched the isolated producer output and immutable fixture definitions against the Manager scoped review; no new observation or acceptance."
+}

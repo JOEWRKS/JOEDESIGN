@@ -1,0 +1,7 @@
+기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.
+At C:\Users\tjdwo\AppData\Local\Temp\joedesign-v1-install-nlomhc2x\readme-install.ps1:6 char:5
++     throw '기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.'
++     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (기존 설치가 있습니다. do...구 안내를 먼저 확인하세요.:String) [], RuntimeException
+    + FullyQualifiedErrorId : 기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.
+ 

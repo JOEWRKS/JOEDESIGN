@@ -1,105 +1,108 @@
 # JOEDESIGN
 
-## 하나의 운영 코어
+## 1. 이게 뭐냐
 
-**JOEDESIGN** 하나를 호출한다. [최상위 운영지침](skills/joedesign/SKILL.md)이
-작업 범위와 단계를 정하고, 조정 담당자가 각 역할의 결과를 통합한다.
-하네스는 그 안의 실행·증거 관리 기능이며 별도로 선택할 스킬이 아니다.
+**어떻게 보이고 사용될지 만들고 확인한다.**
 
-현재 작업본: **0.3.0-dev 통합 개발본**. 단일 버전 원본은
-[VERSION](skills/joedesign/VERSION)이다. 이전 main 반영본 `0efacd8`은
-코어 v0.2 + Harness v0.1이었다. 이번 main 통합 대상은 단일 코어와
-디자인 준수 검증 보강이며, 정식 릴리스·사용자 시각 수용과는 별개다.
-[전체 업데이트 내역](CHANGELOG.md)과 [통합 검증 기록](evals/unified-core-20261009/README.md)을 참조한다.
+Codex에서 화면을 만들고 고칠 때 사용하는 디자인 스킬이다.
+패키지 버전은 **1.0.0**이며, [VERSION](skills/joedesign/VERSION)에서 확인한다.
 
-## 작업 흐름과 책임
+## 2. 언제 쓰냐
 
-신규 디자인과 중요한 확장은 **참조 결정 → 시각 번역 → 대표 화면 제작 →
-전문 검수 → 확장 → 통합 관찰**로 진행한다. 승인된 관계 안의 국소 수정은
-정확한 대상 진단·수정·관찰로 범위를 줄인다. 검토만 요청하면 쓰기 권한은 없다.
-기존 색상·폰트를 썼다는 이유로 화면 구조 변경이 국소 수정이 되지는 않는다.
+- 새 웹사이트나 앱의 화면을 만들 때.
+- 기존 화면의 여백·글자·배치·모바일 사용성을 고칠 때.
+- 만든 화면이 정한 디자인 기준에 맞는지 검수할 때.
 
-| 담당 | 책임 |
-|---|---|
-| 조정 담당자 A | 작업 범위, 역할 배정, 단계 전환, 통합 결과 |
-| Product | 기능·정보·상태·행동의 의미와 필수 조건 |
-| 시각 역할 J | 원본 해석, 구도·위계·시각 관계와 구현 비교 |
-| 구현 담당 | 코드·상태·반응형 구현과 실제 결과 관찰 |
-| 전문 검수 | Impeccable, UI UX Pro Max, web-design-guidelines와 필요한 성능 전문가 |
-| 독립 Critic | 새 컨텍스트에서 현재 증거와 기준으로 진단 |
-| 사용자 | 정확한 결과에 대한 최종 시각 수용 |
+## 3. 바로 시작하기
 
-전문 역할은 같은 운영 코어 아래 배정된 단계만 수행한다. R → C1 → 필요 시
-C2는 검토 순서이며 투표가 아니다. 대표 화면의 필수 실패·미확인은 의존하는
-확장을 막는다. 확장 뒤에는 바뀐 빌드에서 기존 대표 화면까지 다시 확인한다.
+Windows PowerShell 기준이다. **Codex, Git, Python 3**가 필요하며, 비공개
+저장소이므로 GitHub에서 이 저장소를 읽을 권한으로 로그인해야 한다.
 
-## 패키지 사용과 이전 설치 마이그레이션
-
-설치 단위는 `skills/joedesign/` 폴더 **전체**다. 이를 프로젝트 또는 개인의
-스킬 경로에 `joedesign`으로 배치하고 `$joedesign` 또는 “JOEDESIGN으로 디자인해”로
-호출한다. 필요한 전문 스킬은 실제로 사용 가능한 상태여야 한다.
-저장소 문서·평가 자료는 설치할 필요가 없다.
-
-기존의 `joedesign`과 `joedesign-harness`를 함께 설치한 환경에서는, 설치를 갱신할
-때 두 구 폴더를 발견 경로 밖에 보존하고 통합 `joedesign` 하나로 교체한다.
-폴더를 덧씌우기만 해 구 Harness 진입점을 남기지 않는다. 2026-10-10 후속 지시로
-이 PC의 개인 설치는 통합 0.3.0-dev로 전환했다. 기존 개인·프로젝트 구 설치본은
-발견 경로 밖에 보존했다. Git 갱신은 설치 갱신이 아니며, 다른 PC의 설치 상태를
-뜻하지 않는다. [운영 연결 기록](evals/design-conformance-20261010/operational.md).
-
-CLI와 캡처 경로는 이제 `joedesign/scripts/` 아래다. 기존 runtime JSON의
-외부 `skills.J` 재정의는 제거한다. J는 항상 같은 패키지 내부를 사용한다.
-옛 실행을 새 정책으로 재개하지 말고 기존 증거를 보존한 새 후보를 준비한다.
+처음 설치한다면 작업 폴더에서 실행한다. 이미 내려받았다면 그 저장소 폴더로
+이동한 뒤 두 번째 블록부터 실행한다.
 
 ```powershell
-python skills/joedesign/scripts/harness_cli.py version
-python skills/joedesign/scripts/harness_cli.py doctor
-python skills/joedesign/scripts/harness_cli.py --help
+git clone https://github.com/JOEWRKS/JOEDESIGN.git
+cd JOEDESIGN
 ```
-
-[실행 설정](skills/joedesign/references/execution.md)과
-[계약·RACI 상세](skills/joedesign/references/operation.md)는 해당 작업에서 읽는다.
-브라우저 수집과 역할 실행에는 이미 제공된 런타임을 사용하며 자동 설치하지 않는다.
-직접 도구를 쓰거나 Git이 없는 프로젝트도 같은 운영 순서를 적용하되 CLI 실행으로
-주장하지 않는다.
-
-## 검증과 한계
 
 ```powershell
-python -m unittest discover -s tests -v
-node --test tests/joedesign-v02.tests.mjs
+$ErrorActionPreference = 'Stop'
+$JoeCodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }
+$JoeSkills = Join-Path $JoeCodexHome 'skills'
+$JoeTarget = Join-Path $JoeSkills 'joedesign'
+if ((Test-Path -LiteralPath $JoeTarget) -or (Test-Path -LiteralPath (Join-Path $JoeSkills 'joedesign-harness'))) {
+    throw '기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.'
+}
+New-Item -ItemType Directory -Path $JoeSkills -Force | Out-Null
+Copy-Item -LiteralPath '.\skills\joedesign' -Destination $JoeTarget -Recurse
+python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') version
+python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') doctor
 ```
 
-Python은 현재 실행·계약 정책과 단일 패키지 복사·역할 전달을 검사한다.
-브라우저 통합 검사는 기존 Playwright/브라우저 경로를 환경변수로 제공했을 때 실행된다.
-Node v0.2 검사는 [보존된 패키지](fixtures/package-history/pre-unification-20261009/manifest.json)에
-과거 행동 증거가 그대로 연결되는지만 확인한다. 새 운영지침의 모델 준수나 디자인
-품질 증거로 이전 결과를 재사용하지 않는다.
+`version`은 설치 버전을, `doctor`는 필요한 전문 스킬의 준비 상태를 보여준다.
+`UNAVAILABLE`이면 [설치·의존성 안내](docs/INSTALL.md)를 확인한다.
+설치 성공만으로 전문 검수까지 준비된 것은 아니다.
 
-로컬 실행 완료는 `REVIEW_COMPLETE_UNCERTIFIED`이며 최종 APPROVED가 아니다.
-인증된 호스트 receipt는 제공하지 않는다. 실행 순서·자동 검사·실제 모델 준수·
-시각 품질·사용자 수용은 서로 다른 검증이다. 원본을 제공한 격리 과제 3건에서
-실제 에이전트의 신규 제작·확장·국소 수정과 전문 검토를 확인했다.
-신규54·수정32·확장249개 필수 검사가 통과했으며, 기준 검토 중 발견한 누락과
-페이지 이동 시 상태 초기화의 수정 이력도 보존했다.
-[행동 검증과 한계](evals/behavior-forward-20261010/README.md)를 참조한다.
-조정 담당자의 개입 없는 준수 보장이나 실제 제품 전체의 시각 수용을 뜻하지 않는다.
+Codex에서 새 대화를 열고 다음 요청을 복사한다. 참고할 화면·자료가 있으면 함께 전달한다.
 
-2026-10-10 소스 보강은 DESIGN 규칙별 필수 대상·검사방법을 별도 기준점에
-고정하고, 실제 렌더의 합산 여백과 전문 판정을 검사한다. `run`은 이제
-`design_validation` 기준 파일과 독립적으로 보존한 SHA256이 필요하다.
-`verify-design`은 비Git/직접 도구 관찰도 같은 기준으로 판정하여 JOENESS가
-소비할 결과를 낸다. 누락·실패·오래된 근거는 관련 디자인 단계와 확장을 막는다.
-[필드·실행·책임 경계](skills/joedesign/references/conformance.md)와
-[실제 생산자→소비자 연결 검증](evals/design-conformance-20261010/README.md)을 참조한다.
-개인 설치 전환과 지정 담당자의 GEO 검수 경로 활성화는 완료했다.
-최종 범위와 한계는 [운영 연결 기록](evals/design-conformance-20261010/operational.md)을 참조한다.
+```text
+$joedesign
+이 프로젝트의 문의 페이지를 만들어줘.
+기존 요구사항과 DESIGN.md, 내가 준 참고 화면부터 확인해.
+대표 화면을 먼저 만들고 PC·모바일에서 검수한 다음 필요한 범위로 확장해.
+마지막에는 변경점, 확인한 결과, 아직 확인하지 못한 점을 나눠서 알려줘.
+```
 
-## 보존한 설계와 증거
+업데이트·구형 설치 이전·복구는 [설치 안내](docs/INSTALL.md)를 따른다.
+저장소를 갱신해도 이미 복사한 설치본은 자동으로 바뀌지 않는다.
 
-- [v0.2 설계](docs/specs/joedesign-v0.2-visual-translation.md)와 [당시 행동 증거](fixtures/contract-cases/evidence/visual-translation-v02/README.md)
-- [이전 Harness 설계](docs/superpowers/specs/JOEDESIGN_UI_REVIEW_RACI_V0_1_DRAFT.md)와 [채택 판단](evals/harness-v0.1/retention-decision.md)
-- [실행 연동의 실패·수정](evals/harness-execution-20261006/README.md), [병목 개선](evals/harness-bottleneck-20261006/README.md), [대표 화면 선검수 보강](evals/design-workflow-20261009/README.md)
+## 4. 무엇을 받게 되냐
 
-이 기록은 각 시점의 소스와 범위를 설명한다. 과거 두 스킬 설치 안내와 동결
-지시는 현재 운영 경로가 아니며, 실패·미채택 실험·과거 관찰은 그대로 보존한다.
+화면 구현, 프로젝트의 `DESIGN.md`에 정리한 디자인 기준, 검수 결과와 남은 문제를 받는다.
+검수만 요청하면 수정 대신 문제 목록을 받는다. 아래는 보고 형식 예시이며 실제 검증 결과가 아니다.
+
+```text
+대상: 문의 페이지 PC·모바일
+변경: 입력 순서, 오류 안내, 모바일 버튼 배치
+확인: 입력 오류와 정상 전송 상태, 화면별 여백 기준
+남음: 실제 이메일 도착 여부는 확인하지 못함
+사용자 수락: 최종 화면 확인 필요
+```
+
+## 5. 다른 JOE 도구와 함께 쓰기
+
+| 도구 | 역할 | 맡는 일 |
+|---|---|---|
+| [JOEFLOW](https://github.com/JOEWRKS/JOEFLOW) | 무엇을 만들지 확실하게 정한다. | 요구사항·규칙·예외·완료 기준 |
+| **JOEDESIGN** | 어떻게 보이고 사용될지 만들고 확인한다. | 화면·시각 기준·디자인 검수 |
+| [JOENESS](https://github.com/JOEWRKS/JOENESS) | 작업이 어디까지 됐고 무엇이 남았는지 관리한다. | 작업 순서·기록·재개·완료 근거 |
+
+**JOENESS로 작업 정리 → JOEFLOW로 만들 것 확정 → JOEDESIGN으로 화면 제작·검수
+→ 구현 담당이 개발 → 결과 검증 → JOENESS에 완료·잔여 기록**
+
+JOENESS는 전 과정에서 사용한다. 필요한 도구만 단독으로 써도 된다.
+화면 제작 중 UI 코드 구현을 함께 맡길 수도 있으며, 실제 개발 역할은 작업 범위에 맞게 정한다.
+
+문의 폼을 만든다면 JOEFLOW의 **필수 입력·오류 조건·완료 기준**을 JOEDESIGN에
+전달한다. JOEDESIGN은 화면을 만들고 **화면별 검수 근거·미확인 항목·사용자 수락
+상태**를 구현 담당과 JOENESS에 넘긴다. 검수 결과를 자동으로 읽게 하려면
+[생산·소비 연결 설정](skills/joedesign/references/conformance.md)이 필요하다.
+세 도구를 설치하는 것만으로 자동 연결되거나 승인되지는 않는다.
+
+## 6. 지원 범위·주의사항
+
+- 화면 제작·확장·국소 수정·검수를 지원한다. 무엇을 만들지 정하는 일과 최종
+  사용자 수락은 별도다. **1.0.0은 지원 범위의 패키지 버전이며 무결점 보장이 아니다.**
+- 실제 전문 검수에는 Impeccable, UI UX Pro Max, web-design-guidelines 등 해당
+  스킬이 필요하다. 자동 실행·브라우저 수집에는 기존 Codex 실행기, Node와
+  Playwright·브라우저도 필요하며, 이 패키지가 대신 설치하지 않는다.
+- 기존 검사 재사용은 독립 검토된 **DESIGN 끝의 무관한 주석·절 추가와 기하 검사**에
+  한정한다. CSS·실행 파일·제공 빌드가 바뀌거나 의존성이 미상이면 새 관찰이 필요하다.
+  전문 디자인 판단도 새 검토가 필요하다. [정확한 조건](skills/joedesign/references/impact.md).
+- 누락·실패·오래된 근거를 통과나 수락으로 바꾸지 않는다. 로컬 파일의 해시와
+  검토 기록은 사용자 신원 인증이나 파일·채팅 직접 수정의 우회 방지를 보장하지 않는다.
+
+[설치·복구](docs/INSTALL.md) · [운영지침](skills/joedesign/SKILL.md) ·
+[실행 설정](skills/joedesign/references/execution.md) · [변경 이력](CHANGELOG.md) ·
+[검증 기록과 한계](docs/VALIDATION.md)

@@ -1,4 +1,4 @@
 interface:
   display_name: "JOEDESIGN"
-  short_description: "One workflow for UI design, implementation and review"
-  default_prompt: "Use $joedesign to coordinate this UI task from visual sources through scoped implementation and specialist review."
+  short_description: "어떻게 보이고 사용될지 만들고 확인한다."
+  default_prompt: "$joedesign으로 요구사항과 참고 화면을 확인하고, 대표 화면 제작과 전문 검수를 거쳐 요청한 UI 작업을 진행해줘."

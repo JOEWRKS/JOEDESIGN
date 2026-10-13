@@ -1,0 +1,97 @@
+{
+  "schema": "joedesign.impact-review.v1",
+  "scope_id": "spacing-fixture",
+  "transition_sha256": "03299565630a5da83aaac719079eab820e111a55389e2778d71097be3759dec7",
+  "implementation_context": "f05-fixture-builder",
+  "review_context": "candidate-for-manager-source-review",
+  "scope_analysis": "CANDIDATE REVIEW FOR INDEPENDENT INSPECTION: appended text explicitly excludes the existing web screen; the original authority prefix and full baseline definitions are unchanged. All four existing spacing checks remain required. This local draft is not authenticated independent approval.",
+  "authority_analysis": [
+    {
+      "path": "DESIGN.md",
+      "kind": "UNRELATED_SECTION_APPEND",
+      "rationale": "Append-only fixture text; existing screen spacing and defaults unchanged."
+    }
+  ],
+  "checks": [
+    {
+      "check_id": "c0",
+      "verdict": "UNAFFECTED",
+      "rationale": "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception.",
+      "source_refs": [
+        {
+          "path": "DESIGN.md",
+          "sha256": "4d50fca29ad2384d0b887b25b2c42b3a46b105a56f43239ce865ac2a02378614"
+        },
+        {
+          "path": "authority-before.md",
+          "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+        },
+        {
+          "path": "index.html",
+          "sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8"
+        }
+      ],
+      "blocking_findings": []
+    },
+    {
+      "check_id": "c1",
+      "verdict": "UNAFFECTED",
+      "rationale": "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception.",
+      "source_refs": [
+        {
+          "path": "DESIGN.md",
+          "sha256": "4d50fca29ad2384d0b887b25b2c42b3a46b105a56f43239ce865ac2a02378614"
+        },
+        {
+          "path": "authority-before.md",
+          "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+        },
+        {
+          "path": "index.html",
+          "sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8"
+        }
+      ],
+      "blocking_findings": []
+    },
+    {
+      "check_id": "c2",
+      "verdict": "UNAFFECTED",
+      "rationale": "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception.",
+      "source_refs": [
+        {
+          "path": "DESIGN.md",
+          "sha256": "4d50fca29ad2384d0b887b25b2c42b3a46b105a56f43239ce865ac2a02378614"
+        },
+        {
+          "path": "authority-before.md",
+          "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+        },
+        {
+          "path": "index.html",
+          "sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8"
+        }
+      ],
+      "blocking_findings": []
+    },
+    {
+      "check_id": "c3",
+      "verdict": "UNAFFECTED",
+      "rationale": "This check still covers the same web spacing rule; appended editorial/print-only material introduces no web default or exception.",
+      "source_refs": [
+        {
+          "path": "DESIGN.md",
+          "sha256": "4d50fca29ad2384d0b887b25b2c42b3a46b105a56f43239ce865ac2a02378614"
+        },
+        {
+          "path": "authority-before.md",
+          "sha256": "51a77274a630ca7831fe029a65add33f549bd573cb56bf962ec58c222edfbef5"
+        },
+        {
+          "path": "index.html",
+          "sha256": "972b5987cfd793ea113246b1726f0b106b38586881824e31d585c8ac639557d8"
+        }
+      ],
+      "blocking_findings": []
+    }
+  ]
+}

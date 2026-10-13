@@ -1,0 +1,5 @@
+Exception: C:\Users\tjdwo\AppData\Local\Temp\joedesign-v1-install-nlomhc2x\readme-install.ps1:6
+Line |
+   6 |      throw '기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.'
+     |      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | 기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.
