@@ -6,6 +6,7 @@
 
 | 기록 | 확인한 범위 |
 |---|---|
+| [1.0.0 개인 설치](../evals/v1-personal-install-20261013/README.md) | 전체44파일 백업·2파일 갱신·30개 배포 파일 일치·실제 version/doctor; 전문 검수 호출 증거와 구분 |
 | [F05 변경 영향·재사용](../evals/f05-impact-20261013/COMPLETION.md) | 검토된 DESIGN 추가, 기하 관찰 재사용, 생산·소비 연결과 설치 보존 |
 | [실제 행동 시험](../evals/behavior-forward-20261010/README.md) | 원본을 제공한 신규 제작·국소 수정·확장 3과제; 조정 담당의 기준 검토 포함 |
 | [디자인 준수 연결](../evals/design-conformance-20261010/README.md) | 필수 검사 누락·실패·오래된 근거 차단과 실제 생산·소비 실행 |

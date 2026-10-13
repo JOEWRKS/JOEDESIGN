@@ -4,3 +4,4 @@
 /evals/v1-release-candidate-20261013/joint-r1/** -text -whitespace
 /evals/v1-release-candidate-20261013/python-regression.txt -text -whitespace
 /evals/v1-release-candidate-20261013/node-regression.txt -text -whitespace
+/evals/v1-personal-install-20261013/receipt.json -text -whitespace

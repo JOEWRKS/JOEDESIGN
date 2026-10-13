@@ -1,5 +1,20 @@
 # JOEDESIGN repository
 
+## Personal installation and release directive (2026-10-13, current)
+
+The user explicitly approved T040 in Local QA Manager, message
+01a13565-86fd-7c91-84df-8bd546d76049: update personal installations, publish tags
+and GitHub Releases, and verify. This supersedes T039's no-install/no-release
+boundary only for that scope. JOEDESIGN owns its exact personal-package update
+and product records; Manager owns the three-installation cross-check and central
+tag/Release publication. Do not create duplicate tags or releases here.
+The personal joedesign package is now1.0.0: 44-file verified backup outside skill
+discovery, only VERSION/agents metadata changed, other42 files preserved.
+Source package/runtime, other skills, global settings and feedback dirs stay intact.
+See evals/v1-personal-install-20261013/README.md for receipt and verification limits.
+Documentation-only completion may be committed and pushed normally to main.
+No new worktree, force push, feature expansion, product changes or GEO messages.
+
 ## JOE tools 1.x integration directive (2026-10-13, current)
 
 The user approved T039 in Local QA Manager: common simple Korean README, package

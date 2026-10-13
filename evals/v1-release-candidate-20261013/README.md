@@ -1,5 +1,9 @@
 # JOEDESIGN 1.0.0 validation and integration — T039, 2026-10-13
 
+Later state: T040 separately authorized and completed the personal1.0.0 update.
+See [the installation receipt](../v1-personal-install-20261013/README.md).
+The personal0.3.0-dev and no-release statements below describe the T039 stage.
+
 User approval verified in Manager message `01a13543-e72a-71f0-a326-5c768336ab91`.
 Base `1d9502ea74d6a0fbbad730450e85f0b327b2906e`; candidate branch
 `codex/joedesign-1.0.0`. VERSION is the sole package version source. Skill ID
