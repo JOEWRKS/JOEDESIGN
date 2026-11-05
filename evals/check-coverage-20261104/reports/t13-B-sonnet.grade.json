@@ -1,0 +1,1 @@
+{"scores": {"a": 1, "b": 1, "c": 1, "d": 1, "e": 1, "f": 1}, "note": "토큰 표 Role/Parts/value/Status 열, 깊이 행에 부품별 N값. Rule Coverage에 Layouts·Sizes·States·Unmeasured 열. 토큰 행 measured, 규칙 행 approved/proposed/measured가 행마다 붙음", "summary": "DESIGN.md에 v1 DRAFT 절 추가: 토큰 역할표(행별 measured), S1~S13 규칙, 규칙→검사 표와 C1~C10 검사 목록, 코드 읽기 위험·열린 결정"}

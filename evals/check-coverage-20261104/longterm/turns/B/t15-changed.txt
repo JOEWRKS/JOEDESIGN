@@ -1,0 +1,9 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/spacing-check.mjs
+work/design/tablet-matrix-all.log
+work/design/tablet-replay.log
+work/design/tablet-spacing-before.log
+work/design/tablet-spacing.log

@@ -1,0 +1,8 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/spacing-check.mjs
+work/design/text12-check.log
+work/design/text12-spacing-before.log
+work/design/text12-spacing.log

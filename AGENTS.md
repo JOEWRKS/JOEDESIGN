@@ -1,5 +1,24 @@
 # JOEDESIGN repository
 
+## T043 검사 범위 표 보강 (2026-11-04, 현재)
+
+- 사용자 지시: JOEFLOW 검증 완료 후 JOEDESIGN 보강(이 세션 채팅). 오목 세션의 규칙 위반
+  원인(한 배치·크기만 잰 검사가 규칙 통과로 기록됨)에 대한 DESIGN 측 대응.
+- 변경: templates/DESIGN.md의 Token Roles·Rule Coverage 절, SKILL.md 2·3·6단계와 인계 문단,
+  references/conformance.md 최소 형식 절, operation·visual-translation 한 문장. 문서만.
+- 보존: 버전 1.0.0, 실행 코드·스키마·계약, 개인 설치, 기존 태그·Release, 미추적 feedback 폴더.
+- 검증: evals/check-coverage-20261104 (단일 턴 48회 + 40턴 롱텀 80패킷 블라인드 A/B,
+  회귀 14/14·142 OK). 롱텀에서는 우위 없음, 보고 통과 주장 범위는 B가 낮음, 검사 표와 실측
+  4px 어긋남 1건 발견.
+- 추가(2026-11-05, 사용자 지시 "보강 완료하고 커밋하자"): 그 두 빈틈에 대한 문구. SKILL.md
+  3단계(표본 대조, 안 했으면 "not spot-checked")·6단계(통과 숫자마다 같은 문장에 범위),
+  conformance.md·templates/DESIGN.md 같은 계약. 한 턴 24회 블라인드 비교(report-scope/)에서
+  보고 범위·대조 수행은 개선, 퇴행 없음. 브라우저 시험의 행 전부 표기(0/4)·'해결' 한정(1/4)은
+  미달로 남음. 롱텀 재측정 없음.
+- 검증 중 사고: 시험본 정션 오류로 실제 AI-Gomoku 작업 폴더에 캐시 폴더 3개가 생겼다가 삭제됨
+  (추적 파일 변경 없음). 기록은 report-scope/incidents.txt.
+- 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
+
 ## T042 README 영어 기본화 (2026-10-13, 현재)
 
 - 사용자 지시: 영어 설명 우선 배치, 한국어 설명 보존. Manager 채팅의

@@ -71,16 +71,25 @@ route. Continue independent authorized work without expanding an unproved direct
    Preserve required functions, information, states and recovery. Keep one compact
    root DESIGN.md with sources, approval scope and necessary semantic role decisions;
    reuse native roles before introducing variations. Use the [template](templates/DESIGN.md)
-   only when needed. Proposed and approved values remain distinct.
+   only when needed. Proposed and approved values remain distinct. A shared token gets a
+   token-role row (role → parts → token → measured/proposed/approved); values read from
+   shipped code are measured, not approved.
 3. **Prove the representative composition.** Build the family exposing the largest
    visual risk at useful fidelity, including required wide/narrow and interaction
    states. Observe what dominates and what comes next. Low fidelity may defer finish,
    not hierarchy. Do not build dependent families before this proof is reviewed.
    Before implementation, the design owner maps the applicable DESIGN rules to
    required targets and geometric/specialist checks using the existing scoped
-   [conformance contract](references/conformance.md). Have the scope/criteria
-   reviewed independently of the implementation and pin that baseline in the
-   consuming workflow. Missing checks cannot disappear from a completion report.
+   [conformance contract](references/conformance.md): at minimum the DESIGN
+   rule-coverage table (rule → check → layouts, sizes, states → unmeasured), and the
+   pinned JSON baseline when the harness runs. Have the scope/criteria reviewed
+   independently of the implementation and pin that baseline in the consuming
+   workflow. A rule with no check row is unmeasured, never passed; missing checks
+   cannot disappear from a completion report. Before a check's result counts for a
+   rule, compare its reading on one target with a direct observation of the quantity
+   the rule names (for a visible gap: the rendered edges a person sees, shadow
+   included, not a wrapper box). If they differ, fix the check or the row; if the
+   comparison was not done, the row says "not spot-checked".
 4. **Review the actual proof.** Use R/C1 and conditional C2 for affected claims, then
    fresh independent critique. Distinguish information/function preservation, source
    relationship conformance and whole-screen design quality. Challenge the composition
@@ -92,7 +101,12 @@ route. Continue independent authorized work without expanding an unproved direct
    the protected proof on the changed build. Material replacement of an approved
    direction needs scoped user approval after proof; internal review cannot grant it.
 6. **Report the actual outcome.** Present the artifact, meaningful visual change,
-   observed scope and dominant remaining gap. Technical checks, visual judgment,
+   observed scope (the rule-coverage rows that ran and the rows left unmeasured)
+   and dominant remaining gap. Each pass count or "no failures" in the report carries
+   what it covered in the same sentence: the check, the layouts/sizes, the states and
+   mode, and whether it read code or the render. Write "spacing check 939/939 on 9
+   sizes x 8 states, light, rendered", not "spacing 939/939 passed"; a total without
+   that scope is not reported as a pass. Technical checks, visual judgment,
    workflow completion, certification and exact user acceptance remain distinct.
    User rejection remains REJECTED for that output; no counts or role labels erase it.
 
@@ -112,8 +126,12 @@ Review-only never gains write authority. The user need
 not prepare machine files or choose between a core and harness.
 
 Direct host/browser tools and non-Git projects follow the same operating route,
-recording source → decision → observation → verdict in existing DESIGN/review records.
-They need no new document system and must not be reported as a completed CLI run.
+recording source → decision → observation → verdict in existing DESIGN/review records;
+the DESIGN rule-coverage table is the minimum record of what was measured. When a
+design is handed to a project session that cannot load JOEDESIGN, the token-role and
+rule-coverage tables travel in DESIGN.md with their status, so that session can keep
+the rules without this skill. They need no new document system and must not be
+reported as a completed CLI run.
 The runner gates its own launches, not arbitrary external edits or actual adherence
 inside a role. Local records are not authenticated host receipts or proof of human
 visual judgment. Unavailable specialists or evidence stay explicit, never invented.

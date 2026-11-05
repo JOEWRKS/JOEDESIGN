@@ -1,0 +1,162 @@
+[
+ {
+  "id": "v01-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v01-B"
+ },
+ {
+  "id": "v02-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v02-B"
+ },
+ {
+  "id": "v03-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v03-B"
+ },
+ {
+  "id": "v04-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v04-B"
+ },
+ {
+  "id": "v05-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v05-B"
+ },
+ {
+  "id": "v06-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v06-B"
+ },
+ {
+  "id": "v07-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v07-B"
+ },
+ {
+  "id": "v08-B",
+  "arm": "B",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v08-B"
+ },
+ {
+  "id": "v09-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v09-C"
+ },
+ {
+  "id": "v10-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v10-C"
+ },
+ {
+  "id": "v11-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v11-C"
+ },
+ {
+  "id": "v12-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v12-C"
+ },
+ {
+  "id": "v13-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v13-C"
+ },
+ {
+  "id": "v14-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v14-C"
+ },
+ {
+  "id": "v15-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v15-C"
+ },
+ {
+  "id": "v16-C",
+  "arm": "C",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\v16-C"
+ },
+ {
+  "id": "w01-B",
+  "arm": "B",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w01-B",
+  "dev": 5601,
+  "test": 4602
+ },
+ {
+  "id": "w02-B",
+  "arm": "B",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w02-B",
+  "dev": 5602,
+  "test": 4604
+ },
+ {
+  "id": "w03-B",
+  "arm": "B",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B",
+  "dev": 5603,
+  "test": 4606
+ },
+ {
+  "id": "w04-B",
+  "arm": "B",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w04-B",
+  "dev": 5604,
+  "test": 4608
+ },
+ {
+  "id": "w05-C",
+  "arm": "C",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w05-C",
+  "dev": 5605,
+  "test": 4610
+ },
+ {
+  "id": "w06-C",
+  "arm": "C",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w06-C",
+  "dev": 5606,
+  "test": 4612
+ },
+ {
+  "id": "w07-C",
+  "arm": "C",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w07-C",
+  "dev": 5607,
+  "test": 4614
+ },
+ {
+  "id": "w08-C",
+  "arm": "C",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w08-C",
+  "dev": 5608,
+  "test": 4616
+ }
+]

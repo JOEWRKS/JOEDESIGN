@@ -1,0 +1,1 @@
+{"scores": {"a": 1, "b": 1, "c": 1, "d": 1, "e": 1, "f": 1}, "note": "그림자 행에 판·말풍선·주 버튼·카드·알약 등 부품별 N값. Rule Coverage에 레이아웃·크기·상태·미측정 열. 토큰 행 measured, 규칙 행 방향 승인/measured/proposed 상태 열", "summary": "DESIGN.md 맨 위에 v1 DRAFT Rev 1 작성: 토큰 역할표, DS-1~10 규칙, 대비 계산, Rule Coverage와 검사 신뢰도, 열린 결정 D1~D7"}

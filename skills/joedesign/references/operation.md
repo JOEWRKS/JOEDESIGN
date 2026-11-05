@@ -85,8 +85,11 @@ combinations; type roles with size, supported weight and line height; spacing
 between elements, groups and sections; and common components with relevant states
 and responsive differences. Reuse healthy native tokens/components and link their
 implementation. Existing sufficient decisions need only the actual delta, not a
-mandatory exhaustive token table or a second system. Distinguish current code,
-proposed changes and approved decisions; code values are not approval evidence.
+mandatory exhaustive token table or a second system. A token shared by several parts
+does need its token-role row in DESIGN.md (which parts, which token, measured /
+proposed / approved), because a part outside the roster has no rule to be checked
+against. Distinguish current code, proposed changes and approved decisions; code
+values are not approval evidence.
 
 A Product document may mix mandatory constraints, proposed visual values and
 approved visual values. Check each affected value's source and approval scope;

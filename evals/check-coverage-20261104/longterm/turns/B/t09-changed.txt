@@ -1,0 +1,8 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/caption13-replay.log
+work/design/caption13-spacing.log
+work/design/caption13-token.log
+work/design/matrix-cap13.log

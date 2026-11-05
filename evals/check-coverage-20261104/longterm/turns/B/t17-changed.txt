@@ -1,0 +1,8 @@
+DESIGN.md
+README.md
+TASK.md
+package.json
+work/design/check.mjs
+work/design/design-check-first.log
+work/design/replay-check.mjs
+work/design/token-audit.mjs

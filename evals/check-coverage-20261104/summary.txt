@@ -1,0 +1,7 @@
+graded 16 / 16
+  A all    a=8/8 b=8/8 c=8/8 d=8/8 e=8/8 f=0/8 all=0/8
+  A opus   a=4/4 b=4/4 c=4/4 d=4/4 e=4/4 f=0/4 all=0/4
+  A sonnet a=4/4 b=4/4 c=4/4 d=4/4 e=4/4 f=0/4 all=0/4
+  B all    a=8/8 b=8/8 c=8/8 d=8/8 e=8/8 f=8/8 all=8/8
+  B opus   a=4/4 b=4/4 c=4/4 d=4/4 e=4/4 f=4/4 all=4/4
+  B sonnet a=4/4 b=4/4 c=4/4 d=4/4 e=4/4 f=4/4 all=4/4

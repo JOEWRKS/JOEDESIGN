@@ -1,0 +1,6 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+work/design/capture-matrix.mjs
+work/design/matrix-ds-2.log
+work/design/matrix-ds-all.log

@@ -1,0 +1,7 @@
+DESIGN.md
+README.md
+ROADMAP.md
+TASK.md
+src/main.ts
+src/style.css
+work/design/spacing-check.mjs
