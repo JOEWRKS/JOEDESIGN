@@ -81,15 +81,17 @@ route. Continue independent authorized work without expanding an unproved direct
    Before implementation, the design owner maps the applicable DESIGN rules to
    required targets and geometric/specialist checks using the existing scoped
    [conformance contract](references/conformance.md): at minimum the DESIGN
-   rule-coverage table (rule → check → layouts, sizes, states → unmeasured), and the
-   pinned JSON baseline when the harness runs. Have the scope/criteria reviewed
-   independently of the implementation and pin that baseline in the consuming
-   workflow. A rule with no check row is unmeasured, never passed; missing checks
-   cannot disappear from a completion report. Before a check's result counts for a
-   rule, compare its reading on one target with a direct observation of the quantity
-   the rule names (for a visible gap: the rendered edges a person sees, shadow
-   included, not a wrapper box). If they differ, fix the check or the row; if the
-   comparison was not done, the row says "not spot-checked".
+   rule-coverage table (rule → check → spot check → layouts, sizes, states →
+   unmeasured), and the pinned JSON baseline when the harness runs. Have the
+   scope/criteria reviewed independently of the implementation and pin that baseline
+   in the consuming workflow. A rule with no check row is unmeasured, never passed;
+   missing checks cannot disappear from a completion report. Before a check's result
+   counts for a rule, compare its reading on one target with a direct observation of
+   the quantity the rule names (for a visible gap: the rendered edges a person sees,
+   shadow included, not a wrapper box). If they differ, fix the check or the row.
+   Every row's Spot check cell records the outcome: the target with both readings, or
+   "not spot-checked". One row's spot check does not cover another row, and a row
+   inherited without a recorded comparison is not spot-checked.
 4. **Review the actual proof.** Use R/C1 and conditional C2 for affected claims, then
    fresh independent critique. Distinguish information/function preservation, source
    relationship conformance and whole-screen design quality. Challenge the composition
@@ -102,11 +104,19 @@ route. Continue independent authorized work without expanding an unproved direct
    direction needs scoped user approval after proof; internal review cannot grant it.
 6. **Report the actual outcome.** Present the artifact, meaningful visual change,
    observed scope (the rule-coverage rows that ran and the rows left unmeasured)
-   and dominant remaining gap. Each pass count or "no failures" in the report carries
-   what it covered in the same sentence: the check, the layouts/sizes, the states and
-   mode, and whether it read code or the render. Write "spacing check 939/939 on 9
-   sizes x 8 states, light, rendered", not "spacing 939/939 passed"; a total without
-   that scope is not reported as a pass. Technical checks, visual judgment,
+   and dominant remaining gap. Design-check results go in one results list, one line
+   per check that ran, every line in this form:
+   `check | result | sizes x states, mode | rendered or code | spot check`,
+   for example `spacing S1 | 939/939 | 9 sizes x 8 states, light | rendered |
+   1440x900 bubble to chips: check 12 / observed 12` or `overflow | 72/72 | 12 sizes
+   x 6 states, light | rendered | not spot-checked`. Side checks (overflow, clipping,
+   scroll), before/after comparisons and a fix claimed from a check each take a
+   line. Outside the list, the summary line included, a pass, a count, "fixed" or
+   "no failures" is written only with its sizes x states and rendered-or-code in
+   that same sentence; otherwise name the check and leave the outcome to its line.
+   A line that is not spot-checked is never listed as resolved, verified or done.
+   The project's report format decides the sections; this decides the form of each
+   result. Technical checks, visual judgment,
    workflow completion, certification and exact user acceptance remain distinct.
    User rejection remains REJECTED for that output; no counts or role labels erase it.
 

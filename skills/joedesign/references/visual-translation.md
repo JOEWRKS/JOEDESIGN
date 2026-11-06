@@ -99,8 +99,9 @@ creating or materially updating durable decisions, not a required reread/form fo
 each edit. Keep source/asset pointers, approval scope, necessary project decisions
 and unknowns; do not duplicate Product meaning or settled source specifications.
 Shared tokens keep a token-role table and measurable rules keep a rule-coverage
-table (rule → check → layouts, sizes, states → unmeasured); both carry status per
-row. Existing sufficient DESIGN content needs only a real decision delta, if any.
+table (rule → check → spot check → layouts, sizes, states → unmeasured); both carry
+status per row. Existing sufficient DESIGN content needs only a real decision delta,
+if any.
 
 An absent file starts DRAFT. Only explicit user approval promotes material direction
 to APPROVED. Preserve APPROVED Rev N while a separately labeled DRAFT Rev N+1 is

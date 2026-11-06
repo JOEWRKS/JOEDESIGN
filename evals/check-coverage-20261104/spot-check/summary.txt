@@ -1,0 +1,36 @@
+graded 28 / 28
+  seeded B x=0/4 g=0/4 h=0/4 s=0/4 t=1/4 u=0/4 outcome=missed,missed,missed,missed
+  seeded C x=3/4 g=2/4 h=1/4 s=0/4 t=1/4 u=2/4 outcome=missed,open,open,open
+  seeded D x=4/4 g=1/4 h=1/4 s=4/4 t=3/4 u=4/4 outcome=open,open,open,open
+     x01-B k111 x0 g0 h0 s0 t0 u0 missed
+     x02-C k213 x0 g0 h0 s0 t0 u0 missed
+     x03-D k253 x1 g0 h0 s1 t1 u1 open
+     x04-B k258 x0 g0 h0 s0 t0 u0 missed
+     x05-C k056 x1 g1 h1 s0 t1 u1 open
+     x06-D k223 x1 g0 h0 s1 t0 u1 open
+     x07-B k331 x0 g0 h0 s0 t1 u0 missed
+     x08-C k130 x1 g0 h0 s0 t0 u1 open
+     x09-D k051 x1 g0 h0 s1 t1 u1 open
+     x10-B k345 x0 g0 h0 s0 t0 u0 missed
+     x11-C k152 x1 g1 h0 s0 t0 u0 open
+     x12-D k343 x1 g1 h1 s1 t1 u1 open
+  browser C b=4/4 c=4/4 f=4/4 g=4/4 h=2/4 s=0/4 t=1/4 u=4/4
+  browser D b=4/4 c=4/4 f=4/4 g=2/4 h=1/4 s=4/4 t=2/4 u=4/4
+     w05-C k289 b1 c1 f1 g1 h0 s0 t0 u1 
+     w06-C k075 b1 c1 f1 g1 h1 s0 t1 u1 
+     w07-C k315 b1 c1 f1 g1 h0 s0 t0 u1 
+     w08-C k074 b1 c1 f1 g1 h1 s0 t0 u1 
+     y01-D k109 b1 c1 f1 g1 h1 s1 t1 u1 
+     y02-D k346 b1 c1 f1 g0 h0 s1 t1 u1 
+     y03-D k224 b1 c1 f1 g1 h0 s1 t0 u1 
+     y04-D k398 b1 c1 f1 g0 h0 s1 t0 u1 
+  offline C b=4/4 c=4/4 f=1/4 g=2/4 h=4/4 s=3/4 t=4/4 u=0/4
+  offline D b=4/4 c=4/4 f=1/4 g=2/4 h=4/4 s=4/4 t=4/4 u=0/4
+     v09-C k379 b1 c1 f0 g1 h1 s1 t1 u0 
+     v11-C k096 b1 c1 f1 g1 h1 s1 t1 u0 
+     v12-C k257 b1 c1 f0 g0 h1 s0 t1 u0 
+     v16-C k313 b1 c1 f0 g0 h1 s1 t1 u0 
+     z01-D k351 b1 c1 f1 g0 h1 s1 t1 u0 
+     z02-D k107 b1 c1 f0 g1 h1 s1 t1 u0 
+     z03-D k368 b1 c1 f0 g0 h1 s1 t1 u0 
+     z04-D k180 b1 c1 f0 g1 h1 s1 t1 u0 

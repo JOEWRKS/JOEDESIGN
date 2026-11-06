@@ -1,0 +1,6 @@
+== y03-D freeze
+[32m✓ built in 270ms[39m
+ M DESIGN.md; M ISSUES.md; M README.md; M ROADMAP.md; M TASK.md; M src/style.css; M work/design/capture-matrix.mjs;?? work/design/fake-engine-worker.js;?? work/design/spacing-check.mjs;
+== m.js
+START 1440x900 | hud>cta 24.0 | title>hud 24.0 || SYN 1440x900 | current-card>limited d8 12.0 | limited>coach-alts d3 12.0 | forbid-notice>engine-alert d3 12.0 | engine-alert>turn-actions d3 12.0 | turn-actions>undo-notice d7 12.0 | undo-notice>foot d0 12.0 | hud>cta 273.5
+START 390x844 | hud>cta 16.0 | title>hud 16.0 || SYN 390x844 | current-card>limited d6 8.0 | limited>coach-alts d3 8.0 | forbid-notice>engine-alert d3 8.0 | engine-alert>turn-actions d3 8.0 | turn-actions>undo-notice d6 8.0 | undo-notice>foot d0 8.0 | hud>cta -36.5 | board>hud 8.0

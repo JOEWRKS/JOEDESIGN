@@ -1,0 +1,41 @@
+== y07-E freeze
+[32m✓ built in 288ms[39m
+ M DESIGN.md; M ROADMAP.md; M TASK.md; M src/style.css;?? work/design/fake-engine.mjs;?? work/design/shots/spacing-1440x900-candidates.png;?? work/design/shots/spacing-1440x900-finished.png;?? work/design/shots/spacing-1440x900-forbid.png;?? work/design/shots/spacing-1440x900-guide-off.png;?? work/design/shots/spacing-1440x900-intro.png;?? work/design/shots/spacing-1440x900-replay.png;?? work/design/shots/spacing-1440x900-route.png;?? work/design/shots/spacing-1440x900-tutorial.png;?? work/design/shots/spacing-1440x900-undo.png;?? work/design/shots/spacing-390x844-candidates.png;?? work/design/shots/spacing-390x844-finished.png;?? work/design/shots/spacing-390x844-forbid.png;?? work/design/shots/spacing-390x844-guide-off.png;?? work/design/shots/spacing-390x844-intro.png;?? work/design/shots/spacing-390x844-replay.png;?? work/design/shots/spacing-390x844-route.png;?? work/design/shots/spacing-390x844-tutorial.png;?? work/design/shots/spacing-390x844-undo.png;?? work/design/spacing-after.log;?? work/design/spacing-before.log;?? work/design/spacing-check.mjs;?? work/design/spacing-spot.log;?? work/design/spacing-spot.mjs;
+== truth (visible gap incl. hard shadow; expected 16, or 12 when w<=700 or h<=700)
+1440x900 intro #current-card→#turn-actions = 16 (16)
+1440x900 tutorial #turn-actions→.foot = 12 (16) X
+1440x900 candidates #review-card→#current-card = 12 (16) X
+1440x900 candidates #current-card→#coach-alts = 12 (16) X
+1440x900 candidates #turn-actions→.foot = 12 (16) X
+1440x900 preview #review-card→#current-card = 12 (16) X
+1440x900 preview #turn-actions→.foot = 12 (16) X
+1440x900 guide-off #review-card→#current-card = 12 (16) X
+1440x900 guide-off #turn-actions→.foot = 12 (16) X
+1440x900 undo #turn-actions→#undo-notice = 12 (16) X
+1440x900 undo #undo-notice→.foot = 12 (16) X
+1366x768 intro #current-card→#turn-actions = 16 (16)
+1366x768 tutorial #turn-actions→.foot = 12 (16) X
+1366x768 candidates #current-card→#coach-alts = 12 (16) X
+1366x768 candidates #turn-actions→.foot = 12 (16) X
+1366x768 preview #turn-actions→.foot = 12 (16) X
+1366x768 guide-off #turn-actions→.foot = 12 (16) X
+1366x768 undo #turn-actions→#undo-notice = 12 (16) X
+1366x768 undo #undo-notice→.foot = 12 (16) X
+390x844 intro #current-card→#turn-actions = 16 (12) X
+390x844 tutorial #turn-actions→.foot = 11 (12)
+390x844 tutorial .board→#tutorial = 16 (12) X
+390x844 candidates #current-card→#coach-alts = 12 (12)
+390x844 candidates #turn-actions→.foot = 12 (12)
+390x844 candidates .board→#current-card = 16 (12) X
+390x844 preview #turn-actions→.foot = 11 (12)
+390x844 preview .board→#current-card = 16 (12) X
+390x844 guide-off #turn-actions→.foot = 11 (12)
+390x844 guide-off .board→#current-card = 16 (12) X
+390x844 undo #turn-actions→#undo-notice = 11 (12)
+390x844 undo #undo-notice→.foot = 12 (12)
+390x844 undo .board→#current-card = 16 (12) X
+S2 section: 0/3 · S1 stack: 9/32 · S3 inset: 8/84 · S4 in-card: 39/39 · S5 inline: 0/36 · S6 no-scroll: 36/36
+간격 검사 실패 138건 / 230
+== m.js
+START 1440x900 | hud>cta 16.0 | title>hud 16.0 || SYN 1440x900 | current-card>limited d8 12.0 | limited>coach-alts d3 12.0 | forbid-notice>engine-alert d0 12.0 | engine-alert>turn-actions d0 12.0 | turn-actions>undo-notice d7 12.0 | undo-notice>foot d0 12.0 | hud>cta 283.5
+START 390x844 | hud>cta 16.0 | title>hud 16.0 || SYN 390x844 | current-card>limited d6 12.0 | forbid-notice>engine-alert d0 12.0 | engine-alert>turn-actions d0 12.0 | turn-actions>undo-notice d7 11.0 | undo-notice>foot d0 12.0 | hud>cta 1.5 | board>hud 16.0

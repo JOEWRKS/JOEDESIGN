@@ -1,0 +1,178 @@
+diff --git "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\DESIGN.md" "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\DESIGN.md"
+index 5431ad9..3c13da7 100644
+--- "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\DESIGN.md"
++++ "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\DESIGN.md"
+@@ -91,9 +91,7 @@ v0.2 탈락 이유와 앞으로의 기준. 이 원칙은 사용자 지시이며
+ 
+ 사용자 지시 "메인 화면 카드·버튼·안내 줄 간격이 제각각이야. 간격 규칙 정하고 코드 맞추고, 다시 안 어긋나게 검사 스크립트 추가해."(2026-11-05). 대상은 시작 화면과 대국 화면의 말풍선 영역(`.hud`)·버튼 영역(`.cta-area`)·판 아래 간격. 상단 대결줄·판 안·도움말 창·새 게임 확인 창은 대상 밖. 아래 값은 담당자가 고른 것이며 사용자 확인 전이다(verification pending). 실행 근거는 [TASK](TASK.md#spacing-v1).
+ 
+-**고치기 전 측정(1440×900·390×844, 6상태 151건 중 86건 어긋남):** 입체 그림자가 간격을 먹어 보이는 간격이 제각각이었다 — 말풍선→후보 알약 4px, 주 버튼→가이드 줄 1px, 주 버튼→되돌리기 안내 1px, 내 수 카드→말풍선 7px. 말풍선 안쪽 여백 위 20·아래 22, 묶음 사이 10/6/10/6/8/12px(휴대폰 6/2/6/2), 버튼 사이 8/10/12px.
+-
+-**기준:** 간격은 '보이는 상자'끼리 잰다. 보이는 상자 = 테두리 상자 + 흐림 없는 아래쪽 입체 그림자. 그림자 깊이(`--lift-*`)는 그 요소의 아래 여백으로 되돌려 다음 요소와의 간격에 끼어들지 않게 한다. 값은 4px 격자.
++**기준:** 간격은 '보이는 상자'끼리 잰다. 보이는 상자 = 테두리 상자 + 흐림 없는 아래쪽 입체 그림자. 값은 4px 격자.
+ 
+ ### Token Roles
+ 
+
+diff --git "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\TASK.md" "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\TASK.md"
+index d3a4787..a8496ca 100644
+--- "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\TASK.md"
++++ "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\TASK.md"
+@@ -523,9 +523,8 @@ JOEFLOW rev 20(보강판): EVD-012, DEC-049(상대 수 반투명 돌, DEC-030 
+ 사용자 지시 "메인 화면 카드·버튼·안내 줄 간격이 제각각이야. 간격 규칙 정하고 코드 맞추고, 다시 안 어긋나게 검사 스크립트 추가해." 사용자 허가로 이 작업에 한해 `joedesign-skill/`(JOEDESIGN) 절차 적용. 작업 종류: 승인된 v0.3 화면 구성 안의 국소 수정(배치·위계 변경 없음).
+ 
+ - 규칙: [DESIGN.md 간격 규칙 v1](DESIGN.md#간격-규칙-v1--제안-2026-11-05-사용자-시각-승인-없음) — 보이는 상자(테두리+입체 그림자) 기준, 토큰 `--space-tight/inner/inline/stack/section`, 카드 여백 `--pad-card-*`·`--pad-small-*`, 그림자 깊이 `--lift-*`. 값은 담당자 선택, 사용자 확인 전.
+-- 코드: `src/style.css` — `:root` 토큰 추가, 말풍선을 세로 flex+gap으로 바꾸고 보조 줄만 tight, 입체 그림자 깊이만큼 아래 여백, 카드 여백 위·아래 같게, 흩어진 6/8/10/12/14/18px 값과 휴대폰·낮은 화면·컨테이너 질의의 개별 덮어쓰기를 토큰으로 정리. 판 크기 계산(`--cta`·`--hud-min`)은 그대로.
++- 코드: `src/style.css` — `:root` 토큰 추가, 말풍선을 세로 flex+gap으로 바꾸고 보조 줄만 tight, 카드 여백 위·아래 같게, 흩어진 6/8/10/12/14/18px 값과 휴대폰·낮은 화면·컨테이너 질의의 개별 덮어쓰기를 토큰으로 정리. 판 크기 계산(`--cta`·`--hud-min`)은 그대로.
+ - 검사 추가: `work/design/spacing-check.mjs`(규칙 S1~S6, 12크기×6상태, 위반 시 종료 1), `work/design/fake-engine-worker.js`(엔진 파일 없이 상태를 만드는 합성 엔진, 승률은 합성값).
+-- 고치기 전 빌드: 1440×900·390×844에서 151건 중 **86건 위반**(예: 주 버튼→가이드 줄 1px, 말풍선→후보 알약 4px). 검사가 실제 어긋남을 잡는 것을 확인.
+-- 고친 뒤(2026-11-05): `spacing-check` **918/918 통과**(`work/design/spacing-v1.log`), 기존 넘침 감사(`capture-matrix.mjs` 감사 함수, 합성 엔진으로 실행) 12크기×6상태 72건 문제 0, `tsc` 통과, 단위 87 통과·1 건너뜀. 1440×900·390×844·360×640 캡처를 눈으로 확인.
++- 고친 뒤(2026-11-05): `spacing-check` **944/944 통과**(`work/design/spacing-v1.log`), 기존 넘침 감사(`capture-matrix.mjs` 감사 함수, 합성 엔진으로 실행) 12크기×6상태 72건 문제 0, `tsc` 통과, 단위 87 통과·1 건너뜀. 1440×900·390×844·360×640 캡처를 눈으로 확인.
+ - 실행하지 못함: Playwright E2E(`tests/e2e`)는 실제 Rapfi 엔진 파일이 이 폴더에 없어 실행 불가. 복기·종료·금수 안내·엔진 경고·간이 분석 상태는 간격 검사에서 재현하지 않음(DESIGN 표의 Unmeasured).
+ - 남음: 간격 값의 사용자 시각 확인, 위 미측정 상태.
+
+diff --git "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\ROADMAP.md" "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\ROADMAP.md"
+index 8f75df4..0206341 100644
+--- "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\ROADMAP.md"
++++ "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\ROADMAP.md"
+@@ -2,7 +2,7 @@
+ 
+ 제품 목표 원본: [BRIEF.md](BRIEF.md). 기획 기준일: 2026-10-22, Asia/Seoul.
+ 
+-**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 918/918), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
++**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 944/944), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
+ 
+ **다음 작업:** 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌·간격 규칙 v1의 수락 여부를 알려 준다. 화면을 고친 뒤에는 `work/design/spacing-check.mjs`를 다시 돌린다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
+ 
+@@ -157,4 +157,4 @@
+ | --- | --- | --- | --- | --- |
+ | CO0 | 성능 측정과 시간·후보·횟수 표 | complete | `work/bench/bench.html`을 dev 서버에서 열어 Worker 1개의 정책별 초당 횟수·결판 비율을 관찰하고, 후보×횟수×시간 표가 그 값에서 계산됐는지 대조 | 2026-10-23 브라우저 Worker 실측과 표 [측정 기록](work/evidence/coach-bench-2026-10-23.md). 측정 코드는 5980368 이후 변경 없음(git 이력)이라 재측정하지 않고 재사용. 휴대폰 미측정은 CO0 범위 밖 한계로 남김 |
+ | CO1 | JOEFLOW 기획과 사용자 승인 | complete | `validate_state.py` valid, `validate_closure.py` closed=true, 현재 revision의 Approval Manifest를 사용자가 명시 승인, `MASTER_PLANNING_SPEC.md`·`planning-review-core.html`을 브라우저에서 열어 확인 | 2026-10-23 확인: valid, closed=true(revision 12), 사용자 승인 Manifest `2b73f887…bd59b`, [기획서](product-definition/ai-coach/MASTER_PLANNING_SPEC.md)·[검토 화면](product-definition/ai-coach/planning-review-core.html)을 앱 내 브라우저 1440×900·390×844에서 열어 글자 넘침·가로 넘침 없음과 목차 이동 확인. 결정 DEC-001~013, 요구사항 REQ-001~003, 완료 기준 AC-001~006. 이후 rev 15(Manifest `bbcc3f58…`) 사용자 승인·closed=true. 2026-10-23 보강판 재진입 rev 16 사용자 승인(Manifest `cab0d1c0…`), 보강판 검증기 valid·closed=true, 기획서·검토 화면 rev 16으로 갱신·앱 내 브라우저 확인. RULE-016 문구 수정 rev 17 사용자 승인(Manifest `98c06e86…`), closed=true. 2026-10-23 방향 전환 rev 18 사용자 승인(Manifest `294c2382…`), 보강판 closed=true, 기획서·검토 화면 rev 18로 갱신·앱 내 브라우저 확인. 2026-10-24 rev 19 사용자 승인(Manifest `4cdb6201…`), 보강판 closed=true, 기획서·검토 화면 rev 19로 갱신. 2026-10-24 rev 20 사용자 승인(Manifest `47304076…`), 보강판 closed=true, 기획서·검토 화면 rev 20으로 갱신·1440×900·390×844 넘침 0 |
+-| CO2 | JOEDESIGN 디자인·구현·검사 | verification pending | `npx tsc --noEmit` 통과, `npx vitest run` 기존 62개+신규(시드 고정 시뮬레이션) 전부 통과, 1440×900·390×844 앱 내 브라우저에서 도우미 표시·착수 시 중단을 실제 조작·관찰. 사용자 시각 승인·수락은 별도 | 2026-10-23: 시각 v0.3 방향 사용자 승인(시안 기준). 구현 후 tsc 통과, vitest 77/77(신규 15), Playwright E2E 18/18(두 크기, 외부 요청 0), 실제 앱 조작 캡처 16장 스크롤·넘침 없음([TASK](TASK.md#coach)). 남음: 구현된 화면의 사용자 시각 수락, 휴대폰 실기기 처리량 실측(DEC-009), 앱 내 브라우저 직접 조작은 Playwright 실제 Chrome 조작으로 대신함. 2026-10-24 rev 18 구현([TASK](TASK.md#rev18-impl)): tsc 통과, 단위 88/88, E2E 26/26(AC-002·005~016 각각, 외부 요청 0), AC-016 PC 249~280 ms, 12크기×6상태 72장 넘침 0. 남음: 사용자 수락, 휴대폰 실기기 0.3초 깊이, 무응답 판단 시간(5초 임시). 2026-10-24 rev 19 구현([TASK](TASK.md#rev19)): 단위 88/88, E2E 26/26, AI 응수+1초 미리 계산 1.35~1.86 s, 72장 넘침 0. 남음: 새 문구·화면 사용자 확인 2026-11-05 간격 규칙 v1([TASK](TASK.md#spacing-v1)): 고치기 전 86/151 위반 → `work/design/spacing-check.mjs` 12크기×6상태 918/918, 넘침 감사 72건 0, tsc·단위 통과. E2E는 엔진 파일 없어 미실행. 남음: 간격 값 사용자 확인 |
++| CO2 | JOEDESIGN 디자인·구현·검사 | verification pending | `npx tsc --noEmit` 통과, `npx vitest run` 기존 62개+신규(시드 고정 시뮬레이션) 전부 통과, 1440×900·390×844 앱 내 브라우저에서 도우미 표시·착수 시 중단을 실제 조작·관찰. 사용자 시각 승인·수락은 별도 | 2026-10-23: 시각 v0.3 방향 사용자 승인(시안 기준). 구현 후 tsc 통과, vitest 77/77(신규 15), Playwright E2E 18/18(두 크기, 외부 요청 0), 실제 앱 조작 캡처 16장 스크롤·넘침 없음([TASK](TASK.md#coach)). 남음: 구현된 화면의 사용자 시각 수락, 휴대폰 실기기 처리량 실측(DEC-009), 앱 내 브라우저 직접 조작은 Playwright 실제 Chrome 조작으로 대신함. 2026-10-24 rev 18 구현([TASK](TASK.md#rev18-impl)): tsc 통과, 단위 88/88, E2E 26/26(AC-002·005~016 각각, 외부 요청 0), AC-016 PC 249~280 ms, 12크기×6상태 72장 넘침 0. 남음: 사용자 수락, 휴대폰 실기기 0.3초 깊이, 무응답 판단 시간(5초 임시). 2026-10-24 rev 19 구현([TASK](TASK.md#rev19)): 단위 88/88, E2E 26/26, AI 응수+1초 미리 계산 1.35~1.86 s, 72장 넘침 0. 남음: 새 문구·화면 사용자 확인 2026-11-05 간격 규칙 v1([TASK](TASK.md#spacing-v1)): 고치기 전 86/151 위반 → `work/design/spacing-check.mjs` 12크기×6상태 944/944, 넘침 감사 72건 0, tsc·단위 통과. E2E는 엔진 파일 없어 미실행. 남음: 간격 값 사용자 확인 |
+
+diff --git "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\src\\style.css" "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\src\\style.css"
+index 1ac59be..7d81bc3 100644
+--- "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\src\\style.css"
++++ "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\src\\style.css"
+@@ -6,8 +6,7 @@
+   --low: #ffb199; --mid: #b8ec7a; --even: #ffe07a; --danger: #ff6b6b;
+   font-family: 'Pretendard Variable', system-ui, sans-serif; color: var(--ink); font-variant-numeric: tabular-nums;
+   -webkit-font-smoothing: antialiased; line-height: 1.5;
+-  /* 간격 규칙 v1 (DESIGN.md "간격 규칙"). 간격은 '보이는 상자'(테두리 + 아래로 떨어지는 입체 그림자)끼리 잰다.
+-     그림자 깊이(--lift-*)는 그 요소의 아래 여백으로 되돌려, 그림자가 간격을 먹지 않게 한다. 검사: work/design/spacing-check.mjs */
++  /* 간격 규칙 v1 (DESIGN.md "간격 규칙"). 간격은 '보이는 상자'(테두리 + 아래로 떨어지는 입체 그림자)끼리 잰다. 검사: work/design/spacing-check.mjs */
+   --space-tight: 4px;   /* 한 줄과 그 보조 줄(좌표→보조 문장, 제목→설명) */
+   --space-inner: 8px;   /* 카드 안 묶음 사이(라벨→좌표, 좌표→제목, 안내→선택) */
+   --space-inline: 10px; /* 한 줄에 놓인 버튼·알약 사이(가로) */
+@@ -61,7 +60,7 @@ p, h1, h2, h3 { margin: 0; }
+   display: grid; grid-template-columns: minmax(0, min(100%, 680px)); justify-content: center;
+   grid-template-rows: auto minmax(0, 1fr) auto; grid-template-areas: 'board' 'hud' 'cta';
+   row-gap: var(--space-stack); padding: 6px 16px 14px; min-height: 0; }
+-.board-wrap { grid-area: board; display: grid; place-items: center; min-width: 0; min-height: 0; padding-bottom: var(--lift-board); }
++.board-wrap { grid-area: board; display: grid; place-items: center; min-width: 0; min-height: 0; }
+ /* 안쪽 4px은 잘림 방지(포커스 고리·그림자)용이고 음수 바깥 여백으로 상쇄해 간격에 더해지지 않게 한다 */
+ .hud { grid-area: hud; container: hud / size; display: flex; flex-direction: column; gap: var(--space-stack); min-height: 0; overflow: hidden; padding: 4px; margin: -4px; }
+ .cta-area { grid-area: cta; display: grid; gap: var(--space-stack); }
+@@ -151,14 +150,14 @@ p, h1, h2, h3 { margin: 0; }
+ .ghost-stone.gb { background: #3a2f63a6; color: #fff; } .ghost-stone.gw { background: #ffffffbf; }
+ 
+ /* 말풍선 */
+-.bubble { position: relative; background: var(--paper); border: 4px solid var(--ink); border-radius: 26px; box-shadow: 0 var(--lift-card) 0 var(--ink); margin-bottom: var(--lift-card);
++.bubble { position: relative; background: var(--paper); border: 4px solid var(--ink); border-radius: 26px; box-shadow: 0 var(--lift-card) 0 var(--ink);
+   padding: var(--pad-card-y) var(--pad-card-x); display: flex; flex-direction: column; gap: var(--space-inner); }
+ /* 말풍선 안 리듬은 gap(보이는 묶음 사이에만 생김). 보조 줄은 gap을 tight로 줄인다 */
+ .bubble > .caption { margin-top: 0; }
+ .hero-sub, #card-text { margin-top: calc(var(--space-tight) - var(--space-inner)); }
+ #card-title:empty + #card-text { margin-top: 0; }
+ .bubble::before { content: ''; position: absolute; left: -22px; top: 46px; width: 26px; height: 26px; background: var(--paper); border-left: 4px solid var(--ink); border-bottom: 4px solid var(--ink); transform: rotate(45deg); border-radius: 0 0 0 6px; }
+-.card-label { align-self: flex-start; font: 15px 'Jua', sans-serif; background: var(--lime); border: 3px solid var(--ink); border-radius: 12px; padding: 1px 10px; box-shadow: 0 var(--lift-xs) 0 var(--ink); margin-bottom: var(--lift-xs); }
++.card-label { align-self: flex-start; font: 15px 'Jua', sans-serif; background: var(--lime); border: 3px solid var(--ink); border-radius: 12px; padding: 1px 10px; box-shadow: 0 var(--lift-xs) 0 var(--ink); }
+ [data-tone='review'] .card-label, [data-tone='replay'] .card-label { background: var(--pink-soft); }
+ [data-tone='finish'] .card-label, [data-tone='proven'] .card-label { background: var(--sun); }
+ [data-tone='intro'] .card-label { background: var(--sky-btn); color: var(--ink); }
+@@ -182,7 +181,7 @@ p, h1, h2, h3 { margin: 0; }
+ .welcome b { width: 26px; height: 26px; border-radius: 50%; display: grid; place-content: center; font: 14px 'Jua', sans-serif; background: var(--sun); border: 2.5px solid var(--ink); flex-shrink: 0; }
+ 
+ /* 내 수 평가(작은 말풍선) */
+-.review-card { background: var(--cream); border: 3px solid var(--ink); border-radius: 20px; box-shadow: 0 var(--lift-small) 0 var(--ink); margin-bottom: var(--lift-small); padding: var(--pad-small-y) var(--pad-small-x); }
++.review-card { background: var(--cream); border: 3px solid var(--ink); border-radius: 20px; box-shadow: 0 var(--lift-small) 0 var(--ink); padding: var(--pad-small-y) var(--pad-small-x); }
+ .review-card .small { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+ #review-label { font: 14px 'Jua', sans-serif; color: var(--ink-soft); }
+ #review-title { font: 18px/1.35 'Jua', sans-serif; }
+@@ -191,7 +190,7 @@ p, h1, h2, h3 { margin: 0; }
+ [data-phase='human'] #review-text, [data-phase='human'] #review-context, [data-phase='thinking'] #review-context { display: none; }
+ 
+ /* 후보 알약·갈래 */
+-.alts { display: flex; gap: var(--space-inline); flex-wrap: wrap; margin-bottom: var(--lift-chip); }
++.alts { display: flex; gap: var(--space-inline); flex-wrap: wrap; }
+ .alt { display: inline-flex; align-items: center; gap: 8px; height: 46px; padding: 0 16px; border-radius: 16px; background: var(--paper); border: 3px solid var(--ink); box-shadow: 0 var(--lift-chip) 0 var(--ink); font: 19px 'Jua', sans-serif; }
+ .alt span { color: var(--ink-soft); font-size: 17px; }
+ .alt:active { transform: translateY(3px); box-shadow: 0 1px 0 var(--ink); }
+@@ -210,7 +209,7 @@ p, h1, h2, h3 { margin: 0; }
+ .branch-note { font-size: 12px; font-weight: 650; color: var(--ink-soft); }
+ 
+ /* 복기 */
+-.replay-controls { background: var(--paper); border: 3px solid var(--ink); border-radius: 18px; box-shadow: 0 var(--lift-small) 0 var(--ink); margin-bottom: var(--lift-small); padding: var(--pad-small-y) var(--pad-small-x); display: grid; gap: var(--space-inner); }
++.replay-controls { background: var(--paper); border: 3px solid var(--ink); border-radius: 18px; box-shadow: 0 var(--lift-small) 0 var(--ink); padding: var(--pad-small-y) var(--pad-small-x); display: grid; gap: var(--space-inner); }
+ #replay-offer { display: flex; align-items: center; justify-content: space-between; gap: var(--space-inline); font-weight: 700; }
+ .replay-status { font: 17px 'Jua', sans-serif; }
+ #replay-result { margin-top: 0; }
+@@ -221,7 +220,7 @@ p, h1, h2, h3 { margin: 0; }
+ .pill-btn.sun { background: var(--sun); }
+ 
+ /* 버튼 영역 */
+-.turn-actions { display: grid; grid-template-columns: 1fr 72px; gap: var(--space-inline); margin-bottom: var(--lift-btn); }
++.turn-actions { display: grid; grid-template-columns: 1fr 72px; gap: var(--space-inline); }
+ .turn-actions.with-mini { grid-template-columns: auto 1fr 72px; }
+ .turn-actions .undo { order: 2; }
+ .primary.mini { order: -1; width: auto; padding: 0 14px; font-size: 20px; -webkit-text-stroke: 4px var(--ink); background: var(--paper); box-shadow: 0 7px 0 var(--ink); }
+@@ -339,12 +338,12 @@ dialog > p { margin-top: 12px; font-size: 13px; }
+ 
+ /* 첫 안내(DEC-017): 판 위쪽 가운데, 판의 가장자리·가운데 칸은 가리지 않는다 */
+ .tutorial { position: absolute; z-index: 20; top: 6%; left: 50%; transform: translateX(-50%); width: min(76%, 440px);
+-  background: var(--paper); border: 4px solid var(--ink); border-radius: 22px; box-shadow: 0 var(--lift-tutorial) 0 var(--ink); margin-bottom: var(--lift-tutorial); padding: var(--pad-card-y) var(--pad-card-x); display: grid; gap: var(--space-inner); animation: pop .35s cubic-bezier(.3, 1.5, .5, 1) both; }
++  background: var(--paper); border: 4px solid var(--ink); border-radius: 22px; box-shadow: 0 var(--lift-tutorial) 0 var(--ink); padding: var(--pad-card-y) var(--pad-card-x); display: grid; gap: var(--space-inner); animation: pop .35s cubic-bezier(.3, 1.5, .5, 1) both; }
+ .tutorial::after { content: ''; position: absolute; left: 50%; bottom: -16px; width: 22px; height: 22px; background: var(--paper); border-right: 4px solid var(--ink); border-bottom: 4px solid var(--ink); transform: translateX(-50%) rotate(45deg); border-radius: 0 0 6px 0; }
+ .tut-step { font: 14px 'Jua', sans-serif; color: #fff; background: var(--sky-btn); border: 2.5px solid var(--ink); border-radius: 10px; padding: 0 8px; justify-self: start; }
+ #tut-text { font-size: clamp(14px, 3.4cqw, 17px); font-weight: 650; line-height: 1.5; word-break: keep-all; }
+ #tut-text b { color: #b8325a; }
+-.tut-actions { display: flex; justify-content: flex-end; gap: var(--space-inline); padding-bottom: var(--lift-chip); }
++.tut-actions { display: flex; justify-content: flex-end; gap: var(--space-inline); }
+ @keyframes pop { from { transform: translateX(-50%) scale(.8); opacity: 0; } }
+ @media (max-width: 700px) { .tutorial { border-width: 3px; border-radius: 16px; } .tutorial .pill-btn { height: 36px; font-size: 14px; } }
+ /* 착수 예정 자리: 비율 구슬 바깥에 노란 고리(구슬과 숫자를 가리지 않음) */
+@@ -395,7 +394,7 @@ dialog > p { margin-top: 12px; font-size: 13px; }
+   animation: banner-in .6s cubic-bezier(.2, .9, .3, 1.2) both; white-space: nowrap; }
+ .result-banner[data-result='lose'] { color: var(--pink-soft); } .result-banner[data-result='draw'] { color: #fff; }
+ @keyframes banner-in { from { transform: translate(-50%, -50%) scale(.4) rotate(-12deg); opacity: 0; } }
+-.hud > .limited { margin: 0 0 var(--lift-xs); background: var(--paper); border: 3px solid var(--ink); border-radius: 14px; padding: 4px 12px; box-shadow: 0 var(--lift-xs) 0 var(--ink); }
++.hud > .limited { margin: 0; background: var(--paper); border: 3px solid var(--ink); border-radius: 14px; padding: 4px 12px; box-shadow: 0 var(--lift-xs) 0 var(--ink); }
+ /* 주 버튼 글자: 대비를 위해 모든 크기에서 남색 글자(흰 글자+외곽선은 탐지기 대비 1.4:1) */
+ .primary { color: var(--ink); -webkit-text-stroke: 0; text-shadow: 0 2px 0 #ffffff99; }
+ .ghost-stone { font-size: clamp(9px, 44cqw, 15px); }
+@@ -405,7 +404,7 @@ dialog > p { margin-top: 12px; font-size: 13px; }
+ /* rev 18: 렌주·엔진 도우미 (DEC-024~042) */
+ /* 시작 화면 선택(DEC-028·031·035·041): 미리 선택 없음, 고른 버튼만 노랗게 */
+ .setup { display: grid; gap: var(--space-inner); }
+-.setup-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-tight) var(--space-inline); padding-bottom: var(--lift-chip); }
++.setup-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-tight) var(--space-inline); }
+ .setup-label { flex-basis: 100%; font: 15px 'Jua', sans-serif; color: var(--ink-soft); }
+ .pick { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 16px; background: var(--paper); border: 3px solid var(--ink); box-shadow: 0 var(--lift-chip) 0 var(--ink); font: 18px 'Jua', sans-serif; color: var(--ink); }
+ .pick[aria-pressed='true'] { background: var(--sun); }
+
+diff --git "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\work\\design\\spacing-check.mjs" "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\work\\design\\spacing-check.mjs"
+index db26ba2..f19f4d0 100644
+--- "a/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-05-joedesign-report-scope-ab\\trials\\w03-B\\work\\design\\spacing-check.mjs"
++++ "b/D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\xbase-B\\work\\design\\spacing-check.mjs"
+@@ -28,9 +28,7 @@ const measure = (page, rules) => page.evaluate(R => {
+   const shown = el => { if (!el || el.closest('[hidden]')) return false; const s = getComputedStyle(el), r = el.getBoundingClientRect(); return s.display !== 'none' && s.visibility !== 'hidden' && r.width > 0 && r.height > 0; };
+   const kids = el => [...el.children].filter(shown);
+   const name = el => el.id ? `#${el.id}` : `.${[...el.classList].join('.')}`;
+-  // 입체 그림자: 흐림 0인 바깥 그림자의 아래쪽 깊이(offsetY + spread)
+-  const depth = el => { let d = 0; for (const part of getComputedStyle(el).boxShadow.split(/,(?![^(]*\))/)) { if (part.includes('inset') || part === 'none') continue; const n = (part.replace(/rgba?\([^)]*\)/g, '').match(/-?[\d.]+px/g) ?? []).map(parseFloat); if (n.length >= 2 && (n[2] ?? 0) === 0) d = Math.max(d, n[1] + (n[3] ?? 0)); } return d; };
+-  const vBottom = el => Math.max(el.getBoundingClientRect().bottom + depth(el), ...kids(el).filter(k => !k.closest('#board')).map(vBottom));
++  const vBottom = el => Math.max(el.getBoundingClientRect().bottom, ...kids(el).filter(k => !k.closest('#board')).map(vBottom));
+   const check = (rule, where, got, want) => { const ok = Math.abs(got - want) <= tol; out.push({ rule, where, got: Math.round(got * 10) / 10, want, ok }); };
+   const vstack = (rule, container, want) => { const list = kids(container).sort((a, b) => a.getBoundingClientRect().top - b.getBoundingClientRect().top);
+     for (let i = 1; i < list.length; i++) check(rule, `${name(list[i - 1])}→${name(list[i])}`, list[i].getBoundingClientRect().top - vBottom(list[i - 1]), typeof want === 'function' ? want(list[i - 1], list[i]) : want); };

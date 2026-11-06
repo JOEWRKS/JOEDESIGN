@@ -9,8 +9,8 @@ evidence contract, not another progress ledger or a general aesthetic scorer.
 
 Every project that states a measurable visual rule keeps a rule-coverage table in
 its root DESIGN.md (see the [template](../templates/DESIGN.md)): one row per rule
-with the check that measures it, the layouts, sizes and states it runs on, and what
-it leaves unmeasured. Hand-written audit scripts are fine as checks when each rule
+with the check that measures it, its spot check, the layouts, sizes and states it
+runs on, and what it leaves unmeasured. Hand-written audit scripts are fine as checks when each rule
 they cover has its own row with that scope. A rule without a check row is unmeasured,
 never passed; a "0 violations" result speaks only for the listed rows. The project's
 completion Check (JOENESS ROADMAP) points at this table rather than at a script name,
@@ -19,17 +19,25 @@ a change to any file the table lists, the rows of every affected rule run again.
 With the harness, the pinned JSON baseline below is the machine form of the same
 table and must agree with it; without the harness, the table is the contract.
 
-A check row is trusted only after one spot check: on one target, compare the check's
-reading with a direct observation of the quantity the rule itself names. A rule about
-the visible gap between two cards is observed at the rendered edges a person sees
-(shadow included), not at a wrapper element the script happens to select. When the
-two readings differ, the check or the row is wrong and is fixed before the result
-counts; when the comparison was not done, the Check cell says "not spot-checked" and
-the rule is not reported as verified. Approval of a value does not make an
-unspot-checked row true.
+A check row is trusted only after its own spot check: on one target, compare the
+check's reading with a direct observation of the quantity the rule itself names. A
+rule about the visible gap between two cards is observed at the rendered edges a
+person sees (shadow included), not at a wrapper element the script happens to select.
+When the two readings differ, the check or the row is wrong and is fixed before the
+result counts. Every row records this in its Spot check cell: the target with both
+readings, or "not spot-checked". An empty cell, or a row inherited without a recorded
+comparison, means not spot-checked, and a spot check on one row says nothing about
+another. Approval of a value does not make an unspot-checked row true.
 
-Reports quote results with their scope in the same sentence: check, layouts/sizes,
-states, mode, and code-vs-render. "939/939 passed" alone is a count, not a result.
+Reports give design-check results in one results list, one line per check that ran,
+each line in the form `check | result | sizes x states, mode | rendered or code |
+spot check` (the target with both readings, or "not spot-checked"). Side checks such
+as overflow, clipping and scroll, before/after comparisons, and a fix claimed from a
+check each take their own line. Outside the list, the summary line included, a pass,
+a count, "fixed" or "no failures" appears only with its sizes x states and
+rendered-or-code in the same sentence; otherwise the sentence names the check and
+leaves the outcome to its line. "939/939 passed" alone is a count, not a result. A
+line that is not spot-checked is never listed as resolved, verified or done.
 
 ## Fix the required scope before implementation
 

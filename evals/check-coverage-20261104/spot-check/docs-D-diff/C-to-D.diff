@@ -1,0 +1,135 @@
+diff --git a/SKILL.md b/docs-D/SKILL.md
+index c97fefb..a53ccc8 100644
+--- a/SKILL.md
++++ b/docs-D/SKILL.md
+@@ -81,15 +81,17 @@ route. Continue independent authorized work without expanding an unproved direct
+    Before implementation, the design owner maps the applicable DESIGN rules to
+    required targets and geometric/specialist checks using the existing scoped
+    [conformance contract](references/conformance.md): at minimum the DESIGN
+-   rule-coverage table (rule → check → layouts, sizes, states → unmeasured), and the
+-   pinned JSON baseline when the harness runs. Have the scope/criteria reviewed
+-   independently of the implementation and pin that baseline in the consuming
+-   workflow. A rule with no check row is unmeasured, never passed; missing checks
+-   cannot disappear from a completion report. Before a check's result counts for a
+-   rule, compare its reading on one target with a direct observation of the quantity
+-   the rule names (for a visible gap: the rendered edges a person sees, shadow
+-   included, not a wrapper box). If they differ, fix the check or the row; if the
+-   comparison was not done, the row says "not spot-checked".
++   rule-coverage table (rule → check → spot check → layouts, sizes, states →
++   unmeasured), and the pinned JSON baseline when the harness runs. Have the
++   scope/criteria reviewed independently of the implementation and pin that baseline
++   in the consuming workflow. A rule with no check row is unmeasured, never passed;
++   missing checks cannot disappear from a completion report. Before a check's result
++   counts for a rule, compare its reading on one target with a direct observation of
++   the quantity the rule names (for a visible gap: the rendered edges a person sees,
++   shadow included, not a wrapper box). If they differ, fix the check or the row.
++   Every row's Spot check cell records the outcome: the target with both readings, or
++   "not spot-checked". One row's spot check does not cover another row, and a row
++   inherited without a recorded comparison is not spot-checked.
+ 4. **Review the actual proof.** Use R/C1 and conditional C2 for affected claims, then
+    fresh independent critique. Distinguish information/function preservation, source
+    relationship conformance and whole-screen design quality. Challenge the composition
+@@ -106,7 +108,10 @@ route. Continue independent authorized work without expanding an unproved direct
+    what it covered in the same sentence: the check, the layouts/sizes, the states and
+    mode, and whether it read code or the render. Write "spacing check 939/939 on 9
+    sizes x 8 states, light, rendered", not "spacing 939/939 passed"; a total without
+-   that scope is not reported as a pass. Technical checks, visual judgment,
++   that scope is not reported as a pass. The summary line follows this as much as the
++   detail. A result from a row that is not spot-checked is quoted with "not
++   spot-checked" in the same sentence and is never listed as resolved, verified or
++   done. Technical checks, visual judgment,
+    workflow completion, certification and exact user acceptance remain distinct.
+    User rejection remains REJECTED for that output; no counts or role labels erase it.
+ 
+diff --git a/references/conformance.md b/docs-D/references/conformance.md
+index 1a210be..6794632 100644
+--- a/references/conformance.md
++++ b/docs-D/references/conformance.md
+@@ -9,8 +9,8 @@ evidence contract, not another progress ledger or a general aesthetic scorer.
+ 
+ Every project that states a measurable visual rule keeps a rule-coverage table in
+ its root DESIGN.md (see the [template](../templates/DESIGN.md)): one row per rule
+-with the check that measures it, the layouts, sizes and states it runs on, and what
+-it leaves unmeasured. Hand-written audit scripts are fine as checks when each rule
++with the check that measures it, its spot check, the layouts, sizes and states it
++runs on, and what it leaves unmeasured. Hand-written audit scripts are fine as checks when each rule
+ they cover has its own row with that scope. A rule without a check row is unmeasured,
+ never passed; a "0 violations" result speaks only for the listed rows. The project's
+ completion Check (JOENESS ROADMAP) points at this table rather than at a script name,
+@@ -19,17 +19,21 @@ a change to any file the table lists, the rows of every affected rule run again.
+ With the harness, the pinned JSON baseline below is the machine form of the same
+ table and must agree with it; without the harness, the table is the contract.
+ 
+-A check row is trusted only after one spot check: on one target, compare the check's
+-reading with a direct observation of the quantity the rule itself names. A rule about
+-the visible gap between two cards is observed at the rendered edges a person sees
+-(shadow included), not at a wrapper element the script happens to select. When the
+-two readings differ, the check or the row is wrong and is fixed before the result
+-counts; when the comparison was not done, the Check cell says "not spot-checked" and
+-the rule is not reported as verified. Approval of a value does not make an
+-unspot-checked row true.
+-
+-Reports quote results with their scope in the same sentence: check, layouts/sizes,
+-states, mode, and code-vs-render. "939/939 passed" alone is a count, not a result.
++A check row is trusted only after its own spot check: on one target, compare the
++check's reading with a direct observation of the quantity the rule itself names. A
++rule about the visible gap between two cards is observed at the rendered edges a
++person sees (shadow included), not at a wrapper element the script happens to select.
++When the two readings differ, the check or the row is wrong and is fixed before the
++result counts. Every row records this in its Spot check cell: the target with both
++readings, or "not spot-checked". An empty cell, or a row inherited without a recorded
++comparison, means not spot-checked, and a spot check on one row says nothing about
++another. Approval of a value does not make an unspot-checked row true.
++
++Reports quote results with their scope in the same sentence, in the summary line as
++much as in the detail: check, layouts/sizes, states, mode, and code-vs-render.
++"939/939 passed" alone is a count, not a result. A result from a row that is not
++spot-checked is quoted with "not spot-checked" beside it and is never listed as
++resolved, verified or done.
+ 
+ ## Fix the required scope before implementation
+ 
+diff --git a/references/visual-translation.md b/docs-D/references/visual-translation.md
+index 97346aa..d6aa836 100644
+--- a/references/visual-translation.md
++++ b/docs-D/references/visual-translation.md
+@@ -99,8 +99,9 @@ creating or materially updating durable decisions, not a required reread/form fo
+ each edit. Keep source/asset pointers, approval scope, necessary project decisions
+ and unknowns; do not duplicate Product meaning or settled source specifications.
+ Shared tokens keep a token-role table and measurable rules keep a rule-coverage
+-table (rule → check → layouts, sizes, states → unmeasured); both carry status per
+-row. Existing sufficient DESIGN content needs only a real decision delta, if any.
++table (rule → check → spot check → layouts, sizes, states → unmeasured); both carry
++status per row. Existing sufficient DESIGN content needs only a real decision delta,
++if any.
+ 
+ An absent file starts DRAFT. Only explicit user approval promotes material direction
+ to APPROVED. Preserve APPROVED Rev N while a separately labeled DRAFT Rev N+1 is
+diff --git a/templates/DESIGN.md b/docs-D/templates/DESIGN.md
+index 9f89547..2b841d2 100644
+--- a/templates/DESIGN.md
++++ b/docs-D/templates/DESIGN.md
+@@ -40,13 +40,16 @@ passed; "0 violations" means only the listed rows. The project's completion Chec
+ (JOENESS ROADMAP) points here. After a change to any listed file, re-run the rows
+ of every affected rule. With the harness, the pinned JSON baseline must agree with
+ this table; without it, this table is the contract. Before a row counts, spot-check
+-it once: compare the check's reading on one target with a direct observation of the
+-quantity the rule names, and note "spot-checked <target>" or "not spot-checked" in
+-the Check cell. When a result is quoted elsewhere (report, ROADMAP), quote it with
+-this row's layouts, sizes and states. -->
+-
+-| Rule | Check | Layouts | Sizes | States | Unmeasured |
+-| --- | --- | --- | --- | --- | --- |
++it: compare the check's reading on one target with a direct observation of the
++quantity the rule names. Fill the Spot check cell in every row with
++"<target>: check N / observed M", or "not spot-checked"; an empty cell means not
++spot-checked, and one row's spot check does not cover another row. When a result is
++quoted elsewhere (report, ROADMAP), quote it with this row's layouts, sizes and
++states, and with "not spot-checked" when that is the row's state; such a result is
++not listed as resolved or verified. -->
++
++| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured |
++| --- | --- | --- | --- | --- | --- | --- |
+ 
+ ## Open Decisions / Evidence Boundary
+ 

@@ -1,0 +1,44 @@
+== x02-C freeze
+[32m✓ built in 712ms[39m
+ M DESIGN.md; M ROADMAP.md; M TASK.md; M src/style.css; M work/design/spacing-check.mjs;?? work/design/spacing-v2.log;?? work/tmp/;
+== truth (visible gap incl. hard shadow; expected 16, or 12 when w<=700 or h<=700)
+1440x900 intro #turn-actions→.foot = 9 (16) X
+1440x900 intro #current-card→#turn-actions = 8 (16) X
+1440x900 tutorial #turn-actions→.foot = 9 (16) X
+1440x900 candidates #review-card→#current-card = 11 (16) X
+1440x900 candidates #current-card→#coach-alts = 8 (16) X
+1440x900 candidates #turn-actions→.foot = 9 (16) X
+1440x900 preview #review-card→#current-card = 11 (16) X
+1440x900 preview #turn-actions→.foot = 9 (16) X
+1440x900 guide-off #review-card→#current-card = 11 (16) X
+1440x900 guide-off #turn-actions→.foot = 9 (16) X
+1440x900 undo #turn-actions→#undo-notice = 9 (16) X
+1440x900 undo #undo-notice→.foot = 16 (16)
+1366x768 intro #turn-actions→.foot = 9 (16) X
+1366x768 intro #current-card→#turn-actions = 8 (16) X
+1366x768 tutorial #turn-actions→.foot = 9 (16) X
+1366x768 candidates #current-card→#coach-alts = 8 (16) X
+1366x768 candidates #turn-actions→.foot = 9 (16) X
+1366x768 preview #turn-actions→.foot = 9 (16) X
+1366x768 guide-off #turn-actions→.foot = 9 (16) X
+1366x768 undo #turn-actions→#undo-notice = 9 (16) X
+1366x768 undo #undo-notice→.foot = 16 (16)
+390x844 intro #turn-actions→.foot = 6 (12) X
+390x844 intro #current-card→#turn-actions = 6 (12) X
+390x844 tutorial #turn-actions→.foot = 5 (12) X
+390x844 tutorial .board→#tutorial = 5 (12) X
+390x844 candidates #current-card→#coach-alts = 6 (12) X
+390x844 candidates #turn-actions→.foot = 6 (12) X
+390x844 candidates .board→#current-card = 5 (12) X
+390x844 preview #turn-actions→.foot = 6 (12) X
+390x844 preview .board→#current-card = 5 (12) X
+390x844 guide-off #turn-actions→.foot = 5 (12) X
+390x844 guide-off .board→#current-card = 5 (12) X
+390x844 undo #turn-actions→#undo-notice = 5 (12) X
+390x844 undo #undo-notice→.foot = 12 (12)
+390x844 undo .board→#current-card = 5 (12) X
+S1 stack: 3/35 · S2 section: 3/3 · S3 inset: 78/84 · S4 in-card: 27/42 · S5 inline: 36/36 · S6 no-scroll: 36/36
+간격 검사 실패 53건 / 236
+== m.js
+START 1440x900 | hud>cta 8.0 | title>hud 24.0 || SYN 1440x900 | current-card>limited d8 8.0 | limited>coach-alts d3 13.0 | forbid-notice>engine-alert d0 16.0 | engine-alert>turn-actions d0 16.0 | turn-actions>undo-notice d7 9.0 | undo-notice>foot d0 16.0 | hud>cta 280.5
+START 390x844 | hud>cta 6.0 | title>hud 24.0 || SYN 390x844 | current-card>limited d6 6.0 | limited>coach-alts d3 9.0 | forbid-notice>engine-alert d0 12.0 | engine-alert>turn-actions d0 12.0 | turn-actions>undo-notice d7 5.0 | undo-notice>foot d0 12.0 | hud>cta -25.5 | board>hud 5.0

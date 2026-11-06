@@ -1,0 +1,20 @@
+// m.js : loaded into each frozen build; window.__m() measures visible gaps, window.__syn() shows every stackable block (synthetic state)
+window.__m = () => { const shown = e => { const r = e.getBoundingClientRect(), s = getComputedStyle(e); return !e.closest('[hidden]') && s.display !== 'none' && s.visibility !== 'hidden' && r.width > 0 && r.height > 0; };
+  const drop = e => { const s = getComputedStyle(e).boxShadow; if (!s || s === 'none') return 0; let m = 0; for (const part of s.split(/,(?![^(]*\))/)) { if (/inset/.test(part)) continue; const n = part.replace(/[a-z]+\([^)]*\)|#[0-9a-f]+/gi, '').match(/-?[\d.]+px/g); if (!n) continue; const [, y, b = 0, sp = 0] = n.map(parseFloat); m = Math.max(m, y + b + sp); } return m; };
+  const painted = e => { const s = getComputedStyle(e); const bg = s.backgroundColor; return (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') || parseFloat(s.borderTopWidth) > 0 || parseFloat(s.borderBottomWidth) > 0 || s.boxShadow !== 'none' || s.backgroundImage !== 'none' || [...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim()); };
+  const edges = blk => { let top = Infinity, bot = -Infinity, deep = 0; for (const e of [blk, ...blk.querySelectorAll('*')]) { if (!shown(e) || !painted(e)) continue; const r = e.getBoundingClientRect(); top = Math.min(top, r.top); const d = drop(e); if (r.bottom + d > bot) { bot = r.bottom + d; deep = d; } } return { top, bot, deep }; };
+  const out = [innerWidth + 'x' + innerHeight + (document.documentElement.scrollHeight > innerHeight + 1 ? ' SCROLL' : '')];
+  for (const sel of ['.hud', '.cta-area']) { const c = document.querySelector(sel); if (!c) continue; const kids = [...c.children].filter(shown).map(k => ({ k, e: edges(k), r: k.getBoundingClientRect() })).filter(x => isFinite(x.e.top)).sort((a, b) => a.r.top - b.r.top);
+    kids.slice(0, -1).forEach((a, i) => { const b = kids[i + 1]; out.push((a.k.id || a.k.className) + '>' + (b.k.id || b.k.className) + ' d' + a.e.deep + ' ' + (b.r.top - a.e.bot).toFixed(1)); }); }
+  const q = s => document.querySelector(s); const pair = (a, b, name) => { if (a && b && shown(a) && shown(b)) { const ea = edges(a), eb = edges(b), ar = a.getBoundingClientRect(), br = b.getBoundingClientRect(); if (Math.min(ar.right, br.right) - Math.max(ar.left, br.left) > 20) out.push(name + ' ' + (eb.top - ea.bot).toFixed(1)); } };
+  pair(q('.hud'), q('.cta-area'), 'hud>cta'); pair(q('#title-screen'), q('.hud'), 'title>hud'); pair(q('.board-wrap'), q('.hud'), 'board>hud'); return out.join(' | '); };
+window.__syn = () => { const app = document.querySelector('[data-phase]'); app.dataset.phase = 'human'; app.dataset.engine = 'ready'; app.dataset.view = 'live'; app.dataset.tutorial = 'off';
+  const show = id => { const e = document.getElementById(id); if (e) e.hidden = false; return e; };
+  const rc = show('review-card'); if (rc) { const set = (s, t) => { const e = rc.querySelector(s); if (e) e.textContent = t; }; set('#review-label', '내 수 H8'); set('#review-title', '좋은 수예요'); set('#review-text', '가운데를 잡았어요.'); }
+  show('hero'); const hc = document.getElementById('hero-coord'); if (hc) hc.textContent = 'H8'; const hr = document.getElementById('hero-rate'); if (hr) hr.textContent = '52%';
+  show('limited'); const al = show('coach-alts'); if (al) al.innerHTML = ['G7 48%', 'I9 47%', 'H9 45%'].map(t => '<button class="alt">' + t + '</button>').join('');
+  show('forbid-notice'); show('engine-alert'); show('undo-notice'); show('coach-note');
+  for (const id of ['forbid-notice', 'engine-alert', 'undo-notice']) { const e = document.getElementById(id); if (e && !e.textContent.trim()) e.textContent = '안내 문구'; }
+  for (const id of ['welcome-notes', 'setup']) { const e = document.getElementById(id); if (e) e.hidden = true; }
+  const ma = document.getElementById('main-action'); ma.textContent = '두기'; ma.disabled = false; return 'syn'; };
+window.__run = async () => { await new Promise(r => setTimeout(r, 300)); const a = window.__m(); window.__syn(); await new Promise(r => setTimeout(r, 300)); return 'START ' + a + ' || SYN ' + window.__m(); };

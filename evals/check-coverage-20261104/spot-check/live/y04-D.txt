@@ -1,0 +1,6 @@
+== y04-D freeze
+[32m✓ built in 250ms[39m
+ M .gitignore; M DESIGN.md; M ISSUES.md; M ROADMAP.md; M TASK.md; M src/style.css;?? work/design/fake-engine.mjs;?? work/design/overflow-fake.mjs;?? work/design/spacing-check.mjs;?? work/design/spacing-measure.mjs;?? work/design/spacing-spot.mjs;?? work/design/spacing-states.mjs;?? work/design/spacing-v1.log;
+== m.js
+START 1440x900 | hud>cta 12.0 | title>hud 24.0 || SYN 1440x900 | current-card>limited d8 12.0 | limited>coach-alts d3 12.0 | forbid-notice>engine-alert d0 12.0 | engine-alert>turn-actions d0 12.0 | turn-actions>undo-notice d7 12.0 | undo-notice>foot d0 12.0 | hud>cta 286.5
+START 390x844 | hud>cta 12.0 | title>hud 24.0 || SYN 390x844 | current-card>limited d6 12.0 | forbid-notice>engine-alert d0 12.0 | engine-alert>turn-actions d0 12.0 | turn-actions>undo-notice d7 11.0 | undo-notice>foot d0 12.0 | hud>cta 0.5 | board>hud 12.0

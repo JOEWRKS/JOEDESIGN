@@ -40,13 +40,16 @@ passed; "0 violations" means only the listed rows. The project's completion Chec
 (JOENESS ROADMAP) points here. After a change to any listed file, re-run the rows
 of every affected rule. With the harness, the pinned JSON baseline must agree with
 this table; without it, this table is the contract. Before a row counts, spot-check
-it once: compare the check's reading on one target with a direct observation of the
-quantity the rule names, and note "spot-checked <target>" or "not spot-checked" in
-the Check cell. When a result is quoted elsewhere (report, ROADMAP), quote it with
-this row's layouts, sizes and states. -->
+it: compare the check's reading on one target with a direct observation of the
+quantity the rule names. Fill the Spot check cell in every row with
+"<target>: check N / observed M", or "not spot-checked"; an empty cell means not
+spot-checked, and one row's spot check does not cover another row. When a result is
+quoted elsewhere (report, ROADMAP), quote it with this row's layouts, sizes and
+states, and with "not spot-checked" when that is the row's state; such a result is
+not listed as resolved or verified. -->
 
-| Rule | Check | Layouts | Sizes | States | Unmeasured |
-| --- | --- | --- | --- | --- | --- |
+| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured |
+| --- | --- | --- | --- | --- | --- | --- |
 
 ## Open Decisions / Evidence Boundary
 
