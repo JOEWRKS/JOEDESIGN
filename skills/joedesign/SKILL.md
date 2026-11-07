@@ -100,7 +100,10 @@ route. Continue independent authorized work without expanding an unproved direct
 5. **Correct, expand and integrate.** Rework structural gaps at composition level;
    use bounded correction for local gaps and stop repeated ineffective polishing.
    Expand from the reviewed relationships, then re-observe all affected targets and
-   the protected proof on the changed build. Material replacement of an approved
+   the protected proof on the changed build. A defect counts as fixed only after one
+   direct observation of the fixed thing on a target that showed it (for clipping or
+   overflow: the visible edges in a capture of that target, not the check's count);
+   that observation is the fix's spot check. Material replacement of an approved
    direction needs scoped user approval after proof; internal review cannot grant it.
 6. **Report the actual outcome.** Present the artifact, meaningful visual change,
    observed scope (the rule-coverage rows that ran and the rows left unmeasured)
@@ -110,11 +113,23 @@ route. Continue independent authorized work without expanding an unproved direct
    for example `spacing S1 | 939/939 | 9 sizes x 8 states, light | rendered |
    1440x900 bubble to chips: check 12 / observed 12` or `overflow | 72/72 | 12 sizes
    x 6 states, light | rendered | not spot-checked`. Side checks (overflow, clipping,
-   scroll), before/after comparisons and a fix claimed from a check each take a
-   line. Outside the list, the summary line included, a pass, a count, "fixed" or
-   "no failures" is written only with its sizes x states and rendered-or-code in
-   that same sentence; otherwise name the check and leave the outcome to its line.
+   scroll), before/after comparisons and each fix take a line. A fix line's result
+   is one of two words: `fixed` when its spot check cell holds the direct observation
+   (`375x667 replay bubble: clipped 14 before / 0 after, capture`), otherwise
+   `changed`. A `changed` fix keeps its issue open, and the report text, ISSUES and
+   ROADMAP use the cell's word, not "removed", "closed" or "resolved". Outside the
+   list, the summary line included, every design-check pass, count, "fixed" or "no
+   failures" is followed by a parenthesis copied from its line: (sizes x states,
+   rendered or code, spot check outcome). Write "spacing 918/918 (12 sizes x 6
+   states, rendered; spot check differs: check 16 / observed 8)", not "the check
+   passed, but ..."; a sentence with no room for the parenthesis names the check and
+   leaves the outcome to its line.
    A line that is not spot-checked is never listed as resolved, verified or done.
+   Before sending, save the report text to a file and run this skill's
+   `scripts/report-check.mjs` on it (`node <skill folder>/scripts/report-check.mjs
+   <file>`); correct each finding in the text and rerun until it prints `ok`, then
+   send that text. It reads the form of the sentences, not whether a number is true.
+   If it cannot run, say so in the report.
    The project's report format decides the sections; this decides the form of each
    result. Technical checks, visual judgment,
    workflow completion, certification and exact user acceptance remain distinct.

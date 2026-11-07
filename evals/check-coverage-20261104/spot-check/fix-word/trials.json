@@ -1,0 +1,226 @@
+[
+ {
+  "id": "x13-E",
+  "arm": "E",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x13-E",
+  "base": "xbase-E",
+  "head": "0d3bce8",
+  "dev": 5637,
+  "test": 4657
+ },
+ {
+  "id": "x14-E",
+  "arm": "E",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x14-E",
+  "base": "xbase-E",
+  "head": "0d3bce8",
+  "dev": 5638,
+  "test": 4658
+ },
+ {
+  "id": "x15-E",
+  "arm": "E",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x15-E",
+  "base": "xbase-E",
+  "head": "0d3bce8",
+  "dev": 5639,
+  "test": 4659
+ },
+ {
+  "id": "x16-E",
+  "arm": "E",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x16-E",
+  "base": "xbase-E",
+  "head": "0d3bce8",
+  "dev": 5640,
+  "test": 4660
+ },
+ {
+  "id": "y05-E",
+  "arm": "E",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y05-E",
+  "base": "wbase-E",
+  "head": "4275778",
+  "dev": 5641,
+  "test": 4661
+ },
+ {
+  "id": "y06-E",
+  "arm": "E",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y06-E",
+  "base": "wbase-E",
+  "head": "4275778",
+  "dev": 5642,
+  "test": 4662
+ },
+ {
+  "id": "y07-E",
+  "arm": "E",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y07-E",
+  "base": "wbase-E",
+  "head": "4275778",
+  "dev": 5643,
+  "test": 4663
+ },
+ {
+  "id": "y08-E",
+  "arm": "E",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y08-E",
+  "base": "wbase-E",
+  "head": "4275778",
+  "dev": 5644,
+  "test": 4664
+ },
+ {
+  "id": "z05-E",
+  "arm": "E",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z05-E",
+  "base": "obase-E",
+  "head": "c02fc3f"
+ },
+ {
+  "id": "z06-E",
+  "arm": "E",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z06-E",
+  "base": "obase-E",
+  "head": "c02fc3f"
+ },
+ {
+  "id": "z07-E",
+  "arm": "E",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z07-E",
+  "base": "obase-E",
+  "head": "c02fc3f"
+ },
+ {
+  "id": "z08-E",
+  "arm": "E",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z08-E",
+  "base": "obase-E",
+  "head": "c02fc3f"
+ },
+ {
+  "id": "x17-F",
+  "arm": "F",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x17-F",
+  "base": "xbase-F",
+  "head": "6cb137d",
+  "dev": 5645,
+  "test": 4665
+ },
+ {
+  "id": "x18-F",
+  "arm": "F",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x18-F",
+  "base": "xbase-F",
+  "head": "6cb137d",
+  "dev": 5646,
+  "test": 4666
+ },
+ {
+  "id": "x19-F",
+  "arm": "F",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x19-F",
+  "base": "xbase-F",
+  "head": "6cb137d",
+  "dev": 5647,
+  "test": 4667
+ },
+ {
+  "id": "x20-F",
+  "arm": "F",
+  "kind": "seeded",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\x20-F",
+  "base": "xbase-F",
+  "head": "6cb137d",
+  "dev": 5648,
+  "test": 4668
+ },
+ {
+  "id": "y09-F",
+  "arm": "F",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y09-F",
+  "base": "wbase-F",
+  "head": "2da3b91",
+  "dev": 5649,
+  "test": 4669
+ },
+ {
+  "id": "y10-F",
+  "arm": "F",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y10-F",
+  "base": "wbase-F",
+  "head": "2da3b91",
+  "dev": 5650,
+  "test": 4670
+ },
+ {
+  "id": "y11-F",
+  "arm": "F",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y11-F",
+  "base": "wbase-F",
+  "head": "2da3b91",
+  "dev": 5651,
+  "test": 4671
+ },
+ {
+  "id": "y12-F",
+  "arm": "F",
+  "kind": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\y12-F",
+  "base": "wbase-F",
+  "head": "2da3b91",
+  "dev": 5652,
+  "test": 4672
+ },
+ {
+  "id": "z09-F",
+  "arm": "F",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z09-F",
+  "base": "obase-F",
+  "head": "2f3c859"
+ },
+ {
+  "id": "z10-F",
+  "arm": "F",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z10-F",
+  "base": "obase-F",
+  "head": "2f3c859"
+ },
+ {
+  "id": "z11-F",
+  "arm": "F",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z11-F",
+  "base": "obase-F",
+  "head": "2f3c859"
+ },
+ {
+  "id": "z12-F",
+  "arm": "F",
+  "kind": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-06-gomoku-w3\\trials\\z12-F",
+  "base": "obase-F",
+  "head": "2f3c859"
+ }
+]

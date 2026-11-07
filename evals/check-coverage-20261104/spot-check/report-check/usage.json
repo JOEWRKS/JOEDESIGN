@@ -1,0 +1,95 @@
+{
+ "x21-G": {
+  "transcript": true,
+  "runs": [
+   "1 finding(s)",
+   "ok"
+  ]
+ },
+ "x22-G": {
+  "transcript": true,
+  "runs": [
+   "ok",
+   "ok"
+  ]
+ },
+ "x23-G": {
+  "transcript": true,
+  "runs": [
+   "2 finding(s)",
+   "no-output:Exit code 1 sed: -e expression #1, char 17: unknown option t",
+   "ok"
+  ]
+ },
+ "x24-G": {
+  "transcript": true,
+  "runs": [
+   "ok"
+  ]
+ },
+ "y13-G": {
+  "transcript": true,
+  "runs": [
+   "no-output:Exit code 2 report-check: cannot read work/tmp/report.md: EN",
+   "no-output:Exit code 2 report-check: cannot read work/tmp/report.md: EN",
+   "ok"
+  ]
+ },
+ "y14-G": {
+  "transcript": true,
+  "runs": [
+   "1 finding(s)",
+   "ok"
+  ]
+ },
+ "y15-G": {
+  "transcript": true,
+  "runs": [
+   "1 finding(s)",
+   "ok"
+  ]
+ },
+ "y16-G": {
+  "transcript": true,
+  "runs": [
+   "no-output:Exit code 2 report-check: cannot read work/tmp/report.md: EN",
+   "no-output:Exit code 2 report-check: cannot read work/tmp/report.md: EN",
+   "ok"
+  ]
+ },
+ "z13-G": {
+  "transcript": true,
+  "runs": [
+   "no-output:-rw-r--r-- 1 <user> 197609  1953 Nov  7 04:41 src/analysis-cl",
+   "no-output:report-check: cannot read work/tmp/report.md: ENOENT: no suc",
+   "no-output:report-check: cannot read work/tmp/report.md: ENOENT: no suc",
+   "no-output:report-check: cannot read /proc/self/fd/0: ENOENT: no such f",
+   "no-output:Command did not complete within its 120s timeout and was mov",
+   "ok"
+  ]
+ },
+ "z14-G": {
+  "transcript": true,
+  "runs": [
+   "no-output:#!/usr/bin/env node // Check a design report draft against t",
+   "no-output:report-check: cannot read work/tmp/report.md: ENOENT: no suc",
+   "no-output:report-check: cannot read work/tmp/report.md: ENOENT: no suc",
+   "ok"
+  ]
+ },
+ "z15-G": {
+  "transcript": true,
+  "runs": [
+   "no-output:Exit code 2 report-check: cannot read work/tmp/report.md: EN",
+   "no-output:Exit code 2 report-check: cannot read work/tmp/report.md: EN",
+   "ok"
+  ]
+ },
+ "z16-G": {
+  "transcript": true,
+  "runs": [
+   "ok",
+   "ok"
+  ]
+ }
+}

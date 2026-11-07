@@ -1,0 +1,33 @@
+graded 24 / 24
+  seeded F x=4/4 g=2/4 h=1/4 s=4/4 t=4/4 u=4/4 outcome=open,open,open,open
+  seeded G x=4/4 g=4/4 h=4/4 s=4/4 t=4/4 u=4/4 outcome=open,open,open,open
+     x17-F n314 x1 g0 h0 s1 t1 u1 open   (round 3: x1 g0 h0 s1 t1 u1)
+     x18-F n166 x1 g0 h0 s1 t1 u1 open   (round 3: x1 g0 h0 s1 t1 u1)
+     x19-F n342 x1 g1 h1 s1 t1 u1 open   (round 3: x1 g1 h0 s1 t1 u1)
+     x20-F n152 x1 g1 h0 s1 t1 u1 open   (round 3: x1 g0 h0 s1 t1 u1)
+     x21-G n171 x1 g1 h1 s1 t1 u1 open 
+     x22-G n203 x1 g1 h1 s1 t1 u1 open 
+     x23-G n184 x1 g1 h1 s1 t1 u1 open 
+     x24-G n160 x1 g1 h1 s1 t1 u1 open 
+  browser F b=4/4 c=4/4 f=2/4 g=2/4 h=2/4 s=4/4 t=4/4 u=4/4
+  browser G b=4/4 c=4/4 f=3/4 g=4/4 h=4/4 s=4/4 t=4/4 u=4/4
+     y09-F n085 b1 c1 f1 g0 h0 s1 t1 u1    (round 3: b1 c1 f1 g1 h1 s1 t1 u1)
+     y10-F n174 b1 c1 f0 g1 h1 s1 t1 u1    (round 3: b1 c1 f0 g1 h1 s1 t1 u1)
+     y11-F n284 b1 c1 f0 g1 h1 s1 t1 u1    (round 3: b1 c1 f0 g1 h1 s1 t1 u1)
+     y12-F n300 b1 c1 f1 g0 h0 s1 t1 u1    (round 3: b1 c1 f1 g0 h0 s1 t1 u1)
+     y13-G n214 b1 c1 f0 g1 h1 s1 t1 u1  
+     y14-G n040 b1 c1 f1 g1 h1 s1 t1 u1  
+     y15-G n087 b1 c1 f1 g1 h1 s1 t1 u1  
+     y16-G n201 b1 c1 f1 g1 h1 s1 t1 u1  
+  offline F b=4/4 c=4/4 f=1/4 g=3/4 h=4/4 s=4/4 t=4/4 u=0/4
+  offline G b=4/4 c=4/4 f=0/4 g=4/4 h=4/4 s=4/4 t=4/4 u=0/4
+     z09-F n061 b1 c1 f1 g1 h1 s1 t1 u0    (round 3: b1 c1 f1 g0 h0 s1 t1 u0)
+     z10-F n399 b1 c1 f0 g0 h1 s1 t1 u0    (round 3: b1 c1 f1 g0 h0 s1 t1 u0)
+     z11-F n197 b1 c1 f0 g1 h1 s1 t1 u0    (round 3: b1 c1 f1 g1 h1 s1 t1 u0)
+     z12-F n258 b1 c1 f0 g1 h1 s1 t1 u0    (round 3: b1 c1 f1 g1 h1 s1 t1 u0)
+     z13-G n378 b1 c1 f0 g1 h1 s1 t1 u0  
+     z14-G n211 b1 c1 f0 g1 h1 s1 t1 u0  
+     z15-G n228 b1 c1 f0 g1 h1 s1 t1 u0  
+     z16-G n328 b1 c1 f0 g1 h1 s1 t1 u0  
+  all scenes F: g=7/12 h=7/12 s=12/12 t=12/12   browser scenes: g=4/8 h=3/8 s=8/8 t=8/8 u=8/8
+  all scenes G: g=12/12 h=12/12 s=12/12 t=12/12   browser scenes: g=8/8 h=8/8 s=8/8 t=8/8 u=8/8

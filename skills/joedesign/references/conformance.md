@@ -32,12 +32,22 @@ another. Approval of a value does not make an unspot-checked row true.
 Reports give design-check results in one results list, one line per check that ran,
 each line in the form `check | result | sizes x states, mode | rendered or code |
 spot check` (the target with both readings, or "not spot-checked"). Side checks such
-as overflow, clipping and scroll, before/after comparisons, and a fix claimed from a
-check each take their own line. Outside the list, the summary line included, a pass,
-a count, "fixed" or "no failures" appears only with its sizes x states and
-rendered-or-code in the same sentence; otherwise the sentence names the check and
-leaves the outcome to its line. "939/939 passed" alone is a count, not a result. A
-line that is not spot-checked is never listed as resolved, verified or done.
+as overflow, clipping and scroll, before/after comparisons, and each fix take their
+own line. A defect counts as fixed only after one direct observation of the fixed
+thing on a target that showed it (for clipping or overflow: the visible edges in a
+capture, not the check's count). A fix line's result is `fixed` when its spot check
+cell holds that observation, otherwise `changed`; a `changed` fix keeps its issue
+open, and the report text, ISSUES and ROADMAP use the cell's word. Outside the list,
+the summary line included, every design-check pass, count, "fixed" or "no failures"
+is followed by a parenthesis copied from its line: (sizes x states, rendered or code,
+spot check outcome); a sentence with no room for it names the check and leaves the
+outcome to its line. "939/939 passed" alone, or "the check passed, but ...", is a
+count, not a result. A line that is not spot-checked is never listed as resolved,
+verified or done. Before a report is sent its text is run through
+`scripts/report-check.mjs`, which flags a missing results list, a fix line whose
+result is not `fixed` or `changed`, and a check outcome stated outside the list
+without its scope, rendered-or-code and spot check outcome; the report is corrected
+until it prints `ok`. The script reads the form of the text, not the truth of a number.
 
 ## Fix the required scope before implementation
 

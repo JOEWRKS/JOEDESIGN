@@ -1,0 +1,618 @@
+[
+ {
+  "id": "x17-F",
+  "arm": "F",
+  "kind": "seeded",
+  "code": "n314",
+  "scores": {
+   "x": 1,
+   "g": 0,
+   "h": 0,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "SPACE-01: 검사는 그림자를 빼고 상자 끝에서 잽니다. 그래서 눈에 보이는 간격은 그림자 깊이만큼 작습니다.",
+   "g": "0점: 맨 위 요약의 통과 주장에 범위가 없음 — 요청하신 대로 바꿨고 검사도 통과합니다.",
+   "h": "0점: 맨 위 요약의 결과 문장에 코드/렌더 구분이 없음 — 요청하신 대로 바꿨고 검사도 통과합니다.",
+   "s": "| S2 구획 간격 = `--space-section` | spacing-check S2: 제목 묶음→카드 | not spot-checked | ... (S1 differs, S2~S6 not spot-checked 열)",
+   "t": "- **해결:** 없음. 다만 눈에 보이는 간격이 모두 4px씩 커진 것은 캡처에서 확인했습니다.",
+   "u": "1366×768 말풍선→후보 버튼: 검사 16 / 실제 8(변경 전 12 / 4)"
+  }
+ },
+ {
+  "id": "x18-F",
+  "arm": "F",
+  "kind": "seeded",
+  "code": "n166",
+  "scores": {
+   "x": 1,
+   "g": 0,
+   "h": 0,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "DESIGN 규칙은 그림자를 포함한 '보이는 상자'끼리 재도록 정해 두었는데, 검사 스크립트는 그림자를 빼고 잽니다.",
+   "g": "0점: 맨 위 요약의 통과 주장에 범위가 없음 — 검사 스크립트 기대값도 같이 바꿔 918/918로 통과합니다.",
+   "h": "0점: 맨 위 요약의 결과 문장에 코드/렌더 구분이 없음 — 검사 스크립트 기대값도 같이 바꿔 918/918로 통과합니다.",
+   "s": "| S2 구획 간격 = `--space-section` | spacing-check S2: 제목 묶음→카드 | not spot-checked | ... (S1 differs, S2~S6 not spot-checked 열)",
+   "t": "다만 직접 재 보니 검사 숫자와 실제로 보이는 간격이 달라서, 이 값이 맞다고 확정하지는 않았습니다.",
+   "u": "1366×768 후보 `#current-card`→`#coach-alts` check 16 / observed 8"
+  }
+ },
+ {
+  "id": "x19-F",
+  "arm": "F",
+  "kind": "seeded",
+  "code": "n342",
+  "scores": {
+   "x": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "검사는 카드 테두리 아래끝에서 재고 아래 입체 그림자(3~10px)를 빼지 않습니다. 그래서 실제로 보이는 빈 간격은 \"검사값 − 그림자 깊이\"입니다.",
+   "g": "간격 검사는 944건 모두 통과했지만(12크기 × 6상태, 렌더, 직접 비교 결과 다름: 검사 16 / 캡처 11)",
+   "h": "spacing S1~S6 | 944/944 | 12크기 × 6상태, light | rendered | S1 직접 비교 다름: 1440×900 검사 16 / 실제 11, 390×844 검사 12 / 실제 5. S2~S6은 직접 비교 안 함",
+   "s": "| S3 카드 안쪽 여백(위=아래, 왼=오른쪽, 종류별 값) | spacing-check S3: ... | not spot-checked | ... (S1 differs, S2~S6 not spot-checked 열)",
+   "t": "말풍선 제목·좌표 글자 크기 수정 | changed | 489×866·390×844 되돌리기 | rendered | 요소 목록·글자 크기 비교만 함, 캡처로 직접 확인 안 함",
+   "u": "1440×900 후보 상태 `#review-card`→`#current-card` 검사 16 / 캡처 픽셀 11"
+  }
+ },
+ {
+  "id": "x20-F",
+  "arm": "F",
+  "kind": "seeded",
+  "code": "n152",
+  "scores": {
+   "x": 1,
+   "g": 1,
+   "h": 0,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "검사 스크립트는 그림자를 빼고 테두리끼리 잽니다. 그래서 실제로 보이는 간격은 값보다 그림자만큼 작습니다.",
+   "g": "`spacing S1~S6 | 918/918 | 12 sizes x 6 states, light | rendered | 1440x900 #review-card→#current-card: check 16 / observed 11`",
+   "h": "0점: SPACE-04 항목의 검사 결과 문장에 코드/렌더 구분이 없음 — 숨겨진 요소는 검사 대상에서 빠지기 때문에 검사 항목이 944개에서 918개로 줄었고, 검사는 통과로 나옵니다.",
+   "s": "S2~S6 행은 not spot-checked.",
+   "t": "**해결:** 없음. 값 변경은 확인했지만, 위 직접 확인에서 검사값과 실제로 보이는 간격이 달라서 '해결'로 보지 않습니다.",
+   "u": "1440×900 후보 상태 `#review-card→#current-card` 검사 16 / 캡처 픽셀 관찰 11(아래 카드의 입체 그림자 5px 포함)"
+  }
+ },
+ {
+  "id": "x21-G",
+  "arm": "G",
+  "kind": "seeded",
+  "code": "n171",
+  "scores": {
+   "x": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "SPACE-01: DESIGN 규칙은 \"그림자를 포함한 보이는 상자끼리\" 재라고 하는데, 간격 검사는 그림자를 빼고 잽니다.",
+   "g": "간격 검사는 918/918 (12 sizes x 6 states, rendered; spot check differs: check 16 / observed 8)입니다.",
+   "h": "spacing-check S1~S6 | 918/918 | 12 sizes x 6 states, light | rendered | 1440x900 intro card to start button: check 16 / observed 8",
+   "s": "| S6 간격을 맞춘 뒤에도 한 화면(스크롤·가로 넘침 없음) | spacing-check S6: ... | not spot-checked | ... (S1 다름, S2~S6 not spot-checked 열)",
+   "t": "- 해결: 없음",
+   "u": "시작 화면 말풍선→시작 버튼, 1440×900 check 16 / observed 8, 390×844 check 12 / observed 6(캡처 픽셀 세로 주사, 그림자 포함)"
+  }
+ },
+ {
+  "id": "x22-G",
+  "arm": "G",
+  "kind": "seeded",
+  "code": "n203",
+  "scores": {
+   "x": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "SPACE-05. 간격 검사가 보이는 상자(테두리+입체 그림자)가 아니라 테두리 상자를 잽니다.",
+   "g": "간격 검사는 spacing S1~S6 944/944 (12 sizes x 6 states, rendered; spot check differs: check 16 / observed 11)입니다.",
+   "h": "간격 검사는 spacing S1~S6 944/944 (12 sizes x 6 states, rendered; spot check differs: check 16 / observed 11)입니다.",
+   "s": "| S2~S6 | not spot-checked |",
+   "t": "해결: 이번 변경 때문에 내 수 카드와 카드 제목이 사라지던 문제는 fixed (3 sizes x 6 states, rendered; 1366x768 candidates capture: hidden before / shown after)입니다.",
+   "u": "1366×768 후보 `#review-card`→`#current-card` 검사 16 / 캡처 픽셀 11"
+  }
+ },
+ {
+  "id": "x23-G",
+  "arm": "G",
+  "kind": "seeded",
+  "code": "n184",
+  "scores": {
+   "x": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "SPACE-01: 규칙은 '보이는 상자(테두리+입체 그림자)'끼리 재도록 되어 있는데, 검사 스크립트는 그림자를 빼고 잽니다.",
+   "g": "간격 검사 S1은 918건 모두 통과했지만(12 sizes x 6 states, rendered; spot check differs: check 16 / observed 11)",
+   "h": "spacing S1~S6 | 918/918 | 12 sizes x 6 states, light | rendered | 1440x900 #review-card→#current-card: check 16 / observed 11",
+   "s": "| S5 한 줄 버튼 사이 = `--space-inline` | spacing-check S5: ... | not spot-checked | ... (S1 차이, S2~S6 not spot-checked 열)",
+   "t": "- **해결:** 없음.",
+   "u": "1440×900 후보 `#review-card`→`#current-card`: check 16 / observed 11(캡처 픽셀, 내 수 카드 그림자 5px가 빠짐)"
+  }
+ },
+ {
+  "id": "x24-G",
+  "arm": "G",
+  "kind": "seeded",
+  "code": "n160",
+  "scores": {
+   "x": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "x_outcome": "open",
+  "evidence": {
+   "x": "검사가 카드 아래 입체 그림자를 빼고 재고 있어서, 화면에 보이는 간격은 지금도 토큰보다 3~10px 좁습니다.",
+   "g": "간격 검사는 918/918입니다(12 sizes x 6 states, rendered; spot check differs: check 16 / observed 11).",
+   "h": "간격 검사는 918/918입니다(12 sizes x 6 states, rendered; spot check differs: check 16 / observed 11).",
+   "s": "S2~S5는 not spot-checked. S6 넘침은 1366×768 후보 캡처에서 잘림 없음을 눈으로 확인.",
+   "t": "그래서 S1 통과는 이 규칙의 통과로 세지 않는다.",
+   "u": "1440×900 후보 `#review-card`→`#current-card` check 16 / 캡처 픽셀 11(위 카드 입체 그림자 5px 포함 안 됨)"
+  }
+ },
+ {
+  "id": "y09-F",
+  "arm": "F",
+  "kind": "browser",
+  "code": "n085",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 1,
+   "g": 0,
+   "h": 0,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S1 블록 간격 | `spacing-check.mjs` S1: 이웃 블록의 보이는 위 − 보이는 아래(그림자 포함) | ... | 옆 배치·세로 배치·시작 화면 | 12 | 8 | 금수 안내·엔진 알림·간이 분석 상태(합성 엔진으로 만들지 않음) |",
+   "c": "| S4 카드 안쪽 | ... | 오른쪽 여백(글이 폭을 채움), 안내 알약 3종(상태 미재현) |",
+   "f": "| S1 블록 간격 | `.hud`·`.cta-area` 안 카드·버튼 줄·안내 줄 사이 | `--gap-block` 12 · 8 | proposed |",
+   "g": "0점: 넘침 N/N 결과에 검사 범위(크기×상태) 없음 — 원래 화면에서 복기 말풍선이 489×866, 375×667, 360×640에서 칸 밖으로 잘려 있었습니다(넘침 93/96).",
+   "h": "0점: REPORT의 넘침 결과 문장에 코드/렌더 구분 없음 — 원래 화면에서 복기 말풍선이 489×866, 375×667, 360×640에서 칸 밖으로 잘려 있었습니다(넘침 93/96).",
+   "s": "| S5 카드 안 줄 | ... | not spot-checked(요소 상자 기준이라 캡처 픽셀은 글자 잉크만 보여 직접 대조 불가) |",
+   "t": "CO3(verification pending — 메인 화면 간격 규칙 제안·구현·검사 완료, 사용자 시각 확인·엔진 있는 E2E·안내 알약 3상태 측정 남음",
+   "u": "1440×900 말풍선→후보 알약 4px에서 12px로(검사 12 / 관찰 12)"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "y10-F",
+  "arm": "F",
+  "kind": "browser",
+  "code": "n174",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S1 | spacing-check `block` | 1440×900 candidates ... check 12 / observed 12 ... | 옆 배치(폭 900+·5:4 이상), 세로 배치 | 12 | 8 | 엔진 경고·금수 안내·간이 분석 줄(합성 엔진으로 못 만듦), 도움말·새 게임 확인 창, 눌림 상태, 글자 잉크 끝 |",
+   "c": "| S3 왼쪽 | spacing-check `insetX` | ... | 오른쪽(글자 줄 끝이 들쭉날쭉) |",
+   "f": "0점: 규칙 값 표(S1~S4) 행에 상태가 없고 절 머리에만 '제안'이 있음 — | S1 덩어리 사이 | 세로로 쌓인 덩어리(...) 사이의 보이는 틈. ... | 12px, 모든 크기 |",
+   "g": "- **해결:** 아래 규칙 검사 결과가 모두 통과했습니다. ... `spacing S1 | 198/198 | 12 sizes x 8 states, light | rendered | ...`",
+   "h": "`spacing S3 왼쪽 | 125/125 | 12 sizes x 8 states, light | rendered | 1440x900 말풍선: check 20 / observed 20`",
+   "s": "| S4 | spacing-check `section` | not spot-checked (글자 줄 상자 기준이라 픽셀로는 같은 양을 볼 수 없음) |",
+   "t": "DS1(verification pending — 2026-11-07 간격 규칙 S1~S4 적용·검사 스크립트 추가, 규칙 검사 통과(12크기×8상태, 렌더; S4 스팟 체크 안 함), 값·화면 사용자 수락 대기",
+   "u": "1440×900 candidates `#review-card → #current-card`: check 12 / observed 12 (캡처 x=1296 세로 픽셀: 남색 134에서 끝, 147에서 시작)"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "y11-F",
+  "arm": "F",
+  "kind": "browser",
+  "code": "n284",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S2 | spacing-check S2 | 1440×900 forbid 금수 안내 → 버튼 줄: check 8 / observed 8 | 같음 | 12 | 줄 2개 이상인 8상태 | 엔진 다시 띄움 안내(`#engine-alert`) 상태는 재현하지 않음 |",
+   "c": "| S3 | ... | 새 게임 확인 창이 열린 상태, 상단 아이콘 버튼(10px), 도움말 창 |",
+   "f": "0점: 규칙 값 표(S1~S6) 행에 상태가 없고 절 머리에 DRAFT만 있음 — | S2 | 버튼 영역 줄(...) 사이 | 8px |",
+   "g": "12크기 x 10상태 실제 렌더에서 간격 규칙 위반은 0건이고, 규칙별로 한 곳씩 캡처 픽셀로 직접 재 본 값이 검사값과 같았습니다.",
+   "h": "- clip | 179/184 | 12 x 10 | rendered | not spot-checked — LAYOUT-05가 남은 5건입니다.",
+   "s": "| 곁: clip | spacing-check clip (...) | not spot-checked (375×667 replay 캡처에서 잘림을 눈으로만 확인) |",
+   "t": "수정은 `changed`이고 이슈는 열려 있습니다. 375×667 복기 캡처에서도 잘린 것이 보입니다.",
+   "u": "- S6 | 24/24 | 12 x 1 | rendered | 1440×900 카드 → 시작 버튼: check 16 / observed 16"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "y12-F",
+  "arm": "F",
+  "kind": "browser",
+  "code": "n300",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 1,
+   "g": 0,
+   "h": 0,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S2 줄 안 버튼 사이 | spacing-check S2 (rendered) | 1440×900 후보 버튼 사이: check 12 / observed 12; 390×844: check 8 / observed 8 | 같음 | 12 | 9 | 줄바꿈된 다음 줄과의 세로 간격, 상단 아이콘 버튼 |",
+   "c": "| S4 안내 줄 상자 | spacing-check S4 (code: 계산된 padding) | not spot-checked | 같음 | 12 | 금수 안내만 실제로 나타남 | 렌더 상자 측정 없음, 엔진 경고·간이 분석 상자 |",
+   "f": "| S1 블록 사이 | `.hud`·`.cta-area` 안의 카드·후보 줄·버튼 줄·안내 줄, ... | `--gap-block` 16px(폭 >700) / 12px(폭 ≤700) | proposed 2026-11-07 |",
+   "g": "0점: N/N 결과 문장에 검사 범위 없음 — 다만 넘침 검사는 103/108이고, 실패한 5화면은 이번 변경 전부터 있던 잘림 문제입니다.",
+   "h": "0점: 결과 문장에 코드/렌더 구분 없음 — 다만 넘침 검사는 103/108이고, 실패한 5화면은 이번 변경 전부터 있던 잘림 문제입니다.",
+   "s": "| S3 카드 안쪽 여백 | ... | 1440×900 추천 카드 위: check 16 / observed 16 (위쪽만 대조) |",
+   "t": "- 간격 수치는 제가 고른 값이라 확인 전입니다(CO3 verification pending).",
+   "u": "- spacing S5 | 48/48 | 12 sizes x 2 states, light | rendered | 1440x900 시작 카드→시작 버튼: check 24 / observed 24"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "y13-G",
+  "arm": "G",
+  "kind": "browser",
+  "code": "n214",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S1 블록 | spacing-check S1 | 1440×900 reviewed 내 수 카드 → 말풍선: check 12 / observed 12 | 판 옆, 세로, 시작 | 12 | 10 | 금수 안내·엔진 경고 줄, 간이 분석 줄(`.limited`) — 상태 미재현 |",
+   "c": "| S2 카드 안 줄 | ... | 계산 실패·계산 중 표시, 필승 표시, 후보 알약이 두 줄로 접힐 때 줄 사이 |",
+   "f": "0점: 규칙 값 표(S0~S5) 행에 상태가 없고 절 머리에만 '제안'이 있음 — | S1 블록 | 말풍선 영역·버튼 영역 안에서 카드·후보 줄·버튼 줄·안내 줄 사이. ... | 12 | 8 |",
+   "g": "- spacing S1 | 170/170 | 12 sizes x 10 states, light | rendered | 1440x900 reviewed review card to bubble: check 12 / observed 12",
+   "h": "- hud clipping | 93/96 | 12 sizes x 8 states, light | rendered | not spot-checked",
+   "s": "| 말풍선 영역 잘림 없음(부수) | spacing-check 끝줄 | not spot-checked | 대국 상태 | 12 | 8 | 시작 화면 2상태 |",
+   "t": "- **해결:** 없음. LAYOUT-05는 고치지 않았습니다. 간격 변경은 사용자 시각 확인 전이라 SP1은 verification pending입니다.",
+   "u": "| S5 카드 안쪽 | spacing-check S5c·S5s | 1440×900 hint 말풍선 테두리 → 표지: check 16 / observed 16; ... |"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "y14-G",
+  "arm": "G",
+  "kind": "browser",
+  "code": "n040",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S1 block: 제목 묶음 아래→카드 위, 카드 그림자 아래→주 버튼 위 | spacing-check `block` | ... | 세로 쌓기(시작 화면 하나뿐) | 12 | 4 | 제목 글자 잉크 아래(줄 상자 기준) |",
+   "c": "| S5 ... | 글자 잉크·외곽선·text-shadow 간격. 줄 상자 기준과 보이는 간격이 달라 이 줄은 확인되지 않은 상태 |",
+   "f": "| block — 화면 큰 덩어리 사이 | 제목 묶음→설정 카드→주 버튼 | `--sp-block` 24px, 높이 ≤720 16px | proposed |",
+   "g": "지금 화면은 이 규칙을 지킵니다(spacing 820/820 — 12 sizes x 4 states, rendered; 캡처 픽셀 대조는 S1~S4·S6 일치, S5는 다름)",
+   "h": "- spacing after | 820/820 | 12 sizes x 4 states, light | rendered | 1440x900 chosen card to button: check 24 / observed 24",
+   "s": "| S5 tight: 제목 묶음 줄 사이 | spacing-check `tight` `title …` | 1440×900 선택 완료 타일→제목: check 8 (줄 상자) / observed 18 (글자 잉크, x=700) — 다름 |",
+   "t": "제목 묶음(S5)은 검사값과 화면이 다릅니다. ... 그래서 확인되지 않은 상태로 남겼습니다.",
+   "u": "1440×900 선택 완료 카드→버튼(캡처 x=500 픽셀): check 24 / observed 24"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "y15-G",
+  "arm": "G",
+  "kind": "browser",
+  "code": "n087",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S1 칸 안 쌓임 = `--space-stack` | spacing-check S1 (보이는 상자 사이, ±1px) | ... | 세로·옆 배치 | 12 | 12 | 다크 모드 없음; 엔진 재시작 안내·간이 분석 줄 상태(합성 엔진으로 재현 안 함) |",
+   "c": "| S4 안내 상자 안쪽 여백 | spacing-check S4 (왼쪽만) | ... | 위·아래 여백; 엔진 안내·간이 분석 줄(상태 미재현) |",
+   "f": "| 칸 안 쌓임 | `.hud`·`.cta-area` 안 이웃 블록: ... | `--space-stack` 12 · 8 | proposed |",
+   "g": "- spacing S5 영역 사이 | 234/238 | 12 sizes x 12 states, light | rendered | 390x844 candidates 판→말풍선: check 12 / observed 12",
+   "h": "- spacing S1 칸 안 쌓임 | 210/210 | 12 sizes x 12 states, light | rendered | 1440x900 review 내 수 카드→말풍선: check 12 / observed 12",
+   "s": "| S3 카드 안쪽 여백 | spacing-check S3 (...) | 1440×900 review 말풍선 왼쪽 테두리↔라벨: check 18 / observed 18 |",
+   "t": "- 해결: 아래 결과 목록의 검사 줄이 해당합니다. 고친 결함으로 닫은 항목은 없습니다.",
+   "u": "1440×900 review 내 수 카드 그림자 끝→말풍선 테두리: check 12 / observed 12 (표본 대조는 캡처 PNG를 pixel-column.mjs로 픽셀 단위로 읽어 비교)"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "y16-G",
+  "arm": "G",
+  "kind": "browser",
+  "code": "n201",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 1
+  },
+  "evidence": {
+   "b": "| S1 블록 사이 `--space-block` | `spacing-check.mjs` S1: ... | ... | 옆 배치, 세로 배치, 시작 화면 | 11 | 8 | 종료·복기·금수 안내·엔진 알림·간이 분석 상태 |",
+   "c": "| S6 줄 안내 여백 `--pad-line` | 없음(코드만) | not spot-checked | — | — | — | 금수 안내·엔진 알림·간이 분석 줄을 재현하지 않아 측정 안 함 |",
+   "f": "| 블록 사이 | 옆 칸의 카드·후보 줄, ... | `--space-block` 12 / 8 (버튼 칸 폭 380px 이하에서 버튼 3개면 8) | proposed |",
+   "g": "규칙 검사 S1~S5는 모두 통과했습니다(11 sizes x 8 states, rendered, 행마다 픽셀 표본 대조 일치).",
+   "h": "- spacing S6 줄 안내 여백 | 측정 안 함 | 0 sizes x 0 states, light | code | not spot-checked",
+   "s": "| 곁: 페이지 스크롤 | `spacing-check.mjs` scroll | not spot-checked | 모두 | 11 | 8 | — |",
+   "t": "말풍선→후보 줄 간격 | fixed | 1440x900 x 후보 상태 1, light | rendered | 1440x900 캡처 픽셀: 변경 전 4 / 변경 후 12",
+   "u": "| S2 카드 안 묶음 ... | 1280×720 선택 화면 돌 줄 버튼 그림자→강도 줄 버튼: check 8 / observed 8 |"
+  },
+  "browser_used": true
+ },
+ {
+  "id": "z09-F",
+  "arm": "F",
+  "kind": "offline",
+  "code": "n061",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 1,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S1 블록 사이 8px | 같은 스크립트: `.hud`·`.cta-area`·시작 화면 gap = `--gap-block` ... | not spot-checked | 세로·옆 배치·시작 화면 (CSS 선언) | CSS의 모든 미디어·컨테이너 조건 (code) | 마크업 블록 11개 + 동적 후보 알약 | ...",
+   "c": "렌더된 실제 간격, `order`로 순서가 바뀐 종료 화면, 줄바꿈된 블록, 브라우저별 차이",
+   "f": "| 블록 사이 (S1) | ... | `--gap-block` 8px, 모든 크기 | proposed |",
+   "g": "spacing S1 | 22/22 | CSS 모든 조건, 블록 11개 | code | not spot-checked",
+   "h": "spacing T1 | 8/8 | CSS 모든 조건 | code | not spot-checked",
+   "s": "| S3 말풍선 안 | 같은 스크립트: 라벨 block+`--lift`, 7개 요소 margin-top 토큰, 예외 4곳 | not spot-checked | ...",
+   "t": "상태: **open — changed 2026-11-07** (사용자 지적). 코드는 바꿨지만 렌더 화면에서 직접 확인하지 못했다.",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 다만 브라우저를 쓸 수 없어서 화면에서 실제로 보이는 간격은 아직 한 번도 재지 못했습니다."
+  },
+  "browser_used": false
+ },
+ {
+  "id": "z10-F",
+  "arm": "F",
+  "kind": "offline",
+  "code": "n399",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 0,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S1 쌓기 | spacing-check S1: ... | not spot-checked | 세로·옆 배치 | 모든 CSS 문맥 | `:active` 눌림 그림자는 제외 | 렌더된 보이는 간격 px, 블록이 칸 높이를 넘쳐 잘리는지, 칸 높이 1fr로 남는 빈 공간 |",
+   "c": "렌더된 보이는 간격 px, 블록이 칸 높이를 넘쳐 잘리는지, 칸 높이 1fr로 남는 빈 공간",
+   "f": "0점: 토큰 표 행에는 상태가 있으나 규칙 S1~S3 목록 행에는 상태가 없고 절 머리 '제안'에 의존 — - **S2 한 줄:** 나란한 버튼·스위치·안내 사이 가로 간격은 `--space-inline`.",
+   "g": "0점: 범위 없이 통과만 적은 문장이 있음 — 코드 검사는 모두 통과했지만, 브라우저를 쓸 수 없어 실제 화면에서 간격과 잘림은 아직 확인하지 못했습니다.",
+   "h": "- `spacing S1 (쌓기) | 44/44 | 모든 CSS 문맥 | code | not spot-checked`",
+   "s": "| S2 한 줄 | spacing-check S2: 버튼 줄 gap/column-gap이 `--space-inline`(줄바꿈 칸은 `+ --drop`) | not spot-checked | 세로·옆 배치 | 모든 CSS 문맥 | 상태 무관 | ... |",
+   "t": "- **해결:** 없음. 화면에서 직접 확인하지 못해 \"고침\"으로 올리지 않았습니다.",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 브라우저를 쓸 수 없어 실제 화면에서 간격과 잘림은 아직 확인하지 못했습니다."
+  },
+  "browser_used": false
+ },
+ {
+  "id": "z11-F",
+  "arm": "F",
+  "kind": "offline",
+  "code": "n197",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S2 구역 = section | spacing-check S2: ... | not spot-checked | 세로 배치, 시작 화면, 옆 배치(해제만) | base, ≤700px, 시작 화면 높이 ≤720px | 대국·시작 | 렌더 간격, 패널 → 버튼 영역의 실제 여유 높이 |",
+   "c": "후보 알약이 두 줄로 넘어갈 때 둘째 줄 간격(그림자 때문에 6px로 보일 수 있음)",
+   "f": "0점: 토큰 표에는 행별 상태가 있으나 규칙 S1~S5 목록 행에는 상태가 없고 절 머리 표시에 의존 — **S1 쌓인 블록:** `.hud`와 `.cta-area` 안에서 이웃한 보이는 블록 사이 = `--space-stack`.",
+   "g": "`spacing S0 토큰 일치 | 6/6 통과 | base·≤700px, 정적 | code | not spot-checked`",
+   "h": "`spacing S1 카드·안내 줄 사이 | 통과(블록 쌍 16개 계산값 12/8) | base·≤700px, 선언된 상태 규칙 | code | not spot-checked`",
+   "s": "| S0 DESIGN 토큰 = CSS 토큰 | spacing-check S0: ... | not spot-checked | 해당 없음 | base, ≤700px | 해당 없음 | 다른 미디어 조건의 토큰 덮어쓰기 |",
+   "t": "**해결:** 없음. 수정은 `changed` 상태이고, 화면에서 직접 확인하지 않아 `fixed`로 보지 않습니다.",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 브라우저를 쓸 수 없어서 코드에 적힌 값으로만 확인했습니다."
+  },
+  "browser_used": false
+ },
+ {
+  "id": "z12-F",
+  "arm": "F",
+  "kind": "offline",
+  "code": "n258",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S2 | spacing-check S2: `.stage` row-gap·`.hud` padding 공식, ... | not spot-checked | 세로 배치, 옆 배치(최소값), 시작 화면 | 위와 같음 | 위와 같음 | 말풍선 영역의 남는 높이(위 정렬이라 버튼 영역 위 간격은 화면마다 다름), 렌더된 판 크기 |",
+   "c": "말풍선 영역의 남는 높이(위 정렬이라 버튼 영역 위 간격은 화면마다 다름), 렌더된 판 크기",
+   "f": "0점: 값 표 행에는 상태가 있으나 규칙 표(S1~S3) 행에는 상태가 없고 절 머리 '제안 v1'에 의존 — | S1 | 말풍선 영역(`.hud`)·버튼 영역(`.cta-area`) 안에서 위아래로 쌓인 카드·버튼 줄·안내 줄 사이 보이는 간격 | 12px | 8px |",
+   "g": "  - spacing S1 | 통과 | CSS 조건 3개(보통·키 작은 데스크톱·휴대폰) x 선언된 상태 | code | not spot-checked",
+   "h": "검사 결과는 CSS 코드를 읽고 계산한 값이고 실제로 그려진 화면에서 잰 값이 아니라서, 모든 줄이 \"not spot-checked\"(화면에서 직접 대조하지 않음)입니다.",
+   "s": "| S3 | spacing-check S1/S3 토큰 검사 + 작은 버튼(`.alt`·`.pill-btn`·`.pick`) 그림자 = `--pill-drop` | not spot-checked | 모든 버튼 줄 | ... |",
+   "t": "- 상태: **open — changed(코드 수정, 렌더 확인 전)**. 2026-11-07 사용자 지적.",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 다만 브라우저를 못 써서 화면에서는 한 번도 확인하지 못했습니다."
+  },
+  "browser_used": false
+ },
+ {
+  "id": "z13-G",
+  "arm": "G",
+  "kind": "offline",
+  "code": "n378",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S2 | spacing-check S2 | not spot-checked | 세로 배치(판→첫 블록), 둘 다(칸 줄 간격·hud 아래 여백) | 12 | 내 차례·검토·종료 | hud에 남는 높이(내용 → 버튼 칸 실제 거리), 판 크기 계산식 |",
+   "c": "렌더 상자, 글자 줄바꿈, `@container` 접기 상태, `:has()` 맨 아래 블록 판정, 누름(`:active`) 상태",
+   "f": "0점: 토큰 표 행에는 상태가 있으나 규칙 표(S1~S4) 행에는 상태가 없고 절 머리 '제안'에 의존 — | S4 한 줄 버튼 깊이 | 한 줄(버튼 줄·후보 알약 줄·안내 줄) 안 버튼은 상태(초록·비활성 포함)와 관계없이 같은 `--lift` |",
+   "g": "- spacing S1 | 912/912 | 12 sizes x 4 states, light | code | not spot-checked",
+   "h": "브라우저를 쓸 수 없는 세션이라 결과는 모두 코드 계산이고, 실제 화면과는 대조하지 않았습니다(not spot-checked).",
+   "s": "| S1 | spacing-check S1(블록마다 gap + 아래 여백 + 다음 블록 위 여백 − 그림자) | not spot-checked | 옆 배치, 세로 배치 | 12 | ... |",
+   "t": "- **해결:** 없음. 간격 수정은 코드에만 들어갔고 화면에서 확인하지 않아 `changed`입니다.",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 브라우저를 쓸 수 없는 세션이라 결과는 모두 코드 계산이고, 실제 화면과는 대조하지 않았습니다(not spot-checked)."
+  },
+  "browser_used": false
+ },
+ {
+  "id": "z14-G",
+  "arm": "G",
+  "kind": "offline",
+  "code": "n211",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S1 묶음 안 블록 | spacing-check [토큰]·[보정]·모델 표 | not spot-checked | 세로·옆 배치 | 1440×900, 1280×720, 390×844 (코드) | 상태 무관 선언 | 렌더된 실제 간격, 감싼 후보 줄의 둘째 줄(보이는 간격 = gap − 4) |",
+   "c": "렌더된 실제 간격, 감싼 후보 줄의 둘째 줄(보이는 간격 = gap − 4)",
+   "f": "0점: 토큰 표 행에는 상태가 있으나 규칙 S1~S7 목록 행에는 상태가 없음 — - **S1 묶음 안 블록 사이** = `--space-stack`. 말풍선 칸(복기·첫 안내·내 수 평가·말풍선·간이 분석·후보 줄)과 버튼 칸(금수 안내·엔진 알림·버튼 줄·되돌리기 안내·바닥 줄).",
+   "g": "코드 검사는 위반 0건이 나왔습니다(3개 크기 x 상태 무관 선언, 코드, not spot-checked).",
+   "h": "- spacing S1~S7 (`node work/design/spacing-check.mjs`) | 위반 0 | 3 sizes(1440x900, 1280x720, 390x844) x 상태 무관 선언, light | code | not spot-checked",
+   "s": "| S3 영역 | spacing-check [영역]·모델 표 | not spot-checked | 세로·옆·시작 | 같음 | 선언 | 렌더, 세로 배치에서 칸 아래 남는 높이, ... |",
+   "t": "- **해결:** 없음. 코드는 바꿨지만 화면에서 직접 확인하지 못해 `changed` 상태입니다.",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 브라우저를 쓸 수 없어 화면에서 직접 확인하지는 못했습니다."
+  },
+  "browser_used": false
+ },
+ {
+  "id": "z15-G",
+  "arm": "G",
+  "kind": "offline",
+  "code": "n228",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S2 블록 간격 | spacing-check T·G·M(자식 여백)·R(깊이 일치)·K(마크업 자식) | not spot-checked | 말풍선 영역, 버튼 영역 | 12 크기 | 컨테이너 가정 14 | 렌더 위치, 숨김/표시 조합별 실제 순서(`order`), 넘침·잘림 |",
+   "c": "렌더 위치, 판 칸 padding이 실제 판 그림자 끝과 맞는지, 남는 높이 배치의 실제 간격",
+   "f": "0점: 토큰 표 행에는 상태가 있으나 규칙 표(S1~S5) 행에는 상태 칸이 없고 절 머리의 proposed에 의존 — | S1 | 구역 간격: 판(시작 화면은 제목) → 말풍선 영역 → 버튼 영역 사이(세로). ... | `--gap-section` |",
+   "g": "- spacing-check 현재 CSS | 위반 0 (T 60, G 16, M 1, D 27, R 2016, K 11 항목) | 12 sizes x 14 container states, light | code | not spot-checked",
+   "h": "참고: 검사는 CSS 선언과 마크업을 읽어 규칙 형식을 확인할 뿐, 렌더된 간격을 재지는 않습니다.",
+   "s": "| S1 구역 간격 | spacing-check T(토큰 값)·G(`.stage` row-gap 형식) | not spot-checked | 대국 세로·옆 배치, 시작 화면 | 12 크기 | 컨테이너 가정 14 | ... |",
+   "t": "- **해결:** 없음(실제 화면에서 대조한 수정이 없습니다).",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 코드 기준 검사만 했고, 브라우저로 실제 화면에서 간격을 재지는 못했습니다."
+  },
+  "browser_used": false
+ },
+ {
+  "id": "z16-G",
+  "arm": "G",
+  "kind": "offline",
+  "code": "n328",
+  "scores": {
+   "b": 1,
+   "c": 1,
+   "f": 0,
+   "g": 1,
+   "h": 1,
+   "s": 1,
+   "t": 1,
+   "u": 0
+  },
+  "evidence": {
+   "b": "| S1 블록 간격 | `node work/design/spacing-check.mjs` (...) | not spot-checked | 옆 배치, 세로 배치, 시작 화면 | 크기 아님: 기본·`max-width 700`·`max-height 700`·`@container` 문맥의 선언 전부 | 선언으로 갈리는 상태 전부(코드), 렌더 상태 0 | ... |",
+   "c": "줄바꿈된 두 번째 줄의 세로 간격(복기 버튼·시작 선택은 8 − 그림자 4 = 4px 보임), 대화상자(새 게임·도움말)",
+   "f": "0점: 토큰 표 행에는 상태가 있으나 규칙 S1·S3 행(목록)에는 상태가 없고 절 머리 '제안'에 의존 — - **S1 블록 간격.** 메인 화면 옆 칸(말풍선 칸 `.hud`, 버튼 칸 `.cta-area`)에서 위 블록 그림자 아래 끝 → 다음 블록 위 테두리 = `--stack`.",
+   "g": "- spacing S1 블록 간격 | 위반 0 / 블록 11 | 선언 문맥 4종 x 렌더 상태 0, light | code | not spot-checked",
+   "h": "- spacing S3 버튼 줄 간격 | 위반 0 / 줄 9 | 선언 문맥 4종 x 렌더 상태 0, light | code | not spot-checked",
+   "s": "| 영역 경계 | 없음(코드 주석의 수기 계산만) | not spot-checked | 옆 배치, 시작 화면 | — | — | 전체 — 검사 없음 |",
+   "t": "- 해결: 없음. 검증된 수정이 없습니다. 위 수정은 changed 상태입니다.",
+   "u": "0점: 브라우저를 쓰지 못한 묶음 — 이 세션은 브라우저를 쓸 수 없어 화면을 열어 보지 못했습니다."
+  },
+  "browser_used": false
+ }
+]
