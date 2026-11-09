@@ -1,0 +1,10 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/matrix-ring.log
+work/design/ring-after.log
+work/design/ring-before.log
+work/design/ring-check.mjs
+work/design/system-audit-ring.log
+work/design/system-audit.mjs

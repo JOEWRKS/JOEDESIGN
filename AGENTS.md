@@ -6,7 +6,8 @@
   원인(한 배치·크기만 잰 검사가 규칙 통과로 기록됨)에 대한 DESIGN 측 대응.
 - 변경: templates/DESIGN.md의 Token Roles·Rule Coverage 절, SKILL.md 2·3·6단계와 인계 문단,
   references/conformance.md 최소 형식 절, operation·visual-translation 한 문장. 문서만.
-- 보존: 버전 1.0.0, 실행 코드·스키마·계약, 개인 설치, 기존 태그·Release, 미추적 feedback 폴더.
+- 보존: 실행 코드·스키마·계약, 기존 태그·Release, 미추적 feedback 폴더. 버전은 2026-11-09 사용자 위임
+  ("임자 하고 싶은 대로 해")으로 1.1.0으로 올리고 태그·Release·개인 설치 갱신까지 진행(CHANGELOG 1.1.0 절).
 - 검증: evals/check-coverage-20261104 (단일 턴 48회 + 40턴 롱텀 80패킷 블라인드 A/B,
   회귀 14/14·142 OK). 롱텀에서는 우위 없음, 보고 통과 주장 범위는 B가 낮음, 검사 표와 실측
   4px 어긋남 1건 발견.
@@ -34,6 +35,15 @@
   conformance.md 한 문장), `tests/report-check.tests.mjs`. 한 턴 12회 + F 12회 재채점
   (spot-check/report-check/): 12회 모두 스크립트 실행, 범위 없는 "통과" F 3/12 → G 0/12, 블라인드 g·h
   7/12·7/12 → 12/12·12/12, 대조 없는 '해결' 0/12 유지. 사용자 승인("커밋·푸시") 뒤 F안과 한 커밋으로 main 반영.
+- 추가(2026-11-08, 사용자 지시 "게시 전에 장기 측정 돌려서 검증 완료하고 부족한 부분 찾아"): 40턴 롱텀
+  G 1세션 + B 재채점(evals/check-coverage-20261104/longterm-G/, README 9부)과 JOENESS·JOEFLOW·단독 연계
+  문서 대조(longterm-G/audit-integration.md). 결과 G h2 30/40 vs B 12/40, 8개 전부 21/40. 빈틈 F1~F7
+  발견, 스크립트가 보낸 글이 아닌 뼈대 파일만 검사한 것이 가장 큼. 게시·버전 변경은 보류, 사용자 결정 대기.
+- 추가(2026-11-09, 사용자 승인 "H안 설계부터" → "시험 실행"): 도장(ok에 글자 수·해시, 보고 끝 줄, `--verify`),
+  검사 없는 턴 한 줄, R4. 10턴 1세션 + G 10턴 재채점(longterm-H/, README 10부): 도장 일치 8/8, 보낸 글 지적 0/8,
+  블라인드 8개 전부 8/8. 9·10부와 함께 1.1.0으로 커밋·게시(2026-11-09).
+- 사고(2026-11-09, 내 실수): L-G(G 40턴 최종 작업 트리)에 `git checkout -- .`이 실행돼 추적 파일 변경이 되돌아감.
+  스냅샷·보고·패킷·고정 빌드는 보존. longterm-G/incidents.txt.
 - 검증 중 사고: 시험본 정션 오류로 실제 AI-Gomoku 작업 폴더에 캐시 폴더 3개가 생겼다가 삭제됨
   (추적 파일 변경 없음). 기록은 report-scope/incidents.txt.
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.

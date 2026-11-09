@@ -1,0 +1,7 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+work/design/capture-matrix.mjs
+work/design/replay-bar-check.mjs
+work/design/spacing-check.mjs
+work/design/system-audit.mjs

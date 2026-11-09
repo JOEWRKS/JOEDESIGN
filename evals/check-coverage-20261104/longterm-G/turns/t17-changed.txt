@@ -1,0 +1,6 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+package.json
+work/design/design-check.mjs
+work/design/system-check.mjs

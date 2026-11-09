@@ -1,0 +1,113 @@
+{
+ "t01": [
+  "no-output:0\n#!/usr/bin/env node\n// Check a design report dra",
+  "no-output:Exit code 2\nreport-check: cannot read C:/Users/<user>",
+  "no-output:Exit code 2\nreport-check: cannot read C:/Users/<user>",
+  "ok"
+ ],
+ "t02": [
+  "ok",
+  "ok"
+ ],
+ "t03": [],
+ "t04": [
+  "ok"
+ ],
+ "t05": [
+  "ok"
+ ],
+ "t06": [
+  "ok"
+ ],
+ "t07": [
+  "ok"
+ ],
+ "t08": [],
+ "t09": [],
+ "t10": [],
+ "t11": [
+  "ok"
+ ],
+ "t12": [
+  "ok"
+ ],
+ "t13": [
+  "ok"
+ ],
+ "t14": [
+  "ok"
+ ],
+ "t15": [
+  "ok"
+ ],
+ "t16": [
+  "ok"
+ ],
+ "t17": [
+  "ok",
+  "ok"
+ ],
+ "t18": [
+  "ok",
+  "ok"
+ ],
+ "t19": [
+  "ok",
+  "ok"
+ ],
+ "t20": [
+  "ok"
+ ],
+ "t21": [],
+ "t22": [],
+ "t23": [
+  "ok",
+  "ok"
+ ],
+ "t24": [],
+ "t25": [],
+ "t26": [
+  "ok",
+  "ok"
+ ],
+ "t27": [
+  "ok",
+  "ok"
+ ],
+ "t28": [],
+ "t29": [
+  "ok",
+  "ok"
+ ],
+ "t30": [
+  "ok",
+  "ok"
+ ],
+ "t31": [],
+ "t32": [],
+ "t33": [
+  "ok",
+  "ok"
+ ],
+ "t34": [
+  "ok",
+  "ok"
+ ],
+ "t35": [
+  "ok",
+  "ok"
+ ],
+ "t36": [],
+ "t37": [
+  "ok",
+  "ok"
+ ],
+ "t38": [
+  "ok"
+ ],
+ "t39": [
+  "ok",
+  "ok"
+ ],
+ "t40": []
+}

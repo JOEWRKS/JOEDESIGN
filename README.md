@@ -10,7 +10,7 @@
 
 - **Role:** UI creation, implementation, and design review in Codex.
 - **Operation:** One operating core, with stage-specific role assignments and integrated results.
-- **Version:** **1.0.0** — defined in [VERSION](skills/joedesign/VERSION).
+- **Version:** **1.1.0** — defined in [VERSION](skills/joedesign/VERSION). 1.1.0 adds the report result-line form, the pre-send report check script and its stamp (T043); the core, schemas and contracts are unchanged from 1.0.0.
 - **Use cases:** New UI creation, existing UI extensions and repairs, and design conformance review.
 
 ## 2. Design Purpose
@@ -111,7 +111,7 @@ Finish with separate lists of changes, verified results, and items not yet verif
 ## 6. Limitations
 
 - Supported scope: UI creation, extension, local repair, and review. Product requirements and final user acceptance remain separate.
-  **1.0.0 identifies the package's supported scope, not a guarantee of defect-free results.**
+  **1.1.0 identifies the package's supported scope, not a guarantee of defect-free results.**
 - Specialist review dependencies: Applicable skills such as Impeccable, UI UX Pro Max, and web-design-guidelines.
   Automated execution and browser collection: Existing Codex executor, Node, Playwright, and a browser required.
   Automatic installation of those tools is outside the package's scope.
@@ -135,7 +135,7 @@ Finish with separate lists of changes, verified results, and items not yet verif
 
 - **역할:** Codex 기반 화면 제작·구현·디자인 검수 지원.
 - **운영:** 단일 코어 아래 단계별 역할 배정 및 결과 통합.
-- **버전:** **1.0.0** — [VERSION](skills/joedesign/VERSION) 기준.
+- **버전:** **1.1.0** — [VERSION](skills/joedesign/VERSION) 기준. 1.1.0은 보고 결과 줄 형식, 보내기 전 보고 검사 스크립트와 도장을 더한 것(T043). 코어·스키마·계약은 1.0.0 그대로.
 - **적용 대상:** 신규 화면 제작, 기존 화면 확장·수정, 디자인 기준 준수 검수.
 
 ## 2. 설계 목적
@@ -236,7 +236,7 @@ $joedesign
 ## 6. 한계
 
 - 지원 범위: 화면 제작·확장·국소 수정·검수. 제품 요구사항 결정·최종 사용자 수락은 별도.
-  **1.0.0은 지원 범위의 패키지 버전. 무결점 보장과 구분.**
+  **1.1.0은 지원 범위의 패키지 버전. 무결점 보장과 구분.**
 - 전문 검수 의존성: Impeccable, UI UX Pro Max, web-design-guidelines 등 해당 스킬 필요.
   자동 실행·브라우저 수집: 기존 Codex 실행기, Node, Playwright·브라우저 필요.
   해당 도구의 자동 설치는 패키지 지원 범위 외.

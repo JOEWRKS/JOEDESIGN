@@ -1,0 +1,12 @@
+{
+ "t01": "stamp: match (3,239 chars fcc21109); text ok",
+ "t02": "stamp: match (3,055 chars d04c0650); text ok",
+ "t03": "stamp: match (876 chars b1b9be36); text ok",
+ "t04": "stamp: match (1,841 chars 86bcee1f); text ok",
+ "t05": "stamp: match (2,577 chars 7f5d1b4b); text ok",
+ "t06": "stamp: match (1,554 chars ad157be0); text ok",
+ "t07": "stamp: match (1,756 chars ac243e2a); text ok",
+ "t08": "stamp: match (1,148 chars 62124be9); text ok",
+ "t09": "stamp: missing (the sent report does not end with a report-check stamp)",
+ "t10": "stamp: missing (the sent report does not end with a report-check stamp)"
+}

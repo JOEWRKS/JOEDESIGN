@@ -58,3 +58,30 @@ test('a fix line takes fixed or changed, and fixed needs an observation', () => 
 test('rows inside a code fence count as the list, and a note about this script is not a claim', () => {
   assert.deepEqual(rules('본문입니다.\n\n```\n' + LINE + '\n```\n\n(이 보고는 report-check.mjs로 검사해 통과했습니다.)\n'), []);
 });
+
+test('a turn with no design check says so in one line instead of a results list', () => {
+  assert.deepEqual(rules('- 작업: 토큰 이름 정리.\n- 해결: 없음.\n\ndesign checks: none ran\n'), []);
+  assert.deepEqual(rules('- 작업: 토큰 이름 정리.\n\n디자인 검사: 실행 안 함\n'), []);
+  assert.deepEqual(rules('- 작업: 토큰 이름 정리.\n\n디자인 검사: 실행 안 함. 간격은 통과합니다.\n'), ['R3']);
+});
+
+test('a changed fix named under 해결 is flagged (R4); under 남은 문제 or with 해결: 없음 it is not', () => {
+  const fix = '- 말풍선 잘림 수정 | changed | 2 sizes x 1 state, light | rendered | not spot-checked\n';
+  assert.deepEqual(rules(`- 해결: 말풍선 잘림 수정, 캡처로 확인.\n\n${fix}`), ['R4']);
+  assert.deepEqual(rules(`- 해결: 없음.\n- 남은 문제: 말풍선 잘림 수정은 확인 전.\n\n${fix}`), []);
+  assert.deepEqual(rules(`- 해결: 말풍선 잘림 수정.\n\n- 말풍선 잘림 수정 | fixed | 2 sizes x 1 state, light | rendered | 360x640: 4px before / 0 after, capture\n`), []);
+});
+
+test('the ok stamp binds the checked text: verify matches the same text and rejects a changed or unstamped one', async () => {
+  const { stamp, splitStamp } = await import('../skills/joedesign/scripts/report-check.mjs');
+  const body = `- 해결: 없음.\n\n- ${LINE}\n`;
+  const s = stamp(body);
+  assert.match(s, /^report-check: ok \d[\d,]* chars [0-9a-f]{8}$/);
+  assert.equal(stamp(`${body}\r\n`), s, 'line endings and trailing whitespace do not change the stamp');
+  const sent = `${body}${s}\n`;
+  assert.equal(splitStamp(sent).stampLine, s);
+  assert.equal(stamp(splitStamp(sent).body), s);
+  assert.notEqual(stamp(`${body}\n한 줄 더.\n`), s);
+  assert.equal(splitStamp(body).stampLine, null);
+  assert.deepEqual(rules(sent), [], 'a stamp line at the end is not a claim');
+});

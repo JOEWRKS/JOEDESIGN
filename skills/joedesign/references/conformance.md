@@ -43,11 +43,14 @@ is followed by a parenthesis copied from its line: (sizes x states, rendered or 
 spot check outcome); a sentence with no room for it names the check and leaves the
 outcome to its line. "939/939 passed" alone, or "the check passed, but ...", is a
 count, not a result. A line that is not spot-checked is never listed as resolved,
-verified or done. Before a report is sent its text is run through
-`scripts/report-check.mjs`, which flags a missing results list, a fix line whose
-result is not `fixed` or `changed`, and a check outcome stated outside the list
-without its scope, rendered-or-code and spot check outcome; the report is corrected
-until it prints `ok`. The script reads the form of the text, not the truth of a number.
+verified or done. Before a report is sent, the whole message is written to a file
+and run through `scripts/report-check.mjs`, which flags a missing results list (a turn
+with no design check says `design checks: none ran` instead), a fix line whose result
+is not `fixed` or `changed`, a check outcome stated outside the list without its
+scope, rendered-or-code and spot check outcome, and a `changed` fix named under 해결;
+the file is corrected until the script prints `report-check: ok <chars> chars <sha8>`,
+and that stamp line ends the sent text so `--verify` can confirm the checked text is
+the sent text. The script reads the form of the text, not the truth of a number.
 
 ## Fix the required scope before implementation
 

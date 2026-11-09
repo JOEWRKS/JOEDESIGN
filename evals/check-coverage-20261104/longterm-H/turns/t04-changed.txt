@@ -1,0 +1,9 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/main.ts
+src/style.css
+work/design/matrix-replaybar.log
+work/design/replay-bar-check.mjs
+work/design/replay-bar.log
+work/design/spacing-after-replay.log

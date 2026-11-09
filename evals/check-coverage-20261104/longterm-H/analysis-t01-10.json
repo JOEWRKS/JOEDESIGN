@@ -1,0 +1,313 @@
+{
+ "G": [
+  {
+   "turn": 1,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "no-output:0\n#!/usr/bin/env node\n// Check a design report dra",
+    "no-output:Exit code 2\nreport-check: cannot read C:/Users/<user>",
+    "no-output:Exit code 2\nreport-check: cannot read C:/Users/<user>",
+    "ok"
+   ],
+   "chars": 3873
+  },
+  {
+   "turn": 2,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 3046
+  },
+  {
+   "turn": 3,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1132
+  },
+  {
+   "turn": 4,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2461
+  },
+  {
+   "turn": 5,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2918
+  },
+  {
+   "turn": 6,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2100
+  },
+  {
+   "turn": 7,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 1759
+  },
+  {
+   "turn": 8,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1212
+  },
+  {
+   "turn": 9,
+   "kind": "handoff",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1111
+  },
+  {
+   "turn": 10,
+   "kind": "handoff",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1177
+  }
+ ],
+ "H": [
+  {
+   "turn": 1,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 3278
+  },
+  {
+   "turn": 2,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok",
+    "ok"
+   ],
+   "chars": 3094
+  },
+  {
+   "turn": 3,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 913
+  },
+  {
+   "turn": 4,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1880
+  },
+  {
+   "turn": 5,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "1 finding(s)",
+    "1 finding(s)",
+    "ok",
+    "ok"
+   ],
+   "chars": 2616
+  },
+  {
+   "turn": 6,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1593
+  },
+  {
+   "turn": 7,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1795
+  },
+  {
+   "turn": 8,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "3 finding(s)",
+    "3 finding(s)",
+    "1 finding(s)",
+    "ok"
+   ],
+   "chars": 1187
+  },
+  {
+   "turn": 9,
+   "kind": "handoff",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1412
+  },
+  {
+   "turn": 10,
+   "kind": "handoff",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1072
+  }
+ ]
+}

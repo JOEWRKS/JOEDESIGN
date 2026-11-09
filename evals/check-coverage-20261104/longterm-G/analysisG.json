@@ -1,0 +1,1793 @@
+{
+ "A": [
+  {
+   "turn": 1,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1732
+  },
+  {
+   "turn": 2,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2140
+  },
+  {
+   "turn": 3,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1061
+  },
+  {
+   "turn": 4,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1825
+  },
+  {
+   "turn": 5,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1708
+  },
+  {
+   "turn": 6,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1190
+  },
+  {
+   "turn": 7,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1248
+  },
+  {
+   "turn": 8,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1501
+  },
+  {
+   "turn": 9,
+   "kind": "handoff",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1090
+  },
+  {
+   "turn": 10,
+   "kind": "handoff",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1410
+  },
+  {
+   "turn": 11,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1583
+  },
+  {
+   "turn": 12,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1279
+  },
+  {
+   "turn": 13,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1768
+  },
+  {
+   "turn": 14,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1159
+  },
+  {
+   "turn": 15,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1464
+  },
+  {
+   "turn": 16,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1461
+  },
+  {
+   "turn": 17,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1697
+  },
+  {
+   "turn": 18,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1287
+  },
+  {
+   "turn": 19,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1439
+  },
+  {
+   "turn": 20,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1679
+  },
+  {
+   "turn": 21,
+   "kind": "handoff",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1031
+  },
+  {
+   "turn": 22,
+   "kind": "handoff",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1226
+  },
+  {
+   "turn": 23,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1206
+  },
+  {
+   "turn": 24,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1345
+  },
+  {
+   "turn": 25,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1070
+  },
+  {
+   "turn": 26,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1443
+  },
+  {
+   "turn": 27,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1653
+  },
+  {
+   "turn": 28,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 545
+  },
+  {
+   "turn": 29,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1081
+  },
+  {
+   "turn": 30,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1209
+  },
+  {
+   "turn": 31,
+   "kind": "handoff",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1397
+  },
+  {
+   "turn": 32,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1371
+  },
+  {
+   "turn": 33,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 659
+  },
+  {
+   "turn": 34,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1082
+  },
+  {
+   "turn": 35,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": true,
+   "runs": null,
+   "chars": 1275
+  },
+  {
+   "turn": 36,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 692
+  },
+  {
+   "turn": 37,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1103
+  },
+  {
+   "turn": 38,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2668
+  },
+  {
+   "turn": 39,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1789
+  },
+  {
+   "turn": 40,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1488
+  }
+ ],
+ "B": [
+  {
+   "turn": 1,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1911
+  },
+  {
+   "turn": 2,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2306
+  },
+  {
+   "turn": 3,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1360
+  },
+  {
+   "turn": 4,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2088
+  },
+  {
+   "turn": 5,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1920
+  },
+  {
+   "turn": 6,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1077
+  },
+  {
+   "turn": 7,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1370
+  },
+  {
+   "turn": 8,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1206
+  },
+  {
+   "turn": 9,
+   "kind": "handoff",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1531
+  },
+  {
+   "turn": 10,
+   "kind": "handoff",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1972
+  },
+  {
+   "turn": 11,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2020
+  },
+  {
+   "turn": 12,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1625
+  },
+  {
+   "turn": 13,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2124
+  },
+  {
+   "turn": 14,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1341
+  },
+  {
+   "turn": 15,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1993
+  },
+  {
+   "turn": 16,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1871
+  },
+  {
+   "turn": 17,
+   "kind": "main",
+   "findings": 5,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1824
+  },
+  {
+   "turn": 18,
+   "kind": "main",
+   "findings": 5,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1485
+  },
+  {
+   "turn": 19,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1545
+  },
+  {
+   "turn": 20,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1323
+  },
+  {
+   "turn": 21,
+   "kind": "handoff",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1448
+  },
+  {
+   "turn": 22,
+   "kind": "handoff",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2043
+  },
+  {
+   "turn": 23,
+   "kind": "main",
+   "findings": 5,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1442
+  },
+  {
+   "turn": 24,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1494
+  },
+  {
+   "turn": 25,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1135
+  },
+  {
+   "turn": 26,
+   "kind": "main",
+   "findings": 5,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1497
+  },
+  {
+   "turn": 27,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2097
+  },
+  {
+   "turn": 28,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1004
+  },
+  {
+   "turn": 29,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1288
+  },
+  {
+   "turn": 30,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1648
+  },
+  {
+   "turn": 31,
+   "kind": "handoff",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1285
+  },
+  {
+   "turn": 32,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1162
+  },
+  {
+   "turn": 33,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1085
+  },
+  {
+   "turn": 34,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1748
+  },
+  {
+   "turn": 35,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2091
+  },
+  {
+   "turn": 36,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 929
+  },
+  {
+   "turn": 37,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1861
+  },
+  {
+   "turn": 38,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2430
+  },
+  {
+   "turn": 39,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 1912
+  },
+  {
+   "turn": 40,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": null,
+   "chars": 2377
+  }
+ ],
+ "G": [
+  {
+   "turn": 1,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "no-output:0\n#!/usr/bin/env node\n// Check a design report dra",
+    "no-output:Exit code 2\nreport-check: cannot read C:/Users/<user>",
+    "no-output:Exit code 2\nreport-check: cannot read C:/Users/<user>",
+    "ok"
+   ],
+   "chars": 3873
+  },
+  {
+   "turn": 2,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 3046
+  },
+  {
+   "turn": 3,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1132
+  },
+  {
+   "turn": 4,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2461
+  },
+  {
+   "turn": 5,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2918
+  },
+  {
+   "turn": 6,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2100
+  },
+  {
+   "turn": 7,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 1759
+  },
+  {
+   "turn": 8,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1212
+  },
+  {
+   "turn": 9,
+   "kind": "handoff",
+   "findings": 3,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1111
+  },
+  {
+   "turn": 10,
+   "kind": "handoff",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1177
+  },
+  {
+   "turn": 11,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2931
+  },
+  {
+   "turn": 12,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 1790
+  },
+  {
+   "turn": 13,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2228
+  },
+  {
+   "turn": 14,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 1534
+  },
+  {
+   "turn": 15,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2341
+  },
+  {
+   "turn": 16,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 2131
+  },
+  {
+   "turn": 17,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1790
+  },
+  {
+   "turn": 18,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1805
+  },
+  {
+   "turn": 19,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": true,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1677
+  },
+  {
+   "turn": 20,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 1617
+  },
+  {
+   "turn": 21,
+   "kind": "handoff",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1329
+  },
+  {
+   "turn": 22,
+   "kind": "handoff",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1496
+  },
+  {
+   "turn": 23,
+   "kind": "main",
+   "findings": 3,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 2117
+  },
+  {
+   "turn": 24,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1049
+  },
+  {
+   "turn": 25,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 891
+  },
+  {
+   "turn": 26,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1973
+  },
+  {
+   "turn": 27,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 2544
+  },
+  {
+   "turn": 28,
+   "kind": "main",
+   "findings": 2,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 933
+  },
+  {
+   "turn": 29,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1602
+  },
+  {
+   "turn": 30,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1994
+  },
+  {
+   "turn": 31,
+   "kind": "handoff",
+   "findings": 4,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1449
+  },
+  {
+   "turn": 32,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1343
+  },
+  {
+   "turn": 33,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": true,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1573
+  },
+  {
+   "turn": 34,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": true,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 2076
+  },
+  {
+   "turn": 35,
+   "kind": "main",
+   "findings": 0,
+   "rules": [],
+   "list": true,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1941
+  },
+  {
+   "turn": 36,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 705
+  },
+  {
+   "turn": 37,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 1545
+  },
+  {
+   "turn": 38,
+   "kind": "main",
+   "findings": 1,
+   "rules": [
+    "R1"
+   ],
+   "list": false,
+   "bareR3": false,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok"
+   ],
+   "chars": 3048
+  },
+  {
+   "turn": 39,
+   "kind": "main",
+   "findings": 4,
+   "rules": [
+    "R3"
+   ],
+   "list": true,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [
+    "ok",
+    "ok"
+   ],
+   "chars": 2084
+  },
+  {
+   "turn": 40,
+   "kind": "main",
+   "findings": 5,
+   "rules": [
+    "R1",
+    "R3"
+   ],
+   "list": false,
+   "bareR3": true,
+   "changed_in_haegyeol": false,
+   "product_def_mention": false,
+   "runs": [],
+   "chars": 1988
+  }
+ ]
+}

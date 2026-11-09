@@ -1,0 +1,7 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+work/design/engine-stub.mjs
+work/design/system-check.mjs
+work/design/system-spot.mjs

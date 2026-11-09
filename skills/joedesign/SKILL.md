@@ -125,11 +125,18 @@ route. Continue independent authorized work without expanding an unproved direct
    passed, but ..."; a sentence with no room for the parenthesis names the check and
    leaves the outcome to its line.
    A line that is not spot-checked is never listed as resolved, verified or done.
-   Before sending, save the report text to a file and run this skill's
-   `scripts/report-check.mjs` on it (`node <skill folder>/scripts/report-check.mjs
-   <file>`); correct each finding in the text and rerun until it prints `ok`, then
-   send that text. It reads the form of the sentences, not whether a number is true.
-   If it cannot run, say so in the report.
+   Before sending, write the whole message you are about to send, every section and
+   sentence of it, to a file and run this skill's `scripts/report-check.mjs` on it
+   (`node <skill folder>/scripts/report-check.mjs <file>`); correct each finding in
+   that file and rerun until it prints `report-check: ok <chars> chars <sha8>`. Send
+   the file's text unchanged with that stamp line as its last line, so a reader can
+   see that the checked text is the sent text (`--verify` recomputes it). A shortened
+   or separate draft checked in place of the message is not a check. When no design
+   check ran this turn, the report says `design checks: none ran` in one line in
+   place of the results list; the sentence rules still apply. A fix whose line says
+   `changed` is listed under remaining work, never under 해결. The script reads the
+   form of the sentences, not whether a number is true. If it cannot run, say so in
+   the report.
    The project's report format decides the sections; this decides the form of each
    result. Technical checks, visual judgment,
    workflow completion, certification and exact user acceptance remain distinct.

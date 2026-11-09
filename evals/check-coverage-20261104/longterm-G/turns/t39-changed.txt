@@ -1,0 +1,4 @@
+ISSUES.md
+ROADMAP.md
+TASK.md
+work/e2e-chrome.config.ts

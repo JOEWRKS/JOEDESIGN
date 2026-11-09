@@ -1,0 +1,13 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/folds-tap-after.txt
+work/design/folds-tap-before.txt
+work/design/matrix-tap.log
+work/design/replay-bar-check.mjs
+work/design/replay-bar-tap.log
+work/design/spacing-tap.log
+work/design/system-audit.mjs
+work/design/tap-after.log
+work/design/tap-before.log

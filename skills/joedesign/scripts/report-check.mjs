@@ -14,7 +14,39 @@
 //   R3  outside the list, a sentence that states a design-check outcome (pass, count,
 //       no failures) also carries, in that same sentence, the scope (sizes x states),
 //       rendered or code, and the spot check outcome
+//   R4  a fix whose list line says `changed` is not named in the report's 해결 (resolved)
+//       line; an unconfirmed fix belongs under 남은 문제 (remaining)
+//   A report with no design check run says so in one line, `design checks: none ran`
+//   (or `디자인 검사: 실행 안 함`); that line satisfies R1 instead of a results list.
+//
+// On `ok` the output carries a stamp: `report-check: ok <chars> chars <sha8>`, the
+// length and SHA-256 prefix of the checked text. The sent report ends with that stamp
+// line so a reader can confirm the checked text is the sent text:
+//   node report-check.mjs --verify SENT.md   (exit 0 when the stamp matches the text above it)
 import { readFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+
+const NONE_RAN = /design checks?:\s*none ran|디자인 검사\s*[:：]\s*(?:실행\s*안\s*함|없음|돌리지\s*않음)/i;
+const RESOLVED_LINE = /^\s*(?:[-*+]\s*)?\**\s*해결\s*\**\s*[:：]\s*(.*)$/;
+const STAMP_LINE = /^report-check: ok (\d[\d,]*) chars ([0-9a-f]{8})\s*$/;
+
+export function normalize(text) {
+  return text.replace(/^﻿/, '').replace(/\r\n?/g, '\n').replace(/\s+$/, '');
+}
+
+export function stamp(text) {
+  const t = normalize(text);
+  const sha8 = createHash('sha256').update(t, 'utf8').digest('hex').slice(0, 8);
+  return `report-check: ok ${t.length.toLocaleString('en-US')} chars ${sha8}`;
+}
+
+// split a sent report into the text above the stamp and the stamp line (null when absent)
+export function splitStamp(text) {
+  const lines = normalize(text).split('\n');
+  const last = lines[lines.length - 1];
+  if (!STAMP_LINE.test(last)) return { body: normalize(text), stampLine: null };
+  return { body: normalize(lines.slice(0, -1).join('\n')), stampLine: last };
+}
 
 const PASS = new RegExp(
   '통과|\\bpass(?:es|ed)?\\b|no failures|0 failures|' +
@@ -96,15 +128,23 @@ export function check(text) {
   let listLines = 0;
   let inCode = false;
   let shortRow = null;
+  let noneRan = false;
+  const changedFixes = []; // [lineNo, name]
+  const resolvedLines = []; // [lineNo, text]
   text.split(/\r?\n/).forEach((raw, index) => {
     const no = index + 1;
     if (raw.trim().startsWith('```')) { inCode = !inCode; return; }
     if (!raw.trim()) return;
+    if (STAMP_LINE.test(raw.trim())) return; // a stamp from an earlier run is not part of the report
+    if (NONE_RAN.test(raw)) noneRan = true;
+    const resolved = raw.match(RESOLVED_LINE);
+    if (resolved) resolvedLines.push([no, resolved[1]]);
     const cells = cellsOf(raw);
     if (cells) {
       listLines += 1;
       if (FIX_NAME.test(cells[0]) && !BEFORE_FIX.test(cells[0])) {
         const word = cells[1].trim().toLowerCase();
+        if (word === 'changed') changedFixes.push([no, cells[0]]);
         if (word !== 'fixed' && word !== 'changed') {
           findings.push([no, 'R2', cells[0],
             `a fix line's result is \`fixed\` or \`changed\`, not \`${cells[1]}\``]);
@@ -147,17 +187,56 @@ export function check(text) {
       'a row states a check outcome in fewer than five cells: use ' +
       '`check | result | sizes x states, mode | rendered or code | spot check`']);
   }
-  if (listLines === 0) {
+  if (listLines === 0 && !noneRan) {
     findings.unshift([0, 'R1', '',
       'no results list: give each check that ran one line ' +
-      '`check | result | sizes x states, mode | rendered or code | spot check`']);
+      '`check | result | sizes x states, mode | rendered or code | spot check`, ' +
+      'or say `design checks: none ran`']);
+  }
+  // R4: a `changed` fix named in the 해결 line
+  for (const [fixNo, name] of changedFixes) {
+    const tokens = name.replace(/\bfix\b|수정|고침|변경/gi, ' ').split(/[^\p{L}\p{N}]+/u)
+      .filter((t) => t.length >= 2);
+    for (const [no, resolvedText] of resolvedLines) {
+      if (/^\s*없음/.test(resolvedText)) continue;
+      if (tokens.some((t) => resolvedText.includes(t))) {
+        findings.push([no, 'R4', name,
+          `this fix is \`changed\` on line ${fixNo} (no direct observation yet); an unconfirmed fix ` +
+          'goes under 남은 문제, not 해결']);
+        break;
+      }
+    }
   }
   return findings;
 }
 
+function verify(path) {
+  let text;
+  try {
+    text = readFileSync(path, 'utf8');
+  } catch (error) {
+    process.stderr.write(`report-check: cannot read ${path}: ${error.message}\n`);
+    return 2;
+  }
+  const { body, stampLine } = splitStamp(text);
+  if (!stampLine) {
+    process.stdout.write('stamp: missing (the sent report does not end with a report-check stamp)\n');
+    return 1;
+  }
+  const expected = stamp(body);
+  const findings = check(body);
+  if (expected !== stampLine) {
+    process.stdout.write(`stamp: mismatch (stamp says ${stampLine.slice(17)}; the text above it is ${expected.slice(17)})\n`);
+    return 1;
+  }
+  process.stdout.write(`stamp: match (${expected.slice(17)}); text ${findings.length ? `${findings.length} finding(s)` : 'ok'}\n`);
+  return findings.length ? 1 : 0;
+}
+
 function main(argv) {
+  if (argv.length === 2 && argv[0] === '--verify') return verify(argv[1]);
   if (argv.length !== 1) {
-    process.stderr.write('usage: node report-check.mjs REPORT.md\n');
+    process.stderr.write('usage: node report-check.mjs REPORT.md | node report-check.mjs --verify SENT.md\n');
     return 2;
   }
   let text;
@@ -169,7 +248,7 @@ function main(argv) {
   }
   const findings = check(text);
   if (!findings.length) {
-    process.stdout.write('report-check: ok\n');
+    process.stdout.write(`${stamp(splitStamp(text).body)}\n`);
     return 0;
   }
   const lines = [`report-check: ${findings.length} finding(s)`];

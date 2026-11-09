@@ -1,0 +1,23 @@
+G-r2 graded 10
+  G-r2 all       h1=10/10 h2=8/10 h3=10/10 h4=10/10 h5=10/10 h6=10/10 h7=10/10 h8=10/10 all=8/10
+  G-r2 main      h1=8/8 h2=8/8 h3=8/8 h4=8/8 h5=8/8 h6=8/8 h7=8/8 h8=8/8 all=8/8
+  G-r2 handoff   h1=2/2 h2=0/2 h3=2/2 h4=2/2 h5=2/2 h6=2/2 h7=2/2 h8=2/2 all=0/2
+G graded 10
+  G all          h1=9/10 h2=7/10 h3=10/10 h4=10/10 h5=10/10 h6=10/10 h7=10/10 h8=10/10 all=6/10
+  G main         h1=7/8 h2=7/8 h3=8/8 h4=8/8 h5=8/8 h6=8/8 h7=8/8 h8=8/8 all=6/8
+  G handoff      h1=2/2 h2=0/2 h3=2/2 h4=2/2 h5=2/2 h6=2/2 h7=2/2 h8=2/2 all=0/2
+H graded 10
+  H all          h1=9/10 h2=9/10 h3=10/10 h4=10/10 h5=10/10 h6=10/10 h7=10/10 h8=10/10 all=9/10
+  H main         h1=8/8 h2=8/8 h3=8/8 h4=8/8 h5=8/8 h6=8/8 h7=8/8 h8=8/8 all=8/8
+  H handoff      h1=1/2 h2=1/2 h3=2/2 h4=2/2 h5=2/2 h6=2/2 h7=2/2 h8=2/2 all=1/2
+-- 턴별 h2 (G 재채점 / H)
+  t01 main    G=1 H=1
+  t02 main    G=1 H=1
+  t03 main    G=1 H=1
+  t04 main    G=0 H=1
+  t05 main    G=1 H=1
+  t06 main    G=1 H=1
+  t07 main    G=1 H=1
+  t08 main    G=1 H=1
+  t09 handoff G=0 H=0
+  t10 handoff G=0 H=1

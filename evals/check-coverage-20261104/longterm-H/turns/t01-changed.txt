@@ -1,0 +1,8 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+work/design/system-audit-v1.log
+work/design/system-audit.mjs
+work/design/system-spot-v1.log
+work/design/system-spot.mjs
