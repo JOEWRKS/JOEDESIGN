@@ -1,0 +1,38 @@
+diff --git a/ROADMAP.md b/ROADMAP.md
+index 0206341..b101b9c 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -2,7 +2,7 @@
+ 
+ 제품 목표 원본: [BRIEF.md](BRIEF.md). 기획 기준일: 2026-10-22, Asia/Seoul.
+ 
+-**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 944/944), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
++**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 944/944), 2026-11-09 설명 카드 보조 글자 13px의 사용자 확인([TASK](TASK.md#card-caption-13)), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
+ 
+ **다음 작업:** 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌·간격 규칙 v1의 수락 여부를 알려 준다. 화면을 고친 뒤에는 `work/design/spacing-check.mjs`를 다시 돌린다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
+ 
+@@ -157,4 +157,4 @@
+ | --- | --- | --- | --- | --- |
+ | CO0 | 성능 측정과 시간·후보·횟수 표 | complete | `work/bench/bench.html`을 dev 서버에서 열어 Worker 1개의 정책별 초당 횟수·결판 비율을 관찰하고, 후보×횟수×시간 표가 그 값에서 계산됐는지 대조 | 2026-10-23 브라우저 Worker 실측과 표 [측정 기록](work/evidence/coach-bench-2026-10-23.md). 측정 코드는 5980368 이후 변경 없음(git 이력)이라 재측정하지 않고 재사용. 휴대폰 미측정은 CO0 범위 밖 한계로 남김 |
+ | CO1 | JOEFLOW 기획과 사용자 승인 | complete | `validate_state.py` valid, `validate_closure.py` closed=true, 현재 revision의 Approval Manifest를 사용자가 명시 승인, `MASTER_PLANNING_SPEC.md`·`planning-review-core.html`을 브라우저에서 열어 확인 | 2026-10-23 확인: valid, closed=true(revision 12), 사용자 승인 Manifest `2b73f887…bd59b`, [기획서](product-definition/ai-coach/MASTER_PLANNING_SPEC.md)·[검토 화면](product-definition/ai-coach/planning-review-core.html)을 앱 내 브라우저 1440×900·390×844에서 열어 글자 넘침·가로 넘침 없음과 목차 이동 확인. 결정 DEC-001~013, 요구사항 REQ-001~003, 완료 기준 AC-001~006. 이후 rev 15(Manifest `bbcc3f58…`) 사용자 승인·closed=true. 2026-10-23 보강판 재진입 rev 16 사용자 승인(Manifest `cab0d1c0…`), 보강판 검증기 valid·closed=true, 기획서·검토 화면 rev 16으로 갱신·앱 내 브라우저 확인. RULE-016 문구 수정 rev 17 사용자 승인(Manifest `98c06e86…`), closed=true. 2026-10-23 방향 전환 rev 18 사용자 승인(Manifest `294c2382…`), 보강판 closed=true, 기획서·검토 화면 rev 18로 갱신·앱 내 브라우저 확인. 2026-10-24 rev 19 사용자 승인(Manifest `4cdb6201…`), 보강판 closed=true, 기획서·검토 화면 rev 19로 갱신. 2026-10-24 rev 20 사용자 승인(Manifest `47304076…`), 보강판 closed=true, 기획서·검토 화면 rev 20으로 갱신·1440×900·390×844 넘침 0 |
+-| CO2 | JOEDESIGN 디자인·구현·검사 | verification pending | `npx tsc --noEmit` 통과, `npx vitest run` 기존 62개+신규(시드 고정 시뮬레이션) 전부 통과, 1440×900·390×844 앱 내 브라우저에서 도우미 표시·착수 시 중단을 실제 조작·관찰. 사용자 시각 승인·수락은 별도 | 2026-10-23: 시각 v0.3 방향 사용자 승인(시안 기준). 구현 후 tsc 통과, vitest 77/77(신규 15), Playwright E2E 18/18(두 크기, 외부 요청 0), 실제 앱 조작 캡처 16장 스크롤·넘침 없음([TASK](TASK.md#coach)). 남음: 구현된 화면의 사용자 시각 수락, 휴대폰 실기기 처리량 실측(DEC-009), 앱 내 브라우저 직접 조작은 Playwright 실제 Chrome 조작으로 대신함. 2026-10-24 rev 18 구현([TASK](TASK.md#rev18-impl)): tsc 통과, 단위 88/88, E2E 26/26(AC-002·005~016 각각, 외부 요청 0), AC-016 PC 249~280 ms, 12크기×6상태 72장 넘침 0. 남음: 사용자 수락, 휴대폰 실기기 0.3초 깊이, 무응답 판단 시간(5초 임시). 2026-10-24 rev 19 구현([TASK](TASK.md#rev19)): 단위 88/88, E2E 26/26, AI 응수+1초 미리 계산 1.35~1.86 s, 72장 넘침 0. 남음: 새 문구·화면 사용자 확인 2026-11-05 간격 규칙 v1([TASK](TASK.md#spacing-v1)): 고치기 전 86/151 위반 → `work/design/spacing-check.mjs` 12크기×6상태 944/944, 넘침 감사 72건 0, tsc·단위 통과. E2E는 엔진 파일 없어 미실행. 남음: 간격 값 사용자 확인 |
++| CO2 | JOEDESIGN 디자인·구현·검사 | verification pending | `npx tsc --noEmit` 통과, `npx vitest run` 기존 62개+신규(시드 고정 시뮬레이션) 전부 통과, 1440×900·390×844 앱 내 브라우저에서 도우미 표시·착수 시 중단을 실제 조작·관찰. 사용자 시각 승인·수락은 별도 | 2026-10-23: 시각 v0.3 방향 사용자 승인(시안 기준). 구현 후 tsc 통과, vitest 77/77(신규 15), Playwright E2E 18/18(두 크기, 외부 요청 0), 실제 앱 조작 캡처 16장 스크롤·넘침 없음([TASK](TASK.md#coach)). 남음: 구현된 화면의 사용자 시각 수락, 휴대폰 실기기 처리량 실측(DEC-009), 앱 내 브라우저 직접 조작은 Playwright 실제 Chrome 조작으로 대신함. 2026-10-24 rev 18 구현([TASK](TASK.md#rev18-impl)): tsc 통과, 단위 88/88, E2E 26/26(AC-002·005~016 각각, 외부 요청 0), AC-016 PC 249~280 ms, 12크기×6상태 72장 넘침 0. 남음: 사용자 수락, 휴대폰 실기기 0.3초 깊이, 무응답 판단 시간(5초 임시). 2026-10-24 rev 19 구현([TASK](TASK.md#rev19)): 단위 88/88, E2E 26/26, AI 응수+1초 미리 계산 1.35~1.86 s, 72장 넘침 0. 남음: 새 문구·화면 사용자 확인 2026-11-05 간격 규칙 v1([TASK](TASK.md#spacing-v1)): 고치기 전 86/151 위반 → `work/design/spacing-check.mjs` 12크기×6상태 944/944, 넘침 감사 72건 0, tsc·단위 통과. E2E는 엔진 파일 없어 미실행. 남음: 간격 값 사용자 확인. 2026-11-09 설명 카드 보조 글자 12→13px([TASK](TASK.md#card-caption-13)): 계산 크기 3크기 확인, 간격 검사 944/944, tsc·단위 통과. 남음: 사용자 확인, DESIGN 보조 최소 14px와의 차이 결정 |
+diff --git a/TASK.md b/TASK.md
+index a8496ca..47e038a 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -528,3 +528,14 @@ JOEFLOW rev 20(보강판): EVD-012, DEC-049(상대 수 반투명 돌, DEC-030 
+ - 고친 뒤(2026-11-05): `spacing-check` **944/944 통과**(`work/design/spacing-v1.log`), 기존 넘침 감사(`capture-matrix.mjs` 감사 함수, 합성 엔진으로 실행) 12크기×6상태 72건 문제 0, `tsc` 통과, 단위 87 통과·1 건너뜀. 1440×900·390×844·360×640 캡처를 눈으로 확인.
+ - 실행하지 못함: Playwright E2E(`tests/e2e`)는 실제 Rapfi 엔진 파일이 이 폴더에 없어 실행 불가. 복기·종료·금수 안내·엔진 경고·간이 분석 상태는 간격 검사에서 재현하지 않음(DESIGN 표의 Unmeasured).
+ - 남음: 간격 값의 사용자 시각 확인, 위 미측정 상태.
++
++<a id="card-caption-13"></a>
++
++## 2026-11-09 — 설명 카드 안 보조 글자 12px → 13px
++
++사용자 지시 "src/style.css에서 설명 카드 안 보조 글자 12px를 13px로 올려줘." 작업 종류: 글자 크기 국소 수정(배치·간격 변경 없음).
++
++- 범위 판단: 설명 카드 = 말풍선 `#current-card`(`.bubble`). 그 안에서 12px인 보조 글자는 `.caption` 세 줄(`#engine-status` 엔진 준비, `#replay-context` 복기 해설, `#prediction-note` 예측 안내). 카드 밖 `.caption`(`#replay-result` 12px, `#review-context` 11px)은 그대로.
++- 코드: `src/style.css` `.bubble .caption { font-size: 13px; }` 한 줄 추가(공용 `.caption` 12px는 유지).
++- 검사(2026-11-09, 빌드+preview 5705): 계산된 글자 크기 1440×900·390×844·360×640 모두 카드 안 세 줄 13px, 카드 밖 12/11px 유지. `spacing-check` 944/944 통과, `tsc` 통과, 단위 87 통과·1 건너뜀. 360×640 시작 화면 캡처 눈으로 확인. E2E는 엔진 파일 없어 미실행.
++- 남음: DESIGN 글꼴 규모의 "보조 최소 14px"(제안)보다 여전히 작음 — 담당자 결정 필요. 휴대폰 폭(≤700px)의 `.hero-sub` 12px(카드 안 상대 예상 문장)는 요청 범위가 불분명해 바꾸지 않음. 사용자 시각 확인 전.

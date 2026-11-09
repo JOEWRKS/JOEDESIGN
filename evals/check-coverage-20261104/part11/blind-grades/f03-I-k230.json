@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "p1": 1,
+  "p2": 1,
+  "p3": 0,
+  "p4": 1,
+  "p5": 1,
+  "g": 1,
+  "l": 1
+ },
+ "evidence": {
+  "p1": "제품 기준은 [기획서](product-definition/ai-coach/MASTER_PLANNING_SPEC.md) JOEFLOW 승인 rev 20: 복기는 기존 기능이며 화면 배치는 정하지 않으므로 이번 변경은 배치(디자인) 변경이다.",
+  "p2": "승인된 기획 rev 20은 복기 배치를 정하지 않으므로 이번 변경은 배치 변경이고, 새 동작은 추가하지 않았습니다.",
+  "p3": "승인된 기획 rev 20은 복기 배치를 정하지 않으므로 이번 변경은 배치 변경이고, 새 동작은 추가하지 않았습니다.",
+  "p4": "- **해결:** 없음",
+  "p5": "(2) 제가 정한 사항이라 확인이 필요한 것:",
+  "g": "- `R1 바 구조(replay-bar.test.ts 2개) | 2/2 | 0 sizes x 1 state(복기 소스), source | code | not spot-checked`",
+  "l": "- `R2 옆 배치 판 축소(replay-bar.test.ts 1개) | 1/1 | 0 sizes x 1 state(복기 CSS), source | code | not spot-checked`"
+ },
+ "feature_built": "yes"
+}

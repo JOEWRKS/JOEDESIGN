@@ -69,8 +69,12 @@ explicit `reference_filters` lists (for example category); missing fields do not
 
 ## Product meaning to visual roles
 
-For an information-hierarchy handoff or design-system change, compare the current
-Product source with the revision actually consumed by the implementation. Planning
+The Product source is the JOEFLOW product definition when the project has one:
+`product-definition/<slug>/state.json` is canonical, `MASTER_PLANNING_SPEC.md` is
+its readable projection, and JOEFLOW's `scripts/approval_status.py` reports the
+approved and pending revisions. For an information-hierarchy handoff or design-system
+change, compare the current Product source with the revision actually consumed by
+the implementation. Planning
 completion does not establish implementation coverage. Carry only the affected
 information priority, exposure condition and decision/action into the existing
 intent requirements/constraints and contract translations. Use `expected` and
@@ -96,7 +100,11 @@ approved visual values. Check each affected value's source and approval scope;
 document location alone cannot classify it. Preserve approved values, and never
 relabel them as proposals to bypass a conflict. Where an adjustment changes meaning,
 exposure or a mandatory constraint, send the specific conflict and proposed tradeoff
-to the existing Product/PM owner. The design owner supplies the visual alternative;
+to the existing Product/PM owner. With JOEFLOW that owner is reached through its
+implementation re-entry (DISCOVER/CLOSE for the affected scope), and the item stays
+`product decision pending` in DESIGN.md and the report until the definition changes;
+the design session does not write the product decision. The design owner supplies
+the visual alternative;
 material visual replacement follows the user's scoped approval. Keep uncertain
 authority explicit and continue unaffected work, without a whole-project restart.
 

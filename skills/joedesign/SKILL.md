@@ -46,6 +46,27 @@ Read the request, Product source, root DESIGN.md, originals/assets, scoped appro
 or rejection and actual implementation. State the work kind and next stage briefly;
 do not ask for facts already available. Reclassify when product or visual scope changes.
 
+The Product source is the project's product definition. When the project has
+`product-definition/<slug>/state.json` (JOEFLOW), read `MASTER_PLANNING_SPEC.md`
+beside it and the approval state first (`scripts/approval_status.py <state.json>`
+from the JOEFLOW skill when it is installed; otherwise the `approval` block of
+state.json: status and approved revision), and name that revision as the Product
+Authority in DESIGN.md. The definition decides which screens, actions, states,
+rules and wording exist; this skill decides how they look. A request that needs a
+user-visible behavior the approved definition does not contain (a new control,
+screen, state, rule or text) is not decided here: record it as `product decision
+pending` (제품 결정 대기) with the missing item and the revision read, send it back
+through JOEFLOW's implementation re-entry (DISCOVER/CLOSE for the affected scope;
+the user's words passed on by another session are `RELAYED_USER_INTENT`, a feature
+added to a running product is `NEW_PRODUCT` scoped to the change), and continue the
+visual work the definition already covers. If the user's own request is that
+behavior, build what the user specified and keep its product record pending: the
+definition is extended in JOEFLOW, not by code or DESIGN.md, and any part of the
+behavior the user did not specify is a product question for that re-entry, not a
+design choice. The report lists the pending item under remaining work, never as
+decided or done. Build on an unapproved revision only when the user directed
+implementation before approval, and say so in the report.
+
 | Work kind | Route |
 |---|---|
 | New direction: no adequate visual target | Source decision → representative composition → review → expansion |
@@ -161,9 +182,11 @@ Direct host/browser tools and non-Git projects follow the same operating route,
 recording source → decision → observation → verdict in existing DESIGN/review records;
 the DESIGN rule-coverage table is the minimum record of what was measured. When a
 design is handed to a project session that cannot load JOEDESIGN, the token-role and
-rule-coverage tables travel in DESIGN.md with their status, so that session can keep
-the rules without this skill. They need no new document system and must not be
-reported as a completed CLI run.
+rule-coverage tables travel in DESIGN.md with their status, and so does its Report
+Form section (the result-line form, `fixed`/`changed`, `changed` under remaining
+work), so that session can keep the rules and report in the same form without this
+skill. They need no new document system and must not be reported as a completed
+CLI run.
 The runner gates its own launches, not arbitrary external edits or actual adherence
 inside a role. Local records are not authenticated host receipts or proof of human
 visual judgment. Unavailable specialists or evidence stay explicit, never invented.

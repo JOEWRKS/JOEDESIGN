@@ -1,5 +1,25 @@
 # JOEDESIGN 업데이트 내역
 
+## 1.2.0 후보 — JOEFLOW 입력 명시·인계용 Report Form·JOENESS 도장 소비 제안 (2026-11-09, T043, 미게시)
+
+- 1.1.0에 더한 것(문서만, 스크립트·스키마·계약·CLI 그대로): SKILL.md "Decide the scope"에 Product source의 실체를 적은 문단
+  (`product-definition/<slug>/state.json`·`MASTER_PLANNING_SPEC.md`·`approval_status.py`를 먼저 읽고 승인 revision을 Product
+  Authority로 적기, 승인된 정의에 없는 사용자 가시 동작은 `product decision pending`(제품 결정 대기)으로 기록해 JOEFLOW 구현
+  재진입(DISCOVER/CLOSE, `RELAYED_USER_INTENT`, `NEW_PRODUCT`)으로 돌려보내기, 사용자가 직접 요청한 동작은 지정한 대로 만들되
+  제품 기록은 대기); operation.md 같은 두 문장; templates/DESIGN.md에 주석이 아닌 본문 절 `## Report Form`(결과 목록 한 줄 형식,
+  `fixed`/`changed`, `changed`는 남은 문제, `design checks: none ran`)과 SKILL.md 인계 문단의 연결; conformance.md에 ROADMAP Check
+  칸 예시 한 줄과 "장부(JOENESS TASK)가 보고를 보관하면 도장 줄도 함께"; JOENESS 측 제안서
+  [docs/proposals/2026-11-09-joeness-report-stamp.md](docs/proposals/2026-11-09-joeness-report-stamp.md)(TASK 도장 줄·완료 전
+  `--verify`·`changed`→남은 문제, Check 칸 예시). JOENESS 저장소는 고치지 않음.
+- 확인된 것(한 턴 블라인드 24회 + 채점 3, [README 11부](evals/check-coverage-20261104/README.md)): 제품 기능 추가 과제에서 state.json·
+  기획서 읽기 I 6/6 vs H(1.1.0) 0/4, 승인 rev 명시 6/6 vs 1/4, 정의에 없는 조작(접기 버튼)을 제품 결정 대기로 기록 3/3 vs 1/2; 스킬 없는
+  인계 세션의 결과 목록 형식 4/6 vs 0/4, `fixed`/`changed` 4/6 vs 0/4, `changed`가 해결 줄에 없음 5/6 vs 1/4; 라이브 대조 7건 일치;
+  회귀 4건 8부 기준표 전부 충족·도장 4/4. 회귀 14/14, 11/11, 142 OK.
+- 확인되지 않은 것: (1) 기존 기능 재배치가 표시 내용을 바꿀 때(복기 상단 바)의 경계 — I 3건 모두 "제품 결정 아님"으로 처리, 문구가
+  정해 주지 않음; (2) 인계 세션 2/6은 Report Form 절을 두고도 AGENTS 여섯 줄만 씀, 인계에는 스크립트·도장이 없음; (3) JOENESS의 도장
+  소비는 제안서뿐, 실제 연결·검증 없음; (4) 40턴 재측정 없음, 고정물 1개, 셀당 n=2~3, 장면별 채점기 1명. 버전·태그·Release·개인
+  설치는 사용자 승인 뒤.
+
 ## 1.1.0 — 보고 결과 형식·보고 검사 스크립트·도장 (2026-11-09, T043)
 
 - 1.0.0에 더한 것: DESIGN 규칙 검사 표(Spot check 열 포함), 보고의 결과 목록 한 줄 형식

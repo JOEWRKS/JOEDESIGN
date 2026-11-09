@@ -1,0 +1,12 @@
+{"scores": {"b": 1, "c": 1, "f": 1, "g": 1, "h": 1, "s": 1, "t": 1, "u": 1},
+ "evidence": {
+  "b": "| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured |",
+  "c": "| S1 | spacing-check S1 | 390×844 후보 카드→후보 줄: check 12 / observed 12(캡처 픽셀); 1440×900 시작 카드→버튼: check 16 / observed 16; 1440×900 첫 차례 버튼 줄→안내 줄: check 16 / observed 16; 1440×900 판 위=옆 칸 위: check 0 / observed 0 | 세로·옆 배치·시작 화면 | 12 | 6 | 복기·종료·금수 안내·엔진 경고·간이 분석 줄, 글자 잉크 |",
+  "f": "| 블록 사이 | 판→카드(세로 배치), 시작 화면 제목→카드→버튼, 카드·후보 줄·내 수 카드·안내·버튼 줄·안내 줄 사이 | `--gap-block` 16 / 촘촘 12 | 제안 |",
+  "g": "- spacing S1 블록 사이 | 233/233 | 12 sizes x 6 states, light | rendered | 390x844 후보 카드→후보 줄: check 12 / observed 12",
+  "h": "  - 변경 전 같은 검사 결과는 284/1284(12 sizes x 6 states, rendered, not spot-checked)였습니다.",
+  "s": "| S3 | spacing-check S3 | not spot-checked(재는 대상이 글자 줄 상자라 캡처 픽셀로 직접 볼 수 없음) | 같음 | 12 | 6 | 글자 잉크, 내 수 카드 안 줄 |",
+  "t": "  - 버튼 줄→안내 줄 간격 (1440x900 x 첫 차례, rendered, 1 before / 16 after)",
+  "u": "- fix 버튼 줄→안내 줄 간격 | fixed | 1440x900 x 첫 차례, light | rendered | 1440x900 첫 차례: 1 before / 16 after, 캡처 픽셀"
+ },
+ "browser_used": true}

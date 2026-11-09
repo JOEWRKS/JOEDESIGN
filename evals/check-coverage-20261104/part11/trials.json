@@ -1,0 +1,242 @@
+[
+ {
+  "id": "f01-I",
+  "arm": "I",
+  "kind": "feature",
+  "msg": "t4",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f01-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "f02-I",
+  "arm": "I",
+  "kind": "feature",
+  "msg": "t35",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f02-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "f03-I",
+  "arm": "I",
+  "kind": "feature",
+  "msg": "t4",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f03-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "f04-I",
+  "arm": "I",
+  "kind": "feature",
+  "msg": "t35",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f04-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "f05-I",
+  "arm": "I",
+  "kind": "feature",
+  "msg": "t4",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f05-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "f06-I",
+  "arm": "I",
+  "kind": "feature",
+  "msg": "t35",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f06-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "f07-H",
+  "arm": "H",
+  "kind": "feature",
+  "msg": "t4",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f07-H",
+  "base": "xbase-H",
+  "head": "5426c92"
+ },
+ {
+  "id": "f08-H",
+  "arm": "H",
+  "kind": "feature",
+  "msg": "t35",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f08-H",
+  "base": "xbase-H",
+  "head": "5426c92"
+ },
+ {
+  "id": "f09-H",
+  "arm": "H",
+  "kind": "feature",
+  "msg": "t4",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f09-H",
+  "base": "xbase-H",
+  "head": "5426c92"
+ },
+ {
+  "id": "f10-H",
+  "arm": "H",
+  "kind": "feature",
+  "msg": "t35",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\f10-H",
+  "base": "xbase-H",
+  "head": "5426c92"
+ },
+ {
+  "id": "p01-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p01-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5701,
+  "test": 4701
+ },
+ {
+  "id": "p02-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p02-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5702,
+  "test": 4702
+ },
+ {
+  "id": "p03-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p03-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5703,
+  "test": 4703
+ },
+ {
+  "id": "p04-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p04-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5704,
+  "test": 4704
+ },
+ {
+  "id": "p05-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p05-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5705,
+  "test": 4705
+ },
+ {
+  "id": "p06-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p06-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5706,
+  "test": 4706
+ },
+ {
+  "id": "p07-H",
+  "arm": "H",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p07-H",
+  "base": "xbase-H",
+  "head": "5426c92",
+  "dev": 5707,
+  "test": 4707
+ },
+ {
+  "id": "p08-H",
+  "arm": "H",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p08-H",
+  "base": "xbase-H",
+  "head": "5426c92",
+  "dev": 5708,
+  "test": 4708
+ },
+ {
+  "id": "p09-H",
+  "arm": "H",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p09-H",
+  "base": "xbase-H",
+  "head": "5426c92",
+  "dev": 5709,
+  "test": 4709
+ },
+ {
+  "id": "p10-H",
+  "arm": "H",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\p10-H",
+  "base": "xbase-H",
+  "head": "5426c92",
+  "dev": 5710,
+  "test": 4710
+ },
+ {
+  "id": "y17-I",
+  "arm": "I",
+  "kind": "browser",
+  "msg": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\y17-I",
+  "base": "wbase-I",
+  "head": "6ece189",
+  "dev": 5711,
+  "test": 4711
+ },
+ {
+  "id": "y18-I",
+  "arm": "I",
+  "kind": "browser",
+  "msg": "browser",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\y18-I",
+  "base": "wbase-I",
+  "head": "6ece189",
+  "dev": 5712,
+  "test": 4712
+ },
+ {
+  "id": "z17-I",
+  "arm": "I",
+  "kind": "offline",
+  "msg": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\z17-I",
+  "base": "obase-I",
+  "head": "438d20b"
+ },
+ {
+  "id": "z18-I",
+  "arm": "I",
+  "kind": "offline",
+  "msg": "offline",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-09-joedesign-i\\trials\\z18-I",
+  "base": "obase-I",
+  "head": "438d20b"
+ }
+]

@@ -1,0 +1,82 @@
+{
+ "f01-I": {
+  "tool_calls": 23,
+  "state.json": 1,
+  "MASTER_PLANNING_SPEC": 1,
+  "approval": 1,
+  "ls product-definition": 2,
+  "first_pd_call": 5
+ },
+ "f02-I": {
+  "tool_calls": 21,
+  "state.json": 4,
+  "MASTER_PLANNING_SPEC": 2,
+  "approval": 2,
+  "ls product-definition": 3,
+  "first_pd_call": 8
+ },
+ "f03-I": {
+  "tool_calls": 33,
+  "state.json": 1,
+  "MASTER_PLANNING_SPEC": 3,
+  "approval": 1,
+  "ls product-definition": 2,
+  "first_pd_call": 6
+ },
+ "f04-I": {
+  "tool_calls": 18,
+  "state.json": 1,
+  "MASTER_PLANNING_SPEC": 1,
+  "approval": 1,
+  "ls product-definition": 1,
+  "first_pd_call": 5
+ },
+ "f05-I": {
+  "tool_calls": 24,
+  "state.json": 1,
+  "MASTER_PLANNING_SPEC": 1,
+  "approval": 1,
+  "ls product-definition": 1,
+  "first_pd_call": 5
+ },
+ "f06-I": {
+  "tool_calls": 20,
+  "state.json": 2,
+  "MASTER_PLANNING_SPEC": 2,
+  "approval": 1,
+  "ls product-definition": 2,
+  "first_pd_call": 6
+ },
+ "f07-H": {
+  "tool_calls": 21,
+  "state.json": 0,
+  "MASTER_PLANNING_SPEC": 0,
+  "approval": 0,
+  "ls product-definition": 0,
+  "first_pd_call": null
+ },
+ "f08-H": {
+  "tool_calls": 31,
+  "state.json": 0,
+  "MASTER_PLANNING_SPEC": 1,
+  "approval": 0,
+  "ls product-definition": 0,
+  "first_pd_call": 7
+ },
+ "f09-H": {
+  "tool_calls": 16,
+  "state.json": 0,
+  "MASTER_PLANNING_SPEC": 0,
+  "approval": 0,
+  "ls product-definition": 0,
+  "first_pd_call": null
+ },
+ "f10-H": {
+  "tool_calls": 19,
+  "state.json": 0,
+  "MASTER_PLANNING_SPEC": 0,
+  "approval": 0,
+  "ls product-definition": 0,
+  "first_pd_call": null
+ }
+}

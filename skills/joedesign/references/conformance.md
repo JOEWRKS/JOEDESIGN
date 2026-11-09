@@ -14,7 +14,9 @@ runs on, and what it leaves unmeasured. Hand-written audit scripts are fine as c
 they cover has its own row with that scope. A rule without a check row is unmeasured,
 never passed; a "0 violations" result speaks only for the listed rows. The project's
 completion Check (JOENESS ROADMAP) points at this table rather than at a script name,
-so a script that measures one layout cannot stand for a rule that covers two. After
+so a script that measures one layout cannot stand for a rule that covers two; that
+Check cell reads, for example, `DESIGN.md#rule-coverage rows S1–S6 run on current
+inputs, every row spot-checked; result lines and stamp in TASK#spacing-v1`. After
 a change to any file the table lists, the rows of every affected rule run again.
 With the harness, the pinned JSON baseline below is the machine form of the same
 table and must agree with it; without the harness, the table is the contract.
@@ -50,7 +52,10 @@ is not `fixed` or `changed`, a check outcome stated outside the list without its
 scope, rendered-or-code and spot check outcome, and a `changed` fix named under 해결;
 the file is corrected until the script prints `report-check: ok <chars> chars <sha8>`,
 and that stamp line ends the sent text so `--verify` can confirm the checked text is
-the sent text. The script reads the form of the text, not the truth of a number.
+the sent text. A project ledger that keeps the report (JOENESS TASK) keeps the stamp
+line with it, so `--verify` on the saved text can confirm it later. The template's
+Report Form section carries this form in DESIGN.md into sessions without this skill.
+The script reads the form of the text, not the truth of a number.
 
 ## Fix the required scope before implementation
 

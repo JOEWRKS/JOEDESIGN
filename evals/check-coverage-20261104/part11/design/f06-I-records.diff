@@ -1,0 +1,68 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 3c13da7..118c06f 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -120,3 +120,20 @@ v0.2 탈락 이유와 앞으로의 기준. 이 원칙은 사용자 지시이며
+ | S6 간격을 맞춘 뒤에도 한 화면(스크롤·가로 넘침 없음) | spacing-check S6: 페이지 스크롤, `.hud`·`.cta-area` 밖으로 나간 요소 | 전부 | 12 | 6 | 판 안 표식, 도움말 창 |
+ 
+ 이 표의 통과는 간격 관계만 말한다. 화면 전체 디자인 품질, 위계, 사용자 시각 수락은 별도다.
++
++## 이유 더 보기 접기 버튼 — 구현 선택 (2026-11-09, 사용자 시각 승인 없음, 제품 결정 대기)
++
++사용자 지시 "설명 카드에 '이유 더 보기' 접기 버튼 추가."(2026-11-09). 승인된 기획 rev 20의 정보 예산(RULE-025)에는 이 조작이 없다(한 줄 이유는 '공간이 남으면', '열어야'는 도움말·첫 안내만, 긴 해설은 '빠짐'). 그래서 버튼 자체는 사용자 지시대로 넣고, 지시가 정하지 않은 아래 동작은 담당자 임시 선택이며 **제품 결정 대기**다(JOEFLOW 재진입 필요, [TASK](TASK.md#reason-toggle)).
++
++- 대상: 말풍선(`#current-card`) 중 수의 이유를 보여 주는 상태 — 추천, 착수 예정, 필승, 복기 해설. 결과 카드·계산 중·가이드 끔·시작 화면·자세히 보기에는 없음. 내 수 카드(`#review-card`)는 대상 밖.
++- 내용: 새 해설을 만들지 않는다. 기존 한 줄 이유(`#card-text`)만 접고 펼친다. 펼치면 줄 수 제한(데스크톱 3줄, 휴대폰 2줄)을 푼다.
++- 기본 접힘, 열고 닫은 상태는 다음 수와 다음 대국에도 유지(저장하지 않음). 글자: 접힘 `이유 더 보기`, 펼침 `이유 접기`. `aria-expanded`·`aria-controls="card-text"`.
++- 말풍선 영역 높이 ≤420px(기존에 한 줄 이유를 숨기던 크기)에서는 버튼도 숨긴다. 그 크기의 정보 예산은 그대로다.
++- 표현: 기존 `.text-button`(Jua 15px 밑줄, 최소 높이 36px)을 글자 폭만큼. 일반 행동 버튼 44px 목표보다 낮다(기존 '다시 분석'과 같은 보조 글자 버튼 역할). 위치는 제목 아래(펼치면 이유 문장 아래), 간격은 카드 안 묶음 `--space-inner` 8px. 새 토큰 없음.
++
++| Rule | Check | Layouts | Sizes | States | Unmeasured |
++| --- | --- | --- | --- | --- | --- |
++| S4 제목→버튼, 이유→버튼 = `--space-inner` | spacing-check S4(말풍선 자식 이웃에 버튼이 자동 포함), 펼친 상태는 `reason-open` 상태 추가 | 전부 | 12 | 후보·예비 착수(접힘), reason-open(펼침) | **아직 실행 안 함**(이 세션은 브라우저 실행 불가). 복기 해설·필승 상태 |
++| S3 말풍선 안쪽 여백(버튼이 마지막 자식일 때 아래 여백) | spacing-check S3 | 전부 | 12 | 위와 같음 | **아직 실행 안 함** |
++| S6 펼쳐도 한 화면 | spacing-check S6 | 전부 | 12 | reason-open | **아직 실행 안 함**. 가장 긴 이유 문장(막을 곳 두 군데)을 펼친 상태 |
++| 버튼 표시 범위(≤420px 숨김, 대상 상태만) | 없음 | — | — | — | 측정 없음 |
+diff --git a/ROADMAP.md b/ROADMAP.md
+index 0206341..b3448b7 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -2,9 +2,9 @@
+ 
+ 제품 목표 원본: [BRIEF.md](BRIEF.md). 기획 기준일: 2026-10-22, Asia/Seoul.
+ 
+-**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 944/944), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
++**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 944/944), 2026-11-09 설명 카드 '이유 더 보기' 버튼(구현·tsc·단위 통과, 렌더 검사 미실행, 기본 접힘 등 제품 결정 대기 — [TASK](TASK.md#reason-toggle)), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
+ 
+-**다음 작업:** 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌·간격 규칙 v1의 수락 여부를 알려 준다. 화면을 고친 뒤에는 `work/design/spacing-check.mjs`를 다시 돌린다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
++**다음 작업:** '이유 더 보기'의 미정 동작(기본 접힘·대상 상태·상태 유지·작은 화면)을 사용자가 정하고 JOEFLOW에 반영한다. 브라우저를 쓸 수 있는 세션에서 `work/design/spacing-check.mjs`(reason-open 포함)를 다시 돌리고 화면을 관찰한다. 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌·간격 규칙 v1·이유 버튼의 수락 여부를 알려 준다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
+ 
+ ## 범위와 결정의 권한
+ 
+@@ -157,4 +157,4 @@
+ | --- | --- | --- | --- | --- |
+ | CO0 | 성능 측정과 시간·후보·횟수 표 | complete | `work/bench/bench.html`을 dev 서버에서 열어 Worker 1개의 정책별 초당 횟수·결판 비율을 관찰하고, 후보×횟수×시간 표가 그 값에서 계산됐는지 대조 | 2026-10-23 브라우저 Worker 실측과 표 [측정 기록](work/evidence/coach-bench-2026-10-23.md). 측정 코드는 5980368 이후 변경 없음(git 이력)이라 재측정하지 않고 재사용. 휴대폰 미측정은 CO0 범위 밖 한계로 남김 |
+ | CO1 | JOEFLOW 기획과 사용자 승인 | complete | `validate_state.py` valid, `validate_closure.py` closed=true, 현재 revision의 Approval Manifest를 사용자가 명시 승인, `MASTER_PLANNING_SPEC.md`·`planning-review-core.html`을 브라우저에서 열어 확인 | 2026-10-23 확인: valid, closed=true(revision 12), 사용자 승인 Manifest `2b73f887…bd59b`, [기획서](product-definition/ai-coach/MASTER_PLANNING_SPEC.md)·[검토 화면](product-definition/ai-coach/planning-review-core.html)을 앱 내 브라우저 1440×900·390×844에서 열어 글자 넘침·가로 넘침 없음과 목차 이동 확인. 결정 DEC-001~013, 요구사항 REQ-001~003, 완료 기준 AC-001~006. 이후 rev 15(Manifest `bbcc3f58…`) 사용자 승인·closed=true. 2026-10-23 보강판 재진입 rev 16 사용자 승인(Manifest `cab0d1c0…`), 보강판 검증기 valid·closed=true, 기획서·검토 화면 rev 16으로 갱신·앱 내 브라우저 확인. RULE-016 문구 수정 rev 17 사용자 승인(Manifest `98c06e86…`), closed=true. 2026-10-23 방향 전환 rev 18 사용자 승인(Manifest `294c2382…`), 보강판 closed=true, 기획서·검토 화면 rev 18로 갱신·앱 내 브라우저 확인. 2026-10-24 rev 19 사용자 승인(Manifest `4cdb6201…`), 보강판 closed=true, 기획서·검토 화면 rev 19로 갱신. 2026-10-24 rev 20 사용자 승인(Manifest `47304076…`), 보강판 closed=true, 기획서·검토 화면 rev 20으로 갱신·1440×900·390×844 넘침 0 |
+-| CO2 | JOEDESIGN 디자인·구현·검사 | verification pending | `npx tsc --noEmit` 통과, `npx vitest run` 기존 62개+신규(시드 고정 시뮬레이션) 전부 통과, 1440×900·390×844 앱 내 브라우저에서 도우미 표시·착수 시 중단을 실제 조작·관찰. 사용자 시각 승인·수락은 별도 | 2026-10-23: 시각 v0.3 방향 사용자 승인(시안 기준). 구현 후 tsc 통과, vitest 77/77(신규 15), Playwright E2E 18/18(두 크기, 외부 요청 0), 실제 앱 조작 캡처 16장 스크롤·넘침 없음([TASK](TASK.md#coach)). 남음: 구현된 화면의 사용자 시각 수락, 휴대폰 실기기 처리량 실측(DEC-009), 앱 내 브라우저 직접 조작은 Playwright 실제 Chrome 조작으로 대신함. 2026-10-24 rev 18 구현([TASK](TASK.md#rev18-impl)): tsc 통과, 단위 88/88, E2E 26/26(AC-002·005~016 각각, 외부 요청 0), AC-016 PC 249~280 ms, 12크기×6상태 72장 넘침 0. 남음: 사용자 수락, 휴대폰 실기기 0.3초 깊이, 무응답 판단 시간(5초 임시). 2026-10-24 rev 19 구현([TASK](TASK.md#rev19)): 단위 88/88, E2E 26/26, AI 응수+1초 미리 계산 1.35~1.86 s, 72장 넘침 0. 남음: 새 문구·화면 사용자 확인 2026-11-05 간격 규칙 v1([TASK](TASK.md#spacing-v1)): 고치기 전 86/151 위반 → `work/design/spacing-check.mjs` 12크기×6상태 944/944, 넘침 감사 72건 0, tsc·단위 통과. E2E는 엔진 파일 없어 미실행. 남음: 간격 값 사용자 확인 |
++| CO2 | JOEDESIGN 디자인·구현·검사 | verification pending | `npx tsc --noEmit` 통과, `npx vitest run` 기존 62개+신규(시드 고정 시뮬레이션) 전부 통과, 1440×900·390×844 앱 내 브라우저에서 도우미 표시·착수 시 중단을 실제 조작·관찰. 사용자 시각 승인·수락은 별도 | 2026-10-23: 시각 v0.3 방향 사용자 승인(시안 기준). 구현 후 tsc 통과, vitest 77/77(신규 15), Playwright E2E 18/18(두 크기, 외부 요청 0), 실제 앱 조작 캡처 16장 스크롤·넘침 없음([TASK](TASK.md#coach)). 남음: 구현된 화면의 사용자 시각 수락, 휴대폰 실기기 처리량 실측(DEC-009), 앱 내 브라우저 직접 조작은 Playwright 실제 Chrome 조작으로 대신함. 2026-10-24 rev 18 구현([TASK](TASK.md#rev18-impl)): tsc 통과, 단위 88/88, E2E 26/26(AC-002·005~016 각각, 외부 요청 0), AC-016 PC 249~280 ms, 12크기×6상태 72장 넘침 0. 남음: 사용자 수락, 휴대폰 실기기 0.3초 깊이, 무응답 판단 시간(5초 임시). 2026-10-24 rev 19 구현([TASK](TASK.md#rev19)): 단위 88/88, E2E 26/26, AI 응수+1초 미리 계산 1.35~1.86 s, 72장 넘침 0. 남음: 새 문구·화면 사용자 확인 2026-11-05 간격 규칙 v1([TASK](TASK.md#spacing-v1)): 고치기 전 86/151 위반 → `work/design/spacing-check.mjs` 12크기×6상태 944/944, 넘침 감사 72건 0, tsc·단위 통과. E2E는 엔진 파일 없어 미실행. 남음: 간격 값 사용자 확인. 2026-11-09 '이유 더 보기' 버튼([TASK](TASK.md#reason-toggle)): tsc 통과, 단위 87 통과·1 건너뜀. 간격 검사·넘침 감사·E2E·렌더 관찰 미실행(브라우저 권한 없음). 남음: 제품 결정 대기(기본 접힘 등), 렌더 검사, 사용자 확인 |
+diff --git a/TASK.md b/TASK.md
+index a8496ca..95a960a 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -528,3 +528,16 @@ JOEFLOW rev 20(보강판): EVD-012, DEC-049(상대 수 반투명 돌, DEC-030 
+ - 고친 뒤(2026-11-05): `spacing-check` **944/944 통과**(`work/design/spacing-v1.log`), 기존 넘침 감사(`capture-matrix.mjs` 감사 함수, 합성 엔진으로 실행) 12크기×6상태 72건 문제 0, `tsc` 통과, 단위 87 통과·1 건너뜀. 1440×900·390×844·360×640 캡처를 눈으로 확인.
+ - 실행하지 못함: Playwright E2E(`tests/e2e`)는 실제 Rapfi 엔진 파일이 이 폴더에 없어 실행 불가. 복기·종료·금수 안내·엔진 경고·간이 분석 상태는 간격 검사에서 재현하지 않음(DESIGN 표의 Unmeasured).
+ - 남음: 간격 값의 사용자 시각 확인, 위 미측정 상태.
++
++<a id="reason-toggle"></a>
++## 2026-11-09 — 설명 카드 '이유 더 보기' 접기 버튼
++
++사용자 지시 "설명 카드에 '이유 더 보기' 접기 버튼 추가." 사용자 허가로 이 작업에 한해 `joedesign-skill/`(JOEDESIGN) 절차 적용. 작업 종류: 승인된 v0.3 말풍선 안의 국소 추가(배치·위계 변경 없음). 이 세션은 브라우저·dev 서버·Playwright 실행 권한이 없다.
++
++- 제품 근거: 승인 rev 20(Manifest `47304076…`) RULE-025에 이 조작이 없다. 버튼은 사용자 지시대로 넣고, 기본 접힘·대상 상태·상태 유지·작은 화면 처리·내용 범위는 담당자 임시 선택 → **제품 결정 대기**(JOEFLOW 재진입 필요). 기록: [DESIGN.md](DESIGN.md#이유-더-보기-접기-버튼--구현-선택-2026-11-09-사용자-시각-승인-없음-제품-결정-대기).
++- 코드: `src/main.ts` — `#reason-toggle` 버튼(`aria-expanded`·`aria-controls`), `reasonOpen` 상태, 말풍선 `data-reason=open|closed|none`. `src/style.css` — 접힘이면 `#card-text` 숨김, 펼침이면 줄 수 제한 해제, 말풍선 영역 ≤420px·자세히 보기에서 버튼 숨김.
++- 검사 추가(미실행): `work/design/spacing-check.mjs`에 버튼이 보이는 크기에서 `reason-open` 상태 측정 추가.
++- 실행함: `npx tsc --noEmit` 통과, `npx vitest run` 87 통과·1 건너뜀(DOM 화면은 단위 검사 대상 아님).
++- 실행하지 못함: 간격 검사·넘침 감사·E2E·화면 캡처(브라우저 실행 권한 없음). 그래서 렌더 결과는 아무것도 관찰하지 않았다.
++- 남음: 제품 결정(위 임시 선택), 간격 검사 재실행(`reason-open` 포함), 렌더 관찰, 사용자 시각 확인.
++

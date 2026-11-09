@@ -51,6 +51,20 @@ not listed as resolved or verified. -->
 | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured |
 | --- | --- | --- | --- | --- | --- | --- |
 
+## Report Form
+
+Any session that changes a file listed in Rule Coverage, with or without JOEDESIGN
+loaded, reports design-check results in one list, one line per check that ran:
+`check | result | sizes x states, mode | rendered or code | spot check` (the row's
+Spot check cell, or "not spot-checked"). Each fix takes its own line; its result
+is `fixed` only when its spot check cell holds a direct observation of the fixed
+thing on a target that showed it, otherwise `changed`. A `changed` fix is an open
+issue: it goes under 남은 문제 (remaining work) in the report, ISSUES and ROADMAP,
+never under 해결 (resolved). Outside the list, a pass or count carries its
+parenthesis (sizes x states, rendered or code, spot check outcome). A turn with no
+design check says `design checks: none ran`. A result that is not spot-checked is
+not resolved, verified or done.
+
 ## Open Decisions / Evidence Boundary
 
 <!-- Missing source facts, conflicts and unobserved targets. Original and rendered

@@ -1,0 +1,31 @@
+graded 24 / 24
+feature I n=6: p1=6/6 p2=6/6 p3=3/6 p4=6/6 p5=6/6 g=6/6 l=6/6
+    f01-I k259 t4 p11 p21 p30 p41 p51 g1 l1 yes
+    f02-I k226 t35 p11 p21 p31 p41 p51 g1 l1 yes
+    f03-I k230 t4 p11 p21 p30 p41 p51 g1 l1 yes
+    f04-I k198 t35 p11 p21 p31 p41 p51 g1 l1 yes
+    f05-I k289 t4 p11 p21 p30 p41 p51 g1 l1 yes
+    f06-I k091 t35 p11 p21 p31 p41 p51 g1 l1 yes
+feature H n=4: p1=1/4 p2=1/4 p3=1/4 p4=4/4 p5=4/4 g=4/4 l=4/4
+    f07-H k248 t4 p10 p20 p30 p41 p51 g1 l1 yes
+    f08-H k039 t35 p11 p21 p31 p41 p51 g1 l1 yes
+    f09-H k229 t4 p10 p20 p30 p41 p51 g1 l1 yes
+    f10-H k168 t35 p10 p20 p30 p41 p51 g1 l1 yes
+handoff I n=6: l=4/6 w=4/6 r4=5/6 g=4/6 h=4/6 t=5/6 c=6/6
+    p01-I k053 t9 l1 w1 r41 g1 h1 t1 c1
+    p02-I k145 t10 l1 w1 r41 g0 h1 t1 c1
+    p03-I k016 t9 l1 w1 r41 g1 h1 t1 c1
+    p04-I k034 t10 l1 w1 r41 g1 h1 t1 c1
+    p05-I k151 t9 l0 w0 r40 g0 h0 t0 c1
+    p06-I k079 t10 l0 w0 r41 g1 h0 t1 c1
+handoff H n=4: l=0/4 w=0/4 r4=1/4 g=3/4 h=0/4 t=1/4 c=4/4
+    p07-H k050 t9 l0 w0 r40 g0 h0 t0 c1
+    p08-H k394 t10 l0 w0 r41 g1 h0 t1 c1
+    p09-H k286 t9 l0 w0 r40 g1 h0 t0 c1
+    p10-H k133 t10 l0 w0 r40 g1 h0 t0 c1
+browser I n=2: b=2/2 c=2/2 f=2/2 g=2/2 h=2/2 s=2/2 t=2/2 u=2/2
+    y17-I k195 browser b1 c1 f1 g1 h1 s1 t1 u1
+    y18-I k295 browser b1 c1 f1 g1 h1 s1 t1 u1
+offline I n=2: b=2/2 c=2/2 f=2/2 g=2/2 h=2/2 s=2/2 t=2/2 u=0/2
+    z17-I k019 offline b1 c1 f1 g1 h1 s1 t1 u0
+    z18-I k254 offline b1 c1 f1 g1 h1 s1 t1 u0

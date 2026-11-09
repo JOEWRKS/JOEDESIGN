@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "p1": 0,
+  "p2": 0,
+  "p3": 0,
+  "p4": 1,
+  "p5": 1,
+  "g": 1,
+  "l": 1
+ },
+ "evidence": {
+  "p1": "(없음) 작업 기록에 product-definition/기획서/JOEFLOW 확인 문장이 없음.",
+  "p2": "(없음) rev 20은 기존 P6 설명 문구로만 남아 있고 이번 변경의 제품 정의 상태로 적히지 않음.",
+  "p3": "(없음) 바의 위치·크기·내용 배열·버튼 강조는 담당자가 고른 것이며 사용자 확인 전이다(verification pending). — 제품 정의 쪽 기록 언급 없음.",
+  "p4": "| RPL4 | 복기 상단 바: 현재 수 번호·총 수·종료 판으로, 이전/다음 버튼을 바로 이동 (2026-11-09 사용자 지시) | verification pending |",
+  "p5": "바 위치, 버튼을 강조하지 않은 것, 결과 문구는 제가 고른 것이라 확인이 필요합니다.",
+  "g": "design checks: none ran",
+  "l": "design checks: none ran"
+ },
+ "feature_built": "yes"
+}

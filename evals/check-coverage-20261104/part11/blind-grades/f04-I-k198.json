@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "p1": 1,
+  "p2": 1,
+  "p3": 1,
+  "p4": 1,
+  "p5": 1,
+  "g": 1,
+  "l": 1
+ },
+ "evidence": {
+  "p1": "- 이슈: 승인 정의 rev 20에는 이 접기 조작이 없습니다.",
+  "p2": "제품 근거: JOEFLOW rev 20 APPROVED(Manifest `47304076…`)에는 이 조작이 없어 **제품 결정 대기**.",
+  "p3": "- 다음 작업: 위 네 가지를 정해 주시면 JOEFLOW 재진입으로 기획에 넣습니다.",
+  "p4": "- 해결: 없음",
+  "p5": "- 남은 문제: 제가 정한 동작 네 가지는 확인이 필요합니다.",
+  "g": "design checks: none ran",
+  "l": "design checks: none ran"
+ },
+ "feature_built": "yes"
+}

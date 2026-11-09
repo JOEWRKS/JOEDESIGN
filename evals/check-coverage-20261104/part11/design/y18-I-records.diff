@@ -1,0 +1,121 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index b42ad43..f78e7ab 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -86,3 +86,56 @@ v0.2 탈락 이유와 앞으로의 기준. 이 원칙은 사용자 지시이며
+ ## 표식 예외: 상대 예상 수는 반투명 돌 (2026-10-24, 사용자 지시)
+ 
+ 사용자 지시 "적의 수는 좀 다르게 표현해줘. 점선 말고 반투명 돌로."(JOEFLOW rev 20, DEC-049). 위 "사용자 시각 원칙"의 '판 위 표식은 모두 반투명 점선'에서 **예비 착수 뒤 상대 예상 수순만** 예외로 한다: 상대 돌 색의 반투명 돌(불투명도 0.5, 실선 테두리)에 번호. 내 수순·후보·금수 ✕·착수 예정은 그대로 점선. 실제 돌과 구별은 불투명도와 번호로 한다. 승률 가이드 스위치(DEC-050)는 대국 화면 아래쪽 고지문 옆에 둔다. 사용자 시각 확인 전.
++
++<a id="spacing-v1"></a>
++
++## 간격 규칙 v1 — 메인 화면 (2026-11-09, 제안·사용자 시각 승인 없음)
++
++사용자 지시(2026-11-09): "메인 화면 카드·버튼·안내 줄 간격이 제각각이야. 간격 규칙 정하고 코드 맞추고, 다시 안 어긋나게 검사 스크립트 추가해." 규칙 이름과 값은 담당자 제안이다(기존 "8px 단위 중심, 카드 16–24px 여백"을 이어받음). 사용자가 값을 승인하기 전까지 status는 proposed다. 대상은 시작 화면과 대국 화면(같은 `.stage` 한 페이지)이다. 실행 기록은 [TASK](TASK.md#spacing-v1)에 있다.
++
++**측정 기준:** 간격은 사람이 보는 가장자리 사이다. 블록의 테두리, 그리고 아래로 떨어지는 단색 그림자(흐림 0)까지 포함한다. 글자 블록은 줄 상자를 쓴다. 그래서 그림자가 있는 블록은 `--drop`(그림자 깊이)만큼 아래 여백을 더해 보이는 간격을 토큰 값과 맞춘다. 휴대폰은 화면 폭 700px 이하다.
++
++| 규칙 | 내용 | 넓은 화면 | 휴대폰 |
++| --- | --- | --- | --- |
++| S1 쌓임 | 옆 칸(말풍선 영역 `.hud`, 버튼 영역 `.cta-area`)에서 차례로 쌓인 블록 사이. 평가 카드·말풍선·안내 카드·복기 카드·후보 알약 줄·알림·버튼 줄·되돌리기 안내·안내 줄(고지문+가이드 스위치) | 12 | 8 |
++| S2 구역 | 시작 화면의 제목 묶음 → 카드 → 시작 버튼 | 24 (높이 720 이하 16) | 16 |
++| S3 카드 안쪽 | 큰 카드(말풍선)는 네 변 모두 같은 값. 작은 카드(평가·첫 안내·복기)는 세로/가로 값 | 큰 20 · 작은 12/16 | 큰 12 · 작은 8/12 |
++| S4 카드 안 묶음 | 카드 안 묶음 사이(라벨→좌표·비율→제목, 안내 문장→선택, 선택 줄 사이, 안내 단계→문장→버튼)는 inner 값. 짝인 줄(좌표→부제, 제목→설명, 선택 라벨→그 버튼, 평가 제목→설명)은 pair 값 | inner 12 · pair 6 | inner 8 · pair 4 |
++| S5 버튼 줄 | 같은 줄 버튼은 보이는 아래 가장자리가 같다(그림자 깊이 통일). 가로 간격은 작은 버튼(후보 알약·선택·상단 아이콘·안내·복기) 8, 큰 행동 줄(고르기/두기·취소·되돌리기) 12 | 작은 8 · 큰 12 | 작은 8 · 큰 12 (예외: 버튼 영역 폭 380 이하에서 취소+두기+되돌리기 줄은 8) |
++
++S1에서 말풍선 영역과 버튼 영역 사이는 규칙에 넣지 않았다. 버튼 영역은 화면 아래에 붙고 남는 높이가 그 사이에 들어가는 것이 의도된 배치다. 같은 이유로 대국 화면 휴대폰의 판 → 말풍선 간격도 규칙 밖이다.
++
++### Token Roles
++
++| Role | Parts | Token / value | Status |
++| --- | --- | --- | --- |
++| 쌓임 간격 | `.hud`, `.cta-area` gap | `--space-stack` 12 / 휴대폰 8 | proposed |
++| 구역 간격 | 시작 화면 `.stage` row-gap | `--space-section` 24 / 휴대폰·높이 ≤720 16 | proposed |
++| 큰 카드 여백 | `.bubble` padding | `--pad-card` 20 / 12 | proposed |
++| 작은 카드 여백 | `.review-card`, `.tutorial`, `.replay-controls` padding | `--pad-small-y`/`-x` 12·16 / 8·12 | proposed |
++| 카드 안 묶음 | `#current-card`·`.setup`·`.tutorial`·`.replay-controls` gap | `--space-inner` 12 / 8 | proposed |
++| 짝 줄 | 부제·설명·선택 라벨·평가 설명 | `--space-pair` 6 / 4 | proposed |
++| 작은 버튼 사이 | `.alts`, `.setup-row`, `.top-actions`, `.tut-actions`, `.replay-buttons` | `--gap-pill` 8 | proposed |
++| 큰 행동 버튼 사이 | `.turn-actions` gap | `--gap-cta` 12 (좁은 칸 예외 8) | proposed |
++| 그림자 깊이 | 큰 카드·안내 카드 / 작은 카드 / 큰 행동 버튼 / 작은 버튼 | `--drop-card` 8·6, `--drop-small` 5·4, `--drop-cta` 7·6, `--drop-pill` 4 | measured (기존 코드 값, 취소 버튼 5→7·휴대폰 되돌리기 비활성 7→6만 통일) |
++
++토큰은 `src/style.css` 끝의 "간격 v1" 블록 한 곳에서 정의한다. 메인 화면 간격을 바꿀 때는 이 블록의 토큰만 바꾸고 검사를 다시 돌린다.
++
++### Rule Coverage
++
++검사: `npx vite build` → `npx vite preview --host 127.0.0.1 --port <포트> --strictPort` → `GOMOKU_DEV_PORT=<포트> node work/design/spacing-check.mjs [--shots] [--spot]`. 이 검사는 실제 Chrome 렌더에서 요소 상자와 계산된 그림자로 가장자리를 재고, CSS 토큰 값은 읽지 않는다. 엔진 파일 없이 돌도록 `engine-worker.js` 요청을 합성 엔진(`work/design/fake-engine-worker.js`)으로 바꾼다. 따라서 후보 좌표·비율은 실제 엔진 값이 아니다. 허용 오차는 ±1px이다. `--spot`을 주면 규칙마다 한 대상에서 캡처 픽셀(남색 테두리·그림자)로 직접 잰 값을 같이 출력한다.
++
++크기 12개: 1920×1080, 1440×900, 1366×768, 1280×720, 1024×768, 820×1180, 768×1024, 489×866, 430×932, 390×844, 375×667, 360×640. 상태 5개: setup(시작 화면, 색·강도 고름), tutorial(첫 안내), candidates(2수 뒤 추천·후보), preview(예비 착수, 취소+두기), undo(되돌린 뒤 안내).
++
++| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured |
++| --- | --- | --- | --- | --- | --- | --- |
++| S1 | spacing-check S1 | 1440×900 candidates 평가 카드→말풍선: check 12 / observed 12; 말풍선→후보 알약: check 12 / observed 12; 버튼 줄→안내 줄 스위치: check 12 / observed 12 (2026-11-09) | 넓은 옆 배치, 세로 배치 | 12 | tutorial, candidates, preview, undo (+ setup의 버튼 영역) | 종료·복기 카드, 금수 안내, 엔진 경고, 간이 분석 줄이 보이는 상태 |
++| S2 | spacing-check S2 | 1440×900 setup 카드→시작 버튼: check 24 / observed 24 (2026-11-09) | 시작 화면 | 12 | setup | 로고 글자 외곽선·글자 그림자는 줄 상자 밖으로 나올 수 있어 제목→카드는 줄 상자 기준만 잼. 엔진 불러오기 중·실패 상태 |
++| S3 | spacing-check S3 | 1440×900 candidates 말풍선 위 여백: check 20 / observed 20 (2026-11-09) | 모든 배치 | 12 | 5개 전부 | 복기 카드(종료 후에만 보임). 글자 잉크와 줄 상자 차이 |
++| S4 | spacing-check S4 | 1280×720 setup 내 돌 줄→AI 강도 줄: check 12 / observed 12 (2026-11-09) | 모든 배치 | 12 | 5개 전부 | 복기 카드 안, 종료 카드, 큰 좌표·비율 글자 외곽선 |
++| S5 | spacing-check S5 | 1440×900 candidates 고르기↔되돌리기: check 12 / observed 12 (2026-11-09) | 모든 배치 | 12 | 5개 전부 | 복기 버튼 줄(종료 후), 도움말·새 게임 확인 창 버튼 |
++| 곁 검사 | spacing-check 곁 검사(페이지 스크롤, 말풍선 영역 잘림, 화면 밖 요소, 상단 아이콘이 오른쪽 끝) | not spot-checked | 모든 배치 | 12 | 5개 전부 | 글자 단위 잘림(줄 수 제한 말줄임은 의도) |
++
++### Report Form
++
++규칙 표에 있는 파일(`src/style.css`, `src/main.ts`의 화면 마크업, `work/design/spacing-check.mjs`)을 바꾼 세션은 JOEDESIGN을 쓰든 안 쓰든 디자인 검사 결과를 목록 하나로 보고한다. 형식은 실행한 검사마다 한 줄씩 `check | result | sizes x states, mode | rendered or code | spot check`이다(마지막 칸은 규칙 행의 Spot check 값이거나 "not spot-checked"). 고친 결함은 한 줄씩 따로 쓴다. 결과 칸은 그 결함을 보였던 대상에서 고친 것을 직접 관찰했을 때만 `fixed`이고, 아니면 `changed`다. `changed`는 열린 문제이므로 보고·ISSUES·ROADMAP의 남은 문제에 두고 해결에는 쓰지 않는다. 목록 밖에서 통과나 숫자를 말할 때는 괄호(크기 x 상태, rendered/code, spot check 결과)를 붙인다. 디자인 검사를 안 돌린 차례는 `design checks: none ran`이라고 쓴다.
+diff --git a/ROADMAP.md b/ROADMAP.md
+index 0e4f945..3a3b862 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -2,9 +2,9 @@
+ 
+ 제품 목표 원본: [BRIEF.md](BRIEF.md). 기획 기준일: 2026-10-22, Asia/Seoul.
+ 
+-**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
++**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측), CO3(verification pending — 메인 화면 간격 규칙 v1 값의 사용자 확인과 미측정 상태: 종료·복기 카드·알림 줄, 실제 엔진 E2E 회귀). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
+ 
+-**다음 작업:** 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌의 수락 여부를 알려 준다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
++**다음 작업:** 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌과 새 간격(카드·버튼·안내 줄)의 수락 여부를 알려 준다. 실제 엔진 파일이 있는 환경에서 E2E 전체와 `work/design/spacing-check.mjs`를 다시 돌린다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
+ 
+ ## 범위와 결정의 권한
+ 
+@@ -158,3 +158,4 @@
+ | CO0 | 성능 측정과 시간·후보·횟수 표 | complete | `work/bench/bench.html`을 dev 서버에서 열어 Worker 1개의 정책별 초당 횟수·결판 비율을 관찰하고, 후보×횟수×시간 표가 그 값에서 계산됐는지 대조 | 2026-10-23 브라우저 Worker 실측과 표 [측정 기록](work/evidence/coach-bench-2026-10-23.md). 측정 코드는 5980368 이후 변경 없음(git 이력)이라 재측정하지 않고 재사용. 휴대폰 미측정은 CO0 범위 밖 한계로 남김 |
+ | CO1 | JOEFLOW 기획과 사용자 승인 | complete | `validate_state.py` valid, `validate_closure.py` closed=true, 현재 revision의 Approval Manifest를 사용자가 명시 승인, `MASTER_PLANNING_SPEC.md`·`planning-review-core.html`을 브라우저에서 열어 확인 | 2026-10-23 확인: valid, closed=true(revision 12), 사용자 승인 Manifest `2b73f887…bd59b`, [기획서](product-definition/ai-coach/MASTER_PLANNING_SPEC.md)·[검토 화면](product-definition/ai-coach/planning-review-core.html)을 앱 내 브라우저 1440×900·390×844에서 열어 글자 넘침·가로 넘침 없음과 목차 이동 확인. 결정 DEC-001~013, 요구사항 REQ-001~003, 완료 기준 AC-001~006. 이후 rev 15(Manifest `bbcc3f58…`) 사용자 승인·closed=true. 2026-10-23 보강판 재진입 rev 16 사용자 승인(Manifest `cab0d1c0…`), 보강판 검증기 valid·closed=true, 기획서·검토 화면 rev 16으로 갱신·앱 내 브라우저 확인. RULE-016 문구 수정 rev 17 사용자 승인(Manifest `98c06e86…`), closed=true. 2026-10-23 방향 전환 rev 18 사용자 승인(Manifest `294c2382…`), 보강판 closed=true, 기획서·검토 화면 rev 18로 갱신·앱 내 브라우저 확인. 2026-10-24 rev 19 사용자 승인(Manifest `4cdb6201…`), 보강판 closed=true, 기획서·검토 화면 rev 19로 갱신. 2026-10-24 rev 20 사용자 승인(Manifest `47304076…`), 보강판 closed=true, 기획서·검토 화면 rev 20으로 갱신·1440×900·390×844 넘침 0 |
+ | CO2 | JOEDESIGN 디자인·구현·검사 | verification pending | `npx tsc --noEmit` 통과, `npx vitest run` 기존 62개+신규(시드 고정 시뮬레이션) 전부 통과, 1440×900·390×844 앱 내 브라우저에서 도우미 표시·착수 시 중단을 실제 조작·관찰. 사용자 시각 승인·수락은 별도 | 2026-10-23: 시각 v0.3 방향 사용자 승인(시안 기준). 구현 후 tsc 통과, vitest 77/77(신규 15), Playwright E2E 18/18(두 크기, 외부 요청 0), 실제 앱 조작 캡처 16장 스크롤·넘침 없음([TASK](TASK.md#coach)). 남음: 구현된 화면의 사용자 시각 수락, 휴대폰 실기기 처리량 실측(DEC-009), 앱 내 브라우저 직접 조작은 Playwright 실제 Chrome 조작으로 대신함. 2026-10-24 rev 18 구현([TASK](TASK.md#rev18-impl)): tsc 통과, 단위 88/88, E2E 26/26(AC-002·005~016 각각, 외부 요청 0), AC-016 PC 249~280 ms, 12크기×6상태 72장 넘침 0. 남음: 사용자 수락, 휴대폰 실기기 0.3초 깊이, 무응답 판단 시간(5초 임시). 2026-10-24 rev 19 구현([TASK](TASK.md#rev19)): 단위 88/88, E2E 26/26, AI 응수+1초 미리 계산 1.35~1.86 s, 72장 넘침 0. 남음: 새 문구·화면 사용자 확인 |
++| CO3 | 메인 화면 간격 규칙과 재발 방지 검사 | verification pending | [DESIGN 간격 규칙 v1](DESIGN.md#spacing-v1) Rule Coverage의 S1~S5 행을 현재 입력에서 `work/design/spacing-check.mjs --spot`로 실행해 모든 측정이 규칙 안이고, 행마다 spot check가 기록돼 있어야 한다. 값의 사용자 시각 확인은 별도 | 2026-11-09 [TASK](TASK.md#spacing-v1): S1~S5 874/874(12크기 × 5상태, 렌더, 행마다 spot check 일치), 곁 검사 0. 빈칸: 값의 사용자 확인, 종료·복기·알림 줄 상태 미측정, 실제 엔진 E2E 미실행, 규칙 범위 독립 검토 없음 |
+diff --git a/TASK.md b/TASK.md
+index 7fa7b17..3f1a641 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -515,3 +515,34 @@ JOEFLOW rev 20(보강판): EVD-012, DEC-049(상대 수 반투명 돌, DEC-030 
+ ## 2026-10-24 — 저장소 정리: 줄바꿈 규칙·도구 파일·캡처
+ 
+ 사용자 결정(채팅 질문 3개, 모두 권장안): `.gitattributes` 추가(`* text=auto eol=lf`, 그림·wasm 바이너리, 승인 Manifest·`work/evidence/checks.txt`는 만들어진 CRLF 바이트 그대로 `-text`). 개인 설치 디자인 도구(`.claude/agents·data·hooks·skills`, `.claude/settings.json`, `.omd/`)와 매번 다시 만드는 `work/design/matrix/`는 `.gitignore`. `work/design/shots`의 r13~r20 증거 캡처 25장은 커밋. `git add --renormalize .` 결과 바뀐 추적 파일 없음.
++
++<a id="spacing-v1"></a>
++
++## 2026-11-09 — 메인 화면 간격 규칙 v1과 검사 스크립트
++
++사용자 지시: 메인 화면 카드·버튼·안내 줄 간격이 제각각이니 간격 규칙을 정하고, 코드를 맞추고, 다시 어긋나지 않게 검사 스크립트를 추가한다. 이 세션에 한해 사용자 허가로 `joedesign-skill/` 절차(JOEDESIGN)를 적용했다. 작업 종류는 로컬 수정이다. 시각 방향 v0.3과 배치는 그대로 두고 간격만 바꿨다.
++
++- **관찰(고치기 전, 렌더 측정):** 보이는 가장자리(그림자 포함) 기준으로 버튼 줄→안내 줄 1~2px, 평가 카드→말풍선 7px, 말풍선→후보 알약 4px(375×667은 2px)였다. 시작 화면은 제목→카드 22, 카드→버튼 20이었고 375×667에서는 카드→버튼 6px이었다. 말풍선 여백은 위 16/아래 18/좌우 22(휴대폰 10/12/14)로 서로 달랐다. 취소 버튼 그림자는 5px이고 옆 버튼은 7px이라 아래 가장자리가 맞지 않았다. 별도로 넓은 화면 시작 화면에서 상단 도움말·새 게임 아이콘이 오른쪽 끝이 아니라 가운데에 있었다(대결줄이 숨으면서 격자 칸이 당겨짐).
++- **규칙:** [DESIGN 간격 규칙 v1](DESIGN.md#spacing-v1) S1~S5와 토큰 표. 값은 담당자 제안이며 사용자 승인 전이다.
++- **코드:** `src/style.css` 끝에 "간격 v1" 블록을 두어 토큰(`--space-*`, `--pad-*`, `--gap-*`, `--drop-*`)을 한 곳에서 정의하고 메인 화면 간격이 이 토큰만 쓰게 했다. 그림자 블록은 `@property --drop`(상속 안 함)만큼 아래 여백을 더한다. 상단 아이콘 묶음은 `grid-column: -2`로 언제나 오른쪽 끝에 둔다. `src/main.ts`는 바꾸지 않았다.
++- **검사:** `work/design/spacing-check.mjs`(새 파일)와 합성 엔진 `work/design/fake-engine-worker.js`(새 파일)를 추가했다. 엔진 파일이 이 폴더에 없어서 대국 상태는 합성 엔진 응답으로 재현했다. 실행 순서는 `npx vite build`, `npx vite preview --port 5712`, `GOMOKU_DEV_PORT=5712 node work/design/spacing-check.mjs --spot --shots`이다.
++
++결과(현재 입력, 2026-11-09):
++
++```
++spacing S1 | 88/88 | 12 sizes x 5 states, light | rendered | 1440x900 candidates 평가 카드→말풍선 check 12 / observed 12, 말풍선→알약 12/12, 버튼 줄→스위치 12/12
++spacing S2 | 24/24 | 12 sizes x 1 state (setup), light | rendered | 1440x900 setup 카드→시작 버튼 check 24 / observed 24
++spacing S3 | 256/256 | 12 sizes x 5 states, light | rendered | 1440x900 candidates 말풍선 위 여백 check 20 / observed 20
++spacing S4 | 158/158 | 12 sizes x 5 states, light | rendered | 1280x720 setup 선택 줄 사이 check 12 / observed 12
++spacing S5 | 348/348 | 12 sizes x 5 states, light | rendered | 1440x900 candidates 고르기↔되돌리기 check 12 / observed 12
++side: scroll·hud clip·offscreen·top icons | 0 issues | 12 sizes x 5 states, light | rendered | not spot-checked
++before/after (원래 style.css로 같은 검사) | 350/879 → 874/874, 곁 검사 7 → 0 | 12 sizes x 5 states, light | rendered | not spot-checked
++fix 버튼 줄→안내 줄 간격 | fixed | 1440x900 x candidates, light | rendered | 캡처 픽셀 1 before / 12 after
++fix 평가 카드→말풍선 간격 | fixed | 1440x900 x candidates, light | rendered | 캡처 픽셀 7 before / 12 after
++fix 말풍선→후보 알약 간격 | fixed | 1440x900 x candidates, light | rendered | 캡처 픽셀 4 before / 12 after
++fix 시작 화면 상단 아이콘 위치 | fixed | 1440x900 x setup, light | rendered | 캡처 관찰: before 가운데(오른쪽 끝에서 669px) / after 오른쪽 끝(24px)
++```
++
++`npx tsc --noEmit` 통과, `npx vitest run` 87 passed·1 skipped(88). E2E(Playwright)는 엔진 파일이 없어 돌리지 않았다. 기존 `work/design/capture-matrix.mjs`도 실제 엔진 준비를 기다리므로 돌리지 않았다. 넘침은 이번 검사의 곁 검사로만 확인했다.
++
++남은 것: 값(12/8, 24/16, 20/12 등)의 사용자 시각 확인이 필요하다. 종료·복기 카드, 금수 안내, 엔진 경고, 간이 분석 줄, 도움말·새 게임 확인 창은 측정하지 않았다. 실제 엔진에서 E2E 회귀를 확인해야 한다. 규칙 범위에 대한 독립 검토와 전문 리뷰(R/C1)는 하지 않았다.

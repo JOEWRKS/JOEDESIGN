@@ -1,0 +1,178 @@
+{
+ "f01-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M tests/e2e/replay.spec.ts",
+  " M work/design/spacing-check.mjs"
+ ],
+ "f02-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "f03-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M tests/e2e/replay.spec.ts",
+  "?? tests/unit/replay-bar.test.ts"
+ ],
+ "f04-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "f05-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M tests/e2e/replay.spec.ts"
+ ],
+ "f06-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs"
+ ],
+ "f07-H": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M tests/e2e/replay.spec.ts"
+ ],
+ "f08-H": [
+  " M DESIGN.md",
+  " M ISSUES.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs",
+  "?? tests/e2e/reason-toggle.spec.ts"
+ ],
+ "f09-H": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M tests/e2e/replay.spec.ts"
+ ],
+ "f10-H": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs"
+ ],
+ "p01-I": [
+  " M ISSUES.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "p02-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "p03-I": [
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "p04-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  "?? work/design/notice-pad-check.mjs",
+  "?? work/design/spacing-notice-pad.log"
+ ],
+ "p05-I": [
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "p06-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "p07-H": [
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  "?? work/design/spacing-caption13.log"
+ ],
+ "p08-H": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "p09-H": [
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "p10-H": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs",
+  "?? work/design/spacing-v2.log"
+ ],
+ "y17-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M package.json",
+  " M src/style.css",
+  "?? work/design/fake-engine-worker.js",
+  "?? work/design/spacing-check.mjs"
+ ],
+ "y18-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  "?? work/design/fake-engine-worker.js",
+  "?? work/design/spacing-check.mjs"
+ ],
+ "z17-I": [
+  " M DESIGN.md",
+  " M ISSUES.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  "?? work/design/spacing-check.mjs"
+ ],
+ "z18-I": [
+  " M DESIGN.md",
+  " M ISSUES.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M package.json",
+  " M src/style.css",
+  "?? work/design/spacing-check.mjs"
+ ]
+}

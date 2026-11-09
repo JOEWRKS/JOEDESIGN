@@ -1,0 +1,12 @@
+{"scores": {"b": 1, "c": 1, "f": 1, "g": 1, "h": 1, "s": 1, "t": 1, "u": 0},
+ "evidence": {
+  "b": "| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured |",
+  "c": "| S3 같은 묶음 안 버튼·줄 사이 = `--gap-item`; 그림자 있는 버튼이 줄바꿈되면 줄 간격 = `--gap-item` + `--lift-btn`; 버튼 줄 안 취소 버튼 그림자 ≤ 줄 `--lift` | 같은 스크립트 (code) | not spot-checked (렌더 관찰 없음) | 세로·옆 배치 | 전 조건 | 선언 기준 | 버튼 글자 폭, 실제 줄바꿈 여부, 눌림(:active) 상태 |",
+  "f": "| 시작 화면 구역 사이(section) | 제목 묶음 → 시작 말풍선 → 시작 버튼 | `--gap-section: 16px`, 높이 ≤720: `--gap-section: 8px` | proposed |",
+  "g": "- spacing S1–S4 | 80/80 | CSS 조건 전부 x 선언 기준 상태, light | code | not spot-checked",
+  "h": "- 간격 수정 DESIGN-05 | changed | 1440×900·390×844 x 대국·시작, light | code | not spot-checked",
+  "s": "| S2 세로 배치에서 판 그림자 아래 → 말풍선 칸 = `--gap-block`; 말풍선 칸 → 행동 칸은 ≥ `--gap-block`(말풍선 칸이 남는 높이를 가짐) | 같은 스크립트 (code) | not spot-checked (렌더 관찰 없음) | 세로 배치(옆 배치에서는 판↔옆 칸 `--gap` clamp 24–40px, 이 규칙 밖) | 폭 <900 또는 세로가 긴 화면 | 대국 중 상태 | 판 흐린 그림자, 실제 판 크기 계산(`--size`)과 빈 높이 |",
+  "t": "- 상태: **open — 코드 수정(changed), 렌더 확인 전** (발견 2026-11-09, 사용자 지적).",
+  "u": "브라우저를 못 쓴 묶음이라 0. 근거: 다만 브라우저를 못 써서 화면에서 실제 간격을 재지는 못했습니다."
+ },
+ "browser_used": false}
