@@ -667,12 +667,12 @@ grades.json, summary.txt, analysis.json, pd-reads.json, live-notice.log, inciden
 | c 영향받는 검사(spacing-check) 재실행 또는 이유 | 6/6 | 4/4 |
 | report-check 실행 / 도장 | 0/6 / 0/6 | 0/4 / 0/4 |
 
-- 롱텀 인계 턴(G 1/5, H 1/2)에서 0에 가깝던 결과 목록 사용이 4/6로 올랐다. 네 건은 `spacing-check | 944/944 | 12크기×6상태 … | rendered | …`
+- 결과 목록 사용은 같은 장면의 H 0/4에서 I 4/6으로 올랐다(9·10부의 인계 턴 G 1/5, H 1/2는 목록 사용이 아니라 h2 통과 범위 점수라 직접 비교하지 않는다). 네 건은 `spacing-check | 944/944 | 12크기×6상태 … | rendered | …`
   같은 다섯 칸 줄과 `fixed`/`changed` 수정 줄을 썼고, 대조 없이 적용한 글자 크기 변경을 `changed`로 두고 해결 줄에서 뺐다(p03-I:
   "복기 해설·예측 안내 13px | changed | … | 코드 | 직접 확인 못 함").
 - 못 지킨 두 건: p05-I는 여섯 줄만 쓰고 해결 줄에 "944/944 통과·13px 측정"을 범위 없이 적었다(H와 같은 모양). p06-I는 여섯 줄 안에
-  검사 결과를 풀어 쓰고 목록은 없었으나 전후 캡처를 비교해 r4·t는 지켰다. Report Form 절은 DESIGN.md 끝(약 400줄 뒤)에 있었고,
-  두 건 다 DESIGN.md를 읽었는지와 무관하게 AGENTS.md 여섯 줄 형식을 우선했다.
+  검사 결과를 풀어 쓰고 목록은 없었으나 전후 캡처를 비교해 r4·t는 지켰다. 기록을 보면 p05-I는 DESIGN.md를 grep으로만 읽어 Report Form 절(136줄 중 124행)을
+  보지 못했고, p06-I는 절을 읽고도 목록을 쓰지 않았다. 절을 본 I 5건 중 4건이 형식을 따랐다.
 - 스크립트·도장은 인계 세션에 없다(스킬 폴더를 못 읽으므로 당연). 이 형식은 글의 모양만 옮기고 검사는 옮기지 못한다. JOENESS 제안서의
   "TASK 도장 줄 + `--verify`"가 이 자리를 메우는 것이지, DESIGN.md 문구로는 메워지지 않는다.
 - 라이브 대조([live-notice.log](part11/live-notice.log), 빌드한 dist를 내 Playwright로 열어 두 크기에서 측정): 안내 줄 높이 39→32.9px
@@ -689,7 +689,7 @@ u는 브라우저 2/2(오프라인은 해당 없음). 스크립트 실행 4/4(y1
 붙인 것, 상단 바 과제는 p3 기준 자체가 애매함(위). 40턴 재측정은 하지 않았다. 환경: 시험본 24개의 node_modules 정션은 모두 w3 사설 사본
 (os.readlink와 PowerShell Get-Item .Target 두 방법, bad=0). `--shared` 클론의 alternates 중첩이 5단계를 넘어 기준 저장소의 alternates를
 평탄화했다(mkI.py flatten). 인계·회귀 에이전트 9건이 "서버를 껐다"고 보고했으나 vite preview 프로세스가 남아 있어 내가 종료했다
-(시험본 프로세스만). 실제 AI-Gomoku 폴더 status 646→691 증가분은 모두 연결된 오목 세션의 notice-hud 캡처·ds-audit 파일이며 시험
+(시험본 프로세스만). 채점 주의: 인계 채점기가 grep 범위 실수로 다른 묶음의 DESIGN.md 경로와 일반 문구를 출력에서 봤다(팔 정보 없음, 채점에 안 썼다고 보고). 회귀 채점기는 f(규칙 행의 상태)와 k295의 u(같은 스크립트의 `--spot` 캡처 측정)가 엄격 해석이면 0일 수 있다고 밝혔다. Opus 27회는 승인 질문에 적은 15회·19회보다 많다(사용자 답 "더 많이 확실하게 검증해"를 받아 I 4·대조군 4회를 더했고, 실행 전에 27회라고 다시 알리지 않았다). 실제 AI-Gomoku 폴더 status 646→691 증가분은 모두 연결된 오목 세션의 notice-hud 캡처·ds-audit 파일이며 시험
 에이전트의 도구 호출에 실제 경로는 없었다([incidents.txt](part11/incidents.txt)). Opus 실행 27회(시험 24, 채점 3).
 
 ## 종합
