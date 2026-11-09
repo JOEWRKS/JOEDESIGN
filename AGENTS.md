@@ -51,7 +51,7 @@
   conformance.md Check 칸 예시·도장 보관, docs/proposals/2026-11-09-joeness-report-stamp.md(JOENESS 측 제안, 그 저장소는 미수정).
   한 턴 블라인드 24회(I 16, H 대조군 8) + 채점 3(evals/check-coverage-20261104/part11/, README 11부): 제품 정의 읽기 6/6 vs 0/4, 인계
   결과 목록 4/6 vs 0/4, 회귀 퇴행 없음. 시험본은 `_data/2026-11-09-joedesign-i/`, 정션은 사설 node_modules(두 방법 확인). 남은
-  서버 9개를 내가 종료, 실제 AI-Gomoku 변경은 연결된 오목 세션 것(part11/incidents.txt). 버전은 1.1.0 유지, 1.2.0 게시는 사용자 승인 대기.
+  서버 9개를 내가 종료, 실제 AI-Gomoku 변경은 연결된 오목 세션 것(part11/incidents.txt). 사용자 승인("게시 진행") 뒤 1.2.0으로 올리고 태그·Release·개인 설치 갱신(part11/install-receipt.md).
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)

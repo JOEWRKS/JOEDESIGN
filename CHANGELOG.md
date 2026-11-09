@@ -1,6 +1,6 @@
 # JOEDESIGN 업데이트 내역
 
-## 1.2.0 후보 — JOEFLOW 입력 명시·인계용 Report Form·JOENESS 도장 소비 제안 (2026-11-09, T043, 미게시)
+## 1.2.0 — JOEFLOW 입력 명시·인계용 Report Form·JOENESS 도장 소비 제안 (2026-11-09, T043)
 
 - 1.1.0에 더한 것(문서만, 스크립트·스키마·계약·CLI 그대로): SKILL.md "Decide the scope"에 Product source의 실체를 적은 문단
   (`product-definition/<slug>/state.json`·`MASTER_PLANNING_SPEC.md`·`approval_status.py`를 먼저 읽고 승인 revision을 Product
@@ -17,8 +17,8 @@
   회귀 4건 8부 기준표 전부 충족·도장 4/4. 회귀 14/14, 11/11, 142 OK.
 - 확인되지 않은 것: (1) 기존 기능 재배치가 표시 내용을 바꿀 때(복기 상단 바)의 경계 — I 3건 모두 "제품 결정 아님"으로 처리, 문구가
   정해 주지 않음; (2) 인계 세션 2/6은 Report Form 절을 두고도 AGENTS 여섯 줄만 씀, 인계에는 스크립트·도장이 없음; (3) JOENESS의 도장
-  소비는 제안서뿐, 실제 연결·검증 없음; (4) 40턴 재측정 없음, 고정물 1개, 셀당 n=2~3, 장면별 채점기 1명. 버전·태그·Release·개인
-  설치는 사용자 승인 뒤.
+  소비는 제안서뿐, 실제 연결·검증 없음; (4) 40턴 재측정 없음, 고정물 1개, 셀당 n=2~3, 장면별 채점기 1명.
+- 게시: 사용자 승인("게시 진행") 뒤 VERSION 1.2.0, 태그 v1.2.0, GitHub Release, 개인 설치 갱신(영수증 evals/check-coverage-20261104/part11/install-receipt.md).
 
 ## 1.1.0 — 보고 결과 형식·보고 검사 스크립트·도장 (2026-11-09, T043)
 
