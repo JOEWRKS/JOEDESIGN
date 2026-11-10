@@ -1,2 +1,3 @@
 - 2026-11-10 handoff trials q01-J,q02-J,q03-J,q05-I: vite preview on 5721/5722/5723/5725 still listening after the agents reported it stopped; killed by coordinator (trial-folder processes only, command lines checked).
 - 2026-11-10 real AI-Gomoku status 673→691 lines during the trials (work/evidence/*.png, work/design/app-safearea.log etc.; the repository also got a new commit 5ff654f), the linked gomoku session's own work; no trial tool call contained the real project path (transcript check, 20/20).
+- 2026-11-10 publish: edfc9e7 swept another session's uncommitted R5 edit of scripts/report-check.mjs in via git add -u and was pushed; restored to 1.2.0 in 06573af (index only, that session's working tree untouched); Codex install file restored from backup.
