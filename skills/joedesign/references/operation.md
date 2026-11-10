@@ -103,9 +103,7 @@ exposure or a mandatory constraint, send the specific conflict and proposed trad
 to the existing Product/PM owner. With JOEFLOW that owner is reached through its
 implementation re-entry (DISCOVER/CLOSE for the affected scope), and the item stays
 `product decision pending` in DESIGN.md and the report until the definition changes;
-the design session does not write the product decision. Moving, overlapping or
-hiding an existing function counts when it changes what is shown or the route to
-reach it; a change of position, size or spacing alone is a design decision. The design owner supplies
+the design session does not write the product decision. The design owner supplies
 the visual alternative;
 material visual replacement follows the user's scoped approval. Keep uncertain
 authority explicit and continue unaffected work, without a whole-project restart.

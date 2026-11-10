@@ -55,7 +55,8 @@
 - 추가(2026-11-10, 부모 세션 위임 과제 "JOEDESIGN 1.2.1 소개정" → 사용자 승인 "둘 다 승인"(시험 22회)): SKILL.md 재배치 경계 두 문장·인계 문단 한 문장, operation.md 한 문장,
   templates/DESIGN.md 제목 아래 Report Form 안내 줄. 한 턴 20회 + 블라인드 채점 2(evals/check-coverage-20261104/part12/, README 12부): 인계 Report Form 절 읽기 4/4 vs 2/4,
   `fixed`/`changed` 4/4 vs 2/4, 재배치 대기 기록 2/4 vs 2/4(경계 문구 효과 없음), 위치만 바꾼 과제의 오탐 0, 퇴행 없음. 남은 vite 서버 4개를 내가 종료, 실제 AI-Gomoku 변경은
-  오목 세션 것(part12/incidents.txt). 로컬 커밋까지, 푸시·VERSION 1.2.1·태그·Release·개인 설치는 승인 대기.
+  오목 세션 것(part12/incidents.txt). 사용자 승인("재배치 문구 빼고 게시") 뒤 재배치 경계 문구(SKILL.md 두 문장, operation.md 한 문장)를
+  빼고 Report Form 안내 줄·인계 문장만 1.2.1로 게시(VERSION·태그·Release·개인 설치, part12/install-receipt.md). 전후 표시 대조 절차는 다음 과제.
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)

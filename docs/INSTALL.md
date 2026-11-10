@@ -35,7 +35,7 @@ python -B <설치폴더>/scripts/harness_cli.py doctor
 
 | 항목 | 확인·준비 기준 |
 |---|---|
-| `version` | `1.2.0` 및 실제 운영지침 경로 확인 |
+| `version` | `1.2.1` 및 실제 운영지침 경로 확인 |
 | `doctor` | 발견 경로·누락된 전문 스킬 확인. 준비 부족 시 종료코드 2는 정상 진단 결과 |
 | 기본 전문 검수 | `impeccable`, `ui-ux-pro-max`, `web-design-guidelines` 필요 |
 | 추가 전문 검수 | 모션·React 성능 검수에 해당 전문 스킬 준비 |
