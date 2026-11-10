@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 1,
+  "h": 1,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- spacing-check S1~S6 | 944/944 통과 | 12크기×6상태, 실제 Chrome | 렌더 | not spot-checked (DESIGN 표에 직접 관찰 칸이 없음)",
+  "w": "- 엔진 상태 문구 12→13px | fixed | 3크기×엔진 실패 상태 | 렌더 | 360×640: 검사 13px / 캡처에서 13px 한 줄 확인",
+  "r4": "- 복기 해설·예상 수 안내·휴대폰 보조 문장 12→13px | changed | 2크기×2상태, 숨김 상태라 계산값만 | 렌더 | not spot-checked",
+  "g": "- 검사(렌더): `spacing-check` 12크기×6상태 944/944 통과, `tsc` 통과, 단위 87 통과·1 건너뜀.",
+  "h": "- spacing-check S1~S6 | 944/944 통과 | 12크기×6상태, 실제 Chrome | 렌더 | not spot-checked (DESIGN 표에 직접 관찰 칸이 없음)",
+  "t": "- **해결:** 엔진 상태 문구가 13px인 것을 1440×900, 390×844, 360×640에서 화면으로 확인했습니다.",
+  "c": "- spacing-check S1~S6 | 944/944 통과 | 12크기×6상태, 실제 Chrome | 렌더 | not spot-checked (DESIGN 표에 직접 관찰 칸이 없음)"
+ },
+ "browser_used": true
+}

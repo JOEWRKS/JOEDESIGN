@@ -85,3 +85,59 @@ test('the ok stamp binds the checked text: verify matches the same text and reje
   assert.equal(splitStamp(body).stampLine, null);
   assert.deepEqual(rules(sent), [], 'a stamp line at the end is not a claim');
 });
+
+const NONE = 'design checks: none ran';
+
+test('R5: a report that moved, overlapped, hid or merged an element needs before/after lines or `display unchanged`', () => {
+  assert.deepEqual(rules(`복기 버튼을 상단 바로 옮겼습니다.\n\n${NONE}\n`), ['R5']);
+  assert.deepEqual(rules(`I moved the replay buttons into the top bar.\n\n${NONE}\n`), ['R5']);
+  assert.deepEqual(rules(`해설 카드를 판 구석에 겹쳐 띄웠습니다.\n\n${NONE}\n`), ['R5']);
+  assert.deepEqual(rules(`복기 버튼을 상단 바로 옮겼습니다.\ndisplay unchanged: 같은 버튼·글자, 위치만 바뀜\n\n${NONE}\n`), []);
+});
+
+test('R5: matching before/after lines are a design decision; a differing pair needs product decision pending', () => {
+  const same = [
+    '복기 버튼을 상태 문장 위로 옮겼습니다.', '', '## Display before/after',
+    '- before: 복기 버튼 3개 | ◀ 이전 수, 다음 수 ▶, 종료 판으로 | 복기 중 항상 보임',
+    '- after: 복기 버튼 3개 | ◀ 이전 수, 다음 수 ▶, 종료 판으로 | 복기 중 항상 보임', '', NONE, '',
+  ].join('\n');
+  assert.deepEqual(rules(same), []);
+  const differ = [
+    '복기 버튼을 상단 바로 옮겼습니다.', '', '## Display before/after',
+    '- before: 대결줄 수 표시 | 복기 12/40수 | 항상 보임',
+    '- after: 대결줄 수 표시 | 복기 중 | 항상 보임', '', NONE, '',
+  ].join('\n');
+  const f = check(differ);
+  assert.deepEqual(f.map((x) => x[1]), ['R5']);
+  assert.match(f[0][3], /content or route differs/);
+  assert.equal(f[0][0], 5);
+  assert.deepEqual(rules(`${differ}\n남은 문제: 대결줄 수 표시 변경은 product decision pending (JOEFLOW 재진입)\n`), []);
+  assert.deepEqual(rules(`${differ}\n제품 결정 대기 없음 (위치만 바꿈)\n`), ['R5']);
+});
+
+test('R5: an element hidden after the change or shown only after it differs', () => {
+  const hidden = '카드를 숨겼습니다.\n\n- before: 직전 수 카드 | 해설 문장 | 항상 보임\n- after: 직전 수 카드 | hidden | 없음\n\n' + NONE + '\n';
+  assert.deepEqual(rules(hidden), ['R5']);
+  const added = '수 표시를 합쳤습니다.\n\n- before: 대결줄 | 흑 vs 백 | 항상 보임\n- after: 대결줄 | 흑 vs 백 | 항상 보임\n- after: 상단 바 수 번호 | 12 / 40 | 복기 중\n\n' + NONE + '\n';
+  const f = check(added);
+  assert.deepEqual(f.map((x) => x[1]), ['R5']);
+  assert.match(f[0][3], /no before line/);
+});
+
+test('R5: a before/after line takes three cells and is not read as a check outcome', () => {
+  assert.deepEqual(rules(`- before: 수 표시 12/40\n- after: 수 표시 12/40\n\n${NONE}\n`), ['R5', 'R5']);
+  assert.deepEqual(rules(`- before: 수 표시 | 복기 12/40수 | 항상 보임\n- after: 수 표시 | 복기 12/40수 | 항상 보임\n\n${NONE}\n`), []);
+});
+
+test('R5: descriptions of existing behavior, CSS and other uses of the words are not a relocation', () => {
+  const text = [
+    '좁은 화면에서는 기존 RULE-025에 따라 직전 내 수 카드가 숨겨집니다.',
+    '`overflow: hidden`은 그대로 두었습니다.',
+    '엔진 응답은 합성값으로 바꿔 재현했습니다.',
+    '키보드 포커스 이동 순서는 바꾸지 않았습니다.',
+    'The move number and the last move card are unchanged.',
+    '카드를 옮기지 않았고 숨기지도 않았습니다.',
+    '', NONE, '',
+  ].join('\n');
+  assert.deepEqual(rules(text), []);
+});

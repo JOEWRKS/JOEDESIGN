@@ -65,7 +65,11 @@ issue: it goes under 남은 문제 (remaining work) in the report, ISSUES and RO
 never under 해결 (resolved). Outside the list, a pass or count carries its
 parenthesis (sizes x states, rendered or code, spot check outcome). A turn with no
 design check says `design checks: none ran`. A result that is not spot-checked is
-not resolved, verified or done.
+not resolved, verified or done. A change that moves, overlaps, hides or merges an
+existing element lists, under `## Display before/after`, two lines per element:
+`before: element | content shown | route` and `after: ...` (`hidden` when gone).
+A pair that differs stays `product decision pending` until the product definition
+changes; a matching pair is a design decision.
 
 ## Open Decisions / Evidence Boundary
 

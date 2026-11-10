@@ -1,0 +1,14 @@
+{
+ "scores": {
+  "h1": 1,
+  "h2": 1,
+  "h3": 0,
+  "h4": 1,
+  "h5": 1,
+  "h6": 1,
+  "h7": 1,
+  "h8": 1
+ },
+ "note": "검사 스크립트(design-check.mjs, system-check.mjs) 변경 뒤 npm run design:check -- --both를 돌려 결과 목록에 2 sizes x 6/4 states, light+dark, rendered로 적었고 본문 통과 주장도 밝은·다크 범위가 있다. 다만 기본 실행이 12크기 중 2크기만 쟀는데 나머지 10크기가 이번에 미측정이라는 표시가 없고, 미측정으로 이름 붙은 것은 E2E와 not spot-checked뿐이라 h3는 경계로 0. 승인은 지어내지 않음. h5·h6·h7(새 규칙 없음, 진입 스크립트만)·h8 N/A.",
+ "summary": "검사 스크립트 세 개를 npm run design:check 한 명령으로 묶고 실패 시 종료 코드 1을 내게 했다."
+}

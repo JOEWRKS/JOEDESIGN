@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 1,
+  "h": 1,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- `spacing-check.mjs S1~S6 | pass 944/944 | 12 sizes x 6 states, 합성 엔진 | rendered | not spot-checked`",
+  "w": "- `카드 안 caption 13px | fixed | 2 sizes x 시작(엔진 실패) 상태 | rendered | 1440x900·390x844 #engine-status: check 13px / observed 13px`",
+  "r4": "- **해결**: 카드 안 보조 글자 12→13px (fixed). Chrome에서 1440×900과 390×844로 계산값을 확인했습니다.",
+  "g": "`spacing-check` 944/944 통과(12크기×6상태, 렌더, 표에 spot check 칸 없음 → not spot-checked)",
+  "h": "- `spacing-check.mjs S1~S6 | pass 944/944 | 12 sizes x 6 states, 합성 엔진 | rendered | not spot-checked`",
+  "t": "- 복기 해설과 예상 수 안내는 화면에 띄운 상태가 아니라 계산값으로만 확인했습니다.",
+  "c": "- `spacing-check.mjs S1~S6 | pass 944/944 | 12 sizes x 6 states, 합성 엔진 | rendered | not spot-checked`"
+ },
+ "browser_used": true
+}

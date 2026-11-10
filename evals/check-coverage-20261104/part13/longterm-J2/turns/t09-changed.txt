@@ -1,0 +1,6 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/tmp/caption-probe.mjs
+work/tmp/caption-shot.mjs

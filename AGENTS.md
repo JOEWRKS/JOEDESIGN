@@ -58,6 +58,12 @@
   오목 세션 것(part12/incidents.txt). 사용자 승인("재배치 문구 빼고 게시") 뒤 재배치 경계 문구(SKILL.md 두 문장, operation.md 한 문장)를
   빼고 Report Form 안내 줄·인계 문장만 1.2.1로 게시(VERSION·태그·Release·개인 설치, part12/install-receipt.md). 전후 표시 대조 절차는 다음 과제.
   정정: 태그 v1.2.1은 06573af(주 세션이 생성), GitHub Release 게시됨. edfc9e7에 섞인 1.3.0 세션의 미완성 R5 코드와 되돌림 기록은 part12/incidents.txt.
+- 추가(2026-11-10~11, 부모 세션 위임 과제 "JOEDESIGN 1.3.0" → 사용자 승인 "둘 다 승인 (75회)", "13회 추가 후 40턴", "처음부터 다시"(총 89회)): 재배치·겹침·숨김·병합은
+  `## Display before/after` 요소별 전후 두 줄로 판정(SKILL.md 한 문장, 효과 미확인 세 문장 삭제로 14,212B ≤ 1.2.1 14,216B), templates/DESIGN.md Report Form 한 문단,
+  conformance.md R5, report-check.mjs R5와 테스트 16/16. 한 턴 72회 + 채점 4(evals/check-coverage-20261104/part13/, README 13부): 표시가 바뀐 재배치 대기 8/8 vs 1/8, 오탐 0,
+  기존 항목은 같거나 높음. 40턴 L-J2 + 채점 10(part13/longterm-J2/): G 재채점 대비 h2 33 vs 27, 8개 전부 29 vs 20, 함정·도장·스크립트 전부, h1·인계 h3·h7 각 1턴 낮음.
+  내 실수: 첫 40턴 시도에서 턴 6에 백로그 밖 메시지를 보내 무효 처리(part13/longterm-J-void1/). 또 1.2.1 게시 세션 커밋에 미완성 R5가 섞였다가 그 세션이 되돌렸다(06573af).
+  로컬 커밋까지, 푸시·VERSION 1.3.0·태그·Release·개인 설치는 승인 대기.
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)

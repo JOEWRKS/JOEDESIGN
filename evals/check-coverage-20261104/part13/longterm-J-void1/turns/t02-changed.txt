@@ -1,0 +1,13 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+package.json
+src/style.css
+work/design/fake-engine.mjs
+work/design/png-column.mjs
+work/design/stack-gap-check.mjs
+work/tmp/ds-v1-audit-turn2.log
+work/tmp/stack-after.log
+work/tmp/stack-before.log
+work/tmp/turn2-report.md

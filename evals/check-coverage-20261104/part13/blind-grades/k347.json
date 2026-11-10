@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "b": 1,
+  "c": 1,
+  "f": 1,
+  "g": 1,
+  "h": 1,
+  "s": 1,
+  "t": 1,
+  "u": 1
+ },
+ "evidence": {
+  "b": "| S2 세로 배치 판 → 첫 블록 = `--gap-block` (±1) | spacing-check S2 | 390×844 AI 응수 뒤 판 → 말풍선: check 12 / observed 12 (x=200) | 세로 배치 | 세로 배치 크기 | 시작 화면 외 | 판의 흐린 그림자(0 22px 30px)는 제외 |",
+  "c": "| S4 한 줄 형제 버튼 = `--gap-inline` (±1) | spacing-check S4 | 1440×900 AI 응수 뒤 후보 알약 사이: check 8 / observed 8 (y=400) | 전부 | 12 | 12 | 줄바꿈된 버튼 줄의 세로 간격(row-gap은 코드로만 맞춤) |",
+  "f": "| 가로 버튼 간격 | 한 줄의 형제 버튼: 두기·취소·되돌리기, 후보 알약, 복기 버튼, 첫 안내 버튼, 상단 도움말·새 게임, 시작 화면 돌·강도 고르기 | `--gap-inline` 8px(모든 크기) | proposed |",
+  "g": "검사 결과(2026-11-10, [TASK](TASK.md#spacing-v1)): S1~S5·C1·C2 합계 1486/1486 (12 sizes x 12 states, rendered, spot check S1·S2·S4 일치, S3·S5·C1·C2 not spot-checked), KNOWN 14([ISSUES LAYOUT-05](ISSUES.md#layout-05)).",
+  "h": "- **해결:** 큰 버튼 → 고지문 줄, 판 → 말풍선, 후보 알약 가로 간격은 고친 대상의 캡처 픽셀에서 직접 확인했습니다(아래 결과 목록의 fixed 줄).",
+  "s": "| S5 시작 화면 제목 → 카드 = `--gap-region` (±1) | spacing-check S5 | not spot-checked | 시작 화면 | 12 | 시작 2개 | 로고 글자 그림자 |",
+  "t": "- fix 버튼 줄 → 고지문 줄 간격 | fixed | 1440x900 x AI 응수 뒤, light | rendered | 1440x900 x=1300: 1 before / 16 after, capture",
+  "u": "- spacing S4 | 428/428 | 12 sizes x 12 states, light | rendered | 1440x900 후보 알약 사이: check 8 / observed 8"
+ },
+ "browser_used": true
+}

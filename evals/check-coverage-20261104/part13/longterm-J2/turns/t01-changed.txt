@@ -1,0 +1,17 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+work/design/ds-v1-check.mjs
+work/design/ds-v1-contrast.mjs
+work/design/ds-v1-spot.mjs
+work/design/token-inventory.mjs
+work/tmp/ds-v1-check.log
+work/tmp/ds-v1-head.md
+work/tmp/ds-v1-spot.log
+work/tmp/preview.log
+work/tmp/probe.mjs
+work/tmp/probe2.mjs
+work/tmp/probe3.mjs
+work/tmp/turn1-report.txt
+work/tmp/vite.log

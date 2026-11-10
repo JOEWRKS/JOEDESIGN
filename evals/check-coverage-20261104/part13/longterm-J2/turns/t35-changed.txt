@@ -1,0 +1,9 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/main.ts
+src/style.css
+work/design/spacing-check.mjs
+work/tmp/main.before-reason.ts
+work/tmp/rec35.cjs
+work/tmp/turn35-report.txt

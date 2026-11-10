@@ -1,0 +1,11 @@
+DESIGN.md
+README.md
+ROADMAP.md
+TASK.md
+work/design/design-check.mjs
+work/design/motion-check.mjs
+work/design/spacing-check.mjs
+work/tmp/rec34.cjs
+work/tmp/speed34.cjs
+work/tmp/t34-all.log
+work/tmp/turn34-report.txt

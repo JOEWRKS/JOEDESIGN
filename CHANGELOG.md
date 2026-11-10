@@ -1,5 +1,29 @@
 # JOEDESIGN 업데이트 내역
 
+## 1.3.0 후보 (미게시) — 재배치는 전후 표시 대조표로 판정 (2026-11-11, T043)
+
+- 1.2.1에 더한 것: SKILL.md "Decide the scope" 문단에 "기존 요소를 옮기거나 겹치거나 숨기거나 합치면 먼저 DESIGN.md와 보고에 `## Display before/after`를
+  요소마다 `before: element | content shown | route` / `after: ...` 두 줄(사라지면 `hidden`)로 적고, 두 줄이 다르면 제품 결정 대기, 같으면 디자인 결정".
+  templates/DESIGN.md Report Form에 같은 규칙 한 문단(인계 세션용), conformance.md에 R5 설명. `scripts/report-check.mjs` R5: 옮김·겹침·숨김·병합 완료 문장이 있는데
+  before/after 줄도 `display unchanged`도 없으면, 또는 쌍이 다른데 `product decision pending` 줄이 없으면 지적한다. 스키마·CLI·도장은 그대로이고, 테스트는 11개에서 16개가 됐다.
+- 뺀 문장(문구 총량 유지: SKILL.md 14,216바이트에서 14,212바이트): (1) 인계 문단 "The handoff tells that session to read DESIGN.md's Report Form section and report in that form."
+  (12부에서 재지 않음. 효과는 DESIGN.md 맨 위 줄이 냄) (2) "The script reads the form of the sentences, not whether a number is true."(스크립트 주석·conformance.md에 같은 말)
+  (3) "Review-only never gains write authority. The user need not prepare machine files or choose between a core and harness."(작업 종류 표와 중복, 재지 않음).
+- 확인된 것([README 13부](evals/check-coverage-20261104/README.md), Opus 89회, 1.2.1 대조군):
+  - 재배치 효과: 표시가 바뀐 재배치의 제품 결정 대기 8/8 vs 1/8, 요소별 전후 대조 12/12 vs 0/12. 위치만 바꾼 과제의 오탐은 0(4/4 vs 4/4).
+  - 기존 항목: 기능 추가 6건은 같거나 높았다(p3 5/6 vs 3/6). 인계 24건은 l 11 vs 10, w 11 vs 9, r4 12 vs 10, g 3 vs 2, h 8 vs 7, t·c 같음. 회귀 6건은 같았다.
+    state.json 읽기는 21/24 vs 13/24.
+  - R5 오탐: 기존 보고 306건에서 R1~R4 결과 변화 0, 재배치 보고 21/21 감지, 그 밖 285건 중 16건.
+  - 40턴(새 고정물 L-J2, 9부 G와 같은 채점기로 재채점): h2 33 vs 27(9부 기준 30), 8개 전부 29 vs 20(기준 21), 함정 h4·h6·h8 40/40,
+    주 세션 35턴 report-check 실행·도장 일치 35/35, 라이브 대조 24행 일치.
+- 확인되지 않은 것·남은 것:
+  (1) 전후 줄의 내용 칸을 추상적으로 적으면("현재 수, 색, 좌표") 실제 글자가 바뀌어도 쌍이 같아진다. 스크립트는 막지 못한다(한 턴 f03-K, 40턴 턴 4).
+  (2) 40턴에서 h1(38 vs 39)과 인계 h3·h7(각 4 vs 5)이 각 1턴 낮다. 원인은 전후 대조와 무관한 보고 누락이지만, 측정된 차이로 남긴다.
+  (3) 셀당 n=3~4, 장면별 채점기 1명, 40턴은 세션 1개다. K 보고의 Display 줄이 팔을 드러낼 수 있다.
+  (4) 대국 화면은 엔진 파일 없이 가짜 엔진으로 쟀다.
+  (5) JOENESS 쪽 도장 소비는 여전히 별도 과제다.
+- 사고: 40턴 첫 시도에서 코디네이터가 백로그에 없는 턴 6 메시지를 보내 무효 처리했고(사용자 결정 "처음부터 다시"), 기록은 part13/longterm-J-void1/에 남겼다.
+
 ## 1.2.1 — 인계 세션이 Report Form을 읽게 하는 안내 줄 (2026-11-10, T043)
 
 - 1.2.0에 더한 것(문서만, 스크립트·스키마·계약·CLI 그대로): templates/DESIGN.md 제목 바로 아래에 "보고는 `## Report Form` 절을 그대로 따른다" 한 줄,

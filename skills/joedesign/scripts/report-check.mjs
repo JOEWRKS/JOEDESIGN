@@ -16,6 +16,10 @@
 //       rendered or code, and the spot check outcome
 //   R4  a fix whose list line says `changed` is not named in the report's 해결 (resolved)
 //       line; an unconfirmed fix belongs under 남은 문제 (remaining)
+//   R5  a report that says it moved, overlapped, hid or merged an existing element
+//       carries `before: element | content shown | route` and `after: ...` lines for
+//       each element (or one `display unchanged` line); when a pair differs, the report
+//       records it as `product decision pending` (제품 결정 대기)
 //   A report with no design check run says so in one line, `design checks: none ran`
 //   (or `디자인 검사: 실행 안 함`); that line satisfies R1 instead of a results list.
 //
@@ -84,6 +88,29 @@ const NO_OBS = new RegExp(
   '^\\s*[-—]?\\s*$|not spot-checked|대조\\s*안|직접\\s*(?:비교|확인)\\s*안|확인\\s*안\\s*함|' +
   '(?:확인|대조)(?:하지|지)\\s*(?:못|않)', 'i');
 const RULE_ROW = /^[\s:\-|]+$/;
+// R5: words that say this work moved, overlapped, hid, merged or removed an element
+const RELOCATE = new RegExp([
+  /옮겼|옮김|옮겨\s*(?:놓|두|넣|달|붙|배치)|이동(?:시켰|했|함)|재배치/.source,
+  /겹쳤|겹치게|겹칩니다|겹치는데|겹쳐\s*(?:띄|놓|두|배치|올|표시|얹|있)/.source,
+  /숨겼|숨김\s*처리|숨기도록|합쳤|합침|병합/.source,
+  /\b(?:moved|relocated|repositioned|overlaid|merged|hid)\b|made\s+\S+\s+overlap/.source,
+].join('|'), 'i');
+// moving a file, a token, a CSS value, a check or a record is not moving something the user sees;
+// nor is a rule that already did so
+const RELOCATE_NOT_UI = new RegExp([
+  /파일|폴더|스크립트|토큰|token|변수|variable|\bfiles?\b|\bfolders?\b/.source,
+  /기록|문서|이력|DESIGN|ROADMAP|TASK|ISSUES|캡처|screenshot|기준\s*(?:값|선)?|덮어쓰|선언/.source,
+  /검사|\bchecks?\b|테스트|\btests?\b|포커스|초점|focus|[+-]\s*\d+\s*px|되어\s*있|돼\s*있/.source,
+].join('|'), 'i');
+const BA_LINE = /^\s*(?:[-*+]\s*)?\**\s*(before|after)\s*\**\s*[:：]\s*(.*)$/i;
+const DISPLAY_SAME = /display unchanged|표시\s*(?:변화|변경)\s*없음/i;
+const PENDING = /product decision pending|제품\s*결정\s*대기/i;
+// "no pending item" is not a pending record
+const NO_PENDING = /\b(?:no|not)\s+(?:a\s+)?product decision pending|(?:product decision pending|제품\s*결정\s*대기)[^.。\n]{0,12}(?:없|아님|아니|\bnone\b|\bno\b|\b0\b)/i;
+
+function baKey(s) {
+  return s.replaceAll('`', '').replace(/["'“”‘’]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
+}
 
 function cellsOf(line) {
   let body = line.trim().replace(/^(?:[-*+]|\d+[.)])\s+/, '');
@@ -131,12 +158,26 @@ export function check(text) {
   let noneRan = false;
   const changedFixes = []; // [lineNo, name]
   const resolvedLines = []; // [lineNo, text]
+  const baLines = []; // [lineNo, 'before'|'after', cells]
+  let relocateAt = 0;
+  let displaySame = false;
+  let pending = false;
   text.split(/\r?\n/).forEach((raw, index) => {
     const no = index + 1;
     if (raw.trim().startsWith('```')) { inCode = !inCode; return; }
     if (!raw.trim()) return;
     if (STAMP_LINE.test(raw.trim())) return; // a stamp from an earlier run is not part of the report
     if (NONE_RAN.test(raw)) noneRan = true;
+    if (!inCode) {
+      const ba = raw.replaceAll('**', '').match(BA_LINE);
+      if (ba) {
+        baLines.push([no, ba[1].toLowerCase(), ba[2].split('|').map((c) => c.trim())]);
+        return; // a before/after line is a record, not prose or a result row
+      }
+      if (DISPLAY_SAME.test(raw)) displaySame = true;
+      if (PENDING.test(raw) && !NO_PENDING.test(raw)) pending = true;
+      if (!relocateAt && sentences(raw.replaceAll('`', '')).some((x) => RELOCATE.test(x) && !RELOCATE_NOT_UI.test(x))) relocateAt = no;
+    }
     const resolved = raw.match(RESOLVED_LINE);
     if (resolved) resolvedLines.push([no, resolved[1]]);
     const cells = cellsOf(raw);
@@ -205,6 +246,35 @@ export function check(text) {
           'goes under 남은 문제, not 해결']);
         break;
       }
+    }
+  }
+  // R5: display before/after for a move, overlap, hide or merge
+  if (relocateAt && !baLines.length && !displaySame) {
+    findings.push([relocateAt, 'R5', '',
+      'this report moves, overlaps, hides or merges an element: add `before: element | content shown | route` ' +
+      'and `after: element | content shown | route` lines for each element (`hidden` when it is no longer shown), ' +
+      'or one `display unchanged` line']);
+  }
+  const pairs = new Map(); // element -> {before, after, no}
+  for (const [no, side, cells] of baLines) {
+    if (cells.length < 3 || !cells[0]) {
+      findings.push([no, 'R5', cells.join(' | '),
+        'a before/after line has three cells: `element | content shown | route to reach it`']);
+      continue;
+    }
+    const key = baKey(cells[0]);
+    const entry = pairs.get(key) || { name: cells[0], before: null, after: null, no };
+    entry[side] = cells.slice(1).map(baKey).join(' | ');
+    entry.no = no;
+    pairs.set(key, entry);
+  }
+  const differs = [...pairs.values()].filter((e) => e.before !== e.after);
+  if (differs.length && !pending) {
+    for (const e of differs) {
+      const why = e.before === null ? 'no before line' : e.after === null ? 'no after line' : 'content or route differs';
+      findings.push([e.no, 'R5', e.name,
+        `before and after differ (${why}): what the user sees or how they reach it changed, so record it as ` +
+        '`product decision pending` for JOEFLOW re-entry; a pair that only moved has the same content and route']);
     }
   }
   return findings;

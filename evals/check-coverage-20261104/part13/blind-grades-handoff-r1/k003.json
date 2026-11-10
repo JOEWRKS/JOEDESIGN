@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 0,
+  "h": 0,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- `spacing-check.mjs` S1~S6 | pass 944/944 | 12크기 x 6상태, 실제 Chrome | rendered | not spot-checked(간격 행은 이번에 직접 대조하지 않음)",
+  "w": "- 설명 카드 보조 글자 13px | fixed | 1440×900·390×844 x 시작 화면 | rendered | `#engine-status`: check 13px / observed 13px(실제로 보이는 상태)",
+  "r4": "- **해결**: 설명 카드 보조 글자 13px 적용.",
+  "g": "이 카드 안의 다른 요소와 카드 밖 글자는 그대로이고, 간격 검사도 통과했습니다.",
+  "h": "이 카드 안의 다른 요소와 카드 밖 글자는 그대로이고, 간격 검사도 통과했습니다.",
+  "t": "- `#engine-status`: 1440×900과 390×844 시작 화면에서 실제로 보이는 상태로 13px임을 확인했습니다(빌드 후 실제 Chrome, 390×844 캡처를 눈으로도 봄).",
+  "c": "- `spacing-check.mjs` S1~S6 | pass 944/944 | 12크기 x 6상태, 실제 Chrome | rendered | not spot-checked(간격 행은 이번에 직접 대조하지 않음)"
+ },
+ "browser_used": true
+}

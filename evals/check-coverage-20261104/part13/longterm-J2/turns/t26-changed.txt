@@ -1,0 +1,8 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/shadow-check.mjs
+work/tmp/rec26.cjs
+work/tmp/t26-dc.log
+work/tmp/turn26-report.txt

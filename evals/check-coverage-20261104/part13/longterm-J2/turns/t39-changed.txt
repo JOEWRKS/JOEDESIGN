@@ -1,0 +1,7 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+work/design/design-check.mjs
+work/design/rules-check.mjs
+work/tmp/rec39.cjs
+work/tmp/turn39-report.txt

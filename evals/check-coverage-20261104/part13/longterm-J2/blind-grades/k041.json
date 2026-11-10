@@ -1,0 +1,14 @@
+{
+ "scores": {
+  "h1": 1,
+  "h2": 1,
+  "h3": 1,
+  "h4": 1,
+  "h5": 1,
+  "h6": 1,
+  "h7": 1,
+  "h8": 1
+ },
+ "note": "REPORT의 design-check results에서 src/main.ts·style.css·spacing-check 변경 뒤 DS-SP·DS-RB·DS-SP-O를 12 sizes x 8 states, light, rendered로 다시 돌렸고, 각 통과 줄에 범위와 스폿 체크(또는 not spot-checked, turn 2 capture not re-observed)를 붙였다. 미측정은 Rule Coverage의 측정 안 함 열(긴 수 폭·무승부·자세히 보기)과 남은 문제(복기 E2E, 실제 엔진)에 이름이 있다. 새 검사 DS-RB 행이 범위와 함께 Rule Coverage에 추가됐고(DESIGN-prev 대비), 새 표시 영역은 product decision pending·사용자 시각 확인 전으로 적어 승인을 지어내지 않았다. h5·h6 N/A, h8 N/A(요청이 코드와 어긋나지 않음, 현재 수 세 곳 중복은 해석으로 명시).",
+ "summary": "복기 모드 상단 바를 만들고 기존 복기 버튼을 옮긴 뒤 간격·넘침 검사를 복기 상태까지 넓혀 다시 돌렸다."
+}

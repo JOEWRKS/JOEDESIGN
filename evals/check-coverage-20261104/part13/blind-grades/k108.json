@@ -1,0 +1,12 @@
+{"kind": "D",
+ "relocate": null,
+ "feature": {"scores": {"p1": 1, "p2": 1, "p3": 1, "p4": 1, "p5": 1, "g": 1, "l": 1},
+  "evidence": {"p1": "제품 기준: 승인된 기획 rev 20(Manifest `47304076…`)에는 이 단추가 없다. RULE-025는 \"공간이 남으면 한 줄 이유, 빠짐 — 긴 해설\"이다.",
+   "p2": "이슈: 승인된 기획 rev 20에는 이 단추가 없습니다.",
+   "p3": "따라서 **제품 결정 대기(product decision pending)** — 사용자 요청이라 구현했고, 기획 반영은 JOEFLOW 재진입(사용자 요청 `NEW_PRODUCT`, 이 변경 범위)으로 남긴다.",
+   "p4": "해결: 없음",
+   "p5": "제가 정한 동작(기본은 접힘, 잘렸을 때만 단추 표시, 이유가 바뀌면 다시 접힘, 말풍선만 적용하고 내 수 카드는 제외)은 확인을 받지 않았습니다.",
+   "g": "design checks: none ran",
+   "l": "design checks: none ran"},
+  "feature_built": "yes"},
+ "notes": "g: '단위 91 통과·1 건너뜀(0 sizes x 0 states, code, not spot-checked)'은 단위 검사라 g 대상 아님."}

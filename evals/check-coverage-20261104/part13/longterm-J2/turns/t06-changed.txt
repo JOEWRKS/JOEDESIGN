@@ -1,0 +1,14 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+work/design/capture-matrix.mjs
+work/design/ds-v1-check.mjs
+work/design/sizes.mjs
+work/design/spacing-check.mjs
+work/tmp/preview.log
+work/tmp/rec6.cjs
+work/tmp/t6-ds-all.log
+work/tmp/t6-ds-default.log
+work/tmp/t6-spacing-all.log
+work/tmp/t6-spacing-default.log
+work/tmp/turn6-report.txt

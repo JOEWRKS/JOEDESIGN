@@ -1,0 +1,202 @@
+{
+ "1": [
+  "main",
+  "stamp: match (2,433 chars 2bbb4a90); text ok",
+  2
+ ],
+ "2": [
+  "main",
+  "stamp: match (2,798 chars 7883d41f); text ok",
+  2
+ ],
+ "3": [
+  "main",
+  "stamp: match (1,389 chars a93085b3); text ok",
+  2
+ ],
+ "4": [
+  "main",
+  "stamp: match (3,227 chars 410f9bb4); text ok",
+  6
+ ],
+ "5": [
+  "main",
+  "stamp: match (2,648 chars 65c237c5); text ok",
+  2
+ ],
+ "6": [
+  "main",
+  "stamp: match (2,030 chars ef6f67fb); text ok",
+  2
+ ],
+ "7": [
+  "main",
+  "stamp: match (2,002 chars 2595baae); text ok",
+  2
+ ],
+ "8": [
+  "main",
+  "stamp: match (1,729 chars 12c95770); text ok",
+  4
+ ],
+ "9": [
+  "handoff",
+  "stamp: missing (the sent report does not end with a report-c",
+  0
+ ],
+ "10": [
+  "handoff",
+  "stamp: missing (the sent report does not end with a report-c",
+  0
+ ],
+ "11": [
+  "main",
+  "stamp: match (2,874 chars 15c0b699); text ok",
+  2
+ ],
+ "12": [
+  "main",
+  "stamp: match (2,304 chars f41c0ef1); text ok",
+  2
+ ],
+ "13": [
+  "main",
+  "stamp: match (2,953 chars 8cfd56dd); text ok",
+  3
+ ],
+ "14": [
+  "main",
+  "stamp: match (1,566 chars b5610919); text ok",
+  2
+ ],
+ "15": [
+  "main",
+  "stamp: match (2,177 chars d9d21c82); text ok",
+  2
+ ],
+ "16": [
+  "main",
+  "stamp: match (2,805 chars b869ce2a); text ok",
+  2
+ ],
+ "17": [
+  "main",
+  "stamp: match (2,575 chars cb4ec702); text ok",
+  3
+ ],
+ "18": [
+  "main",
+  "stamp: match (2,130 chars deab96b7); text ok",
+  3
+ ],
+ "19": [
+  "main",
+  "stamp: match (2,916 chars 9536bef9); text ok",
+  3
+ ],
+ "20": [
+  "main",
+  "stamp: match (2,520 chars 9c7b10b2); text ok",
+  2
+ ],
+ "21": [
+  "handoff",
+  "stamp: missing (the sent report does not end with a report-c",
+  0
+ ],
+ "22": [
+  "handoff",
+  "stamp: missing (the sent report does not end with a report-c",
+  0
+ ],
+ "23": [
+  "main",
+  "stamp: match (2,340 chars d60ef32e); text ok",
+  3
+ ],
+ "24": [
+  "main",
+  "stamp: match (1,355 chars 97b42aed); text ok",
+  2
+ ],
+ "25": [
+  "main",
+  "stamp: match (1,209 chars 0da30ab6); text ok",
+  2
+ ],
+ "26": [
+  "main",
+  "stamp: match (2,403 chars a0852507); text ok",
+  2
+ ],
+ "27": [
+  "main",
+  "stamp: match (3,170 chars 26717f5e); text ok",
+  3
+ ],
+ "28": [
+  "main",
+  "stamp: match (966 chars 86260f5e); text ok",
+  2
+ ],
+ "29": [
+  "main",
+  "stamp: match (2,165 chars 8c36724d); text ok",
+  2
+ ],
+ "30": [
+  "main",
+  "stamp: match (2,158 chars 470315ed); text ok",
+  2
+ ],
+ "31": [
+  "handoff",
+  "stamp: missing (the sent report does not end with a report-c",
+  0
+ ],
+ "32": [
+  "main",
+  "stamp: match (957 chars a801abcd); text ok",
+  2
+ ],
+ "33": [
+  "main",
+  "stamp: match (1,570 chars 927913f0); text ok",
+  2
+ ],
+ "34": [
+  "main",
+  "stamp: match (1,992 chars ef68d158); text ok",
+  4
+ ],
+ "35": [
+  "main",
+  "stamp: match (2,196 chars b2ecffd4); text ok",
+  2
+ ],
+ "36": [
+  "main",
+  "stamp: match (944 chars 6d8659ec); text ok",
+  2
+ ],
+ "37": [
+  "main",
+  "stamp: match (1,120 chars 446ef606); text ok",
+  3
+ ],
+ "38": [
+  "main",
+  "stamp: match (3,625 chars 7e0a0bf4); text ok",
+  2
+ ],
+ "39": [
+  "main",
+  "stamp: match (1,886 chars 6507c19e); text ok",
+  3
+ ],
+ "40": [
+  "main",
+  "stamp: match (2,129 chars 225e69cf); text ok",
+  4
+ ]
+}

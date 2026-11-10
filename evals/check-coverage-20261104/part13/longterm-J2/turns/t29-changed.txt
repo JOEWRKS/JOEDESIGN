@@ -1,0 +1,9 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/bubble-text-check.mjs
+work/design/design-check.mjs
+work/tmp/rec29.cjs
+work/tmp/t29.log
+work/tmp/turn29-report.txt

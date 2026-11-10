@@ -59,7 +59,11 @@ pending` (제품 결정 대기) with the missing item and the revision read, sen
 through JOEFLOW's implementation re-entry (DISCOVER/CLOSE for the affected scope;
 the user's words passed on by another session are `RELAYED_USER_INTENT`, a feature
 added to a running product is `NEW_PRODUCT` scoped to the change), and continue the
-visual work the definition already covers. If the user's own request is that
+visual work the definition already covers. Moving, overlapping, hiding or merging
+an existing element first gets `## Display before/after` in DESIGN.md and the
+report, per element: `before: element | content shown | route` and `after: ...`
+(`hidden` when gone). A differing pair is recorded as above; a match is a design
+decision. If the user's own request is that
 behavior, build what the user specified and keep its product record pending: the
 definition is extended in JOEFLOW, not by code or DESIGN.md, and any part of the
 behavior the user did not specify is a product question for that re-entry, not a
@@ -155,8 +159,7 @@ route. Continue independent authorized work without expanding an unproved direct
    or separate draft checked in place of the message is not a check. When no design
    check ran this turn, the report says `design checks: none ran` in one line in
    place of the results list; the sentence rules still apply. A fix whose line says
-   `changed` is listed under remaining work, never under 해결. The script reads the
-   form of the sentences, not whether a number is true. If it cannot run, say so in
+   `changed` is listed under remaining work, never under 해결. If it cannot run, say so in
    the report.
    The project's report format decides the sections; this decides the form of each
    result. Technical checks, visual judgment,
@@ -175,8 +178,6 @@ measurements. Missing/failed/stale conformance blocks the relevant phase even wh
 generic specialist claims pass. Use verify-design for direct/non-Git observations,
 and pass its result to JOENESS's completion consumer where connected; JOEDESIGN
 does not own that work ledger or grant user acceptance.
-Review-only never gains write authority. The user need
-not prepare machine files or choose between a core and harness.
 
 Direct host/browser tools and non-Git projects follow the same operating route,
 recording source → decision → observation → verdict in existing DESIGN/review records;
@@ -185,8 +186,7 @@ design is handed to a project session that cannot load JOEDESIGN, the token-role
 rule-coverage tables travel in DESIGN.md with their status, and so does its Report
 Form section (the result-line form, `fixed`/`changed`, `changed` under remaining
 work), so that session can keep the rules and report in the same form without this
-skill. The handoff tells that session to read DESIGN.md's Report Form section and
-report in that form. They need no new document system and must not be reported as a completed
+skill. They need no new document system and must not be reported as a completed
 CLI run.
 The runner gates its own launches, not arbitrary external edits or actual adherence
 inside a role. Local records are not authenticated host receipts or proof of human

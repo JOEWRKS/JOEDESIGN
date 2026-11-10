@@ -1,0 +1,9 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+src/main.ts
+src/style.css
+work/design/stack-gap-check.mjs
+work/tmp/stack-bar.log
+work/tmp/turn4-report.md

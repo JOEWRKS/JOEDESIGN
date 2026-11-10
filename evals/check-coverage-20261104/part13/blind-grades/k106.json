@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "b": 1,
+  "c": 1,
+  "f": 1,
+  "g": 1,
+  "h": 1,
+  "s": 1,
+  "t": 1,
+  "u": 1
+ },
+ "evidence": {
+  "b": "| S4 같은 줄 이웃 버튼 사이 = `--space-inline` (±1) | spacing-check S4 | 1440x900 after-move 추천 고르기↔되돌리기: check 10 / observed 10 | 같음 | 12 | 11 | 줄바꿈된 버튼 줄 사이 세로 간격, 버튼 안 글자·아이콘 간격 |",
+  "c": "| S1 말풍선 칸 이웃 블록의 보이는 간격 = `--space-stack` (±1) | spacing-check S1 | 1440x900 after-move 내 수 카드→말풍선: check 12 / observed 12; 말풍선→후보 줄: check 12 / observed 12 | 옆 배치, 세로 배치, 휴대폰 | 12 (1920x1080~360x640) | 11 | 글자 잉크 위치(줄 상자로 잼), 카드 안 글줄 간격, 도움말 창 |",
+  "f": "| 쌓임 간격(보이는) | 말풍선 칸 블록(복기 조작·첫 안내·내 수 카드·추천 말풍선·간이 분석 줄·후보 줄), 버튼 칸 줄(금수 안내·엔진 멈춤 안내·버튼 줄·되돌림 안내·고지 줄) | `--space-stack` 12px, 폭 700px 이하 10px | proposed (2026-11-10, 담당자 선택) |",
+  "g": "- spacing S1 | 74/74 | 12 sizes x 11 states, light | rendered | 1440x900 after-move review card to bubble: check 12 / observed 12",
+  "h": "- spacing S2 | 132/132 | 12 sizes x 11 states, light | rendered | 1440x900 after-move undo to guide toggle: check 12 / observed 12",
+  "s": "| S2 버튼 칸 이웃 줄의 보이는 간격 = `--space-stack` (±1) | spacing-check S2 | 1440x900 after-move 되돌리기→가이드 스위치: check 12 / observed 12 | 같음 | 12 | 11 | 글자만 있는 줄(되돌림 안내·고지문)은 줄 상자 기준이라 글자 잉크까지는 더 멂 |",
+  "t": "- fix uneven card, notice and button gaps | fixed | 1440x900 x after-move, light | rendered | 1440x900 after-move capture pixels before / after: review to bubble 7 / 12, bubble to alts 4 / 12, buttons to foot 1 / 12, choose-hint to undo 12 / 10",
+  "u": "- spacing S4 | 413/413 | 12 sizes x 11 states, light | rendered | 1440x900 after-move choose-hint to undo: check 10 / observed 10"
+ },
+ "browser_used": true
+}

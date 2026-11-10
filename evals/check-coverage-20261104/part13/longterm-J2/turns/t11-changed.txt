@@ -1,0 +1,15 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+work/design/spacing-check.mjs
+work/design/stub-engine.mjs
+work/tmp/build.log
+work/tmp/patch11.cjs
+work/tmp/patch11b.cjs
+work/tmp/rec11.cjs
+work/tmp/t11-ds.log
+work/tmp/t11-ring.log
+work/tmp/t11-spacing.log
+work/tmp/t11-spacing2.log
+work/tmp/turn11-report.txt

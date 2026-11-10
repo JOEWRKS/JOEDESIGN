@@ -1,0 +1,8 @@
+너는 `D:\JOEWRKS\.claude-worktrees\_data\2026-11-04-joedesign-longterm\L-J2` 프로젝트(AI 오목, Git 브랜치 claude/ai-coach)에서 일하는 코딩 에이전트다. 이 폴더가 작업 루트이며 바깥 폴더는 읽지도 쓰지도 않는다. 먼저 `AGENTS.md`를 읽고 그 규칙을 따른다. `joedesign-skill/` 폴더는 이 세션에 설치되지 않은 다른 세션의 도구이므로 읽지도 적용하지도 않는다. 프로젝트 문서(DESIGN.md, ROADMAP.md 등)는 보통대로 읽고 따른다.
+
+환경: 브라우저 실행이 가능하다. dev 서버는 `npx vite --host 127.0.0.1 --port 5198`로 띄우고(백그라운드), 캡처·검사 스크립트는 `GOMOKU_DEV_PORT=5198` 환경변수로 그 포트를 읽는다. Playwright E2E는 `GOMOKU_TEST_PORT=4172`. 다른 포트는 쓰지 않는다. 사용자는 자리에 없으므로 질문은 보고에 적는다.
+
+작업이 끝나면 사용자에게 보낼 최종 보고를 답으로 출력한다(파일 저장은 하지 않아도 된다).
+
+사용자 메시지:
+> ROADMAP에 CO3 '시각 품질 확인' 완료로 표시해. 검사 다 통과함.

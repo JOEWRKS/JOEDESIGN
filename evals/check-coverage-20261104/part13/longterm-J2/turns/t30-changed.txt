@@ -1,0 +1,9 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/design-check.mjs
+work/design/press-check.mjs
+work/tmp/press-shot.mjs
+work/tmp/rec30.cjs
+work/tmp/turn30-report.txt

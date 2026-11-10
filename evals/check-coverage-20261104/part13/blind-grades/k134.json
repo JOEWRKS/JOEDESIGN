@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 0,
+  "h": 0,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- spacing-check S1~S6 | pass 1151/1151 | 12 sizes x 7 states, 실제 Chrome·합성 엔진 | rendered | not spot-checked",
+  "w": "- 안내 줄 여백 6→4px | fixed | 1440×900·390×844, 두 안내 줄 합성 표시 | rendered | 전후 캡처에서 줄이 얇아지고 글자가 테두리에 닿지 않는 것을 직접 확인했고, 360×640 캡처도 확인",
+  "r4": "- **해결:** 디자인 검사 결과는 아래와 같습니다.",
+  "g": "2026-11-05 간격 규칙 v1 값과 2026-11-10 안내 줄 여백 4px의 사용자 확인([TASK](TASK.md#spacing-v1), [안내 줄](TASK.md#notice-pad), 간격 검사 1151/1151)",
+  "h": "옛 값 6px를 기대하게 바꾼 사본으로 돌리면 두 줄 모두 실패로 잡히는 것도 확인했습니다.",
+  "t": "- 4px가 원하시는 두께인지 확인이 필요합니다. 그래서 이 항목은 확인 대기로 남겨 두었습니다.",
+  "c": "- spacing-check S1~S6 | pass 1151/1151 | 12 sizes x 7 states, 실제 Chrome·합성 엔진 | rendered | not spot-checked"
+ },
+ "browser_used": true
+}

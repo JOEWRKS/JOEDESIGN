@@ -1,0 +1,54 @@
+relocate d r1: {'K': '4/4', 'L': '4/4'}
+relocate d r2: {'K': '4/4', 'L': '4/4'}
+relocate d r1+r2: {'K': '8/8', 'L': '8/8'}
+relocate p r1: {'K': '4/4', 'L': '0/4'}
+relocate p r2: {'K': '4/4', 'L': '1/4'}
+relocate p r1+r2: {'K': '8/8', 'L': '1/8'}
+relocate o r1: {'K': '4/4', 'L': '0/4'}
+relocate o r2: {'K': '4/4', 'L': '0/4'}
+relocate o r1+r2: {'K': '8/8', 'L': '0/8'}
+relocate r r1: {'K': '4/4', 'L': '4/4'}
+relocate r r2: {'K': '4/4', 'L': '4/4'}
+relocate r r1+r2: {'K': '8/8', 'L': '8/8'}
+relocate b r1: {'K': '4/4', 'L': '4/4'}
+relocate b r2: {'K': '4/4', 'L': '4/4'}
+relocate b r1+r2: {'K': '8/8', 'L': '8/8'}
+relocate l r1: {'K': '4/4', 'L': '4/4'}
+relocate l r2: {'K': '4/4', 'L': '4/4'}
+relocate l r1+r2: {'K': '8/8', 'L': '8/8'}
+relocate n r3: {'K': '4/4', 'L': '4/4'}
+relocate o r3: {'K': '4/4', 'L': '0/4'}
+relocate r r3: {'K': '4/4', 'L': '4/4'}
+relocate b r3: {'K': '4/4', 'L': '4/4'}
+relocate l r3: {'K': '4/4', 'L': '4/4'}
+feature p1 t4/t35/all: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'} {'K': '6/6', 'L': '6/6'}
+feature p2 t4/t35/all: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'} {'K': '6/6', 'L': '6/6'}
+feature p3 t4/t35/all: {'K': '2/3', 'L': '0/3'} {'K': '3/3', 'L': '3/3'} {'K': '5/6', 'L': '3/6'}
+feature p4 t4/t35/all: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'} {'K': '6/6', 'L': '6/6'}
+feature p5 t4/t35/all: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'} {'K': '6/6', 'L': '6/6'}
+feature g t4/t35/all: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'} {'K': '6/6', 'L': '6/6'}
+feature l t4/t35/all: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'} {'K': '6/6', 'L': '6/6'}
+feature(top bar) relocate-p: {'K': '3/3', 'L': '0/3'}
+feature(top bar) relocate-o: {'K': '3/3', 'L': '0/3'}
+handoff l: {'K': '11/12', 'L': '10/12'}
+handoff w: {'K': '11/12', 'L': '9/12'}
+handoff r4: {'K': '12/12', 'L': '10/12'}
+handoff g: {'K': '3/12', 'L': '2/12'}
+handoff h: {'K': '8/12', 'L': '7/12'}
+handoff t: {'K': '11/12', 'L': '11/12'}
+handoff c: {'K': '12/12', 'L': '12/12'}
+regression b browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'}
+regression c browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'}
+regression f browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'}
+regression g browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'}
+regression h browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'}
+regression s browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'}
+regression t browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '3/3', 'L': '3/3'}
+regression u browser/offline: {'K': '3/3', 'L': '3/3'} {'K': '0/3', 'L': '0/3'}
+mech relocate: state.json {'K': '12/12', 'L': '7/12'} spec {'K': '12/12', 'L': '10/12'} script-run {'K': '12/12', 'L': '12/12'} stamp-match {'K': '12/12', 'L': '9/12'} K-script-clean {'K': '12/12', 'L': '2/12'} ba-lines {'K': '11/12', 'L': '0/12'}
+mech feature: state.json {'K': '6/6', 'L': '5/6'} spec {'K': '6/6', 'L': '6/6'} script-run {'K': '6/6', 'L': '6/6'} stamp-match {'K': '6/6', 'L': '6/6'} K-script-clean {'K': '6/6', 'L': '2/6'} ba-lines {'K': '3/6', 'L': '0/6'}
+mech browser: state.json {'K': '1/3', 'L': '0/3'} spec {'K': '1/3', 'L': '0/3'} script-run {'K': '3/3', 'L': '3/3'} stamp-match {'K': '1/3', 'L': '3/3'} K-script-clean {'K': '2/3', 'L': '3/3'} ba-lines {'K': '2/3', 'L': '0/3'}
+mech offline: state.json {'K': '2/3', 'L': '1/3'} spec {'K': '1/3', 'L': '0/3'} script-run {'K': '3/3', 'L': '3/3'} stamp-match {'K': '3/3', 'L': '3/3'} K-script-clean {'K': '3/3', 'L': '2/3'} ba-lines {'K': '1/3', 'L': '0/3'}
+relocate per trial (kind d p n o): a01-K A 1 1 na 1; a02-K A 1 1 na 1; a03-K A 1 1 na 1; a04-K A 1 1 na 1; a05-K B 1 1 na 1; a06-K B 1 1 na 1; a07-K B 1 1 na 1; a08-K B 1 1 na 1; a09-K C na na 1 1; a10-K C na na 1 1; a11-K C na na 1 1; a12-K C na na 1 1; a13-L A 1 0 na 0; a14-L A 1 0 na 0; a15-L A 1 0 na 0; a16-L A 1 0 na 0; a17-L B 1 0 na 0; a18-L B 1 1 na 0; a19-L B 1 0 na 0; a20-L B 1 0 na 0; a21-L C na na 1 0; a22-L C na na 1 0; a23-L C na na 1 0; a24-L C na na 1 0
+feature per trial (p1..p5 g l | rel p o): f01-K 1111111 | 11; f02-K 1111111; f03-K 1101111 | 11; f04-K 1111111; f05-K 1111111 | 11; f06-K 1111111; f07-L 1101111 | 00; f08-L 1111111; f09-L 1101111 | 00; f10-L 1111111; f11-L 1101111 | 00; f12-L 1111111
+handoff per trial (l w r4 g h t c): q01-K 1111111; q02-K 1110111; q03-K 1110011; q04-K 1110111; q05-K 1110111; q06-K 1110011; q07-L 1111111; q08-L 1010111; q09-L 1100111; q10-L 1110111; q11-L 0010011; q12-L 1110011; q13-K 1111111; q14-K 1110111; q15-K 1110011; q16-K 1110111; q17-K 0010001; q18-K 1111111; q19-L 0000001; q20-L 1110111; q21-L 1110111; q22-L 1110011; q23-L 1110011; q24-L 1111111

@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 0,
+  "h": 1,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- `work/design/spacing-check.mjs` (S1~S6) | 944/944 통과 | 12크기 × 6상태, 실제 Chrome | rendered | not spot-checked. 이 6상태에는 두 안내가 나오지 않습니다.",
+  "w": "- `work/tmp/notice-pad.mjs` (안내 줄 여백 수정) | changed | 3크기 × 1상태(대국, 두 안내 문구 직접 넣음), 실제 Chrome | rendered | 직접 관찰: 높이 39→31px, 여백 6/12→2/10px를 재고 캡처를 눈으로 확인. 사용자 수락 전이라 changed입니다.",
+  "r4": "- **해결:** 없음. 값이 사용자 확인 전이라 해결로 올리지 않았습니다.",
+  "g": "2026-11-10 안내 줄 여백 6/12→2/10px([TASK](TASK.md#notice-pad)): 높이 39→31px(3크기 렌더 측정), spacing-check 944/944.",
+  "h": "- `work/design/spacing-check.mjs` (S1~S6) | 944/944 통과 | 12크기 × 6상태, 실제 Chrome | rendered | not spot-checked. 이 6상태에는 두 안내가 나오지 않습니다.",
+  "t": "- **해결:** 없음. 값이 사용자 확인 전이라 해결로 올리지 않았습니다.",
+  "c": "- `work/design/spacing-check.mjs` (S1~S6) | 944/944 통과 | 12크기 × 6상태, 실제 Chrome | rendered | not spot-checked. 이 6상태에는 두 안내가 나오지 않습니다."
+ },
+ "browser_used": true
+}

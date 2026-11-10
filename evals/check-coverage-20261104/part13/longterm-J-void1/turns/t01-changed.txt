@@ -1,0 +1,10 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+work/design/ds-v1-audit.mjs
+work/design/ds-v1-inventory.mjs
+work/design/ds-v1-spot.mjs
+work/tmp/ds-v1-audit.log
+work/tmp/ds-v1-spot.log
+work/tmp/turn1-report.md

@@ -1,0 +1,21 @@
+{
+ "t01": [
+  "ok",
+  "no-output:const NOT_CLAIM = new RegExp(\n  '통과(?:하지|되지|시키지)|통",
+  "ok",
+  "no-output:stamp: match (3,381 chars 34daef99); text ok\n M DE"
+ ],
+ "t02": [
+  "ok",
+  "no-output:stamp: match (2,979 chars b862476d); text ok\n- **작"
+ ],
+ "t03": [
+  "ok"
+ ],
+ "t04": [
+  "ok"
+ ],
+ "t05": [
+  "ok"
+ ]
+}

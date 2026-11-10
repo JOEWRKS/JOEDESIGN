@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "b": 1,
+  "c": 1,
+  "f": 1,
+  "g": 1,
+  "h": 1,
+  "s": 1,
+  "t": 1,
+  "u": 0
+ },
+ "evidence": {
+  "b": "| S1 | `node work/design/spacing-check.mjs` S1 줄 | not spot-checked | 가로·세로·휴대폰 배치 | 12크기(1920×1080~360×640) | 7상태(시작·대국·첫 안내·예비 착수·계산 중·종료·복기) × 말풍선 영역 높이 6 × 폭 2 | 렌더 좌표, 상태 목록 밖 조합, 글 길이로 생기는 줄바꿈 |",
+  "c": "| S4 | 같은 스크립트 S4 줄 | not spot-checked | 위와 같음 | 12크기 | 7상태 × 6 × 2 | 글줄 높이 안의 빈 공간(line-height), 라벨 inline 기준선 |",
+  "f": "| 블록 간격 S1 | `.hud`·`.cta-area` gap | `--gap-block` 12 / 높이≤720 8 | proposed |",
+  "g": "- spacing S1 | 2352/2352 | 12 sizes x 7 states, light | code | not spot-checked",
+  "h": "- spacing L | 4368/4368 | 12 sizes x 7 states, light | code | not spot-checked",
+  "s": "스크립트는 `src/style.css`를 미디어·컨테이너 조건·선택자 우선순위·순서·`var()`/`calc()`대로 풀고 `src/main.ts`의 화면 틀에서 부모 관계를 읽는다. 렌더 결과가 아니다(code). 렌더 대조(스크립트 값 대 캡처에서 잰 보이는 간격)는 브라우저를 쓸 수 있는 세션에서 1440×900·390×844·375×667 대국 중 상태로 한다. 그 전까지 모든 줄은 not spot-checked.",
+  "t": "- 상태: **open — changed(코드 수정, 렌더 대조 전)**. 2026-11-10 사용자 지적.",
+  "u": "간격 규칙 v1을 정해 DESIGN.md에 적고 src/style.css·src/main.ts를 맞췄습니다. 검사 스크립트 work/design/spacing-check.mjs도 추가했습니다. 다만 브라우저로 화면을 확인하지 못해 아직 고쳐졌다고 할 수 없습니다(changed)."
+ },
+ "browser_used": false
+}

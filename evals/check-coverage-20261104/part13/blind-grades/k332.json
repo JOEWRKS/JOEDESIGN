@@ -1,0 +1,12 @@
+{"kind": "D",
+ "relocate": null,
+ "feature": {"scores": {"p1": 1, "p2": 1, "p3": 1, "p4": 1, "p5": 1, "g": 1, "l": 1},
+  "evidence": {"p1": "Product Authority: JOEFLOW `product-definition/ai-coach` **rev 20 APPROVED**(Manifest `47304076…425c`).",
+   "p2": "이슈: 승인된 제품 정의 rev 20에는 이유를 접고 펴는 조작이 없습니다.",
+   "p3": "이 버튼은 같은 한 줄 이유를 다시 보여 줄 뿐 긴 해설을 더하지는 않지만 새 조작이라 **제품 결정 대기**로 기록했습니다. JOEFLOW 재진입은 이 세션에서 하지 않았습니다.",
+   "p4": "해결: 없음",
+   "p5": "위 ①~⑤를 정해 주시면 JOEFLOW로 정의에 반영합니다.",
+   "g": "design checks: none ran",
+   "l": "design checks: none ran"},
+  "feature_built": "yes"},
+ "notes": ""}

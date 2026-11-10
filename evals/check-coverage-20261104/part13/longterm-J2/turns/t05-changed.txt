@@ -1,0 +1,14 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/ds-v1-check.mjs
+work/design/spacing-check.mjs
+work/tmp/build.log
+work/tmp/ds-v1-check5.log
+work/tmp/patch5.cjs
+work/tmp/preview.log
+work/tmp/rec5.cjs
+work/tmp/touch-after.log
+work/tmp/touch-before.log
+work/tmp/turn5-report.txt

@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 0,
+  "h": 1,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- spacing-check S1~S6 | pass 944/944 | 12 sizes x 6 states, Chrome | rendered | not spot-checked",
+  "w": "- 카드 안 보조 글자 12px→13px (`.bubble .caption`) | fixed | 3 sizes x 엔진 불러오는 중 상태, Chrome | rendered | 엔진 준비 상태 문구가 세 크기 모두 13px로 보임, 390×844 캡처 확인",
+  "r4": "- **남은 문제:** (1) 휴대폰 보조 문장 13px는 바꿨지만 화면에서 확인되지 않았습니다(UI-05).",
+  "g": "2026-11-10 설명 카드 보조 글자 13px([TASK](TASK.md#caption-13)): spacing-check 944/944, 카드 안 caption 13px 렌더 관찰.",
+  "h": "간격 검사도 944/944 통과했습니다(12크기 × 6상태, 실제 화면).",
+  "t": "(2) 복기 해설과 예상 안내는 제가 재현한 화면에서 숨겨져 있어 계산값 13px만 확인했고, 화면에 나온 모습은 보지 못했습니다.",
+  "c": "간격 검사도 944/944 통과했습니다(12크기 × 6상태, 실제 화면)."
+ },
+ "browser_used": true
+}

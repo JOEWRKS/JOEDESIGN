@@ -1,0 +1,12 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/ring-check.mjs
+work/tmp/build.log
+work/tmp/crop.mjs
+work/tmp/rec7.cjs
+work/tmp/ring-after.log
+work/tmp/ring-before.log
+work/tmp/t7-spacing.log
+work/tmp/turn7-report.txt

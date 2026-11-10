@@ -1,0 +1,5 @@
+ISSUES.md
+ROADMAP.md
+TASK.md
+work/tmp/t38-all.log
+work/tmp/turn38-report.txt

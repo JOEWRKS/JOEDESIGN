@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "b": 1,
+  "c": 1,
+  "f": 1,
+  "g": 1,
+  "h": 1,
+  "s": 1,
+  "t": 1,
+  "u": 1
+ },
+ "evidence": {
+  "b": "| S1 블록 사이 보이는 간격 12px(±1) | spacing-check S1 | 1440×900 내 차례 말풍선→후보 알약: check 12 / observed 12 | 옆 배치, 세로 배치 | 12 | 7 |",
+  "c": "금수 안내·엔진 경고·간이 분석 줄이 보이는 상태, 계산 중·AI 차례, 승률 가이드 끈 상태",
+  "f": "| 블록 사이 간격 | 말풍선 칸·버튼 칸 직계 블록(카드·후보 줄·버튼 줄·안내 줄), 판→첫 블록, 말풍선 칸→버튼 칸 | `--gap-stack` = `--space-3` 12px, 모든 크기 | proposed |",
+  "g": "- S1 블록 사이 12px | 127/127 (수정 전 0/127) | 12 sizes x 7 states, light | rendered | 1440×900 내 차례 말풍선→후보 알약: check 12 / observed 12",
+  "h": "- S4 한 줄 버튼 사이 8px | 200/200 (수정 전 84/200) | 12 sizes x 7 states, light | rendered | 1440×900 내 차례 추천 고르기→되돌리기: check 8 / observed 8",
+  "s": "| C2 곁검사: 페이지 스크롤 0 | spacing-check C2 | not spot-checked | 둘 다 | 12 | 7 | 도움말 창 안 스크롤 |",
+  "t": "- 종료 근거: spacing-check C1 84/84(12 sizes x 7 states, rendered; 375×667 복기 캡처에서 보정 전 해설 카드 잘림 → 보정 후 카드 전체 보임). [TASK](TASK.md#spacing-v1). 금수 안내·엔진 경고가 보이는 상태는 합성 엔진으로 만들지 못해 미측정이다.",
+  "u": "- 수정 S1 말풍선→후보 알약 간격 | fixed | 1440×900 내 차례 | rendered | check 4 before / observed 12 after, capture"
+ },
+ "browser_used": true
+}

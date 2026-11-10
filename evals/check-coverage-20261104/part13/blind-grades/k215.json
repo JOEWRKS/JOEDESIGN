@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "b": 1,
+  "c": 1,
+  "f": 1,
+  "g": 1,
+  "h": 1,
+  "s": 1,
+  "t": 1,
+  "u": 0
+ },
+ "evidence": {
+  "b": "| S1 블록 간격 | `node work/design/spacing-check.mjs` S1 (코드 모델: 미디어·컨테이너 조건과 선택자 우선순위를 계산해 gap + margin − 그림자 깊이) | not spot-checked | 옆 배치·세로 배치·시작 화면 | 1440×900, 1280×800, 1280×720, 1100×800, 1024×768, 768×1024, 412×915, 390×844, 375×667, 360×640, 각 hud 높이 600·400·300·240·180 | intro, human, human-detail, human-selected, thinking(비활성), finished | 실제 렌더 위치, 글자 줄바꿈, 숨김 상태의 실제 순서, 눌림(:active), 블러 그림자, hud→버튼 영역 사이(빈 공간), 옆 배치의 판↔오른쪽 칸 가로 간격 |",
+  "c": "| S3 4px 단계 | 같은 스크립트 S3 (`src/style.css` 모든 gap·margin 선언의 값) | not spot-checked | 파일 전체 | 해당 없음 | 해당 없음 | padding 값, `main.ts` 인라인 style, 도움말 창 |",
+  "f": "| 블록 사이 보이는 간격 | `.hud`·`.cta-area` gap, 세로 배치 `.stage` row-gap | `--gap-stack` 12px / compact 8px | proposed |",
+  "g": "- spacing S1 블록 간격 | 3425/3425 | 10 sizes x 5 hud heights x 6 states, light | code | not spot-checked",
+  "h": "- spacing S2 버튼 간격 | 2400/2400 | 10 sizes x 5 hud heights x 6 states, light | code | not spot-checked",
+  "s": "- 이 세션은 브라우저 실행 권한이 없어 렌더 관찰을 하지 못했다. 위 세 행 모두 not spot-checked이며, 첫 렌더 관찰(예: 1440×900·390×844에서 말풍선 그림자 아래 끝 → 후보 줄 위 테두리)을 기록하기 전에는 통과로 보지 않는다.",
+  "t": "- 상태: **open — 2026-11-10** (사용자 지적 \"메인 화면에서 카드·버튼·안내 줄 사이 간격이 제각각으로 보여\"). 수정은 `changed`(코드 적용·코드 검사만, 렌더 관찰 전).",
+  "u": "간격 규칙을 정해서 DESIGN.md에 적고, src/style.css를 그 규칙에 맞추고, 검사 스크립트 work/design/spacing-check.mjs를 추가했습니다. 다만 이번 세션은 브라우저를 쓸 수 없어서 바뀐 화면을 아직 직접 보지 못했습니다. 그래서 이 수정은 \"적용함(changed)\" 단계이고 \"해결\"로 적지 않았습니다."
+ },
+ "browser_used": false
+}

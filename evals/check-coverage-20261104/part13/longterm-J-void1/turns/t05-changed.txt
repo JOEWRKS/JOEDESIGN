@@ -1,0 +1,9 @@
+DESIGN.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/stack-gap-check.mjs
+work/tmp/t44-after.log
+work/tmp/t44-before.log
+work/tmp/t44-mid.log
+work/tmp/turn5-report.md

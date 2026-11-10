@@ -1,0 +1,165 @@
+{
+ "t01": [
+  "ok",
+  "no-output:stamp: match (2,433 chars 2bbb4a90); text ok\n M DE"
+ ],
+ "t02": [
+  "ok",
+  "no-output:stamp: match (2,798 chars 7883d41f); text ok"
+ ],
+ "t03": [
+  "ok",
+  "no-output:stamp: match (1,389 chars a93085b3); text ok"
+ ],
+ "t04": [
+  "2 finding(s)",
+  "ok",
+  "ok",
+  "ok",
+  "ok",
+  "no-output:stamp: match (3,227 chars 410f9bb4); text ok\n- aft"
+ ],
+ "t05": [
+  "ok",
+  "no-output:stamp: match (2,648 chars 65c237c5); text ok\ntsc o"
+ ],
+ "t06": [
+  "ok",
+  "no-output:stamp: match (2,030 chars ef6f67fb); text ok"
+ ],
+ "t07": [
+  "ok",
+  "no-output:stamp: match (2,002 chars 2595baae); text ok"
+ ],
+ "t08": [
+  "6 finding(s)",
+  "1 finding(s)",
+  "ok",
+  "ok"
+ ],
+ "t09": [],
+ "t10": [],
+ "t11": [
+  "ok",
+  "no-output:stamp: match (2,874 chars 15c0b699); text ok"
+ ],
+ "t12": [
+  "ok",
+  "no-output:stamp: match (2,304 chars f41c0ef1); text ok"
+ ],
+ "t13": [
+  "ok",
+  "ok",
+  "ok"
+ ],
+ "t14": [
+  "ok",
+  "no-output:stamp: match (1,566 chars b5610919); text ok"
+ ],
+ "t15": [
+  "ok",
+  "no-output:stamp: match (2,177 chars d9d21c82); text ok"
+ ],
+ "t16": [
+  "ok",
+  "no-output:stamp: match (2,805 chars b869ce2a); text ok"
+ ],
+ "t17": [
+  "2 finding(s)",
+  "ok",
+  "ok"
+ ],
+ "t18": [
+  "1 finding(s)",
+  "ok",
+  "ok"
+ ],
+ "t19": [
+  "ok",
+  "ok",
+  "ok"
+ ],
+ "t20": [
+  "ok",
+  "no-output:stamp: match (2,520 chars 9c7b10b2); text ok"
+ ],
+ "t21": [],
+ "t22": [],
+ "t23": [
+  "1 finding(s)",
+  "ok",
+  "ok"
+ ],
+ "t24": [
+  "ok",
+  "no-output:stamp: match (1,355 chars 97b42aed); text ok"
+ ],
+ "t25": [
+  "ok",
+  "no-output:stamp: match (1,209 chars 0da30ab6); text ok"
+ ],
+ "t26": [
+  "ok",
+  "no-output:stamp: match (2,403 chars a0852507); text ok\n000\r\n"
+ ],
+ "t27": [
+  "2 finding(s)",
+  "ok",
+  "ok"
+ ],
+ "t28": [
+  "ok",
+  "no-output:stamp: match (966 chars 86260f5e); text ok"
+ ],
+ "t29": [
+  "ok",
+  "no-output:stamp: match (2,165 chars 8c36724d); text ok\n000\r\n"
+ ],
+ "t30": [
+  "ok",
+  "no-output:stamp: match (2,158 chars 470315ed); text ok"
+ ],
+ "t31": [],
+ "t32": [
+  "ok",
+  "no-output:stamp: match (957 chars a801abcd); text ok"
+ ],
+ "t33": [
+  "ok",
+  "no-output:stamp: match (1,570 chars 927913f0); text ok\n000\r\n"
+ ],
+ "t34": [
+  "1 finding(s)",
+  "1 finding(s)",
+  "ok",
+  "ok"
+ ],
+ "t35": [
+  "ok",
+  "no-output:stamp: match (2,196 chars b2ecffd4); text ok\n000\r\n"
+ ],
+ "t36": [
+  "ok",
+  "no-output:stamp: match (944 chars 6d8659ec); text ok"
+ ],
+ "t37": [
+  "ok",
+  "ok",
+  "no-output:stamp: match (1,120 chars 446ef606); text ok"
+ ],
+ "t38": [
+  "ok",
+  "no-output:stamp: match (3,625 chars 7e0a0bf4); text ok\n000\r\n"
+ ],
+ "t39": [
+  "ok",
+  "ok",
+  "ok"
+ ],
+ "t40": [
+  "1 finding(s)",
+  "1 finding(s)",
+  "ok",
+  "ok"
+ ]
+}

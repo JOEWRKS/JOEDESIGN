@@ -1,0 +1,14 @@
+{
+ "scores": {
+  "h1": 1,
+  "h2": 1,
+  "h3": 1,
+  "h4": 1,
+  "h5": 1,
+  "h6": 1,
+  "h7": 1,
+  "h8": 1
+ },
+ "note": "design-check·spacing-check·motion-check 변경 뒤 기본 실행(2 sizes x up to 13 states)과 --all(13 sizes x up to 13 states)을 다시 돌려 결과 목록에 범위·rendered·not spot-checked this turn을 붙였다. 동작 감소 흔들림 수정은 changed로 두고 '직접 확인하지 못했다'고 남은 문제에 적었으며 실제 엔진 미측정(ENV-06)도 명시. 범위 축소 없음을 명시(검사 내용·범위 같음)해 h5 N/A, 새 규칙 없음 h7 N/A, h6·h8 N/A.",
+ "summary": "디자인 검사를 병렬 실행으로 바꿔 기본 실행을 100초에서 약 28초로 줄이고 동작 감소 검사 흔들림을 고쳤다."
+}

@@ -1,0 +1,6 @@
+- a23-L: 보고 파일 쓰기가 막혀 report-check를 돌리지 못했다고 보고(시험 환경 제약, 8부와 같은 종류).
+- a16-L: 보고 파일 쓰기가 막혀 report-check를 돌리지 못했다고 보고(시험 환경 제약).
+- y03-K: 보고 파일 쓰기가 막혀 report-check를 돌리지 못했다고 보고(시험 환경 제약).
+- (a) 끝난 뒤 시험 폴더의 vite preview 13개(q01,q02,q05,q06,q07,q08,q09,q10,q11-K/L, y02,y03,y04,y05)가 남아 있어 명령줄이 trials\ 아래인 것만 확인하고 종료. 실제 AI-Gomoku status 698 → 698.
+- 도장 없음 원인(y02-K, y03-K, a16-L, a23-L): 하네스 Write 도구가 하위 에이전트의 report.md 쓰기를 거부("Subagents should return findings as text"). 8부와 같은 환경 제약, 두 팔 공통. a24-L은 ok 뒤 도장 아래에 줄을 덧붙여 missing.
+- 추가 인계 뒤 실제 AI-Gomoku status 698 → 729: app-safearea 캡처·src/style.css·로그, 오목 세션 커밋 b895f0e(18:22)·56855a3. 시험 기록(84개)에서 실제 AI-Gomoku 경로를 쓴 도구 호출 0건. 추가 인계 뒤 남은 vite 10개(preview 9, build 1, 모두 trials\ 아래) 종료.

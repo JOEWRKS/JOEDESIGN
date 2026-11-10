@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "b": 1,
+  "c": 1,
+  "f": 1,
+  "g": 1,
+  "h": 1,
+  "s": 1,
+  "t": 1,
+  "u": 0
+ },
+ "evidence": {
+  "b": "| S1 쌓기 | 같은 스크립트: `.hud`/`.cta-area` gap = `var(--gap-stack)`, 공통 margin 규칙, 그림자 칸의 `--drop` 정의와 그림자 y = `var(--drop)`, 쌓이는 칸 자식에 다른 margin 없음 | not spot-checked | 옆 배치·세로 배치(선언) | 모든 블록 | `:active` 눌림 상태 제외 | 실제 보이는 간격 px(브라우저 측정 없음), `.foot`(항상 마지막이라 그림자 자리 미예약), 눌림 상태 |",
+  "c": "| S3 카드 안 | 같은 스크립트: 카드 gap = `--gap-block/--gap-tight`, 카드 안 margin은 짝 줄 `calc(var(--gap-tight) - var(--gap-block))`·이름표 `var(--drop-chip)`만 | not spot-checked | 같음 | 같음 | 같음 | 글자 줄높이에 따른 광학 간격, 렌더 간격 |",
+  "f": "| 쌓기 간격 | `.hud`·`.cta-area` 칸 사이 | `--gap-stack` 옆 배치(폭 ≥900·가로:세로 ≥5:4) 12px / 세로 배치 8px / 높이 ≤700 6px | proposed |",
+  "g": "- spacing-check S1 쌓기 간격·그림자 | 0/24 위반 | 모든 media·container 블록 x 정적(:active 제외), light | code | not spot-checked",
+  "h": "- spacing-check S0 토큰 자리 | 0/33 위반 | 모든 media·container 블록 x 정적, light | code | not spot-checked",
+  "s": "Spot check는 규칙이 말하는 양(보이는 간격)을 화면에서 직접 본 값과 비교해야 하므로, 렌더를 못 본 이번 세션의 행은 모두 not spot-checked다. 스크립트가 맞는지는 이전 CSS(`HEAD`)에 돌려 86건을 잡는 것과 단위 테스트의 일부러 깨뜨린 CSS 5건으로만 확인했다(코드 대 코드).",
+  "t": "- **해결:** 없음(화면에서 직접 확인한 수정이 없음).",
+  "u": "- **이슈:** 브라우저를 쓸 수 없어 실제 화면은 보지 못했습니다. 그래서 규칙이 정한 \"보이는 간격\"을 직접 잰 행이 없고, 모든 행이 not spot-checked입니다."
+ },
+ "browser_used": false
+}

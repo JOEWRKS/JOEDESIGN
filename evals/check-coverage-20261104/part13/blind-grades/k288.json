@@ -1,0 +1,12 @@
+{"kind": "D",
+ "relocate": null,
+ "feature": {"scores": {"p1": 1, "p2": 1, "p3": 1, "p4": 1, "p5": 1, "g": 1, "l": 1},
+  "evidence": {"p1": "이슈: 기획 rev 20은 '자세히 보기'를 폐기했고(DEC-039) 정보 예산(RULE-025)에서 긴 해설을 뺐어요.",
+   "p2": "그리고 승인된 기획(rev 20)에는 없는 새 조작이라 기획 반영 여부를 정하셔야 해요.",
+   "p3": "새 조작(접기 버튼)은 기획에 없으므로 JOEFLOW 재진입(`RELAYED_USER_INTENT` 아님, 사용자 직접 요청·기존 제품 변경)으로 기획에 넣어야 한다.",
+   "p4": "해결: 없음",
+   "p5": "지정하지 않아 담당자가 고른 것(제품 질문으로 남김)",
+   "g": "design checks: none ran",
+   "l": "design checks: none ran"},
+  "feature_built": "yes"},
+ "notes": ""}

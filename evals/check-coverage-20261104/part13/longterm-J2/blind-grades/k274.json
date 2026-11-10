@@ -1,0 +1,14 @@
+{
+ "scores": {
+  "h1": 1,
+  "h2": 1,
+  "h3": 1,
+  "h4": 1,
+  "h5": 1,
+  "h6": 1,
+  "h7": 1,
+  "h8": 1
+ },
+ "note": "새 검사 스크립트(ds-v1-check 등)를 만들어 돌렸고 결과 목록 각 줄에 12 sizes x 1~2 states, light, rendered/code와 스폿 체크를 붙였다. Rule Coverage 표(새로 생김)에 각 규칙의 크기·상태·측정 안 함 열이 있고, 대국 상태 전부와 DS-M E2E 미실행을 미측정으로 명시했다. 토큰은 모두 measured, v1은 DRAFT·승인 값 없음으로 적어 승인을 지어내지 않았다. h5·h6 N/A, h8 N/A(엔진 없음·글꼴 403 사정을 밝히고 preview로 측정한다는 해석 명시).",
+ "summary": "출하된 style.css 값으로 디자인 시스템 v1(DRAFT) 토큰·화면 규칙·Rule Coverage를 DESIGN.md에 세우고 시작·도움말 화면을 렌더로 쟀다."
+}

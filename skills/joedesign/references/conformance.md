@@ -49,7 +49,10 @@ verified or done. Before a report is sent, the whole message is written to a fil
 and run through `scripts/report-check.mjs`, which flags a missing results list (a turn
 with no design check says `design checks: none ran` instead), a fix line whose result
 is not `fixed` or `changed`, a check outcome stated outside the list without its
-scope, rendered-or-code and spot check outcome, and a `changed` fix named under 해결;
+scope, rendered-or-code and spot check outcome, a `changed` fix named under 해결, and
+a move, overlap, hide or merge without `before:`/`after:` lines per element (or one
+`display unchanged` line) or with a differing pair not recorded as `product decision
+pending`;
 the file is corrected until the script prints `report-check: ok <chars> chars <sha8>`,
 and that stamp line ends the sent text so `--verify` can confirm the checked text is
 the sent text. A project ledger that keeps the report (JOENESS TASK) keeps the stamp

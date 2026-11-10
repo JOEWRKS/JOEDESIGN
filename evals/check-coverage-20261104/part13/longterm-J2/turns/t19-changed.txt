@@ -1,0 +1,14 @@
+DESIGN.md
+ISSUES.md
+ROADMAP.md
+TASK.md
+src/style.css
+work/design/motion-check.mjs
+work/tmp/build.log
+work/tmp/geo19-after.log
+work/tmp/geo19-before.log
+work/tmp/geo19.mjs
+work/tmp/rec19.cjs
+work/tmp/t19-dc.log
+work/tmp/t19-dc2.log
+work/tmp/turn19-report.txt

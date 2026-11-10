@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "b": 1,
+  "c": 1,
+  "f": 1,
+  "g": 1,
+  "h": 1,
+  "s": 1,
+  "t": 1,
+  "u": 1
+ },
+ "evidence": {
+  "b": "| S3 판 → 첫 블록 | 같은 스크립트 | 390×844 candidates: check 12 / observed 12(캡처 픽셀) | 세로 배치 | 세로 배치 크기(820×1180 이하 폭) | 대국 상태 전부 | — |",
+  "c": "| S2 나란한 버튼 | 같은 스크립트 | 390×844 candidates 고르기 ↔ 되돌리기: check 10 / observed 10(캡처 픽셀) | 같음 | 같음 | 같음 | `.reset-box` 버튼(창), 도움말 창 버튼 |",
+  "f": "| 쌓인 블록 간격 | `.hud`·`.cta-area` 자식 사이, 판 → 말풍선 영역 | `--gap-stack` 12px / 높이 ≤700px 8px | proposed |",
+  "g": "- page scroll | 132/132 | 12 sizes x 11 states, light | rendered | not spot-checked",
+  "h": "- spacing S2 | 246/246 | 12 sizes x 11 states, light | rendered | 390x844 candidates hint to undo: check 10 / observed 10",
+  "s": "| S3 제목 → 카드 | 같은 스크립트 | not spot-checked | 시작 화면 | 12크기 | intro, setup | 제목 글자는 줄 상자 기준, 로고 글자 그림자 제외 |",
+  "t": "- 종료 근거: `work/design/spacing-check.mjs` replay 상태 12크기 잘림 0, 360×640·489×866 복기 캡처를 직접 보고 말풍선 아래 테두리·그림자까지 보이는 것 확인(원래 코드 캡처에서는 잘림). [TASK](TASK.md#spacing-v1).",
+  "u": "- spacing S1 | 199/199 | 12 sizes x 11 states, light | rendered | 1440x900 candidates bubble to chips: check 12 / observed 12"
+ },
+ "browser_used": true
+}

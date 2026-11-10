@@ -1,0 +1,14 @@
+{
+ "scores": {
+  "h1": 1,
+  "h2": 0,
+  "h3": 1,
+  "h4": 1,
+  "h5": 1,
+  "h6": 1,
+  "h7": 1,
+  "h8": 1
+ },
+ "note": "h1: DS-EQ 4 sizes x 5 states light, DS-CR 2 sizes x 7 states x 2 schemes, DS-SP 2 sizes x 13 states light 등 재실행 범위 명시. h2=0: 'display unchanged: ... dark mode changes colors only'에서 다크 모드의 요소 이동·겹침 없음 주장은 다크 배치 측정 범위가 없음(DS-SP·DS-EQ는 라이트만). h3: '다크에서 알림 상태와 판 위 표식 글자는 대비 검사 밖', DS-CR 행 미측정 칸 기재. h4: 다크 색 값은 담당자 선택, product decision pending. h7: DS-CR 행이 범위·미측정과 함께 추가. h8: 제품 정의에 없는 기능임을 밝히고 지시대로 진행한다고 명시. h5·h6 N/A.",
+ "summary": "색 토큰 역할을 나누고 prefers-color-scheme 다크 토큰을 넣었으며 렌더 대비 검사 DS-CR을 새로 만들었다."
+}

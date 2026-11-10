@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 0,
+  "h": 0,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- spacing-check S1–S6 | pass 944/944 | 12 sizes x 6 states, Chrome | rendered | not spot-checked (DESIGN.md에 이 열이 아직 없음)",
+  "w": "- `.bubble .caption` 13px | changed | 3 sizes, 계산된 크기 + 360×640 시작 화면 엔진 실패 문구 | rendered | 시작 화면 엔진 실패 문구: check 13px / observed 13px 한 줄, 스크롤 없음",
+  "r4": "- 해결: 없음. 아래 설명대로 화면에서 확인은 했지만, 적용 범위 확인 전이라 완료로 두지 않았습니다.",
+  "g": "2026-11-10 말풍선 안 보조 글자 12→13px([TASK](TASK.md#caption-13)): 간격 검사 944/944, 단위 87 통과, 360×640 넘침 없음.",
+  "h": "- 1440×900·390×844에서 바꾼 세 곳은 13px이고, 카드 밖 두 곳은 12px·11px으로 그대로입니다.",
+  "t": "- 해결: 없음. 아래 설명대로 화면에서 확인은 했지만, 적용 범위 확인 전이라 완료로 두지 않았습니다.",
+  "c": "- spacing-check S1–S6 | pass 944/944 | 12 sizes x 6 states, Chrome | rendered | not spot-checked (DESIGN.md에 이 열이 아직 없음)"
+ },
+ "browser_used": true
+}
