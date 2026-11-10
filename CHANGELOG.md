@@ -14,6 +14,7 @@
   스크립트가 없어 문구로 막히지 않는다. (4) 셀당 n=2, 고정물 1개, 채점기 장면별 1명이며, 40턴 재측정은 없다. (5) JOENESS 도장 소비는 별도 과제다. (6) 게시한 SKILL.md는 시험본과
   재배치 두 문장만 다르다. 인계 시험은 스킬을 읽지 않으므로 그 차이와 무관하며, 재배치 시험의 1.2.1 팔 결과는 게시본에 해당하지 않는다.
 - 게시: 사용자 승인("재배치 문구 빼고 게시") 뒤 VERSION 1.2.1, 태그 v1.2.1, GitHub Release, 개인 설치 갱신(영수증 evals/check-coverage-20261104/part12/install-receipt.md).
+  정정: 태그 v1.2.1은 06573af, GitHub Release 게시됨. 사고 기록(edfc9e7에 섞인 미완성 R5 코드와 되돌림)은 evals/check-coverage-20261104/part12/incidents.txt.
 
 ## 1.2.0 — JOEFLOW 입력 명시·인계용 Report Form·JOENESS 도장 소비 제안 (2026-11-09, T043)
 

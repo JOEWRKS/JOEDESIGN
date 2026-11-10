@@ -57,6 +57,7 @@
   `fixed`/`changed` 4/4 vs 2/4, 재배치 대기 기록 2/4 vs 2/4(경계 문구 효과 없음), 위치만 바꾼 과제의 오탐 0, 퇴행 없음. 남은 vite 서버 4개를 내가 종료, 실제 AI-Gomoku 변경은
   오목 세션 것(part12/incidents.txt). 사용자 승인("재배치 문구 빼고 게시") 뒤 재배치 경계 문구(SKILL.md 두 문장, operation.md 한 문장)를
   빼고 Report Form 안내 줄·인계 문장만 1.2.1로 게시(VERSION·태그·Release·개인 설치, part12/install-receipt.md). 전후 표시 대조 절차는 다음 과제.
+  정정: 태그 v1.2.1은 06573af(주 세션이 생성), GitHub Release 게시됨. edfc9e7에 섞인 1.3.0 세션의 미완성 R5 코드와 되돌림 기록은 part12/incidents.txt.
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)
