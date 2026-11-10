@@ -63,7 +63,7 @@
   conformance.md R5, report-check.mjs R5와 테스트 16/16. 한 턴 72회 + 채점 4(evals/check-coverage-20261104/part13/, README 13부): 표시가 바뀐 재배치 대기 8/8 vs 1/8, 오탐 0,
   기존 항목은 같거나 높음. 40턴 L-J2 + 채점 10(part13/longterm-J2/): G 재채점 대비 h2 33 vs 27, 8개 전부 29 vs 20, 함정·도장·스크립트 전부, h1·인계 h3·h7 각 1턴 낮음.
   내 실수: 첫 40턴 시도에서 턴 6에 백로그 밖 메시지를 보내 무효 처리(part13/longterm-J-void1/). 또 1.2.1 게시 세션 커밋에 미완성 R5가 섞였다가 그 세션이 되돌렸다(06573af).
-  로컬 커밋까지, 푸시·VERSION 1.3.0·태그·Release·개인 설치는 승인 대기.
+  사용자 승인("1.3.0 게시") 뒤 VERSION 1.3.0·태그·Release·개인 설치(part13/install-receipt.md).
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)
