@@ -59,7 +59,11 @@ pending` (제품 결정 대기) with the missing item and the revision read, sen
 through JOEFLOW's implementation re-entry (DISCOVER/CLOSE for the affected scope;
 the user's words passed on by another session are `RELAYED_USER_INTENT`, a feature
 added to a running product is `NEW_PRODUCT` scoped to the change), and continue the
-visual work the definition already covers. If the user's own request is that
+visual work the definition already covers. Moving, overlapping or hiding an existing
+function is that kind of behavior when it changes what the user sees or the route to
+reach it (a displayed value replaced or covered, a control behind another step): record
+it the same way. A change of position, size or spacing alone, with the same content
+and route, is a design decision. If the user's own request is that
 behavior, build what the user specified and keep its product record pending: the
 definition is extended in JOEFLOW, not by code or DESIGN.md, and any part of the
 behavior the user did not specify is a product question for that re-entry, not a
@@ -185,7 +189,8 @@ design is handed to a project session that cannot load JOEDESIGN, the token-role
 rule-coverage tables travel in DESIGN.md with their status, and so does its Report
 Form section (the result-line form, `fixed`/`changed`, `changed` under remaining
 work), so that session can keep the rules and report in the same form without this
-skill. They need no new document system and must not be reported as a completed
+skill. The handoff tells that session to read DESIGN.md's Report Form section and
+report in that form. They need no new document system and must not be reported as a completed
 CLI run.
 The runner gates its own launches, not arbitrary external edits or actual adherence
 inside a role. Local records are not authenticated host receipts or proof of human

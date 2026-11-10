@@ -1,5 +1,7 @@
 # Project Design
 
+**Reporting:** follow the `## Report Form` section below exactly (보고는 `## Report Form` 절을 그대로 따른다).
+
 **Status:** DRAFT
 **Revision:** 1
 **Product Authority:** <pointer>

@@ -1,0 +1,198 @@
+[
+ {
+  "id": "a01-J",
+  "arm": "J",
+  "kind": "relocate",
+  "msg": "r1",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a01-J",
+  "base": "xbase-J",
+  "head": "55490b9"
+ },
+ {
+  "id": "a02-J",
+  "arm": "J",
+  "kind": "relocate",
+  "msg": "r1",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a02-J",
+  "base": "xbase-J",
+  "head": "55490b9"
+ },
+ {
+  "id": "a03-J",
+  "arm": "J",
+  "kind": "relocate",
+  "msg": "r2",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a03-J",
+  "base": "xbase-J",
+  "head": "55490b9"
+ },
+ {
+  "id": "a04-J",
+  "arm": "J",
+  "kind": "relocate",
+  "msg": "r2",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a04-J",
+  "base": "xbase-J",
+  "head": "55490b9"
+ },
+ {
+  "id": "a05-J",
+  "arm": "J",
+  "kind": "relocate",
+  "msg": "r3",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a05-J",
+  "base": "xbase-J",
+  "head": "55490b9"
+ },
+ {
+  "id": "a06-J",
+  "arm": "J",
+  "kind": "relocate",
+  "msg": "r3",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a06-J",
+  "base": "xbase-J",
+  "head": "55490b9"
+ },
+ {
+  "id": "a07-I",
+  "arm": "I",
+  "kind": "relocate",
+  "msg": "r1",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a07-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "a08-I",
+  "arm": "I",
+  "kind": "relocate",
+  "msg": "r1",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a08-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "a09-I",
+  "arm": "I",
+  "kind": "relocate",
+  "msg": "r2",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a09-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "a10-I",
+  "arm": "I",
+  "kind": "relocate",
+  "msg": "r2",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a10-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "a11-I",
+  "arm": "I",
+  "kind": "relocate",
+  "msg": "r3",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a11-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "a12-I",
+  "arm": "I",
+  "kind": "relocate",
+  "msg": "r3",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\a12-I",
+  "base": "xbase-I",
+  "head": "3afac7a"
+ },
+ {
+  "id": "q01-J",
+  "arm": "J",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q01-J",
+  "base": "pbase-J",
+  "head": "5c36b54",
+  "dev": 5721,
+  "test": 4721
+ },
+ {
+  "id": "q02-J",
+  "arm": "J",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q02-J",
+  "base": "pbase-J",
+  "head": "5c36b54",
+  "dev": 5722,
+  "test": 4722
+ },
+ {
+  "id": "q03-J",
+  "arm": "J",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q03-J",
+  "base": "pbase-J",
+  "head": "5c36b54",
+  "dev": 5723,
+  "test": 4723
+ },
+ {
+  "id": "q04-J",
+  "arm": "J",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q04-J",
+  "base": "pbase-J",
+  "head": "5c36b54",
+  "dev": 5724,
+  "test": 4724
+ },
+ {
+  "id": "q05-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q05-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5725,
+  "test": 4725
+ },
+ {
+  "id": "q06-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t9",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q06-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5726,
+  "test": 4726
+ },
+ {
+  "id": "q07-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q07-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5727,
+  "test": 4727
+ },
+ {
+  "id": "q08-I",
+  "arm": "I",
+  "kind": "handoff",
+  "msg": "t10",
+  "root": "D:\\JOEWRKS\\.claude-worktrees\\_data\\2026-11-10-joedesign-j\\trials\\q08-I",
+  "base": "pbase-I",
+  "head": "c5cbe82",
+  "dev": 5728,
+  "test": 4728
+ }
+]

@@ -1,0 +1,147 @@
+{
+ "a01-J": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs"
+ ],
+ "a02-J": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs"
+ ],
+ "a03-J": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "a04-J": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs"
+ ],
+ "a05-J": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "a06-J": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "a07-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M tests/e2e/replay.spec.ts",
+  "?? work/design/replay-bar-fit.cjs"
+ ],
+ "a08-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "a09-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs"
+ ],
+ "a10-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css",
+  "?? src/corner-card.ts",
+  "?? tests/unit/corner-card.test.ts"
+ ],
+ "a11-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "a12-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/main.ts",
+  " M src/style.css"
+ ],
+ "q01-J": [
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "q02-J": [
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "q03-J": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs"
+ ],
+ "q04-J": [
+  " M DESIGN.md",
+  " M ISSUES.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs",
+  "?? work/design/notice-clip.mjs",
+  "?? work/design/spacing-notice.log"
+ ],
+ "q05-I": [
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "q06-I": [
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css"
+ ],
+ "q07-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs",
+  "?? work/design/spacing-notice.log"
+ ],
+ "q08-I": [
+  " M DESIGN.md",
+  " M ROADMAP.md",
+  " M TASK.md",
+  " M src/style.css",
+  " M work/design/spacing-check.mjs",
+  "?? work/design/spacing-notice-before.log",
+  "?? work/design/spacing-notice.log"
+ ]
+}

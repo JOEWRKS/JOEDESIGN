@@ -1,0 +1,34 @@
+diff --git a/ROADMAP.md b/ROADMAP.md
+index 0206341..f3e93d7 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -2,9 +2,9 @@
+ 
+ 제품 목표 원본: [BRIEF.md](BRIEF.md). 기획 기준일: 2026-10-22, Asia/Seoul.
+ 
+-**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 944/944), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
++**현재:** P0~P5 완료. P6 렌주 엔진 승률 도우미는 rev 20(상대 예상 수 반투명 돌·승률 가이드 켜기·끄기)까지 사용자 승인(Manifest `47304076…`, closed=true)·구현·기술 검사 완료(단위 88/88, E2E 28/28, 12크기 넘침 0, [TASK](TASK.md#rev20)). 열린 항목: CO2(verification pending — 문구·화면·가이드 스위치·반투명 돌의 사용자 수락, 2026-11-05 간격 규칙 v1 값의 사용자 확인([TASK](TASK.md#spacing-v1), 간격 검사 944/944), 2026-11-10 설명 카드 보조 글자 13px의 적용 범위 확인([TASK](TASK.md#caption-13)), 휴대폰 실기기 계산 깊이 실측, 엔진 무응답 판단 시간 5초 실측). 열린 결함 없음([ISSUES](ISSUES.md)). 이력: [rev 19](TASK.md#rev19), [rev 18 구현](TASK.md#rev18-impl), [복기](TASK.md#replay), [되돌리기](TASK.md#undo), [첫 제품](TASK.md#implementation).
+ 
+-**다음 작업:** 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌·간격 규칙 v1의 수락 여부를 알려 준다. 화면을 고친 뒤에는 `work/design/spacing-check.mjs`를 다시 돌린다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
++**다음 작업:** 사용자가 앱을 써 보고 문구·화면·가이드 스위치·반투명 돌·간격 규칙 v1·설명 카드 보조 글자 13px 범위의 수락 여부를 알려 준다. 화면을 고친 뒤에는 `work/design/spacing-check.mjs`를 다시 돌린다. 휴대폰 실기기 측정은 사용자 휴대폰으로 같은 와이파이에서 열어 잰다.
+ 
+ ## 범위와 결정의 권한
+ 
+diff --git a/TASK.md b/TASK.md
+index a8496ca..593f18a 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -528,3 +528,13 @@ JOEFLOW rev 20(보강판): EVD-012, DEC-049(상대 수 반투명 돌, DEC-030 
+ - 고친 뒤(2026-11-05): `spacing-check` **944/944 통과**(`work/design/spacing-v1.log`), 기존 넘침 감사(`capture-matrix.mjs` 감사 함수, 합성 엔진으로 실행) 12크기×6상태 72건 문제 0, `tsc` 통과, 단위 87 통과·1 건너뜀. 1440×900·390×844·360×640 캡처를 눈으로 확인.
+ - 실행하지 못함: Playwright E2E(`tests/e2e`)는 실제 Rapfi 엔진 파일이 이 폴더에 없어 실행 불가. 복기·종료·금수 안내·엔진 경고·간이 분석 상태는 간격 검사에서 재현하지 않음(DESIGN 표의 Unmeasured).
+ - 남음: 간격 값의 사용자 시각 확인, 위 미측정 상태.
++
++<a id="caption-13"></a>
++
++## 2026-11-10 — 설명 카드 보조 글자 12px → 13px
++
++사용자 지시 "src/style.css에서 설명 카드 안 보조 글자 12px를 13px로 올려줘."
++
++- 코드: `src/style.css`에 `.bubble .caption { font-size: 13px; }` 추가. 대상은 말풍선(`#current-card`) 안의 `.caption` 3개(`#engine-status`·`#replay-context`·`#prediction-note`). 공용 `.caption`(12px)은 그대로 두어 말풍선 밖의 복기 결과 줄 `#replay-result`(12px)와 내 수 카드 `#review-context`(11px)는 바뀌지 않음. 이 범위 해석은 담당자 선택(verification pending).
++- 검사(2026-11-10, 빌드 후 preview 5722): `spacing-check` **944/944 통과**(12크기×6상태, 렌더). 1440×900·390×844에서 계산된 글자 크기 확인: 말풍선 안 3개 13px, `#replay-result` 12px, `#review-context` 11px. 390×844 말풍선 캡처를 눈으로 확인(엔진 실패 안내·예상 안내 줄 넘침 없음). 복기 해설(`#replay-context`)은 숨김 상태라 크기 값만 확인, 실제 복기 화면 렌더는 미확인.
++- 남음: 범위 해석(말풍선 안만 / 휴대폰 `#hero-sub`·내 수 카드 12px 포함 여부)과 글자 크기의 사용자 확인.

@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 1,
+  "h": 1,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "- spacing-check S1~S6 | pass 1151/1151 | 12 sizes x 7 states, 실제 Chrome·합성 엔진 | rendered | 1440×900·390×844·360×640 안내 줄 캡처를 직접 봄",
+  "w": "- 안내 줄 여백 축소 | changed | 5 sizes x 금수 안내만·두 안내 함께, 합성 표시 | rendered | 한 줄 39→33px, 두 줄 60→52px로 잼.",
+  "r4": "- 해결: 없음. 여백이 얇아진 것은 직접 확인했지만, 새 값을 사용자가 아직 보지 않았습니다.",
+  "g": "spacing-check S1~S6 | pass 1151/1151 | 12 sizes x 7 states",
+  "h": "spacing-check S1~S6 | pass 1151/1151 | 12 sizes x 7 states, 실제 Chrome·합성 엔진 | rendered",
+  "t": "남음: 새 여백 값의 사용자 시각 확인, UI-05. (DIFF TASK.md)",
+  "c": "간격 검사 스크립트가 안내 줄을 재지 않고 있어서, 두 안내를 띄운 상태와 안내 줄 여백·높이 측정을 추가했습니다."
+ },
+ "browser_used": true
+}

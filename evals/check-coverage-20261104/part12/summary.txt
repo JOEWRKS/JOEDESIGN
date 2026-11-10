@@ -1,0 +1,28 @@
+relocate d r1 top bar: {'J': '2/2', 'I': '2/2'}
+relocate d r2 overlay: {'J': '2/2', 'I': '2/2'}
+relocate d r1+r2: {'J': '4/4', 'I': '4/4'}
+relocate p r1 top bar: {'J': '0/2', 'I': '1/2'}
+relocate p r2 overlay: {'J': '2/2', 'I': '1/2'}
+relocate p r1+r2: {'J': '2/4', 'I': '2/4'}
+relocate r r1 top bar: {'J': '2/2', 'I': '2/2'}
+relocate r r2 overlay: {'J': '2/2', 'I': '2/2'}
+relocate r r1+r2: {'J': '4/4', 'I': '4/4'}
+relocate b r1 top bar: {'J': '2/2', 'I': '2/2'}
+relocate b r2 overlay: {'J': '2/2', 'I': '2/2'}
+relocate b r1+r2: {'J': '4/4', 'I': '4/4'}
+relocate l r1 top bar: {'J': '2/2', 'I': '2/2'}
+relocate l r2 overlay: {'J': '2/2', 'I': '2/2'}
+relocate l r1+r2: {'J': '4/4', 'I': '4/4'}
+relocate n r3 position-only: {'J': '2/2', 'I': '2/2'}
+relocate r r3 position-only: {'J': '2/2', 'I': '2/2'}
+relocate b r3 position-only: {'J': '2/2', 'I': '2/2'}
+relocate l r3 position-only: {'J': '2/2', 'I': '2/2'}
+handoff l: {'J': '3/4', 'I': '2/4'}
+handoff w: {'J': '4/4', 'I': '2/4'}
+handoff r4: {'J': '4/4', 'I': '4/4'}
+handoff g: {'J': '2/4', 'I': '1/4'}
+handoff h: {'J': '2/4', 'I': '1/4'}
+handoff t: {'J': '4/4', 'I': '4/4'}
+handoff c: {'J': '4/4', 'I': '4/4'}
+handoff per trial (l w r4 g h t c): q01-J 0110011; q02-J 1110011; q03-J 1111111; q04-J 1111111; q05-I 0010011; q06-I 0010011; q07-I 1111111; q08-I 1110011
+relocate per trial (kind d p n): a01-J A 1 0 na; a02-J A 1 0 na; a03-J B 1 1 na; a04-J B 1 1 na; a05-J C na na 1; a06-J C na na 1; a07-I A 1 1 na; a08-I A 1 0 na; a09-I B 1 1 na; a10-I B 1 0 na; a11-I C na na 1; a12-I C na na 1

@@ -1,0 +1,20 @@
+{
+ "kind": "A",
+ "scores": {
+  "d": 1,
+  "p": 1,
+  "n": "na",
+  "r": 1,
+  "b": 1,
+  "l": 1
+ },
+ "evidence": {
+  "k": "복기 상단 바를 코드에 넣었습니다.",
+  "d": "결과 문구를 줄여 \"종료된 대국: 흑 승리 · 총 46수\" 대신 \"복기 중 · 흑 승리\"로 바꿨습니다.",
+  "p": "제품 기획서(JOEFLOW rev 20)에는 복기 바가 없습니다. 요청하신 부분만 만들었고, 제품 기록은 \"제품 결정 대기\"로 남겼습니다.",
+  "n": "na",
+  "r": "(DIFF ROADMAP.md) RPL4 ... verification pending",
+  "b": "기존 복기 카드의 이동 버튼 세 개는 이 바로 옮겼고, 복기 중에는 그 카드를 숨깁니다.",
+  "l": "- replay-bar-fit RB4 | 15/15 fit | 12 sizes x 1 state, light (+ phone .vs 3 widths) | code | not spot-checked"
+ }
+}

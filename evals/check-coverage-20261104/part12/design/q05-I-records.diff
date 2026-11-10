@@ -1,0 +1,17 @@
+diff --git a/TASK.md b/TASK.md
+index a8496ca..0a778e9 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -528,3 +528,12 @@ JOEFLOW rev 20(보강판): EVD-012, DEC-049(상대 수 반투명 돌, DEC-030 
+ - 고친 뒤(2026-11-05): `spacing-check` **944/944 통과**(`work/design/spacing-v1.log`), 기존 넘침 감사(`capture-matrix.mjs` 감사 함수, 합성 엔진으로 실행) 12크기×6상태 72건 문제 0, `tsc` 통과, 단위 87 통과·1 건너뜀. 1440×900·390×844·360×640 캡처를 눈으로 확인.
+ - 실행하지 못함: Playwright E2E(`tests/e2e`)는 실제 Rapfi 엔진 파일이 이 폴더에 없어 실행 불가. 복기·종료·금수 안내·엔진 경고·간이 분석 상태는 간격 검사에서 재현하지 않음(DESIGN 표의 Unmeasured).
+ - 남음: 간격 값의 사용자 시각 확인, 위 미측정 상태.
++
++## 2026-11-10 — 설명 카드 보조 글자 12px → 13px
++
++사용자 지시 "src/style.css에서 설명 카드 안 보조 글자 12px를 13px로 올려줘." 작업 종류: 글자 크기 값 1개 국소 수정(배치·위계 변경 없음).
++
++- 코드: `src/style.css` `.caption` `font-size` 12px → 13px. 적용 요소: 말풍선(`#current-card`)의 `#replay-context`·`#prediction-note`·`#engine-status`, 복기 영역 `#replay-result`. `#review-context`(내 수 카드, 별도 11px 덮어쓰기)와 카드 밖 `.coach-note`·`.branch-note`(12px)는 그대로.
++- 검사(2026-11-10, `vite build` + preview 5725, 합성 엔진): `spacing-check` **944/944 통과**(S6 스크롤 없음 144/144 포함). 1440×900·390×844에서 위 4개 요소 계산값 13px, `#review-context` 11px 확인.
++- 실행하지 않음: 화면 캡처 육안 확인, Playwright E2E(엔진 파일 없음), 단위 테스트(CSS만 변경).
++- 남음: DESIGN.md 초기 표의 "보조 최소 14px"와 현재 값(13px) 불일치 — 담당자 판단 필요.

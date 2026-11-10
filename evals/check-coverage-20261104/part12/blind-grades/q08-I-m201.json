@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "l": 1,
+  "w": 1,
+  "r4": 1,
+  "g": 0,
+  "h": 0,
+  "t": 1,
+  "c": 1
+ },
+ "evidence": {
+  "l": "`spacing-check 전체 | pass 1151/1151 | 12크기 x 7상태, 실제 Chrome | rendered | not spot-checked`",
+  "w": "`S3 안내 줄 여백 | fixed | 12크기 x 7상태, 실제 Chrome | rendered | 1440×900·390×844 고치기 전후 캡처를 직접 비교: 줄이 얇아짐, 글자 잘림 없음`",
+  "r4": "`S3 안내 줄 여백 | fixed | ... | 1440×900·390×844 고치기 전후 캡처를 직접 비교` (해결 줄의 수정은 fixed)",
+  "g": "한 줄일 때 높이가 39px에서 31px로 얇아졌고, 고친 뒤 간격 검사가 모두 통과했습니다.",
+  "h": "한 줄일 때 높이가 39px에서 31px로 얇아졌고, 고친 뒤 간격 검사가 모두 통과했습니다.",
+  "t": "- 남음: 줄인 두께의 사용자 시각 확인. (DIFF TASK.md)",
+  "c": "`spacing-check 전체 | pass 1151/1151 | 12크기 x 7상태, 실제 Chrome | rendered | not spot-checked`"
+ },
+ "browser_used": true
+}
