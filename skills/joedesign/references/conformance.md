@@ -33,7 +33,10 @@ another. Approval of a value does not make an unspot-checked row true.
 
 Reports give design-check results in one results list, one line per check that ran,
 each line in the form `check | result | sizes x states, mode | rendered or code |
-spot check` (the target with both readings, or "not spot-checked"). Side checks such
+spot check` (the target with both readings, or "not spot-checked"); the fourth cell
+is `code`, `rendered`, or `rendered (injected css)` when the preview could not load
+the page's linked CSS and the same CSS was injected (another departure from the
+page's own load: `rendered (<what differed>)`). Side checks such
 as overflow, clipping and scroll, before/after comparisons, and each fix take their
 own line. A defect counts as fixed only after one direct observation of the fixed
 thing on a target that showed it (for clipping or overflow: the visible edges in a
@@ -52,7 +55,8 @@ is not `fixed` or `changed`, a check outcome stated outside the list without its
 scope, rendered-or-code and spot check outcome, a `changed` fix named under 해결, and
 a move, overlap, hide or merge without `before:`/`after:` lines per element (or one
 `display unchanged` line) or with a differing pair not recorded as `product decision
-pending`;
+pending`, and a report that says CSS was injected for the measurement while no
+rendered line is marked `rendered (injected css)`;
 the file is corrected until the script prints `report-check: ok <chars> chars <sha8>`,
 and that stamp line ends the sent text so `--verify` can confirm the checked text is
 the sent text. A project ledger that keeps the report (JOENESS TASK) keeps the stamp

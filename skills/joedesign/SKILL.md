@@ -137,7 +137,12 @@ route. Continue independent authorized work without expanding an unproved direct
    `check | result | sizes x states, mode | rendered or code | spot check`,
    for example `spacing S1 | 939/939 | 9 sizes x 8 states, light | rendered |
    1440x900 bubble to chips: check 12 / observed 12` or `overflow | 72/72 | 12 sizes
-   x 6 states, light | rendered | not spot-checked`. Side checks (overflow, clipping,
+   x 6 states, light | rendered | not spot-checked`. The fourth cell names where the
+   reading came from: `code`, `rendered` (the page loaded its own CSS), or
+   `rendered (injected css)` when the preview could not load linked CSS and the same
+   CSS was injected (another departure: `rendered (<what differed>)`), for example
+   `C1 gap | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | not
+   spot-checked`. Side checks (overflow, clipping,
    scroll), before/after comparisons and each fix take a line. A fix line's result
    is one of two words: `fixed` when its spot check cell holds the direct observation
    (`375x667 replay bubble: clipped 14 before / 0 after, capture`), otherwise

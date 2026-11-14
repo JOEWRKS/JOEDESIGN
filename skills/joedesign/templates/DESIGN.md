@@ -58,7 +58,11 @@ not listed as resolved or verified. -->
 Any session that changes a file listed in Rule Coverage, with or without JOEDESIGN
 loaded, reports design-check results in one list, one line per check that ran:
 `check | result | sizes x states, mode | rendered or code | spot check` (the row's
-Spot check cell, or "not spot-checked"). Each fix takes its own line; its result
+Spot check cell, or "not spot-checked"). The fourth cell is `code`, `rendered`, or
+`rendered (injected css)` when the preview could not load the page's linked CSS
+and the same CSS was injected (another departure: `rendered (<what differed>)`),
+e.g. `C1 gap | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | not
+spot-checked`. Each fix takes its own line; its result
 is `fixed` only when its spot check cell holds a direct observation of the fixed
 thing on a target that showed it, otherwise `changed`. A `changed` fix is an open
 issue: it goes under 남은 문제 (remaining work) in the report, ISSUES and ROADMAP,

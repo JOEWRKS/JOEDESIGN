@@ -25,6 +25,10 @@
 //       them, as some 1.3.0 reports have, is tolerated); the order of the parts is set by
 //       the DESIGN template's Report Form section (six lines, results list, explanation,
 //       stamp last; --verify already requires the stamp to be the last line)
+//   R7  a report that says the measurement injected CSS (the preview could not load the
+//       page's linked CSS) marks the rendered lines measured that way
+//       `rendered (injected css)`; plain `rendered` means the page loaded its own CSS.
+//       Lines with `rendered`, `code` or `rendered (<what differed>)` are all accepted.
 //   A report with no design check run says so in one line, `design checks: none ran`
 //   (or `디자인 검사: 실행 안 함`); that line satisfies R1 instead of a results list.
 //
@@ -109,6 +113,14 @@ const RELOCATE_NOT_UI = new RegExp([
   /기록|문서|이력|DESIGN|ROADMAP|TASK|ISSUES|캡처|screenshot|기준\s*(?:값|선)?|덮어쓰|선언/.source,
   /검사|\bchecks?\b|테스트|\btests?\b|포커스|초점|focus|[+-]\s*\d+\s*px|되어\s*있|돼\s*있/.source,
 ].join('|'), 'i');
+// R7: prose saying CSS was injected for the measurement
+const INJECTED = new RegExp([
+  /(?:CSS|스타일)[^.。\n]{0,30}주입(?!\s*(?:하지|안\s*|없|않))/.source,
+  /주입(?!\s*(?:하지|안\s*|없|않))[^.。\n]{0,20}(?:CSS|스타일)/.source,
+  /(?<!not |never |without )\binject(?:ed|ing)?\b[^.\n]{0,25}\b(?:css|styles?(?:heets?)?)\b/.source,
+  /\b(?:css|styles?(?:heets?)?)\b[^.\n]{0,25}(?<!not |never )\binjected\b/.source,
+].join('|'), 'i');
+const INJECTED_MARK = /inject|주입/i;
 const BA_LINE = /^\s*(?:[-*+]\s*)?\**\s*(before|after)\s*\**\s*[:：]\s*(.*)$/i;
 const DISPLAY_SAME = /display unchanged|표시\s*(?:변화|변경)\s*없음/i;
 const PENDING = /product decision pending|제품\s*결정\s*대기/i;
@@ -171,6 +183,8 @@ export function check(text) {
   let pending = false;
   const sixFirst = new Map(); // label -> first line number
   const rowLines = []; // line numbers of results lines outside code blocks
+  let injectedAt = 0; // first prose line saying CSS was injected
+  const renderedRows = []; // [lineNo, check, marked]
   text.split(/\r?\n/).forEach((raw, index) => {
     const no = index + 1;
     if (raw.trim().startsWith('```')) { inCode = !inCode; return; }
@@ -200,6 +214,7 @@ export function check(text) {
     if (cells) {
       listLines += 1;
       if (!inCode) rowLines.push(no);
+      if (/^rendered\b/i.test(cells[3])) renderedRows.push([no, cells[0], INJECTED_MARK.test(cells[3])]);
       if (FIX_NAME.test(cells[0]) && !BEFORE_FIX.test(cells[0])) {
         const word = cells[1].trim().toLowerCase();
         if (word === 'changed') changedFixes.push([no, cells[0]]);
@@ -221,6 +236,7 @@ export function check(text) {
       if (shortRow === null && (PASS.test(raw) || isCount(raw))) shortRow = no;
       return;
     }
+    if (!injectedAt && INJECTED.test(raw.replaceAll('`', ''))) injectedAt = no;
     const plain = raw.replaceAll('`', '').replaceAll('**', '')
       .replace(/^\s*(?:[-*+]|\d+[.)])\s+/, '');
     for (const s of sentences(plain)) {
@@ -275,6 +291,14 @@ export function check(text) {
         '(작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, ' +
         'stamp last (DESIGN.md Report Form)']);
     }
+  }
+  // R7: the report says CSS was injected, but no rendered line says so
+  if (injectedAt && renderedRows.length && !renderedRows.some((r) => r[2])) {
+    const [no, name] = renderedRows[0];
+    findings.push([no, 'R7', name,
+      `line ${injectedAt} says the measurement injected CSS, but no results line says so: mark each line ` +
+      'measured that way `rendered (injected css)` in its fourth cell; `rendered` alone means the page ' +
+      'loaded its own CSS']);
   }
   // R5: display before/after for a move, overlap, hide or merge
   if (relocateAt && !baLines.length && !displaySame) {

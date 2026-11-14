@@ -170,3 +170,24 @@ test('R6: without the six lines, or with a results line only in a code block or 
   // a later 해결: in the explanation does not move the end of the six lines
   assert.deepEqual(rules(`${SIX}\n\n- ${LINE}\n\n상세: 해결: 아래 참고가 아니라 남은 문제로 둔다.\n`), []);
 });
+
+const INJ = 'C1 gap | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | not spot-checked';
+
+test('R7: `rendered (injected css)`, `rendered`, `code` and `rendered (<what differed>)` lines are all accepted', () => {
+  assert.deepEqual(rules(`- ${INJ}\n`), []);
+  assert.deepEqual(rules(`- ${LINE}\n- overflow | 0/8 overflow | 4 sizes x 2 states, light | code | not spot-checked\n`), []);
+  assert.deepEqual(rules('- C1 gap | 8/8 | 4 sizes x 2 states, light | rendered (zoom 90%) | not spot-checked\n'), []);
+});
+
+test('R7: a report saying CSS was injected needs at least one line marked that way', () => {
+  const plain = INJ.replace(' (injected css)', '');
+  const ko = `- ${plain}\n\n측정은 미리보기 창이 연결 CSS를 읽지 못해 같은 파일 내용을 주입해 잰 값이다.\n`;
+  const f = check(ko);
+  assert.deepEqual(f.map((x) => x[1]), ['R7']);
+  assert.match(f[0][3], /line 3 says .*rendered \(injected css\)/);
+  assert.deepEqual(rules(`- ${plain}\n\nThe preview could not load the stylesheet, so we injected the same CSS.\n`), ['R7']);
+  assert.deepEqual(rules(`- ${INJ}\n\n측정은 미리보기 창이 연결 CSS를 읽지 못해 같은 파일 내용을 주입해 잰 값이다.\n`), []);
+  // saying nothing was injected, or injecting something else, is not the case
+  assert.deepEqual(rules(`- ${plain}\n\nCSS는 주입하지 않고 페이지가 직접 읽었다. 테스트 데이터를 주입했다.\n`), []);
+  assert.deepEqual(rules(`- ${plain}\n\nWe did not inject any CSS.\n`), []);
+});
