@@ -20,6 +20,11 @@
 //       carries `before: element | content shown | route` and `after: ...` lines for
 //       each element (or one `display unchanged` line); when a pair differs, the report
 //       records it as `product decision pending` (제품 결정 대기)
+//   R6  in a report with the JOENESS six lines (작업, 업데이트 파일, 이슈, 해결, 남은 문제,
+//       다음 작업), no results line comes above the first of them (a list nested inside
+//       them, as some 1.3.0 reports have, is tolerated); the order of the parts is set by
+//       the DESIGN template's Report Form section (six lines, results list, explanation,
+//       stamp last; --verify already requires the stamp to be the last line)
 //   A report with no design check run says so in one line, `design checks: none ran`
 //   (or `디자인 검사: 실행 안 함`); that line satisfies R1 instead of a results list.
 //
@@ -33,6 +38,8 @@ import { createHash } from 'node:crypto';
 const NONE_RAN = /design checks?:\s*none ran|디자인 검사\s*[:：]\s*(?:실행\s*안\s*함|없음|돌리지\s*않음)/i;
 const RESOLVED_LINE = /^\s*(?:[-*+]\s*)?\**\s*해결\s*\**\s*[:：]\s*(.*)$/;
 const STAMP_LINE = /^report-check: ok (\d[\d,]*) chars ([0-9a-f]{8})\s*$/;
+// R6: the JOENESS six report lines
+const SIX_LINE = /^\s*(?:[-*+]\s*)?\**\s*(작업|업데이트\s*파일|이슈|해결|남은\s*문제|다음\s*작업)\s*\**\s*[:：]/;
 
 export function normalize(text) {
   return text.replace(/^﻿/, '').replace(/\r\n?/g, '\n').replace(/\s+$/, '');
@@ -162,6 +169,8 @@ export function check(text) {
   let relocateAt = 0;
   let displaySame = false;
   let pending = false;
+  const sixFirst = new Map(); // label -> first line number
+  const rowLines = []; // line numbers of results lines outside code blocks
   text.split(/\r?\n/).forEach((raw, index) => {
     const no = index + 1;
     if (raw.trim().startsWith('```')) { inCode = !inCode; return; }
@@ -178,11 +187,19 @@ export function check(text) {
       if (PENDING.test(raw) && !NO_PENDING.test(raw)) pending = true;
       if (!relocateAt && sentences(raw.replaceAll('`', '')).some((x) => RELOCATE.test(x) && !RELOCATE_NOT_UI.test(x))) relocateAt = no;
     }
+    if (!inCode) {
+      const six = raw.match(SIX_LINE);
+      if (six) {
+        const label = six[1].replace(/\s+/g, ' ');
+        if (!sixFirst.has(label)) sixFirst.set(label, no);
+      }
+    }
     const resolved = raw.match(RESOLVED_LINE);
     if (resolved) resolvedLines.push([no, resolved[1]]);
     const cells = cellsOf(raw);
     if (cells) {
       listLines += 1;
+      if (!inCode) rowLines.push(no);
       if (FIX_NAME.test(cells[0]) && !BEFORE_FIX.test(cells[0])) {
         const word = cells[1].trim().toLowerCase();
         if (word === 'changed') changedFixes.push([no, cells[0]]);
@@ -246,6 +263,17 @@ export function check(text) {
           'goes under 남은 문제, not 해결']);
         break;
       }
+    }
+  }
+  // R6: results lines above the six lines
+  if (sixFirst.size >= 4) {
+    const sixStart = Math.min(...sixFirst.values());
+    const early = rowLines.find((n) => n < sixStart);
+    if (early !== undefined) {
+      findings.push([early, 'R6', '',
+        `a results line comes before the six report lines (which start on line ${sixStart}): the six lines ` +
+        '(작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, ' +
+        'stamp last (DESIGN.md Report Form)']);
     }
   }
   // R5: display before/after for a move, overlap, hide or merge

@@ -141,3 +141,32 @@ test('R5: descriptions of existing behavior, CSS and other uses of the words are
   ].join('\n');
   assert.deepEqual(rules(text), []);
 });
+
+const SIX = [
+  '- 작업: 요청 내용 칸 아래 글자 수 표시',
+  '- 업데이트 파일: src/index.html, src/style.css',
+  '- 이슈: 없음',
+  '- 해결: 없음',
+  '- 남은 문제: C2 대조 안 함',
+  '- 다음 작업: 사용자 화면 확인',
+].join('\n');
+
+test('R6: six lines, then the results list, then explanation is the order; a results line above the six lines is flagged', () => {
+  const ordered = `${SIX}\n\ndesign check results:\n- ${LINE}\n\n간격은 목록의 줄을 따른다.\n`;
+  assert.deepEqual(rules(ordered), []);
+  const listFirst = `design check results:\n- ${LINE}\n\n${SIX}\n`;
+  const f = check(listFirst);
+  assert.deepEqual(f.map((x) => x[1]), ['R6']);
+  assert.equal(f[0][0], 2);
+  assert.match(f[0][3], /start on line 4.*open the report/);
+  const split = `- 작업: 표시\n- 업데이트 파일: a.css\n\n- ${LINE}\n\n- 이슈: 없음\n- 해결: 없음\n- 남은 문제: 없음\n- 다음 작업: 없음\n`;
+  // a list nested inside the six lines (as several 1.3.0 reports did) is tolerated, not flagged
+  assert.deepEqual(rules(split), []);
+});
+
+test('R6: without the six lines, or with a results line only in a code block or after them, nothing is flagged', () => {
+  assert.deepEqual(rules(`design check results:\n- ${LINE}\n\n설명.\n`), []);
+  assert.deepEqual(rules(`\`\`\`\n${LINE}\n\`\`\`\n\n${SIX}\n\n- ${LINE}\n`), []);
+  // a later 해결: in the explanation does not move the end of the six lines
+  assert.deepEqual(rules(`${SIX}\n\n- ${LINE}\n\n상세: 해결: 아래 참고가 아니라 남은 문제로 둔다.\n`), []);
+});

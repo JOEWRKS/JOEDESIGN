@@ -162,7 +162,9 @@ route. Continue independent authorized work without expanding an unproved direct
    `changed` is listed under remaining work, never under 해결. If it cannot run, say so in
    the report.
    The project's report format decides the sections; this decides the form of each
-   result. Technical checks, visual judgment,
+   result; the order of the parts (JOENESS six lines, results list, explanation,
+   stamp) is set only in the [template](templates/DESIGN.md)'s Report Form section,
+   followed as written there. Technical checks, visual judgment,
    workflow completion, certification and exact user acceptance remain distinct.
    User rejection remains REJECTED for that output; no counts or role labels erase it.
 

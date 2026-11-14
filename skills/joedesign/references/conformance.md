@@ -57,7 +57,9 @@ the file is corrected until the script prints `report-check: ok <chars> chars <s
 and that stamp line ends the sent text so `--verify` can confirm the checked text is
 the sent text. A project ledger that keeps the report (JOENESS TASK) keeps the stamp
 line with it, so `--verify` on the saved text can confirm it later. The template's
-Report Form section carries this form in DESIGN.md into sessions without this skill.
+Report Form section carries this form in DESIGN.md into sessions without this skill,
+and it alone sets the order of the report's parts (JOENESS six lines, results list,
+explanation, stamp); the script flags a results line placed above the six lines.
 The script reads the form of the text, not the truth of a number.
 
 ## Fix the required scope before implementation

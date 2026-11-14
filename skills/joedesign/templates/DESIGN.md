@@ -71,6 +71,15 @@ existing element lists, under `## Display before/after`, two lines per element:
 A pair that differs stays `product decision pending` until the product definition
 changes; a matching pair is a design decision.
 
+Report order (this paragraph is the one place that sets it): (1) when the project
+reports in the six lines 작업, 업데이트 파일, 이슈, 해결, 남은 문제, 다음 작업
+(JOENESS), those six lines open the report, where JOENESS reads them; (2) next, the
+line `design check results:` and the list under it (or `design checks: none ran`);
+(3) `## Display before/after` when the change has one; (4) any explanation
+paragraphs, each outcome sentence with its parenthesis; (5) when the report is
+stamped, the `report-check: ok <chars> chars <sha8>` line, always the last line.
+Without the six lines the report starts at (2); a one-line title may precede (1).
+
 ## Open Decisions / Evidence Boundary
 
 <!-- Missing source facts, conflicts and unobserved targets. Original and rendered
