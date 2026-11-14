@@ -66,7 +66,8 @@
   사용자 승인("1.3.0 게시") 뒤 VERSION 1.3.0·태그·Release·개인 설치(part13/install-receipt.md).
 - 추가(2026-11-15, 부모 세션 위임 과제 "JOEDESIGN 1.3.1 후보"): JOEFLOW 1.7.0 통합 시험의 결함 2건. 보고 배치 순서를 templates/DESIGN.md
   Report Form 한 문단에 두고 SKILL.md·conformance.md는 가리킴, report-check R6(b3efe2f). 넷째 칸 `rendered (injected css)` 어휘와 R7(c4f6779).
-  기존 evals 보고 274개·도장 118개 결과 1.3.0과 같음, 행동 시험 0회(part14/report.md). VERSION 1.3.0 그대로, 게시는 사용자 승인 대기.
+  기존 evals 보고 274개·도장 118개 결과 1.3.0과 같음, 행동 시험 0회(part14/report.md).
+  사용자 승인("게시", 부모 세션이 직접 받음) 뒤 VERSION 1.3.1·태그·Release·개인 설치(part14/install-receipt.md).
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)

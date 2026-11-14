@@ -1,8 +1,8 @@
 # JOEDESIGN 업데이트 내역
 
-## 1.3.1 (미게시 후보) — 보고 배치 규칙과 주입 CSS 측정 표시 (2026-11-15, T043)
+## 1.3.1 — 보고 배치 규칙과 주입 CSS 측정 표시 (2026-11-15, T043)
 
-- 미게시: VERSION은 1.3.0 그대로, 태그·Release·개인 설치 없음. 게시는 사용자 승인 뒤.
+- 게시: 사용자 승인("게시", 2026-11-15, 부모 세션이 직접 받음) 뒤 VERSION 1.3.1, 태그 v1.3.1, GitHub Release, 개인 설치 갱신(영수증 evals/check-coverage-20261104/part14/install-receipt.md).
 - 출처: JOEFLOW 1.7.0 세 도구 통합 시험(2026-11-12)의 JOEDESIGN 이슈 2건.
 - 보고 배치(b3efe2f): templates/DESIGN.md `## Report Form`의 한 문단만 순서를 정한다. JOENESS 여섯 줄 → `design check results:`와 목록 →
   `## Display before/after`(있을 때) → 설명 문단 → 도장 줄(항상 마지막). SKILL.md 6단계·conformance.md는 그 절을 가리킨다.

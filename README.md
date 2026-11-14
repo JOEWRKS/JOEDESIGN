@@ -10,7 +10,7 @@
 
 - **Role:** UI creation, implementation, and design review in Codex.
 - **Operation:** One operating core, with stage-specific role assignments and integrated results.
-- **Version:** **1.3.0** — defined in [VERSION](skills/joedesign/VERSION). 1.3.0 has a move, overlap, hide or merge of an existing element recorded as a before/after display table, a differing pair kept as product decision pending, and the report check flags a missing or unresolved table (R5) (T043); 1.2.1 adds a line at the top of the DESIGN.md template pointing handoff sessions to the Report Form section (T043); 1.2.0 names the JOEFLOW product-definition inputs and the re-entry route, adds the DESIGN.md Report Form section for handoff sessions, and the ROADMAP Check-cell example (T043); 1.1.0 added the report result-line form, the pre-send report check script and its stamp; the core, schemas and contracts are unchanged from 1.0.0.
+- **Version:** **1.3.1** — defined in [VERSION](skills/joedesign/VERSION). 1.3.1 fixes two defects from the three-tool integration trial: the Report Form fixes the order of report parts (six JOENESS lines, `design check results:` list, display before/after, explanation, stamp last) with report check R6, and the result line's mode cell distinguishes `rendered (injected css)` with R7 (T043); 1.3.0 has a move, overlap, hide or merge of an existing element recorded as a before/after display table, a differing pair kept as product decision pending, and the report check flags a missing or unresolved table (R5) (T043); 1.2.1 adds a line at the top of the DESIGN.md template pointing handoff sessions to the Report Form section (T043); 1.2.0 names the JOEFLOW product-definition inputs and the re-entry route, adds the DESIGN.md Report Form section for handoff sessions, and the ROADMAP Check-cell example (T043); 1.1.0 added the report result-line form, the pre-send report check script and its stamp; the core, schemas and contracts are unchanged from 1.0.0.
 - **Use cases:** New UI creation, existing UI extensions and repairs, and design conformance review.
 
 ## 2. Design Purpose
@@ -135,7 +135,7 @@ Finish with separate lists of changes, verified results, and items not yet verif
 
 - **역할:** Codex 기반 화면 제작·구현·디자인 검수 지원.
 - **운영:** 단일 코어 아래 단계별 역할 배정 및 결과 통합.
-- **버전:** **1.3.0** — [VERSION](skills/joedesign/VERSION) 기준. 1.3.0은 기존 요소의 이동·겹침·숨김·병합을 전후 표시 대조표로 적고, 두 줄이 다르면 제품 결정 대기로 두며, 보고 검사가 표 누락·미해결을 잡는 것(R5)(T043). 1.2.1은 인계 세션이 Report Form 절을 읽도록 DESIGN.md 템플릿 맨 위에 안내 한 줄을 더한 것(T043). 1.2.0은 JOEFLOW 제품 정의 입력과 재진입 경로 명시, 인계용 DESIGN.md Report Form 절, ROADMAP Check 칸 예시를 더한 것(T043). 1.1.0은 보고 결과 줄 형식·보고 검사 스크립트·도장. 코어·스키마·계약은 1.0.0 그대로.
+- **버전:** **1.3.1** — [VERSION](skills/joedesign/VERSION) 기준. 1.3.1은 세 도구 통합 시험의 결함 2건 수정: Report Form이 보고 부분의 순서(JOENESS 여섯 줄, `design check results:` 목록, 전후 표시, 설명, 도장 마지막)를 정하고 보고 검사 R6이 잡으며, 결과 줄 넷째 칸이 `rendered (injected css)`를 구별하고 R7이 잡는 것(T043). 1.3.0은 기존 요소의 이동·겹침·숨김·병합을 전후 표시 대조표로 적고, 두 줄이 다르면 제품 결정 대기로 두며, 보고 검사가 표 누락·미해결을 잡는 것(R5)(T043). 1.2.1은 인계 세션이 Report Form 절을 읽도록 DESIGN.md 템플릿 맨 위에 안내 한 줄을 더한 것(T043). 1.2.0은 JOEFLOW 제품 정의 입력과 재진입 경로 명시, 인계용 DESIGN.md Report Form 절, ROADMAP Check 칸 예시를 더한 것(T043). 1.1.0은 보고 결과 줄 형식·보고 검사 스크립트·도장. 코어·스키마·계약은 1.0.0 그대로.
 - **적용 대상:** 신규 화면 제작, 기존 화면 확장·수정, 디자인 기준 준수 검수.
 
 ## 2. 설계 목적
