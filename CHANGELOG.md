@@ -1,5 +1,19 @@
 # JOEDESIGN 업데이트 내역
 
+## 1.3.1 (미게시 후보) — 보고 배치 규칙과 주입 CSS 측정 표시 (2026-11-15, T043)
+
+- 미게시: VERSION은 1.3.0 그대로, 태그·Release·개인 설치 없음. 게시는 사용자 승인 뒤.
+- 출처: JOEFLOW 1.7.0 세 도구 통합 시험(2026-11-12)의 JOEDESIGN 이슈 2건.
+- 보고 배치(b3efe2f): templates/DESIGN.md `## Report Form`의 한 문단만 순서를 정한다. JOENESS 여섯 줄 → `design check results:`와 목록 →
+  `## Display before/after`(있을 때) → 설명 문단 → 도장 줄(항상 마지막). SKILL.md 6단계·conformance.md는 그 절을 가리킨다.
+  `report-check.mjs` R6: 결과 줄이 여섯 줄의 첫 줄보다 위에 있으면 지적. 여섯 줄 사이에 넣은 목록(1.3.0 보고 다수)은 허용.
+- 측정 모드(c4f6779): 결과 줄 넷째 칸은 `code`, `rendered`, `rendered (injected css)`(미리보기가 연결 CSS를 못 읽어 같은 CSS를 주입해 잼),
+  그 밖의 차이는 `rendered (<what differed>)`. SKILL.md·conformance.md·DESIGN.md 템플릿에 정의와 예시. R7: 본문이 CSS 주입을 말하는데
+  주입 표시가 붙은 rendered 줄이 하나도 없으면 지적.
+- 확인된 것([part14/report.md](evals/check-coverage-20261104/part14/report.md)): 기존 evals 보고 274개 규칙별 지적 수와 도장 보고 118개
+  `--verify` 결과가 1.3.0과 같다(R6·R7 0). 통합 시험 원본은 R7 1건(의도한 탐지), 고친 예시는 ok. node 34/34, python 142 OK.
+- 확인되지 않은 것: 새 문구에 대한 에이전트 행동(행동 시험 0회), JOENESS 쪽 소비. SKILL.md가 1.3.0보다 554바이트 늘었다.
+
 ## 1.3.0 — 재배치는 전후 표시 대조표로 판정 (2026-11-11, T043)
 
 - 1.2.1에 더한 것: SKILL.md "Decide the scope" 문단에 "기존 요소를 옮기거나 겹치거나 숨기거나 합치면 먼저 DESIGN.md와 보고에 `## Display before/after`를
