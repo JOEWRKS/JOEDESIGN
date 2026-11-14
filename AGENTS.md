@@ -68,6 +68,8 @@
   Report Form 한 문단에 두고 SKILL.md·conformance.md는 가리킴, report-check R6(b3efe2f). 넷째 칸 `rendered (injected css)` 어휘와 R7(c4f6779).
   기존 evals 보고 274개·도장 118개 결과 1.3.0과 같음, 행동 시험 0회(part14/report.md).
   사용자 승인("게시", 부모 세션이 직접 받음) 뒤 VERSION 1.3.1·태그·Release·개인 설치(part14/install-receipt.md).
+- 추가(2026-11-15, 부모 세션 위임 과제 "1.3.1 행동 시험", 사용자 승인 "시험 ㄱㄱ" 32회 + 채점): 장면 2 × 팔 2 × 8, Opus 한 턴, 블라인드 채점 2(part14/behavior-ab/).
+  순서 준수 1.3.1 16/16 vs 1.3.0 7/16, `rendered (injected css)` 8/8 vs 6/8, R7 0 vs 2, 오탐·퇴행 없음. 실행 에이전트 다수가 공용 임시 폴더에 보조 파일을 씀(behavior-ab/incidents.txt).
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)

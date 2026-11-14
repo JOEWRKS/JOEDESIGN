@@ -13,6 +13,8 @@
 - 확인된 것([part14/report.md](evals/check-coverage-20261104/part14/report.md)): 기존 evals 보고 274개 규칙별 지적 수와 도장 보고 118개
   `--verify` 결과가 1.3.0과 같다(R6·R7 0). 통합 시험 원본은 R7 1건(의도한 탐지), 고친 예시는 ok. node 34/34, python 142 OK.
 - 확인되지 않은 것: 새 문구에 대한 에이전트 행동(행동 시험 0회), JOENESS 쪽 소비. SKILL.md가 1.3.0보다 554바이트 늘었다.
+- 행동 시험(2026-11-15, 실행 32 + 채점 2, [part14/behavior-ab/report.md](evals/check-coverage-20261104/part14/behavior-ab/report.md)): 보고 순서 준수 1.3.1 16/16 vs 1.3.0 7/16,
+  주입 측정 넷째 칸 `rendered (injected css)` 8/8 vs 6/8(1.3.0도 과제 자료만으로 대부분 같은 표기), R7 지적 0 vs 2, 오탐·퇴행 없음.
 
 ## 1.3.0 — 재배치는 전후 표시 대조표로 판정 (2026-11-11, T043)
 
