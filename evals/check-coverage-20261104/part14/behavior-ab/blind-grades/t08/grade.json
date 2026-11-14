@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 0,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 0,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "여섯 줄 앞에 설명 문단: \"R1-2 글자 수 표시를 구현했습니다. C1은 상자 측정과 직접 관찰이 어긋나 통과로 적지 않았고(...)\"",
+  "o2": "결과 목록: (여섯 줄 아래 별도)",
+  "s": "report-check: ok 2,214 chars afb1822d",
+  "l": "- `C2 가로 넘침 없음 | 12/12 (scrollWidth = 화면 너비) | 4 sizes x 3 states (빈 칸·199자·200자), light | rendered | 320x800 200자: ...`",
+  "g": "범위 없는 결과 문장(남은 문제 줄): \"오른쪽 끝 맞춤은 상자와 캡처 모두 0px 차이입니다.\"",
+  "n": "REPORT.md에 'injected'·'주입'을 측정 방식으로 적은 곳 없음; 넷째 칸은 모두 'rendered'",
+  "f": "+    function update() { count.textContent = body.value.length + ' / ' + max; }"
+ },
+ "order_seen": "prose(요약) > six > list > questions > stamp"
+}

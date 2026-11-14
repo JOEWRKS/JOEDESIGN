@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 1,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 1,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "'# R1-2 글자 수 표시 보고' → 여섯 줄 → 'design check results:' → '설명:' → 도장",
+  "o2": "design check results: (여섯 줄 아래 별도)",
+  "s": "report-check: ok 2,136 chars e9ce3222",
+  "l": "- 라벨→요청 내용 칸 간격 (구조 변경 전후) | 4 → 4 | 1 size x 1 state, light | rendered | not spot-checked",
+  "g": "C2는 12곳 모두 가로 넘침이 없다(4 sizes x 3 states, rendered, spot check agrees).",
+  "n": "'주입'은 부정으로만 나옴: \"페이지가 자기 CSS를 불러왔다(linkedCss loaded true, 주입 없음).\" 넷째 칸은 모두 rendered",
+  "f": "+    function update() { count.textContent = body.value.length + ' / ' + body.maxLength; }"
+ },
+ "order_seen": "title > six > list > prose > stamp"
+}

@@ -1,0 +1,24 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 3개 넷째 칸 'rendered (injected css)'; 넷째 줄은 주입 없는 기준 측정",
+  "i2": "'C2 넘침 없음 | 16/16 | 4 sizes x 4 states, light | rendered (injected css) | ...'",
+  "i3": "작업 줄: '같은 `src/style.css`를 `--inject`로 주입해 쟀다'",
+  "i4": "'CSS 주입 없이 기준 측정 | 간격 -19 ... (스타일 없는 화면)' — 판정에 안 씀",
+  "o1": "여섯 줄 → ## 상세 보고 결과 목록 → 설명 → 질문 → 도장",
+  "s": "'report-check: ok 1,947 chars 158e2eb8'",
+  "g": "'C2는 결과 목록의 범위 그대로 통과했다(4 sizes x 4 states, rendered (injected css), ...)'"
+ },
+ "fourth": [
+  "rendered (injected css)",
+  "rendered (linked css not loaded)"
+ ]
+}

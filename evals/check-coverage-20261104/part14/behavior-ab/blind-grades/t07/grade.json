@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 0,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 1,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "여섯 줄과 목록 사이에 설명 문단: \"질문: (1) 글자 수 표시를 14px·`--muted` 색으로 두어도 될까요? ...\"",
+  "o2": "검사 결과: (여섯 줄 아래 별도 목록)",
+  "s": "report-check: ok 2,000 chars d83025a9",
+  "l": "- 기존 요소 위치 전후 비교 | 제목·라벨·두 칸 위치 같음, 보내기 버튼만 22px 아래 | 2 sizes x 1 state, light | rendered | not spot-checked",
+  "g": "- C2 넘침 없음 | 12/12 (scrollWidth = 화면 너비, scrollX 0) | 4 sizes x 3 states, light | rendered | ... (통과 수치는 결과 줄에만 있음)",
+  "n": "REPORT.md에 'injected'·'주입'을 측정 방식으로 적은 곳 없음; 넷째 칸은 모두 'rendered'",
+  "f": "+      <span class=\"char-count\" id=\"body-count\">0 / 200</span>"
+ },
+ "order_seen": "six > prose(질문) > list > display before/after > prose > stamp"
+}

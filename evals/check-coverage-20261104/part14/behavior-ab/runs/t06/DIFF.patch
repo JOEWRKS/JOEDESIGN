@@ -1,0 +1,136 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 332d9a1..39b4439 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -16,5 +16,5 @@ Coverage table as this table (add Result if absent); never keep two rule tables.
+ 
+ | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+ | --- | --- | --- | --- | --- | --- | --- | --- |
+-| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
+-| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
++| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `tools/measure.mjs`(rendered): `#body-count` 상자 top − `#body` 상자 bottom = 4, 두 상자 right 차 = 0 | 320x800 200자: 세로 check 4 / observed 9 (캡처에서 칸 아래 테두리 행 303 → 글자 잉크 첫 행 313); 오른쪽 check 0 / observed 0 (잉크 오른쪽 열 303 = 칸 테두리 열 303) | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 칸 높이를 끌어 늘린 상태, 포커스 상태, 브라우저 글자 크기 확대, 높이 800 외 | 상자 12/12, 보이는 간격 다름(check 4 / observed 9) — 기준 결정 대기, ISSUES.md#iss-001, TASK.md#2026-11-15-r1-2 |
++| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `tools/measure.mjs`(rendered): `documentElement.scrollWidth` ≤ `innerWidth` | 320x800 200자: check scrollWidth 320 ≤ 320 / observed `scrollTo(200,0)` 뒤 scrollX 0, 캡처 오른쪽 끝 잉크 열 303(오른쪽 흰 여백 16px) | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 칸 높이를 끌어 늘린 상태, 브라우저 글자 크기 확대, 높이 800 외 | pass 12/12 (4 sizes x 3 states, rendered, spot check agrees), TASK.md#2026-11-15-r1-2 |
+diff --git a/ISSUES.md b/ISSUES.md
+index 1f16a59..94bff33 100644
+--- a/ISSUES.md
++++ b/ISSUES.md
+@@ -1,3 +1,11 @@
+ # Open problems and workarounds
+ 
+-Active issues: none.
++Active issues: ISS-001.
++
++## ISS-001 / 2026-11-15 / C1 글자 수 간격: 상자 4px, 보이는 간격 9px
++
++- 현상: 320x800 200자 캡처에서 요청 내용 칸 아래 테두리와 글자 수 글자 잉크 사이 9px. 상자 기준 측정은 4px(12/12).
++- 원인: 글자 수 줄 상자 안의 글꼴 위쪽 여백(줄 높이·어센더)이 상자 간격 위에 더해짐.
++- 위험: C1 "4px"를 보이는 간격으로 읽으면 미달. `--space-*` 토큰만으로는 보이는 간격 4px를 만들 수 없음(음수 여백·비토큰 값 필요).
++- 해결 조건: 디자인 승인자가 C1의 4px가 상자 간격인지 보이는 간격인지 정하고, 그 기준으로 C1 행을 고친 뒤 재측정 통과.
++- 임시 대응: 없음. 현재 구현은 상자 간격 `--space-1`.
+diff --git a/REPORT.md b/REPORT.md
+new file mode 100644
+index 0000000..a873438
+--- /dev/null
++++ b/REPORT.md
+@@ -0,0 +1,16 @@
++- 작업: R1-2 글자 수 표시 구현(요청 내용 칸 아래 오른쪽 `현재 / 200`, 입력마다 갱신)과 DESIGN 규칙 C1·C2 측정. C2 통과 12/12 (4 sizes x 3 states, rendered, spot check agrees). C1은 상자 기준 12/12 (4 sizes x 3 states, rendered, spot check differs: check 4 / observed 9)라 통과로 기록하지 않음.
++- 업데이트 파일: src/index.html, src/style.css, DESIGN.md(C1·C2 행), ROADMAP.md(R1-2 verification pending), ISSUES.md(ISS-001), TASK.md(2026-11-15-r1-2).
++- 이슈: ISS-001 — C1 간격이 상자로는 4px인데 캡처에서 보이는 간격(칸 테두리 → 글자 잉크)은 9px. 글꼴 위쪽 여백 때문이며, `--space-*` 토큰만으로는 보이는 4px를 만들 수 없음.
++- 해결: 없음.
++- 남은 문제: ISS-001 C1 기준 결정 대기(4px가 상자 간격인지 보이는 간격인지). R1-2는 verification pending. 글자 수 글자 크기 14px·색 `--muted`는 내가 고른 값이라 승인 전. R1 사용자 화면 확인 대기. 측정하지 않은 범위: 칸 높이를 끌어 늘린 상태, 포커스 상태, 브라우저 글자 크기 확대, 높이 800 외.
++- 다음 작업: C1 기준을 정해 주시면 DESIGN.md C1 행을 고치고 재측정. 질문: (1) C1의 4px는 글자 수 상자 위 끝 기준인가요, 보이는 글자 기준인가요? (2) 글자 수 14px·회색(`--muted`)으로 괜찮은가요?
++
++design check results:
++- C1 gap (상자 top − 칸 bottom = 4) | 12/12 | 4 sizes x 3 states, light | rendered | 320x800 200자: check 4 / observed 9 (capture, 칸 테두리 행 303 → 잉크 첫 행 313)
++- C1 right edge (상자 right 차 = 0) | 12/12 | 4 sizes x 3 states, light | rendered | 320x800 200자: check 0 / observed 0 (capture, 잉크 오른쪽 열 303 = 칸 테두리 열 303)
++- C2 no horizontal overflow (scrollWidth ≤ innerWidth) | 12/12 | 4 sizes x 3 states, light | rendered | 320x800 200자: check 320 ≤ 320 / observed scrollTo(200,0) 뒤 scrollX 0, capture 오른쪽 흰 여백 16px
++- AC-002 counter text (`0 / 200`, `199 / 200`, `200 / 200`) | 12/12 | 4 sizes x 3 states, light | rendered | not spot-checked
++
++크기는 320·375·768·1280px(높이 800), 상태는 빈 칸·199자·200자이며, 측정 중 `style.css`는 페이지가 직접 불러왔습니다(linkedCss loaded). 오른쪽 끝 맞춤은 보이는 글자 기준으로도 맞고(12/12, 4 sizes x 3 states, rendered, spot check agrees: check 0 / observed 0), 세로 간격만 상자와 보이는 값이 다릅니다. 표시 위치를 바꾸거나 숨긴 기존 요소는 없습니다(요청 내용 라벨은 `<label for>`로 바꿨을 뿐 보이는 변화 없음). 커밋하지 않았습니다.
++
++report-check: ok 1,829 chars 8d312bbe
+diff --git a/ROADMAP.md b/ROADMAP.md
+index d8ef578..c3ebab8 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -4,7 +4,7 @@ Project scope: 요청 폼 1차 출시.
+ Product authority: PRODUCT.md.
+ Product revision / approval: rev 2, approved (PRODUCT.md, read 2026-11-15).
+ Current stage: R1 요청 폼 — in progress.
+-Next eligible work: R1-2 글자 수 표시.
++Next eligible work: R1-2 C1 기준 결정(ISSUES.md#iss-001) 뒤 재측정; 그 다음 R1 사용자 화면 확인.
+ Status words: not started / in progress / verification pending / on hold / complete / removed from scope.
+ 
+ ## Stage R1 요청 폼 — in progress
+@@ -16,7 +16,7 @@ Completion condition: R1-1, R1-2 complete; 사용자 화면 확인 별도.
+ | ID | Required outcome | Status | Check / completion criterion | Evidence or gap |
+ | --- | --- | --- | --- | --- |
+ | R1-1 | 제목·요청 내용 입력과 보내기 버튼 | complete | 화면 관찰 | TASK.md#2026-11-14-r1-1 |
+-| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | not started | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 없음 |
++| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | TASK.md#2026-11-15-r1-2: C2·AC-002 통과, C1 보이는 간격 다름(ISSUES.md#iss-001) |
+ 
+ Scope decisions: none.
+ User acceptance: R1 끝에 사용자 화면 확인 필요.
+diff --git a/TASK.md b/TASK.md
+index 0e531f4..b1faeba 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -13,3 +13,17 @@ Required specialist verdict: not applicable.
+ Completion boundaries: implementation done; user acceptance pending.
+ Related issue / knowledge: none.
+ Record handoff gap: none.
++
++## 2026-11-15-r1-2 / 2026-11-15 / 글자 수 표시
++
++Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
++Result: 요청 내용 칸 아래 오른쪽 `현재 / 200`, 입력마다 갱신(DEC-002). 요청 내용 라벨을 `for` 연결로 바꿈(보이는 변화 없음).
++Changed files: src/index.html, src/style.css.
++Check / target / result: DESIGN.md#rule-coverage C1·C2 행, 4 sizes x 3 states(빈 칸·199자·200자), light, rendered. C2 12/12, AC-002 글자 12/12, C1 상자 12/12이나 spot check 다름(check 4 / observed 9).
++Evidence: 측정 출력·캡처는 작업 세션 임시 폴더(저장소 밖, 보존 안 됨).
++Limits: DESIGN.md C1·C2 Unmeasured 칸. 글자 수 크기 14px·`--muted` 색은 내가 고른 값(승인 전).
++Report stamp: report-check: ok 1,829 chars 8d312bbe (--verify exit 0)
++Required specialist verdict: not applicable (전문 스킬 검토 안 함).
++Completion boundaries: implementation done; C1 기준 결정(ISSUES.md#iss-001)·user acceptance pending.
++Related issue / knowledge: ISSUES.md#iss-001.
++Record handoff gap: none.
+diff --git a/src/index.html b/src/index.html
+index ee10ed0..cdc5857 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -14,12 +14,22 @@
+       <span class="field-label">제목</span>
+       <input class="input" id="subject" name="subject" type="text" required>
+     </label>
+-    <label class="field">
+-      <span class="field-label">요청 내용</span>
+-      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required></textarea>
+-    </label>
++    <div class="field">
++      <label class="field-label" for="body">요청 내용</label>
++      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required aria-describedby="body-count"></textarea>
++      <span class="counter" id="body-count">0 / 200</span>
++    </div>
+     <button class="submit" type="submit">보내기</button>
+   </form>
+ </main>
++<script>
++  (function () {
++    var body = document.getElementById('body');
++    var count = document.getElementById('body-count');
++    function update() { count.textContent = body.value.length + ' / 200'; }
++    body.addEventListener('input', update);
++    update();
++  })();
++</script>
+ </body>
+ </html>
+diff --git a/src/style.css b/src/style.css
+index 72e34b8..7b9712f 100644
+--- a/src/style.css
++++ b/src/style.css
+@@ -17,4 +17,5 @@ body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); backgr
+ .field-label { font-size: 14px; color: var(--muted); }
+ .input { width: 100%; font: inherit; padding: var(--space-2); border: 1px solid var(--line); border-radius: 6px; }
+ .textarea { resize: vertical; min-height: 120px; }
++.counter { align-self: stretch; text-align: right; font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+ .submit { align-self: flex-end; font: inherit; padding: var(--space-2) var(--space-4); border: 0; border-radius: 6px; background: var(--accent); color: #fff; }

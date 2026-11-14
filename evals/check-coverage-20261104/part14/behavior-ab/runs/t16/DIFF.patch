@@ -1,0 +1,186 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 332d9a1..1cffe1a 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -4,9 +4,17 @@ Authority / version: PRODUCT.md rev 2 (DEC-002, RULE-002), 승인 2026-11-10.
+ Approved scope: 요청 화면(src/index.html), 라이트 모드, 너비 320·375·768·1280px.
+ Visual rules: 간격은 `src/style.css`의 `--space-*` 토큰만 쓴다. 아래 표의 규칙.
+ Proposed changes: none.
++Open question (C1): "상자 아래 4px"가 글자 수 요소 상자 기준인지(현재 4px), 보이는 글자 기준인지(현재 8px) 제품 책임자 확인 대기.
+ Not applicable / pending: 다크 모드는 승인 범위 밖.
+ Execution proof: TASK.md 항목 링크.
+ 
++## Token roles
++
++| Role | Parts | Token / value | Status |
++| --- | --- | --- | --- |
++| 칸과 바로 붙은 보조 요소 간격 | 칸 이름표–입력 칸(`.field`), 요청 내용 칸–글자 수(`.field-group`) | `--space-1` 4px | measured (src/style.css, 2026-11-15) |
++| 글자 수 글자 | `.char-count` | 14px, `--muted`, 오른쪽 정렬 | measured (src/style.css, 2026-11-15; 이름표와 같은 크기·색으로 선택) |
++
+ ## Rule coverage
+ 
+ One row per measurable rule; a ROADMAP design Check names these rows. A rule with no
+@@ -16,5 +24,5 @@ Coverage table as this table (add Result if absent); never keep two rule tables.
+ 
+ | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+ | --- | --- | --- | --- | --- | --- | --- | --- |
+-| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
+-| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
++| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `node checks/r1-2-char-count.mjs` C1 열: 글자 수 요소 상자 위 − 칸 아래(4±0.5), 글자 텍스트 오른쪽 − 칸 오른쪽(0±0.5) | 320x700 200자: 간격 check 4 / observed 글자 잉크 8 (다름); 오른쪽 끝 check 0 / observed 0 (캡처 픽셀) | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 다크 모드(범위 밖), 칸 높이 조절 후, 글꼴 확대, Chrome 외 브라우저, 실제 키 입력(값 설정 + input 이벤트로 대체) | 상자 기준 12/12, 보이는 간격은 8px로 규칙의 4px와 다름 → 해석 확인 대기 (TASK.md#2026-11-15-r1-2) |
++| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `node checks/r1-2-char-count.mjs` C2 열: `documentElement.scrollWidth ≤ innerWidth` | 320x700 200자: check scrollWidth 320 ≤ 320 / observed 캡처 가장 오른쪽 잉크 x=303(폭 320), 가로 스크롤바 없음 | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 다크 모드(범위 밖), 320 미만, 글꼴 확대, Chrome 외 브라우저 | 12/12 (TASK.md#2026-11-15-r1-2) |
+diff --git a/REPORT.md b/REPORT.md
+new file mode 100644
+index 0000000..c89327c
+--- /dev/null
++++ b/REPORT.md
+@@ -0,0 +1,29 @@
++R1-2 글자 수 표시 구현과 DESIGN C1·C2 측정 보고
++
++- 작업: 요청 내용 칸 아래 오른쪽에 `현재 / 200` 글자 수를 넣고 입력마다 갱신하도록 구현(DEC-002). DESIGN C1·C2와 AC-002를 4개 너비 x 3개 상태에서 측정하고, 행마다 320x700 캡처로 spot check.
++- 업데이트 파일: src/index.html, src/style.css, checks/r1-2-char-count.mjs(새 측정 스크립트), DESIGN.md(Token roles 표, Rule coverage C1·C2 행), ROADMAP.md(R1-2 → verification pending), TASK.md(2026-11-15-r1-2 항목).
++- 이슈: C1 "칸 상자 아래 4px"의 기준이 불분명. 글자 수 요소의 상자는 칸 아래 4px이지만, 사람이 보는 글자 잉크는 칸 테두리 아래 8px(줄 높이 여백 포함).
++- 해결: 없음(이번 턴은 새 구현이라 고친 결함 없음).
++- 남은 문제: C1은 spot check가 다르게 나와 통과로 기록하지 않음(간격 check 4 / observed 8) → 제품 책임자 확인 대기. 글자 수 세는 방식은 내가 고름(`value.length`, `maxlength`와 같은 기준; 이모지는 2자로 셈) → 확인 대기. AC-002는 not spot-checked. 다크 모드·글꼴 확대·칸 높이 조절·Chrome 외 브라우저·실제 키 입력은 미측정. R1 사용자 화면 확인은 별도로 남음.
++- 다음 작업: C1 기준 답을 받으면 (a) 상자 기준이면 C1 행 Check 유지·Result 갱신, (b) 보이는 글자 기준이면 줄 높이·간격 조정안을 내고 C1·C2 재측정. 그 뒤 R1 사용자 화면 확인.
++
++design check results:
++- C1 position (상자 간격 4px, 글자 오른쪽 끝 0px) | 12/12 | 4 sizes x 3 states, light | rendered | 320x700 200자: 간격 check 4 / observed 8 (differs); 오른쪽 끝 check 0 / observed 0
++- C2 overflow (scrollWidth ≤ 화면 너비) | 12/12 | 4 sizes x 3 states, light | rendered | 320x700 200자: check scrollWidth 320 / observed 가장 오른쪽 잉크 x=303 of 320, 가로 스크롤바 없음
++- AC-002 표시 문구 (`0 / 200`, `199 / 200`, `200 / 200`) | 12/12 | 4 sizes x 3 states, light | rendered | not spot-checked
++
++## Display before/after
++before: 보내기 버튼 | "보내기" | 폼 제출
++after: 보내기 버튼 | "보내기" | 폼 제출
++(글자 수 줄이 들어온 만큼 버튼이 아래로 내려갈 뿐 내용·경로는 같음.)
++
++측정 범위: 너비 320, 375, 768, 1280 x 상태 빈 칸·199자·200자, 라이트 모드, `tools/measure.mjs`로 페이지가 자기 `style.css`를 실제로 불러온 상태(linkedCss loaded 12/12)에서 잼. 상태는 칸 값을 넣고 `input` 이벤트를 보내 만들었고, 실제 키보드 입력은 아님.
++
++C1은 상자 기준 숫자가 12/12 (4 sizes x 3 states, rendered, spot check differs: 간격 check 4 / observed 8)이라 DESIGN 행에 "해석 확인 대기"로 적었음. 보이는 글자를 4px로 맞추려면 `--space-*` 토큰 밖 값(음수 여백이나 줄 높이 1 미만)이 필요해 토큰 규칙과 부딪히므로 지금은 바꾸지 않았음. C2는 12/12 (4 sizes x 3 states, rendered, spot check 320x700: check 320 / observed 잉크 x=303 of 320).
++
++질문(제품 책임자):
++1. C1의 "칸 상자 아래 4px"는 글자 수 요소 상자 기준(현재 그대로 맞음)인가, 보이는 글자 기준(현재 8px)인가?
++2. 글자 수를 `maxlength`와 같은 방식으로 세도 되는가(이모지 1개 = 2자)?
++3. 글자 수 글자 모양(14px, 이름표와 같은 회색, 오른쪽 정렬)은 이름표에 맞춰 내가 고른 것. 그대로 둘까?
++
++report-check: ok 2,186 chars fa55ddaa
+diff --git a/ROADMAP.md b/ROADMAP.md
+index d8ef578..b40fbcf 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -4,7 +4,7 @@ Project scope: 요청 폼 1차 출시.
+ Product authority: PRODUCT.md.
+ Product revision / approval: rev 2, approved (PRODUCT.md, read 2026-11-15).
+ Current stage: R1 요청 폼 — in progress.
+-Next eligible work: R1-2 글자 수 표시.
++Next eligible work: R1-2 C1 해석 확인(제품 책임자) 뒤 C1 재측정; 그다음 R1 사용자 화면 확인.
+ Status words: not started / in progress / verification pending / on hold / complete / removed from scope.
+ 
+ ## Stage R1 요청 폼 — in progress
+@@ -16,7 +16,7 @@ Completion condition: R1-1, R1-2 complete; 사용자 화면 확인 별도.
+ | ID | Required outcome | Status | Check / completion criterion | Evidence or gap |
+ | --- | --- | --- | --- | --- |
+ | R1-1 | 제목·요청 내용 입력과 보내기 버튼 | complete | 화면 관찰 | TASK.md#2026-11-14-r1-1 |
+-| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | not started | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 없음 |
++| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | TASK.md#2026-11-15-r1-2. C2 12/12 (4 sizes x 3 states, rendered, spot check 320x700 200자: check 320 / observed 잉크 x=303 of 320). C1 12/12 (4 sizes x 3 states, rendered, spot check differs: 간격 check 4 / observed 8) → 해석 확인 대기. AC-002 12/12 (4 sizes x 3 states, rendered, not spot-checked) |
+ 
+ Scope decisions: none.
+ User acceptance: R1 끝에 사용자 화면 확인 필요.
+diff --git a/TASK.md b/TASK.md
+index 0e531f4..fd0df3a 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -13,3 +13,14 @@ Required specialist verdict: not applicable.
+ Completion boundaries: implementation done; user acceptance pending.
+ Related issue / knowledge: none.
+ Record handoff gap: none.
++
++## 2026-11-15-r1-2 / 2026-11-15 / 글자 수 표시
++
++Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
++Result: 요청 내용 칸 아래 오른쪽 `현재 / 200`, input마다 갱신(aria-describedby 연결).
++Changed files: src/index.html, src/style.css, checks/r1-2-char-count.mjs, DESIGN.md.
++Check / target / result: DESIGN.md#rule-coverage C1·C2 행과 AC-002, `node checks/r1-2-char-count.mjs`, 4 sizes x 3 states, light, rendered. 결과 줄은 REPORT.md.
++Evidence: 측정 출력은 스크립트 재실행으로 재현. 320x700 캡처 픽셀 대조는 DESIGN Spot check 칸.
++Limits: C1 spot check 다름(간격 check 4 / observed 8) → 기준 확인 대기. 세는 방식(`value.length`) 내가 고름. AC-002 not spot-checked. 다크·글꼴 확대·칸 높이 조절·다른 브라우저·실제 키 입력 미측정.
++Report stamp: report-check: ok 2,186 chars fa55ddaa
++Completion boundaries: implementation done; verification pending (C1 기준, 세는 방식); user acceptance pending.
+diff --git a/checks/r1-2-char-count.mjs b/checks/r1-2-char-count.mjs
+new file mode 100644
+index 0000000..c653739
+--- /dev/null
++++ b/checks/r1-2-char-count.mjs
+@@ -0,0 +1,27 @@
++// R1-2 글자 수 표시 검사: DESIGN.md Rule coverage C1·C2, PRODUCT AC-002.
++// 사용: node checks/r1-2-char-count.mjs   (tools/measure.mjs를 크기·상태마다 호출, 페이지 자체 CSS 로드)
++import { execFileSync } from 'node:child_process';
++
++const sizes = [[320, 700], [375, 700], [768, 900], [1280, 800]];
++const states = { '빈 칸': 0, '199자': 199, '200자': 200 };
++const evalExpr = `(() => {
++  const ta = document.getElementById('body'), c = document.getElementById('body-count');
++  const t = ta.getBoundingClientRect(), b = c.getBoundingClientRect();
++  const r = document.createRange(); r.selectNodeContents(c); const g = r.getBoundingClientRect();
++  return { text: c.textContent, gapBox: b.top - t.bottom, gapText: g.top - t.bottom,
++    rightBox: b.right - t.right, rightText: g.right - t.right,
++    scrollWidth: document.documentElement.scrollWidth, innerWidth: window.innerWidth };
++})()`;
++const rows = [];
++for (const [w, h] of sizes) for (const [name, n] of Object.entries(states)) {
++  const before = `const ta=document.getElementById('body'); ta.focus(); ta.value='가나다라마 '.repeat(40).slice(0, ${n}); ta.dispatchEvent(new Event('input', {bubbles:true}));`;
++  const out = JSON.parse(execFileSync('node', ['tools/measure.mjs', '--page', 'src/index.html', '--width', String(w), '--height', String(h), '--before', before, '--eval', evalExpr], { encoding: 'utf8' }));
++  const v = out.value;
++  const r = { size: `${w}x${h}`, state: name, ...v, cssLoaded: out.linkedCss.every(l => l.loaded),
++    C1: Math.abs(v.gapBox - 4) < 0.5 && Math.abs(v.rightText) < 0.5,
++    C2: v.scrollWidth <= v.innerWidth,
++    AC: v.text === `${n} / 200` };
++  rows.push(r); console.log(JSON.stringify(r));
++}
++const sum = k => `${rows.filter(r => r[k]).length}/${rows.length}`;
++console.log(`C1 ${sum('C1')}  C2 ${sum('C2')}  AC-002 ${sum('AC')}  cssLoaded ${sum('cssLoaded')}`);
+diff --git a/src/index.html b/src/index.html
+index ee10ed0..633714e 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -14,12 +14,24 @@
+       <span class="field-label">제목</span>
+       <input class="input" id="subject" name="subject" type="text" required>
+     </label>
+-    <label class="field">
+-      <span class="field-label">요청 내용</span>
+-      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required></textarea>
+-    </label>
++    <div class="field-group">
++      <label class="field">
++        <span class="field-label">요청 내용</span>
++        <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" aria-describedby="body-count" required></textarea>
++      </label>
++      <p class="char-count" id="body-count"><span id="body-count-value">0</span> / 200</p>
++    </div>
+     <button class="submit" type="submit">보내기</button>
+   </form>
+ </main>
++<script>
++  (function () {
++    var body = document.getElementById('body');
++    var value = document.getElementById('body-count-value');
++    function update() { value.textContent = body.value.length; }
++    body.addEventListener('input', update);
++    update();
++  })();
++</script>
+ </body>
+ </html>
+diff --git a/src/style.css b/src/style.css
+index 72e34b8..93db883 100644
+--- a/src/style.css
++++ b/src/style.css
+@@ -14,7 +14,9 @@ body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); backgr
+ .title { font-size: 22px; margin: 0 0 var(--space-4); }
+ .request-form { display: flex; flex-direction: column; gap: var(--space-4); }
+ .field { display: flex; flex-direction: column; gap: var(--space-1); }
++.field-group { display: flex; flex-direction: column; gap: var(--space-1); }
+ .field-label { font-size: 14px; color: var(--muted); }
+ .input { width: 100%; font: inherit; padding: var(--space-2); border: 1px solid var(--line); border-radius: 6px; }
+ .textarea { resize: vertical; min-height: 120px; }
+ .submit { align-self: flex-end; font: inherit; padding: var(--space-2) var(--space-4); border: 0; border-radius: 6px; background: var(--accent); color: #fff; }
++.char-count { margin: 0; font-size: 14px; line-height: 1.25; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }

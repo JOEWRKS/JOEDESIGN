@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 1,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 1,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "'- 작업:' → 'design check results:' → '상세 보고:' → 도장",
+  "o2": "design check results: (여섯 줄 아래 별도)",
+  "s": "report-check: ok 2,185 chars d7498b71",
+  "l": "- C1 right edge (text right − textarea right = 0) | 12/12 | 4 sizes x 3 states, light | rendered | 320x800 200자 오른쪽 끝: check 0 / observed 0, capture",
+  "g": "C2는 통과(12/12, 4 sizes x 3 states, rendered, spot check 320x800 200자 scrollX 0)",
+  "n": "모든 측정에서 linkedCss loaded=true로 페이지 자체 CSS가 적용됐다.",
+  "f": "+    function update() { count.textContent = body.value.length + ' / ' + max; }"
+ },
+ "order_seen": "six > list > prose > stamp"
+}

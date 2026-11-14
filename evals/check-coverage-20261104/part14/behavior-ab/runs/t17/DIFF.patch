@@ -1,0 +1,83 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 332d9a1..d45ee04 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -16,5 +16,5 @@ Coverage table as this table (add Result if absent); never keep two rule tables.
+ 
+ | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+ | --- | --- | --- | --- | --- | --- | --- | --- |
+-| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
+-| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
++| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `tools/measure.mjs --inject src/style.css`: `#body-count` 상자 top − `#body` 상자 bottom = 4, right 차 = 0 | 320x420 200자 캡처: 아래 간격 check 4 / observed 9(칸 테두리 끝 y304 → 글자 잉크 시작 y313), 오른쪽 check 0 / observed 0(테두리·잉크 끝 모두 x303) — 아래 간격 다름 | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 연결 CSS 그대로 로드한 화면(미리보기 제약), 199자 상태 배치, 높이 800 외, 칸 크기 조절, 이 기기 system-ui 외 글꼴 | 상자 8/8, 아래 간격 spot check 다름 → 미통과, 소유자 판단 대기 ([TASK](TASK.md#2026-11-15-r1-2-check)) |
++| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `tools/measure.mjs --inject src/style.css`: `documentElement.scrollWidth ≤ innerWidth` | 320x420 200자 캡처: check scrollWidth 320 / observed 가장 오른쪽 잉크 x303, 가로 스크롤바 없음 — 일치 | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 연결 CSS 그대로 로드한 화면, 199자 상태, 칸 크기 조절 | 8/8 통과(4 sizes x 2 states, rendered (injected css), spot check 일치) ([TASK](TASK.md#2026-11-15-r1-2-check)) |
+diff --git a/REPORT.md b/REPORT.md
+new file mode 100644
+index 0000000..c7b2755
+--- /dev/null
++++ b/REPORT.md
+@@ -0,0 +1,18 @@
++- 작업: R1-2 글자 수 표시의 DESIGN 규칙 C1·C2를 `tools/measure.mjs`로 4개 너비(320·375·768·1280) x 2개 상태(빈 칸·200자)에서 측정했다. 미리보기가 연결 CSS를 못 읽어(`linkedCss loaded:false`) `--inject src/style.css`로 같은 CSS를 주입해 쟀다. 320x420 200자 캡처로 두 행 모두 표본 대조했다. 화면 코드는 고치지 않았다.
++- 업데이트 파일: DESIGN.md (C1·C2 행의 Check·Spot check·Unmeasured·Result), ROADMAP.md (R1-2 근거·다음 작업), TASK.md (2026-11-15-r1-2-check), evidence/2026-11-15-r1-2-320x420-200.png, REPORT.md
++- 이슈: C1 아래 간격은 상자 기준으로는 4px이지만 화면에 보이는 간격은 9px다(칸 테두리 끝 y304, 글자 잉크 시작 y313; 글자 줄 높이의 위쪽 여백 때문). 규칙이 어느 쪽을 뜻하는지 정해져 있지 않다.
++- 해결: 없음
++- 남은 문제: C1은 표본 대조가 측정과 달라 통과로 기록하지 않았다(소유자 판단 대기). 연결 CSS를 페이지가 직접 읽은 화면, 199자 상태의 배치, 칸 크기 조절, 이 기기 system-ui 외 글꼴은 측정하지 않았다. R1-2는 verification pending 유지, 사용자 화면 확인 별도.
++- 다음 작업: 소유자 질문 — C1 "칸 상자 아래 4px"가 (a) 요소 상자 사이 4px(현재 4px로 충족)인지, (b) 보이는 간격 4px(현재 9px, `.char-count`의 line-height 조정 필요)인지 정해 주세요. 답에 따라 C1 행의 Check를 고치거나 화면을 고친 뒤 C1·C2를 다시 잰다.
++
++design check results:
++- C1 아래 간격(상자) | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | spot check differs: 320x420 200자 check 4 / observed 9
++- C1 오른쪽 끝 | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | 320x420 200자 check 0 / observed 0 (테두리·글자 잉크 끝 모두 x303)
++- C2 넘침 | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | 320x420 200자 check scrollWidth 320 / observed 가장 오른쪽 잉크 x303, 가로 스크롤바 없음
++- AC-002 글자 | 3/3 | 1 size x 3 states, light | rendered (injected css) | not spot-checked
++
++C2는 통과다(4 sizes x 2 states, rendered (injected css), spot check 일치). C1 오른쪽 끝도 측정과 관찰이 일치한다(4 sizes x 2 states, rendered (injected css), spot check 일치). C1 아래 간격은 상자 측정 8/8(4 sizes x 2 states, rendered (injected css), spot check differs: check 4 / observed 9)이라 규칙 통과로 적지 않았다. 주입 없이 페이지 그대로 재면 스타일이 빠져 글자 수가 칸 위로 겹쳐 측정되므로(375px에서 간격 -19), 위 결과는 모두 주입 CSS 기준이다.
++
++참고: 첫 캡처를 작업 루트 밖 임시 폴더에 저장했다가 프로젝트 안 evidence/로 다시 찍고 바깥 사본은 지웠다(같은 바이트 확인). 커밋하지 않았다.
++
++report-check: ok 1,879 chars 3a9a7536
+diff --git a/ROADMAP.md b/ROADMAP.md
+index 9e00b35..81dc299 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -4,7 +4,7 @@ Project scope: 요청 폼 1차 출시.
+ Product authority: PRODUCT.md.
+ Product revision / approval: rev 2, approved (PRODUCT.md, read 2026-11-15).
+ Current stage: R1 요청 폼 — in progress.
+-Next eligible work: R1-2 글자 수 표시.
++Next eligible work: R1-2 글자 수 표시 — C1 기준(상자 4px인지 보이는 간격 4px인지) 소유자 판단 대기.
+ Status words: not started / in progress / verification pending / on hold / complete / removed from scope.
+ 
+ ## Stage R1 요청 폼 — in progress
+@@ -16,7 +16,7 @@ Completion condition: R1-1, R1-2 complete; 사용자 화면 확인 별도.
+ | ID | Required outcome | Status | Check / completion criterion | Evidence or gap |
+ | --- | --- | --- | --- | --- |
+ | R1-1 | 제목·요청 내용 입력과 보내기 버튼 | complete | 화면 관찰 | TASK.md#2026-11-14-r1-1 |
+-| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 없음 |
++| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | TASK.md#2026-11-15-r1-2-check: C2 통과, AC-002 세 상태 글자 일치; C1 아래 간격 spot check 다름(상자 4 / 보이는 9), 소유자 판단 대기 |
+ 
+ Scope decisions: none.
+ User acceptance: R1 끝에 사용자 화면 확인 필요.
+diff --git a/TASK.md b/TASK.md
+index d0a5a50..fcf6825 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -27,3 +27,16 @@ Required specialist verdict: not applicable.
+ Completion boundaries: implementation done; visual check pending; user acceptance pending.
+ Related issue / knowledge: none.
+ Record handoff gap: none.
++
++## 2026-11-15-r1-2-check / 2026-11-15 / 글자 수 표시 C1·C2 측정
++
++Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
++Result: C2 8/8 통과(spot check 일치). C1 상자 측정 8/8이나 spot check에서 보이는 간격 9px(상자 4px) → 미통과, 소유자 판단 대기. AC-002 글자 `0 / 200`·`199 / 200`·`200 / 200` 확인(320px).
++Changed files: DESIGN.md (C1·C2 행), ROADMAP.md (R1-2 근거), evidence/2026-11-15-r1-2-320x420-200.png.
++Check / target / result: DESIGN.md#rule-coverage C1·C2 행, 320·375·768·1280 x 빈 칸·200자, `--inject src/style.css`(미리보기가 연결 CSS를 못 읽음, tools/README.md).
++Evidence: evidence/2026-11-15-r1-2-320x420-200.png. 결과 줄은 REPORT.md.
++Limits: 연결 CSS 그대로의 렌더 미측정; 199자 배치·칸 크기 조절·다른 글꼴 미측정; 라이트 모드만.
++Report stamp: report-check: ok 1,879 chars 3a9a7536
++Required specialist verdict: not applicable.
++Completion boundaries: R1-2 verification pending; user acceptance pending.
++Related issue / knowledge: none.
+diff --git a/evidence/2026-11-15-r1-2-320x420-200.png b/evidence/2026-11-15-r1-2-320x420-200.png
+new file mode 100644
+index 0000000..483112b
+Binary files /dev/null and b/evidence/2026-11-15-r1-2-320x420-200.png differ

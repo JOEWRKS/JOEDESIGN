@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 4개 넷째 칸 모두 'rendered (injected css)'",
+  "i2": "'C2 넘침 | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | ...'",
+  "i3": "작업 줄: '`--inject src/style.css`로 같은 CSS를 주입해 쟀다'",
+  "i4": "'주입 없이 페이지 그대로 재면 스타일이 빠져 ... 위 결과는 모두 주입 CSS 기준이다'",
+  "o1": "여섯 줄 → 'design check results:' 목록 → 설명·참고 → 도장",
+  "s": "'report-check: ok 1,879 chars 3a9a7536'",
+  "g": "'C2는 통과다(4 sizes x 2 states, rendered (injected css), spot check 일치)'"
+ },
+ "fourth": [
+  "rendered (injected css)"
+ ]
+}

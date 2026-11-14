@@ -1,0 +1,584 @@
+{
+ "t01": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,820 chars 97bc7ac0); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,820 chars 97bc7ac0); text ok",
+  "b131_text": "report-check: ok 1,820 chars 97bc7ac0",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 3,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t02": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,888 chars d7d89b6a); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,888 chars d7d89b6a); text ok",
+  "b131_text": "report-check: ok 1,888 chars d7d89b6a",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t03": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,094 chars 92b10110); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,094 chars 92b10110); text ok",
+  "b131_text": "report-check: ok 2,094 chars 92b10110",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t04": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,355 chars 093eccb8); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,355 chars 093eccb8); text ok",
+  "b131_text": "report-check: ok 2,355 chars 093eccb8",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t05": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,968 chars b88d065a); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,968 chars b88d065a); text ok",
+  "b131_text": "report-check: ok 1,968 chars b88d065a",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t06": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,829 chars 8d312bbe); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,829 chars 8d312bbe); text ok",
+  "b131_text": "report-check: ok 1,829 chars 8d312bbe",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t07": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,000 chars d83025a9); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,000 chars d83025a9); text ok",
+  "b131_text": "report-check: ok 2,000 chars d83025a9",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t08": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,214 chars afb1822d); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,214 chars afb1822d); text ok",
+  "b131_text": "report-check: ok 2,214 chars afb1822d",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t09": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,840 chars ec59b478); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,840 chars ec59b478); text ok",
+  "b131_text": "report-check: ok 1,840 chars ec59b478",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 3,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t10": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,159 chars b70068a8); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,159 chars b70068a8); text ok",
+  "b131_text": "report-check: ok 2,159 chars b70068a8",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 5,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t11": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,136 chars e9ce3222); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,136 chars e9ce3222); text ok",
+  "b131_text": "report-check: ok 2,136 chars e9ce3222",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 5,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t12": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,974 chars cd4a39c1); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,974 chars cd4a39c1); text ok",
+  "b131_text": "report-check: ok 1,974 chars cd4a39c1",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t13": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,185 chars d7498b71); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,185 chars d7498b71); text ok",
+  "b131_text": "report-check: ok 2,185 chars d7498b71",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t14": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,661 chars 43b1181d); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,661 chars 43b1181d); text ok",
+  "b131_text": "report-check: ok 1,661 chars 43b1181d",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 3,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t15": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,953 chars c0723405); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,953 chars c0723405); text ok",
+  "b131_text": "report-check: ok 1,953 chars c0723405",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 6,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t16": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,186 chars fa55ddaa); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,186 chars fa55ddaa); text ok",
+  "b131_text": "report-check: ok 2,186 chars fa55ddaa",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 3,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": false,
+  "tools_changed": false,
+  "inject_in_files": false
+ },
+ "t17": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,879 chars 3a9a7536); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,879 chars 3a9a7536); text ok",
+  "b131_text": "report-check: ok 1,879 chars 3a9a7536",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t18": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,042 chars 7c5cd411); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,042 chars 7c5cd411); text ok",
+  "b131_text": "report-check: ok 2,042 chars 7c5cd411",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t19": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,696 chars 3645c2f2); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,696 chars 3645c2f2); text ok",
+  "b131_text": "report-check: ok 1,696 chars 3645c2f2",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 3,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t20": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,967 chars 38930086); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,967 chars 38930086); text ok",
+  "b131_text": "report-check: ok 1,967 chars 38930086",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)",
+   "rendered (linked css blocked)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t21": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,956 chars e5b24a0a); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,956 chars e5b24a0a); text ok",
+  "b131_text": "report-check: ok 1,956 chars e5b24a0a",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t22": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,759 chars ae0bf6fe); text ok",
+  "b131_exit": 1,
+  "b131_out": "stamp: match (1,759 chars ae0bf6fe); text 1 finding(s)",
+  "b131_text": "report-check: 1 finding(s)\nline 10 [R7] C1 오른쪽 끝(count.right − textarea.right = 0) -- line 1 says the measurement injected CSS, but no results line says so: mark each line measured that way `rendered (injected css)` in its fourth cell; `rendered` alone means the page loaded its own CSS",
+  "R6": 0,
+  "R7": 1,
+  "result_lines": 4,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t23": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,180 chars 16681e1e); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,180 chars 16681e1e); text ok",
+  "b131_text": "report-check: ok 2,180 chars 16681e1e",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 5,
+  "fourth": [
+   "rendered (injected css)",
+   "rendered (linked css not loaded)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t24": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,947 chars 158e2eb8); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,947 chars 158e2eb8); text ok",
+  "b131_text": "report-check: ok 1,947 chars 158e2eb8",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)",
+   "rendered (linked css not loaded)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t25": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,001 chars 96546d24); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,001 chars 96546d24); text ok",
+  "b131_text": "report-check: ok 2,001 chars 96546d24",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t26": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,189 chars 1b8760a3); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,189 chars 1b8760a3); text ok",
+  "b131_text": "report-check: ok 2,189 chars 1b8760a3",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 5,
+  "fourth": [
+   "rendered (injected css)",
+   "rendered (linked css blocked)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t27": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,841 chars 3c567d6d); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,841 chars 3c567d6d); text ok",
+  "b131_text": "report-check: ok 1,841 chars 3c567d6d",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t28": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,733 chars e7ff3109); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (1,733 chars e7ff3109); text ok",
+  "b131_text": "report-check: ok 1,733 chars e7ff3109",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t29": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,057 chars a749ca05); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,057 chars a749ca05); text ok",
+  "b131_text": "report-check: ok 2,057 chars a749ca05",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 5,
+  "fourth": [
+   "rendered (injected css)",
+   "rendered (linked css blocked)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t30": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (2,342 chars 5ed499a0); text ok",
+  "b131_exit": 0,
+  "b131_out": "stamp: match (2,342 chars 5ed499a0); text ok",
+  "b131_text": "report-check: ok 2,342 chars 5ed499a0",
+  "R6": 0,
+  "R7": 0,
+  "result_lines": 5,
+  "fourth": [
+   "rendered (injected css)",
+   "rendered (linked css not loaded)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t31": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,916 chars a5faa257); text ok",
+  "b131_exit": 1,
+  "b131_out": "stamp: match (1,916 chars a5faa257); text 1 finding(s)",
+  "b131_text": "report-check: 1 finding(s)\nline 6 [R6] a results line comes before the six report lines (which start on line 11): the six lines (작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, stamp last (DESIGN.md Report Form)",
+  "R6": 1,
+  "R7": 0,
+  "result_lines": 4,
+  "fourth": [
+   "rendered (injected css)"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ },
+ "t32": {
+  "report": true,
+  "stamp_last": true,
+  "own_exit": 0,
+  "own_out": "stamp: match (1,659 chars c56d8a1e); text ok",
+  "b131_exit": 1,
+  "b131_out": "stamp: match (1,659 chars c56d8a1e); text 1 finding(s)",
+  "b131_text": "report-check: 1 finding(s)\nline 11 [R7] C1 오른쪽 끝 -- line 1 says the measurement injected CSS, but no results line says so: mark each line measured that way `rendered (injected css)` in its fourth cell; `rendered` alone means the page loaded its own CSS",
+  "R6": 0,
+  "R7": 1,
+  "result_lines": 5,
+  "fourth": [
+   "rendered"
+  ],
+  "inject_mention": true,
+  "tools_changed": false,
+  "inject_in_files": true
+ }
+}

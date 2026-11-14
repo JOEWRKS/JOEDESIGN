@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "i1": 0,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "넷째 칸이 'rendered'만: 'C1 오른쪽 끝(...) | 8/8 | 4 sizes x 2 states, light, injected css | rendered | ...'",
+  "i2": "같은 줄 셋째 칸에 'injected css'가 있음(4줄 모두)",
+  "i3": "작업 줄: '`--inject src/style.css`로 같은 CSS를 주입해 쟀다'",
+  "i4": "'주입 없이 재면 간격 -19px의 스타일 빠진 화면' — 결과로 쓰지 않음",
+  "o1": "여섯 줄 → 디자인 검사 결과 → 질문 → 도장",
+  "s": "'report-check: ok 1,759 chars ae0bf6fe'",
+  "g": "통과 문장 없음; 결과 줄마다 '4 sizes x 2 states, light, injected css | rendered'"
+ },
+ "fourth": [
+  "rendered"
+ ]
+}

@@ -1,0 +1,942 @@
+[
+ {
+  "id": "t01",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 0,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "prose(두 문장 요약) > six > list > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t02",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "six > list > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t03",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "six > list > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t04",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 0,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 0,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "prose(네 문장 요약) > six > list > prose > questions > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t05",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "six > list > prose(질문·측정 환경) > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t06",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "six > list > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t07",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 0,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "six > prose(질문) > list > display before/after > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t08",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 0,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 0,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "prose(요약) > six > list > questions > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t09",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 0,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "prose(세 문장 요약) > six > list > display before/after > prose > questions > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t10",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "title > six > list > display before/after > prose > questions > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t11",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "title > six > list > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t12",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 0,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "title > six > list > prose > questions > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t13",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "six > list > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t14",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 1,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "six > list > prose > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t15",
+  "scene": "s1",
+  "arm": "A",
+  "scores": {
+   "o1": 0,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 0,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "prose(네 문장 요약) > six > list > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t16",
+  "scene": "s1",
+  "arm": "B",
+  "scores": {
+   "o1": 1,
+   "o2": 1,
+   "s": 1,
+   "l": 1,
+   "g": 0,
+   "n": 1,
+   "f": 1
+  },
+  "fourth_graded": null,
+  "order_seen": "title > six > list > display before/after > prose > questions > stamp",
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": false,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t17",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t18",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t19",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 0
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t20",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 0,
+   "s": 1,
+   "g": 0
+  },
+  "fourth_graded": [
+   "rendered (injected css)",
+   "rendered (linked css blocked)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)",
+    "rendered (linked css blocked)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t21",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 0
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t22",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 0,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": false,
+   "R6": 0,
+   "R7": 1,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t23",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)",
+   "rendered (linked css not loaded)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)",
+    "rendered (linked css not loaded)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t24",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)",
+   "rendered (linked css not loaded)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)",
+    "rendered (linked css not loaded)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t25",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t26",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)",
+   "rendered (linked css blocked)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)",
+    "rendered (linked css blocked)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t27",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t28",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 0,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t29",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)",
+   "rendered (linked css blocked)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)",
+    "rendered (linked css blocked)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t30",
+  "scene": "s2",
+  "arm": "B",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)",
+   "rendered (linked css not loaded)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": true,
+   "R6": 0,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)",
+    "rendered (linked css not loaded)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t31",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 0,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered (injected css)"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": false,
+   "R6": 1,
+   "R7": 0,
+   "fourth": [
+    "rendered (injected css)"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ },
+ {
+  "id": "t32",
+  "scene": "s2",
+  "arm": "A",
+  "scores": {
+   "i1": 0,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_graded": [
+   "rendered"
+  ],
+  "order_seen": null,
+  "mech": {
+   "stamp_last": true,
+   "verify_own_ok": true,
+   "verify_131_ok": false,
+   "R6": 0,
+   "R7": 1,
+   "fourth": [
+    "rendered"
+   ],
+   "inject_mention": true,
+   "tools_changed": false
+  }
+ }
+]

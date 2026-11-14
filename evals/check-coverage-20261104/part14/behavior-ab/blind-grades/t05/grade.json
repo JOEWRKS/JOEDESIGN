@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 1,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 1,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "'- 작업:' → '결과 목록:' → 질문·측정 환경 문단 → 도장",
+  "o2": "결과 목록: (여섯 줄 아래 별도)",
+  "s": "report-check: ok 1,968 chars b88d065a",
+  "l": "- C1 오른쪽 끝(칸 right − 글자 수 right = 0) | 12/12 | 4 sizes x 3 states, light | rendered | 320 200자: check 0 / observed 0 ...",
+  "g": "4개 너비 모두 일치(4 sizes x 3 states, rendered, not spot-checked).",
+  "n": "연결된 style.css 적용됨(`linkedCss loaded: true`)",
+  "f": "+    function update() { count.textContent = body.value.length + ' / ' + max; }"
+ },
+ "order_seen": "six > list > prose(질문·측정 환경) > stamp"
+}

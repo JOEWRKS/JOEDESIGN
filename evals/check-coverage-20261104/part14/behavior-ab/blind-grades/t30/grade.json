@@ -1,0 +1,24 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 4개 넷째 칸 'rendered (injected css)'; 다섯째 줄은 주입 없는 기준선",
+  "i2": "'C2 no horizontal overflow (...) | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | ...'",
+  "i3": "이슈 줄: '같은 CSS를 주입해 쟀다(우회, 수정 아님)'",
+  "i4": "'unstyled baseline (...) | not counted: gap -19 ...'; '주입 없이 잰 값은 ... 결과에서 뺐다'",
+  "o1": "여섯 줄 → 결과 목록 → 상세 보고(질문 포함) → 도장",
+  "s": "'report-check: ok 2,342 chars 5ed499a0'",
+  "g": "'C2 넘침 없음은 12/12 (4 sizes x 3 states, rendered (injected css); spot check ...)'"
+ },
+ "fourth": [
+  "rendered (injected css)",
+  "rendered (linked css not loaded)"
+ ]
+}

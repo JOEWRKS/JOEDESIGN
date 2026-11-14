@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 0,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 1,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "여섯 줄 앞에 설명 문단: \"R1-2 글자 수 표시를 구현했고, DESIGN 규칙 C1·C2를 렌더 화면에서 쟀습니다. C1 12/12 (...)\"",
+  "o2": "결과 목록: (여섯 줄 아래 별도)",
+  "s": "report-check: ok 1,840 chars ec59b478",
+  "l": "- C1 글자 수 위치 | 12/12 | 4 sizes x 3 states, light | rendered | 320x400 200자 캡처: 간격 check 4 / observed 4, 오른쪽 끝 차 check 0 / observed 0",
+  "g": "C1 12/12 (4 sizes x 3 states, rendered, 320x400 대조 check 4 / observed 4), C2 12/12 (4 sizes x 3 states, rendered, ...)",
+  "n": "REPORT.md에 'injected'·'주입'을 측정 방식으로 적은 곳 없음; 넷째 칸은 모두 'rendered'",
+  "f": "+      <p class=\"char-count\" id=\"body-count\"><span id=\"body-count-value\">0</span> / 200</p>"
+ },
+ "order_seen": "prose(세 문장 요약) > six > list > display before/after > prose > questions > stamp"
+}

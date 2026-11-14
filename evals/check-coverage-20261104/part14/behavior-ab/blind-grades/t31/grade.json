@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 0,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 4개 넷째 칸 모두 'rendered (injected css)'",
+  "i2": "'C2 가로 넘침 | 12/12 (...) | 4 sizes x 3 states, light | rendered (injected css) | ...'",
+  "i3": "'그래서 모든 측정은 `--inject src/style.css`로 같은 CSS를 넣고 했습니다'",
+  "i4": "'주입 없이 잰 C1 위 간격 -19px, 버림'",
+  "o1": "요약·측정 방법 문단 → 결과 목록 → 여섯 줄 순서로 여섯 줄이 맨 앞이 아님",
+  "s": "'report-check: ok 1,916 chars a5faa257'",
+  "g": "'요약: C2는 측정 범위 안에서 맞고(4 sizes x 3 states, rendered (injected css), spot check 일치)'"
+ },
+ "fourth": [
+  "rendered (injected css)"
+ ]
+}

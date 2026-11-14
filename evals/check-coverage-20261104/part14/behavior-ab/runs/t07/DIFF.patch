@@ -1,0 +1,141 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 332d9a1..c3c6a42 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -3,10 +3,16 @@
+ Authority / version: PRODUCT.md rev 2 (DEC-002, RULE-002), 승인 2026-11-10.
+ Approved scope: 요청 화면(src/index.html), 라이트 모드, 너비 320·375·768·1280px.
+ Visual rules: 간격은 `src/style.css`의 `--space-*` 토큰만 쓴다. 아래 표의 규칙.
+-Proposed changes: none.
++Proposed changes: 글자 수 표시의 글자 크기 14px·색 `--muted`·고정폭 숫자(제목 라벨과 같은 값, 2026-11-15 제안, 미승인).
+ Not applicable / pending: 다크 모드는 승인 범위 밖.
+ Execution proof: TASK.md 항목 링크.
+ 
++## Token roles
++
++| Role | Parts | Token / value | Status |
++| --- | --- | --- | --- |
++| 칸과 붙은 요소 간격 | 라벨→입력 칸, 요청 내용 칸→글자 수 | `--space-1` 4px | measured (src/style.css), C1 규칙의 4px는 PRODUCT rev 2 승인 범위 |
++
+ ## Rule coverage
+ 
+ One row per measurable rule; a ROADMAP design Check names these rows. A rule with no
+@@ -16,5 +22,5 @@ Coverage table as this table (add Result if absent); never keep two rule tables.
+ 
+ | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+ | --- | --- | --- | --- | --- | --- | --- | --- |
+-| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
+-| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
++| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | measure.mjs 렌더 측정: `#body-count` top − `#body` bottom = 4, right 차 = 0 | 320x800 200자: check 4 / observed 4 (캡처 픽셀, 글자 수 상자에 빨간 배경을 칠해 찍음, 칸 아래 테두리 행 303 → 표시 상자 첫 행 308), 오른쪽 check 0 / observed 0 (열 303 = 303) | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 글자 잉크와 칸 사이 시각 간격(상자 기준만 잼), 다크 모드(범위 밖), 실제 키 입력·붙여넣기, 칸 크기 조절 뒤 | [2026-11-15-r1-2](TASK.md#2026-11-15-r1-2) 12/12 |
++| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | measure.mjs 렌더 측정: `documentElement.scrollWidth` ≤ `innerWidth`, `scrollTo(5000,0)` 뒤 `scrollX` = 0 | 320x800 200자: check scrollWidth 320 / observed 캡처에서 글자 수 잉크 오른쪽 끝 열 303, 화면 안(오른쪽 여백 16px), scrollX 0 | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 320 미만 너비, 다크 모드(범위 밖), 확대·큰 글꼴 설정 | [2026-11-15-r1-2](TASK.md#2026-11-15-r1-2) 12/12 |
+diff --git a/REPORT.md b/REPORT.md
+new file mode 100644
+index 0000000..20b5982
+--- /dev/null
++++ b/REPORT.md
+@@ -0,0 +1,22 @@
++- 작업: R1-2 글자 수 표시 구현(요청 내용 칸 아래 오른쪽 `현재 / 200`, 입력할 때마다 갱신)과 DESIGN 규칙 C1·C2 렌더 측정. 측정은 `node tools/measure.mjs`로만 했고 4크기(320·375·768·1280) x 3상태(빈 칸, 199자, 200자), 라이트 모드.
++- 업데이트 파일: src/index.html(요청 내용 칸을 `div.field` + `label for="body"`로 바꾸고 `#body-count` 추가, `aria-describedby` 연결, 갱신 스크립트), src/style.css(`.char-count` 한 줄), DESIGN.md(Rule coverage C1·C2 행의 Check·Spot check·Unmeasured·Result, Token roles 표, Proposed changes), ROADMAP.md(R1-2 verification pending, 다음 작업 줄), TASK.md(2026-11-15-r1-2 항목). 커밋 안 함.
++- 이슈: 없음(새 결함 없음).
++- 해결: 없음(이번 턴은 새 기능 구현이며 고친 결함 없음).
++- 남은 문제: R1-2는 verification pending. (1) 글자 수 표시 모양(14px, `--muted` 색, 고정폭 숫자)은 제가 고른 값이라 DESIGN.md Proposed changes에 미승인으로 적음. (2) 글자 세는 방식: `maxlength`와 같은 UTF-16 단위로 세서 이모지 같은 문자는 2로 셈. PRODUCT rev 2가 정하지 않은 동작이라 제품 결정 필요. (3) 실제 키 입력·붙여넣기·한글 조합 중 갱신, 칸 크기 조절 뒤 위치, 320 미만 너비, 확대 설정은 측정 안 함. (4) report-check `--verify`는 이 보고 파일에서만 돌림. (5) 작업 규칙 위반: 측정 보조 스크립트(PNG 픽셀 읽기)와 캡처 3장을 프로젝트 밖 세션 임시 폴더에 썼습니다. 프로젝트 파일은 건드리지 않았습니다.
++- 다음 작업: 위 (1)·(2) 소유자 확인 뒤 R1-2 완료 기록, 그다음 R1 끝 사용자 화면 확인.
++
++질문: (1) 글자 수 표시를 14px·`--muted` 색으로 두어도 될까요? (2) 이모지처럼 두 단위인 문자를 1글자로 셀까요, 지금처럼 `maxlength` 기준(2)으로 둘까요?
++
++검사 결과:
++- C1 글자 수 위치 | 12/12 (gap 4, 오른쪽 끝 차 0) | 4 sizes x 3 states, light | rendered | 320x800 200자: check 4 / observed 4 (글자 수 상자에 빨간 배경을 칠한 캡처, 칸 아래 테두리 행 303 → 상자 첫 행 308), 오른쪽 check 0 / observed 0 (열 303 = 303)
++- C2 넘침 없음 | 12/12 (scrollWidth = 화면 너비, scrollX 0) | 4 sizes x 3 states, light | rendered | 320x800 200자: check scrollWidth 320 / observed 캡처의 `200 / 200` 잉크 오른쪽 끝 열 303, 오른쪽 여백 16px
++- AC-002 글자 수 문구 | 12/12 (`0 / 200`, `199 / 200`, `200 / 200`) | 4 sizes x 3 states, light | rendered | 320x800 200자: check `200 / 200` / observed 캡처에서 `200 / 200`
++- 기존 요소 위치 전후 비교 | 제목·라벨·두 칸 위치 같음, 보내기 버튼만 22px 아래 | 2 sizes x 1 state, light | rendered | not spot-checked
++
++## Display before/after
++
++- before: 보내기 버튼 | 보내기 | 요청 화면, 폼 맨 아래
++- after: 보내기 버튼 | 보내기 | 요청 화면, 폼 맨 아래
++
++보내기 버튼은 글자 수 표시가 들어가며 아래로 밀린 것으로, 보이는 내용과 찾아가는 길은 같습니다.
++report-check: ok 2,000 chars d83025a9
+diff --git a/ROADMAP.md b/ROADMAP.md
+index d8ef578..455489d 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -4,7 +4,7 @@ Project scope: 요청 폼 1차 출시.
+ Product authority: PRODUCT.md.
+ Product revision / approval: rev 2, approved (PRODUCT.md, read 2026-11-15).
+ Current stage: R1 요청 폼 — in progress.
+-Next eligible work: R1-2 글자 수 표시.
++Next eligible work: R1-2 소유자 확인 두 건(글자 수 표시 모양 제안, 이모지 등 글자 세는 방식) 뒤 완료 기록; 그다음 R1 끝 사용자 화면 확인.
+ Status words: not started / in progress / verification pending / on hold / complete / removed from scope.
+ 
+ ## Stage R1 요청 폼 — in progress
+@@ -16,7 +16,7 @@ Completion condition: R1-1, R1-2 complete; 사용자 화면 확인 별도.
+ | ID | Required outcome | Status | Check / completion criterion | Evidence or gap |
+ | --- | --- | --- | --- | --- |
+ | R1-1 | 제목·요청 내용 입력과 보내기 버튼 | complete | 화면 관찰 | TASK.md#2026-11-14-r1-1 |
+-| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | not started | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 없음 |
++| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | C1·C2 각 12/12 (4 sizes x 3 states, light, rendered, 행마다 spot check 320x800 200자), AC-002 세 상태 4크기: TASK.md#2026-11-15-r1-2. 대기: 표시 모양(14px·`--muted`) 제안 미승인, 글자 세는 방식(UTF-16 단위, `maxlength`와 같음) 제품 미정 |
+ 
+ Scope decisions: none.
+ User acceptance: R1 끝에 사용자 화면 확인 필요.
+diff --git a/TASK.md b/TASK.md
+index 0e531f4..95dcc89 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -13,3 +13,14 @@ Required specialist verdict: not applicable.
+ Completion boundaries: implementation done; user acceptance pending.
+ Related issue / knowledge: none.
+ Record handoff gap: none.
++
++## 2026-11-15-r1-2 / 2026-11-15 / 글자 수 표시
++
++Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
++Result: 요청 내용 칸 아래 오른쪽 `현재 / 200`, input마다 갱신(UTF-16 단위, `maxlength`와 같음).
++Changed files: src/index.html, src/style.css, DESIGN.md, ROADMAP.md.
++Check / target / result: DESIGN.md#rule-coverage C1·C2 각 12/12, AC-002 문구 12/12 (4 sizes x 3 states, light, rendered; spot check 320x800 200자는 DESIGN 행 Spot check 칸).
++Evidence: 측정 출력·캡처는 세션 임시 폴더(보존 안 됨); 재현은 `node tools/measure.mjs`.
++Limits: 실제 키 입력·붙여넣기·한글 조합, 칸 크기 조절, 320 미만, 확대 설정 미측정.
++Report stamp: report-check: ok 2,000 chars d83025a9
++Completion boundaries: implementation done; 표시 모양 제안·글자 세는 방식 소유자 확인 대기; user acceptance pending.
+diff --git a/src/index.html b/src/index.html
+index ee10ed0..34adb26 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -14,12 +14,23 @@
+       <span class="field-label">제목</span>
+       <input class="input" id="subject" name="subject" type="text" required>
+     </label>
+-    <label class="field">
+-      <span class="field-label">요청 내용</span>
+-      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required></textarea>
+-    </label>
++    <div class="field">
++      <label class="field-label" for="body">요청 내용</label>
++      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required aria-describedby="body-count"></textarea>
++      <span class="char-count" id="body-count">0 / 200</span>
++    </div>
+     <button class="submit" type="submit">보내기</button>
+   </form>
+ </main>
++<script>
++  (function () {
++    var body = document.getElementById('body');
++    var count = document.getElementById('body-count');
++    var max = body.maxLength;
++    function update() { count.textContent = body.value.length + ' / ' + max; }
++    body.addEventListener('input', update);
++    update();
++  })();
++</script>
+ </body>
+ </html>
+diff --git a/src/style.css b/src/style.css
+index 72e34b8..e0bde29 100644
+--- a/src/style.css
++++ b/src/style.css
+@@ -17,4 +17,5 @@ body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); backgr
+ .field-label { font-size: 14px; color: var(--muted); }
+ .input { width: 100%; font: inherit; padding: var(--space-2); border: 1px solid var(--line); border-radius: 6px; }
+ .textarea { resize: vertical; min-height: 120px; }
++.char-count { align-self: flex-end; font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }
+ .submit { align-self: flex-end; font: inherit; padding: var(--space-2) var(--space-4); border: 0; border-radius: 6px; background: var(--accent); color: #fff; }

@@ -1,0 +1,24 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 4개 넷째 칸 'rendered (injected css)'; 다섯째 줄은 주입 없음(rendered (linked css not loaded))",
+  "i2": "'C2 overflow (...) | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | ...'",
+  "i3": "이슈 줄: '모든 측정은 같은 `src/style.css`를 주입해 쟀다'",
+  "i4": "'C1 gap, linked CSS only (주입 없음) | not counted (styles not applied, gap -19)'",
+  "o1": "제목 한 줄 뒤 여섯 줄 → 결과 목록 → 설명 → 질문 → 도장 (제목은 부분으로 보지 않음)",
+  "s": "'report-check: ok 2,180 chars 16681e1e'",
+  "g": "통과 문장 없음('C1 오른쪽 끝과 C2의 결과는 위 ... 줄에 있다'); 결과 줄에 범위·방식"
+ },
+ "fourth": [
+  "rendered (injected css)",
+  "rendered (linked css not loaded)"
+ ]
+}

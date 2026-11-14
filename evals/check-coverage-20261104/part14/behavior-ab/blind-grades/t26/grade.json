@@ -1,0 +1,24 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 4개 넷째 칸 'rendered (injected css)'; 다섯째 줄은 연결 CSS 확인용(side check)",
+  "i2": "'C2 overflow (...) | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | ...'",
+  "i3": "작업 줄: '같은 파일을 `--inject src/style.css`로 주입해 쟀다'",
+  "i4": "'그대로 재면 320px 세로 간격 -19px로 스타일 없는 화면' — 결과로 안 씀",
+  "o1": "여섯 줄 → 결과 목록 → 설명 → 질문 → 도장",
+  "s": "'report-check: ok 2,189 chars 1b8760a3'",
+  "g": "'C2는 모든 대상에서 가로 넘침이 없었다 (4 sizes x 3 states, rendered (injected css), ...)'"
+ },
+ "fourth": [
+  "rendered (injected css)",
+  "rendered (linked css blocked)"
+ ]
+}

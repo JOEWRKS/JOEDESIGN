@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 0,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 1,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "여섯 줄 앞에 설명 문단: \"R1-2 글자 수 표시를 구현했고 C1·C2를 4개 너비 x 3개 상태에서 쟀다. C1 오른쪽 끝은 차이 0 ...\" (한 줄 제목이 아닌 두 문장 요약)",
+  "o2": "여섯 줄 뒤 따로: \"design check results:\"",
+  "s": "report-check: ok 1,820 chars 97bc7ac0",
+  "l": "- C2 넘침 없음 | 12/12 (scrollWidth = 화면 너비) | 4 sizes x 3 states (320·375·768·1280 x 0·199·200자), light | rendered | 320x800 200자 캡처: ...",
+  "g": "C1 오른쪽 끝은 차이 0 (4 sizes x 3 states, rendered, spot check 0 / 0) — 통과 문장마다 범위·방식 있음",
+  "n": "측정은 모두 `<link>` CSS가 적용된 상태(linkedCss loaded=true)에서 했다.",
+  "f": "+      <p class=\"counter\" id=\"body-count\"><span id=\"body-count-value\">0</span> / 200</p>"
+ },
+ "order_seen": "prose(두 문장 요약) > six > list > prose > stamp"
+}

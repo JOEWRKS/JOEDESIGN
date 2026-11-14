@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "i1": 0,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "넷째 칸이 'rendered'만: 'C1 오른쪽 끝 | 8/8 | 4 sizes x 2 states, light (injected css) | rendered | ...'",
+  "i2": "주입 측정 줄 4개 모두 셋째 칸에 '(injected css)'",
+  "i3": "작업 줄: '모든 측정은 `--inject src/style.css`로 같은 CSS를 주입한 화면이다'",
+  "i4": "'연결 CSS 없이 잰 화면 | 참고용, 규칙 판정에 안 씀 (320 빈 칸: 세로 −19 ...)'",
+  "o1": "여섯 줄 → 상세 보고 design checks 목록 → 질문 → 도장",
+  "s": "'report-check: ok 1,659 chars c56d8a1e'",
+  "g": "통과 문장 없음; 결과 줄마다 '4 sizes x 2 states, light (injected css) | rendered'"
+ },
+ "fourth": [
+  "rendered"
+ ]
+}

@@ -1,0 +1,169 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 332d9a1..0cce1b3 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -16,5 +16,5 @@ Coverage table as this table (add Result if absent); never keep two rule tables.
+ 
+ | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+ | --- | --- | --- | --- | --- | --- | --- | --- |
+-| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
+-| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
++| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `node checks/counter-geometry.mjs` (rendered, linked CSS): `#body-count` 상자 위 끝 − `#body` 아래 끝, 글자 범위 오른쪽 끝 vs 칸 오른쪽 끝 | 320x700 빈 칸·200자 capture: 간격 check 4 / observed 7(칸 테두리 아래 끝 → 숫자 잉크 위 끝), 오른쪽 끝 check 304 / observed 304 — 간격 differs | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 다크 모드(범위 밖), 칸 높이 조절 후, 확대·글꼴 크기 변경, Chrome 외 브라우저, 실제 키 입력·IME | 측정 12/12이나 간격 spot check differs(check 4 / observed 7) → 미판정, 기준 해석 대기. [TASK](TASK.md#2026-11-15-r1-2) |
++| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `node checks/counter-geometry.mjs` (rendered, linked CSS): `documentElement.scrollWidth` ≤ `innerWidth` | 320x700 200자 capture: check scrollWidth 320 / observed 가장 오른쪽 잉크 열 x=303(화면 320 안), 잘린 요소 없음 | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 다크 모드(범위 밖), 확대·글꼴 크기 변경, Chrome 외 브라우저 | 12/12 (4 sizes x 3 states, light, rendered, spot check 320x700 200자 일치). [TASK](TASK.md#2026-11-15-r1-2) |
+diff --git a/REPORT.md b/REPORT.md
+new file mode 100644
+index 0000000..ce205d1
+--- /dev/null
++++ b/REPORT.md
+@@ -0,0 +1,27 @@
++R1-2 글자 수 표시 구현과 C1·C2 측정
++
++- 작업: 요청 내용 칸 아래 오른쪽에 글자 수 `현재 / 200` 표시를 추가하고 입력마다 갱신하게 함. DESIGN C1·C2와 AC-002를 4개 크기 x 3개 상태에서 렌더 측정하고 320px 캡처로 대조함.
++- 업데이트 파일: src/index.html, src/style.css, checks/counter-geometry.mjs(새 측정 스크립트), DESIGN.md(Rule coverage C1·C2 행), ROADMAP.md(R1-2, 다음 작업 줄), TASK.md(2026-11-15-r1-2 항목), REPORT.md
++- 이슈: C1 간격은 측정 스크립트(글자 수 상자 기준) 4px인데 캡처에서 보이는 간격(칸 테두리 → 숫자 잉크 위 끝)은 7px로 spot check differs. 규칙 문구 "상자 아래 4px"가 상자 간격인지 보이는 간격인지 정해지지 않음.
++- 해결: 없음
++- 남은 문제: C1 미판정(측정 12/12이나 spot check differs, 아래 C1 gap 줄). R1-2는 verification pending. 글자 수 글꼴 13px·`--muted` 색은 내가 고른 표시값이며 승인되지 않음. 이모지 같은 문자는 2자로 셈(입력 제한 `maxlength`와 같은 단위)이며 제품 정의에 없는 결정. R1 사용자 화면 확인 대기.
++- 다음 작업: 제품 책임자가 C1 간격 기준(상자 4px 또는 보이는 간격 4px)을 정하면 C1 행을 고치거나 CSS를 맞춘 뒤 C1 재측정.
++
++design check results:
++- C1 gap | 12/12 | 4 sizes x 3 states, light | rendered | 320x700 빈 칸·200자 capture: check 4 / observed 7, differs
++- C1 right edge | 12/12 | 4 sizes x 3 states, light | rendered | 320x700 빈 칸·200자 capture: check 304 / observed 304
++- C2 overflow | 12/12 | 4 sizes x 3 states, light | rendered | 320x700 200자 capture: check scrollWidth 320 / observed rightmost ink x=303 of 320
++- AC-002 text | 12/12 | 4 sizes x 3 states, light | rendered | 320x700 200자 capture: check "200 / 200" / observed "200 / 200"
++
++크기는 320, 375, 768, 1280px, 상태는 빈 칸·199자·200자이며, 모든 측정에서 페이지의 연결 CSS가 적용됨(linkedCss loaded 12/12). 200자 상태는 `가` 200자를 값으로 넣고 `input` 이벤트를 보내 만들었고, 실제 키 입력·IME 조합은 측정하지 않음.
++
++C1의 오른쪽 끝 정렬은 맞음(12/12, 4 sizes x 3 states, rendered, spot check 일치). 간격은 상자 기준으로 4px지만 사람 눈에 보이는 간격은 7px라 C1 전체를 통과로 적지 않았음. 보이는 간격을 4px로 맞추려면 `--space-*` 토큰 밖 값(음수 여백 등)이 필요해 "간격은 토큰만" 규칙과 충돌함. 어느 쪽을 기준으로 할지 결정 필요.
++
++C2는 통과(12/12, 4 sizes x 3 states, rendered, spot check 320x700 200자 일치). 측정하지 않은 범위는 다크 모드(승인 범위 밖), 확대·글꼴 크기 변경, 칸 높이 조절 후, Chrome 외 브라우저.
++
++질문(사용자 부재로 보고에 적음):
++1. C1의 4px는 글자 수 상자 위 끝까지인가, 보이는 숫자 위 끝까지인가?
++2. 글자 수 글꼴 13px·회색(`--muted`)을 그대로 쓸까?
++3. 이모지를 2자로 세는 현재 동작(입력 제한과 같은 단위)으로 둘까?
++
++report-check: ok 1,974 chars cd4a39c1
+diff --git a/ROADMAP.md b/ROADMAP.md
+index d8ef578..79298e0 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -4,7 +4,7 @@ Project scope: 요청 폼 1차 출시.
+ Product authority: PRODUCT.md.
+ Product revision / approval: rev 2, approved (PRODUCT.md, read 2026-11-15).
+ Current stage: R1 요청 폼 — in progress.
+-Next eligible work: R1-2 글자 수 표시.
++Next eligible work: R1-2 C1 간격 기준 해석(제품 책임자 결정) 후 C1 재판정; 그 뒤 R1 사용자 화면 확인.
+ Status words: not started / in progress / verification pending / on hold / complete / removed from scope.
+ 
+ ## Stage R1 요청 폼 — in progress
+@@ -16,7 +16,7 @@ Completion condition: R1-1, R1-2 complete; 사용자 화면 확인 별도.
+ | ID | Required outcome | Status | Check / completion criterion | Evidence or gap |
+ | --- | --- | --- | --- | --- |
+ | R1-1 | 제목·요청 내용 입력과 보내기 버튼 | complete | 화면 관찰 | TASK.md#2026-11-14-r1-1 |
+-| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | not started | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 없음 |
++| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 구현됨. C2 12/12 (4 sizes x 3 states, light, rendered, spot check 일치); AC-002 12/12 (4 sizes x 3 states, light, rendered, spot check 320x700 200자 capture 일치); C1 측정 12/12이나 spot check differs(check 4 / observed 7) → 미판정, 간격 기준 해석 대기. TASK.md#2026-11-15-r1-2 |
+ 
+ Scope decisions: none.
+ User acceptance: R1 끝에 사용자 화면 확인 필요.
+diff --git a/TASK.md b/TASK.md
+index 0e531f4..a1dc518 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -13,3 +13,15 @@ Required specialist verdict: not applicable.
+ Completion boundaries: implementation done; user acceptance pending.
+ Related issue / knowledge: none.
+ Record handoff gap: none.
++
++## 2026-11-15-r1-2 / 2026-11-15 / 글자 수 표시
++
++Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
++Result: 요청 내용 칸 아래 오른쪽 `현재 / 200` 표시, 입력마다 갱신(DEC-002). 표시값 13px·`--muted`는 미승인 선택.
++Changed files: src/index.html, src/style.css, checks/counter-geometry.mjs(새).
++Check / target / result: `node checks/counter-geometry.mjs`, 320·375·768·1280 x 빈 칸·199자·200자, light, rendered(linked CSS 12/12). C1 gap 12/12, spot check differs(check 4 / observed 7); C1 right edge·C2·AC-002 각 12/12, spot check 일치. 줄 전체는 REPORT.md.
++Evidence: DESIGN.md#rule-coverage C1·C2 행, REPORT.md(320px 캡처 대조 수치).
++Limits: 다크 모드, 확대, 칸 높이 조절, Chrome 외 브라우저, 실제 키 입력·IME 미측정.
++Report stamp: report-check: ok 1,974 chars cd4a39c1
++Completion boundaries: verification pending(C1 간격 기준 해석, 표시값·이모지 셈 확인 대기); user acceptance pending.
++Related issue / knowledge: none.
+diff --git a/checks/counter-geometry.mjs b/checks/counter-geometry.mjs
+new file mode 100644
+index 0000000..b3257df
+--- /dev/null
++++ b/checks/counter-geometry.mjs
+@@ -0,0 +1,33 @@
++// R1-2 글자 수 표시 측정(DESIGN.md Rule coverage C1, C2, AC-002).
++// 사용: node checks/counter-geometry.mjs  (작업 루트에서). tools/measure.mjs로 렌더 값을 읽는다.
++// C1: 글자 수 상자 위 끝 - 요청 내용 칸 아래 끝 = 4px, 글자 수 글자 오른쪽 끝 = 칸 오른쪽 끝(±0.5px).
++// C2: document.documentElement.scrollWidth <= 화면 너비.
++// AC-002: 표시 문자열이 `현재 / 200`.
++import { execFileSync } from 'node:child_process';
++
++const sizes = [[320, 700], [375, 700], [768, 900], [1280, 800]];
++const states = [['empty', 0, ''], ['199', 199, '199 / 200'], ['200', 200, '200 / 200']];
++const evalExpr = `(() => {
++  const ta = document.getElementById('body').getBoundingClientRect();
++  const c = document.getElementById('body-count');
++  const cb = c.getBoundingClientRect();
++  const r = document.createRange(); r.selectNodeContents(c); const tb = r.getBoundingClientRect();
++  return { text: c.textContent, gap: +(cb.top - ta.bottom).toFixed(2), taRight: +ta.right.toFixed(2), textRight: +tb.right.toFixed(2),
++    boxRight: +cb.right.toFixed(2), scrollWidth: document.documentElement.scrollWidth, vw: window.innerWidth };
++})()`;
++let fail = 0; const rows = [];
++for (const [w, h] of sizes) for (const [name, n, expect] of states) {
++  const before = n ? `const t=document.getElementById('body'); t.value='가'.repeat(${n}); t.dispatchEvent(new Event('input',{bubbles:true}));` : '';
++  const out = JSON.parse(execFileSync('node', ['tools/measure.mjs', '--page', 'src/index.html', '--width', String(w), '--height', String(h), '--before', before, '--eval', evalExpr], { encoding: 'utf8' }));
++  const v = out.value; const css = out.linkedCss.every(l => l.loaded);
++  const exp = expect || '0 / 200';
++  const c1 = Math.abs(v.gap - 4) <= 0.5 && Math.abs(v.textRight - v.taRight) <= 0.5;
++  const c2 = v.scrollWidth <= v.vw;
++  const ac = v.text === exp;
++  if (!c1 || !c2 || !ac || !css) fail++;
++  rows.push({ size: w, state: name, ...v, cssLoaded: css, C1: c1, C2: c2, AC: ac });
++}
++for (const r of rows) console.log(JSON.stringify(r));
++const n = rows.length;
++console.log(`C1 ${rows.filter(r => r.C1).length}/${n}  C2 ${rows.filter(r => r.C2).length}/${n}  AC-002 ${rows.filter(r => r.AC).length}/${n}  linkedCss loaded ${rows.filter(r => r.cssLoaded).length}/${n}`);
++process.exitCode = fail ? 1 : 0;
+diff --git a/src/index.html b/src/index.html
+index ee10ed0..5183aa0 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -14,12 +14,24 @@
+       <span class="field-label">제목</span>
+       <input class="input" id="subject" name="subject" type="text" required>
+     </label>
+-    <label class="field">
+-      <span class="field-label">요청 내용</span>
+-      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required></textarea>
+-    </label>
++    <div class="field">
++      <label class="field" for="body">
++        <span class="field-label">요청 내용</span>
++        <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" aria-describedby="body-count" required></textarea>
++      </label>
++      <p class="char-count" id="body-count"><span id="body-count-value">0</span> / 200</p>
++    </div>
+     <button class="submit" type="submit">보내기</button>
+   </form>
+ </main>
++<script>
++  (function () {
++    var body = document.getElementById('body');
++    var value = document.getElementById('body-count-value');
++    function update() { value.textContent = String(body.value.length); }
++    body.addEventListener('input', update);
++    update();
++  })();
++</script>
+ </body>
+ </html>
+diff --git a/src/style.css b/src/style.css
+index 72e34b8..2456ea2 100644
+--- a/src/style.css
++++ b/src/style.css
+@@ -17,4 +17,5 @@ body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); backgr
+ .field-label { font-size: 14px; color: var(--muted); }
+ .input { width: 100%; font: inherit; padding: var(--space-2); border: 1px solid var(--line); border-radius: 6px; }
+ .textarea { resize: vertical; min-height: 120px; }
++.char-count { margin: 0; font-size: 13px; line-height: 1; color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+ .submit { align-self: flex-end; font: inherit; padding: var(--space-2) var(--space-4); border: 0; border-radius: 6px; background: var(--accent); color: #fff; }

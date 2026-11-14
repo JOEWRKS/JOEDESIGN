@@ -1,0 +1,149 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 332d9a1..0dcc5c0 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -16,5 +16,5 @@ Coverage table as this table (add Result if absent); never keep two rule tables.
+ 
+ | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+ | --- | --- | --- | --- | --- | --- | --- | --- |
+-| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
+-| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
++| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `tools/measure.mjs`: `#body-count` 상자 top − `#body` 상자 bottom, right 차이(getBoundingClientRect) | 320x800 200자 캡처(evidence/r1-2): 오른쪽 끝 check 0 / observed 0(칸 테두리·글자 모두 x=303); 아래 간격 check 4 / observed 9(테두리 마지막 줄 y=303, 글자 첫 줄 y=313) — 다름, 규칙이 상자인지 보이는 글자인지 소유자 확인 필요 | 요청 화면 | 320, 375, 768, 1280 (높이 800) | 빈 칸, 199자, 200자(값 대입 + input 이벤트) | 실제 키보드·IME 입력, 다른 높이·확대·브라우저, 다크 모드(범위 밖) | 12/12 상자 기준, spot check differs — TASK.md#2026-11-15-r1-2 |
++| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `tools/measure.mjs`: `documentElement.scrollWidth` ≤ `clientWidth` | 320x800 200자: check scrollWidth 320 / observed 캡처 칠해진 가장 오른쪽 x=303 (320 안) | 요청 화면 | 320, 375, 768, 1280 (높이 800) | 빈 칸, 199자, 200자(값 대입 + input 이벤트) | 실제 키보드·IME 입력, 다른 높이·확대·브라우저, 다크 모드(범위 밖) | 12/12 — TASK.md#2026-11-15-r1-2 |
+diff --git a/REPORT.md b/REPORT.md
+new file mode 100644
+index 0000000..e12a7ef
+--- /dev/null
++++ b/REPORT.md
+@@ -0,0 +1,21 @@
++R1-2 글자 수 표시를 구현했고 C1·C2를 4개 너비 x 3개 상태에서 쟀다. C1 오른쪽 끝은 차이 0 (4 sizes x 3 states, rendered, spot check 0 / 0)이고, C1 아래 간격은 상자 기준 4px (4 sizes x 3 states, rendered, spot check differs: check 4 / observed 9)이지만 화면에 보이는 글자까지는 9px이라 spot check가 어긋나 R1-2는 verification pending으로 남겼다.
++
++- 작업: 요청 내용 칸 아래 오른쪽에 `현재 / 200` 글자 수 표시 추가, 입력(input 이벤트)마다 갱신, 칸과 aria-describedby로 연결. 간격은 `--space-1` 토큰만 사용. C1·C2를 `tools/measure.mjs`로 측정하고 320·1280 캡처를 남김.
++- 업데이트 파일: src/index.html, src/style.css, DESIGN.md(Rule coverage C1·C2 행), ROADMAP.md(R1-2, 다음 작업 줄), TASK.md(2026-11-15-r1-2), evidence/r1-2/(320-200.png, 1280-200.png, png-rows.mjs), REPORT.md
++- 이슈: C1 아래 간격의 측정값(요소 상자 간격 4px)과 화면에서 보이는 간격(칸 테두리 마지막 줄 y=303 → 글자 첫 줄 y=313, 9px)이 다름. 글자 줄 높이의 위 여백 때문.
++- 해결: 없음
++- 남은 문제: C1 아래 간격 기준 미확정(규칙 문구 "칸 상자 아래 4px"가 글자 수 요소 상자인지 보이는 글자인지 소유자 확인 필요; 보이는 글자 기준이면 지금은 9px이라 맞지 않음). 상태는 값 대입 + input 이벤트로 만들었고 실제 키보드·IME 입력은 관찰하지 않음. 높이 800 외, 확대, 다른 브라우저는 미측정. 사용자 화면 확인은 R1 끝에 별도.
++- 다음 작업: 소유자가 C1 기준을 정하면(상자 기준 유지 또는 보이는 간격 4px로 조정) C1 행을 다시 재고 R1-2 완료 여부를 판정.
++
++design check results:
++- C1 글자 수 위치 | 12/12 (아래 간격 4px, 오른쪽 끝 차이 0) | 4 sizes x 3 states (320·375·768·1280 x 0·199·200자), light | rendered | 320x800 200자 캡처: 오른쪽 끝 check 0 / observed 0, 아래 간격 check 4 / observed 9 (differs)
++- C2 넘침 없음 | 12/12 (scrollWidth = 화면 너비) | 4 sizes x 3 states (320·375·768·1280 x 0·199·200자), light | rendered | 320x800 200자 캡처: check scrollWidth 320 / observed 칠해진 가장 오른쪽 x=303
++- AC-002 표시 문자열 | 12/12 (`0 / 200`, `199 / 200`, `200 / 200`) | 4 sizes x 3 states, light | rendered | not spot-checked
++
++상세 보고:
++- 측정은 모두 `<link>` CSS가 적용된 상태(linkedCss loaded=true)에서 했다.
++- 진행 중 임시 파일(캡처, 픽셀 읽기 스크립트)을 작업 루트 밖 임시 폴더에 잠깐 썼다가 프로젝트 evidence/r1-2/로 옮기고 지웠다. 작업 루트 밖 쓰기 금지 지시를 어긴 것이라 적어 둔다.
++- 질문(소유자): C1의 "4px"는 글자 수 요소의 상자 기준인가, 화면에 보이는 글자 기준인가?
++- 커밋하지 않음.
++
++report-check: ok 1,820 chars 97bc7ac0
+diff --git a/ROADMAP.md b/ROADMAP.md
+index d8ef578..9ce4963 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -4,7 +4,7 @@ Project scope: 요청 폼 1차 출시.
+ Product authority: PRODUCT.md.
+ Product revision / approval: rev 2, approved (PRODUCT.md, read 2026-11-15).
+ Current stage: R1 요청 폼 — in progress.
+-Next eligible work: R1-2 글자 수 표시.
++Next eligible work: R1-2 글자 수 표시 — verification pending (C1 아래 간격 기준 소유자 확인 대기, 보고 도장 --verify 대기).
+ Status words: not started / in progress / verification pending / on hold / complete / removed from scope.
+ 
+ ## Stage R1 요청 폼 — in progress
+@@ -16,7 +16,7 @@ Completion condition: R1-1, R1-2 complete; 사용자 화면 확인 별도.
+ | ID | Required outcome | Status | Check / completion criterion | Evidence or gap |
+ | --- | --- | --- | --- | --- |
+ | R1-1 | 제목·요청 내용 입력과 보내기 버튼 | complete | 화면 관찰 | TASK.md#2026-11-14-r1-1 |
+-| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | not started | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 없음 |
++| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | TASK.md#2026-11-15-r1-2; gap: C1 spot check differs (상자 4 / 보이는 글자 9), 실제 입력 미관찰 |
+ 
+ Scope decisions: none.
+ User acceptance: R1 끝에 사용자 화면 확인 필요.
+diff --git a/TASK.md b/TASK.md
+index 0e531f4..0cc2145 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -13,3 +13,16 @@ Required specialist verdict: not applicable.
+ Completion boundaries: implementation done; user acceptance pending.
+ Related issue / knowledge: none.
+ Record handoff gap: none.
++
++## 2026-11-15-r1-2 / 2026-11-15 / 글자 수 표시
++
++Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
++Result: 요청 내용 칸 아래 오른쪽 `현재 / 200` 글자 수, input마다 갱신(aria-describedby 연결).
++Changed files: src/index.html, src/style.css; evidence/r1-2/ (캡처 2장, 픽셀 줄 읽기 스크립트).
++Check / target / result: DESIGN.md#rule-coverage C1 12/12(상자 기준), C2 12/12; 4 sizes x 3 states(0·199·200자), light, rendered. AC-002 표시 문자열 세 상태 일치.
++Spot check: C1 오른쪽 끝 0/0, 아래 간격 check 4 / observed 9(differs); C2 scrollWidth 320 / 칠해진 끝 x=303.
++Limits: 값 대입 + input 이벤트로 상태 생성, 실제 키보드·IME 미관찰. 높이 800만.
++Report stamp: report-check: ok 1,820 chars 97bc7ac0 (REPORT.md)
++Completion boundaries: implementation done; C1 기준 소유자 확인과 사용자 화면 확인 pending.
++Related issue / knowledge: none.
++Record handoff gap: none.
+diff --git a/evidence/r1-2/1280-200.png b/evidence/r1-2/1280-200.png
+new file mode 100644
+index 0000000..d59bd89
+Binary files /dev/null and b/evidence/r1-2/1280-200.png differ
+diff --git a/evidence/r1-2/320-200.png b/evidence/r1-2/320-200.png
+new file mode 100644
+index 0000000..711b447
+Binary files /dev/null and b/evidence/r1-2/320-200.png differ
+diff --git a/evidence/r1-2/png-rows.mjs b/evidence/r1-2/png-rows.mjs
+new file mode 100644
+index 0000000..48c195c
+--- /dev/null
++++ b/evidence/r1-2/png-rows.mjs
+@@ -0,0 +1,13 @@
++import fs from 'node:fs'; import zlib from 'node:zlib';
++const [file, x0, x1, y0, y1] = process.argv.slice(2);
++const b = fs.readFileSync(file); let p = 8, w, h, ct, idat = [];
++while (p < b.length) { const len = b.readUInt32BE(p), type = b.toString('ascii', p+4, p+8), d = b.subarray(p+8, p+8+len);
++  if (type==='IHDR'){w=d.readUInt32BE(0);h=d.readUInt32BE(4);ct=d[9];} if(type==='IDAT') idat.push(d); p += 12+len; }
++const bpp = ct===6?4:3, raw = zlib.inflateSync(Buffer.concat(idat)), stride = w*bpp, px = Buffer.alloc(h*stride);
++for (let y=0;y<h;y++){const f=raw[y*(stride+1)], s=raw.subarray(y*(stride+1)+1,(y+1)*(stride+1));
++ for(let i=0;i<stride;i++){const a=i>=bpp?px[y*stride+i-bpp]:0, up=y?px[(y-1)*stride+i]:0, c=(y&&i>=bpp)?px[(y-1)*stride+i-bpp]:0; let v=s[i];
++  if(f===1)v+=a; else if(f===2)v+=up; else if(f===3)v+=(a+up)>>1; else if(f===4){const pp=a+up-c,pa=Math.abs(pp-a),pb=Math.abs(pp-up),pc=Math.abs(pp-c); v+= (pa<=pb&&pa<=pc)?a:(pb<=pc?up:c);} px[y*stride+i]=v&255;}}
++// non-white rows/cols in window
++const nw=(x,y)=>{const o=y*stride+x*bpp;return px[o]<245||px[o+1]<245||px[o+2]<245;};
++const rows=[];for(let y=+y0;y<=+y1;y++){let xs=[];for(let x=+x0;x<=+x1;x++)if(nw(x,y))xs.push(x);if(xs.length)rows.push([y,xs[0],xs[xs.length-1],xs.length]);}
++console.log(JSON.stringify({w,h,rows}));
+diff --git a/src/index.html b/src/index.html
+index ee10ed0..4c4e553 100644
+--- a/src/index.html
++++ b/src/index.html
+@@ -14,12 +14,22 @@
+       <span class="field-label">제목</span>
+       <input class="input" id="subject" name="subject" type="text" required>
+     </label>
+-    <label class="field">
+-      <span class="field-label">요청 내용</span>
+-      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required></textarea>
+-    </label>
++    <div class="field">
++      <label class="field-label" for="body">요청 내용</label>
++      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required aria-describedby="body-count"></textarea>
++      <p class="counter" id="body-count"><span id="body-count-value">0</span> / 200</p>
++    </div>
+     <button class="submit" type="submit">보내기</button>
+   </form>
+ </main>
++<script>
++  (function () {
++    var body = document.getElementById('body');
++    var value = document.getElementById('body-count-value');
++    function update() { value.textContent = String(body.value.length); }
++    body.addEventListener('input', update);
++    update();
++  })();
++</script>
+ </body>
+ </html>
+diff --git a/src/style.css b/src/style.css
+index 72e34b8..ea10c88 100644
+--- a/src/style.css
++++ b/src/style.css
+@@ -18,3 +18,4 @@ body { margin: 0; font-family: system-ui, sans-serif; color: var(--text); backgr
+ .input { width: 100%; font: inherit; padding: var(--space-2); border: 1px solid var(--line); border-radius: 6px; }
+ .textarea { resize: vertical; min-height: 120px; }
+ .submit { align-self: flex-end; font: inherit; padding: var(--space-2) var(--space-4); border: 0; border-radius: 6px; background: var(--accent); color: #fff; }
++.counter { align-self: flex-end; margin: 0; font-size: 14px; color: var(--muted); font-variant-numeric: tabular-nums; }

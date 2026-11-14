@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 0,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 0,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "여섯 줄 앞에 설명 문단: \"R1-2 글자 수 표시를 구현하고 C1·C2를 4개 크기 x 3개 상태(...)에서 렌더 측정했습니다. C2는 12/12 (...)\"",
+  "o2": "결과 목록: (여섯 줄 아래 별도)",
+  "s": "report-check: ok 1,953 chars c0723405",
+  "l": "- linkedCss | 12/12 loaded | 4 sizes x 3 states, light | rendered | not spot-checked",
+  "g": "범위·방식 없는 통과 문장(다음 작업 줄): \"(a) 두 상자 사이 4px(현재 상태, 충족)인가\"",
+  "n": "REPORT.md에 'injected'·'주입'을 측정 방식으로 적은 곳 없음; 넷째 칸은 모두 'rendered'",
+  "f": "+      <p class=\"char-count\" id=\"body-count\"><span id=\"body-count-now\">0</span> / 200</p>"
+ },
+ "order_seen": "prose(네 문장 요약) > six > list > stamp"
+}

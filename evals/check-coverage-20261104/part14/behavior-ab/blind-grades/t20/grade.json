@@ -1,0 +1,24 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 0,
+  "s": 1,
+  "g": 0
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 3개 넷째 칸 'rendered (injected css)'; 넷째 줄은 주입 안 한 대조(rendered (linked css blocked))",
+  "i2": "'C2 넘침 없음 | 8/8 | 4 sizes ... | rendered (injected css) | ...'",
+  "i3": "작업 줄: '`--inject src/style.css`로 같은 CSS를 넣고 쟀습니다'",
+  "i4": "주입 없는 값은 '주입 없는 대조 | 연결 CSS 미적용(간격 −19 ...)' 줄로만 표시, 통과 근거로 쓰지 않음",
+  "o1": "여섯 줄 앞에 요약 문단 'C2는 8/8 통과(...)...'이 먼저 옴",
+  "s": "'report-check: ok 1,967 chars 38930086'",
+  "g": "이슈 줄 'C1 \"상자 아래 4px\"은 요소 상자 기준으로는 맞습니다(check 4).' — 범위·측정 방식 없음; 다음 작업 '(현재 8/8 일치, 완료 가능)'도 같음"
+ },
+ "fourth": [
+  "rendered (injected css)",
+  "rendered (linked css blocked)"
+ ]
+}

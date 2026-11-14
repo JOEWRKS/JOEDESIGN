@@ -1,0 +1,23 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 0,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 4개 넷째 칸 모두 'rendered (injected css)'",
+  "i2": "'C2 넘침 없음 | 12/12 ... | 4 sizes x 3 states, light | rendered (injected css) | ...'",
+  "i3": "작업 줄: '같은 파일을 `--inject src/style.css`로 주입해서 쟀습니다'",
+  "i4": "'주입하지 않고 잰 값은 스타일이 빠진 화면 값이라(...) 쓰지 않았습니다'",
+  "o1": "여섯 줄 → '질문(소유자)' → 결과 목록 순서로, 설명이 결과 목록 앞에 옴",
+  "s": "'report-check: ok 1,733 chars e7ff3109'",
+  "g": "통과 문장 없음('C1 미통과입니다(4 sizes x 3 states, rendered (injected css), ...)'); 결과 줄에 범위·방식"
+ },
+ "fourth": [
+  "rendered (injected css)"
+ ]
+}

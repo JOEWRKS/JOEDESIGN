@@ -1,0 +1,24 @@
+{
+ "scores": {
+  "i1": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "i1": "주입 측정 줄 4개 넷째 칸 'rendered (injected css)'; 다섯째 줄은 연결 CSS 대조",
+  "i2": "'C2 가로 넘침 없음 | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | ...'",
+  "i3": "이슈 줄: '같은 CSS를 주입해서 쟀다'",
+  "i4": "'연결 CSS 그대로 측정(대조) | 측정 불가: ... 스타일 빠진 화면에서 상자 간격 -19' — 판정에 안 씀",
+  "o1": "여섯 줄 → 결과 목록 → 상세 보고 → 질문 → 도장",
+  "s": "'report-check: ok 2,057 chars a749ca05'",
+  "g": "'C2는 통과(8/8, 4 sizes x 2 states, rendered (injected css), spot check 일치)다'"
+ },
+ "fourth": [
+  "rendered (injected css)",
+  "rendered (linked css blocked)"
+ ]
+}

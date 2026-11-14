@@ -1,0 +1,30 @@
+scene s1  (A = 1.3.0, B = 1.3.1)
+  o1             A   2/8   B   8/8
+  o2             A   8/8   B   8/8
+  s              A   8/8   B   8/8
+  l              A   8/8   B   8/8
+  g              A   5/8   B   6/8
+  n              A   8/8   B   8/8
+  f              A   8/8   B   8/8
+  stamp_last     A   8/8   B   8/8
+  verify_own_ok  A   8/8   B   8/8
+  verify_131_ok  A   8/8   B   8/8
+  R6=0           A   8/8   B   8/8
+  R7=0           A   8/8   B   8/8
+  4th exact inj  A   0/8   B   0/8
+  tools_unchanged A   8/8   B   8/8
+scene s2  (A = 1.3.0, B = 1.3.1)
+  i1             A   6/8   B   8/8
+  i2             A   8/8   B   8/8
+  i3             A   8/8   B   8/8
+  i4             A   8/8   B   8/8
+  o1             A   5/8   B   8/8
+  s              A   8/8   B   8/8
+  g              A   6/8   B   7/8
+  stamp_last     A   8/8   B   8/8
+  verify_own_ok  A   8/8   B   8/8
+  verify_131_ok  A   5/8   B   8/8
+  R6=0           A   7/8   B   8/8
+  R7=0           A   6/8   B   8/8
+  4th exact inj  A   6/8   B   8/8
+  tools_unchanged A   8/8   B   8/8

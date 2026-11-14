@@ -1,0 +1,21 @@
+{
+ "scores": {
+  "o1": 1,
+  "o2": 1,
+  "s": 1,
+  "l": 1,
+  "g": 1,
+  "n": 1,
+  "f": 1
+ },
+ "evidence": {
+  "o1": "'- 작업:'으로 시작 → 'design check results:' → 설명 문단들 → 도장",
+  "o2": "design check results: (여섯 줄 아래 별도)",
+  "s": "report-check: ok 2,094 chars 92b10110",
+  "l": "- C1 right edge (글자 수 right = 칸 right) | 8/8 | 4 sizes x 2 states, light | rendered | 320x800 200자 capture: check 0 / observed 0 (둘 다 x=303)",
+  "g": "측정 상자끼리는 4px(C1 간격 8/8 (4 sizes x 2 states, rendered; spot check differs: check 4 / observed 7))",
+  "n": "매 실행에서 linkedCss `style.css`가 loaded=true였습니다(페이지 자체 CSS)",
+  "f": "+    function update() { count.textContent = body.value.length + ' / ' + max; }"
+ },
+ "order_seen": "six > list > prose > stamp"
+}
