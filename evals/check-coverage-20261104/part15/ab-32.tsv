@@ -1,0 +1,32 @@
+t01	A	s1	R6a@1	prose(두 문장 요약) > six > list > prose > stamp
+t02	B	s1	ok	six > list > prose > stamp
+t03	B	s1	ok	six > list > prose > stamp
+t04	A	s1	R6a@1	prose(네 문장 요약) > six > list > prose > questions > stamp
+t05	A	s1	ok	six > list > prose(질문·측정 환경) > stamp
+t06	B	s1	ok	six > list > prose > stamp
+t07	A	s1	R6b@8	six > prose(질문) > list > display before/after > prose > stamp
+t08	A	s1	R6a@1	prose(요약) > six > list > questions > stamp
+t09	A	s1	R6a@1	prose(세 문장 요약) > six > list > display before/after > prose > questions > stamp
+t10	B	s1	ok	title > six > list > display before/after > prose > questions > stamp
+t11	B	s1	ok	title > six > list > prose > stamp
+t12	B	s1	ok	title > six > list > prose > questions > stamp
+t13	B	s1	ok	six > list > prose > stamp
+t14	A	s1	ok	six > list > prose > stamp
+t15	A	s1	R6a@1	prose(네 문장 요약) > six > list > stamp
+t16	B	s1	ok	title > six > list > display before/after > prose > questions > stamp
+t17	B	s2	ok	
+t18	A	s2	ok	
+t19	A	s2	ok	
+t20	A	s2	R6a@1	
+t21	B	s2	ok	
+t22	A	s2	R7@10	
+t23	B	s2	ok	
+t24	A	s2	ok	
+t25	B	s2	ok	
+t26	B	s2	ok	
+t27	B	s2	ok	
+t28	A	s2	R6b@8	
+t29	B	s2	ok	
+t30	B	s2	ok	
+t31	A	s2	R6@6,R6a@1	
+t32	A	s2	R7@11	
