@@ -171,6 +171,42 @@ test('R6: without the six lines, or with a results line only in a code block or 
   assert.deepEqual(rules(`${SIX}\n\n- ${LINE}\n\n상세: 해결: 아래 참고가 아니라 남은 문제로 둔다.\n`), []);
 });
 
+const LIST = `design check results:\n- ${LINE}\n`;
+
+test('R6a: a summary paragraph above the six lines is flagged, with the line and the order', () => {
+  const f = check(`글자 수 표시를 구현했습니다. C1은 대조가 달라 남은 문제로 뒀습니다.\n\n${SIX}\n\n${LIST}`);
+  assert.deepEqual(f.map((x) => x[1]), ['R6a']);
+  assert.equal(f[0][0], 1);
+  assert.match(f[0][3], /start on line 3.*one-line title.*open the report/);
+  // a title followed by a summary: the summary is flagged
+  const g = check(`R1-2 글자 수 표시 보고\n\n요약: C2는 맞고 C1은 대조가 다르다\n\n${SIX}\n\n${LIST}`);
+  assert.deepEqual(g.map((x) => [x[0], x[1]]), [[3, 'R6a']]);
+  // one long or sentence-ending line is not a title
+  assert.deepEqual(rules(`글자 수 표시를 구현했다\n\n${SIX}\n\n${LIST}`), ['R6a']);
+});
+
+test('R6b: a paragraph between the six lines and the results list is flagged', () => {
+  const f = check(`${SIX}\n\n질문: 글자 수 색을 --muted로 두어도 될까요?\n\n${LIST}`);
+  assert.deepEqual(f.map((x) => x[1]), ['R6b']);
+  assert.equal(f[0][0], 8);
+  assert.match(f[0][3], /ending on line 6.*results list \(line 10\).*open the report/);
+  // without the `design check results:` label, the first results line is the list
+  assert.deepEqual(rules(`${SIX}\n\n측정은 tools/measure.mjs로 했습니다.\n\n- ${LINE}\n`), ['R6b']);
+});
+
+test('R6a/R6b: a title line, headings, labels and indented sub-items are not flagged', () => {
+  assert.deepEqual(rules(`# R1-2 글자 수 표시 보고\n\nR1-2 글자 수 표시 — 구현과 C1·C2 측정\n\n${SIX}\n\n${LIST}`), []);
+  assert.deepEqual(rules(`**R1-2 보고**\n\n${SIX}\n\n상세 보고\n\n검사 결과:\n- ${LINE}\n\n질문: 색을 바꿀까요?\n`), []);
+  const nested = SIX.replace('- 다음 작업: 사용자 화면 확인',
+    '- 다음 작업:\n  - 사용자 화면 확인. 소유자 답을 기다린다.\n  - C2 대조\n\n    들여쓴 이어지는 문단도 같은 항목이다.');
+  assert.deepEqual(rules(`${nested}\n\n${LIST}\n설명 문단은 목록 뒤에 둔다.\n`), []);
+  // a line right below the last item, with no blank line, belongs to that item
+  assert.deepEqual(rules(`${SIX}\n이어지는 줄은 같은 항목이다.\n\n${LIST}`), []);
+  // `design checks: none ran` stands in for the list; with no list after the six lines R6b has nothing to check
+  assert.deepEqual(rules(`${SIX}\n\n설명입니다.\n\ndesign checks: none ran\n`), ['R6b']);
+  assert.deepEqual(rules(`- ${LINE}\n\n${SIX}\n\n설명입니다.\n`), ['R6']);
+});
+
 const INJ = 'C1 gap | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | not spot-checked';
 
 test('R7: `rendered (injected css)`, `rendered`, `code` and `rendered (<what differed>)` lines are all accepted', () => {

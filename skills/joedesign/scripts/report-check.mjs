@@ -25,6 +25,19 @@
 //       them, as some 1.3.0 reports have, is tolerated); the order of the parts is set by
 //       the DESIGN template's Report Form section (six lines, results list, explanation,
 //       stamp last; --verify already requires the stamp to be the last line)
+//   R6a in such a report, no prose line comes above the first of the six lines. Allowed
+//       there: `#` headings, a rule line, quote-mark-only lines and one title line (the
+//       Report Form says "a one-line title may precede (1)"): the first content line,
+//       at most 80 characters, not a sentence (no . ? ! 。 inside or at the end, and not
+//       ending in 다). A summary paragraph belongs after the list.
+//   R6b in such a report, no prose paragraph comes between the end of the six lines and
+//       the results list (the `design check results:` line, or the first results line
+//       when that label is missing). The six lines end at the last-starting label's item:
+//       lines right below it (no blank line) and indented lines (sub-items) belong to it.
+//       Allowed there: a label line (at most 40 characters, not a sentence: `상세 보고`),
+//       a line ending in `:` right above a results line (`결과 목록 (preview 빌드):`), and
+//       R5 records (`before:`/`after:` lines, `display unchanged`). A sentence or paragraph
+//       (a question, a summary, a note) is not.
 //   R7  a report that says the measurement injected CSS (the preview could not load the
 //       page's linked CSS) marks the rendered lines measured that way
 //       `rendered (injected css)`; plain `rendered` means the page loaded its own CSS.
@@ -44,6 +57,9 @@ const RESOLVED_LINE = /^\s*(?:[-*+]\s*)?\**\s*해결\s*\**\s*[:：]\s*(.*)$/;
 const STAMP_LINE = /^report-check: ok (\d[\d,]*) chars ([0-9a-f]{8})\s*$/;
 // R6: the JOENESS six report lines
 const SIX_LINE = /^\s*(?:[-*+]\s*)?\**\s*(작업|업데이트\s*파일|이슈|해결|남은\s*문제|다음\s*작업)\s*\**\s*[:：]/;
+const RESULTS_LABEL = /^\s*(?:[-*+]\s*)?\**\s*design check results\s*\**\s*[:：]/i;
+const HR_LINE = /^(?:[-*_]\s*){3,}$/;
+const QUOTE_ONLY = /^[\s>"'“”‘’`]*$/;
 
 export function normalize(text) {
   return text.replace(/^﻿/, '').replace(/\r\n?/g, '\n').replace(/\s+$/, '');
@@ -169,6 +185,63 @@ function isCount(sentence) {
   return false;
 }
 
+// R6a/R6b: what sits above the six lines and between them and the results list
+const ORDER_HINT = 'the six lines (작업 … 다음 작업) open the report, then `design check results:` and its list, ' +
+  'then explanation, stamp last (DESIGN.md Report Form)';
+function isTitle(line) {
+  const t = line.trim().replace(/^\*\*|\*\*$/g, '').trim();
+  return t.length <= 80 && !/[.?!。]/.test(t.replace(/\d\.\d/g, '')) && !/다$/.test(t);
+}
+
+function placement(text, sixStart, sixLast) {
+  const out = [];
+  const lines = text.split(/\r?\n/);
+  let code = false;
+  const kind = lines.map((raw) => {
+    const t = raw.trim();
+    if (t.startsWith('```')) { code = !code; return 'skip'; }
+    if (code || !t) return code ? 'skip' : 'blank';
+    if (STAMP_LINE.test(t) || t.startsWith('#') || HR_LINE.test(t) || QUOTE_ONLY.test(t)) return 'skip';
+    if (cellsOf(raw)) return 'row';
+    if (t.startsWith('|') || (raw.match(/\|/g) || []).length >= 3) return 'skip'; // a table is not prose
+    if (RESULTS_LABEL.test(raw) || NONE_RAN.test(raw)) return 'results';
+    if (BA_LINE.test(raw.replaceAll('**', '')) || DISPLAY_SAME.test(raw)) return 'skip'; // a display record (R5)
+    return 'prose';
+  });
+  const nextKind = (i) => kind.slice(i + 1).find((k) => k !== 'blank');
+  // R6a: above the first six line, one title line at most
+  const above = [];
+  for (let i = 0; i < sixStart - 1; i += 1) if (kind[i] === 'prose') above.push(i);
+  const firstContent = kind.findIndex((k) => k !== 'blank' && k !== 'skip');
+  let bad = above.find((i, n) => !(n === 0 && i === firstContent && isTitle(lines[i])));
+  if (bad !== undefined) {
+    out.push([bad + 1, 'R6a', '',
+      `prose above the six report lines (which start on line ${sixStart}): only a one-line title may come ` +
+      `before them; move a summary or note below the results list. ${ORDER_HINT}`]);
+  }
+  // R6b: between the end of the six lines and the results list
+  let i = sixLast; // index of the line after the last-starting six line
+  while (i < lines.length && kind[i] === 'prose') i += 1; // lines right below an item belong to it
+  let candidate;
+  for (; i < lines.length; i += 1) {
+    const k = kind[i];
+    if (k === 'row' || k === 'results') {
+      if (candidate !== undefined) {
+        out.push([candidate + 1, 'R6b', '',
+          `prose between the six report lines (ending on line ${sixLast}) and the results list (line ${i + 1}): ` +
+          `move it below the list. ${ORDER_HINT}`]);
+      }
+      break;
+    }
+    if (k !== 'prose' || candidate !== undefined) continue;
+    if (/^\s/.test(lines[i])) continue; // an indented sub-item or continuation belongs to the item
+    if (lines[i].trim().length <= 40 && isTitle(lines[i])) continue; // a label such as `상세 보고`
+    if (/[:：]\s*\**$/.test(lines[i]) && nextKind(i) === 'row') continue; // the list's own label line
+    candidate = i;
+  }
+  return out;
+}
+
 export function check(text) {
   const findings = [];
   let listLines = 0;
@@ -291,6 +364,7 @@ export function check(text) {
         '(작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, ' +
         'stamp last (DESIGN.md Report Form)']);
     }
+    findings.push(...placement(text, sixStart, Math.max(...sixFirst.values())));
   }
   // R7: the report says CSS was injected, but no rendered line says so
   if (injectedAt && renderedRows.length && !renderedRows.some((r) => r[2])) {

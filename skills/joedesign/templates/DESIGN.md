@@ -83,6 +83,7 @@ line `design check results:` and the list under it (or `design checks: none ran`
 paragraphs, each outcome sentence with its parenthesis; (5) when the report is
 stamped, the `report-check: ok <chars> chars <sha8>` line, always the last line.
 Without the six lines the report starts at (2); a one-line title may precede (1).
+No summary paragraph before (1) and no paragraph between (1) and (2): a summary or question goes in (4) (여섯 줄 앞에 요약 문단을 두지 않고, 여섯 줄과 결과 목록 사이에 문단을 두지 않는다).
 
 ## Open Decisions / Evidence Boundary
 
