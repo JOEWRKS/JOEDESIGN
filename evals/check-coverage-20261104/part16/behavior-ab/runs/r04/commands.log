@@ -1,0 +1,72 @@
+[Bash] cd "<ROOT>" && cat AGENTS.md && ls -la && git status --short && git log --oneline | head
+[Bash] cd "<ROOT>" && for f in DESIGN.md ISSUES.md PRODUCT.md ROADMAP.md TASK.md tools/README.md; do echo "=== $f"; cat $f; done; ls -R joedesign-skill src tools
+[Bash] cd "<ROOT>" && cat joedesign-skill/SKILL.md; echo ======; cat src/index.html src/style.css; echo =====; head -60 tools/measure.mjs
+[Bash] cd "<ROOT>" && cat joedesign-skill/references/conformance.md | head -150; echo ====; cat joedesign-skill/scripts/report-check.mjs | head -120
+[Bash] cd "<ROOT>" && mkdir -p .work && node tools/measure.mjs --page src/index.html --width 375 --height 700 --eval "(()=>{const t=document.getElementById('body').getBoundingClientRect(),c=document.getElementById('body-count').getBoundingClientRect();return {t:[t.left,t.right,t.bottom],c:[c.left,c.right,c.top],sw:document.documentElement.scrollWidth}})()"; git check-ignore .work && echo ignored || echo "not ignored"; cat .gitignore 2>/dev/null
+[Write] {"file_path": "<ROOT>\\.work\\run.mjs"}
+[Bash] cd "<ROOT>" && node .work/run.mjs
+[Read] {"file_path": "<ROOT>\\.work\\cap-320-c200.png"}
+[Bash] cd "<ROOT>" && node -e "const r=require('./.work/results.json');for(const x of r.filter(x=>x.w==320))console.log(x.st,JSON.stringify({ta:x.ta,cnt:x.cnt,bb:x.borderBottom,br:x.borderRight,iT:x.inkTop,iR:x.inkRight,font:x.countFont}))"
+[Bash] cd "<ROOT>" && node -e "const r=require('./.work/results.json');const f=k=>[...new Set(r.map(x=>x[k]))];console.log('boxGap',f('boxGap'),'boxR',f('boxRightDiff'),'inkGap',f('inkGap'),'inkR',f('inkRightDiff'),'sw<=w',r.every(x=>x.docSW<=x.innerW&&x.bodySW<=x.innerW),'edge',f('edgeInkPx'),'texts',f('text'),r.length)" && node tools/measure.mjs --page src/index.html --width 320 --height 800 --inject src/style.css --before "const b=document.getElementById('body');b.value='가'.repeat(200);b.dispatchEvent(new Event('input',{bubbles:true}));" --eval "(()=>{scrollTo(200,0);return {scrollX, rightmost: Math.max(...[...document.querySelectorAll('body *')].map(e=>e.getBoundingClientRect().right))}})()"
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');let d=fs.readFileSync('DESIGN.md','utf8');
+const c1old=d.split('\n').find(l=>l.startsWith('| C1'));const c2old=d.split('\n').find(l=>l.startsWith('| C2'));
+const c1='| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | rendered: `tools/measure.mjs --inject src/style.css`, `#body` 아래 끝 → `#body-count` 위 끝(요소 상자), 두 요소 오른쪽 끝 차이 | 320x800 200자: 간격 check 4 / observed 9(캡처, 칸 테두리 마지막 줄 → 숫자 잉크 첫 줄) 다름; 오른쪽 끝 check 0 / observed 0(테두리 열 = 숫자 잉크 끝 열) | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자(한글·영문) | 다크 모드(범위 밖); 링크된 CSS 대신 주입 CSS로 측정; 간격 규칙이 요소 상자인지 보이는 간격인지 미정 | 간격 상자 4px 16/16, 보이는 간격 9px로 spot check 다름 → 미판정(소유자 결정 대기); 오른쪽 끝 16/16. [TASK](TASK.md#2026-11-17-r1-2-measure) |';
+const c2='| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | rendered: `tools/measure.mjs --inject src/style.css`, `documentElement`·`body` scrollWidth ≤ innerWidth | 320x800 200자: check 320 ≤ 320 / observed 캡처 오른쪽 끝 열 잉크 0px, 글자 수 잉크 끝 x=303, scrollTo(200,0) 뒤 scrollX 0 | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자(한글·영문) | 다크 모드(범위 밖); 링크된 CSS 대신 주입 CSS로 측정 | 16/16 (4 sizes x 4 states, rendered, spot check 320x800 일치). [TASK](TASK.md#2026-11-17-r1-2-measure) |';
+d=d.replace(c1old,c1).replace(c2old,c2);
+d=d.replace('Execution proof: TASK.md 항목 링크.','Execution proof: TASK.md 항목 링크 (최신: TASK.md#2026-11-17-r1-2-measure).');
+fs.writeFileSync('DESIGN.md',d);
+EOF
+tail -4 DESIGN.md
+[Bash] cd "<ROOT>" && cat >> TASK.md <<'EOF'
+
+## 2026-11-17-r1-2-measure / 2026-11-17 / 글자 수 표시 C1·C2 렌더 측정
+
+Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
+Result: 코드 변경 없음. C1·C2를 320·375·768·1280px × 빈 칸·199자·200자(한글·영문), 라이트 모드로 렌더 측정. 결과 줄은 DESIGN.md#rule-coverage.
+Check / target / result: C1 상자 간격 4px 16/16, 오른쪽 끝 차이 0 16/16; C1 간격 spot check 다름(320x800 200자: check 4 / observed 9, 캡처) → C1 미판정. C2 16/16, spot check 일치. AC-002 표시 `0 / 200`·`199 / 200`·`200 / 200` 4 sizes 관찰.
+Evidence: 임시 캡처·스크립트 `.work/`(커밋 안 함).
+Limits: `tools/measure.mjs`가 링크된 CSS를 막아(loaded=false) `--inject src/style.css`로 측정; 다크 모드 범위 밖; 실제 키 입력(maxlength) 미측정.
+Report stamp: STAMP_PENDING
+Required specialist verdict: not applicable.
+Completion boundaries: C1 간격 의미(요소 상자 vs 보이는 간격) 소유자 결정 대기; user acceptance pending.
+EOF
+node - <<'EOF'
+const fs=require('fs');let d=fs.readFileSync('ROADMAP.md','utf8');
+d=d.replace('rev 2, approved (PRODUCT.md, read 2026-11-15)','rev 2, approved (PRODUCT.md, read 2026-11-17)');
+d=d.replace('Next eligible work: R1-2 글자 수 표시.','Next eligible work: R1-2 글자 수 표시 — C1 간격 의미(요소 상자 4px vs 보이는 간격 9px) 소유자 결정 후 C1 재판정.');
+d=d.replace('AC-002 세 상태 | 없음 |','AC-002 세 상태 | C2 16/16 (4 sizes x 4 states, rendered, spot check 일치); C1 spot check 다름(check 4 / observed 9) → 미판정. TASK.md#2026-11-17-r1-2-measure |');
+fs.writeFileSync('ROADMAP.md',d);
+EOF
+grep -n "R1-2\|Next\|read 2026" ROADMAP.md
+[Write] {"file_path": "<ROOT>\\REPORT.md"}
+[Bash] cd "<ROOT>" && node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Write] {"file_path": "<ROOT>\\REPORT.md"}
+[Bash] cd "<ROOT>" && node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && cat > REPORT.md <<'EOF'
+R1-2 글자 수 표시의 C1·C2를 실제 화면에서 쟀습니다. C2(가로 넘침 없음)는 규칙대로입니다(4 sizes x 4 states, rendered, spot check 320x800 일치). C1은 오른쪽 끝 정렬은 맞지만, 4px 간격은 요소 상자로 재면 4px이고 눈에 보이는 간격은 9px이라 두 값이 다릅니다. 그래서 C1은 판정하지 않고 열어 두었습니다. 4px이 어느 간격을 뜻하는지 정해 주셔야 판정할 수 있습니다.
+
+- 작업: `src/index.html`을 320·375·768·1280px 너비, 빈 칸·199자·200자(한글 `가`·영문 `W`) 상태, 라이트 모드에서 렌더해 C1·C2와 AC-002 표시 문구를 쟀습니다. 코드는 고치지 않았습니다.
+- 업데이트 파일: DESIGN.md(C1·C2 행의 Check·Spot check·Result), TASK.md(새 항목 2026-11-17-r1-2-measure), ROADMAP.md(R1-2 근거, 다음 작업 줄, 제품 정의 읽은 날짜).
+- 이슈: C1의 "상자 아래 4px"은 요소 상자 기준으로 4px입니다. 그런데 화면에서는 칸 테두리부터 숫자 윗부분까지 9px이 비어 보입니다. 글자 줄 높이 안의 위쪽 여백 때문입니다. 규칙이 어느 쪽을 뜻하는지 정해지지 않았습니다.
+- 해결: 없음
+- 남은 문제: C1 간격 판정은 소유자 결정을 기다립니다. R1-2는 verification pending 상태 그대로이고, R1 끝의 사용자 화면 확인도 남아 있습니다. 측정 범위 밖으로 남은 것은 실제 키보드 입력으로 200자 제한(maxlength)이 지켜지는지와 다크 모드(승인 범위 밖)입니다.
+- 다음 작업: C1이 요소 상자 간격(지금 4px)인지, 보이는 간격(지금 9px)인지 정해 주시면 C1을 그 기준으로 판정하겠습니다. 보이는 간격을 4px로 맞추는 쪽으로 정하시면 `.char-count` 줄 높이나 간격을 바꾸고 C1·C2를 다시 재겠습니다.
+
+결과 목록:
+
+- C1 간격(칸 아래 끝 → 글자 수 위 끝, 요소 상자) | 16/16, 모두 4px | 4 sizes x 4 states, light | rendered | 320x800 200자: check 4 / observed 9 (캡처에서 칸 테두리 마지막 줄 y=303, 숫자 잉크 첫 줄 y=313), 다름
+- C1 오른쪽 끝(글자 수 오른쪽 끝 − 칸 오른쪽 끝) | 16/16, 모두 0px | 4 sizes x 4 states, light | rendered | 320x800 200자: check 0 / observed 0 (테두리 열 x=303, 숫자 잉크 끝 열 x=303)
+- C2 넘침(문서·body scrollWidth ≤ 화면 너비) | 16/16 | 4 sizes x 4 states, light | rendered | 320x800 200자: check 320 ≤ 320 / observed: 캡처 오른쪽 끝 열 잉크 0px, 글자 수 잉크 끝 x=303, scrollTo(200,0) 뒤 scrollX 0
+- AC-002 표시 문구 | 12/12 (`0 / 200`, `199 / 200`, `200 / 200`) | 4 sizes x 3 states, light | rendered | not spot-checked
+
+상세 보고:
+
+- 측정 도구 주의: `tools/measure.mjs`는 페이지에 링크된 `style.css`를 막아 두는 설정입니다(결과의 `linkedCss`가 loaded=false). 그대로 재면 CSS가 빠진 화면을 재게 됩니다. 그래서 같은 파일을 `--inject src/style.css`로 넣어 쟀습니다. 실제 `<link>`로 불러온 화면은 재지 않았습니다.
+- 상태: 규칙에 적힌 빈 칸·200자에 AC-002의 199자를 더했고, 200자는 한글과 영문 두 가지로 쟀습니다. 값은 스크립트로 넣고 `input` 이벤트를 발생시켰습니다.
+- 임시 스크립트·캡처·원자료는 `.work/`(run.mjs, results.json, cap-*.png)에 있고 커밋하지 않았습니다.
+- 질문: C1의 "요청 내용 칸 상자 아래 4px"은 요소 상자 사이 간격(지금 4px, `--space-1` 그대로)을 뜻합니까, 아니면 눈에 보이는 테두리와 숫자 사이 간격(지금 9px)을 뜻합니까?
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && printf '\nreport-check: ok 2,132 chars 24bc5776\n' >> REPORT.md && node joedesign-skill/scripts/report-check.mjs --verify REPORT.md; echo exit=$? && sed -i 's/^Report stamp: STAMP_PENDING$/Report stamp: report-check: ok 2,132 chars 24bc5776/' TASK.md && grep -n "Report stamp" TASK.md && git status --short
+[SubagentHandback] {}

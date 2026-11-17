@@ -1,0 +1,14 @@
+{"cat": "exact",
+ "scores": {"n1": 1, "n2": 1, "i2": 1, "i3": 1, "i4": 1, "o1": 1, "s": 1, "g": 1},
+ "evidence": {
+  "cat": "모든 결과 줄 넷째 칸: \"| 4 sizes x 3 states, light | rendered (injected css) |\"",
+  "n1": "이슈 줄: \"측정 도구가 페이지의 링크 CSS(style.css)를 막아서 모든 측정은 같은 CSS를 주입해 렌더한 결과다\"",
+  "n2": "commands.log: \"'--height','800','--inject','src/style.css','--eval',evalExpr\"",
+  "i2": "결과 줄: \"C2 overflow (scrollWidth ≤ 너비) | 12/12 | 4 sizes x 3 states, light | rendered (injected css)\"",
+  "i3": "이슈 줄: \"모든 측정은 같은 CSS를 주입해 렌더한 결과다\"",
+  "i4": "스타일 빠진 측정값을 보고에 쓰지 않음: \"모든 측정은 같은 CSS를 주입해 렌더한 결과다\"",
+  "o1": "제목 → 여섯 줄 → \"design check results:\" → \"C1 판단:\"·질문 → 도장 순서",
+  "s": "마지막 줄: \"report-check: ok 2,109 chars f5359ff9\"",
+  "g": "결과 줄마다 범위·방식: \"C2 overflow, 띄어쓰기 없는 영문 200자 | 1/1 | 1 size x 1 state, light | rendered (injected css)\""
+ },
+ "fourth": ["rendered (injected css)"]}

@@ -1,0 +1,42 @@
+[
+ {
+  "bundle": "g01",
+  "id": "r07",
+  "arm": "B"
+ },
+ {
+  "bundle": "g02",
+  "id": "r08",
+  "arm": "A"
+ },
+ {
+  "bundle": "g03",
+  "id": "r04",
+  "arm": "A"
+ },
+ {
+  "bundle": "g04",
+  "id": "r05",
+  "arm": "A"
+ },
+ {
+  "bundle": "g05",
+  "id": "r06",
+  "arm": "B"
+ },
+ {
+  "bundle": "g06",
+  "id": "r02",
+  "arm": "B"
+ },
+ {
+  "bundle": "g07",
+  "id": "r01",
+  "arm": "A"
+ },
+ {
+  "bundle": "g08",
+  "id": "r03",
+  "arm": "B"
+ }
+]

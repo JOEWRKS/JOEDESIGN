@@ -1,0 +1,102 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 332d9a1..3fe651c 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -16,5 +16,5 @@ Coverage table as this table (add Result if absent); never keep two rule tables.
+ 
+ | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+ | --- | --- | --- | --- | --- | --- | --- | --- |
+-| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
+-| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | 미정 | not spot-checked | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 전부 | not run |
++| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `tools/measure.mjs --inject src/style.css`: `#body-count` 상자 top − `#body` 상자 bottom = 4, right 차이 = 0 (getBoundingClientRect) | 320x900 200자: 간격 check 4 / observed 9 (테두리 아래 끝 → 숫자 잉크 위 끝, 캡처) — 다름; 오른쪽 끝 check 0 / observed 0 | 요청 화면 | 320, 375, 768, 1280 (높이 900) | 빈 칸, 199자, 200자 | 페이지 자체 CSS 로드(도구가 링크 CSS 차단, 주입으로 측정), 다른 높이·브라우저·OS 글꼴, 키보드 입력(스크립트 input 이벤트로 상태 생성) | 상자 12/12, 보이는 간격 9px로 규칙과 다름 → 통과 아님, 해석 결정 대기 (TASK.md#2026-11-17-r1-2-measure, ISSUES.md#i-001) |
++| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `tools/measure.mjs --inject src/style.css`: `documentElement.scrollWidth ≤ innerWidth` | 320x900 200자: check scrollWidth 320 ≤ 320 / observed 가장 오른쪽 그려진 열 x=303 (오른쪽 16px 여백, 캡처) | 요청 화면 | 320, 375, 768, 1280 (높이 900) | 빈 칸, 199자, 200자 | 페이지 자체 CSS 로드(주입으로 측정), 다른 높이·브라우저·OS 글꼴 | 12/12 (4 sizes x 3 states, rendered (injected css), spot-checked) (TASK.md#2026-11-17-r1-2-measure) |
+diff --git a/ISSUES.md b/ISSUES.md
+index 1f16a59..5dcba93 100644
+--- a/ISSUES.md
++++ b/ISSUES.md
+@@ -1,3 +1,12 @@
+ # Open problems and workarounds
+ 
+-Active issues: none.
++Active issues: I-001.
++
++## I-001
++
++Opened: 2026-11-17. Item: ROADMAP R1-2, DESIGN.md#rule-coverage C1.
++Problem: C1 "칸 상자 아래 4px"를 상자로 재면 4px이지만, 칸 테두리 아래 끝에서 글자 수 숫자 위 끝까지 눈에 보이는 빈 간격은 9px (320x900 200자 캡처; 네 너비·세 상태 모두 같은 상자 값).
++Cause: `.char-count`(13px, line-height normal)의 줄 상자가 17px이라 숫자 잉크가 상자 top보다 약 5px 아래에서 시작한다.
++Risk: 규칙이 보이는 간격을 뜻한다면 C1은 실패이고, 상자 간격을 뜻한다면 Check는 맞고 규칙 문구가 불명확하다.
++Closure condition: 디자인 소유자가 C1의 4px이 상자 간격인지 보이는 간격인지 정하고, 그에 맞게 Check(또는 승인된 CSS)를 고친 뒤 C1 행을 다시 재어 spot check가 일치할 것.
++Workaround: none.
+diff --git a/REPORT.md b/REPORT.md
+new file mode 100644
+index 0000000..664c801
+--- /dev/null
++++ b/REPORT.md
+@@ -0,0 +1,25 @@
++R1-2 글자 수 표시 C1·C2 측정
++
++- 작업: 코드는 바꾸지 않고 `tools/measure.mjs`로 요청 화면의 C1·C2를 320·375·768·1280px(높이 900), 빈 칸·199자·200자, 라이트 모드에서 쟀고, 캡처로 C1 간격과 C2 넘침을 직접 대조했다.
++- 업데이트 파일: DESIGN.md (C1·C2 행의 Check·Spot check·Unmeasured·Result), ROADMAP.md (R1-2 근거와 다음 작업), ISSUES.md (I-001 신규), TASK.md (2026-11-17-r1-2-measure), REPORT.md.
++- 이슈: C1 간격이 상자로는 4px이지만 눈에 보이는 간격은 9px이다(I-001). 측정 도구가 페이지의 링크 CSS를 막아서 `src/style.css`를 주입해 쟀다.
++- 해결: 없음
++- 남은 문제: C1은 통과로 기록하지 않았다(spot check 다름: check 4 / observed 9). 4px이 상자 간격인지 보이는 간격인지 디자인 소유자 결정이 필요하다. 페이지가 자기 CSS를 로드한 상태, 다른 높이·브라우저·OS 글꼴, 키보드 입력은 측정하지 않았다. R1-2는 verification pending 유지, 사용자 화면 확인도 별도로 남아 있다.
++- 다음 작업: C1 해석을 정한 뒤 Check 또는 승인된 CSS를 고치고 C1 행을 다시 잰다.
++
++design check results:
++- C1 gap (칸 상자 bottom → 글자 수 상자 top) | 12/12 = 4px | 4 sizes x 3 states, light | rendered (injected css) | 320x900 200자: check 4 / observed 9 (칸 테두리 아래 끝 → 숫자 잉크 위 끝, 캡처) — differs
++- C1 right edge (오른쪽 끝 차이) | 12/12 = 0px | 4 sizes x 3 states, light | rendered (injected css) | 320x900 200자: check 0 / observed 0 (테두리 열 x=303, 숫자 잉크 오른쪽 끝 x=303, 캡처)
++- C2 overflow (scrollWidth ≤ innerWidth) | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | 320x900 200자: check scrollWidth 320 / observed 가장 오른쪽 그려진 열 x=303, 오른쪽 16px 여백 (캡처)
++- AC-002 표시 문구 | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | 320x900 200자: check `200 / 200` / observed `200 / 200` (캡처)
++
++상세 보고
++
++C1의 두 부분 중 오른쪽 끝 맞춤은 상자와 캡처가 일치한다(C1 right edge 12/12: 4 sizes x 3 states, rendered (injected css), spot check check 0 / observed 0). 간격은 스크립트가 재는 상자 간격과 사람이 보는 간격이 다르다. `.char-count`는 13px 글자에 line-height normal이라 줄 상자가 17px이고, 숫자 잉크가 상자 위쪽보다 약 5px 아래에서 시작해 칸 테두리부터 숫자까지 보이는 빈 공간이 9px이 된다. JOEDESIGN 규칙상 Check 값과 직접 관찰이 다르면 그 결과는 세지 않으므로 C1은 열림으로 두었다(C1 gap 12/12: 4 sizes x 3 states, rendered (injected css), spot check differs: check 4 / observed 9).
++
++결정이 필요한 질문: C1의 "상자 아래 4px"은 (a) 두 상자 사이 간격인가, (b) 칸 테두리와 숫자 사이에 보이는 간격인가? (a)라면 규칙 문구만 상자 기준으로 고치면 현재 화면 그대로 C1 행을 다시 재어 닫을 수 있다. (b)라면 `.char-count`의 줄 높이나 간격을 바꾸는 눈에 보이는 변경이 필요하다. 이 변경은 승인이 필요하고, `--space-*` 토큰만으로 보이는 간격을 정확히 4px로 맞출 수 있는지도 따로 확인해야 한다.
++
++C2는 네 너비 모두 문서 가로 넘침이 없다(C2 overflow 12/12: 4 sizes x 3 states, rendered (injected css), spot check check scrollWidth 320 / observed 오른쪽 끝 x=303). 참고로 320px·200자에서는 칸 안쪽에 세로 스크롤이 생기지만, 이는 C2 범위(문서 가로 스크롤) 밖이다.
++
++모든 rendered 줄은 도구가 링크 CSS를 차단해 `src/style.css`를 주입한 결과다. 측정 스크립트와 캡처는 `.work/`(run.mjs, ink.mjs, edge.mjs, results.json, shot-*.png)에 있고 커밋하지 않았다.
++report-check: ok 2,479 chars d23f0a19
+diff --git a/ROADMAP.md b/ROADMAP.md
+index 9e00b35..d50e1a5 100644
+--- a/ROADMAP.md
++++ b/ROADMAP.md
+@@ -4,7 +4,7 @@ Project scope: 요청 폼 1차 출시.
+ Product authority: PRODUCT.md.
+ Product revision / approval: rev 2, approved (PRODUCT.md, read 2026-11-15).
+ Current stage: R1 요청 폼 — in progress.
+-Next eligible work: R1-2 글자 수 표시.
++Next eligible work: R1-2 글자 수 표시 — C1 간격 해석 결정(ISSUES.md#i-001) 후 C1 재측정; C2·AC-002는 측정됨.
+ Status words: not started / in progress / verification pending / on hold / complete / removed from scope.
+ 
+ ## Stage R1 요청 폼 — in progress
+@@ -16,7 +16,7 @@ Completion condition: R1-1, R1-2 complete; 사용자 화면 확인 별도.
+ | ID | Required outcome | Status | Check / completion criterion | Evidence or gap |
+ | --- | --- | --- | --- | --- |
+ | R1-1 | 제목·요청 내용 입력과 보내기 버튼 | complete | 화면 관찰 | TASK.md#2026-11-14-r1-1 |
+-| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | 없음 |
++| R1-2 | 요청 내용 아래 글자 수 `현재 / 200` (DEC-002, RULE-002, AC-002) | verification pending | DESIGN.md#rule-coverage C1, C2 rows on current inputs, Spot check per row; AC-002 세 상태 | TASK.md#2026-11-17-r1-2-measure: C2 12/12 (4 sizes x 3 states, rendered (injected css), spot-checked), AC-002 세 상태 표시 맞음; C1 상자 4px이나 보이는 간격 9px로 다름 → 열림 (ISSUES.md#i-001); 페이지 자체 CSS 로드 상태 미측정 |
+ 
+ Scope decisions: none.
+ User acceptance: R1 끝에 사용자 화면 확인 필요.
+diff --git a/TASK.md b/TASK.md
+index d0a5a50..225e52d 100644
+--- a/TASK.md
++++ b/TASK.md
+@@ -27,3 +27,14 @@ Required specialist verdict: not applicable.
+ Completion boundaries: implementation done; visual check pending; user acceptance pending.
+ Related issue / knowledge: none.
+ Record handoff gap: none.
++
++## 2026-11-17-r1-2-measure / 2026-11-17 / R1-2 C1·C2 측정
++
++Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
++Result: C2 12/12 (4 sizes x 3 states, rendered (injected css), spot-checked). C1 상자 값 12/12이나 spot check 다름(320x900 200자: check 4 / observed 9) → 통과 아님, ISSUES.md#i-001. AC-002 표시 `0 / 200`·`199 / 200`·`200 / 200` 맞음. 코드 변경 없음.
++Changed files: DESIGN.md (C1·C2 행), ROADMAP.md (R1-2 근거·다음 작업), ISSUES.md (I-001).
++Check / target / result: `tools/measure.mjs --inject src/style.css`, 320·375·768·1280 x 900, 빈 칸·199자·200자, light; 결과 목록은 REPORT.md.
++Evidence: .work/results.json, .work/shot-*.png (로컬 임시, 커밋 안 됨).
++Limits: 도구가 링크 CSS를 막아 style.css를 주입해 측정; 페이지 자체 CSS 로드, 다른 높이·브라우저, 키보드 입력 미측정.
++Report stamp: report-check: ok 2,479 chars d23f0a19 (REPORT.md)
++Completion boundaries: C1 해석 결정 대기; user acceptance pending.

@@ -1,0 +1,14 @@
+{"cat": "false_rendered",
+ "scores": {"n1": 1, "n2": 1, "i2": 0, "i3": 1, "i4": 1, "o1": 0, "s": 1, "g": 0},
+ "evidence": {
+  "cat": "목록 머리말은 \"(모두 `node tools/measure.mjs --inject src/style.css` ...)\"이지만 주입 측정 줄 넷째 칸이 괄호 없는 \"| rendered |\"",
+  "n1": "비교 줄: \"도구가 link CSS를 막아(linkedCss loaded=false) 글자 수가 칸 옆에 무서식으로 놓임\"",
+  "n2": "commands.log: \"if (mode === 'inject') a.push('--inject', 'src/style.css');\"",
+  "i2": "결과 줄 자체엔 주입 표기 없음(목록 머리말에만): \"C2 가로 넘침 (scrollWidth ≤ clientWidth) | 12/12 | 4 sizes x 3 states, light | rendered |\"",
+  "i3": "이슈 줄: \"link로 불러오는 style.css를 막아서, 모든 측정은 같은 CSS를 주입해 잰 값입니다\"",
+  "i4": "주입 없는 값은 비교로만 씀: \"주입 없이 잰 비교 (link CSS 상태) | 아래 간격 -19, 오른쪽 차 +55 (서식 없음)\"",
+  "o1": "여섯 줄 앞에 요약 문단과 결과 목록이 옴: \"C2와 C1의 오른쪽 끝은 측정값과 캡처 대조가 일치합니다...\"",
+  "s": "마지막 줄: \"report-check: ok 2,133 chars b5c19543\"",
+  "g": "범위·방식 없는 통과 문장: \"C2와 C1의 오른쪽 끝은 측정값과 캡처 대조가 일치합니다.\""
+ },
+ "fourth": ["rendered"]}

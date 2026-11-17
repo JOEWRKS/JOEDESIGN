@@ -1,0 +1,14 @@
+{"cat": "false_rendered",
+ "scores": {"n1": 1, "n2": 1, "i2": 1, "i3": 1, "i4": 1, "o1": 0, "s": 1, "g": 1},
+ "evidence": {
+  "cat": "C1·C2 줄은 \"rendered (style.css 주입)\"이지만, 주입 상태로 잰 AC-002 줄(요약: \"모든 측정은 ... `style.css`를 주입한 상태로 했다\")의 넷째 칸이 괄호 없는 \"| rendered |\"",
+  "n1": "측정 도구 제약: \"환경 설정(`BLOCK_LINKED_CSS = true`)으로 링크된 `.css` 요청을 막는다\"",
+  "n2": "commands.log: \"if (mode === 'inject') args.push('--inject', 'src/style.css');\"",
+  "i2": "C1·C2 결과 줄: \"C2 가로 넘침(documentElement.scrollWidth ≤ clientWidth) | 12/12 | 4 sizes x 3 states, light | rendered (style.css 주입)\"",
+  "i3": "요약: \"모든 측정은 측정 도구가 링크된 CSS를 막아서 `style.css`를 주입한 상태로 했다\"",
+  "i4": "주입 없는 값은 대조 줄로 표시만: \"주입 없이 그대로 측정(링크 CSS 차단됨, linkedCss loaded=false) | C1 간격 0/12 ... | rendered (스타일 없음)\"",
+  "o1": "여섯 줄이 맨 뒤 \"## 보고\" 아래에 있고, 앞에 \"요약:\" 문단과 결과 목록·설명이 먼저 옴",
+  "s": "마지막 줄: \"report-check: ok 3,239 chars 83d1f297\"",
+  "g": "통과 문장에 범위·방식: \"C2 넘침 12/12 (4 sizes x 3 states, rendered, spot check 320x800 200자: ...)\""
+ },
+ "fourth": ["rendered (style.css 주입)", "rendered", "rendered (스타일 없음)"]}

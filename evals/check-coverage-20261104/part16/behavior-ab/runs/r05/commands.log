@@ -1,0 +1,161 @@
+[Bash] cd "<ROOT>" && cat AGENTS.md && ls -la && git status --short && git log --oneline | head
+[Bash] cd "<ROOT>" && for f in DESIGN.md ISSUES.md PRODUCT.md ROADMAP.md TASK.md tools/README.md; do echo "=== $f"; cat $f; done; ls -R src tools joedesign-skill
+[Bash] cd "<ROOT>" && cat joedesign-skill/SKILL.md; echo ====; cat src/index.html src/style.css; echo ====; head -60 tools/measure.mjs
+[Bash] cd "<ROOT>" && wc -c joedesign-skill/references/* joedesign-skill/templates/DESIGN.md; cat joedesign-skill/references/conformance.md | head -150
+[Bash] cd "<ROOT>" && sed -n 150,260p joedesign-skill/references/conformance.md; head -40 joedesign-skill/scripts/report-check.mjs; cat .gitignore 2>/dev/null; git check-ignore .work && echo ignored
+[Bash] mkdir -p "<ROOT>/.work" && cat > "<ROOT>/.work/run.mjs" <<'EOF'
+// Runs tools/measure.mjs for C1/C2 over sizes x states, with and without --inject.
+import { execFileSync } from 'node:child_process';
+const sizes = [320, 375, 768, 1280];
+const states = { empty: '', c199: '가'.repeat(199), c200: '가'.repeat(200) };
+const evalExpr = `(() => {
+  const ta = document.getElementById('body').getBoundingClientRect();
+  const cc = document.getElementById('body-count');
+  const c = cc.getBoundingClientRect();
+  const r = document.createRange(); r.selectNodeContents(cc); const t = r.getBoundingClientRect();
+  const de = document.documentElement;
+  return { text: cc.textContent, taBottom: ta.bottom, taRight: ta.right, ccTop: c.top, ccRight: c.right, ccH: c.height,
+    gap: +(c.top - ta.bottom).toFixed(2), rightDiff: +(c.right - ta.right).toFixed(2), textRight: +(t.right).toFixed(2),
+    scrollW: de.scrollWidth, clientW: de.clientWidth, innerW: innerWidth, bodyScrollW: document.body.scrollWidth,
+    ccColor: getComputedStyle(cc).color, ccAlign: getComputedStyle(cc).alignSelf };
+})()`;
+const out = [];
+const mode = process.argv[2] || 'inject';
+for (const w of sizes) for (const [s, v] of Object.entries(states)) {
+  const args = ['tools/measure.mjs', '--page', 'src/index.html', '--width', String(w), '--height', '800',
+    '--before', `const b=document.getElementById('body'); b.value=${JSON.stringify(v)}; b.dispatchEvent(new Event('input'));`,
+    '--eval', evalExpr];
+  if (mode === 'inject') args.push('--inject', 'src/style.css');
+  if (process.argv[3] === 'shot') args.push('--screenshot', `.work/${mode}-${w}-${s}.png`);
+  const r = JSON.parse(execFileSync('node', args, { encoding: 'utf8' }));
+  out.push({ w, s, ...r.value, linkedCss: r.linkedCss.map(l => l.loaded).join(','), injected: r.injected });
+}
+console.log(JSON.stringify(out, null, 0).replace(/},{/g, '},\n{'));
+EOF
+cd "<ROOT>" && node .work/run.mjs inject shot && echo ---- && node .work/run.mjs noinject shot
+[Read] {"file_path": "<ROOT>\\.work\\inject-320-c200.png"}
+[Bash] cat > "<ROOT>/.work/ink.mjs" <<'EOF'
+// Pixel spot check: textarea bottom border row / right border col vs count glyph ink.
+import fs from 'node:fs'; import zlib from 'node:zlib';
+function png(file){const b=fs.readFileSync(file);let p=8,w,h,ct,idat=[];while(p<b.length){const len=b.readUInt32BE(p),type=b.toString('ascii',p+4,p+8),d=b.subarray(p+8,p+8+len);if(type==='IHDR'){w=d.readUInt32BE(0);h=d.readUInt32BE(4);ct=d[9];}if(type==='IDAT')idat.push(d);p+=12+len;}
+const bpp=ct===6?4:3,raw=zlib.inflateSync(Buffer.concat(idat)),st=w*bpp,out=Buffer.alloc(h*st);
+for(let y=0;y<h;y++){const f=raw[y*(st+1)],src=raw.subarray(y*(st+1)+1,(y+1)*(st+1));for(let x=0;x<st;x++){const a=x>=bpp?out[y*st+x-bpp]:0,u=y?out[(y-1)*st+x]:0,c=(x>=bpp&&y)?out[(y-1)*st+x-bpp]:0;let v=src[x];if(f===1)v+=a;else if(f===2)v+=u;else if(f===3)v+=(a+u)>>1;else if(f===4){const pp=a+u-c,pa=Math.abs(pp-a),pb=Math.abs(pp-u),pc=Math.abs(pp-c);v+=(pa<=pb&&pa<=pc)?a:(pb<=pc?u:c);}out[y*st+x]=v&255;}}
+return {w,h,px:(x,y)=>{const i=y*st+x*bpp;return [out[i],out[i+1],out[i+2]];}};}
+const [file, taRight, taBottom] = [process.argv[2], +process.argv[3], +process.argv[4]];
+const im = png(file); const dark = (x,y)=>{const [r,g,b]=im.px(x,y);return r+g+b < 600;};
+// textarea bottom border: scan up from taBottom at x = taRight-40 for last non-white row
+let border=-1; for(let y=taBottom+2;y>taBottom-6;y--){ if(dark(taRight-40,y)){border=y;break;} }
+// right border column at y = taBottom-30
+let rb=-1; for(let x=taRight+2;x>taRight-6;x--){ if(dark(x,taBottom-30)){rb=x;break;} }
+// count ink box: region y in [taBottom, taBottom+25], x in [taRight-80, taRight+3]
+let top=1e9,bot=-1,left=1e9,right=-1; for(let y=taBottom;y<taBottom+26;y++)for(let x=taRight-80;x<taRight+3;x++) if(dark(x,y)){top=Math.min(top,y);bot=Math.max(bot,y);left=Math.min(left,x);right=Math.max(right,x);}
+console.log(JSON.stringify({file, borderBottomRow:border, rightBorderCol:rb, inkTop:top, inkBottom:bot, inkLeft:left, inkRight:right, visibleGapPx: top-border-1, rightEdgeDiffPx: right-rb}));
+EOF
+cd "<ROOT>" && node .work/ink.mjs .work/inject-320-c200.png 304 304 && node .work/ink.mjs .work/inject-320-empty.png 304 304 && node .work/ink.mjs .work/inject-1280-c200.png 904 304
+[Bash] cd "<ROOT>" && sed -i 's/let border=-1; for(let y=taBottom+2;y>taBottom-6;y--){ if(dark(/const nw=(x,y)=>{const [r,g,b]=im.px(x,y);return r+g+b<730;};\nlet border=-1; for(let y=taBottom+2;y>taBottom-6;y--){ if(nw(/; s/if(dark(x,taBottom-30)){rb=x;break;}/if(nw(x,taBottom-30)){rb=x;break;}/' .work/ink.mjs && for f in "320 304" "375 359" "768 648" "1280 904"; do set -- $f; for s in empty c200; do node .work/ink.mjs .work/inject-$1-$s.png $2 304; done; done
+[Bash] cd "<ROOT>" && cat > .work/edge.mjs <<'EOF'
+import fs from 'node:fs';
+const src = fs.readFileSync('.work/ink.mjs','utf8'); const fn = src.slice(src.indexOf('function png'), src.indexOf('const [file'));
+const png = new Function('fs','zlib', fn + 'return png;')(fs, (await import('node:zlib')).default);
+for (const f of process.argv.slice(2)) { const im = png(f); let maxX=-1; for (let y=0;y<im.h;y++) for (let x=im.w-1;x>maxX;x--){const [r,g,b]=im.px(x,y); if(r+g+b<750){maxX=x;break;}} console.log(f, 'w', im.w, 'rightmost painted col', maxX, 'right margin', im.w-1-maxX); }
+EOF
+node .work/edge.mjs .work/inject-320-empty.png .work/inject-320-c200.png .work/inject-375-c200.png .work/inject-768-c200.png .work/inject-1280-c200.png
+[Bash] cd "<ROOT>" && python - <<'EOF'
+import io
+p='DESIGN.md'; s=io.open(p,encoding='utf-8').read()
+old1=s[s.index('| C1 '):s.index('\n',s.index('| C1 '))]
+old2=s[s.index('| C2 '):s.index('\n',s.index('| C2 '))]
+new1='| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `tools/measure.mjs --inject src/style.css`: `#body-count` 상자 top − `#body` 상자 bottom = 4, 두 상자 right 차 = 0 | 320x800 200자: 간격 check 4 / observed 9(캡처 픽셀, 칸 테두리 아래 끝~글자 잉크 위 끝) — differs; 오른쪽 check 0 / observed 0 | 요청 화면 | 320, 375, 768, 1280 (높이 800) | 빈 칸, 199자, 200자 | 링크된 style.css 로드 경로(도구가 차단, 주입으로 대체); 높이 800 외; 칸 크기 조절 후 | 상자 기준 12/12, 간격 spot check differs → 미통과, 규칙 뜻 결정 대기 (TASK.md#2026-11-17-r1-2-measure) |'
+new2='| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `tools/measure.mjs --inject src/style.css`: `documentElement.scrollWidth ≤ clientWidth` | 320x800 200자: check scrollWidth 320 / clientWidth 320; observed 캡처 가장 오른쪽 칠한 열 303, 오른쪽 여백 16px, 잘린 가장자리 없음 — agrees | 요청 화면 | 320, 375, 768, 1280 (높이 800) | 빈 칸, 199자, 200자 | 링크된 style.css 로드 경로(도구가 차단, 주입으로 대체); 높이 800 외; 제목 칸 긴 입력 | 12/12, spot-checked; 링크 경로 미측정 (TASK.md#2026-11-17-r1-2-measure) |'
+s=s.replace(old1,new1).replace(old2,new2)
+io.open(p,'w',encoding='utf-8',newline='\n').write(s)
+EOF
+git diff --stat
+[Bash] cd "<ROOT>" && python - <<'EOF'
+import io
+def rw(p,f):
+    s=io.open(p,encoding='utf-8').read(); s2=f(s); assert s2!=s,p; io.open(p,'w',encoding='utf-8',newline='\n').write(s2)
+rw('ROADMAP.md', lambda s: s.replace('Next eligible work: R1-2 글자 수 표시.',
+ 'Next eligible work: R1-2 글자 수 표시 — C1 간격 기준(상자 4px vs 보이는 9px) 사용자 결정 후 C1 재측정; 링크된 style.css 경로 측정(ISSUES.md#iss-001).')
+ .replace('AC-002 세 상태 | 없음 |',
+ 'AC-002 세 상태 | TASK.md#2026-11-17-r1-2-measure. Gap: C1 spot check differs(check 4 / observed 9); C1·C2 모두 CSS 주입 상태로만 측정(ISSUES.md#iss-001) |'))
+rw('ISSUES.md', lambda s: s.replace('Active issues: none.',
+'''Active issues: ISS-001.
+
+## ISS-001
+
+- 문제: `tools/measure.mjs`가 링크된 CSS를 막는다(`BLOCK_LINKED_CSS = true`, 출력 `linkedCss loaded=false`). 그대로 재면 스타일 없는 화면이 측정된다(C1 간격 -19px).
+- 우회: `--inject src/style.css`로 같은 CSS를 넣어 측정. 우회일 뿐 해결 아님.
+- 위험: `<link href="style.css">`가 실제로 적용되는지는 측정되지 않음.
+- 닫는 조건: `linkedCss loaded=true` 상태(또는 사용자가 인정한 다른 방법)에서 C1·C2 행을 다시 재서 같은 결과.
+- 기록: TASK.md#2026-11-17-r1-2-measure.'''))
+EOF
+cat >> TASK.md <<'EOF'
+
+## 2026-11-17-r1-2-measure / 2026-11-17 / 글자 수 표시 C1·C2 측정
+
+Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2 (verification pending 유지).
+Result: 코드 변경 없음. C1·C2를 4 sizes(320·375·768·1280, 높이 800) x 3 states(빈 칸·199자·200자), light, `--inject src/style.css`로 렌더 측정.
+Check / target / result: C1 상자 간격 12/12=4px, 오른쪽 차 12/12=0; C2 12/12; AC-002 문구 3/3. 결과 줄과 spot check는 REPORT.md.
+Spot check: C1 간격 differs(320x800 200자 check 4 / observed 9) → C1 미통과; C1 오른쪽·C2 agrees.
+Limits: 링크된 CSS는 도구가 차단(ISSUES.md#iss-001); 다크 모드·높이 800 외 미측정.
+Report stamp: STAMP
+Completion boundaries: C1 규칙 뜻 사용자 결정 대기; user acceptance pending.
+EOF
+git diff --stat
+[Write] {"file_path": "<ROOT>\\REPORT.md"}
+[Bash] cd "<ROOT>" && cat > REPORT.md <<'EOF'
+# R1-2 글자 수 표시 C1·C2 측정 보고
+
+요약: C2는 렌더 측정과 캡처 대조가 일치했고, C1은 오른쪽 끝 맞춤만 일치했다. C1의 "칸 아래 4px"는 요소 상자로 재면 4px이지만 캡처에서 보이는 간격은 9px이라 C1은 통과로 기록하지 않았다. 모든 측정은 측정 도구가 링크된 CSS를 막아서 `style.css`를 주입한 상태로 했다. 코드는 고치지 않았고 R1-2는 verification pending 그대로다.
+
+## 디자인 검사 결과
+
+- `C1 간격(요청 내용 칸 상자 bottom → 글자 수 상자 top) | 12/12 = 4px | 4 sizes x 3 states, light | rendered (style.css 주입) | 320x800 200자: check 4 / observed 9 (캡처 픽셀, 칸 테두리 아래 끝 303행 → 글자 잉크 위 끝 313행) — differs`
+- `C1 오른쪽 끝 맞춤(두 상자 right 차) | 12/12 = 0px | 4 sizes x 3 states, light | rendered (style.css 주입) | 320x800 200자: check 0 / observed 0 (칸 오른쪽 테두리 303열 = 글자 잉크 오른쪽 끝 303열)`
+- `C2 가로 넘침(documentElement.scrollWidth ≤ clientWidth) | 12/12 | 4 sizes x 3 states, light | rendered (style.css 주입) | 320x800 200자: check scrollWidth 320 / clientWidth 320; observed 캡처에서 가장 오른쪽 칠한 열 303, 오른쪽 여백 16px, 잘린 가장자리 없음`
+- `AC-002 문구(0 / 200, 199 / 200, 200 / 200) | 3/3 | 4 sizes x 3 states, light | rendered | 320x800 200자 캡처에서 "200 / 200" 직접 확인`
+- `주입 없이 그대로 측정(링크 CSS 차단됨, linkedCss loaded=false) | C1 간격 0/12 (-19px, 글자 수가 칸 옆에 붙음), C2 12/12 | 4 sizes x 3 states, light | rendered (스타일 없음) | not spot-checked`
+
+크기: 320·375·768·1280px, 높이 800. 상태: 빈 칸, 199자, 200자(DESIGN 행의 두 상태에 AC-002의 199자를 더함). 다크 모드는 승인 범위 밖이라 재지 않았다.
+
+## C1 간격 차이
+
+- 측정은 DESIGN 행 글자 그대로 "상자 아래 4px"를 요소 상자 사이로 쟀고, 모든 대상에서 4px이다. CSS의 `.field { gap: var(--space-1) }`가 만드는 값이다.
+- 사람이 보는 간격은 다르다. 글자 수 상자는 높이 17px, 글자 크기 13px이라 글자 잉크가 상자 위 끝보다 5px 아래에서 시작하고, 칸 테두리 아래 끝부터 글자까지 9px이 비어 보인다. 이 9px은 320x800 하나만이 아니라 8개 캡처(4 sizes x 빈 칸·200자)에서 모두 같았다.
+- JOEDESIGN 규칙에서는 check 값과 직접 관찰 값이 다르면 check나 규칙 행이 틀린 것이고, 고친 뒤에야 결과로 인정된다. "4px"가 상자 기준인지 보이는 간격인지는 승인된 규칙의 뜻이라 내가 정할 수 없다. 그래서 C1은 미통과(결정 대기)로 기록했다.
+  - 상자 기준이면: DESIGN C1 행을 "요소 상자 간격 4px"로 명확히 고치면 지금 구현 그대로 C1이 성립한다.
+  - 보이는 간격이면: 지금 9px이라 맞지 않는다. 글자 수 줄 높이를 줄이는 등의 CSS 변경과 C1·C2 재측정이 필요하다.
+
+## 측정 도구 제약 (ISSUES.md#iss-001)
+
+`tools/measure.mjs`는 환경 설정(`BLOCK_LINKED_CSS = true`)으로 링크된 `.css` 요청을 막는다. 그래서 `<link href="style.css">`로 실제 적용되는 경로는 측정하지 못했고, 같은 파일을 `--inject src/style.css`로 넣어서 쟀다. 이건 우회일 뿐이라 이슈로 열어 두었다. 도구는 지시대로 고치지 않았다.
+
+## 보고
+
+- 작업: R1-2 글자 수 표시의 DESIGN C1·C2 행을 렌더 측정하고 캡처 픽셀과 대조함. 코드 변경 없음.
+- 업데이트 파일: DESIGN.md (C1·C2 행의 Check, Spot check, Unmeasured, Result), TASK.md (2026-11-17-r1-2-measure 항목), ROADMAP.md (R1-2 근거·남은 차이, 다음 작업 줄), ISSUES.md (ISS-001 추가), REPORT.md. 임시 측정 스크립트와 캡처는 `.work/`에 있음.
+- 이슈: C1 간격은 check 값과 보이는 값이 다름(4 / 9). ISS-001 측정 도구가 링크 CSS를 막아 주입으로 우회함.
+- 해결: 없음
+- 남은 문제: C1 미통과, 간격 기준 결정 대기. C1·C2의 링크 CSS 경로는 미측정(ISS-001). 높이 800 외, 칸 크기 조절 후, 제목 칸 긴 입력은 미측정. R1 끝의 사용자 화면 확인도 남아 있음.
+- 다음 작업: 아래 질문 1의 답을 받으면 C1 행을 고치거나 CSS를 바꾼 뒤 C1·C2를 다시 잼. ISS-001을 닫을 측정 방법을 정함.
+
+## 질문
+
+1. C1의 "요청 내용 칸 상자 아래 4px"는 요소 상자 사이 4px(지금 4px)인가, 눈에 보이는 테두리~글자 간격 4px(지금 9px)인가?
+2. 링크 CSS를 막는 측정 도구 대신 주입 측정을 C1·C2 근거로 인정할 것인가, 아니면 링크 CSS가 실제로 로드되는 측정 방법을 마련할 것인가?
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && python - <<'EOF'
+import io
+p='REPORT.md'; s=io.open(p,encoding='utf-8').read()
+P='(4 sizes x 3 states, rendered, spot check 320x800 200자: check 4 / observed 9 — differs)'
+s=s.replace('그래서 C1은 미통과(결정 대기)로 기록했다.', '그래서 C1 간격 12/12 '+P+'을 통과로 보지 않고 결정 대기로 기록했다.')
+s=s.replace('- 남은 문제: C1 미통과, 간격 기준 결정 대기.', '- 남은 문제: C1 간격 12/12 '+P+'은 통과로 보지 않음, 간격 기준 결정 대기.')
+s=s.replace('요약: C2는 렌더 측정과 캡처 대조가 일치했고, C1은 오른쪽 끝 맞춤만 일치했다.',
+ '요약: C2 넘침 12/12 (4 sizes x 3 states, rendered, spot check 320x800 200자: scrollWidth 320 / 캡처 오른쪽 여백 16px, 잘림 없음)과 C1 오른쪽 끝 맞춤 12/12 (4 sizes x 3 states, rendered, spot check 320x800 200자: check 0 / observed 0)은 캡처 대조와 일치했다.')
+io.open(p,'w',encoding='utf-8',newline='\n').write(s)
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && printf '\nreport-check: ok 3,239 chars 83d1f297\n' >> REPORT.md && node joedesign-skill/scripts/report-check.mjs --verify REPORT.md; echo exit=$?; sed -i 's/^Report stamp: STAMP$/Report stamp: report-check: ok 3,239 chars 83d1f297 (REPORT.md)/' TASK.md && grep -n "Report stamp" TASK.md && cat REPORT.md && git status --short
+[SubagentHandback] {}

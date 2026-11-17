@@ -1,0 +1,100 @@
+[Bash] cd "<ROOT>" && cat AGENTS.md && ls -la && git status && git log --oneline | head
+[Bash] cd "<ROOT>" && for f in DESIGN.md ISSUES.md PRODUCT.md ROADMAP.md TASK.md tools/README.md; do echo "=== $f"; cat $f; done; ls -R src tools joedesign-skill
+[Bash] cd "<ROOT>" && cat joedesign-skill/SKILL.md; echo ====; cat src/index.html src/style.css; echo ====; head -60 tools/measure.mjs
+[Bash] cd "<ROOT>/joedesign-skill" && cat templates/DESIGN.md; echo ====; cat references/conformance.md | head -150; echo ====; head -80 scripts/report-check.mjs
+[Bash] cd "<ROOT>" && mkdir -p .work && cat .gitignore 2>/dev/null; node --version; node tools/measure.mjs --page src/index.html --width 375 --height 700 --eval "getComputedStyle(document.querySelector('.char-count')).alignSelf"; node tools/measure.mjs --page src/index.html --width 375 --height 700 --inject src/style.css --eval "getComputedStyle(document.querySelector('.char-count')).alignSelf"
+[Bash] cd "<ROOT>" && cat > .work/run.mjs <<'EOF'
+import { execFileSync } from 'node:child_process';
+const sizes = [[320,700],[375,700],[768,1024],[1280,800]];
+const states = { empty: '', c199: '가'.repeat(199), c200: '가'.repeat(200) };
+const evalExpr = `(()=>{const t=document.getElementById('body').getBoundingClientRect();const c=document.getElementById('body-count').getBoundingClientRect();const d=document.documentElement;return {text:document.getElementById('body-count').textContent,len:document.getElementById('body').value.length,gap:+(c.top-t.bottom).toFixed(2),rightDiff:+(c.right-t.right).toFixed(2),taBottom:t.bottom,taRight:t.right,cTop:c.top,cRight:c.right,cLeft:c.left,cBottom:c.bottom,sw:d.scrollWidth,cw:d.clientWidth,iw:innerWidth,bodySW:document.body.scrollWidth,space1:getComputedStyle(d).getPropertyValue('--space-1').trim(),fieldGap:getComputedStyle(document.querySelector('.field')).rowGap}})()`;
+const out = [];
+for (const [w,h] of sizes) for (const [s,v] of Object.entries(states)) {
+  const before = `const b=document.getElementById('body');b.value=${JSON.stringify(v)};b.dispatchEvent(new Event('input',{bubbles:true}));`;
+  const r = execFileSync('node', ['tools/measure.mjs','--page','src/index.html','--width',String(w),'--height',String(h),'--inject','src/style.css','--before',before,'--eval',evalExpr,'--screenshot',`.work/shot-${w}-${s}.png`], {encoding:'utf8'});
+  const j = JSON.parse(r); out.push({w,s,...j.value,linked:j.linkedCss[0].loaded});
+}
+console.log(JSON.stringify(out,null,0).replace(/\},\{/g,'},\n{'));
+EOF
+node .work/run.mjs
+[Bash] cd "<ROOT>" && cat > .work/px.mjs <<'EOF'
+import fs from 'node:fs'; import zlib from 'node:zlib';
+function dec(f){const b=fs.readFileSync(f);let o=8,w,h,ct,idat=[];while(o<b.length){const len=b.readUInt32BE(o),t=b.toString('ascii',o+4,o+8),d=b.subarray(o+8,o+8+len);if(t==='IHDR'){w=d.readUInt32BE(0);h=d.readUInt32BE(4);ct=d[9];}if(t==='IDAT')idat.push(d);o+=12+len;}
+const bpp=ct===6?4:3,raw=zlib.inflateSync(Buffer.concat(idat)),st=w*bpp,px=Buffer.alloc(h*st);
+for(let y=0;y<h;y++){const f=raw[y*(st+1)],s=raw.subarray(y*(st+1)+1,(y+1)*(st+1));for(let x=0;x<st;x++){const a=x>=bpp?px[y*st+x-bpp]:0,u=y>0?px[(y-1)*st+x]:0,c=(x>=bpp&&y>0)?px[(y-1)*st+x-bpp]:0;let v=s[x];if(f===1)v+=a;else if(f===2)v+=u;else if(f===3)v+=(a+u)>>1;else if(f===4){const p=a+u-c,pa=Math.abs(p-a),pb=Math.abs(p-u),pc=Math.abs(p-c);v+=(pa<=pb&&pa<=pc)?a:(pb<=pc?u:c);}px[y*st+x]=v&255;}}
+return {w,h,get:(x,y)=>{const i=y*st+x*bpp;return [px[i],px[i+1],px[i+2]];}};}
+const [file,x0,x1,y0,y1]=process.argv.slice(2);const im=dec(file);const nw=([r,g,b])=>!(r>250&&g>250&&b>250);
+// rows with non-white in column range
+const rows=[];for(let y=+y0;y<=+y1;y++){let n=0;for(let x=+x0;x<=+x1;x++)if(nw(im.get(x,y)))n++;rows.push(y+':'+n);}
+console.log('size',im.w,im.h);console.log(rows.join(' '));
+// columns with non-white in row range (for right edge)
+let maxX=-1,minX=1e9;for(let y=+y0;y<=+y1;y++)for(let x=+x0;x<=+x1;x++)if(nw(im.get(x,y))){maxX=Math.max(maxX,x);minX=Math.min(minX,x);}
+console.log('ink x range',minX,maxX);
+EOF
+echo "--- 320 c200: textarea bottom border region + count rows (x 240..319, y 295..330)"; node .work/px.mjs .work/shot-320-c200.png 240 319 295 330
+echo "--- count ink only (y 306..330)"; node .work/px.mjs .work/shot-320-c200.png 200 319 306 330
+echo "--- textarea right border at mid-height (y 250..260)"; node .work/px.mjs .work/shot-320-c200.png 280 319 250 252
+echo "--- right strip of page full height (x 305..319)"; node .work/px.mjs .work/shot-320-c200.png 305 319 0 699 | tail -1
+[Bash] cd "<ROOT>" && node tools/measure.mjs --page src/index.html --width 320 --height 700 --inject src/style.css --before "const b=document.getElementById('body');b.value='가'.repeat(200);b.dispatchEvent(new Event('input',{bubbles:true}));window.scrollTo(200,0);" --eval "({scrollX:window.scrollX,sw:document.documentElement.scrollWidth})"; node .work/px.mjs .work/shot-1280-empty.png 840 1279 295 330 | tail -1; node .work/px.mjs .work/shot-1280-empty.png 840 1279 306 330
+[Read] {"file_path": "<ROOT>\\.work\\shot-320-c200.png"}
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');let d=fs.readFileSync('DESIGN.md','utf8');
+const oldC1=d.split('\n').find(l=>l.startsWith('| C1'));const oldC2=d.split('\n').find(l=>l.startsWith('| C2'));
+const c1="| C1 글자 수 위치: 요청 내용 칸 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | `tools/measure.mjs` 렌더(링크 CSS 차단 → `src/style.css` 주입): `#body-count` 상자 top − `#body` 상자 bottom = 4, right 차이 = 0 | 320x700 200자: 간격 check 4 / observed 9 (테두리 아래 끝 y303 → 글자 잉크 첫 줄 y313, 캡처 픽셀), 오른쪽 끝 check 0 / observed 0 (잉크 오른쪽 x303 = 칸 테두리 x303) — 간격 다름: 4px가 상자 기준인지 보이는 글자 기준인지 소유자 판단 대기 | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 페이지 자체 CSS 로드(주입으로만 렌더), 다크 모드(범위 밖), 칸 크기 조절 후 | 상자 12/12, 간격 spot check 다름 → not passed ([TASK](TASK.md#2026-11-17-r1-2-measure)) |";
+const c2="| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | `tools/measure.mjs` 렌더(`src/style.css` 주입): `documentElement.scrollWidth` ≤ `innerWidth` | 320x700 200자: check scrollWidth 320 ≤ 320 / observed `scrollTo(200,0)` 후 scrollX 0, 캡처 x305–319 전 높이 빈 칸(가장 오른쪽 잉크 x303) | 요청 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 페이지 자체 CSS 로드(주입으로만 렌더), 다크 모드(범위 밖) | 12/12 ([TASK](TASK.md#2026-11-17-r1-2-measure)) |";
+d=d.replace(oldC1,c1).replace(oldC2,c2);fs.writeFileSync('DESIGN.md',d);
+EOF
+tail -3 DESIGN.md
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');let r=fs.readFileSync('ROADMAP.md','utf8');
+r=r.replace('Next eligible work: R1-2 글자 수 표시.','Next eligible work: R1-2 글자 수 표시 — C1 간격 4px의 기준(상자 / 보이는 글자) 소유자 판단, 페이지 자체 CSS 로드 렌더 확인.');
+r=r.replace('| AC-002 세 상태 | 없음 |','| AC-002 세 상태 | TASK.md#2026-11-17-r1-2-measure: C2 12/12, C1 상자 12/12이나 간격 spot check 다름(check 4 / observed 9), AC-002 세 상태 표시 맞음; 모두 CSS 주입 렌더. 남은 것: C1 기준 판단, 자체 CSS 로드 렌더 |');
+fs.writeFileSync('ROADMAP.md',r);
+EOF
+git diff --stat
+[Bash] cd "<ROOT>" && cat > REPORT.md <<'EOF'
+R1-2 글자 수 표시 C1·C2 측정
+
+- 작업: R1-2 글자 수 표시를 DESIGN C1·C2 규칙으로 렌더 측정(320·375·768·1280px × 빈 칸·199자·200자, 라이트). 코드는 고치지 않음.
+- 업데이트 파일: DESIGN.md(C1·C2 행의 Check·Spot check·Unmeasured·Result), ROADMAP.md(R1-2 근거, 다음 작업 줄), TASK.md(2026-11-17-r1-2-measure 새 항목), REPORT.md.
+- 이슈: C1 간격이 상자 기준으로는 4px이지만 화면에 보이는 글자까지는 9px로, 규칙의 "4px"가 어느 쪽인지 정해지지 않음. 측정 도구가 페이지의 링크 CSS를 막아 `src/style.css`를 주입해서만 렌더함.
+- 해결: 없음.
+- 남은 문제: C1 간격 기준 소유자 판단 대기(C1은 not passed 유지), 페이지가 자체 CSS를 불러온 렌더는 확인 못 함, R1-2는 verification pending 유지, R1 사용자 화면 확인 대기.
+- 다음 작업: 아래 질문에 대한 답을 받아 C1 행 확정(상자 기준이면 C1 행을 통과로 기록, 보이는 글자 기준이면 `.char-count` 간격 수정 후 재측정), 자체 CSS 로드 렌더 수단 확보.
+
+design check results:
+- C1 gap (칸 상자 bottom → 글자 수 상자 top = 4px) | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | 320x700 200자: check 4 / observed 9 (캡처에서 칸 테두리 마지막 줄 y303, 글자 잉크 첫 줄 y313)
+- C1 right edge (글자 수 오른쪽 끝 = 칸 오른쪽 끝) | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | 320x700 200자: check 0 / observed 0 (잉크 오른쪽 x303 = 칸 테두리 x303)
+- C2 overflow (scrollWidth ≤ 화면 너비) | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | 320x700 200자: check 320 ≤ 320 / observed scrollTo(200,0) 후 scrollX 0, 캡처 x305–319 전 높이 비어 있음
+- AC-002 표시 문구 (`0 / 200`, `199 / 200`, `200 / 200`) | 12/12 | 4 sizes x 3 states, light | rendered (injected css) | 320x700 200자: check `200 / 200` / observed 캡처의 `200 / 200`
+
+상세 보고
+
+C2는 통과(4 sizes x 3 states, rendered (injected css), spot check 320x700 200자 check 320 ≤ 320 / observed scrollX 0)로 기록했습니다. C1 오른쪽 끝 맞춤도 같은 범위에서 맞습니다(4 sizes x 3 states, rendered (injected css), spot check check 0 / observed 0).
+
+C1 간격은 통과로 기록하지 않았습니다. 상자끼리 잰 값은 모든 크기·상태에서 4px(`.field`의 `gap: var(--space-1)`)인데, 캡처에서 사람이 보는 간격(칸 테두리에서 숫자 글자 윗부분까지)은 9px입니다. 차이 5px는 13px 글자의 줄 높이 안쪽 여백입니다. JOEDESIGN 규칙상 check와 직접 관찰이 다르면 그 행은 결과로 셀 수 없으므로, DESIGN.md C1 행은 not passed로 두었습니다.
+
+측정 방식: `tools/measure.mjs`가 링크 CSS를 차단하는 설정이라(linkedCss loaded=false) 모든 측정은 같은 `src/style.css`를 주입해 렌더한 결과입니다. 페이지가 스스로 CSS를 불러왔을 때의 렌더는 관찰하지 않았습니다. 다크 모드와 사용자가 칸 크기를 바꾼 뒤의 상태도 측정 범위 밖입니다.
+
+질문(소유자 판단 필요): C1의 "칸 상자 아래 4px"는 (가) 글자 수 요소의 상자까지 4px(현재 구현, 보이는 간격 9px)인가요, (나) 화면에 보이는 숫자 글자까지 4px인가요? (가)라면 C1 행을 통과로 기록하고, (나)라면 `.char-count` 간격을 고친 뒤 다시 재겠습니다.
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md; echo exit $?
+[Bash] cd "<ROOT>" && printf '\nreport-check: ok 2,227 chars 973052a1\n' >> REPORT.md && node joedesign-skill/scripts/report-check.mjs --verify REPORT.md; echo exit $? && cat >> TASK.md <<'EOF'
+
+## 2026-11-17-r1-2-measure / 2026-11-17 / 글자 수 표시 C1·C2 측정
+
+Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
+Result: 코드 변경 없음. C1·C2·AC-002 렌더 측정, 결과 줄은 REPORT.md.
+Changed files: DESIGN.md (C1·C2 행), ROADMAP.md (R1-2 근거, 다음 작업).
+Check / target / result: DESIGN.md#rule-coverage C1·C2 행, 320·375·768·1280 × 빈 칸·199자·200자, 라이트, rendered (injected css). C2 12/12, C1 상자 12/12, AC-002 문구 12/12.
+Evidence: 320x700 200자 캡처 픽셀(C1 간격 check 4 / observed 9, 오른쪽 끝 0 / 0, C2 scrollX 0).
+Limits: 링크 CSS 차단으로 주입 렌더만; 다크 모드·칸 크기 조절 미측정.
+Report stamp: report-check: ok 2,227 chars 973052a1
+Required specialist verdict: not applicable.
+Completion boundaries: C1 간격 기준 소유자 판단 대기(not passed); user acceptance pending.
+Related issue / knowledge: none.
+Record handoff gap: none.
+EOF
+git status --short
+[Bash] cd "<ROOT>" && cat REPORT.md
+[SubagentHandback] {}

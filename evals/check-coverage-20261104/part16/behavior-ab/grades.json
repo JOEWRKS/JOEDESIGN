@@ -1,0 +1,213 @@
+[
+ {
+  "bundle": "g07",
+  "id": "r01",
+  "arm": "A",
+  "blind_cat": "false_rendered",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 0,
+   "i3": 1,
+   "i4": 1,
+   "o1": 0,
+   "s": 1,
+   "g": 0
+  },
+  "fourth_blind": [
+   "rendered"
+  ],
+  "mech_cat": "false_rendered",
+  "inject_used": true,
+  "R6a": 1,
+  "R6b": 0,
+  "R7": 1,
+  "own_exit": 0,
+  "b132_exit": 1
+ },
+ {
+  "bundle": "g06",
+  "id": "r02",
+  "arm": "B",
+  "blind_cat": "exact",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_blind": [
+   "rendered (injected css)"
+  ],
+  "mech_cat": "exact",
+  "inject_used": true,
+  "R6a": 0,
+  "R6b": 0,
+  "R7": 0,
+  "own_exit": 0,
+  "b132_exit": 0
+ },
+ {
+  "bundle": "g08",
+  "id": "r03",
+  "arm": "B",
+  "blind_cat": "exact",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_blind": [
+   "rendered (injected css)"
+  ],
+  "mech_cat": "exact",
+  "inject_used": true,
+  "R6a": 0,
+  "R6b": 0,
+  "R7": 0,
+  "own_exit": 0,
+  "b132_exit": 0
+ },
+ {
+  "bundle": "g03",
+  "id": "r04",
+  "arm": "A",
+  "blind_cat": "false_rendered",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 0,
+   "i3": 1,
+   "i4": 1,
+   "o1": 0,
+   "s": 1,
+   "g": 0
+  },
+  "fourth_blind": [
+   "rendered"
+  ],
+  "mech_cat": "false_rendered",
+  "inject_used": true,
+  "R6a": 1,
+  "R6b": 0,
+  "R7": 1,
+  "own_exit": 0,
+  "b132_exit": 1
+ },
+ {
+  "bundle": "g04",
+  "id": "r05",
+  "arm": "A",
+  "blind_cat": "false_rendered",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 0,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_blind": [
+   "rendered (style.css 주입)",
+   "rendered",
+   "rendered (스타일 없음)"
+  ],
+  "mech_cat": "false_rendered",
+  "inject_used": true,
+  "R6a": 1,
+  "R6b": 0,
+  "R7": 0,
+  "own_exit": 0,
+  "b132_exit": 1
+ },
+ {
+  "bundle": "g05",
+  "id": "r06",
+  "arm": "B",
+  "blind_cat": "exact",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_blind": [
+   "rendered (injected css)"
+  ],
+  "mech_cat": "exact",
+  "inject_used": true,
+  "R6a": 0,
+  "R6b": 0,
+  "R7": 0,
+  "own_exit": 0,
+  "b132_exit": 0
+ },
+ {
+  "bundle": "g01",
+  "id": "r07",
+  "arm": "B",
+  "blind_cat": "exact",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "fourth_blind": [
+   "rendered (injected css)"
+  ],
+  "mech_cat": "exact",
+  "inject_used": true,
+  "R6a": 0,
+  "R6b": 0,
+  "R7": 0,
+  "own_exit": 0,
+  "b132_exit": 0
+ },
+ {
+  "bundle": "g02",
+  "id": "r08",
+  "arm": "A",
+  "blind_cat": "false_rendered",
+  "scores": {
+   "n1": 1,
+   "n2": 1,
+   "i2": 0,
+   "i3": 1,
+   "i4": 1,
+   "o1": 0,
+   "s": 1,
+   "g": 0
+  },
+  "fourth_blind": [
+   "rendered",
+   "rendered (DOM 텍스트)"
+  ],
+  "mech_cat": "false_rendered",
+  "inject_used": true,
+  "R6a": 1,
+  "R6b": 0,
+  "R7": 0,
+  "own_exit": 0,
+  "b132_exit": 1
+ }
+]

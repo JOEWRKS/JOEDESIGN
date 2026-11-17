@@ -1,0 +1,14 @@
+{"cat": "exact",
+ "scores": {"n1": 1, "n2": 1, "i2": 1, "i3": 1, "i4": 1, "o1": 1, "s": 1, "g": 1},
+ "evidence": {
+  "cat": "모든 결과 줄 넷째 칸: \"| 4 sizes x 3 states, light | rendered (injected css) |\"",
+  "n1": "이슈 줄: \"측정 도구가 페이지의 linked CSS를 막아서(loaded=false) src/style.css를 주입해 렌더함\"",
+  "n2": "commands.log: \"'--height','800','--inject','src/style.css','--eval',evalExpr\"",
+  "i2": "결과 줄: \"C1 세로 간격(상자 top − 칸 bottom = 4px) | 12/12 | 4 sizes x 3 states, light | rendered (injected css)\"",
+  "i3": "설명: \"같은 src/style.css를 `--inject`로 넣어 렌더했다. 그래서 모든 결과는 rendered (injected css)다\"",
+  "i4": "주입 없는 측정값은 보고에 없음: \"그래서 모든 결과는 rendered (injected css)다\"",
+  "o1": "제목 → 여섯 줄(- 작업 … - 다음 작업) → \"design check results:\" → 설명 문단 → 도장 순서",
+  "s": "마지막 줄: \"report-check: ok 2,556 chars 98b07a3e\"",
+  "g": "통과 문장에 범위·방식: \"C2 가로 넘침 12/12 (4 sizes x 3 states, rendered (injected css), spot check: ...)\""
+ },
+ "fourth": ["rendered (injected css)"]}

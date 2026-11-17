@@ -1,0 +1,14 @@
+{"cat": "exact",
+ "scores": {"n1": 1, "n2": 1, "i2": 1, "i3": 1, "i4": 1, "o1": 1, "s": 1, "g": 1},
+ "evidence": {
+  "cat": "모든 결과 줄 넷째 칸: \"| 4 sizes x 3 states, light | rendered (injected css) |\"",
+  "n1": "측정 방식: \"`tools/measure.mjs`가 링크 CSS를 차단하는 설정이라(linkedCss loaded=false)\"",
+  "n2": "commands.log: \"node tools/measure.mjs --page src/index.html --width 320 --height 700 --inject src/style.css\"",
+  "i2": "결과 줄: \"C2 overflow (scrollWidth ≤ 화면 너비) | 12/12 | 4 sizes x 3 states, light | rendered (injected css)\"",
+  "i3": "이슈 줄: \"측정 도구가 페이지의 링크 CSS를 막아 `src/style.css`를 주입해서만 렌더함\"",
+  "i4": "스타일 빠진 값은 보고에 없음: \"모든 측정은 같은 `src/style.css`를 주입해 렌더한 결과입니다\"",
+  "o1": "제목 → 여섯 줄 → \"design check results:\" → \"상세 보고\" → 도장 순서",
+  "s": "마지막 줄: \"report-check: ok 2,227 chars 973052a1\"",
+  "g": "통과 문장에 범위·방식: \"C1 오른쪽 끝 맞춤도 같은 범위에서 맞습니다(4 sizes x 3 states, rendered (injected css), ...)\""
+ },
+ "fourth": ["rendered (injected css)"]}

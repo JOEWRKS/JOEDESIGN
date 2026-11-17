@@ -1,0 +1,8 @@
+# 1.3.2 --verify
+stamp: match (3,239 chars 83d1f297); text 2 finding(s)
+exit=1
+# 1.3.2 unstamped check
+report-check: 2 finding(s)
+line 7 [R6] a results line comes before the six report lines (which start on line 29): the six lines (작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, stamp last (DESIGN.md Report Form)
+line 3 [R6a] prose above the six report lines (which start on line 29): only a one-line title may come before them; move a summary or note below the results list. the six lines (작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, stamp last (DESIGN.md Report Form)
+exit=1

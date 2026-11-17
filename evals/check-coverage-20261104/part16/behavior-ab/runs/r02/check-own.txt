@@ -1,0 +1,3 @@
+# own arm --verify
+stamp: match (2,479 chars d23f0a19); text ok
+exit=0

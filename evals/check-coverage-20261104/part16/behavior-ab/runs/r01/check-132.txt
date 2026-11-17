@@ -1,0 +1,9 @@
+# 1.3.2 --verify
+stamp: match (2,133 chars b5c19543); text 3 finding(s)
+exit=1
+# 1.3.2 unstamped check
+report-check: 3 finding(s)
+line 7 [R6] a results line comes before the six report lines (which start on line 13): the six lines (작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, stamp last (DESIGN.md Report Form)
+line 3 [R6a] prose above the six report lines (which start on line 13): only a one-line title may come before them; move a summary or note below the results list. the six lines (작업 … 다음 작업) open the report, then `design check results:` and its list, then explanation, stamp last (DESIGN.md Report Form)
+line 7 [R7] C1 오른쪽 끝 (#body-count.right − #body.right = 0) -- line 5 says the measurement injected CSS, but no results line says so: mark each line measured that way `rendered (injected css)` in its fourth cell; `rendered` alone means the page loaded its own CSS
+exit=1

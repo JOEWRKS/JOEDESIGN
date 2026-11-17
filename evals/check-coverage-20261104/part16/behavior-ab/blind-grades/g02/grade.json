@@ -1,0 +1,14 @@
+{"cat": "false_rendered",
+ "scores": {"n1": 1, "n2": 1, "i2": 0, "i3": 1, "i4": 1, "o1": 0, "s": 1, "g": 0},
+ "evidence": {
+  "cat": "주입 측정(commands.log에 --inject)인데 C1·C2 줄 넷째 칸이 괄호 없는 \"| rendered |\"",
+  "n1": "이슈 줄: \"`<link>`로 연결한 style.css가 차단됩니다(`linkedCss loaded:false`)\"",
+  "n2": "commands.log: \"node tools/measure.mjs --page src/index.html --width $w --height 800 --inject src/style.css\"",
+  "i2": "결과 줄에 주입 표기 없음: \"C2 넘침 없음 (scrollWidth ≤ 화면 너비) | 12/12 | 4 sizes x 3 states, light, 높이 800 | rendered |\"",
+  "i3": "이슈 줄: \"그래서 같은 파일을 `--inject`로 넣어 측정했습니다\"",
+  "i4": "스타일 빠진 값은 보고에 없고 주입 값만 근거: \"같은 파일을 `--inject`로 넣어 측정했습니다\"",
+  "o1": "여섯 줄 앞에 요약 문단과 결과 목록이 옴: \"R1-2 글자 수 표시의 C1·C2를 렌더 화면에서 측정했습니다. ...\" 다음 \"결과 목록:\" 뒤에 \"- 작업:\"",
+  "s": "마지막 줄: \"report-check: ok 2,279 chars 476545fd\"",
+  "g": "범위·방식 없는 통과 문장: \"C1은 상자 기준으로는 맞지만, 화면에 보이는 글자 기준으로는 간격이 다르게 나와서 통과로 기록하지 않았습니다.\""
+ },
+ "fourth": ["rendered", "rendered (DOM 텍스트)"]}
