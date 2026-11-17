@@ -1,0 +1,24 @@
+diff -ru fixture-base/tools/README.md fixture/tools/README.md
+--- fixture-base/tools/README.md
++++ fixture/tools/README.md
+@@ -4,8 +4,3 @@
+ 
+ - `--before`로 상태를 만든 뒤(예: 텍스트 입력과 `input` 이벤트) `--eval`로 값을 읽는다.
+ - `--screenshot out.png`로 캡처를 남길 수 있다.
+-
+-## 알려진 제약 (2026-11-14 확인)
+-
+-이 환경의 미리보기는 `file://` 페이지가 연결한 CSS(`<link rel="stylesheet">`)를 읽지 못한다(보안 설정, 바꿀 수 없음). 출력의 `linkedCss`에 `"loaded": false`로 나타나며, 그대로 재면 스타일이 빠진 화면의 값이다.
+-같은 CSS 파일을 `--inject src/style.css`로 페이지에 주입하면 스타일이 적용된 상태로 잴 수 있다.
+diff -ru fixture-base/tools/measure.mjs fixture/tools/measure.mjs
+--- fixture-base/tools/measure.mjs
++++ fixture/tools/measure.mjs
+@@ -11,7 +11,7 @@
+ import path from 'node:path';
+ import { pathToFileURL } from 'node:url';
+ 
+-const BLOCK_LINKED_CSS = true; // 환경 설정값(아래 README 참고)
++const BLOCK_LINKED_CSS = true; // 환경 설정값
+ 
+ const args = process.argv.slice(2);
+ const opt = (k, d) => { const i = args.indexOf('--' + k); return i < 0 ? d : args[i + 1]; };
