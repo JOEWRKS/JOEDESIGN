@@ -55,8 +55,10 @@ is not `fixed` or `changed`, a check outcome stated outside the list without its
 scope, rendered-or-code and spot check outcome, a `changed` fix named under 해결, and
 a move, overlap, hide or merge without `before:`/`after:` lines per element (or one
 `display unchanged` line) or with a differing pair not recorded as `product decision
-pending`, and a report that says CSS was injected for the measurement while no
-rendered line is marked `rendered (injected css)`;
+pending`, and a report that says CSS was injected for the measurement (an inject word
+with a CSS word in the sentence, `--inject`, or CSS put in with 넣어) while a rendered
+line says only `rendered` (`rendered (own css)`, or prose naming that check as loading
+its own CSS, clears it);
 the file is corrected until the script prints `report-check: ok <chars> chars <sha8>`,
 and that stamp line ends the sent text so `--verify` can confirm the checked text is
 the sent text. A project ledger that keeps the report (JOENESS TASK) keeps the stamp

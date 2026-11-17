@@ -227,3 +227,44 @@ test('R7: a report saying CSS was injected needs at least one line marked that w
   assert.deepEqual(rules(`- ${plain}\n\nCSS는 주입하지 않고 페이지가 직접 읽었다. 테스트 데이터를 주입했다.\n`), []);
   assert.deepEqual(rules(`- ${plain}\n\nWe did not inject any CSS.\n`), []);
 });
+
+test('R7 1.3.3: `--inject`, an inject word anywhere in the sentence, or CSS put in with 넣어 says CSS was injected', () => {
+  const plain = INJ.replace(' (injected css)', '');
+  // r08 form: the command name alone, no CSS word in the sentence
+  assert.deepEqual(rules(`- ${plain}\n\n그래서 같은 파일을 \`--inject\`로 넣어 측정했습니다.\n`), ['R7']);
+  // a CSS word far from the inject word, same sentence
+  assert.deepEqual(rules(`- ${plain}\n\n측정 도구 설정이 링크된 파일 요청을 막아서, 모든 행은 원래 페이지가 읽으려던 style.css 내용을 그대로 주입했다.\n`), ['R7']);
+  assert.deepEqual(rules(`- ${plain}\n\nThe stylesheet request was blocked by the harness config, which is why every value here was injected.\n`), ['R7']);
+  assert.deepEqual(rules(`- ${plain}\n\nstyle.css를 직접 넣어 쟀다.\n`), ['R7']);
+  // a --inject command shown in a code block
+  assert.deepEqual(rules(`- ${plain}\n\n\`\`\`\nnode tools/measure.mjs --inject src/style.css\n\`\`\`\n`), ['R7']);
+  // negated forms are not the case
+  assert.deepEqual(rules(`- ${plain}\n\n이번에는 --inject 없이 쟀다. We did not inject the stylesheet.\n`), []);
+});
+
+test('R7 1.3.3: 넣어 without CSS, or injecting something else, is not CSS injection', () => {
+  const plain = INJ.replace(' (injected css)', '');
+  assert.deepEqual(rules(`- ${plain}\n\n값은 스크립트로 칸에 200자를 넣어 쟀고 input 이벤트를 보냈다.\n`), []);
+  assert.deepEqual(rules(`- ${plain}\n\n상태는 테스트 데이터를 주입해 만들었다.\n`), []);
+});
+
+test('R7 1.3.3: with injection said, each bare `rendered` line is flagged even when another line is marked (r05 form)', () => {
+  const plain = 'AC-002 text | 3/3 | 4 sizes x 3 states, light | rendered | not spot-checked';
+  const text = `- ${INJ}\n- ${plain}\n\n모든 측정은 도구가 링크 CSS를 막아서 style.css를 주입한 상태로 했다.\n`;
+  const f = check(text);
+  assert.deepEqual(f.map((x) => [x[0], x[1], x[2]]), [[2, 'R7', 'AC-002 text']]);
+  assert.match(f[0][3], /line 4 says .*says only `rendered`.*rendered \(injected css\).*rendered \(own css\)/);
+});
+
+test('R7 1.3.3: a legitimate mix of own-CSS and injected lines passes when the own-CSS line says so', () => {
+  const home = 'home spacing | 8/8 | 4 sizes x 2 states, light | rendered | 1280x800: check 16 / observed 16';
+  const prose = '설정 페이지는 미리보기가 링크 CSS를 막아 style.css를 주입해 쟀다.';
+  // stated in prose for that check
+  assert.deepEqual(rules(`- ${INJ}\n- ${home}\n\n${prose} home 페이지는 자기 CSS를 읽었다.\n`), []);
+  assert.deepEqual(rules(`- ${INJ}\n- ${home}\n\n${prose} The home page loaded its own CSS.\n`), []);
+  // stated in the line itself
+  assert.deepEqual(rules(`- ${INJ}\n- ${home.replace('| rendered |', '| rendered (own css) |')}\n\n${prose}\n`), []);
+  // a statement for another check, or a negated one, does not cover the line
+  assert.deepEqual(rules(`- ${INJ}\n- ${home}\n\n${prose} settings 페이지는 자기 CSS를 읽지 못했다.\n`), ['R7']);
+  assert.deepEqual(rules(`- ${INJ}\n- ${home}\n\n${prose} about 페이지는 자기 CSS를 읽었다.\n`), ['R7']);
+});

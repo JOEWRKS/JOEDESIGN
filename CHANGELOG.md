@@ -1,5 +1,20 @@
 # JOEDESIGN 업데이트 내역
 
+## 1.3.3 — R7 탐지 범위 확장: 줄마다 판정, `--inject` 문장 (게시 전 후보, 2026-11-17, T043)
+
+- 상태: 게시 전 후보. VERSION·README·docs/INSTALL.md 버전 핀은 1.3.2 그대로(게시 때 올림), 태그·Release·개인 설치 없음.
+- 출처: 16부 행동 A/B([part16/behavior-ab/report.md](evals/check-coverage-20261104/part16/behavior-ab/report.md))에서 1.3.0 팔의 거짓 `rendered` 4건 중 1.3.2 R7이 2건만 잡음.
+  놓친 형태: r05(일부 줄만 `rendered (style.css 주입)`, 다른 줄은 `rendered`뿐), r08(본문이 "같은 파일을 `--inject`로 넣어 측정"이라고만 적음).
+- `report-check.mjs` R7: (a) 주입 언급 판정을 문장 단위로 바꿈. 부정이 아닌 주입 낱말(주입, inject(ed/ing/ion), `--inject`)과 CSS 낱말(css, 스타일, style, stylesheet)이 같은 문장에 있으면 거리 제한 없이,
+  `--inject`는 혼자서도(코드 블록 안 명령 포함), `style.css를 넣어 쟀다`처럼 CSS를 넣어/넣고로 넣은 문장도 주입 언급이다. CSS 없는 "넣어"(200자를 넣어)와 테스트 데이터 주입은 아니다.
+  (b) 주입을 말하는 보고에서 넷째 칸이 `rendered`뿐인 줄은 줄마다 지적(1.3.2는 주입 표시 줄이 하나도 없을 때 첫 줄만). 페이지가 자기 CSS를 읽은 줄은 `rendered (own css)`로 적거나,
+  목록 밖 문장이 그 줄의 검사 이름 첫 낱말(`C1` 등)과 함께 자기 CSS를 읽었다고 말하면(own css, 자기 CSS, 링크 CSS를 읽었다 …, 부정 없음) 통과. `rendered (<what differed>)` 줄은 1.3.2처럼 받는다.
+  `--verify` 종료 코드 의미는 같다.
+- templates/DESIGN.md 측정 모드 문단과 conformance.md R7 설명에 한 줄씩.
+- 확인된 것([part17/report.md](evals/check-coverage-20261104/part17/report.md)): node 41/41(report-check 23 → 27), python 142 OK. 16부 A 4/4 R7(1.3.2 2/4), 16부 B 4·14부 B 16·15부 `text ok` 42건 새 R7 0,
+  기존 evals 보고 274개 R1~R6 지적 수 1.3.2와 같음, R7 0 → 0.
+- 확인되지 않은 것: 행동 효과(행동 시험 0회). 274개 중 주입을 말하는 보고가 2개뿐이라 정당한 섞임의 실물 오탐 검사는 테스트 문장에 기댄다.
+
 ## 1.3.2 — 보고 배치 R6 확장: 여섯 줄 앞 요약·여섯 줄과 목록 사이 문단 (2026-11-15, T043)
 
 - 게시: 사용자 승인("둘 다 게시", 2026-11-15, 부모 세션이 직접 받음) 뒤 VERSION 1.3.2, 태그 v1.3.2, GitHub Release, 개인 설치 갱신(영수증 evals/check-coverage-20261104/part15/install-receipt.md).

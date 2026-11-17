@@ -42,6 +42,13 @@
 //       page's linked CSS) marks the rendered lines measured that way
 //       `rendered (injected css)`; plain `rendered` means the page loaded its own CSS.
 //       Lines with `rendered`, `code` or `rendered (<what differed>)` are all accepted.
+//       The report says so when a sentence has an inject word (주입, inject(ed), `--inject`)
+//       not negated and a CSS word (css, 스타일, style, stylesheet) anywhere in it; `--inject`
+//       alone (also in a code block), or CSS put in with 넣어/넣고 (`style.css를 넣어 쟀다`),
+//       is enough. In such a report each bare `rendered` line is flagged, since it cannot
+//       tell which measurement it was. It passes when written `rendered (own css)`, or when
+//       a sentence outside the list says the page loaded its own CSS (own css, 자기 CSS,
+//       링크 CSS를 읽었다 ...) and names that line's check (its first word, such as `C1`).
 //   A report with no design check run says so in one line, `design checks: none ran`
 //   (or `디자인 검사: 실행 안 함`); that line satisfies R1 instead of a results list.
 //
@@ -130,13 +137,26 @@ const RELOCATE_NOT_UI = new RegExp([
   /검사|\bchecks?\b|테스트|\btests?\b|포커스|초점|focus|[+-]\s*\d+\s*px|되어\s*있|돼\s*있/.source,
 ].join('|'), 'i');
 // R7: prose saying CSS was injected for the measurement
-const INJECTED = new RegExp([
-  /(?:CSS|스타일)[^.。\n]{0,30}주입(?!\s*(?:하지|안\s*|없|않))/.source,
-  /주입(?!\s*(?:하지|안\s*|없|않))[^.。\n]{0,20}(?:CSS|스타일)/.source,
-  /(?<!not |never |without )\binject(?:ed|ing)?\b[^.\n]{0,25}\b(?:css|styles?(?:heets?)?)\b/.source,
-  /\b(?:css|styles?(?:heets?)?)\b[^.\n]{0,25}(?<!not |never )\binjected\b/.source,
+// an inject word that is not negated (주입하지 않고, did not inject, --inject 없이)
+const INJECT_CMD = /--inject\b(?!\S*\s*(?:없이|안\s|않|쓰지|하지))/i;
+const INJECT_WORD = new RegExp([
+  /주입(?!\s*(?:하지|안\s*|없|않|은\s*(?:하지|안|없)))/.source,
+  /(?<!\b(?:not|never|without|no|didn't|don't)\s+(?:\w+\s+)?)\binject(?:ed|ing|s|ion)?\b/.source,
 ].join('|'), 'i');
-const INJECTED_MARK = /inject|주입/i;
+const CSS_WORD = /css|스타일|\bstyles?(?:heets?)?\b/i;
+// CSS put in with 넣어 (`style.css를 넣어 쟀다`); 넣어 alone (200자를 넣어) is not
+const CSS_PUT = /(?:css|스타일|stylesheet)[^\s,.;:。]*\s*(?:파일|내용)?\s*(?:을|를)?\s*(?:직접\s*|그대로\s*|\S+로\s*)?넣(?:어|고|은)/i;
+function saysInjected(sentence) {
+  return INJECT_CMD.test(sentence) || CSS_PUT.test(sentence) ||
+    (INJECT_WORD.test(sentence) && CSS_WORD.test(sentence));
+}
+// R7: a sentence saying the page read its own CSS (not 읽지 못해, loaded=false)
+const OWN_CSS = new RegExp([
+  /\bown\s+(?:linked\s+)?(?:css|stylesheet)/.source,
+  /(?:자기|자체)\s*(?:CSS|스타일)/.source,
+  /(?:링크|연결|link(?:ed)?)\s*(?:된\s*)?(?:CSS|style\.css|스타일)[^.。\n]{0,12}(?:읽었|읽힘|읽혔|읽음|로드됐|로드되었|로드됨|불러왔|\bloaded\b(?!\s*[=:]))/.source,
+].join('|'), 'i');
+const OWN_CSS_NOT = /읽지|못|않|막|차단|\bnot\b|n't|\bfailed\b|[=:]\s*false|\bblocked\b|\bwithout\b/i;
 const BA_LINE = /^\s*(?:[-*+]\s*)?\**\s*(before|after)\s*\**\s*[:：]\s*(.*)$/i;
 const DISPLAY_SAME = /display unchanged|표시\s*(?:변화|변경)\s*없음/i;
 const PENDING = /product decision pending|제품\s*결정\s*대기/i;
@@ -256,12 +276,14 @@ export function check(text) {
   let pending = false;
   const sixFirst = new Map(); // label -> first line number
   const rowLines = []; // line numbers of results lines outside code blocks
-  let injectedAt = 0; // first prose line saying CSS was injected
-  const renderedRows = []; // [lineNo, check, marked]
+  let injectedAt = 0; // first line saying CSS was injected
+  const renderedRows = []; // bare `rendered` lines: [lineNo, check, own css said in the line]
+  const ownCss = []; // sentences outside the list saying the page read its own CSS
   text.split(/\r?\n/).forEach((raw, index) => {
     const no = index + 1;
     if (raw.trim().startsWith('```')) { inCode = !inCode; return; }
     if (!raw.trim()) return;
+    if (inCode && !injectedAt && INJECT_CMD.test(raw)) injectedAt = no; // a `--inject` command shown in a code block
     if (STAMP_LINE.test(raw.trim())) return; // a stamp from an earlier run is not part of the report
     if (NONE_RAN.test(raw)) noneRan = true;
     if (!inCode) {
@@ -287,7 +309,9 @@ export function check(text) {
     if (cells) {
       listLines += 1;
       if (!inCode) rowLines.push(no);
-      if (/^rendered\b/i.test(cells[3])) renderedRows.push([no, cells[0], INJECTED_MARK.test(cells[3])]);
+      if (!inCode && /^rendered\s*$/i.test(cells[3])) {
+        renderedRows.push([no, cells[0], cells.some((c) => OWN_CSS.test(c) && !OWN_CSS_NOT.test(c))]);
+      }
       if (FIX_NAME.test(cells[0]) && !BEFORE_FIX.test(cells[0])) {
         const word = cells[1].trim().toLowerCase();
         if (word === 'changed') changedFixes.push([no, cells[0]]);
@@ -309,9 +333,12 @@ export function check(text) {
       if (shortRow === null && (PASS.test(raw) || isCount(raw))) shortRow = no;
       return;
     }
-    if (!injectedAt && INJECTED.test(raw.replaceAll('`', ''))) injectedAt = no;
     const plain = raw.replaceAll('`', '').replaceAll('**', '')
       .replace(/^\s*(?:[-*+]|\d+[.)])\s+/, '');
+    for (const s of sentences(plain)) {
+      if (!injectedAt && saysInjected(s)) injectedAt = no;
+      if (OWN_CSS.test(s) && !OWN_CSS_NOT.test(s)) ownCss.push(s.toLowerCase());
+    }
     for (const s of sentences(plain)) {
       const claim = (PASS.test(s) && !NOT_CLAIM.test(s)) || isCount(s);
       if (!claim) continue;
@@ -366,13 +393,16 @@ export function check(text) {
     }
     findings.push(...placement(text, sixStart, Math.max(...sixFirst.values())));
   }
-  // R7: the report says CSS was injected, but no rendered line says so
-  if (injectedAt && renderedRows.length && !renderedRows.some((r) => r[2])) {
-    const [no, name] = renderedRows[0];
-    findings.push([no, 'R7', name,
-      `line ${injectedAt} says the measurement injected CSS, but no results line says so: mark each line ` +
-      'measured that way `rendered (injected css)` in its fourth cell; `rendered` alone means the page ' +
-      'loaded its own CSS']);
+  // R7: the report says CSS was injected; a bare `rendered` line does not say which measurement it was
+  if (injectedAt) {
+    for (const [no, name, ownInRow] of renderedRows) {
+      const key = name.split(/[\s(（:：,]/)[0].toLowerCase();
+      if (ownInRow || (key.length >= 2 && ownCss.some((s) => s.includes(key)))) continue;
+      findings.push([no, 'R7', name,
+        `line ${injectedAt} says the measurement injected CSS, and this line says only \`rendered\`: ` +
+        'mark it `rendered (injected css)` in its fourth cell when it was measured that way; when the page ' +
+        'loaded its own CSS, write `rendered (own css)` or say so for this check outside the list']);
+    }
   }
   // R5: display before/after for a move, overlap, hide or merge
   if (relocateAt && !baLines.length && !displaySame) {
