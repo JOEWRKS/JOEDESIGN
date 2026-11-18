@@ -14,6 +14,7 @@
 - 확인된 것([part17/report.md](evals/check-coverage-20261104/part17/report.md)): node 41/41(report-check 23 → 27), python 142 OK. 16부 A 4/4 R7(1.3.2 2/4), 16부 B 4·14부 B 16·15부 `text ok` 42건 새 R7 0,
   기존 evals 보고 274개 R1~R6 지적 수 1.3.2와 같음, R7 0 → 0.
 - 확인되지 않은 것: 행동 효과(행동 시험 0회). 274개 중 주입을 말하는 보고가 2개뿐이라 정당한 섞임의 실물 오탐 검사는 테스트 문장에 기댄다.
+- 행동 시험(2026-11-18, [part18/behavior-ab/report.md](evals/check-coverage-20261104/part18/behavior-ab/report.md), 실행 4 + 채점 1): 정당한 섞임 장면(index 자기 CSS, confirm 주입)에서 올바른 보고 4/4, R7 오탐 0/4, 거짓 `rendered` 0, `--verify` 4/4. 허용 경로는 4/4가 `rendered (own css)`; 반사실(괄호를 지운 실물)에서는 문장 허용 경로가 올바른 보고 3/4를 떨어뜨림(검사 이름 요구, `마지막`의 `막`·`not spot-checked`의 `not` 부분 일치).
 
 ## 1.3.2 — 보고 배치 R6 확장: 여섯 줄 앞 요약·여섯 줄과 목록 사이 문단 (2026-11-15, T043)
 
