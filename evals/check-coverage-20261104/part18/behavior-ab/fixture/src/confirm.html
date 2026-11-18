@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>요청 확인</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <h1 class="title">요청 확인</h1>
+  <form class="request-form" id="confirm-form">
+    <div class="field">
+      <span class="field-label">제목</span>
+      <p class="summary" id="summary-subject">모니터 교체 요청</p>
+    </div>
+    <label class="field">
+      <span class="field-label">추가 메모</span>
+      <textarea class="input textarea" id="memo" name="memo" rows="4" maxlength="200" aria-describedby="memo-count"></textarea>
+      <span class="char-count" id="memo-count" aria-live="polite">0 / 200</span>
+    </label>
+    <button class="submit" type="submit">확인하고 보내기</button>
+  </form>
+</main>
+<script>
+  const memo = document.getElementById('memo');
+  const count = document.getElementById('memo-count');
+  const update = () => { count.textContent = `${memo.value.length} / 200`; };
+  memo.addEventListener('input', update);
+  update();
+</script>
+</body>
+</html>

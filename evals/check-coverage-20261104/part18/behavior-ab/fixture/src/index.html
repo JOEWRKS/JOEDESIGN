@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>요청 보내기</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="page">
+  <h1 class="title">요청 보내기</h1>
+  <form class="request-form" id="request-form">
+    <label class="field">
+      <span class="field-label">제목</span>
+      <input class="input" id="subject" name="subject" type="text" required>
+    </label>
+    <label class="field">
+      <span class="field-label">요청 내용</span>
+      <textarea class="input textarea" id="body" name="body" rows="6" maxlength="200" required aria-describedby="body-count"></textarea>
+      <span class="char-count" id="body-count" aria-live="polite">0 / 200</span>
+    </label>
+    <button class="submit" type="submit">보내기</button>
+  </form>
+</main>
+<script>
+  const body = document.getElementById('body');
+  const count = document.getElementById('body-count');
+  const update = () => { count.textContent = `${body.value.length} / 200`; };
+  body.addEventListener('input', update);
+  update();
+</script>
+</body>
+</html>
