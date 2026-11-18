@@ -1,0 +1,137 @@
+[Bash] cd "<ROOT>" && cat AGENTS.md && ls -la && ls -R src tools joedesign-skill docs 2>/dev/null | head -80 && git status --short | head
+[Bash] cd "<ROOT>" && for f in DESIGN.md ROADMAP.md TASK.md ISSUES.md PRODUCT.md tools/README.md joedesign-skill/SKILL.md; do echo "=== $f"; cat "$f"; done
+[Bash] cd "<ROOT>" && cat joedesign-skill/templates/DESIGN.md; echo ====; cat src/index.html src/confirm.html src/style.css; echo ===; head -60 tools/measure.mjs
+[Bash] cd "<ROOT>" && sed -n 1,200p joedesign-skill/references/conformance.md | head -120; git log --oneline | head; node --version
+[Bash] mkdir -p "<ROOT>/.work/shots" && cat > "<ROOT>/.work/run.mjs" <<'EOF'
+// C1/C2 measurement driver: calls tools/measure.mjs per page x size x state
+import { execFileSync } from 'node:child_process';
+import fs from 'node:fs';
+const pages = [
+  { name: 'index', page: 'src/index.html', ta: '#body', cnt: '#body-count' },
+  { name: 'confirm', page: 'src/confirm.html', ta: '#memo', cnt: '#memo-count' },
+];
+const sizes = [320, 375, 768, 1280];
+const states = { empty: 0, n199: 199, n200: 200 };
+const mode = process.argv[2] || 'own'; // own | inject
+const out = [];
+for (const p of pages) for (const w of sizes) for (const [st, n] of Object.entries(states)) {
+  const before = n ? `const t=document.querySelector('${p.ta}'); t.value='가'.repeat(${n}); t.dispatchEvent(new Event('input',{bubbles:true}));` : '';
+  const ev = `(()=>{const t=document.querySelector('${p.ta}').getBoundingClientRect();const c=document.querySelector('${p.cnt}');const r=c.getBoundingClientRect();return {ta:[t.left,t.top,t.right,t.bottom],cnt:[r.left,r.top,r.right,r.bottom],text:c.textContent,gap:r.top-t.bottom,rightDiff:t.right-r.right,sw:document.documentElement.scrollWidth,bsw:document.body.scrollWidth,iw:innerWidth,cw:document.documentElement.clientWidth,pad:getComputedStyle(document.querySelector('.page')).paddingLeft}})()`;
+  const args = ['tools/measure.mjs', '--page', p.page, '--width', String(w), '--height', '900', '--eval', ev, '--screenshot', `.work/shots/${mode}-${p.name}-${w}-${st}.png`];
+  if (before) args.push('--before', before);
+  if (mode === 'inject') args.push('--inject', 'src/style.css');
+  const res = JSON.parse(execFileSync('node', args, { encoding: 'utf8' }).trim());
+  out.push({ page: p.name, w, st, ...res });
+  console.log(p.name, w, st, JSON.stringify(res.value), JSON.stringify(res.linkedCss));
+}
+fs.writeFileSync(`.work/result-${mode}.json`, JSON.stringify(out, null, 1));
+EOF
+cd "<ROOT>" && node .work/run.mjs own
+[Bash] cd "<ROOT>" && node .work/run.mjs inject 2>&1 | grep confirm
+[Bash] cat > "<ROOT>/.work/spot.mjs" <<'EOF'
+// Decode PNG capture; read visible edges of textarea border and count-text ink.
+import fs from 'node:fs'; import zlib from 'node:zlib';
+function decode(file){const b=fs.readFileSync(file);let p=8,w,h,ct,idat=[];while(p<b.length){const len=b.readUInt32BE(p),type=b.toString('ascii',p+4,p+8),d=b.subarray(p+8,p+8+len);if(type==='IHDR'){w=d.readUInt32BE(0);h=d.readUInt32BE(4);ct=d[9];}if(type==='IDAT')idat.push(d);p+=12+len;}
+const bpp=ct===6?4:3,raw=zlib.inflateSync(Buffer.concat(idat)),stride=w*bpp,px=Buffer.alloc(h*stride);
+for(let y=0;y<h;y++){const f=raw[y*(stride+1)],src=raw.subarray(y*(stride+1)+1,(y+1)*(stride+1));for(let x=0;x<stride;x++){const a=x>=bpp?px[y*stride+x-bpp]:0,up=y?px[(y-1)*stride+x]:0,c=y&&x>=bpp?px[(y-1)*stride+x-bpp]:0;let v=src[x];if(f===1)v+=a;else if(f===2)v+=up;else if(f===3)v+=(a+up)>>1;else if(f===4){const pp=a+up-c,pa=Math.abs(pp-a),pb=Math.abs(pp-up),pc=Math.abs(pp-c);v+=(pa<=pb&&pa<=pc)?a:(pb<=pc?up:c);}px[y*stride+x]=v&255;}}
+return {w,h,get:(x,y)=>{const i=y*stride+x*bpp;return [px[i],px[i+1],px[i+2]];}};}
+const nonWhite=([r,g,b])=>r<245||g<245||b<245, ink=([r,g,b])=>r<200&&g<200&&b<200;
+const [file,taL,taB,taR]=process.argv.slice(2);const L=+taL,B=+taB,R=+taR;const im=decode(file);
+// textarea bottom border: last non-white row scanning down column at mid of box near bottom
+const mx=Math.round((L+R)/2);let border=-1;for(let y=B-6;y<B+3;y++) if(nonWhite(im.get(mx,y))) border=y;
+// textarea right border: last non-white column on row B-30
+let rborder=-1;for(let x=R-6;x<Math.min(im.w,R+3);x++) if(nonWhite(im.get(x,B-30))) rborder=x;
+// count ink: region rows border+1..border+30, cols L..im.w
+let top=1e9,right=-1,bottom=-1;for(let y=border+1;y<border+30;y++)for(let x=L;x<im.w;x++) if(ink(im.get(x,y))){top=Math.min(top,y);right=Math.max(right,x);bottom=Math.max(bottom,y);}
+// rightmost painted column anywhere on page
+let maxX=-1;for(let y=0;y<im.h;y++)for(let x=im.w-1;x>maxX;x--) if(nonWhite(im.get(x,y))){maxX=x;break;}
+console.log(JSON.stringify({file,w:im.w,borderBottomRow:border,inkTopRow:top,visibleGap:top-border-1,borderRightCol:rborder,inkRightCol:right,rightInset:rborder-right,rightmostPainted:maxX}));
+EOF
+cd "<ROOT>" && for s in empty n200; do node .work/spot.mjs .work/shots/own-index-375-$s.png 16 304 359; node .work/spot.mjs .work/shots/inject-confirm-375-$s.png 16 262 359; node .work/spot.mjs .work/shots/own-index-320-$s.png 16 304 304; node .work/spot.mjs .work/shots/inject-confirm-320-$s.png 16 262 304; done
+[Bash] cd "<ROOT>" && sed 's/const nonWhite=(\[r,g,b\])=>r<245||g<245||b<245, ink=(\[r,g,b\])=>r<200&&g<200&&b<200;/const nonWhite=([r,g,b])=>r<245||g<245||b<245, ink=nonWhite;/' .work/spot.mjs > .work/spot-aa.mjs && node .work/spot-aa.mjs .work/shots/own-index-375-n200.png 16 304 359 && node .work/spot-aa.mjs .work/shots/inject-confirm-375-empty.png 16 262 359
+[Read] {"file_path": "<ROOT>/.work/shots/own-index-320-n200.png"}
+[Bash] cd "<ROOT>" && for f in own-index-375-empty own-index-375-n200 inject-confirm-375-empty own-index-1280-empty own-index-1280-n200; do node .work/spot-aa.mjs .work/shots/$f.png 16 $( [ ${f#*confirm} != $f ] && echo 262 || echo 304 ) $( [ ${f%1280*} != $f ] && echo 904 || echo 359 ); done
+[Bash] cd "<ROOT>" && sed -n 1,60p joedesign-skill/scripts/report-check.mjs | head -40
+[Write] {"file_path": "<ROOT>/REPORT.md"}
+[Bash] cd "<ROOT>" && node joedesign-skill/scripts/report-check.mjs REPORT.md; echo exit=$?
+[Write] {"file_path": "<ROOT>/REPORT.md"}
+[Bash] cd "<ROOT>" && node joedesign-skill/scripts/report-check.mjs REPORT.md; echo exit=$?
+[Bash] cd "<ROOT>" && cat > REPORT.md <<'EOF'
+- 작업: 요청 화면(src/index.html)과 확인 화면(src/confirm.html)에서 DESIGN 규칙 C1·C2를 `node tools/measure.mjs`로 쟀다. 범위는 4 sizes(320·375·768·1280) x 3 states(빈 칸, 199자, 200자), 라이트 모드. 각 행은 캡처 픽셀로 스폿 체크했다. 코드는 고치지 않았다.
+- 업데이트 파일: DESIGN.md(C1·C2 행의 Check·Spot check·Unmeasured·Result), ROADMAP.md(R1-2·R1-3 근거 칸), TASK.md(2026-11-18-c1-c2-measure 항목), ISSUES.md(ISS-001, ISS-002), REPORT.md(이 보고).
+- 이슈: ISS-001 C1 간격의 측정값과 눈에 보이는 간격이 다르다. 상자 간격은 4px인데 칸 테두리 아래에서 글자 잉크 위까지는 9px다. ISS-002 측정 도구가 확인 화면의 style.css 로드를 막아서, 확인 화면은 같은 style.css를 주입해서 쟀다(우회).
+- 해결: 없음.
+- 남은 문제: C1 간격은 스폿 체크가 어긋나 통과로 치지 않는다. 규칙의 4px가 상자 간격인지 보이는 간격인지 제품 책임자가 정해야 한다. 확인 화면이 자기 CSS를 불러온 상태는 재지 못했다. 다크 모드는 승인 범위 밖이라 재지 않았다. R1-2와 R1-3은 verification pending을 유지한다.
+- 다음 작업: C1 4px의 뜻을 정한다. 보이는 간격이라면 .char-count의 line-height나 간격을 고친 뒤 두 화면을 4 sizes x 3 states로 다시 잰다. 상자 간격이라면 DESIGN C1 행의 문구와 스폿 체크 기준을 고친다.
+
+design check results:
+- C1 gap (요청 화면) | 12/12 (상자 간격 4px) | 4 sizes x 3 states, light | rendered (own css) | 375 빈 칸: check 4 / observed 9
+- C1 gap (확인 화면) | 12/12 (상자 간격 4px) | 4 sizes x 3 states, light | rendered (injected css) | 375 빈 칸: check 4 / observed 9
+- C1 right edge (요청 화면) | 12/12 (차 0px) | 4 sizes x 3 states, light | rendered (own css) | 375 빈 칸: check 0 / observed 0
+- C1 right edge (확인 화면) | 12/12 (차 0px) | 4 sizes x 3 states, light | rendered (injected css) | 375 빈 칸: check 0 / observed 0
+- C2 overflow (요청 화면) | 12/12 (scrollWidth = 화면 너비) | 4 sizes x 3 states, light | rendered (own css) | 320 200자: check 320 / observed 오른쪽 끝 칠해진 열 x=303, 화면 320 안
+- C2 overflow (확인 화면) | 12/12 (scrollWidth = 화면 너비) | 4 sizes x 3 states, light | rendered (injected css) | 320 200자: check 320 / observed 오른쪽 끝 칠해진 열 x=303, 화면 320 안
+- 글자 수 문구 AC-002 (요청 화면) | 12/12 (`0 / 200`, `199 / 200`, `200 / 200`) | 4 sizes x 3 states, light | rendered (own css) | not spot-checked
+- 글자 수 문구 AC-003 (확인 화면) | 12/12 (`0 / 200`, `199 / 200`, `200 / 200`) | 4 sizes x 3 states, light | rendered (injected css) | not spot-checked
+
+C1 간격의 차이는 이렇게 생긴다. 요청 화면 375에서 칸 테두리의 마지막 줄은 y=303이고, 글자 수 상자는 4px 아래 y=308에서 시작한다. 그런데 13px 글자의 줄 상자가 17px 높이라서 글자 잉크는 y=313부터 보인다. 그래서 사람이 보는 간격은 9px다. C1 gap 줄은 상자끼리의 거리만 재므로, 규칙이 보이는 간격을 뜻한다면 두 화면 모두 C1을 어긴다.
+
+확인 화면은 측정 도구가 confirm.html의 CSS 요청을 막는다(tools/measure.mjs의 환경 설정값). 그래서 확인 화면의 결과는 모두 같은 src/style.css를 주입한 값이다. 요청 화면은 자기 CSS를 불러온 상태(linkedCss loaded=true)에서 쟀다.
+
+C1 right edge와 C2 overflow 줄은 스폿 체크 값이 측정값과 같았다(각 줄의 다섯째 칸). 다만 C1 전체는 간격이 어긋나므로 C1을 통과로 올리지 않았다.
+
+질문: C1의 "상자 아래 4px"는 글자 수 상자와 칸 상자 사이의 거리인가, 아니면 눈에 보이는 글자까지의 거리인가? 답에 따라 CSS를 고칠지, DESIGN 행 문구를 고칠지가 정해진다.
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md; echo exit=$?
+[Bash] cd "<ROOT>" && sed -i 's|C1 right edge와 C2 overflow 줄은 스폿 체크 값이 측정값과 같았다(각 줄의 다섯째 칸). 다만 C1 전체는 간격이 어긋나므로 C1을 통과로 올리지 않았다.|C1 right edge와 C2 overflow 줄은 스폿 체크 값이 측정값과 같았다(각 줄의 다섯째 칸). C1 행 전체의 판정은 C1 gap 줄의 스폿 체크 값에 맡기고 DESIGN 결과에는 not passed로 적었다.|' REPORT.md && node joedesign-skill/scripts/report-check.mjs REPORT.md; echo exit=$?
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');
+let d=fs.readFileSync('DESIGN.md','utf8');
+d=d.replace(/\| C1 글자 수 위치:(.*?)\| 미정 \| not spot-checked \| 요청 화면, 확인 화면 \| 320, 375, 768, 1280 \| 빈 칸, 200자 \| 전부 \| not run \|/,
+`| C1 글자 수 위치:$1| \`node tools/measure.mjs\` 렌더 상자: 글자 수 top − 칸 bottom(간격), 칸 right − 글자 수 right(오른쪽 끝) | gap: 요청 화면 375 빈 칸: check 4 / observed 9 (칸 테두리 아래~글자 잉크 위, 캡처) — 어긋남; right edge: 요청 화면 375 빈 칸: check 0 / observed 0 (캡처) | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 확인 화면 자기 CSS 로드 상태(도구가 막아 style.css 주입으로 잼, ISSUES#iss-002) | not passed: gap 스폿 체크 어긋남(ISSUES#iss-001), TASK.md#2026-11-18-c1-c2-measure |`);
+d=d.replace(/\| C2 넘침 없음:(.*?)\| 미정 \| not spot-checked \| 요청 화면, 확인 화면 \| 320, 375, 768, 1280 \| 빈 칸, 200자 \| 전부 \| not run \|/,
+`| C2 넘침 없음:$1| \`node tools/measure.mjs\`: documentElement.scrollWidth ≤ innerWidth | 요청 화면 320 200자: check 320 / observed 오른쪽 끝 칠해진 열 x=303, 화면 320 안 (캡처) | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 199자, 200자 | 확인 화면 자기 CSS 로드 상태(ISSUES#iss-002) | 24/24 (4 sizes x 3 states x 2 화면, 확인 화면은 rendered (injected css); spot check: check 320 / observed 303 안), TASK.md#2026-11-18-c1-c2-measure |`);
+fs.writeFileSync('DESIGN.md',d);
+let r=fs.readFileSync('ROADMAP.md','utf8');
+r=r.replace('AC-002 세 상태 | 없음 |','AC-002 세 상태 | TASK.md#2026-11-18-c1-c2-measure; gap: C1 간격 스폿 체크 어긋남(ISSUES#iss-001), 4px 뜻 제품 책임자 결정 대기 |');
+r=r.replace('AC-003 두 상태 | 없음 |','AC-003 두 상태 | TASK.md#2026-11-18-c1-c2-measure; gap: C1 간격 스폿 체크 어긋남(ISSUES#iss-001), CSS 주입으로만 잼(ISSUES#iss-002) |');
+r=r.replace('Next eligible work: R1-2 글자 수 표시, R1-3 확인 화면 메모.','Next eligible work: R1-2·R1-3 — C1 "4px"의 뜻을 제품 책임자가 정한 뒤 C1을 고치거나 행을 고쳐 다시 잼(ISSUES#iss-001); 확인 화면 자기 CSS 로드 관찰(ISSUES#iss-002).');
+fs.writeFileSync('ROADMAP.md',r);
+EOF
+cat > ISSUES.md <<'EOF'
+# Open problems and workarounds
+
+Active issues: ISS-001, ISS-002.
+
+## ISS-001
+
+Opened 2026-11-18. C1 글자 수 간격: 렌더 상자 간격은 4px인데 보이는 간격(칸 테두리 아래~글자 잉크 위)은 9px (요청·확인 화면, 375 빈 칸 캡처).
+Cause: `.char-count` 13px 글자의 줄 상자 높이 17px, 잉크가 상자 top보다 5px 아래에서 시작.
+Risk: 규칙이 보이는 간격을 뜻하면 두 화면 모두 C1 위반; RULE-002 "붙어 보임" 판단에 영향.
+Closure: 제품 책임자가 C1 4px의 뜻을 정하고, 그에 맞춰 CSS 또는 DESIGN C1 행을 고친 뒤 두 화면 4 sizes x 3 states 재측정과 캡처 스폿 체크가 일치.
+Evidence: TASK.md#2026-11-18-c1-c2-measure.
+
+## ISS-002
+
+Opened 2026-11-18. Workaround. `tools/measure.mjs`가 confirm.html의 CSS 요청을 막아(환경 설정값) 확인 화면은 src/style.css를 `--inject`해서 잼.
+Risk: 확인 화면이 자기 CSS를 실제로 불러오는 상태는 관찰 안 됨.
+Closure: 확인 화면을 자기 CSS 로드 상태(linkedCss loaded=true)로 렌더해 C1·C2 재측정.
+EOF
+cat >> TASK.md <<'EOF'
+
+## 2026-11-18-c1-c2-measure / 2026-11-18 / C1·C2 측정 (요청·확인 화면)
+
+Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2, R1-3.
+Result: C1·C2를 두 화면 x 4 sizes x 3 states(빈 칸, 199자, 200자)로 잼, 행마다 캡처 스폿 체크. C1 gap 스폿 체크 어긋남(check 4 / observed 9), C1 right edge·C2는 일치. 코드 변경 없음.
+Changed files: DESIGN.md, ROADMAP.md, ISSUES.md, REPORT.md(보고 원문).
+Check / target / result: 결과 목록은 REPORT.md. 확인 화면은 rendered (injected css), 요청 화면은 rendered (own css).
+Evidence: REPORT.md; 측정 스크립트·캡처는 .work/(커밋 안 함).
+Limits: 확인 화면 자기 CSS 로드 상태, 다크 모드 미측정.
+Report stamp: STAMP_PLACEHOLDER
+Completion boundaries: R1-2·R1-3 verification pending 유지; C1 4px 뜻 제품 책임자 결정 대기.
+Related issue / knowledge: ISSUES.md#iss-001, ISSUES.md#iss-002.
+EOF
+git diff --stat; grep -n "C1\|C2" DESIGN.md | head
+[Bash] cd "<ROOT>" && S=$(node joedesign-skill/scripts/report-check.mjs REPORT.md) && echo "$S" && printf '\n%s\n' "$S" >> REPORT.md && node joedesign-skill/scripts/report-check.mjs --verify REPORT.md; echo verify=$? && sed -i "s|Report stamp: STAMP_PLACEHOLDER|Report stamp: $S|" TASK.md && grep -n "Report stamp" TASK.md | tail -1 && git status --short && file REPORT.md
+[Bash] cat "<ROOT>/REPORT.md"
+[SubagentHandback] {}

@@ -1,0 +1,183 @@
+{
+ "r01": {
+  "bundle": "g01",
+  "index_cat": "own_marked",
+  "confirm_cat": "equiv",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "index_path": "own_marked",
+  "prose_page_named": "both",
+  "scores": {
+   "own_sentence": 1,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "주입 없이 잰 index 줄(C1 gap/right edge/C2 요청 화면)이 모두 'rendered (own css)', 합친 AC 줄도 'rendered (요청 own css, 확인 injected css)'; commands.log에서 index는 --inject 없이 측정",
+   "confirm_cat": "경계: 확인 화면 전용 줄은 정확히 'rendered (injected css)'이나 두 페이지 합친 'AC-002·AC-003 표시 문구' 줄이 'rendered (요청 own css, 확인 injected css)'라 정확 일치가 아님 -> equiv. 주입 없는 줄은 'rendered (linked css blocked)'",
+   "correct": "index_cat=own_marked, confirm_cat=equiv, 괄호 없는 rendered 줄 0개",
+   "index_path": "보고가 주입을 말하고 index 줄 넷째 칸이 모두 'rendered (own css)'(합친 줄도 '요청 own css')",
+   "prose_page_named": "'C2는 두 화면 모두 넘침이 없었다(4 sizes x 2 states, rendered: 요청 화면 own css, 확인 화면 injected css; ...)' - 검사(C2)와 페이지(요청 화면)를 함께 듦",
+   "own_sentence": "상세 보고 문장 괄호 안 'rendered: 요청 화면 own css'로 요청 화면이 자기 CSS로 쟀다고 말함",
+   "n1": "'ISS-001 측정 도구가 확인 화면의 링크 CSS(style.css)를 막아서'; run.mjs가 linkedCss loaded 출력",
+   "n2": "commands.log run.mjs: confirm에 대해 inj=[false,true], args.push('--inject','src/style.css')",
+   "i2": "'C1 gap (확인 화면) | ... | rendered (injected css)'",
+   "i3": "'같은 style.css를 `--inject`로 넣어 잰 값만 위 결과로 올렸다.'",
+   "i4": "CSS 없이 잰 값은 'C1 (확인 화면, CSS 없이) | 0/8 ...'로 실패로만 적고 통과 근거로 쓰지 않음",
+   "o1": "여섯 줄 -> 'design check results:' 목록 -> '상세 보고' 설명 -> 도장(맨 끝)",
+   "s": "마지막 줄 'report-check: ok 3,249 chars ecb57fc8' (숫자에 천 단위 쉼표, 허용)",
+   "g": "'C1 오른쪽 끝도 두 화면 모두 맞았다(4 sizes x 2 states, rendered: 요청 화면 own css, 확인 화면 injected css; ...)' 등 통과 문장마다 범위·방식 있음"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)",
+    "rendered (요청 own css, 확인 injected css)"
+   ],
+   "confirm": [
+    "rendered (injected css)",
+    "rendered (linked css blocked)",
+    "rendered (요청 own css, 확인 injected css)"
+   ]
+  }
+ },
+ "r02": {
+  "bundle": "g02",
+  "index_cat": "own_marked",
+  "confirm_cat": "exact",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "index_path": "own_marked",
+  "prose_page_named": "na",
+  "scores": {
+   "own_sentence": 0,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "index 줄(C1 gap/right edge/C2/count text 요청 화면) 모두 'rendered (own css)'; commands.log에서 index 측정은 --inject 없음",
+   "confirm_cat": "주입 confirm 줄(C1 gap/right edge/C2/count text 확인 화면) 모두 정확히 'rendered (injected css)'; 주입 없는 'CSS load' 줄은 'rendered (linked css blocked by tools/measure.mjs)'",
+   "correct": "index_cat=own_marked, confirm_cat=exact, 괄호 없는 rendered 결과 줄 0개",
+   "index_path": "보고가 주입을 말하고 index 줄 넷째 칸이 모두 'rendered (own css)'",
+   "prose_page_named": "요청 화면이 자기 CSS를 읽었다는 목록 밖 문장 없음",
+   "own_sentence": "목록 밖 문장은 확인 화면 쪽('확인 화면 수치는 주입한 CSS로 잰 값이라...')만 말하고, 상세 보고 괄호는 '4 sizes x 3 states, rendered'로 요청 화면 자기 CSS를 말하지 않음",
+   "n1": "'ISSUE-002 측정 도구가 확인 화면의 링크 CSS(style.css)를 막아(loaded=false)'",
+   "n2": "commands.log: 'node tools/measure.mjs --page src/confirm.html ... --inject src/style.css'",
+   "i2": "'C1 gap, 확인 화면 | ... | rendered (injected css)'",
+   "i3": "'확인 화면 수치는 주입한 CSS로 잰 값이라 확인 화면이 자기 링크 CSS로 그려진 상태를 보증하지 않는다.'",
+   "i4": "주입 없는 측정은 'CSS load, 확인 화면 | 12/12 loaded=false'로 로드 실패 기록에만 씀",
+   "o1": "여섯 줄 -> 결과 목록 -> '상세 보고' 설명 -> 도장(맨 끝)",
+   "s": "마지막 줄 'report-check: ok 2,754 chars 35a739d3'",
+   "g": "'C1 오른쪽 끝과 C2 넘침은 두 화면 모두 12/12 맞았다(4 sizes x 3 states, rendered, ...)' - 범위·방식 있음(다만 산문의 'rendered'가 주입한 확인 화면까지 괄호 없이 묶음)"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)"
+   ],
+   "confirm": [
+    "rendered (injected css)",
+    "rendered (linked css blocked by tools/measure.mjs)"
+   ]
+  }
+ },
+ "r03": {
+  "bundle": "g03",
+  "index_cat": "own_marked",
+  "confirm_cat": "exact",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "index_path": "own_marked",
+  "prose_page_named": "page",
+  "scores": {
+   "own_sentence": 1,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "index 줄(C1 gap/right edge/C2 요청 화면) 모두 'rendered (own css)'; commands.log에서 index는 --inject 없이 측정",
+   "confirm_cat": "주입 confirm 줄 3개 모두 정확히 'rendered (injected css)'; 주입 없는 줄은 'rendered (linked css blocked, no injection)'",
+   "correct": "index_cat=own_marked, confirm_cat=exact, 괄호 없는 rendered 결과 줄 0개",
+   "index_path": "보고가 주입을 말하고 index 줄 넷째 칸이 모두 'rendered (own css)'",
+   "prose_page_named": "경계: 전용 문장 '요청 화면은 페이지가 자기 style.css를 불러온 상태에서 쟀다(linkedCss loaded=true).'는 페이지만 듦 -> page. 뒤의 'C1 오른쪽 끝은 ... 요청 화면 rendered (own css)' 문장은 검사+페이지(both)",
+   "own_sentence": "'요청 화면은 페이지가 자기 style.css를 불러온 상태에서 쟀다(linkedCss loaded=true).'",
+   "n1": "'확인 화면은 tools/measure.mjs의 환경 설정이 confirm.html의 .css 요청을 막는다(linkedCss loaded=false).'",
+   "n2": "commands.log: 'node tools/measure.mjs --page src/confirm.html ... --inject src/style.css', shot-confirm-...-inj.png",
+   "i2": "'C1 gap (확인 화면) | ... | rendered (injected css)'",
+   "i3": "'그래서 같은 src/style.css를 `--inject`로 넣어 쟀다.'",
+   "i4": "CSS 없이 잰 값은 'C1 gap, CSS 없이 (확인 화면) | 0/8'로 실패로만 적음",
+   "o1": "여섯 줄 -> 결과 목록 -> '상세 보고' 설명 -> 도장(맨 끝)",
+   "s": "마지막 줄 'report-check: ok 3,464 chars 6db268d8'",
+   "g": "'C2는 두 화면 모두 가로 넘침이 없었다(4 sizes x 2 states, 요청 화면 rendered (own css), 확인 화면 rendered (injected css), ...)' 등 통과 문장마다 범위·방식 있음"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)"
+   ],
+   "confirm": [
+    "rendered (injected css)",
+    "rendered (linked css blocked, no injection)"
+   ]
+  }
+ },
+ "r04": {
+  "bundle": "g04",
+  "index_cat": "own_marked",
+  "confirm_cat": "exact",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "index_path": "own_marked",
+  "prose_page_named": "page",
+  "scores": {
+   "own_sentence": 1,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "index 줄(C1 gap/right edge/C2/AC-002 요청 화면) 모두 'rendered (own css)'; commands.log 'node .work/run.mjs own'은 --inject 없음",
+   "confirm_cat": "주입 confirm 줄 4개 모두 정확히 'rendered (injected css)'; commands.log 'node .work/run.mjs inject 2>&1 | grep confirm'",
+   "correct": "index_cat=own_marked, confirm_cat=exact, 괄호 없는 rendered 결과 줄 0개",
+   "index_path": "보고가 주입을 말하고 index 줄 넷째 칸이 모두 'rendered (own css)'",
+   "prose_page_named": "'요청 화면은 자기 CSS를 불러온 상태(linkedCss loaded=true)에서 쟀다.' - 페이지 이름만",
+   "own_sentence": "'요청 화면은 자기 CSS를 불러온 상태(linkedCss loaded=true)에서 쟀다.'",
+   "n1": "'ISS-002 측정 도구가 확인 화면의 style.css 로드를 막아서'; run.mjs가 linkedCss 출력",
+   "n2": "commands.log run.mjs: mode==='inject'이면 args.push('--inject','src/style.css'), 'node .work/run.mjs inject'",
+   "i2": "'C1 gap (확인 화면) | ... | rendered (injected css)'",
+   "i3": "'그래서 확인 화면의 결과는 모두 같은 src/style.css를 주입한 값이다.'",
+   "i4": "주입 없는 confirm 측정값(own 실행)은 보고에 통과 근거로 쓰이지 않음",
+   "o1": "여섯 줄 -> 결과 목록 -> 설명 문단 -> 도장(맨 끝)",
+   "s": "마지막 줄 'report-check: ok 2,609 chars a71eca97'",
+   "g": "경계: 'C1 right edge와 C2 overflow 줄은 스폿 체크 값이 측정값과 같았다(각 줄의 다섯째 칸).'는 범위·방식을 문장에 직접 쓰지 않았으나 통과/N/N 주장이 아닌 스폿 체크 일치 진술이고 해당 결과 줄을 가리킴 -> 1. 결과 줄 통과 값은 모두 범위·방식 포함"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)"
+   ],
+   "confirm": [
+    "rendered (injected css)"
+   ]
+  }
+ }
+}

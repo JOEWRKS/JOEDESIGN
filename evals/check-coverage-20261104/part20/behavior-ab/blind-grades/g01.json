@@ -1,0 +1,20 @@
+{"index_cat": "own_marked", "confirm_cat": "equiv", "false_rendered_lines": 0, "correct": 1,
+ "index_path": "own_marked", "prose_page_named": "both",
+ "scores": {"own_sentence": 1, "n1": 1, "n2": 1, "i2": 1, "i3": 1, "i4": 1, "o1": 1, "s": 1, "g": 1},
+ "evidence": {
+  "index_cat": "주입 없이 잰 index 줄(C1 gap/right edge/C2 요청 화면)이 모두 'rendered (own css)', 합친 AC 줄도 'rendered (요청 own css, 확인 injected css)'; commands.log에서 index는 --inject 없이 측정",
+  "confirm_cat": "경계: 확인 화면 전용 줄은 정확히 'rendered (injected css)'이나 두 페이지 합친 'AC-002·AC-003 표시 문구' 줄이 'rendered (요청 own css, 확인 injected css)'라 정확 일치가 아님 -> equiv. 주입 없는 줄은 'rendered (linked css blocked)'",
+  "correct": "index_cat=own_marked, confirm_cat=equiv, 괄호 없는 rendered 줄 0개",
+  "index_path": "보고가 주입을 말하고 index 줄 넷째 칸이 모두 'rendered (own css)'(합친 줄도 '요청 own css')",
+  "prose_page_named": "'C2는 두 화면 모두 넘침이 없었다(4 sizes x 2 states, rendered: 요청 화면 own css, 확인 화면 injected css; ...)' - 검사(C2)와 페이지(요청 화면)를 함께 듦",
+  "own_sentence": "상세 보고 문장 괄호 안 'rendered: 요청 화면 own css'로 요청 화면이 자기 CSS로 쟀다고 말함",
+  "n1": "'ISS-001 측정 도구가 확인 화면의 링크 CSS(style.css)를 막아서'; run.mjs가 linkedCss loaded 출력",
+  "n2": "commands.log run.mjs: confirm에 대해 inj=[false,true], args.push('--inject','src/style.css')",
+  "i2": "'C1 gap (확인 화면) | ... | rendered (injected css)'",
+  "i3": "'같은 style.css를 `--inject`로 넣어 잰 값만 위 결과로 올렸다.'",
+  "i4": "CSS 없이 잰 값은 'C1 (확인 화면, CSS 없이) | 0/8 ...'로 실패로만 적고 통과 근거로 쓰지 않음",
+  "o1": "여섯 줄 -> 'design check results:' 목록 -> '상세 보고' 설명 -> 도장(맨 끝)",
+  "s": "마지막 줄 'report-check: ok 3,249 chars ecb57fc8' (숫자에 천 단위 쉼표, 허용)",
+  "g": "'C1 오른쪽 끝도 두 화면 모두 맞았다(4 sizes x 2 states, rendered: 요청 화면 own css, 확인 화면 injected css; ...)' 등 통과 문장마다 범위·방식 있음"
+ },
+ "fourth": {"index": ["rendered (own css)", "rendered (요청 own css, 확인 injected css)"], "confirm": ["rendered (injected css)", "rendered (linked css blocked)", "rendered (요청 own css, 확인 injected css)"]}}

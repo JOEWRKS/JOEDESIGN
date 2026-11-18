@@ -1,0 +1,3 @@
+# v1.3.3 plain check
+report-check: ok 2,609 chars a71eca97
+exit=0

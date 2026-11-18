@@ -1,0 +1,1 @@
+Read: ~\.claude\projects\<session-project>\tool-results\bb21jrdrb.txt

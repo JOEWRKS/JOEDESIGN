@@ -1,0 +1,6 @@
+# 1.3.4 --verify (stamped)
+stamp: match (3,464 chars 6db268d8); text ok
+exit=0
+# 1.3.4 unstamped check
+report-check: ok 3,464 chars 6db268d8
+exit=0

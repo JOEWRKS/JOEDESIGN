@@ -10,7 +10,8 @@ OLD = SCR / "v133/report-check.mjs"  # v1.3.3, control script applied to the sam
 STAMP = re.compile(r"^report-check: ok [\d,]+ chars [0-9a-f]{8}\s*$")
 _s = re.escape(SCR.as_posix()).replace("/", r"[\\/]+")
 _g = re.escape("/" + SCR.as_posix()[0].lower() + SCR.as_posix()[2:])
-MASKS = [(re.compile(_s + r"[\\/]+runs[\\/]+r0\d[\\/]+project", re.I), "<ROOT>"),
+MASKS = [(re.compile(r"D--JOEWRKS--claude-worktrees--data-[\w-]+?[\\/]+[0-9a-f-]{36}", re.I), "<session-project>"),
+         (re.compile(_s + r"[\\/]+runs[\\/]+r0\d[\\/]+project", re.I), "<ROOT>"),
          (re.compile(_g + r"/runs/r0\d/project", re.I), "<ROOT>"),
          (re.compile(_s, re.I), "<SCRATCH>"), (re.compile(_g, re.I), "<SCRATCH>"),
          (re.compile(r"[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s\"']+", re.I), "~"), (re.compile(r"/c/Users/[^/\s\"']+", re.I), "~")]
