@@ -11,6 +11,7 @@
 - 확인된 것([part19/report.md](evals/check-coverage-20261104/part19/report.md)): 18부 실물 반사실 A(괄호만 지움) R7 3/4 보고 → 0/4. 274개 보고 R1~R6 수·R7 결과 1.3.3과 동일, 18·16·14·15부 보고 86건 R7 동일, 18부 도장 `--verify` 4/4.
   node 44/44(report-check 27 → 30), python 142 OK.
 - 확인되지 않은 것: 행동 효과(실행 0회). 페이지 이름 추출은 검사 칸 형식(괄호·쉼표)에 기댐.
+- 행동 시험(2026-11-18, [part20/behavior-ab/report.md](evals/check-coverage-20261104/part20/behavior-ab/report.md), 실행 4 + 채점 1): 장면 M-L(18부 장면 M + TASK.md에 괄호 없는 `rendered` 예전 보고)에서 올바른 보고 4/4, 1.3.4 R7 오탐 0/4, 거짓 `rendered` 0, `--verify` 4/4(사전 기준 통과). 그러나 4/4가 `rendered (own css)`를 써서 문장 허용 경로는 행동으로 여전히 시험되지 않음(sentence 0/4); 같은 보고에 v1.3.3도 R7 0/4.
 
 ## 1.3.3 — R7 탐지 범위 확장: 줄마다 판정, `--inject` 문장 (2026-11-18, T043)
 
