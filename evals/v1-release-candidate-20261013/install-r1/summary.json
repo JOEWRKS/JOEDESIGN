@@ -1,21 +1,21 @@
 {
-  "isolation": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x",
-  "distribution": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\distribution",
+  "isolation": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x",
+  "distribution": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\distribution",
   "installed_packages": [
-    "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-fresh\\codex\\skills\\joedesign",
-    "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign",
-    "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign",
-    "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-default-home\\profile\\.codex\\skills\\joedesign"
+    "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-fresh\\codex\\skills\\joedesign",
+    "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign",
+    "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign",
+    "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-default-home\\profile\\.codex\\skills\\joedesign"
   ],
   "results": [
     {
       "case": "ps5-fresh",
       "exit": 0,
-      "package": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-fresh\\codex\\skills\\joedesign",
+      "package": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-fresh\\codex\\skills\\joedesign",
       "version": {
         "name": "joedesign",
         "version": "1.0.0",
-        "operating_core": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-fresh\\codex\\skills\\joedesign\\SKILL.md"
+        "operating_core": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-fresh\\codex\\skills\\joedesign\\SKILL.md"
       },
       "exact_files": 30,
       "missing_specialists_blocked": true
@@ -33,11 +33,11 @@
     {
       "case": "ps5-default-home",
       "exit": 0,
-      "package": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign",
+      "package": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign",
       "version": {
         "name": "joedesign",
         "version": "1.0.0",
-        "operating_core": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md"
+        "operating_core": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md"
       },
       "exact_files": 30,
       "missing_specialists_blocked": true
@@ -45,11 +45,11 @@
     {
       "case": "ps7-fresh",
       "exit": 0,
-      "package": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign",
+      "package": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign",
       "version": {
         "name": "joedesign",
         "version": "1.0.0",
-        "operating_core": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\SKILL.md"
+        "operating_core": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\SKILL.md"
       },
       "exact_files": 30,
       "missing_specialists_blocked": true
@@ -67,11 +67,11 @@
     {
       "case": "ps7-default-home",
       "exit": 0,
-      "package": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-default-home\\profile\\.codex\\skills\\joedesign",
+      "package": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-default-home\\profile\\.codex\\skills\\joedesign",
       "version": {
         "name": "joedesign",
         "version": "1.0.0",
-        "operating_core": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md"
+        "operating_core": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md"
       },
       "exact_files": 30,
       "missing_specialists_blocked": true

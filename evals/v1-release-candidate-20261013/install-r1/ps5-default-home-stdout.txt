@@ -1,13 +1,13 @@
 {
   "name": "joedesign",
   "version": "1.0.0",
-  "operating_core": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md"
+  "operating_core": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md"
 }
 {
   "dependencies": {
     "joedesign": {
       "status": "AVAILABLE",
-      "path": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md",
+      "path": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md",
       "sha256": "a519986f66134a4919495ec407fdc96b3cd5ea4c3f117c2a112bb21dee27b7bf"
     },
     "impeccable": {
@@ -42,7 +42,7 @@
     "visual-production.md": true
   },
   "version": "1.0.0",
-  "operating_core": "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md",
+  "operating_core": "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps5-default-home\\profile\\.codex\\skills\\joedesign\\SKILL.md",
   "host_verifier": "UNAVAILABLE",
   "automatic_certification": false,
   "note": "Availability and file identity do not prove skill invocation or behavior."

@@ -7,7 +7,7 @@ installation and records only; the tested source package is unchanged.
 
 ## Exact scope and backup
 
-- Target: `C:/Users/tjdwo/.codex/skills/joedesign`.
+- Target: `~/.codex/skills/joedesign`.
 - Before: version0.3.0-dev, 44 files. Source: version1.0.0, 30 tracked files.
 - Backup: `D:/JOEWRKS/JOEDESIGN/.local/t040-personal-install-20261013/backup`.
   The entire installation was copied with `shutil.copytree` before any write,
@@ -36,8 +36,8 @@ evidence; source code and documentation whitespace checks remain enabled.
 ## Actual installation checks
 
 ```powershell
-python -B C:/Users/tjdwo/.codex/skills/joedesign/scripts/harness_cli.py version
-python -B C:/Users/tjdwo/.codex/skills/joedesign/scripts/harness_cli.py doctor
+python -B ~/.codex/skills/joedesign/scripts/harness_cli.py version
+python -B ~/.codex/skills/joedesign/scripts/harness_cli.py doctor
 ```
 
 Both returned exit0. `version` reported1.0.0 and the installed operating SKILL.md.
