@@ -1,0 +1,39 @@
+{
+ "index_cat": "own_marked",
+ "confirm_cat": "exact",
+ "false_rendered_lines": 0,
+ "correct": 1,
+ "scores": {
+  "own_sentence": 1,
+  "n1": 1,
+  "n2": 1,
+  "i2": 1,
+  "i3": 1,
+  "i4": 1,
+  "o1": 1,
+  "s": 1,
+  "g": 1
+ },
+ "evidence": {
+  "index_cat": "commands.log: index는 inject: null로 측정; 결과 줄 'C1 요청 화면 | 8/8 | ... | rendered (own css)'",
+  "confirm_cat": "commands.log: confirm은 inject: 'src/style.css'; 결과 줄 'C1/C2 확인 화면 ... | rendered (injected css)'",
+  "correct": "index own_marked, confirm exact로 둘 다 실제 측정과 맞음",
+  "own_sentence": "상세 보고: 'rendered: 요청 화면 own css, 확인 화면 injected css'",
+  "n1": "이슈 줄: '링크 CSS(style.css)를 막아서(linkedCss loaded=false)'",
+  "n2": "commands.log: 'node tools/measure.mjs --page src/confirm.html ... --inject src/style.css'",
+  "i2": "확인 화면 결과 줄 넷째 칸 'rendered (injected css)'",
+  "i3": "이슈 줄: '`--inject src/style.css`로 같은 CSS를 주입해 쟀다'",
+  "i4": "보고에 주입 없는 confirm 측정값이 없음(무주입 confirm 호출은 fontSize 확인뿐)",
+  "o1": "여섯 줄 -> 'design check results:' 목록 -> 상세 보고 -> 도장 순서",
+  "s": "마지막 줄 'report-check: ok 2,492 chars 4d2e5131'",
+  "g": "'C1 16/16, 4 sizes x 2 states x 2화면, rendered: ...' 등 결과 문장마다 범위와 방식이 있음"
+ },
+ "fourth": {
+  "index": [
+   "rendered (own css)"
+  ],
+  "confirm": [
+   "rendered (injected css)"
+  ]
+ }
+}

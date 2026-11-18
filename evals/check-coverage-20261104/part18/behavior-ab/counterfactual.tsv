@@ -1,0 +1,9 @@
+run	variant	bare_index_lines	R7	other_findings	R7_lines
+r01	A_cell_only	3	3	0	line 11 [R7] C1 상자 간격·오른쪽 끝, 요청 화면 -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 13 [R7] C2 가로 넘침, 요청 화면 -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 15 [R7] AC-002 글자 수 문구, 요청 화면 -- line 5 says the measurement injected CSS, and this line says only `rendered`
+r01	B_cell_and_prose	3	3	0	line 11 [R7] C1 상자 간격·오른쪽 끝, 요청 화면 -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 13 [R7] C2 가로 넘침, 요청 화면 -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 15 [R7] AC-002 글자 수 문구, 요청 화면 -- line 5 says the measurement injected CSS, and this line says only `rendered`
+r02	A_cell_only	3	0	0	
+r02	B_cell_and_prose	3	0	0	
+r03	A_cell_only	2	0	0	
+r03	B_cell_and_prose	2	2	0	line 9 [R7] C1 요청 화면 -- line 3 says the measurement injected CSS, and this line says only `rendered` / line 11 [R7] C2 요청 화면 -- line 3 says the measurement injected CSS, and this line says only `rendered`
+r04	A_cell_only	4	2	0	line 15 [R7] C2 overflow (요청 화면) -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 17 [R7] AC-002 글자 수 문자열 (요청 화면) -- line 5 says the measurement injected CSS, and this line says only `rendered`
+r04	B_cell_and_prose	4	4	1	line 11 [R7] C1 gap (요청 화면) -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 12 [R7] C1 right edge (요청 화면) -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 15 [R7] C2 overflow (요청 화면) -- line 5 says the measurement injected CSS, and this line says only `rendered` / line 17 [R7] AC-002 글자 수 문자열 (요청 화면) -- line 5 says the measurement injected CSS, and this line says only `rendered`

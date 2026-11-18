@@ -1,0 +1,6 @@
+# 1.3.3 --verify
+stamp: match (2,849 chars 249a2ef9); text ok
+exit=0
+# 1.3.3 unstamped check
+report-check: ok 2,849 chars 249a2ef9
+exit=0

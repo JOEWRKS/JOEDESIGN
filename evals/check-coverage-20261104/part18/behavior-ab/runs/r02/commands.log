@@ -1,0 +1,111 @@
+[Bash] cd "<ROOT>" && cat AGENTS.md && ls -la && ls -R src tools joedesign-skill | head -80 && git status && git log --oneline | head
+[Bash] cd "<ROOT>" && for f in DESIGN.md ISSUES.md PRODUCT.md ROADMAP.md TASK.md tools/README.md joedesign-skill/SKILL.md; do echo "=== $f"; cat "$f"; done
+[Bash] cd "<ROOT>" && cat joedesign-skill/templates/DESIGN.md; echo ======; cat joedesign-skill/references/conformance.md; echo =====; cat src/index.html src/confirm.html src/style.css; echo ====; cat tools/measure.mjs
+[Bash] cd "<ROOT>" && mkdir -p .work && cat .gitignore 2>/dev/null; cat > .work/run.mjs <<'EOF'
+import { execFileSync } from 'node:child_process';
+const pages = [['src/index.html','body','body-count'],['src/confirm.html','memo','memo-count']];
+const sizes = [320,375,768,1280]; const states = {empty:0, full:200};
+const out = [];
+for (const [page, ta, cc] of pages) for (const w of sizes) for (const [st,n] of Object.entries(states)) {
+  const before = `const t=document.getElementById('${ta}');t.value='가'.repeat(${n});t.dispatchEvent(new Event('input',{bubbles:true}));`;
+  const ev = `(()=>{const t=document.getElementById('${ta}').getBoundingClientRect();const c=document.getElementById('${cc}').getBoundingClientRect();return {gap:+(c.top-t.bottom).toFixed(2),rightDiff:+(c.right-t.right).toFixed(2),text:document.getElementById('${cc}').textContent,sw:document.documentElement.scrollWidth,cw:document.documentElement.clientWidth,iw:innerWidth,taB:t.bottom,taR:t.right,ccT:c.top,ccR:c.right,ccH:c.height};})()`;
+  const args = ['tools/measure.mjs','--page',page,'--width',String(w),'--height','800','--before',before,'--eval',ev];
+  const mode = process.argv[2]||'own';
+  if (mode==='inject' && page.includes('confirm')) args.push('--inject','src/style.css');
+  if (process.argv[3]) args.push('--screenshot', `.work/${page.split('/')[1].replace('.html','')}-${w}-${st}-${mode}.png`);
+  const r = JSON.parse(execFileSync('node', args, {encoding:'utf8'}));
+  out.push({page,w,st,...r.value,linked:r.linkedCss.map(l=>l.loaded).join(),inj:r.injected});
+}
+for (const o of out) console.log(JSON.stringify(o));
+EOF
+node .work/run.mjs own shot; echo ---; node .work/run.mjs inject shot | grep confirm
+[Bash] cd "<ROOT>" && cat > .work/ink.mjs <<'EOF'
+import fs from 'node:fs'; import zlib from 'node:zlib';
+function decode(f){const b=fs.readFileSync(f);let p=8,w,h,ct,idat=[];while(p<b.length){const len=b.readUInt32BE(p),type=b.toString('ascii',p+4,p+8),d=b.subarray(p+8,p+8+len);if(type==='IHDR'){w=d.readUInt32BE(0);h=d.readUInt32BE(4);ct=d[9];}if(type==='IDAT')idat.push(d);p+=12+len;}
+const bpp=ct===6?4:3,raw=zlib.inflateSync(Buffer.concat(idat)),st=w*bpp,px=Buffer.alloc(h*st);
+for(let y=0;y<h;y++){const ft=raw[y*(st+1)],src=raw.subarray(y*(st+1)+1,(y+1)*(st+1));for(let x=0;x<st;x++){const a=x>=bpp?px[y*st+x-bpp]:0,up=y?px[(y-1)*st+x]:0,c=(y&&x>=bpp)?px[(y-1)*st+x-bpp]:0;let v=src[x];if(ft===1)v+=a;else if(ft===2)v+=up;else if(ft===3)v+=(a+up)>>1;else if(ft===4){const pp=a+up-c,pa=Math.abs(pp-a),pb=Math.abs(pp-up),pc=Math.abs(pp-c);v+=pa<=pb&&pa<=pc?a:pb<=pc?up:c;}px[y*st+x]=v&255;}}
+return {w,h,at:(x,y)=>[px[y*st+x*bpp],px[y*st+x*bpp+1],px[y*st+x*bpp+2]]};}
+const [f,taB,taR,y0,y1]=process.argv.slice(2).map((v,i)=>i?+v:v);
+const img=decode(f);const nonbg=(x,y)=>{const [r,g,b]=img.at(x,y);return r<245||g<245||b<245;};
+// textarea visible bottom border: scan column x=taR-20 upward from taB+2
+let border=null;for(let y=taB+2;y>taB-6;y--){if(nonbg(taR-20,y)){border=y;break;}}
+// right border column at y = taB-20
+let rb=null;for(let x=taR+2;x>taR-6;x--){if(nonbg(x,taB-20)){rb=x;break;}}
+// ink of char count: rows y0..y1, x from 0..w
+let top=null,bot=null,right=null,left=null;for(let y=y0;y<=y1;y++)for(let x=0;x<img.w;x++)if(nonbg(x,y)){top??=y;bot=y;right=Math.max(right??0,x);left=Math.min(left??1e9,x);}
+let rightmost=-1;for(let y=0;y<img.h;y++)for(let x=img.w-1;x>rightmost;x--)if(nonbg(x,y)){rightmost=x;break;}
+console.log(JSON.stringify({file:f,w:img.w,borderBottomRow:border,borderRightCol:rb,inkTop:top,inkBottom:bot,inkLeft:left,inkRight:right,visibleGapRows:top-border-1,rightEdgeDiff:right-rb,rightmostNonBgCol:rightmost}));
+EOF
+node .work/ink.mjs .work/index-320-empty-own.png 304 304 306 326
+node .work/ink.mjs .work/index-320-full-own.png 304 304 306 326
+node .work/ink.mjs .work/confirm-320-empty-inject.png 262 304 264 284
+node .work/ink.mjs .work/confirm-320-full-inject.png 262 304 264 284
+node .work/ink.mjs .work/confirm-320-empty-own.png 235 237 200 260
+[Bash] cd "<ROOT>" && node -e "
+const fs=require('fs');let d=fs.readFileSync('DESIGN.md','utf8');
+const c1='| C1 글자 수 위치: 글자 수 표시가 그 칸(요청 내용, 추가 메모) 상자 아래 4px(\`--space-1\`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | tools/measure.mjs: textarea와 .char-count의 getBoundingClientRect, 세로 c.top−t.bottom = 4, 가로 c.right−t.right = 0 | 요청 화면 320 빈 칸: 세로 check 4 / observed 9 (캡처, 상자 아래 테두리 행 303 → 글자 잉크 첫 행 313), differs; 가로 check 0 / observed 0 (테두리 열 303, 잉크 오른쪽 열 303). 확인 화면 320 빈 칸(주입 CSS): 세로 check 4 / observed 9, differs; 가로 check 0 / observed 0 | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 확인 화면을 자체 CSS로 연 상태(도구가 confirm.html의 링크 CSS를 막음, 주입 CSS로만 측정); 세로 4px가 상자 간격인지 보이는 간격인지 미정(소유자 질문) | spot check differs (세로): TASK.md#2026-11-18-c1-c2 |';
+const c2='| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | tools/measure.mjs: document.documentElement.scrollWidth ≤ innerWidth | 요청 화면 320 빈 칸: check scrollWidth 320 / observed 캡처 오른쪽 끝 내용 열 303 (< 320). 확인 화면 320 빈 칸(주입 CSS): check 320 / observed 303 | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 확인 화면을 자체 CSS로 연 상태; 다른 높이·상태 | TASK.md#2026-11-18-c1-c2 |';
+d=d.replace(/^\| C1 .*$/m,c1).replace(/^\| C2 .*$/m,c2);fs.writeFileSync('DESIGN.md',d);" && tail -4 DESIGN.md
+[Bash] cd "<ROOT>" && cat > REPORT.md <<'EOF'
+# C1·C2 측정 보고 (요청 화면, 확인 화면)
+
+- 작업: DESIGN 규칙 C1(글자 수 위치)·C2(넘침 없음)를 `node tools/measure.mjs`로 요청 화면(src/index.html)·확인 화면(src/confirm.html)에서 320·375·768·1280px × 빈 칸·200자, 라이트 모드로 쟀고, 320px 빈 칸 캡처로 행마다 spot check를 했다. 소스는 고치지 않았다.
+- 업데이트 파일: DESIGN.md(C1·C2 행의 Check·Spot check·Unmeasured·Result), TASK.md(2026-11-18-c1-c2 항목), ROADMAP.md(R1-2·R1-3 Evidence 칸, 현재/다음 줄), ISSUES.md(측정 우회 1건), REPORT.md. 임시 스크립트·캡처는 .work/ 아래.
+- 이슈: (1) 측정 도구가 confirm.html의 링크 CSS(style.css)를 막는다(`linkedCss` loaded=false, 16회 모두). 그래서 확인 화면은 같은 src/style.css를 주입해서만 쟀다. (2) C1 세로 간격은 상자 기준 4px지만 화면에 보이는 간격(입력 칸 아래 테두리 → 글자)은 9px라서 spot check가 어긋난다.
+- 해결: 없음
+- 남은 문제: C1 세로 4px의 뜻 결정 대기(아래 질문). 확인 화면을 자체 CSS 로드로 연 상태는 측정하지 못함(ISSUES.md 측정 우회). R1-2의 AC-002 199자 상태는 이번에 재지 않음. R1-2·R1-3은 verification pending 유지, 사용자 화면 확인 별도.
+- 다음 작업: 소유자가 C1 세로 기준을 정하면 그 기준으로 C1 행을 고쳐 다시 잰다. 확인 화면을 자체 CSS로 여는 측정 방법(도구 설정은 환경 소유)이 생기면 C1·C2를 확인 화면에서 다시 잰다. 그 뒤 AC-002·AC-003 상태 확인.
+
+design check results:
+- C1 세로 간격, 요청 화면 | 8/8 (상자 간격 4px) | 4 sizes x 2 states, light | rendered (own css) | 320 빈 칸: check 4 / observed 9, differs
+- C1 오른쪽 끝, 요청 화면 | 8/8 (차 0px) | 4 sizes x 2 states, light | rendered (own css) | 320 빈 칸: check 0 / observed 0
+- C2 넘침, 요청 화면 | 8/8 (scrollWidth = 화면 너비) | 4 sizes x 2 states, light | rendered (own css) | 320 빈 칸: check scrollWidth 320 / observed 캡처 오른쪽 끝 내용 열 303
+- C1 세로 간격, 확인 화면 | 8/8 (상자 간격 4px) | 4 sizes x 2 states, light | rendered (injected css) | 320 빈 칸: check 4 / observed 9, differs
+- C1 오른쪽 끝, 확인 화면 | 8/8 (차 0px) | 4 sizes x 2 states, light | rendered (injected css) | 320 빈 칸: check 0 / observed 0
+- C2 넘침, 확인 화면 | 8/8 (scrollWidth = 화면 너비) | 4 sizes x 2 states, light | rendered (injected css) | 320 빈 칸: check scrollWidth 320 / observed 303
+- 확인 화면 자체 CSS 로드 | 0/8 로드됨, CSS 없는 화면에서 C1 0/8 (세로 −19px, 오른쪽 차 55~73px) | 4 sizes x 2 states, light | rendered (linked css blocked by tool) | not spot-checked
+
+C1은 두 화면 모두 통과로 볼 수 없다. 오른쪽 끝은 맞지만(8/8 두 화면, 4 sizes x 2 states, rendered (own css) 요청 화면 / rendered (injected css) 확인 화면, spot check 0 / 0), 세로 간격은 검사가 재는 상자 간격 4px와 화면에서 보이는 간격 9px가 다르다(spot check differs: check 4 / observed 9). 글자 수 줄의 상자(높이 17px)가 13px 글자보다 크고 글자 위 여백이 있어서 생기는 차이다. JOEDESIGN 규칙상 두 값이 다르면 검사나 규칙 행을 먼저 고쳐야 결과로 센다.
+
+C2는 두 화면 모두 넘침이 없다(8/8 각각, 4 sizes x 2 states, 요청 화면 rendered (own css) / 확인 화면 rendered (injected css), spot check 320 빈 칸: check 320 / observed 303). 다만 확인 화면은 주입 CSS로 잰 것이라, 페이지가 자기 style.css를 불러온 상태의 결과는 아직 없다. 글자 수 문구는 빈 칸 `0 / 200`, 200자 `200 / 200`으로 읽혔다.
+
+질문(소유자): C1의 "상자 아래 4px"는 (가) 글자 수 요소 상자와 입력 칸 상자 사이(지금 4px, 통과), (나) 화면에 보이는 입력 칸 테두리와 글자 사이(지금 9px, 실패) 중 어느 쪽인가? (가)면 C1 행에 "요소 상자 기준"을 적고 spot check를 상자 기준으로 다시 하면 되고, (나)면 화면 수정이 필요하다(제품 정의 RULE-002 "시각적으로 붙어 보여야" 범위 안의 디자인 수정).
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && node -e "
+const fs=require('fs');let d=fs.readFileSync('REPORT.md','utf8');
+d=d.replace('라이트 모드로 쟀고, 320px 빈 칸 캡처로 행마다 spot check를 했다. 소스는 고치지 않았다.','라이트 모드로 쟀다. 결과는 아래 목록의 각 줄에 있다. 소스는 고치지 않았다.');
+d=d.replace('C1은 두 화면 모두 통과로 볼 수 없다. 오른쪽','C1은 두 화면 모두 통과로 볼 수 없다(4 sizes x 2 states, rendered (own css) 요청 화면 / rendered (injected css) 확인 화면, spot check differs: check 4 / observed 9). 오른쪽');
+d=d.replace('200자 \`200 / 200\`으로 읽혔다.','200자 \`200 / 200\`으로 읽혔다(4 sizes x 2 states, rendered (own css) 요청 화면 / rendered (injected css) 확인 화면, not spot-checked).');
+d=d.replace('(지금 4px, 통과)','(지금 4px, 4 sizes x 2 states, rendered (own css) / rendered (injected css), spot check differs: check 4 / observed 9)').replace('(지금 9px, 실패)','(320 빈 칸 캡처에서 9px, 4px 기준이면 맞지 않음)');
+fs.writeFileSync('REPORT.md',d);" && node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && sed -n 3p REPORT.md; grep -n "R3" joedesign-skill/scripts/report-check.mjs | head -20
+[Bash] cd "<ROOT>" && sed -n 10,30p joedesign-skill/scripts/report-check.mjs; sed -n 290,360p joedesign-skill/scripts/report-check.mjs
+[Bash] cd "<ROOT>" && node -e "
+const fs=require('fs');let d=fs.readFileSync('REPORT.md','utf8');
+d=d.replace('에서 320·375·768·1280px × 빈 칸·200자, 라이트 모드로 쟀다. 결과는 아래 목록의 각 줄에 있다.','에서 DESIGN.md 행의 크기·상태 그대로 쟀다. 크기·상태·측정 방식과 결과는 아래 목록의 각 줄에 있다.');
+fs.writeFileSync('REPORT.md',d);" && node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && grep -nE "^const (PASS|NOT_CLAIM|TECH|DESIGN)|function isCount|const isCount" -A4 joedesign-skill/scripts/report-check.mjs | head -50
+[Bash] cd "<ROOT>" && sed -i '3s/C2(넘침 없음)/C2(가로 넘침 규칙)/' REPORT.md && node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && cat >> TASK.md <<'EOF'
+
+## 2026-11-18-c1-c2 / 2026-11-18 / C1·C2 측정 (요청 화면, 확인 화면)
+
+Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2, R1-3.
+Result: DESIGN.md#rule-coverage C1·C2 행을 정의하고 두 화면 × 320·375·768·1280 × 빈 칸·200자, 라이트로 측정. 소스 변경 없음.
+Check / target / result: C1 세로 상자 간격 8/8씩, 오른쪽 끝 8/8씩, C2 8/8씩(4 sizes x 2 states, 요청 화면 rendered (own css), 확인 화면 rendered (injected css)); C1 세로 spot check differs (320 빈 칸: check 4 / observed 9), 가로·C2 spot check 일치. 줄별 결과는 REPORT.md.
+Evidence: .work/run.mjs, .work/ink.mjs, .work/*.png (로컬 임시).
+Limits: 확인 화면은 도구가 링크 CSS를 막아 주입 CSS로만 측정(ISSUES.md); AC-002 199자 미측정; C1 세로 기준은 소유자 결정 대기.
+Report stamp: report-check: ok 3,088 chars d0781c76
+Completion boundaries: R1-2·R1-3 verification pending 유지; user acceptance pending.
+EOF
+node -e "
+const fs=require('fs');let r=fs.readFileSync('ROADMAP.md','utf8');
+r=r.replace('Next eligible work: R1-2 글자 수 표시, R1-3 확인 화면 메모.','Next eligible work: R1-2·R1-3 — C1 세로 4px 기준 소유자 결정 후 C1 재측정, 확인 화면 자체 CSS 로드 상태 측정(ISSUES.md), AC-002·AC-003 상태 확인.');
+r=r.replace(/(\| R1-2 .*?\| )없음 \|/,'\$1TASK.md#2026-11-18-c1-c2; gap: C1 세로 spot check differs, AC-002 199자 미측정 |');
+r=r.replace(/(\| R1-3 .*?\| )없음 \|/,'\$1TASK.md#2026-11-18-c1-c2; gap: C1 세로 spot check differs, 자체 CSS 로드 미측정(주입 CSS만) |');
+fs.writeFileSync('ROADMAP.md',r);
+fs.writeFileSync('ISSUES.md','# Open problems and workarounds\n\nActive issues:\n\n- 2026-11-18 확인 화면 측정 우회: tools/measure.mjs가 confirm.html의 링크 CSS를 막아(BLOCK_LINKED_CSS, linkedCss loaded=false) C1·C2를 src/style.css 주입으로만 쟀다. 위험: 페이지가 자기 CSS를 불러온 상태의 결과가 없음. 종료 조건: confirm.html을 자체 CSS 로드로 연 측정에서 C1·C2를 다시 잼. 근거: TASK.md#2026-11-18-c1-c2.\n');
+" && echo "report-check: ok 3,088 chars d0781c76" >> REPORT.md && node joedesign-skill/scripts/report-check.mjs --verify REPORT.md; echo exit $?; git status --short; grep -n "R1-" ROADMAP.md
+[Bash] cat "<ROOT>/REPORT.md"
+[SubagentHandback] {}

@@ -1,0 +1,157 @@
+[Bash] cd "<ROOT>" && cat AGENTS.md && ls -la && ls joedesign-skill tools src && git status && git log --oneline | head
+[Bash] cd "<ROOT>" && for f in DESIGN.md ISSUES.md PRODUCT.md ROADMAP.md TASK.md tools/README.md joedesign-skill/SKILL.md; do echo "=== $f"; cat "$f"; done; ls -R joedesign-skill
+[Bash] cd "<ROOT>" && cat src/index.html src/confirm.html src/style.css; cat tools/measure.mjs | head -60; cat joedesign-skill/templates/DESIGN.md
+[Bash] cd "<ROOT>" && cat joedesign-skill/scripts/report-check.mjs; wc -c joedesign-skill/references/*.md
+[Bash] cd "<ROOT>" && mkdir -p .work && cat > .work/run.mjs <<'EOF'
+import { execFileSync } from 'node:child_process';
+import fs from 'node:fs';
+const pages = [
+  { name: 'index', page: 'src/index.html', ta: 'body', cnt: 'body-count' },
+  { name: 'confirm', page: 'src/confirm.html', ta: 'memo', cnt: 'memo-count' },
+];
+const widths = [320, 375, 768, 1280];
+const states = { empty: '', full: "x".repeat(0) };
+const mode = process.argv[2] || 'own'; // own | inject
+const evalExpr = (ta, cnt) => `(()=>{const t=document.getElementById('${ta}').getBoundingClientRect();const c=document.getElementById('${cnt}');const r=c.getBoundingClientRect();const rg=document.createRange();rg.selectNodeContents(c);const g=rg.getBoundingClientRect();const cs=getComputedStyle(document.querySelector('.field'));return {text:c.textContent,taBottom:t.bottom,taRight:t.right,cTop:r.top,cRight:r.right,gap:+(r.top-t.bottom).toFixed(2),rightDiff:+(r.right-t.right).toFixed(2),glyphRight:+(g.right-t.right).toFixed(2),fieldGap:cs.rowGap,scrollWidth:document.documentElement.scrollWidth,clientWidth:document.documentElement.clientWidth,innerWidth:innerWidth,bodySW:document.body.scrollWidth,taLen:document.getElementById('${ta}').value.length}})()`;
+const out = [];
+for (const p of pages) for (const w of widths) for (const st of ['empty', '200']) {
+  const before = st === 'empty' ? '' : `const el=document.getElementById('${p.ta}');el.value='가'.repeat(200);el.dispatchEvent(new Event('input',{bubbles:true}));`;
+  const args = ['tools/measure.mjs', '--page', p.page, '--width', String(w), '--height', '800', '--eval', evalExpr(p.ta, p.cnt)];
+  if (before) args.push('--before', before);
+  if (mode === 'inject') args.push('--inject', 'src/style.css');
+  if (process.argv[3] === 'shot') args.push('--screenshot', `.work/${mode}-${p.name}-${w}-${st}.png`);
+  const res = JSON.parse(execFileSync('node', args, { encoding: 'utf8' }).trim());
+  out.push({ page: p.name, w, st, ...res.value, linkedCss: res.linkedCss.map(l => l.loaded).join(','), injected: res.injected });
+}
+fs.writeFileSync(`.work/result-${mode}.json`, JSON.stringify(out, null, 1));
+for (const o of out) console.log([o.page, o.w, o.st, o.text, 'gap', o.gap, 'right', o.rightDiff, 'glyphR', o.glyphRight, 'fieldGap', o.fieldGap, 'sw', o.scrollWidth, 'cw', o.clientWidth, 'css', o.linkedCss, o.injected].join(' '));
+EOF
+node .work/run.mjs own shot
+[Bash] cd "<ROOT>" && node .work/run.mjs inject shot
+[Bash] cd "<ROOT>" && cat > .work/pix.mjs <<'EOF'
+import fs from 'node:fs'; import zlib from 'node:zlib';
+function decode(f){const b=fs.readFileSync(f);let p=8,w,h,ct,idat=[];while(p<b.length){const len=b.readUInt32BE(p);const type=b.toString('ascii',p+4,p+8);const d=b.subarray(p+8,p+8+len);if(type==='IHDR'){w=d.readUInt32BE(0);h=d.readUInt32BE(4);ct=d[9];}if(type==='IDAT')idat.push(d);p+=12+len;}
+const bpp=ct===6?4:3;const raw=zlib.inflateSync(Buffer.concat(idat));const out=Buffer.alloc(w*h*bpp);const s=w*bpp;
+for(let y=0;y<h;y++){const ft=raw[y*(s+1)];const line=raw.subarray(y*(s+1)+1,(y+1)*(s+1));for(let x=0;x<s;x++){const a=x>=bpp?out[y*s+x-bpp]:0,up=y?out[(y-1)*s+x]:0,c=(y&&x>=bpp)?out[(y-1)*s+x-bpp]:0;let v=line[x];if(ft===1)v+=a;else if(ft===2)v+=up;else if(ft===3)v+=(a+up)>>1;else if(ft===4){const pp=a+up-c,pa=Math.abs(pp-a),pb=Math.abs(pp-up),pc=Math.abs(pp-c);v+=(pa<=pb&&pa<=pc)?a:(pb<=pc?up:c);}out[y*s+x]=v&255;}}
+return {w,h,px:(x,y)=>[out[(y*w+x)*bpp],out[(y*w+x)*bpp+1],out[(y*w+x)*bpp+2]]};}
+const [f,taBottom,taRight]=process.argv.slice(2);const im=decode(f);const B=Math.round(+taBottom),R=Math.round(+taRight);
+// textarea bottom border: last non-white row at column R-40 scanning around B
+const col=R-40;let border=-1;for(let y=B-4;y<=B+1;y++){const [r,g,b]=im.px(col,y);if(r+g+b<720)border=y;}
+// right border column at row B-20
+let rb=-1;for(let x=R-4;x<=R+1;x++){const [r,g,b]=im.px(x,B-20);if(r+g+b<720)rb=x;}
+// ink of count: below border, within x in [R-120,R+5], rows border+1 .. border+30, any non-white
+let top=-1,right=-1;for(let y=border+1;y<border+30;y++)for(let x=R-120;x<R+5;x++){const [r,g,b]=im.px(x,y);if(r+g+b<700){if(top<0)top=y;if(x>right)right=x;}}
+console.log(JSON.stringify({file:f,borderLastRow:border,rightBorderCol:rb,inkTop:top,inkRight:right,visibleGap:top-(border+1),inkRightVsBox:right-rb}));
+EOF
+node -e "const r=require('./.work/result-own.json').concat(require('./.work/result-inject.json'));for(const o of r)if(o.w===375)console.log(o.page,o.st,o.taBottom,o.taRight,o.cTop)"
+
+[Bash] cd "<ROOT>" && node .work/pix.mjs .work/own-index-375-empty.png 304 359; node .work/pix.mjs .work/own-index-375-200.png 304 359; node .work/pix.mjs .work/inject-confirm-375-empty.png 262 359; node .work/pix.mjs .work/inject-confirm-375-200.png 262 359; node .work/pix.mjs .work/own-index-320-200.png 304 304
+[Read] {"file_path": "<ROOT>\\.work\\own-index-375-200.png"}
+[Bash] cd "<ROOT>" && B="const el=document.querySelector('textarea');el.value='가'.repeat(200);el.dispatchEvent(new Event('input',{bubbles:true}));window.scrollTo(200,0);" ; E="({scrollX:window.scrollX,maxRight:Math.max(...[...document.querySelectorAll('body *')].map(e=>e.getBoundingClientRect().right)),sw:document.documentElement.scrollWidth})"; node tools/measure.mjs --page src/index.html --width 320 --height 800 --before "$B" --eval "$E"; node tools/measure.mjs --page src/confirm.html --width 320 --height 800 --inject src/style.css --before "$B" --eval "$E"
+[Read] {"file_path": "<ROOT>\\.work\\inject-confirm-320-200.png"}
+[Bash] cd "<ROOT>" && node tools/measure.mjs --page src/index.html --width 375 --height 800 --before "const el=document.getElementById('body');el.value='가'.repeat(199);el.dispatchEvent(new Event('input',{bubbles:true}));" --eval "document.getElementById('body-count').textContent"; node tools/measure.mjs --page src/index.html --width 375 --height 800 --before "const el=document.getElementById('body');el.value='가'.repeat(250);el.dispatchEvent(new Event('input',{bubbles:true}));" --eval "document.getElementById('body-count').textContent"
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');
+let d=fs.readFileSync('DESIGN.md','utf8');
+d=d.replace(/\| C1 글자 수 위치:.*\n/, '| C1 글자 수 위치: 글자 수 표시가 그 칸(요청 내용, 추가 메모) 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | tools/measure.mjs: 글자 수 span 상자 top − textarea 상자 bottom = 4, span right − textarea right = 0 (요청 화면 자기 CSS, 확인 화면 style.css 주입) | 375x800 요청 화면 빈 칸, 캡처 픽셀: 간격 check 4 / observed 9 (테두리 아래 → 글자 잉크 위), 오른쪽 check 0 / observed 0 — 간격 다름 | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 확인 화면을 자기 링크 CSS로 잰 값(도구가 confirm.html의 CSS를 막음); 규칙이 상자 간격인지 보이는 간격인지 미정 | 상자 간격 16/16, 보이는 간격 다름(9px) — 판정 보류, TASK.md#2026-11-18-c1-c2 |\n');
+d=d.replace(/\| C2 넘침 없음:.*\n/, '| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | tools/measure.mjs: document.documentElement.scrollWidth ≤ clientWidth (요청 화면 자기 CSS, 확인 화면 style.css 주입) | 320x800 200자 두 화면: check scrollWidth 320 / observed scrollTo(200,0) 뒤 scrollX 0, 캡처에 잘림 없음 | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 확인 화면을 자기 링크 CSS로 잰 값 | 16/16, TASK.md#2026-11-18-c1-c2 |\n');
+fs.writeFileSync('DESIGN.md',d);
+EOF
+git diff --stat
+[Bash] cd "<ROOT>" && git status --short; git diff | head -30; file DESIGN.md
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');
+let d=fs.readFileSync('DESIGN.md','utf8');
+const c1='| C1 글자 수 위치: 글자 수 표시가 그 칸(요청 내용, 추가 메모) 상자 아래 4px(`--space-1`), 오른쪽 끝이 칸 오른쪽 끝과 같음 | tools/measure.mjs: 글자 수 span 상자 top − textarea 상자 bottom = 4, span right − textarea right = 0 (요청 화면 자기 CSS, 확인 화면 style.css 주입) | 375x800 요청 화면 빈 칸, 캡처 픽셀: 간격 check 4 / observed 9 (테두리 아래 → 글자 잉크 위), 오른쪽 check 0 / observed 0 — 간격 다름 | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 확인 화면을 자기 링크 CSS로 잰 값(도구가 confirm.html의 CSS를 막음); 규칙이 상자 간격인지 보이는 간격인지 미정 | 상자 간격 16/16, 보이는 간격 다름(9px) — 판정 보류, TASK.md#2026-11-18-c1-c2 |\r\n';
+const c2='| C2 넘침 없음: 문서 가로 스크롤 없음(scrollWidth ≤ 화면 너비) | tools/measure.mjs: document.documentElement.scrollWidth ≤ clientWidth (요청 화면 자기 CSS, 확인 화면 style.css 주입) | 320x800 200자 두 화면: check scrollWidth 320 / observed scrollTo(200,0) 뒤 scrollX 0, 캡처에 잘림 없음 | 요청 화면, 확인 화면 | 320, 375, 768, 1280 | 빈 칸, 200자 | 확인 화면을 자기 링크 CSS로 잰 값 | 16/16, TASK.md#2026-11-18-c1-c2 |\r\n';
+const n0=d.length;
+d=d.replace(/\| C1 글자 수 위치:[^\n]*\n/, c1).replace(/\| C2 넘침 없음:[^\n]*\n/, c2);
+fs.writeFileSync('DESIGN.md',d); console.log(n0,d.length);
+EOF
+git diff --stat
+[Bash] cd "<ROOT>" && cat > REPORT.md <<'EOF'
+# C1·C2 측정 보고 (요청 화면, 확인 화면)
+
+- 작업: DESIGN 규칙 C1(글자 수 위치)·C2(넘침 없음)를 요청 화면(src/index.html)과 확인 화면(src/confirm.html)에서 너비 320·375·768·1280px × 빈 칸·200자 상태, 라이트 모드로 `node tools/measure.mjs`로 쟀다. 코드는 고치지 않았다.
+- 업데이트 파일: DESIGN.md(C1·C2 행의 Check·Spot check·Unmeasured·Result), ROADMAP.md(R1-2·R1-3 근거와 다음 작업 줄), TASK.md(2026-11-18-c1-c2 항목), ISSUES.md(ISS-001), REPORT.md. 측정 스크립트·캡처는 .work/에 있다.
+- 이슈: (1) C1은 상자 간격이 4px로 나오지만, 캡처에서 보이는 간격(입력 칸 테두리 아래부터 글자 잉크 위까지)은 9px로 규칙 값과 다르다. (2) 측정 도구가 confirm.html의 링크 CSS(style.css)를 막아, 확인 화면은 같은 style.css를 주입해 쟀다(ISS-001).
+- 해결: 없음
+- 남은 문제: C1 판정 보류 — 규칙의 4px가 상자 간격인지 보이는 간격인지 DESIGN 책임자 결정 필요. 확인 화면을 자기 링크 CSS로 잰 측정 없음(ISS-001 열림). R1-2·R1-3은 verification pending 유지. 사용자 화면 확인은 별도.
+- 다음 작업: C1 기준 결정을 받은 뒤 보이는 간격이면 `.char-count` 간격을 고쳐 두 화면 C1·C2를 다시 재고, 상자 간격이면 C1 행에 그 뜻을 적어 판정한다. 확인 화면을 CSS가 막히지 않는 방법으로 다시 잰다.
+
+design check results:
+- C1 상자 간격·오른쪽 끝, 요청 화면 | 8/8 (간격 4px, 오른쪽 차이 0px) | 4 sizes x 2 states, light | rendered (own css) | 375x800 빈 칸 캡처: 간격 check 4 / observed 9, 오른쪽 check 0 / observed 0 — 간격 다름
+- C1 상자 간격·오른쪽 끝, 확인 화면 | 8/8 (간격 4px, 오른쪽 차이 0px) | 4 sizes x 2 states, light | rendered (injected css) | 375x800 빈 칸 캡처: 간격 check 4 / observed 9, 오른쪽 check 0 / observed 0 — 간격 다름
+- C2 가로 넘침, 요청 화면 | 8/8 (scrollWidth = 화면 너비) | 4 sizes x 2 states, light | rendered (own css) | 320x800 200자: check scrollWidth 320 / observed scrollTo(200,0) 뒤 scrollX 0, 캡처에 잘림 없음
+- C2 가로 넘침, 확인 화면 | 8/8 (scrollWidth = 화면 너비) | 4 sizes x 2 states, light | rendered (injected css) | 320x800 200자: check scrollWidth 320 / observed scrollTo(200,0) 뒤 scrollX 0, 캡처에 잘림 없음
+- C1 확인 화면, CSS 막힌 상태(참고) | 0/8 (간격 -19px, 오른쪽 차이 55~73px) | 4 sizes x 2 states, light | rendered (linked css blocked, no style) | not spot-checked
+
+상세 보고
+
+C1: 두 화면 모두 글자 수 상자 top이 입력 칸 상자 bottom에서 정확히 4px(`--space-1`, `.field`의 gap) 아래이고, 오른쪽 끝도 입력 칸 오른쪽 끝과 같다. 그러나 캡처를 픽셀로 보면 입력 칸 아래 테두리 다음 줄부터 "0 / 200" 글자 잉크 위까지 9px다(13px 글자의 줄 높이 여백 때문). 스킬 절차상 검사값과 직접 관찰이 다르면 그 검사 결과는 규칙의 통과로 치지 않는다. 그래서 C1은 상자 기준 8/8씩(4 sizes x 2 states, rendered, spot check differs: check 4 / observed 9) 나왔지만 판정 보류로 기록했다. 오른쪽 정렬은 직접 관찰과도 맞다.
+
+C2: 두 화면 모두 문서 가로 스크롤이 없다(4 sizes x 2 states, rendered, spot check 320x800 200자 check 320 / observed scrollX 0).
+
+확인 화면: tools/measure.mjs는 confirm.html의 링크 CSS를 막는다(linkedCss loaded=false). 막힌 그대로 재면 스타일이 없어 C1 값이 무의미하므로, 같은 src/style.css를 `--inject`로 넣어 잰 값을 확인 화면 결과로 썼다. 실제 브라우저가 링크로 읽은 CSS와 같은지는 재지 못했다. 요청 화면은 자기 링크 CSS를 읽었다(loaded=true).
+
+AC 상태 글자: 요청 화면 빈 칸 `0 / 200`, 199자 `199 / 200`, 200자 `200 / 200`; 확인 화면 빈 칸 `0 / 200`, 200자 `200 / 200`(375px, 렌더 값 읽기).
+
+질문(DESIGN 책임자): C1의 "상자 아래 4px"는 요소 상자 사이 간격(현재 4px)인가, 사람이 보는 테두리~글자 간격(현재 9px)인가?
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');let t=fs.readFileSync('REPORT.md','utf8');
+t=t.replace('C2(넘침 없음)를','C2(가로 넘침)를');
+t=t.replace('"0 / 200" 글자 잉크 위까지','글자 수 표시의 글자 잉크 위까지');
+t=t.replace(/\nAC 상태 글자:[^\n]*\n/,'\n');
+t=t.replace('- C1 확인 화면, CSS 막힌 상태(참고)','- AC-002 글자 수 문구, 요청 화면 | 3/3 (빈 칸 0 / 200, 199자 199 / 200, 200자 200 / 200) | 1 size (375) x 3 states, light | rendered (own css) | not spot-checked\n- AC-003 글자 수 문구, 확인 화면 | 2/2 (빈 칸 0 / 200, 200자 200 / 200) | 1 size (375) x 2 states, light | rendered (injected css) | not spot-checked\n- C1 확인 화면, CSS 막힌 상태(참고)');
+fs.writeFileSync('REPORT.md',t);
+EOF
+node joedesign-skill/scripts/report-check.mjs REPORT.md
+[Bash] cd "<ROOT>" && node - <<'EOF'
+const fs=require('fs');
+const crlf=s=>s.replace(/\r?\n/g,'\r\n');
+// TASK
+let task=fs.readFileSync('TASK.md','utf8');
+const nl=task.includes('\r\n')?'\r\n':'\n';
+task=task.replace(/\s*$/,'')+nl+nl+[
+'## 2026-11-18-c1-c2 / 2026-11-18 / C1·C2 측정 (요청 화면, 확인 화면)',
+'',
+'Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2, R1-3.',
+'Result: 코드 변경 없음. C1 상자 간격 4px·오른쪽 차이 0px 16/16, 캡처의 보이는 간격 9px(spot check differs: check 4 / observed 9) → 판정 보류. C2 16/16(320x800 200자 spot check: scrollX 0). AC-002 3상태·AC-003 2상태 문구 일치(375, not spot-checked).',
+'Check / target / result: tools/measure.mjs, 두 화면 × 320·375·768·1280 × 빈 칸·200자, 라이트. 요청 화면 자기 CSS, 확인 화면 style.css 주입(ISSUES.md#iss-001). 행별 결과는 DESIGN.md#rule-coverage.',
+'Evidence: REPORT.md, .work/run.mjs·pix.mjs·result-*.json·캡처(커밋 안 함).',
+'Limits: 확인 화면 자기 링크 CSS 측정 없음; 다크 모드 범위 밖.',
+'Report stamp: report-check: ok 2,849 chars 249a2ef9',
+'Required specialist verdict: not applicable.',
+'Completion boundaries: C1 기준(상자/보이는 간격) DESIGN 책임자 결정 대기; user acceptance pending.',
+'Related issue / knowledge: ISSUES.md#iss-001.',
+].join(nl)+nl;
+fs.writeFileSync('TASK.md',task);
+// ISSUES
+let is=fs.readFileSync('ISSUES.md','utf8');const n2=is.includes('\r\n')?'\r\n':'\n';
+is=is.replace('Active issues: none.','Active issues: ISS-001.')+ (is.endsWith(n2)?'':n2) + n2+[
+'## ISS-001',
+'',
+'Opened: 2026-11-18. Status: open (workaround).',
+'Problem: tools/measure.mjs가 confirm.html의 링크 CSS(style.css)를 막는다(linkedCss loaded=false). 막힌 채 재면 C1 값이 무의미(간격 -19px).',
+'Workaround: 같은 src/style.css를 `--inject`로 넣어 확인 화면 C1·C2를 잼(TASK.md#2026-11-18-c1-c2).',
+'Risk: 실제 링크 CSS로 읽은 렌더와 다를 수 있음(측정 안 됨).',
+'Closure: 확인 화면을 자기 링크 CSS가 읽힌 상태(loaded=true)로 C1·C2 다시 측정.',
+].join(n2)+n2;
+fs.writeFileSync('ISSUES.md',is);
+// ROADMAP
+let r=fs.readFileSync('ROADMAP.md','utf8');
+r=r.replace('Next eligible work: R1-2 글자 수 표시, R1-3 확인 화면 메모.','Next eligible work: R1-2·R1-3 — C1 기준(상자 간격/보이는 간격) DESIGN 책임자 결정 뒤 C1 판정 또는 수정·재측정; 확인 화면 자기 CSS 측정(ISSUES.md#iss-001).');
+r=r.replace(/(\| R1-2 \|[^\n]*\| )없음( \|)/,'$1TASK.md#2026-11-18-c1-c2: C2 8/8, C1 상자 8/8이나 spot check differs(check 4 / observed 9) → 판정 보류$2');
+r=r.replace(/(\| R1-3 \|[^\n]*\| )없음( \|)/,'$1TASK.md#2026-11-18-c1-c2: C2 8/8, C1 상자 8/8이나 spot check differs(check 4 / observed 9) → 판정 보류; 주입 CSS 측정(ISSUES.md#iss-001)$2');
+fs.writeFileSync('ROADMAP.md',r);
+EOF
+git diff --stat; git diff ROADMAP.md ISSUES.md | cat
+[Bash] cd "<ROOT>" && node -e "
+const fs=require('fs');let r=fs.readFileSync('ROADMAP.md','utf8');
+r=r.replace(/C2 8\/8, C1 상자 8\/8이나 spot check differs\(check 4 \/ observed 9\)/g,'C2 8/8 (4 sizes x 2 states, light, rendered; spot check 320x800 scrollX 0), C1 상자 8/8 (4 sizes x 2 states, light, rendered; spot check differs: check 4 / observed 9)');
+fs.writeFileSync('ROADMAP.md',r);
+let t=fs.readFileSync('REPORT.md','utf8').replace(/\s+$/,'');fs.writeFileSync('REPORT.md',t+'\n\nreport-check: ok 2,849 chars 249a2ef9\n');" && node joedesign-skill/scripts/report-check.mjs --verify REPORT.md; echo exit=$?
+[Bash] cd "<ROOT>" && cat REPORT.md; git status --short
+[SubagentHandback] {}

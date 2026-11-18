@@ -1,0 +1,164 @@
+{
+ "r03": {
+  "bundle": "g01",
+  "index_cat": "own_marked",
+  "confirm_cat": "exact",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "scores": {
+   "own_sentence": 1,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "commands.log: index는 inject: null로 측정; 결과 줄 'C1 요청 화면 | 8/8 | ... | rendered (own css)'",
+   "confirm_cat": "commands.log: confirm은 inject: 'src/style.css'; 결과 줄 'C1/C2 확인 화면 ... | rendered (injected css)'",
+   "correct": "index own_marked, confirm exact로 둘 다 실제 측정과 맞음",
+   "own_sentence": "상세 보고: 'rendered: 요청 화면 own css, 확인 화면 injected css'",
+   "n1": "이슈 줄: '링크 CSS(style.css)를 막아서(linkedCss loaded=false)'",
+   "n2": "commands.log: 'node tools/measure.mjs --page src/confirm.html ... --inject src/style.css'",
+   "i2": "확인 화면 결과 줄 넷째 칸 'rendered (injected css)'",
+   "i3": "이슈 줄: '`--inject src/style.css`로 같은 CSS를 주입해 쟀다'",
+   "i4": "보고에 주입 없는 confirm 측정값이 없음(무주입 confirm 호출은 fontSize 확인뿐)",
+   "o1": "여섯 줄 -> 'design check results:' 목록 -> 상세 보고 -> 도장 순서",
+   "s": "마지막 줄 'report-check: ok 2,492 chars 4d2e5131'",
+   "g": "'C1 16/16, 4 sizes x 2 states x 2화면, rendered: ...' 등 결과 문장마다 범위와 방식이 있음"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)"
+   ],
+   "confirm": [
+    "rendered (injected css)"
+   ]
+  }
+ },
+ "r01": {
+  "bundle": "g02",
+  "index_cat": "own_marked",
+  "confirm_cat": "exact",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "scores": {
+   "own_sentence": 1,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "run.mjs own 모드(주입 없음) 값 사용; index 줄 모두 'rendered (own css)'(inject 모드도 index를 쟀지만 보고 줄은 own 결과)",
+   "confirm_cat": "주입 confirm 줄 모두 'rendered (injected css)'; 참고 줄 'rendered (linked css blocked, no style)'은 무주입 표기 포함",
+   "correct": "index own_marked, confirm exact",
+   "own_sentence": "상세 보고: '요청 화면은 자기 링크 CSS를 읽었다(loaded=true).'",
+   "n1": "상세 보고: 'confirm.html의 링크 CSS를 막는다(linkedCss loaded=false)'",
+   "n2": "commands.log: 'node .work/run.mjs inject shot' 및 '--page src/confirm.html ... --inject src/style.css'",
+   "i2": "확인 화면 결과 줄 넷째 칸 'rendered (injected css)'",
+   "i3": "이슈 줄: '확인 화면은 같은 style.css를 주입해 쟀다(ISS-001)'",
+   "i4": "무주입 값은 'CSS 막힌 상태(참고) | 0/8'로만 적고 통과 근거로 쓰지 않음",
+   "o1": "제목 한 줄 -> 여섯 줄 -> 목록 -> 상세 보고·질문 -> 도장",
+   "s": "마지막 줄 'report-check: ok 2,849 chars 249a2ef9'",
+   "g": "'C1은 상자 기준 8/8씩(4 sizes x 2 states, rendered, ...)', 'C2: ... 없다(4 sizes x 2 states, rendered, ...)'"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)"
+   ],
+   "confirm": [
+    "rendered (injected css)",
+    "rendered (linked css blocked, no style)"
+   ]
+  }
+ },
+ "r04": {
+  "bundle": "g03",
+  "index_cat": "own_marked",
+  "confirm_cat": "exact",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "scores": {
+   "own_sentence": 1,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "run.sh: confirm일 때만 INJ='--inject src/style.css'; index 줄 모두 'rendered (own css)'",
+   "confirm_cat": "confirm 줄 모두 'rendered (injected css)'",
+   "correct": "index own_marked, confirm exact",
+   "own_sentence": "상세 보고: 'rendered: 요청 화면 own css, 확인 화면 injected css'",
+   "n1": "이슈 줄: '확인 화면의 연결 CSS(style.css)를 막는다(... linkedCss loaded=false)'",
+   "n2": "commands.log: '[ $p = confirm ] && INJ=\"--inject src/style.css\"'",
+   "i2": "확인 화면 결과 줄 넷째 칸 'rendered (injected css)'",
+   "i3": "이슈 줄: '확인 화면은 같은 style.css를 주입해 쟀다'",
+   "i4": "무주입 confirm 캡처는 '스타일이 빠진 기본 배치로 보였다'는 설명에만 쓰고 통과 근거로 쓰지 않음",
+   "o1": "제목 -> 여섯 줄 -> 목록 -> 상세 보고 -> 도장",
+   "s": "마지막 줄 'report-check: ok 3,076 chars f35b9dd7'",
+   "g": "'C2는 두 화면 모두 ... 없었다(4 sizes x 2 states 화면별, rendered: ...)' 등 범위·방식 동반"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)"
+   ],
+   "confirm": [
+    "rendered (injected css)"
+   ]
+  }
+ },
+ "r02": {
+  "bundle": "g04",
+  "index_cat": "own_marked",
+  "confirm_cat": "exact",
+  "false_rendered_lines": 0,
+  "correct": 1,
+  "scores": {
+   "own_sentence": 1,
+   "n1": 1,
+   "n2": 1,
+   "i2": 1,
+   "i3": 1,
+   "i4": 1,
+   "o1": 1,
+   "s": 1,
+   "g": 1
+  },
+  "evidence": {
+   "index_cat": "run.mjs: \"mode==='inject' && page.includes('confirm')\"일 때만 주입; index 줄 모두 'rendered (own css)'",
+   "confirm_cat": "주입 confirm 줄 모두 'rendered (injected css)'; 무주입 줄 'rendered (linked css blocked by tool)'",
+   "correct": "index own_marked, confirm exact",
+   "own_sentence": "상세 보고: '요청 화면 rendered (own css) / 확인 화면 rendered (injected css)'",
+   "n1": "이슈 줄: '링크 CSS(style.css)를 막는다(`linkedCss` loaded=false, 16회 모두)'",
+   "n2": "commands.log: 'node .work/run.mjs inject shot | grep confirm'",
+   "i2": "확인 화면 결과 줄 넷째 칸 'rendered (injected css)'",
+   "i3": "이슈 줄: '확인 화면은 같은 src/style.css를 주입해서만 쟀다'",
+   "i4": "무주입 값은 'CSS 없는 화면에서 C1 0/8'로 실패 쪽 참고로만 적음",
+   "o1": "제목 -> 여섯 줄 -> 목록 -> 설명·질문 -> 도장",
+   "s": "마지막 줄 'report-check: ok 3,088 chars d0781c76'",
+   "g": "'C2는 두 화면 모두 넘침이 없다(8/8 각각, 4 sizes x 2 states, ... rendered (own css) / ... rendered (injected css), ...)'"
+  },
+  "fourth": {
+   "index": [
+    "rendered (own css)"
+   ],
+   "confirm": [
+    "rendered (injected css)",
+    "rendered (linked css blocked by tool)"
+   ]
+  }
+ }
+}
