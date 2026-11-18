@@ -1,8 +1,8 @@
 # JOEDESIGN 업데이트 내역
 
-## 1.3.3 — R7 탐지 범위 확장: 줄마다 판정, `--inject` 문장 (게시 전 후보, 2026-11-17, T043)
+## 1.3.3 — R7 탐지 범위 확장: 줄마다 판정, `--inject` 문장 (2026-11-18, T043)
 
-- 상태: 게시 전 후보. VERSION·README·docs/INSTALL.md 버전 핀은 1.3.2 그대로(게시 때 올림), 태그·Release·개인 설치 없음.
+- 게시: 사용자 승인("게시(보정 포함)", 2026-11-18, 부모 세션이 직접 받음) 뒤 VERSION 1.3.3, 태그 v1.3.3, GitHub Release, 개인 설치 갱신(영수증 evals/check-coverage-20261104/part17/install-receipt.md).
 - 출처: 16부 행동 A/B([part16/behavior-ab/report.md](evals/check-coverage-20261104/part16/behavior-ab/report.md))에서 1.3.0 팔의 거짓 `rendered` 4건 중 1.3.2 R7이 2건만 잡음.
   놓친 형태: r05(일부 줄만 `rendered (style.css 주입)`, 다른 줄은 `rendered`뿐), r08(본문이 "같은 파일을 `--inject`로 넣어 측정"이라고만 적음).
 - `report-check.mjs` R7: (a) 주입 언급 판정을 문장 단위로 바꿈. 부정이 아닌 주입 낱말(주입, inject(ed/ing/ion), `--inject`)과 CSS 낱말(css, 스타일, style, stylesheet)이 같은 문장에 있으면 거리 제한 없이,

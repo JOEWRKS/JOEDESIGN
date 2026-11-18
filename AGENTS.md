@@ -75,6 +75,9 @@
   사용자 승인("둘 다 게시", 부모 세션이 직접 받음) 뒤 VERSION 1.3.2·태그·Release·개인 설치(part15/install-receipt.md).
 - 추가(2026-11-17, 부모 세션 위임 과제 "측정 모드 표기 행동 A/B, 주입 미언급 장면", 사용자 승인 "18회 시작" 중 8회 + 채점 1): 장면 2'(tools/README 제약 절·과제문 참고 문장 삭제) × 1.3.0/1.3.2 × 4, Opus 한 턴, 블라인드 채점 1(part16/behavior-ab/).
   `rendered (injected css)` 1.3.2 4/4 vs 1.3.0 0/4, 거짓 `rendered` 0 vs 4, 알아챔·주입 재측정 4/4 vs 4/4, R7 0 vs 2(1.3.0 거짓 4건 중 2건 놓침), 누출·격리 사고 0(behavior-ab/incidents.txt).
+- 추가(2026-11-17~18, 부모 세션 위임 과제 "JOEDESIGN 1.3.3"): 16부에서 R7이 놓친 거짓 `rendered` 두 형태(일부 줄에만 주입 표시, `--inject`와 css 낱말이 먼 문장)를
+  줄마다 판정·넓힌 주입 인식으로 잡음(428cb57). 16부 A 4/4 지적, 기존 통과 보고 새 R7 0, 274개 R1~R6 수 동일, 행동 시험 0회(part17/report.md).
+  사용자 승인("게시(보정 포함)", 부모 세션이 직접 받음) 뒤 VERSION 1.3.3·태그·Release·개인 설치(part17/install-receipt.md).
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)
