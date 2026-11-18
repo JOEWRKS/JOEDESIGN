@@ -268,3 +268,40 @@ test('R7 1.3.3: a legitimate mix of own-CSS and injected lines passes when the o
   assert.deepEqual(rules(`- ${INJ}\n- ${home}\n\n${prose} settings 페이지는 자기 CSS를 읽지 못했다.\n`), ['R7']);
   assert.deepEqual(rules(`- ${INJ}\n- ${home}\n\n${prose} about 페이지는 자기 CSS를 읽었다.\n`), ['R7']);
 });
+
+test('R7 1.3.4: a clause naming the line\'s page (not only its check id) covers a bare `rendered` line', () => {
+  const idx = 'C1 상자 간격, 요청 화면 | 8/8 | 4 sizes x 2 states, light | rendered | 320 빈 칸: check 4 / observed 9';
+  const cf = 'C1 상자 간격, 확인 화면 | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | 320 빈 칸: check 4 / observed 9';
+  const prose = '확인 화면은 도구가 링크 CSS를 막아 같은 style.css를 주입해 쟀다.';
+  // part18 r01 form: the page is named, the check id is not
+  assert.deepEqual(rules(`- ${idx}\n- ${cf}\n\n${prose} 요청 화면은 자기 링크 CSS를 읽었다(loaded=true).\n`), []);
+  // parenthesis form of the page name
+  assert.deepEqual(rules(`- ${idx.replace(', 요청 화면', ' (요청 화면)')}\n- ${cf}\n\n${prose} 요청 화면은 자기 링크 CSS를 읽었다.\n`), []);
+  // a clause about the other page, naming the check id, does not cover this line (part18 r02 form)
+  assert.deepEqual(rules(`- ${idx}\n- ${cf}\n\n${prose} 확인 화면을 자체 CSS로 여는 방법이 생기면 C1·C2를 확인 화면에서 다시 잰다.\n`), ['R7']);
+  // no own-CSS statement at all
+  assert.deepEqual(rules(`- ${idx}\n- ${cf}\n\n${prose}\n`), ['R7']);
+});
+
+test('R7 1.3.4: negation is read by word form; 마지막 and `not spot-checked` are not negation', () => {
+  const idx = 'C2 overflow (요청 화면) | 8/8 | 4 sizes x 2 states, light | rendered | 320x800: 마지막 잉크 열 303';
+  const ac = 'AC-002 글자 수 (요청 화면) | 3/3 | 1 size x 3 states, light | rendered | not spot-checked';
+  const prose = '확인 화면은 링크 CSS가 막혀 style.css를 주입해 쟀다.';
+  // part18 r04 form: the own-CSS clause carries 마지막 and not spot-checked
+  assert.deepEqual(rules(`- ${idx}\n- ${ac}\n\n${prose} C2·AC-002 요청 화면은 own css로 쟀고 캡처 마지막 잉크 열은 303이며 AC-002는 not spot-checked다.\n`), []);
+  // real negation still cancels the clause
+  assert.deepEqual(rules(`- ${idx}\n\n${prose} C2 요청 화면은 자기 CSS를 읽지 못했다.\n`), ['R7']);
+  assert.deepEqual(rules(`- ${idx}\n\n${prose} C2 요청 화면의 자기 CSS는 막혀 있었다.\n`), ['R7']);
+  assert.deepEqual(rules(`- ${idx}\n\n${prose} The 요청 화면 did not load its own CSS.\n`), ['R7']);
+});
+
+test('R7 1.3.4: clauses split at commas, semicolons and slashes, so one sentence can cover one page and inject the other', () => {
+  const idx = 'C1 요청 화면 | 8/8 | 4 sizes x 2 states, light | rendered | 320x800: check 4 / observed 9';
+  const cf = 'C1 확인 화면 | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | 320x800: check 4 / observed 9';
+  // part18 r03 form
+  assert.deepEqual(rules(`- ${idx}\n- ${cf}\n\nC1은 두 화면 모두 4px였다(16/16, rendered: 요청 화면 own css, 확인 화면 injected css, 도구가 확인 화면 링크 CSS를 막아 주입했다).\n`), []);
+  // part18 r02 form: a parenthesis stays with its clause
+  assert.deepEqual(rules(`- ${idx}\n- ${cf}\n\nC1은 통과로 볼 수 없다(4 sizes x 2 states, rendered (own css) 요청 화면 / rendered (injected css) 확인 화면, spot check differs: check 4 / observed 9, 도구가 CSS를 막아 주입함).\n`), []);
+  // the own-CSS clause names only the other page
+  assert.deepEqual(rules(`- ${idx}\n- ${cf}\n\nC1은 두 화면 모두 4px였다(rendered: 확인 화면 own css, 도구가 요청 화면 링크 CSS를 막아 주입했다).\n`), ['R7']);
+});

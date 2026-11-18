@@ -1,5 +1,17 @@
 # JOEDESIGN 업데이트 내역
 
+## 1.3.4 — 후보 (미게시): R7 허용 문장 경로 보정 (2026-11-18, T043)
+
+- 상태: 게시 전 후보. VERSION·README·docs/INSTALL.md 버전 핀은 1.3.3 그대로, 태그·Release·개인 설치 없음.
+- 출처: 18부 반사실 검사([part18/behavior-ab/report.md](evals/check-coverage-20261104/part18/behavior-ab/report.md))에서 괄호 없는 `rendered`를 목록 밖 문장으로 넘기는 허용 경로가 올바른 보고 3/4를 떨어뜨림.
+- `report-check.mjs` R7 허용 경로: (a) 허용 절이 그 줄의 검사 이름(`C1`) **또는 페이지 이름**(검사 칸의 괄호 속·쉼표 뒤, 예 `요청 화면`)을 들면 통과. 다른 줄의 페이지만 들고 이 줄의 페이지는 들지 않은 절은 이 줄을 넘기지 못함.
+  (b) 부정어를 낱말 형태로 읽음(`못해`·`막아`·`막혀` 등). `마지막`의 `막`, 템플릿 어휘 `not spot-checked`의 `not`은 부정이 아님. (c) 문장을 쉼표·세미콜론·빗금에서 절로 나눠 절 단위로 판정(괄호는 절 안에 둠).
+  `rendered: 요청 화면 own css, 확인 화면 injected css`가 요청 화면 줄을 넘김. 지적 문구 끝 "naming this check or its page". `--verify` 의미 같음.
+- references/conformance.md R7 설명과 templates/DESIGN.md 측정 모드 문단에 "검사 이름 또는 페이지" 한 절씩.
+- 확인된 것([part19/report.md](evals/check-coverage-20261104/part19/report.md)): 18부 실물 반사실 A(괄호만 지움) R7 3/4 보고 → 0/4. 274개 보고 R1~R6 수·R7 결과 1.3.3과 동일, 18·16·14·15부 보고 86건 R7 동일, 18부 도장 `--verify` 4/4.
+  node 44/44(report-check 27 → 30), python 142 OK.
+- 확인되지 않은 것: 행동 효과(실행 0회). 페이지 이름 추출은 검사 칸 형식(괄호·쉼표)에 기댐.
+
 ## 1.3.3 — R7 탐지 범위 확장: 줄마다 판정, `--inject` 문장 (2026-11-18, T043)
 
 - 게시: 사용자 승인("게시(보정 포함)", 2026-11-18, 부모 세션이 직접 받음) 뒤 VERSION 1.3.3, 태그 v1.3.3, GitHub Release, 개인 설치 갱신(영수증 evals/check-coverage-20261104/part17/install-receipt.md).

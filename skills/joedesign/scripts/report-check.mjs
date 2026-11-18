@@ -47,8 +47,14 @@
 //       alone (also in a code block), or CSS put in with 넣어/넣고 (`style.css를 넣어 쟀다`),
 //       is enough. In such a report each bare `rendered` line is flagged, since it cannot
 //       tell which measurement it was. It passes when written `rendered (own css)`, or when
-//       a sentence outside the list says the page loaded its own CSS (own css, 자기 CSS,
-//       링크 CSS를 읽었다 ...) and names that line's check (its first word, such as `C1`).
+//       a clause outside the list says the page loaded its own CSS (own css, 자기 CSS,
+//       링크 CSS를 읽었다 ...) and names that line's check (its first word, such as `C1`) or
+//       its page (the line's parenthesis or the words after its comma, such as `요청 화면`).
+//       A clause is a sentence part between commas, semicolons or slashes, so
+//       `rendered: 요청 화면 own css, 확인 화면 injected css` covers the 요청 화면 lines; a
+//       clause naming another line's page and not this one's does not cover this line.
+//       Negation is read by word form (읽지, 못해, 않, 막아/막혀, 차단, not, blocked ...);
+//       `마지막` and the template's own `not spot-checked` are not negation.
 //   A report with no design check run says so in one line, `design checks: none ran`
 //   (or `디자인 검사: 실행 안 함`); that line satisfies R1 instead of a results list.
 //
@@ -156,7 +162,33 @@ const OWN_CSS = new RegExp([
   /(?:자기|자체)\s*(?:CSS|스타일)/.source,
   /(?:링크|연결|link(?:ed)?)\s*(?:된\s*)?(?:CSS|style\.css|스타일)[^.。\n]{0,12}(?:읽었|읽힘|읽혔|읽음|로드됐|로드되었|로드됨|불러왔|\bloaded\b(?!\s*[=:]))/.source,
 ].join('|'), 'i');
-const OWN_CSS_NOT = /읽지|못|않|막|차단|\bnot\b|n't|\bfailed\b|[=:]\s*false|\bblocked\b|\bwithout\b/i;
+// negation by word form: 못 and 막 only as verb stems (못해, 못했다, 막아, 막혀, 막힌; not 마지막),
+// `not` except the template's own `not spot-checked` / `not checked`
+const OWN_CSS_NOT = new RegExp([
+  /읽지|않|차단|n't|\bfailed\b|[=:]\s*false|\bblocked\b|\bwithout\b/.source,
+  /못(?=\s|$|해|했|함|한|할|하|합)/.source,
+  /막(?=아|혀|힌|힘|음|았|혔|히|는|고|다|은|을|기)/.source,
+  /\bnot\b(?!\s*(?:spot[- ]?checked|checked|measured))/.source,
+].join('|'), 'i');
+// clauses of a sentence: parts between commas, semicolons and slashes; a parenthesis stays
+// with its clause (`rendered (own css) 요청 화면` is one clause)
+function clauses(sentence) {
+  return sentence.replace(/[()（）[\]]/g, ' ').split(/[,;，；/]/).map((c) => c.trim()).filter(Boolean);
+}
+// a result line's names: its check id (first word) and its page phrase (the text in its
+// parenthesis, after its comma, or the words after the first one), lowercased
+function rowNames(cell) {
+  const low = cell.toLowerCase().replace(/\s+/g, ' ').trim();
+  const id = low.split(/[\s(（:：,，]/)[0];
+  const paren = low.match(/[(（]([^)）]+)[)）]/);
+  const comma = low.match(/[,，]\s*([^,，]+)$/);
+  let page = (paren ? paren[1] : comma ? comma[1] : low.slice(id.length)).replace(/[(（)）]/g, '').trim();
+  if (page.length < 2) page = '';
+  return { id: id.length >= 2 ? id : '', page };
+}
+function ownClauses(sentence) {
+  return clauses(sentence).filter((c) => OWN_CSS.test(c) && !OWN_CSS_NOT.test(c)).map((c) => c.toLowerCase());
+}
 const BA_LINE = /^\s*(?:[-*+]\s*)?\**\s*(before|after)\s*\**\s*[:：]\s*(.*)$/i;
 const DISPLAY_SAME = /display unchanged|표시\s*(?:변화|변경)\s*없음/i;
 const PENDING = /product decision pending|제품\s*결정\s*대기/i;
@@ -278,7 +310,8 @@ export function check(text) {
   const rowLines = []; // line numbers of results lines outside code blocks
   let injectedAt = 0; // first line saying CSS was injected
   const renderedRows = []; // bare `rendered` lines: [lineNo, check, own css said in the line]
-  const ownCss = []; // sentences outside the list saying the page read its own CSS
+  const rowPages = new Set(); // page phrases named by every result line (R7 tells one page's clause from another's)
+  const ownCss = []; // clauses outside the list saying the page read its own CSS
   text.split(/\r?\n/).forEach((raw, index) => {
     const no = index + 1;
     if (raw.trim().startsWith('```')) { inCode = !inCode; return; }
@@ -309,8 +342,9 @@ export function check(text) {
     if (cells) {
       listLines += 1;
       if (!inCode) rowLines.push(no);
+      if (!inCode) { const { page } = rowNames(cells[0]); if (page) rowPages.add(page); }
       if (!inCode && /^rendered\s*$/i.test(cells[3])) {
-        renderedRows.push([no, cells[0], cells.some((c) => OWN_CSS.test(c) && !OWN_CSS_NOT.test(c))]);
+        renderedRows.push([no, cells[0], cells.some((c) => ownClauses(c).length > 0)]);
       }
       if (FIX_NAME.test(cells[0]) && !BEFORE_FIX.test(cells[0])) {
         const word = cells[1].trim().toLowerCase();
@@ -337,7 +371,7 @@ export function check(text) {
       .replace(/^\s*(?:[-*+]|\d+[.)])\s+/, '');
     for (const s of sentences(plain)) {
       if (!injectedAt && saysInjected(s)) injectedAt = no;
-      if (OWN_CSS.test(s) && !OWN_CSS_NOT.test(s)) ownCss.push(s.toLowerCase());
+      ownCss.push(...ownClauses(s));
     }
     for (const s of sentences(plain)) {
       const claim = (PASS.test(s) && !NOT_CLAIM.test(s)) || isCount(s);
@@ -396,12 +430,19 @@ export function check(text) {
   // R7: the report says CSS was injected; a bare `rendered` line does not say which measurement it was
   if (injectedAt) {
     for (const [no, name, ownInRow] of renderedRows) {
-      const key = name.split(/[\s(（:：,]/)[0].toLowerCase();
-      if (ownInRow || (key.length >= 2 && ownCss.some((s) => s.includes(key)))) continue;
+      const { id, page } = rowNames(name);
+      const covers = (c) => {
+        const mine = (id && c.includes(id)) || (page && c.includes(page));
+        if (!mine) return false;
+        // a clause about another line's page, not this one's, is not about this line
+        if (page && !c.includes(page) && [...rowPages].some((p) => p !== page && c.includes(p))) return false;
+        return true;
+      };
+      if (ownInRow || ownCss.some(covers)) continue;
       findings.push([no, 'R7', name,
         `line ${injectedAt} says the measurement injected CSS, and this line says only \`rendered\`: ` +
         'mark it `rendered (injected css)` in its fourth cell when it was measured that way; when the page ' +
-        'loaded its own CSS, write `rendered (own css)` or say so for this check outside the list']);
+        'loaded its own CSS, write `rendered (own css)` or say so outside the list naming this check or its page']);
     }
   }
   // R5: display before/after for a move, overlap, hide or merge

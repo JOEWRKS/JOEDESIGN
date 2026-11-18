@@ -63,7 +63,8 @@ Spot check cell, or "not spot-checked"). The fourth cell is `code`, `rendered`, 
 and the same CSS was injected (another departure: `rendered (<what differed>)`),
 e.g. `C1 gap | 8/8 | 4 sizes x 2 states, light | rendered (injected css) | not
 spot-checked`; in a report that mentions injection, a line measured with the page's own
-CSS is written `rendered (own css)`. Each fix takes its own line; its result
+CSS is written `rendered (own css)` (or a sentence outside the list names that check or
+its page as loading its own CSS). Each fix takes its own line; its result
 is `fixed` only when its spot check cell holds a direct observation of the fixed
 thing on a target that showed it, otherwise `changed`. A `changed` fix is an open
 issue: it goes under 남은 문제 (remaining work) in the report, ISSUES and ROADMAP,
