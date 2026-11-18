@@ -1,0 +1,30 @@
+## 2026-11-14-r1-2-measure / 2026-11-14 / 글자 수 표시 예비 측정 (요청 화면)
+
+Roadmap item: ROADMAP.md#stage-r1-요청-폼--in-progress R1-2.
+Result: 요청 화면 C1·C2 예비 측정, 375·1280 x 빈 칸. 사용자에게 보낸 보고를 아래에 그대로 보관.
+Changed files: 없음.
+Check / target / result: 아래 결과 목록(요청 화면, 2 sizes x 1 state).
+Evidence: 아래 보고.
+Limits: 320·768, 200자 상태 미측정. C1·C2 Check가 미정이라 DESIGN 결과로 올리지 않음.
+Report stamp: none (도장을 쓰기 전에 보관한 보고).
+Required specialist verdict: not applicable.
+Completion boundaries: R1-2 verification pending 유지.
+Related issue / knowledge: none.
+Record handoff gap: none.
+
+보관한 보고:
+
+- 작업: 요청 화면(src/index.html)에서 DESIGN 규칙 C1·C2를 `node tools/measure.mjs`로 375·1280, 빈 칸 상태에서 쟀다. 코드는 고치지 않았다.
+- 업데이트 파일: TASK.md(이 항목).
+- 이슈: 없음.
+- 해결: 없음.
+- 남은 문제: 320·768과 200자 상태는 재지 않았다. C1·C2 Check가 미정이다. R1-2는 verification pending.
+- 다음 작업: C1·C2 Check를 정한 뒤 4 sizes x 2 states로 다시 잰다.
+
+design check results:
+- C1 gap (요청 화면) | 2/2 (상자 간격 4px) | 2 sizes x 1 state, light | rendered | not spot-checked
+- C1 right edge (요청 화면) | 2/2 (차 0px) | 2 sizes x 1 state, light | rendered | not spot-checked
+- C2 overflow (요청 화면) | 2/2 (scrollWidth = 화면 너비) | 2 sizes x 1 state, light | rendered | not spot-checked
+
+C1·C2는 375·1280 빈 칸에서만 맞았다(2 sizes x 1 state, rendered, not spot-checked). 나머지 크기와 200자 상태는 재지 않았으므로 통과로 적지 않는다.
+
