@@ -1,0 +1,87 @@
+# 빠른 시작 (JOEDESIGN 2.0.0)
+
+설치 → 확인 → 첫 검수 → 보고 검사 → 업데이트 → 제거. 명령은 Windows PowerShell 기준이다. 설치 스크립트는 없고, 아래 명령을 직접 실행한다.
+
+## 1. 설치
+
+먼저 저장소를 복제한다(비공개 저장소 읽기 권한과 GitHub 로그인 필요).
+
+```powershell
+git clone https://github.com/JOEWRKS/JOEDESIGN.git
+cd JOEDESIGN
+```
+
+### 1a. Codex
+
+[README 4절](../README.md#4-사용-방법)의 두 번째 PowerShell 블록을 복제한 폴더에서 실행한다. `skills/joedesign`을 `$CODEX_HOME/skills/joedesign`(기본 `%USERPROFILE%\.codex\skills\joedesign`)에 복사하고 `version`·`doctor`까지 실행한다. 대상 폴더가 이미 있으면 덮어쓰지 않고 멈춘다.
+
+### 1b. Claude Code
+
+이 일을 하는 스크립트는 없다. 깨끗한 복제본(작업하지 않는 복제본)을 하나 두고, Claude 스킬 폴더에서 그 복제본의 `skills/joedesign`으로 연결(junction)을 만든다.
+
+```powershell
+$JoeClone = (Resolve-Path '.').Path
+New-Item -ItemType Directory -Path (Join-Path $env:USERPROFILE '.claude\skills') -Force | Out-Null
+New-Item -ItemType Junction -Path (Join-Path $env:USERPROFILE '.claude\skills\joedesign') -Target (Join-Path $JoeClone 'skills\joedesign')
+```
+
+macOS·Linux는 `ln -s <복제본>/skills/joedesign ~/.claude/skills/joedesign`. 연결이므로 복제본을 지우거나 옮기면 설치도 사라진다.
+
+## 2. 확인
+
+```powershell
+python -B <설치폴더>\scripts\harness_cli.py version
+python -B <설치폴더>\scripts\harness_cli.py doctor
+```
+
+- `version`: `"version": "2.0.0"`과 실제 `SKILL.md` 경로가 나와야 한다(연결 설치는 복제본 쪽 경로로 나온다).
+- `doctor`: 전문 스킬(impeccable, ui-ux-pro-max, web-design-guidelines 등)이 없으면 `UNAVAILABLE`과 **종료 코드 2가 정상**이다. 발견은 호출·검수 완료와 다르다.
+- Claude Code 설치: `doctor`의 기본 탐색 경로는 패키지 형제 폴더, `~/.codex/skills`, `~/.agents/skills`다. Claude 스킬 폴더의 전문 스킬을 보려면 `doctor --skills-root $env:USERPROFILE\.claude\skills`를 붙인다.
+
+## 3. 첫 디자인 검수
+
+새 대화에서 검수만 요청한다(화면을 고치지 말라고 적는다).
+
+```text
+$joedesign
+이 프로젝트의 문의 페이지를 검수만 해줘. 화면과 코드는 고치지 마.
+DESIGN.md와 내가 준 참고 화면 기준으로 PC·모바일을 확인하고,
+문제 목록, 확인한 결과(범위와 대조 여부 포함), 확인하지 못한 점을 나눠서 알려줘.
+```
+
+Claude Code에서는 `$joedesign` 대신 스킬 이름(`joedesign`)을 요청에 적는다. 결과는 문제 목록이며 사용자 수락이 아니다.
+
+## 4. 보고 검사와 도장
+
+에이전트는 보고 초안을 파일로 쓰고 보내기 전에 검사한다. 사람이 직접 확인할 때도 같은 명령을 쓴다.
+
+```powershell
+node <설치폴더>\scripts\report-check.mjs REPORT.md
+```
+
+1. 지적이 있으면(종료 코드 1, 줄마다 보고 줄 번호) 고치고 다시 실행한다. 종료 코드 2는 사용법·읽기 오류.
+2. 지적이 없으면 `report-check: ok <글자수> chars <해시8자>` 한 줄이 나온다. 이것이 도장이다.
+3. 보낸 글은 검사한 본문 그대로 두고 **맨 끝 줄에 그 도장 줄**을 붙인다.
+4. 받은 쪽은 보낸 글을 파일로 저장해 확인한다.
+
+```powershell
+node <설치폴더>\scripts\report-check.mjs --verify SENT.md
+```
+
+`stamp: match (...); text ok`면 도장 아래 본문이 검사한 것과 같다. `mismatch`·`missing`이면 종료 코드 1. 도장은 형식 검사 결과이지 숫자의 참을 보증하지 않는다.
+
+## 5. 업데이트
+
+| 설치 방식 | 방법 |
+|---|---|
+| Codex(복사본) | 복제본에서 `git pull --ff-only` → 기존 `$CODEX_HOME/skills/joedesign`을 스킬 탐색 경로 **밖**으로 백업(예: `~/Documents/JOEDESIGN-backups/<날짜>/`) → 폴더 삭제 → README 블록 다시 실행. README 블록은 폴더가 있으면 멈추므로 그대로는 업데이트에 쓸 수 없다. 백업 해시 확인·복구 절차: [설치 안내](INSTALL.md) |
+| Claude Code(연결) | 연결한 복제본에서 `git pull --ff-only`. 연결은 그대로 둔다 |
+
+업데이트 뒤 `version`을 다시 실행한다.
+
+## 6. 제거
+
+- Codex: `$CODEX_HOME/skills/joedesign` 폴더를 지운다(필요하면 먼저 백업).
+- Claude Code: 연결만 지운다. `Remove-Item` 대신 `cmd /c rmdir "%USERPROFILE%\.claude\skills\joedesign"`를 쓰면 복제본 내용은 남는다.
+
+관련: [README](../README.md) · [설치 안내](INSTALL.md) · [보안](../SECURITY.md) · [변경 이력](../CHANGELOG.md)

@@ -1,5 +1,15 @@
 # JOEDESIGN 업데이트 내역
 
+## 2.0.0 — 후보 (미게시)
+
+- 범위(사용자 승인): A 저장소 위생, B 보안 검토 문서, C 빠른 시작·README 축약, 버전 2.0.0. **스킬 동작은 1.3.4와 같다**: `skills/joedesign`에서 바뀐 파일은 `VERSION` 하나.
+- A 위생: 아무도 참조하지 않는 `docs/superpowers` 4개 삭제(plans 2026-09-29·2026-10-06, specs HANDOFF·TOOL_RESEARCH). `fixtures/contract-cases/evidence/v02-operational-validation-v1/`(52파일, 약 18.8MB)을 `evals/archive/2026-11-19-unreferenced/`로 이동.
+  사용자 이름이 든 홈 경로를 `~`로 가림: 15개 파일(이동한 기록 8, RACI 초안 9줄, evals 6). 남은 38개는 테스트가 해시를 고정한 20개, 회귀 입력 1개, 같은 폴더 기록이 해시를 적어 둔 17개라 그대로 둠. 이력은 다시 쓰지 않음.
+- B [SECURITY.md](SECURITY.md): 비밀값 0(트리·이력), 매니페스트·CI 없음, 남은 식별자와 이유, 스크립트 신뢰 경계, 알리는 방법.
+- C [docs/QUICKSTART.md](docs/QUICKSTART.md)(Codex·Claude Code 설치, 확인, 검수 요청, `report-check.mjs` 도장·`--verify`, 업데이트, 제거). README 버전 설명 두 줄을 한 문장과 이 파일 링크로 바꾸고 절반으로 줄임. docs/INSTALL.md 버전 표기 2.0.0.
+- 게이트([evals/v2-release-20261119/report.md](evals/v2-release-20261119/report.md)): `git diff --stat v1.3.4 -- skills/joedesign` = `VERSION` 1개, node 44/44, python 142 OK(건너뜀 2), part19 회귀 274개 R1~R6 수 동일·R7 바뀜 0.
+- 미게시: 푸시·태그·Release·개인 설치는 하지 않음.
+
 ## 1.3.4 — R7 허용 문장 경로 보정: 페이지 이름·낱말 형태 부정·절 단위 (2026-11-18, T043)
 
 - 게시: 사용자 승인("게시", 2026-11-18, 부모 세션이 직접 받음) 뒤 VERSION 1.3.4, 태그 v1.3.4, GitHub Release, 개인 설치 갱신(영수증 evals/check-coverage-20261104/part19/install-receipt.md).

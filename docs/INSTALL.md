@@ -7,11 +7,11 @@
 | 설치 단위 | `skills/joedesign/` 전체 |
 | 스킬 ID·실행 요청 | `joedesign` · `$joedesign` |
 | 버전 원본 | [VERSION](../skills/joedesign/VERSION) |
-| 1.0.0 변경 경계 | 기존 JSON schema/contract 버전 및 과거 증거의 의미 유지 |
+| 2.0.0 변경 경계 | 스킬 폴더는 1.3.4와 같고 `VERSION`만 다름. 기존 JSON schema/contract 버전 및 과거 증거의 의미 유지 |
 
 ## 최초 설치
 
-- 설치 명령: [README의 PowerShell 명령](../README.md#4-사용-방법).
+- 설치 명령: [README의 PowerShell 명령](../README.md#4-사용-방법). Claude Code 설치·제거: [빠른 시작](QUICKSTART.md).
 - 실행 위치: 복제한 저장소 폴더.
 - 설치 위치: `$CODEX_HOME/skills/joedesign`.
   CODEX_HOME 미지정 시 `%USERPROFILE%/.codex/skills/joedesign`.
@@ -35,7 +35,7 @@ python -B <설치폴더>/scripts/harness_cli.py doctor
 
 | 항목 | 확인·준비 기준 |
 |---|---|
-| `version` | `1.3.4` 및 실제 운영지침 경로 확인 |
+| `version` | `2.0.0` 및 실제 운영지침 경로 확인 |
 | `doctor` | 발견 경로·누락된 전문 스킬 확인. 준비 부족 시 종료코드 2는 정상 진단 결과 |
 | 기본 전문 검수 | `impeccable`, `ui-ux-pro-max`, `web-design-guidelines` 필요 |
 | 추가 전문 검수 | 모션·React 성능 검수에 해당 전문 스킬 준비 |
@@ -48,7 +48,7 @@ python -B <설치폴더>/scripts/harness_cli.py doctor
 - 전문 스킬: 실제 제공처의 설치 방법 적용. 이름만 같은 가짜 파일·폴더로 누락 대체 금지.
 - `AVAILABLE`: 발견 결과. 실제 전문 스킬 호출·검수 완료와 구분.
 - 실행 구성: [실행 설정](../skills/joedesign/references/execution.md).
-- 검증 환경: [1.0.0 검증 기록](../evals/v1-release-candidate-20261013/README.md).
+- 검증 환경: [2.0.0 정리 기록](../evals/v2-release-20261119/report.md). 설치 경로별 동작을 처음 검증한 기록은 [1.0.0 검증 기록](../evals/v1-release-candidate-20261013/README.md).
 
 ## 기존 설치 업데이트
 

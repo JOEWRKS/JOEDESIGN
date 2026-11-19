@@ -8,86 +8,31 @@
 
 ## 1. Summary
 
-- **Role:** UI creation, implementation, and design review in Codex.
+- **Role:** UI creation, implementation, and design review in Codex and Claude Code.
 - **Operation:** One operating core, with stage-specific role assignments and integrated results.
-- **Version:** **1.3.4** — defined in [VERSION](skills/joedesign/VERSION). 1.3.4 corrects the R7 prose allowance: a clause outside the list clears a bare `rendered` line when it names that line's check or its page as loading its own CSS, negation is read by word form (`마지막` and `not spot-checked` are not negation), and clauses are judged between commas, semicolons and slashes, so the correct reports part18's counterfactual saw flagged pass (T043); 1.3.3 widens report check R7: a report that says CSS was injected (including a `--inject` command or "css를 넣어") now has every bare `rendered` line flagged unless the page is said to have loaded its own CSS, closing the two false-`rendered` forms the part16 behavior test saw slip through (T043); 1.3.2 extends report check R6 with R6a/R6b: prose above the six JOENESS lines (one title line allowed) and a paragraph between the six lines and the results list are flagged, closing the two order failures the 1.3.1 behavior test saw most (T043); 1.3.1 fixes two defects from the three-tool integration trial: the Report Form fixes the order of report parts (six JOENESS lines, `design check results:` list, display before/after, explanation, stamp last) with report check R6, and the result line's mode cell distinguishes `rendered (injected css)` with R7 (T043); 1.3.0 has a move, overlap, hide or merge of an existing element recorded as a before/after display table, a differing pair kept as product decision pending, and the report check flags a missing or unresolved table (R5) (T043); 1.2.1 adds a line at the top of the DESIGN.md template pointing handoff sessions to the Report Form section (T043); 1.2.0 names the JOEFLOW product-definition inputs and the re-entry route, adds the DESIGN.md Report Form section for handoff sessions, and the ROADMAP Check-cell example (T043); 1.1.0 added the report result-line form, the pre-send report check script and its stamp; the core, schemas and contracts are unchanged from 1.0.0.
+- **Version:** **2.0.0** — defined in [VERSION](skills/joedesign/VERSION). Per-version changes: [CHANGELOG (Korean)](CHANGELOG.md).
 - **Use cases:** New UI creation, existing UI extensions and repairs, and design conformance review.
 
 ## 2. Design Purpose
 
-- Designed to reduce gaps between approved requirements, reference screens, design standards, and actual implementation.
-- Focus: representative screen → desktop/mobile observation → specialist review → scoped expansion.
-- Support for recurring spacing, typography, layout, and state checks, with review records.
-- Product requirements and final user acceptance retained as separate responsibilities.
+- Reduce gaps between approved requirements, reference screens, design standards, and actual implementation.
+- Representative screen → desktop/mobile observation → specialist review → scoped expansion.
+- Product requirements and final user acceptance stay separate responsibilities.
 
 ## 3. Key Features
 
-| Feature | Scope | Output |
-|---|---|---|
-| UI creation and implementation | New website/app screens and UI code within the requested scope | Implemented screens and desktop/mobile checks |
-| Existing UI improvements | Spacing, typography, layout, mobile usability, and screen extensions | Updated screens and change rationale |
-| Design review | Comparison of defined visual standards with actual results | Review evidence, issues, and unverified items |
-| Standards management | Project design standards | Project `DESIGN.md` |
-
-Review-only requests: an issue list instead of screen changes. The following is an example report, not actual verification evidence.
-
-```text
-Scope: Contact page on desktop and mobile
-Changes: Input order, error guidance, and mobile button placement
-Checked: Invalid-input and successful-submission states; spacing standards by screen
-Remaining: Actual email delivery not verified
-User acceptance: Final screen review required
-```
+| Feature | Output |
+|---|---|
+| UI creation and implementation | Implemented screens and desktop/mobile checks |
+| Existing UI improvements | Updated screens and change rationale |
+| Design review (review-only requests get an issue list, no screen changes) | Review evidence, issues, and unverified items |
+| Standards management | Project `DESIGN.md` |
 
 ## 4. Usage
 
-### Installation
-
-- Environment: Windows PowerShell, **Codex, Git, and Python 3**.
-- Repository access: Read permission for this private repository and GitHub authentication.
-- First installation: Run the clone commands below from your working folder.
-- Existing clone: Open the repository folder and start with the second block.
-
-```powershell
-git clone https://github.com/JOEWRKS/JOEDESIGN.git
-cd JOEDESIGN
-```
-
-```powershell
-$ErrorActionPreference = 'Stop'
-$JoeCodexHome = if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }
-$JoeSkills = Join-Path $JoeCodexHome 'skills'
-$JoeTarget = Join-Path $JoeSkills 'joedesign'
-if ((Test-Path -LiteralPath $JoeTarget) -or (Test-Path -LiteralPath (Join-Path $JoeSkills 'joedesign-harness'))) {
-    throw '기존 설치가 있습니다. docs/INSTALL.md의 업데이트·복구 안내를 먼저 확인하세요.'
-}
-New-Item -ItemType Directory -Path $JoeSkills -Force | Out-Null
-Copy-Item -LiteralPath '.\skills\joedesign' -Destination $JoeTarget -Recurse
-python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') version
-python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') doctor
-```
-
-| Check | Scope |
-|---|---|
-| `version` | Actual installed version |
-| `doctor` | Discovery and availability of required specialist skills |
-| `UNAVAILABLE` | Setup required; see [installation and dependencies (Korean)](docs/INSTALL.md) |
-
-Installation success and readiness for specialist review require separate checks.
-Updates, migration from the older split packages, and recovery: [installation guide (Korean)](docs/INSTALL.md).
-Updating the repository and updating an already copied personal installation are separate procedures.
-
-### Example request
-
-Start a new Codex conversation with the request below. Include reference screens and materials when available.
-
-```text
-$joedesign
-Build a contact page for this project.
-First review the existing requirements, DESIGN.md, and the reference screens I provided.
-Build a representative screen, review it on desktop and mobile, then expand within the required scope.
-Finish with separate lists of changes, verified results, and items not yet verified.
-```
+- Install, first review, report check and update: [Quickstart (Korean)](docs/QUICKSTART.md).
+- Codex install block: [Korean section 4](#4-사용-방법) (same commands). Updates and recovery: [installation guide (Korean)](docs/INSTALL.md).
+- Request: start a new conversation with `$joedesign` and the task, for example "Build a contact page; check requirements, DESIGN.md and my reference screens first; finish with changes, verified results and unverified items."
 
 ## 5. Tool Integration
 
@@ -97,33 +42,16 @@ Finish with separate lists of changes, verified results, and items not yet verif
 | **JOEDESIGN** | UI creation, visual standards, and design review |
 | [JOENESS](https://github.com/JOEWRKS/JOENESS) | Task sequence, progress, and completion evidence |
 
-**JOENESS task organization → JOEFLOW requirements definition → JOEDESIGN UI creation and review
-→ implementation by the assigned developer → result verification → JOENESS completion and remaining-work records**
-
-- JOENESS: Task status management throughout the process.
-- Standalone use: Each tool usable independently as needed.
-- Implementation roles: UI code implementation may accompany screen creation; assignments depend on task scope.
-- Contact form handoff: JOEFLOW's **required inputs, error conditions, and acceptance criteria** passed to JOEDESIGN.
-  JOEDESIGN's **screen-specific review evidence, unverified items, and user acceptance status** passed to the implementer and JOENESS.
-- Automated consumption of review results: [Producer/consumer configuration](skills/joedesign/references/conformance.md) required.
-  Installing all three tools alone does not establish automatic integration or approval.
+Each tool works on its own. Automated consumption of review results needs the [producer/consumer configuration](skills/joedesign/references/conformance.md); installing all three does not by itself connect or approve anything.
 
 ## 6. Limitations
 
-- Supported scope: UI creation, extension, local repair, and review. Product requirements and final user acceptance remain separate.
-  **1.3.0 identifies the package's supported scope, not a guarantee of defect-free results.**
-- Specialist review dependencies: Applicable skills such as Impeccable, UI UX Pro Max, and web-design-guidelines.
-  Automated execution and browser collection: Existing Codex executor, Node, Playwright, and a browser required.
-  Automatic installation of those tools is outside the package's scope.
-- Reuse of previous checks: **Geometry checks only, following independently reviewed additions of unrelated comments or sections at the end of DESIGN**.
-  Changed CSS, runtime files, or served builds, and unknown dependencies require fresh observations.
-  Specialist design judgments require fresh review. [Exact conditions](skills/joedesign/references/impact.md).
-- Missing, failed, or stale evidence cannot be promoted to a pass or acceptance.
-  Local hashes and review records do not authenticate user identity or guarantee protection against direct file/chat bypass.
+- **2.0.0 identifies the package's supported scope, not a guarantee of defect-free results.**
+- Specialist review needs skills such as Impeccable, UI UX Pro Max and web-design-guidelines; automated runs and browser capture need an existing Codex executor, Node, Playwright and a browser. None are installed by the package.
+- Reuse of earlier checks is narrow: [exact conditions](skills/joedesign/references/impact.md). Missing, failed or stale evidence is never promoted to a pass.
 
-[Installation and recovery (Korean)](docs/INSTALL.md) · [Operating instructions](skills/joedesign/SKILL.md) ·
-[Execution setup](skills/joedesign/references/execution.md) · [Changelog (Korean)](CHANGELOG.md) ·
-[Validation records and limits (Korean)](docs/VALIDATION.md)
+[Quickstart](docs/QUICKSTART.md) · [Security](SECURITY.md) · [Installation](docs/INSTALL.md) · [Operating instructions](skills/joedesign/SKILL.md) ·
+[Execution setup](skills/joedesign/references/execution.md) · [Changelog](CHANGELOG.md) · [Validation](docs/VALIDATION.md)
 
 ---
 
@@ -133,45 +61,35 @@ Finish with separate lists of changes, verified results, and items not yet verif
 
 ## 1. 핵심 요약
 
-- **역할:** Codex 기반 화면 제작·구현·디자인 검수 지원.
+- **역할:** Codex·Claude Code에서 화면 제작·구현·디자인 검수 지원.
 - **운영:** 단일 코어 아래 단계별 역할 배정 및 결과 통합.
-- **버전:** **1.3.4** — [VERSION](skills/joedesign/VERSION) 기준. 1.3.4는 R7 허용 문장 경로를 고쳐, 목록 밖 절이 그 줄의 검사 이름 또는 페이지 이름을 들고 자기 CSS를 읽었다고 말하면 표시 없는 `rendered` 줄을 통과시키고, 부정어를 낱말 형태로 읽고(`마지막`·`not spot-checked`는 부정 아님), 쉼표·세미콜론·빗금 사이 절 단위로 판정해 18부 반사실에서 걸렸던 올바른 보고를 통과시킨다(T043). 1.3.3은 보고 검사 R7을 넓혀, 본문이 CSS 주입을 말하는 보고(`--inject` 명령·"css를 넣어" 포함)에서 표시 없는 `rendered` 줄을 줄마다 지적하되 페이지가 자기 CSS를 읽었다고 밝힌 줄은 허용하는 것으로, 16부 행동 시험에서 R7이 놓친 거짓 `rendered` 두 형태를 막는다(T043). 1.3.2는 보고 검사 R6을 R6a/R6b로 넓혀 여섯 줄 앞의 산문(한 줄 제목만 허용)과 여섯 줄·결과 목록 사이의 문단을 잡는 것으로, 1.3.1 행동 시험에서 가장 많았던 순서 실패 두 형태를 막는다(T043). 1.3.1은 세 도구 통합 시험의 결함 2건 수정: Report Form이 보고 부분의 순서(JOENESS 여섯 줄, `design check results:` 목록, 전후 표시, 설명, 도장 마지막)를 정하고 보고 검사 R6이 잡으며, 결과 줄 넷째 칸이 `rendered (injected css)`를 구별하고 R7이 잡는 것(T043). 1.3.0은 기존 요소의 이동·겹침·숨김·병합을 전후 표시 대조표로 적고, 두 줄이 다르면 제품 결정 대기로 두며, 보고 검사가 표 누락·미해결을 잡는 것(R5)(T043). 1.2.1은 인계 세션이 Report Form 절을 읽도록 DESIGN.md 템플릿 맨 위에 안내 한 줄을 더한 것(T043). 1.2.0은 JOEFLOW 제품 정의 입력과 재진입 경로 명시, 인계용 DESIGN.md Report Form 절, ROADMAP Check 칸 예시를 더한 것(T043). 1.1.0은 보고 결과 줄 형식·보고 검사 스크립트·도장. 코어·스키마·계약은 1.0.0 그대로.
+- **버전:** **2.0.0** — [VERSION](skills/joedesign/VERSION) 기준. 버전별 변경은 [변경 이력](CHANGELOG.md) 참고.
 - **적용 대상:** 신규 화면 제작, 기존 화면 확장·수정, 디자인 기준 준수 검수.
 
 ## 2. 설계 목적
 
-- 승인된 요구사항·참고 화면·디자인 기준과 실제 구현 결과의 차이 축소를 목적으로 설계.
-- 대표 화면 제작 → PC·모바일 관찰 → 전문 검수 → 필요한 범위 확장에 집중.
-- 반복적인 여백·글자·배치·상태 점검과 검수 기록 정리 지원.
+- 승인된 요구사항·참고 화면·디자인 기준과 실제 구현 결과의 차이 축소.
+- 대표 화면 제작 → PC·모바일 관찰 → 전문 검수 → 필요한 범위 확장.
 - 제품 요구사항 결정과 최종 사용자 수락은 별도 책임으로 유지.
 
 ## 3. 주요 기능
 
-| 기능 | 범위 | 산출물 |
-|---|---|---|
-| 화면 제작·구현 | 신규 웹사이트·앱 화면, 필요한 범위의 UI 코드 구현 | 화면 구현 및 PC·모바일 확인 결과 |
-| 기존 화면 보강 | 여백·글자·배치·모바일 사용성 수정, 화면 확장 | 변경 화면 및 변경 근거 |
-| 디자인 검수 | 정한 시각 기준과 실제 결과 대조 | 검수 근거·문제 목록·미확인 항목 |
-| 기준 관리 | 프로젝트 디자인 기준 정리 | 프로젝트의 `DESIGN.md` |
-
-검수만 요청한 경우: 화면 수정 대신 문제 목록 제공. 아래 내용은 보고 형식 예시이며 실제 검증 결과와 구분.
-
-```text
-대상: 문의 페이지 PC·모바일
-변경: 입력 순서, 오류 안내, 모바일 버튼 배치
-확인: 입력 오류와 정상 전송 상태, 화면별 여백 기준
-남음: 실제 이메일 도착 여부는 확인하지 못함
-사용자 수락: 최종 화면 확인 필요
-```
+| 기능 | 산출물 |
+|---|---|
+| 화면 제작·구현 | 화면 구현 및 PC·모바일 확인 결과 |
+| 기존 화면 보강 | 변경 화면 및 변경 근거 |
+| 디자인 검수(검수만 요청하면 화면 수정 없이 문제 목록) | 검수 근거·문제 목록·미확인 항목 |
+| 기준 관리 | 프로젝트의 `DESIGN.md` |
 
 ## 4. 사용 방법
 
-### 설치
+처음 쓰는 경우: [빠른 시작](docs/QUICKSTART.md)(설치·확인·첫 검수·보고 검사·업데이트·제거).
 
-- 실행 환경: Windows PowerShell, **Codex·Git·Python 3** 필요.
-- 저장소 접근: 비공개 저장소 읽기 권한 및 GitHub 로그인 필요.
-- 최초 설치: 작업 폴더에서 아래 복제 명령 실행.
-- 기존 복제본: 저장소 폴더로 이동 후 두 번째 블록부터 실행.
+### 설치 (Codex, Windows PowerShell)
+
+- 필요: Codex·Git·Python 3, 비공개 저장소 읽기 권한과 GitHub 로그인.
+- 기존 복제본이 있으면 저장소 폴더로 이동 후 두 번째 블록부터 실행.
+- Claude Code 설치: [빠른 시작](docs/QUICKSTART.md) 1b.
 
 ```powershell
 git clone https://github.com/JOEWRKS/JOEDESIGN.git
@@ -192,19 +110,12 @@ python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') version
 python -B (Join-Path $JoeTarget 'scripts/harness_cli.py') doctor
 ```
 
-| 확인 항목 | 판정 범위 |
-|---|---|
-| `version` | 실제 설치 버전 확인 |
-| `doctor` | 필요한 전문 스킬의 발견·누락 상태 확인 |
-| `UNAVAILABLE` | [설치·의존성 안내](docs/INSTALL.md)에 따른 준비 필요 |
-
-설치 성공과 전문 검수 준비 상태의 별도 확인 필요.
-업데이트·구형 설치 이전·복구: [설치 안내](docs/INSTALL.md) 참고.
-저장소 갱신과 이미 복사한 개인 설치본 갱신은 별도 절차.
+- `version`: 실제 설치 버전. `doctor`: 전문 스킬 발견·누락. 전문 스킬이 없으면 `UNAVAILABLE`과 종료 코드 2가 정상.
+- 이 블록은 기존 설치가 있으면 멈춤. 업데이트·구형 설치 이전·복구: [설치 안내](docs/INSTALL.md).
 
 ### 실행 요청
 
-Codex 새 대화에 아래 요청 입력. 참고 화면·자료가 있는 경우 함께 전달.
+새 대화에 아래처럼 입력. 참고 화면·자료가 있으면 함께 전달.
 
 ```text
 $joedesign
@@ -222,30 +133,13 @@ $joedesign
 | **JOEDESIGN** | 화면 제작·시각 기준 수립·디자인 검수 |
 | [JOENESS](https://github.com/JOEWRKS/JOENESS) | 작업 순서·진행 상태·완료 근거 관리 |
 
-**JOENESS 작업 정리 → JOEFLOW 요구사항 확정 → JOEDESIGN 화면 제작·검수
-→ 구현 담당 개발 → 결과 검증 → JOENESS 완료·잔여 기록**
-
-- JOENESS: 전 과정의 작업 상태 관리.
-- 단독 사용: 필요한 도구만 선택 사용 가능.
-- 구현 역할: 화면 제작 중 UI 코드 구현 병행 가능. 실제 역할은 작업 범위에 따라 배정.
-- 문의 폼 인계 예시: JOEFLOW의 **필수 입력·오류 조건·완료 기준**을 JOEDESIGN에 전달.
-  JOEDESIGN의 **화면별 검수 근거·미확인 항목·사용자 수락 상태**를 구현 담당과 JOENESS에 전달.
-- 검수 결과 자동 소비: [생산·소비 연결 설정](skills/joedesign/references/conformance.md) 필요.
-  세 도구 설치만으로 자동 연결·승인 불가.
+각 도구는 단독으로도 사용 가능. 검수 결과 자동 소비는 [생산·소비 연결 설정](skills/joedesign/references/conformance.md) 필요. 세 도구 설치만으로 자동 연결·승인 불가.
 
 ## 6. 한계
 
-- 지원 범위: 화면 제작·확장·국소 수정·검수. 제품 요구사항 결정·최종 사용자 수락은 별도.
-  **1.3.0은 지원 범위의 패키지 버전. 무결점 보장과 구분.**
-- 전문 검수 의존성: Impeccable, UI UX Pro Max, web-design-guidelines 등 해당 스킬 필요.
-  자동 실행·브라우저 수집: 기존 Codex 실행기, Node, Playwright·브라우저 필요.
-  해당 도구의 자동 설치는 패키지 지원 범위 외.
-- 기존 검사 재사용: 독립 검토된 **DESIGN 끝의 무관한 주석·절 추가와 기하 검사**에 한정.
-  CSS·실행 파일·제공 빌드 변경 또는 미상 의존성은 새 관찰 필요.
-  전문 디자인 판단은 새 검토 필요. [정확한 조건](skills/joedesign/references/impact.md).
-- 누락·실패·오래된 근거의 통과·수락 처리 금지.
-  로컬 해시·검토 기록의 사용자 신원 인증 및 파일·채팅 직접 수정 우회 방지 보장 불가.
+- **2.0.0은 지원 범위의 패키지 버전. 무결점 보장과 구분.**
+- 전문 검수에는 Impeccable, UI UX Pro Max, web-design-guidelines 등, 자동 실행·브라우저 수집에는 기존 Codex 실행기·Node·Playwright·브라우저 필요. 패키지가 설치하지 않음.
+- 기존 검사 재사용은 좁게 한정: [정확한 조건](skills/joedesign/references/impact.md). 누락·실패·오래된 근거의 통과 처리 금지.
 
-[설치·복구](docs/INSTALL.md) · [운영지침](skills/joedesign/SKILL.md) ·
-[실행 설정](skills/joedesign/references/execution.md) · [변경 이력](CHANGELOG.md) ·
-[검증 기록과 한계](docs/VALIDATION.md)
+[빠른 시작](docs/QUICKSTART.md) · [보안](SECURITY.md) · [설치·복구](docs/INSTALL.md) · [운영지침](skills/joedesign/SKILL.md) ·
+[실행 설정](skills/joedesign/references/execution.md) · [변경 이력](CHANGELOG.md) · [검증 기록과 한계](docs/VALIDATION.md)
