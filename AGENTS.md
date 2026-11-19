@@ -86,7 +86,7 @@
 - 추가(2026-11-18, 부모 세션 위임 과제 "1.3.4 행동 시험", 사용자 승인 "1.3.4 행동 시험 4회 시작" 중 4회 + 채점 1): 장면 M-L(장면 M + TASK.md 예전 보고, 괄호 없는 `rendered`) × 1.3.4 × 4, Opus 한 턴 순차, 블라인드 채점 1(part20/behavior-ab/).
   올바른 보고 4/4, 1.3.4 R7 오탐 0/4, 거짓 `rendered` 0, `--verify` 4/4, 허용 경로 `rendered (own css)` 4/4(문장 경로 0, 행동 미시험), v1.3.3 대조 R7 0/4. 누출 0, 하네스 저장 파일 읽기 1(r02), 배치 순서 = 실행 순서(behavior-ab/incidents.txt).
 - 추가(2026-11-19, 부모 세션 위임 과제 "JOEDESIGN 2.0.0 준비", 사용자 승인 범위 A 위생·B 보안·C 문서): 무참조 docs 4개 삭제, v02-operational-validation-v1 52개를 evals/archive/2026-11-19-unreferenced/로 이동,
-  식별자 15개 파일 마스킹(남은 38개는 테스트·기록이 해시 고정), SECURITY.md, docs/QUICKSTART.md, README 절반 축약, VERSION 2.0.0(스킬 폴더 유일 변경). node 44/44, python 142 OK, part19 회귀 동일(evals/v2-release-20261119/report.md). 푸시·태그·Release·설치는 부모 세션.
+  식별자 15개 파일 마스킹(남은 38개는 테스트·기록이 해시 고정), SECURITY.md, docs/QUICKSTART.md, README 절반 축약, VERSION 2.0.0(스킬 폴더 유일 변경). node 44/44, python 142 OK, part19 회귀 동일(evals/v2-release-20261119/report.md). 사용자 승인("게시 ㄱㄱ", 부모 세션이 직접 받음) 뒤 태그 v2.0.0·Release·개인 설치(evals/v2-release-20261119/install-receipt.md).
 - 완료 순서: 로컬 커밋 → Manager 검토 → 푸시. 태그·Release·개인 설치는 별도 사용자 승인.
 
 ## T042 README 영어 기본화 (2026-10-13, 현재)
