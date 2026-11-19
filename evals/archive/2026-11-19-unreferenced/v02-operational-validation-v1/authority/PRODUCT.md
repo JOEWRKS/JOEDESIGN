@@ -1,6 +1,6 @@
 # BIO/02 Product authority for the operational validation
 
-Project: `C:/Users/tjdwo/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted`
+Project: `~/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted`
 
 Canonical Product/UX/IA source: project-root `BIO02_CODEX_MASTER_HANDOFF_V1.md`, which identifies itself as the authoritative consolidated handoff. Project-root `DESIGN.md` (APPROVED Revision 1, commit `a7de6e82a7b6e12d73dd14b8ba6ef8d0c26ff2af`) points to that handoff for Product/UX authority and governs design intent. The project's `AGENTS.md` supplies repository workflow guidance, not replacement Product meaning. Later plans and proof implementations are implementation/history, not new Product authority.
 

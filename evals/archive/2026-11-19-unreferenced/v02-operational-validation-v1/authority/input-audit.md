@@ -6,7 +6,7 @@ exact approval scope. No synthetic authority or substitute asset was created.
 
 | Required preflight input | Current finding |
 | --- | --- |
-| Project path | `C:/Users/tjdwo/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted` exists |
+| Project path | `~/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted` exists |
 | Branch / HEAD | `codex/bio02-living-atlas` / `20da3d15c92c4c6b0786a3b7e76c460e2506d5f1` |
 | Design authority | Root `DESIGN.md` exists; APPROVED Revision 1 at `a7de6e82a7b6e12d73dd14b8ba6ef8d0c26ff2af` |
 | Approved PNGs | KF-01/02/03 desktop and mobile all exist and match the approval-record SHA-256 values; local unchanged copies are in `originals/` |

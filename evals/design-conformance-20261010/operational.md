@@ -8,7 +8,7 @@ push or release was changed by this JOEDESIGN task.
 
 ## Single-core installation
 
-Installed `C:/Users/tjdwo/.codex/skills/joedesign`, version **0.3.0-dev**:
+Installed `~/.codex/skills/joedesign`, version **0.3.0-dev**:
 28 distributable source files match by hash; staged and installed `version`/`doctor`
 succeed. Global and repository-local old core/Harness directories were moved out
 of discovery, including the personal eight-line Harness bridge. 59 original files

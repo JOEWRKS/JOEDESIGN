@@ -1,10 +1,10 @@
-import { chromium } from "file:///C:/Users/tjdwo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+import { chromium } from "file:///~/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
 import assert from "node:assert/strict"
 import { fileURLToPath } from "node:url"
 import path from "node:path"
 import sharp from "sharp"
 
-const browser = await chromium.launch({ executablePath: "C:/Users/tjdwo/.cache/puppeteer/chrome/win64-152.0.7977.75/chrome-win64/chrome.exe", headless: true })
+const browser = await chromium.launch({ executablePath: "~/.cache/puppeteer/chrome/win64-152.0.7977.75/chrome-win64/chrome.exe", headless: true })
 const output = path.dirname(fileURLToPath(import.meta.url))
 async function open(page) {
   await page.goto("http://127.0.0.1:8547/#/", {waitUntil:"networkidle"})

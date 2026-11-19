@@ -1,9 +1,9 @@
-import { chromium } from "file:///C:/Users/tjdwo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
+import { chromium } from "file:///~/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright/index.mjs"
 import path from "node:path"
 
 const output = path.dirname(new URL(import.meta.url).pathname).replace(/^\/([A-Z]:)/i, "$1")
 const browser = await chromium.launch({
-  executablePath: "C:/Users/tjdwo/.cache/puppeteer/chrome/win64-152.0.7977.75/chrome-win64/chrome.exe",
+  executablePath: "~/.cache/puppeteer/chrome/win64-152.0.7977.75/chrome-win64/chrome.exe",
   headless: true,
 })
 const prefix = process.argv[2] ?? "final"

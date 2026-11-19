@@ -313,15 +313,15 @@ validator는 에이전트가 쓴 최종 verdict를 입력 정답으로 쓰지 �
 
 ## 12. 검토한 로컬 소스
 
-- C:/Users/tjdwo/.codex/skills/joedesign/SKILL.md
-- C:/Users/tjdwo/.agents/skills/impeccable/SKILL.md
-- C:/Users/tjdwo/.agents/skills/impeccable/reference/polish.md
-- C:/Users/tjdwo/.agents/skills/impeccable/reference/audit.md
-- C:/Users/tjdwo/.codex/skills/ui-ux-pro-max/SKILL.md
-- C:/Users/tjdwo/.codex/skills/ui-ux-pro-max/references/quick-reference.md
-- C:/Users/tjdwo/.codex/skills/web-design-guidelines/SKILL.md
-- C:/Users/tjdwo/.codex/skills/react-best-practices/SKILL.md
-- C:/Users/tjdwo/.codex/skills/optimize-web-animations/SKILL.md
+- ~/.codex/skills/joedesign/SKILL.md
+- ~/.agents/skills/impeccable/SKILL.md
+- ~/.agents/skills/impeccable/reference/polish.md
+- ~/.agents/skills/impeccable/reference/audit.md
+- ~/.codex/skills/ui-ux-pro-max/SKILL.md
+- ~/.codex/skills/ui-ux-pro-max/references/quick-reference.md
+- ~/.codex/skills/web-design-guidelines/SKILL.md
+- ~/.codex/skills/react-best-practices/SKILL.md
+- ~/.codex/skills/optimize-web-animations/SKILL.md
 
 외부 규칙 검토: https://github.com/vercel-labs/web-interface-guidelines/blob/main/command.md (이 대화의 2026-09-28 조회 내용).
 UI UX Pro Max 설치 소스 commit: 09170eec67eefd46a7ae85de61b40c194020f997.

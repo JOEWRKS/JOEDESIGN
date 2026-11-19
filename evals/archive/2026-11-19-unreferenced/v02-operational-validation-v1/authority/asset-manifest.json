@@ -1,5 +1,5 @@
 {
-  "projectRoot": "C:/Users/tjdwo/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted",
+  "projectRoot": "~/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted",
   "method": "Approved PNG → unchanged proof source/component/CSS → import, image URL and srcSet references → repository asset existence and SHA-256",
   "assets": [
     {"path": "public/assets/bio02-scientific-system-mobile-far-780.webp", "evidenceCopy": "assets/bio02-scientific-system-mobile-far-780.webp", "usedBy": ["KF-01"], "type": "image/webp", "exists": true, "sha256": "0f75800bb95da0a49e9f0066664ca0730f76fe058161ae36b2323e99e126088a"},

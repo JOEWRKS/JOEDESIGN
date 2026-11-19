@@ -1,6 +1,6 @@
 # Approved visual authority — static BIO/02 keyframes only
 
-Project root: `C:/Users/tjdwo/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted`
+Project root: `~/Documents/포폴만들기/bio02-medical-site/.worktrees/bio02-gate-b-accepted`
 
 Design contract: root `DESIGN.md`, APPROVED Revision 1, commit `a7de6e82a7b6e12d73dd14b8ba6ef8d0c26ff2af`. Each proof below is scoped preservation evidence, not a second project-wide authority. All six files exist; each matches the SHA-256 stated in its approval record. The approval commits exist and the corresponding `src/proofs/kf-0N` source has no diff from its approval commit at the user-named HEAD.
 

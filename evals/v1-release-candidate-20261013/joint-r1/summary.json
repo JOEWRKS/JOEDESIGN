@@ -4,7 +4,7 @@
       "case": "P01-no-transition",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01",
         "--baseline",
@@ -77,7 +77,7 @@
       "case": "P01-reviewed-visual",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01",
         "--baseline",
@@ -183,7 +183,7 @@
       "case": "P01-no-acceptance",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01",
         "--baseline",
@@ -289,7 +289,7 @@
       "case": "P01-missing-review-pin",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01",
         "--baseline",
@@ -337,7 +337,7 @@
       "case": "P01-tampered-impact-pin",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01",
         "--baseline",
@@ -435,7 +435,7 @@
       "case": "P01-changed-runtime",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\v1-release-candidate-20261013\\joint-r1\\P01\\changed-runtime",
         "--baseline",
@@ -532,7 +532,7 @@
       "command": [
         "C:\\Python314\\python.exe",
         "-B",
-        "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\scripts\\harness_cli.py",
+        "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\scripts\\harness_cli.py",
         "inspect-impact",
         "--project",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P01",
@@ -557,7 +557,7 @@
       "case": "P02-no-transition",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
         "--baseline",
@@ -630,7 +630,7 @@
       "case": "P02-reviewed-visual",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
         "--baseline",
@@ -736,7 +736,7 @@
       "case": "P02-no-acceptance",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
         "--baseline",
@@ -842,7 +842,7 @@
       "case": "P02-missing-review-pin",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
         "--baseline",
@@ -890,7 +890,7 @@
       "case": "P02-tampered-impact-pin",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
         "--baseline",
@@ -988,7 +988,7 @@
       "case": "P02-changed-runtime",
       "command": [
         "node",
-        "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
+        "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs",
         "--root",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\v1-release-candidate-20261013\\joint-r1\\P02\\changed-runtime",
         "--baseline",
@@ -1085,7 +1085,7 @@
       "command": [
         "C:\\Python314\\python.exe",
         "-B",
-        "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\scripts\\harness_cli.py",
+        "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\scripts\\harness_cli.py",
         "inspect-impact",
         "--project",
         "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\P02",
@@ -1110,9 +1110,9 @@
   "passed": 14,
   "total": 14,
   "source_pins": {
-    "C:\\Users\\tjdwo\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\scripts\\harness_cli.py": "a4b7a5597ca2fb7df1209cabe78b781569a2ac4f9d910258d060844a93024e8e",
-    "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs": "7ad13a9020a57aa0a6396348f8575229d7cac076a5d5a6c89178d26c3b6d9bd2",
-    "C:\\Users\\tjdwo\\.codex\\skills\\joeness-setup\\scripts\\impact-review.mjs": "9cd8359daae4e0f68bcab688ae831e43d81a0b98bcb8ca10ed65a63d0e70cbc8"
+    "~\\AppData\\Local\\Temp\\joedesign-v1-install-nlomhc2x\\ps7-fresh\\codex\\skills\\joedesign\\scripts\\harness_cli.py": "a4b7a5597ca2fb7df1209cabe78b781569a2ac4f9d910258d060844a93024e8e",
+    "~\\.codex\\skills\\joeness-setup\\scripts\\review-gate.mjs": "7ad13a9020a57aa0a6396348f8575229d7cac076a5d5a6c89178d26c3b6d9bd2",
+    "~\\.codex\\skills\\joeness-setup\\scripts\\impact-review.mjs": "9cd8359daae4e0f68bcab688ae831e43d81a0b98bcb8ca10ed65a63d0e70cbc8"
   },
   "fixtures_unchanged": {
     "D:\\JOEWRKS\\JOEDESIGN\\.local\\f05-impact-20261013\\real-v1\\summary.json": "50e05475625d93fdf3b817cf7ce2a3fda55a0b23850ea2ff4a0fa067bb6141e5",

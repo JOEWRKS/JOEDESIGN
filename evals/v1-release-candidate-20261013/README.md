@@ -41,17 +41,17 @@ GitHub repository links confirmed from the actual remotes of JOEFLOW/JOENESS.
 
 - Python 3.14.5: `python -B -m unittest discover -s tests -v` — 142 PASS,
   70.695 seconds, exit0, no skips. [Full output](python-regression.txt).
-  `JOEDESIGN_PLAYWRIGHT_MODULE=C:/Users/tjdwo/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright`
+  `JOEDESIGN_PLAYWRIGHT_MODULE=~/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright`
   and `JOEDESIGN_BROWSER_EXECUTABLE=C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe`.
 - Node v26.3.0: `node --test tests/joedesign-v02.tests.mjs` — 14 PASS, no skips,
   exit0. [Full output](node-regression.txt). This is historical evidence integrity.
-- `python -B evals/v1-release-candidate-20261013/verify-install.py --ps7 C:/Users/tjdwo/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe --output .local/v1-release-candidate-20261013/install-r1`
+- `python -B evals/v1-release-candidate-20261013/verify-install.py --ps7 ~/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/powershell/pwsh.exe --output .local/v1-release-candidate-20261013/install-r1`
   — 8/8 PASS. Each PowerShell version covered new explicit CODEX_HOME, default-home
   fallback, existing-core refusal and legacy-harness refusal. All four installed
   packages contain the exact 30 source files. Missing real specialist dependencies
   return exit2 and ready=false. Local documentation links also resolve.
   [Manifest, paths and results](install-r1/summary.json); raw shell output alongside.
-- `python -B evals/f05-impact-20261013/verify-joint.py --producer C:/Users/tjdwo/AppData/Local/Temp/joedesign-v1-install-nlomhc2x/ps7-fresh/codex/skills/joedesign/scripts/harness_cli.py --gate C:/Users/tjdwo/.codex/skills/joeness-setup/scripts/review-gate.mjs --owner-run D:/JOEWRKS/작업하네스/evals/joeness-setup/runs/2026-10-13-impact-review/limited-installed.json --output .local/v1-release-candidate-20261013/joint-r1`
+- `python -B evals/f05-impact-20261013/verify-joint.py --producer ~/AppData/Local/Temp/joedesign-v1-install-nlomhc2x/ps7-fresh/codex/skills/joedesign/scripts/harness_cli.py --gate ~/.codex/skills/joeness-setup/scripts/review-gate.mjs --owner-run D:/JOEWRKS/작업하네스/evals/joeness-setup/runs/2026-10-13-impact-review/limited-installed.json --output .local/v1-release-candidate-20261013/joint-r1`
   — 14/14 PASS. [Exact commands, outputs and runtime pins](joint-r1/summary.json).
   Both P01/P02 require reviewed transition pins; stale/no transition, no acceptance,
   missing review pin, tampered impact pin and changed runtime are refused. No new
