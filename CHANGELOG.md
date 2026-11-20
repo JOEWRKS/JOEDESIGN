@@ -13,6 +13,12 @@
 - 문서: 공개 저장소라 로그인이 필요 없다(D1, QUICKSTART·README·INSTALL, SECURITY.md 공개 전제 한 줄). INSTALL에 백업·해시 비교 PowerShell 블록을 넣고 QUICKSTART가 그 자리를 가리킨다(D3). 업데이트는 `main` 복제본이 전제이고, 태그·detached 복제본은 `git fetch --tags; git checkout v2.0.1`을 쓴다(D4). 3절에 DESIGN.md·참고 화면이 없을 때 할 일 한 줄(D5).
 - 버전: `skills/joedesign/VERSION` 2.0.1, README·QUICKSTART·INSTALL 표기.
 - **연동 D3은 절차로 해결했다**(사용자 결정 "3번 절차로", 부모 세션이 전달. JOENESS review-gate.md에도 같은 문장이 들어간다). DESIGN `Result` 열 갱신이 authority 기준선을 stale로 만드는 문제다. JOENESS `assets/DESIGN.md:13`과 `assets/AGENTS.md:24-25`는 Result 갱신을 요구하고, JOEDESIGN `references/conformance.md:89-90`은 DESIGN 바이트를 고정한다. `references/conformance.md` authority 설명에 한 문장을 넣었다. JOENESS 연결 프로젝트에서 과업 완료 뒤 Result 칸 갱신으로 기준선이 stale이 되는 것은 정상이고, 다음 과업의 검수가 기준선을 새로 세운다. 같은 과업을 다시 검수하려면 Result 칸을 갱신 전 바이트로 되돌린 뒤 돌리고 다시 갱신한다. 코드(`conformance.py`의 authority 해시 범위)는 바꾸지 않았다.
+- **연동 D8은 템플릿 정렬로 고쳤다**(사용자 "전부 고친 다음에 게시", 부모 세션이 전달. 행동 시험 없음). JOENESS 1.4.2는 JOENESS 파일이 먼저 있으면 그 `## Rule coverage` 표(8열, Result 포함)를 DESIGN 규칙 표로 정했다(JOENESS `assets/DESIGN.md:10-19`). 그래서 `templates/DESIGN.md`를 그 모양에 맞췄다.
+  - 표 제목은 `## Rule Coverage`에서 `## Rule coverage`로 바꿨다. 앵커 `#rule-coverage`는 같다.
+  - 표에 `Result` 열을 더해 JOENESS와 같은 8열이 됐다. 설명에 "Result links the latest TASK entry; no copied log"를 넣었다.
+  - 머리줄은 JOENESS의 `Authority / version:`·`Approved scope:` 두 줄을 먼저 두고, 그 아래에 `**Status:**`·`**Revision:**`·`**Product Authority:**`를 남겼다. 맨 위 `**Reporting:**` 안내 줄(1.2.1)은 자리를 그대로 뒀다.
+  - Report Form은 DESIGN.md에 둔다. `references/conformance.md`에 "JOENESS AGENTS 블록에도 같은 보고 규칙이 있고, DESIGN.md의 Report Form이 원본"이라는 한 문장을 넣었다.
+  - `SKILL.md` 본문은 바꾸지 않았다. SKILL.md 109줄의 열 나열(rule → … → unmeasured)은 최소 기록이라 Result 열을 적지 않는다.
 
 ### 확인된 것
 
@@ -24,14 +30,14 @@
 
 ### 확인되지 않은 것
 
-- **행동 시험 0회.** Report Form 스타일시트 확인 문장과 D3 절차 문장이 에이전트 측정 행동을 바꾸는지 시험하지 않았다. 문서 변경(D1~D5)도 다시 따라 해 보는 시험은 하지 않았다.
+- **행동 시험 0회.** Report Form 스타일시트 확인 문장, D3 절차 문장, D8 템플릿 정렬이 에이전트 측정 행동을 바꾸는지 시험하지 않았다. 문서 변경(D1~D5)도 다시 따라 해 보는 시험은 하지 않았다.
 - JOENESS `review-gate.mjs`가 새 상대 경로 영수증을 실제로 통과시키는지는 실행해 보지 않았다(코드 읽기만 함).
 - `git fetch --tags; git checkout v2.0.1`은 태그가 아직 없어 실행하지 않았다.
 - macOS·Linux에서 `CODEX_HOME` 동작.
 
-### 알려진 충돌 (고치지 않음, 사용자 결정 대기)
+### 알려진 충돌
 
-- **연동 D8: DESIGN.md 머리줄·표 제목 형식 차이.** JOENESS `assets/DESIGN.md:3-8`은 `Authority / version:`·`Approved scope:` 줄과 `## Rule coverage`(8열, Result 포함)를 쓴다. JOEDESIGN `templates/DESIGN.md:5-7`은 `**Status:** DRAFT`·`**Revision:**`·`**Product Authority:**`, 36줄 `## Rule Coverage`(7열)를 쓴다. 앵커는 둘 다 `#rule-coverage`다. JOEDESIGN `SKILL.md:193`은 Report Form도 DESIGN.md에 두라고 하고, JOENESS SKILL 소유 표는 작업 규칙을 AGENTS 몫으로 둔다. JOENESS 쪽 줄 번호는 연동 보고에서 옮겼다. 이 세션은 JOENESS 파일을 열지 않았다.
+- 없음. 연동 D3과 D8은 2.0.1에서 고쳤다(위 "바뀐 것").
 
 ### 세션이 대신 내린 결정
 

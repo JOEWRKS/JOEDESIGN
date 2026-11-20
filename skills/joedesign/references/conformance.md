@@ -66,6 +66,8 @@ line with it, so `--verify` on the saved text can confirm it later. The template
 Report Form section carries this form in DESIGN.md into sessions without this skill,
 and it alone sets the order of the report's parts (JOENESS six lines, results list,
 explanation, stamp); the script flags a results line placed above the six lines.
+In a JOENESS-connected project the same reporting rule also appears in the JOENESS
+AGENTS block; DESIGN.md's Report Form is the original, and the AGENTS copy follows it.
 The script reads the form of the text, not the truth of a number.
 
 ## Fix the required scope before implementation

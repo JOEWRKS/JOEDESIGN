@@ -8,7 +8,7 @@
   예시 행과 retrieve 행 모양 오류(연동 D7), Report Form 스타일시트 확인 한 문장(연동 D9), `--skills-root` 대체 문구(D2), 문서 D1·D3·D4·D5, VERSION 2.0.1.
   CHANGELOG 2.0.1, 준비 보고 evals/v2-tests-20261119/report-201.md.
 - 연동 D3(Result 갱신 ↔ authority stale)은 사용자 결정("3번 절차로", 부모 세션 전달)에 따라 conformance.md 절차 문장으로 해결했다. 코드는 바꾸지 않았다.
-- 고치지 않음: D8(DESIGN 머리줄·표 제목 형식). 사용자 결정 대기, CHANGELOG "알려진 충돌"에 근거를 적었다.
+- 연동 D8(DESIGN 머리줄·표 제목 형식)은 사용자 지시("전부 고친 다음에 게시", 부모 세션 전달)에 따라 templates/DESIGN.md를 JOENESS 8열 표·머리줄에 맞췄다. SKILL.md는 그대로 뒀다.
 - 게이트: node 44/44, python 147 OK(건너뜀 2), part19 회귀 동일, 행동 시험 0회.
 - 완료 순서: 로컬 커밋까지. push·태그·Release·개인 설치는 부모 세션이 재검증 뒤 사용자 승인을 받아 한다.
 

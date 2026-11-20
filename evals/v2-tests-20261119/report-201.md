@@ -1,6 +1,6 @@
 # JOEDESIGN 2.0.1 후보 준비 (2026-11-20, T044)
 
-**결론:** 2.0.0 시험 보고 두 건에서 JOEDESIGN 몫 결함을 모두 재현하고 고쳤다. 커밋은 main에 로컬로 4개 했다(push·태그·Release·설치 없음). 코드 결함 3건은 T1 `doctor`가 `CODEX_HOME`을 무시함, 연동 D5 영수증의 절대 evidence 경로, 연동 D7 intent 행 모양 오류다. 셋 다 고치기 전에 실패하는 테스트를 먼저 만들고 확인했다. 문서 결함은 D1~D5와 연동 D9를 고쳤다. 연동 D3은 사용자 결정("3번 절차로")에 따라 `references/conformance.md`에 절차 문장 하나를 넣어 해결했다(코드 변경 없음). D8은 고치지 않고 [CHANGELOG 2.0.1](../../CHANGELOG.md) "알려진 충돌"에 적었다. 행동 시험은 0회다.
+**결론:** 2.0.0 시험 보고 두 건에서 JOEDESIGN 몫 결함을 모두 재현하고 고쳤다. 커밋은 main에 로컬로 5개 했다(push·태그·Release·설치 없음). 코드 결함 3건은 T1 `doctor`가 `CODEX_HOME`을 무시함, 연동 D5 영수증의 절대 evidence 경로, 연동 D7 intent 행 모양 오류다. 셋 다 고치기 전에 실패하는 테스트를 먼저 만들고 확인했다. 문서 결함은 D1~D5와 연동 D9를 고쳤다. 연동 D3은 사용자 결정("3번 절차로")에 따라 `references/conformance.md`에 절차 문장 하나를 넣어 해결했다(코드 변경 없음). D8은 사용자 지시("전부 고친 다음에 게시")에 따라 `templates/DESIGN.md`를 JOENESS 모양에 맞춰 고쳤다([CHANGELOG 2.0.1](../../CHANGELOG.md)). 행동 시험은 0회다.
 
 입력(복사본, 홈 경로·사용자 이름 가림): [QUICKSTART 실행 시험](docs-joedesign-report.md), [세 도구 연동 시험](integration-report.md).
 
@@ -18,7 +18,7 @@
 | D5 기준 문서 없을 때 | 문서 확인 | QUICKSTART 3절 한 줄 | 문서 |
 | 연동 D9 스타일시트 로드 확인 | 문서 확인(측정 전 확인 단계 없음) | `templates/DESIGN.md` Report Form 한 문장 | 행동 시험 0회 |
 | 연동 D3 Result 갱신 ↔ authority stale | 연동 log/24·25(시험 보고) | 사용자 결정 "3번 절차로": `references/conformance.md` authority 설명에 절차 문장(완료 뒤 stale은 정상, 다음 과업이 새 기준선, 같은 과업 재검수는 Result를 되돌린 뒤). `conformance.py` 그대로 | 문서. 행동 시험 0회 |
-| 연동 D8 | 고치지 않음 | CHANGELOG "알려진 충돌"에 양쪽 파일·줄 근거 | — |
+| 연동 D8 DESIGN.md 머리줄·표 형식 차이 | JOENESS `assets/DESIGN.md` 읽기만(3–8행 머리줄, 10–19행 8열 표, 13행 Result) | 템플릿 정렬: `## Rule coverage`, Result 열을 더한 8열, JOENESS 머리줄 두 줄을 위에 두고 JOEDESIGN 세 줄 유지, conformance.md에 "Report Form은 DESIGN.md가 원본" 한 문장. SKILL.md 그대로 | 템플릿 문구를 고정한 테스트 없음(v02 테스트는 보관본 템플릿만 읽음), report-check는 템플릿을 읽지 않음. 게이트 재실행. 행동 시험 0회 |
 
 ## JOENESS 소비자 확인 (읽기만)
 
@@ -43,7 +43,7 @@
 
 ## 확인되지 않은 것
 
-- 행동 시험 0회: Report Form의 스타일시트 확인 문장, conformance.md의 D3 절차 문장, 문서 D1~D5를 실제 사용자 경로로 다시 따라 하기.
+- 행동 시험 0회: Report Form의 스타일시트 확인 문장, conformance.md의 D3 절차 문장, D8 템플릿 정렬, 문서 D1~D5를 실제 사용자 경로로 다시 따라 하기.
 - review-gate 실행(읽기만 함). macOS·Linux `CODEX_HOME`. 태그 체크아웃 명령.
 
 ## 세션이 대신 내린 결정

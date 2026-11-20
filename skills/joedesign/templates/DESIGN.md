@@ -2,6 +2,8 @@
 
 **Reporting:** follow the `## Report Form` section below exactly (보고는 `## Report Form` 절을 그대로 따른다).
 
+Authority / version: <approved source/section and revision, or undecided>.
+Approved scope: <screens/states/platforms and approval proof, or none>.
 **Status:** DRAFT
 **Revision:** 1
 **Product Authority:** <pointer>
@@ -33,7 +35,7 @@ at every size. A part with no row has no token claim. Status per row: measured
 | Role | Parts | Token / value | Status |
 | --- | --- | --- | --- |
 
-## Rule Coverage
+## Rule coverage
 
 <!-- Required whenever this file states a measurable rule. One row per rule: which
 check (script/command or manual observation) measures it, on which layouts, sizes
@@ -48,14 +50,14 @@ quantity the rule names. Fill the Spot check cell in every row with
 spot-checked, and one row's spot check does not cover another row. When a result is
 quoted elsewhere (report, ROADMAP), quote it with this row's layouts, sizes and
 states, and with "not spot-checked" when that is the row's state; such a result is
-not listed as resolved or verified. -->
+not listed as resolved or verified. Result links the latest TASK entry; no copied log. -->
 
-| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured |
-| --- | --- | --- | --- | --- | --- | --- |
+| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+| --- | --- | --- | --- | --- | --- | --- | --- |
 
 ## Report Form
 
-Any session that changes a file listed in Rule Coverage, with or without JOEDESIGN
+Any session that changes a file listed in Rule coverage, with or without JOEDESIGN
 loaded, reports design-check results in one list, one line per check that ran:
 `check | result | sizes x states, mode | rendered or code | spot check` (the row's
 Spot check cell, or "not spot-checked"). The fourth cell is `code`, `rendered`, or
