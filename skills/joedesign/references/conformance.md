@@ -88,6 +88,10 @@ Baseline is a JSON file with schema `joeness.review-baseline.v1`:
 - `scope_id`, `authorization_ref`: the actual affected outcome and scope/approval locator.
 - `authority`: nonempty `{path,sha256}` list of current project-relative DESIGN/approved
   source files. Changed source bytes invalidate this baseline until reviewed.
+  In a JOENESS-connected project, updating the DESIGN.md Result cell after a task
+  completes makes this baseline stale; that is expected, and the next task's review
+  sets a new baseline. To re-review the same task, restore the Result cell to its
+  pre-update bytes, run the review, then update it again.
 - `targets`: the exact current intent target objects (route, state, viewport etc.).
 - `rules`: `{id,source_ref,target_ids,methods}` list, methods `geometry`/`specialist`.
   This independently reviewed inventory defines coverage; every rule/target/method
