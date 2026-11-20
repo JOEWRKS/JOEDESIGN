@@ -1,6 +1,6 @@
 # JOEDESIGN repository
 
-## T044 2.0.1 후보: 2.0.0 시험 결함 수정 (2026-11-20, 현재)
+## T044 2.0.1: 2.0.0 시험 결함 수정 (2026-11-20, 현재)
 
 - 지시: 부모 세션 위임 과제 "JOEDESIGN 2.0.1 후보", 사용자 승인 "세 도구 2.0.1 시작"(부모 세션이 받음). 입력은 2.0.0 시험 보고 두 건
   (evals/v2-tests-20261119/docs-joedesign-report.md, integration-report.md). JOENESS·JOEFLOW 2.0.1은 다른 세션이 맡는다.
@@ -10,6 +10,7 @@
 - 연동 D3(Result 갱신 ↔ authority stale)은 사용자 결정("3번 절차로", 부모 세션 전달)에 따라 conformance.md 절차 문장으로 해결했다. 코드는 바꾸지 않았다.
 - 연동 D8(DESIGN 머리줄·표 제목 형식)은 사용자 지시("전부 고친 다음에 게시", 부모 세션 전달)에 따라 templates/DESIGN.md를 JOENESS 8열 표·머리줄에 맞췄다. SKILL.md는 그대로 뒀다.
 - 게이트: node 44/44, python 147 OK(건너뜀 2), part19 회귀 동일, 행동 시험 0회.
+- 게시: 사용자 승인("세 도구 게시", 2026-11-20, 부모 세션이 직접 받음) 뒤 태그 v2.0.1·Release·개인 설치(evals/v2-tests-20261119/install-receipt-201.md). 부모 세션이 JOENESS 2.0.1 게이트가 상대 경로 영수증을 allowed로 소비하는 것을 연동 시험 프로젝트 사본에서 확인했다.
 - 완료 순서: 로컬 커밋까지. push·태그·Release·개인 설치는 부모 세션이 재검증 뒤 사용자 승인을 받아 한다.
 
 ## T043 검사 범위 표 보강 (2026-11-04, 현재)

@@ -1,6 +1,8 @@
 # JOEDESIGN 업데이트 내역
 
-## 2.0.1 — 후보 (미게시) (2026-11-20, T044)
+## 2.0.1 — 2.0.0 시험 결함 수정: doctor 경로·영수증 상대 경로·템플릿 정렬·문서 (2026-11-20, T044)
+
+- 게시: 사용자 승인("세 도구 게시", 2026-11-20, 부모 세션이 직접 받음) 뒤 태그 v2.0.1, GitHub Release, 개인 설치 갱신(영수증 evals/v2-tests-20261119/install-receipt-201.md). 릴리스 노트 [release-notes-v2.0.1.md](evals/v2-tests-20261119/release-notes-v2.0.1.md).
 
 출처: 2.0.0 시험 두 건([QUICKSTART 실행 시험](evals/v2-tests-20261119/docs-joedesign-report.md), [세 도구 연동 시험](evals/v2-tests-20261119/integration-report.md)). 사용자 승인 "세 도구 2.0.1 시작"(부모 세션이 받음). 준비 보고: [report-201.md](evals/v2-tests-20261119/report-201.md).
 
