@@ -1,5 +1,46 @@
 # JOEDESIGN 업데이트 내역
 
+## 2.0.1 — 후보 (미게시) (2026-11-20, T044)
+
+출처: 2.0.0 시험 두 건([QUICKSTART 실행 시험](evals/v2-tests-20261119/docs-joedesign-report.md), [세 도구 연동 시험](evals/v2-tests-20261119/integration-report.md)). 사용자 승인 "세 도구 2.0.1 시작"(부모 세션이 받음). 준비 보고: [report-201.md](evals/v2-tests-20261119/report-201.md).
+
+### 바뀐 것
+
+- `doctor` 기본 탐색 경로가 `CODEX_HOME`을 따른다(T1): `$CODEX_HOME/skills`, 없으면 `~/.codex/skills`. `~/.agents/skills`와 패키지 형제 폴더는 그대로. `--skills-root`는 여전히 기본 경로를 **대체**하며 반복 지정할 수 있다. 이 사실을 `--help`, QUICKSTART 2절, INSTALL 표에 적었다(D2). "추가" 옵션은 만들지 않았다.
+- `verify-design` 영수증(`joedesign.conformance.v1`)의 evidence 경로: `--project` 안의 파일은 프로젝트 기준 `/` 상대 경로로 쓴다(연동 D5). 프로젝트 밖(격리된 실행 폴더)은 절대 경로로 남는다. 이 경우 소비자 쪽에서 evidence root를 따로 허용해야 한다. 2.0.0의 절대 경로 영수증도 계속 읽힌다. schema 이름은 그대로다.
+- `retrieve`에 객체가 아닌 requirements를 주면 `string indices…` 대신 `INVALID_INTENT: … {"id", "kind": "content|action|state", "description"}`로 `NOT_READY`(종료 코드 1)가 난다. `validate_intent`의 "list of objects" 오류에도 requirements·constraints·targets의 행 모양을 붙였다(연동 D7). `templates/DESIGN_INTENT.json`에 requirement 1행과 target 1행 예시를 넣었다.
+- 스킬 본문 한 문장(`templates/DESIGN.md` Report Form): rendered 측정 전에 페이지의 링크 스타일시트가 실제로 로드됐는지(`document.styleSheets` 길이와 포함 여부) 확인한다. 없으면 그 측정은 `rendered`가 아니다(연동 D9). `references/conformance.md` 영수증 절에 상대 경로 한 문장.
+- 문서: 공개 저장소라 로그인이 필요 없다(D1, QUICKSTART·README·INSTALL, SECURITY.md 공개 전제 한 줄). INSTALL에 백업·해시 비교 PowerShell 블록을 넣고 QUICKSTART가 그 자리를 가리킨다(D3). 업데이트는 `main` 복제본이 전제이고, 태그·detached 복제본은 `git fetch --tags; git checkout v2.0.1`을 쓴다(D4). 3절에 DESIGN.md·참고 화면이 없을 때 할 일 한 줄(D5).
+- 버전: `skills/joedesign/VERSION` 2.0.1, README·QUICKSTART·INSTALL 표기.
+- **연동 D3은 절차로 해결했다**(사용자 결정 "3번 절차로", 부모 세션이 전달. JOENESS review-gate.md에도 같은 문장이 들어간다). DESIGN `Result` 열 갱신이 authority 기준선을 stale로 만드는 문제다. JOENESS `assets/DESIGN.md:13`과 `assets/AGENTS.md:24-25`는 Result 갱신을 요구하고, JOEDESIGN `references/conformance.md:89-90`은 DESIGN 바이트를 고정한다. `references/conformance.md` authority 설명에 한 문장을 넣었다. JOENESS 연결 프로젝트에서 과업 완료 뒤 Result 칸 갱신으로 기준선이 stale이 되는 것은 정상이고, 다음 과업의 검수가 기준선을 새로 세운다. 같은 과업을 다시 검수하려면 Result 칸을 갱신 전 바이트로 되돌린 뒤 돌리고 다시 갱신한다. 코드(`conformance.py`의 authority 해시 범위)는 바꾸지 않았다.
+
+### 확인된 것
+
+- 고치기 전 실패를 먼저 확인했다. 새 테스트 4개(doctor `CODEX_HOME`, 상대 evidence, 읽을 수 있는 retrieve 오류, 템플릿 행 모양)가 2.0.0 코드에서 실패했다. T1은 `CODEX_HOME=<빈 폴더>`로 `doctor`를 돌려 재현했다. 실제 홈의 `~/.codex/skills`·`~/.agents/skills`가 AVAILABLE로 나왔다.
+- 고친 뒤 node 44/44, python 147 OK(건너뜀 2), part19 회귀 274개 R1~R6 수가 1.3.3·1.3.4와 같고 R7 바뀐 파일은 0이다. `harness_cli.py version`은 2.0.1이다.
+- 영향 진단(`inspect-impact`)은 상대 경로 영수증과 2.0.0식 절대 경로 영수증 둘 다에서 재사용 후보 4/4를 낸다(새 테스트).
+- JOENESS `review-gate.mjs`는 **읽기만** 해서 확인했다(실행 안 함). evidence 경로가 절대 경로이거나 안전한 상대 경로(`/` 구분, `..`·`\`·`:` 없음)이면 `--root` 기준으로 풀고 root 또는 `--evidence-root` 안에 있는지 본다(`pathFor`, 25–30줄). 새 상대 경로는 이 조건을 만족한다.
+- INSTALL 백업 블록을 scratch 폴더(`CODEX_HOME`·`USERPROFILE`을 프로세스 안에서만 바꿈)에서 실행했다. 31개 파일이 일치하면 출력이 없고, 백업 `VERSION`을 바꾸면 그 한 파일이 양쪽 표시로 나온다.
+
+### 확인되지 않은 것
+
+- **행동 시험 0회.** Report Form 스타일시트 확인 문장과 D3 절차 문장이 에이전트 측정 행동을 바꾸는지 시험하지 않았다. 문서 변경(D1~D5)도 다시 따라 해 보는 시험은 하지 않았다.
+- JOENESS `review-gate.mjs`가 새 상대 경로 영수증을 실제로 통과시키는지는 실행해 보지 않았다(코드 읽기만 함).
+- `git fetch --tags; git checkout v2.0.1`은 태그가 아직 없어 실행하지 않았다.
+- macOS·Linux에서 `CODEX_HOME` 동작.
+
+### 알려진 충돌 (고치지 않음, 사용자 결정 대기)
+
+- **연동 D8: DESIGN.md 머리줄·표 제목 형식 차이.** JOENESS `assets/DESIGN.md:3-8`은 `Authority / version:`·`Approved scope:` 줄과 `## Rule coverage`(8열, Result 포함)를 쓴다. JOEDESIGN `templates/DESIGN.md:5-7`은 `**Status:** DRAFT`·`**Revision:**`·`**Product Authority:**`, 36줄 `## Rule Coverage`(7열)를 쓴다. 앵커는 둘 다 `#rule-coverage`다. JOEDESIGN `SKILL.md:193`은 Report Form도 DESIGN.md에 두라고 하고, JOENESS SKILL 소유 표는 작업 규칙을 AGENTS 몫으로 둔다. JOENESS 쪽 줄 번호는 연동 보고에서 옮겼다. 이 세션은 JOENESS 파일을 열지 않았다.
+
+### 세션이 대신 내린 결정
+
+- 과업 번호는 T044로 새로 땄다(2.0.0까지는 T043).
+- 프로젝트 밖 evidence는 절대 경로로 남겼다. `..` 상대 경로는 review-gate의 `safeRelative`가 거부하고, `verify-design`에 `--evidence-root`를 새로 다는 것은 행동 범위를 넓히는 일이라 하지 않았다.
+- `retrieve`의 requirements가 빈 목록이면 지금처럼 허용한다(검색 전용 명령). 행 모양만 검사한다.
+- D9 문장은 `references/conformance.md`가 아니라 `templates/DESIGN.md` Report Form 측정 모드 문단에 넣었다. 그 문단이 `rendered (injected css)` 어휘를 정하는 곳이라서다.
+- 연동 D11(전문 리뷰 미실행)·D13(빈 상태 문구 소유)은 이번 과업 범위 밖이라 손대지 않았다.
+
 ## 2.0.0 — 저장소 위생·보안 검토·빠른 시작 (2026-11-19, T043)
 
 - 범위(사용자 승인): A 저장소 위생, B 보안 검토 문서, C 빠른 시작·README 축약, 버전 2.0.0. **스킬 동작은 1.3.4와 같다**: `skills/joedesign`에서 바뀐 파일은 `VERSION` 하나.
