@@ -1,5 +1,14 @@
 {
   "candidate_id": "", "revision": "", "scope_id": "", "product_source": "",
-  "requirements": [], "constraints": [], "required_axes": ["composition"],
-  "targets": [], "assets": [], "search_terms": [], "rejected_patterns": []
+  "requirements": [
+    {"id": "example-list", "kind": "content", "description": "Replace: one content, action or state the product definition requires"}
+  ],
+  "constraints": [],
+  "required_axes": ["composition"],
+  "targets": [
+    {"id": "example-wide", "route": "/", "surface": "replace-surface", "family": "replace-family",
+     "viewport": [1280, 800], "state": "default", "theme": "light", "locale": "en",
+     "required_kinds": ["render"]}
+  ],
+  "assets": [], "search_terms": [], "rejected_patterns": []
 }

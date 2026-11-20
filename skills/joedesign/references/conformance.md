@@ -190,8 +190,10 @@ exit 1 means invalid/missing input. No exit value grants exact user acceptance.
 Receipt schema is `joedesign.conformance.v1`: scope_id, baseline_sha256, results,
 unresolved, acceptance=NOT_GRANTED. Each result has check_id, target_id, method,
 criterion_sha256, status, input_fingerprint, evidence[{path,sha256}]. Extra measured
-values explain geometry verdicts. Evidence paths can be absolute in the isolated
-artifact directory; authorize that directory explicitly in the consumer.
+values explain geometry verdicts. Evidence inside `--project` is written as a
+project-relative `/` path (2.0.1; earlier receipts wrote absolute paths and still
+read); evidence in an isolated artifact directory outside it stays absolute, so
+authorize that directory explicitly in the consumer.
 
 JOENESS consumes this exact file against its independently pinned expectation,
 recomputes current inputs/evidence, and blocks the related completion lane for

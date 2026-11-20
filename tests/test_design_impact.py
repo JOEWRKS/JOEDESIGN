@@ -103,6 +103,16 @@ class ImpactTests(unittest.TestCase):
                 self.assertEqual(result['acceptance'],'NOT_GRANTED')
                 self.assertEqual(before,{p:file_hash(p) for p in self.f.root.iterdir() if p.is_file()})
 
+    def test_project_relative_and_legacy_absolute_receipt_paths_both_read(self):
+        paths=[e['path'] for r in self.f.receipt['results'] for e in r['evidence']]
+        self.assertTrue(paths and all(not Path(p).is_absolute() and '\\' not in p for p in paths),paths)
+        self.assertEqual(self.f.run()['counts']['reusable-candidate'],4)
+        # A 2.0.0 receipt recorded absolute evidence paths; it must still be read.
+        for r in self.f.receipt['results']:
+            for e in r['evidence']:e['path']=str((self.f.root/e['path']).resolve())
+        self.f.sync()
+        self.assertEqual(self.f.run()['counts']['reusable-candidate'],4)
+
     def test_missing_review_pin_and_mismatched_request_pin_fail_closed(self):
         self.assert_no_reuse(self.f.run(False))
         self.assert_no_reuse(inspect_impact(self.f.root,self.f.root/'request.json','0'*64))

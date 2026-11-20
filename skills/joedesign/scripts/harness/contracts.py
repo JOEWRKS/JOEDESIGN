@@ -18,11 +18,30 @@ def strings(value, nonempty=True):
     return isinstance(value, list) and (bool(value) or not nonempty) and all(text(v) for v in value)
 
 
+ROW_SHAPES = {
+    'requirements': '{"id", "kind": "content|action|state", "description"}',
+    'constraints': '{"id", "description"}',
+    'targets': '{"id", "route", "surface", "family", "viewport": [width, height], "state", "theme", '
+               '"locale", "required_kinds": ["render"|"interaction"|"technical"]}',
+}
+
+
 def rows(value, name, errors, nonempty=True):
     if not isinstance(value, list) or (nonempty and not value) or any(not isinstance(v, dict) for v in value):
-        errors.append(issue('INVALID_ARTIFACT', f'{name} must be a list of objects'))
+        shape = f'; each row needs {ROW_SHAPES[name]}' if name in ROW_SHAPES else ''
+        errors.append(issue('INVALID_ARTIFACT', f'{name} must be a list of objects{shape}'))
         return []
     return value
+
+
+def requirement_ids(intent):
+    """Requirement ids for read-only commands; a wrong row shape is a readable error."""
+    errors = []
+    requirements = rows(intent.get('requirements', []), 'requirements', errors, False)
+    if errors or any(not text(r.get('id')) for r in requirements):
+        raise ValueError('INVALID_INTENT: requirements must be a list of objects; each row needs '
+                         + ROW_SHAPES['requirements'] + ' (see templates/DESIGN_INTENT.json)')
+    return [r['id'] for r in requirements]
 
 
 def ids(items, name, errors):

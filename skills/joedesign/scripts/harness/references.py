@@ -46,6 +46,8 @@ def retrieve(index, intent, limit=10):
         raise ValueError('nonempty explicit search_terms required')
     if type(limit) is not int or not 1 <= limit <= 100:
         raise ValueError('limit must be 1..100; expand deliberately when needed')
+    from .contracts import requirement_ids
+    unresolved = requirement_ids(intent)
     filters = intent.get('reference_filters', {})
     ranked = []
     for item in index['references']:
@@ -55,7 +57,7 @@ def retrieve(index, intent, limit=10):
         if matches:
             output = {k: v for k, v in item.items() if k != 'search_text'}
             output.update(matched_terms=matches, fit='UNVERIFIED',
-                          unresolved_requirements=[r['id'] for r in intent.get('requirements', [])])
+                          unresolved_requirements=list(unresolved))
             ranked.append(output)
     ranked.sort(key=lambda item: (-len(item['matched_terms']), item['id']))
     return {key: intent.get(key) for key in ('candidate_id', 'revision', 'scope_id')} | {

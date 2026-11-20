@@ -56,8 +56,11 @@ def skill_sources(settings):
     names = dict(SKILL_IDS)
     names.pop('J')
     names['R'] = 'react-best-practices'
+    # Codex loads skills from $CODEX_HOME/skills when CODEX_HOME is set; follow it
+    # so the report matches the installation actually in use.
+    codex = Path(os.environ['CODEX_HOME']) if os.environ.get('CODEX_HOME') else Path.home() / '.codex'
     roots = [Path(p) for p in settings.get('skills_roots',
-             [package.parent, Path.home() / '.codex/skills', Path.home() / '.agents/skills'])]
+             [package.parent, codex / 'skills', Path.home() / '.agents/skills'])]
     result = {'J': core} if core.is_file() else {}
     for role, name in names.items():
         explicit = settings.get('skills', {}).get(role)

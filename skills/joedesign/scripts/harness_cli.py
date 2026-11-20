@@ -29,7 +29,10 @@ def main(argv=None):
     p.add_argument('--observation', type=Path, action='append', default=[])
     p.add_argument('--reviews', type=Path)
     p.add_argument('--output', type=Path)
-    p = sub.add_parser('doctor'); p.add_argument('--skills-root', type=Path, action='append')
+    p = sub.add_parser('doctor', help='Report which specialist skills are found; finding is not invocation')
+    p.add_argument('--skills-root', type=Path, action='append',
+                   help='Replaces the default roots (package siblings, $CODEX_HOME/skills or ~/.codex/skills, '
+                        '~/.agents/skills); repeat it to search several roots')
     p = sub.add_parser('init'); p.add_argument('root', type=Path); p.add_argument('--intent', type=Path, required=True)
     p = sub.add_parser('index'); p.add_argument('corpus', type=Path); p.add_argument('--output', type=Path)
     p = sub.add_parser('retrieve'); p.add_argument('index', type=Path); p.add_argument('--intent', type=Path, required=True); p.add_argument('--limit', type=int, default=10); p.add_argument('--output', type=Path)

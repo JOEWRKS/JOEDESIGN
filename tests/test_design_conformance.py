@@ -105,6 +105,20 @@ class ConformanceTests(unittest.TestCase):
         Path(names[0]).write_text('Changed pixels')
         self.assertFalse(evaluate(self.baseline,self.pin,self.project,[p])['eligible'])
 
+    def test_evidence_inside_project_is_recorded_project_relative(self):
+        work=self.project/'work';work.mkdir()
+        frame=work/'frame.txt';frame.write_text('Synthetic frame')
+        log=read_artifact(self.observation())
+        log['frames']=[str(frame)];log['frame_hashes']={str(frame):file_hash(frame)}
+        p=work/'observation.json';write_artifact(p,log,overwrite=True)
+        result=evaluate(self.baseline,self.pin,self.project,[p])
+        self.assertTrue(result['eligible'])
+        for row in result['results']:
+            self.assertEqual([e['path'] for e in row['evidence']],['work/observation.json','work/frame.txt'])
+        # Evidence outside the project stays absolute; consumers need an evidence root for it.
+        outside=evaluate(self.baseline,self.pin,self.project,[self.observation()])
+        self.assertTrue(all(Path(e['path']).is_absolute() for r in outside['results'] for e in r['evidence']))
+
     def test_unrelated_file_does_not_invalidate_scoped_inputs(self):
         before=input_fingerprint(self.project,['index.html'])
         (self.project/'unrelated.txt').write_text('independent work')

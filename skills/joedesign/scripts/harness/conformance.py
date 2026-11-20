@@ -27,6 +27,17 @@ def input_fingerprint(project, inputs):
     return hashlib.sha256(json.dumps(pairs, ensure_ascii=False, separators=(',', ':')).encode('utf-8')).hexdigest()
 
 
+def evidence_path(project, path):
+    """Project-relative POSIX path inside the project; absolute only outside it.
+
+    Receipts are committed project files, so machine paths stay out of them.
+    Evidence outside the project keeps its absolute path and needs an explicit
+    evidence root in the consumer (JOENESS review-gate --evidence-root).
+    """
+    actual, root = Path(path).resolve(), Path(project).resolve()
+    return actual.relative_to(root).as_posix() if actual.is_relative_to(root) else str(actual)
+
+
 def load_baseline(path, expected_hash, project, targets=None):
     raw = Path(path).read_bytes()
     if not expected_hash or hashlib.sha256(raw).hexdigest() != expected_hash:
@@ -128,7 +139,7 @@ def evaluate(baseline, baseline_hash, project, observations, review_path=None, t
                 if any(file_hash(p) != log.get('frame_hashes', {}).get(name)
                        for name, p in zip(log['frames'], paths[1:])):
                     raise ValueError('Rendered frame changed since observation')
-                row['evidence'] = [{'path': str(p.resolve()), 'sha256': file_hash(p)} for p in paths]
+                row['evidence'] = [{'path': evidence_path(project, p), 'sha256': file_hash(p)} for p in paths]
                 if check['method'] == 'geometry':
                     measurements = [m for m in log['design'].get('measurements', []) if m.get('check_id') == check['check_id']]
                     if len(measurements) != 1:
@@ -176,10 +187,10 @@ def evaluate(baseline, baseline_hash, project, observations, review_path=None, t
                         if not verdict.get('observed') or not set(verdict.get('evidence_ids', [])) & set(captures):
                             raise ValueError('Specialist actual evidence missing')
                     for capture in captures.values():
-                        row['evidence'].append({'path': capture['path'], 'sha256': capture['sha256']})
+                        row['evidence'].append({'path': evidence_path(project, capture['path']), 'sha256': capture['sha256']})
                     verdicts = [r.get('verdict') for r in rs + critic]
                     row['status'] = 'FAIL' if 'FAIL' in verdicts else 'PASS' if all(v == 'PASS' for v in verdicts) else 'UNVERIFIED'
-                    row['evidence'].append({'path': str(Path(review_path).resolve()), 'sha256': file_hash(review_path)})
+                    row['evidence'].append({'path': evidence_path(project, review_path), 'sha256': file_hash(review_path)})
                     reason = 'Specialist or critic finding unresolved' if row['status'] != 'PASS' else ''
             except (ValueError, OSError, KeyError, TypeError) as error:
                 row['status'], reason = 'UNVERIFIED', str(error)
