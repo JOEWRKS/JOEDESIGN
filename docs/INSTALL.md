@@ -7,7 +7,7 @@
 | 설치 단위 | `skills/joedesign/` 전체 |
 | 스킬 ID·실행 요청 | `joedesign` · `$joedesign` |
 | 버전 원본 | [VERSION](../skills/joedesign/VERSION) |
-| 2.0.0 변경 경계 | 스킬 폴더는 1.3.4와 같고 `VERSION`만 다름. 기존 JSON schema/contract 버전 및 과거 증거의 의미 유지 |
+| 2.0.1 변경 경계 | `doctor` 기본 경로의 `CODEX_HOME` 반영, 영수증 evidence 경로의 프로젝트 기준 상대화, `DESIGN_INTENT.json` 예시 행과 행 모양 오류, 측정 전 스타일시트 확인 한 문장. JSON schema/contract 버전 및 과거 증거의 의미 유지([변경 이력](../CHANGELOG.md)) |
 
 ## 최초 설치
 
@@ -16,9 +16,7 @@
 - 설치 위치: `$CODEX_HOME/skills/joedesign`.
   CODEX_HOME 미지정 시 `%USERPROFILE%/.codex/skills/joedesign`.
 - 기존 `joedesign` 또는 `joedesign-harness` 발견 시: 덮어쓰기 없이 중단.
-- 비공개 저장소 접근: 저장소 읽기 권한·GitHub 로그인 필요.
-  `git clone` 인증 오류 시 Git Credential Manager의 GitHub 로그인 연결.
-  2단계 인증은 GitHub 화면에서 직접 완료. 토큰의 채팅·저장소 파일 기입 금지.
+- 저장소 접근: 공개 저장소. `git clone`에 GitHub 로그인 불필요.
 - 설치 후 실행: Codex 새 대화에서 `$joedesign` 입력.
 - 다른 운영체제: 전체 폴더의 해당 Codex 스킬 경로 복사 가능. 위 명령은 Windows 전용.
 - 프로젝트별 설치: 해당 호스트의 실제 검색 경로 확인 후 적용.
@@ -35,12 +33,12 @@ python -B <설치폴더>/scripts/harness_cli.py doctor
 
 | 항목 | 확인·준비 기준 |
 |---|---|
-| `version` | `2.0.0` 및 실제 운영지침 경로 확인 |
+| `version` | `2.0.1` 및 실제 운영지침 경로 확인 |
 | `doctor` | 발견 경로·누락된 전문 스킬 확인. 준비 부족 시 종료코드 2는 정상 진단 결과 |
 | 기본 전문 검수 | `impeccable`, `ui-ux-pro-max`, `web-design-guidelines` 필요 |
 | 추가 전문 검수 | 모션·React 성능 검수에 해당 전문 스킬 준비 |
-| 기본 검색 경로 | 패키지 형제 폴더, 사용자 `.codex/skills`, `.agents/skills` |
-| 사용자 지정 경로 검사 | `doctor --skills-root <스킬들상위폴더>` |
+| 기본 검색 경로 | 패키지 형제 폴더, `$CODEX_HOME/skills`(미지정 시 사용자 `.codex/skills`), 사용자 `.agents/skills` |
+| 사용자 지정 경로 검사 | `doctor --skills-root <스킬들상위폴더>`. 기본 검색 경로를 **대체**(추가 아님). 여러 경로는 `--skills-root` 반복 지정 |
 | 자동 실행 | 기존 Codex 실행기·Python 3 필요 |
 | 브라우저 수집 | 기존 Node·Playwright 패키지·브라우저 경로 추가 필요 |
 | 진단 CLI | Python 표준 라이브러리 사용. pip 설치 불필요 |
@@ -74,6 +72,23 @@ Git 저장소 갱신과 설치 폴더 갱신은 별도 절차.
 - 구형 두 패키지 이전: 별도 공개 진입점 `joedesign-harness` 정리 필요.
   현재 운영은 내부 하네스를 포함한 `joedesign` 하나로 통합.
 - 이미 이전한 설치: 과거 이전 작업의 재실행 불필요.
+- 버전 고정: `git pull --ff-only`는 `main` 브랜치 복제본 전제이며 최신 `main`으로 이동. 특정 버전·detached 복제본은 `git fetch --tags; git checkout v2.0.1`.
+
+### 백업과 해시 비교
+
+Codex 복사본 기준 PowerShell 예. 백업 위치는 스킬 검색 경로 밖.
+
+```powershell
+$Skill = Join-Path $(if ($env:CODEX_HOME) { $env:CODEX_HOME } else { Join-Path $env:USERPROFILE '.codex' }) 'skills\joedesign'
+$Backup = Join-Path $env:USERPROFILE ("Documents\JOEDESIGN-backups\" + (Get-Date -Format 'yyyyMMdd-HHmmss'))
+New-Item -ItemType Directory -Path $Backup -Force | Out-Null; Copy-Item -Recurse $Skill $Backup
+function Get-TreeHash($Dir) { Get-ChildItem -Recurse -File $Dir | ForEach-Object { '{0} {1}' -f (Get-FileHash $_.FullName -Algorithm SHA256).Hash, $_.FullName.Substring($Dir.Length) } | Sort-Object { $_.Substring(65) } }
+Compare-Object (Get-TreeHash $Skill) (Get-TreeHash (Join-Path $Backup 'joedesign'))
+```
+
+- 마지막 줄 출력 없음: 백업과 원본의 상대 경로·SHA-256 전부 일치. 출력이 있으면 삭제·업데이트 중단.
+- 새 설치 확인: 같은 `Get-TreeHash`로 설치본과 복제본 `skills\joedesign` 비교. 차이는 바뀐 파일만이어야 함.
+- 복구: 새 설치 폴더를 지운 뒤 `Copy-Item -Recurse (Join-Path $Backup 'joedesign') (Split-Path $Skill)`, 다시 비교·`version`.
 
 ## 복구·이전 실행 자료
 

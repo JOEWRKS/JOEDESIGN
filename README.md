@@ -10,7 +10,7 @@
 
 - **Role:** UI creation, implementation, and design review in Codex and Claude Code.
 - **Operation:** One operating core, with stage-specific role assignments and integrated results.
-- **Version:** **2.0.0** — defined in [VERSION](skills/joedesign/VERSION). Per-version changes: [CHANGELOG (Korean)](CHANGELOG.md).
+- **Version:** **2.0.1** — defined in [VERSION](skills/joedesign/VERSION). Per-version changes: [CHANGELOG (Korean)](CHANGELOG.md).
 - **Use cases:** New UI creation, existing UI extensions and repairs, and design conformance review.
 
 ## 2. Design Purpose
@@ -63,7 +63,7 @@ Each tool works on its own. Automated consumption of review results needs the [p
 
 - **역할:** Codex·Claude Code에서 화면 제작·구현·디자인 검수 지원.
 - **운영:** 단일 코어 아래 단계별 역할 배정 및 결과 통합.
-- **버전:** **2.0.0** — [VERSION](skills/joedesign/VERSION) 기준. 버전별 변경은 [변경 이력](CHANGELOG.md) 참고.
+- **버전:** **2.0.1** — [VERSION](skills/joedesign/VERSION) 기준. 버전별 변경은 [변경 이력](CHANGELOG.md) 참고.
 - **적용 대상:** 신규 화면 제작, 기존 화면 확장·수정, 디자인 기준 준수 검수.
 
 ## 2. 설계 목적
@@ -87,7 +87,7 @@ Each tool works on its own. Automated consumption of review results needs the [p
 
 ### 설치 (Codex, Windows PowerShell)
 
-- 필요: Codex·Git·Python 3, 비공개 저장소 읽기 권한과 GitHub 로그인.
+- 필요: Codex·Git·Python 3. 공개 저장소라 GitHub 로그인 불필요.
 - 기존 복제본이 있으면 저장소 폴더로 이동 후 두 번째 블록부터 실행.
 - Claude Code 설치: [빠른 시작](docs/QUICKSTART.md) 1b.
 
