@@ -10,7 +10,7 @@
 
 - **색·모션의 직접 관측(H).** SKILL.md에 새 절 "Direct observation of colour and motion"을 넣었다.
   - 색 규칙은 캡처 픽셀로 관측한다. 요소 안 획 중앙 행을 DPR 2 원본 또는 2x 줌에서 읽는다.
-  - 기록 형식은 `median M, range a–b, n px`다. 채널 ±8 또는 대비 ±0.2 안이면 검사와 일치로 본다.
+  - 기록 형식은 `median M, range a–b, n px`다. 채널 ±8 **그리고** 대비 ±0.2 안이어야 검사와 일치로 본다(2026-11-26 사용자 결정. "또는"이면 명도가 같은 색상 변화가 통과한다).
   - 새 스크립트 `scripts/sample-pixels.mjs`(Node만, 의존성 없는 PNG 해독)가 이 값을 낸다.
   - reduced-motion은 에뮬레이션으로 관측한다(그 줄은 그냥 `rendered`). 안 되면 페이지 자체 reduce 규칙을 조건 없이 주입한 렌더를 대체 관측으로 인정하고 `rendered (reduce injected)`로 적는다.
   - DESIGN Report Form에 두 문장을 더했다.
@@ -39,7 +39,7 @@
 
 ### 확인된 것
 
-- node 59/59, python 150 OK(건너뜀 2). 새 테스트는 report-check 8, sample-pixels 7, doctor 2, CDP 수집 1이다. CDP 수집 테스트는 실제 Chrome으로 돌렸다.
+- node 60/60, python 150 OK(건너뜀 2). 새 테스트는 report-check 8, sample-pixels 8(채널만·대비만 넘는 경우 outside 포함), doctor 2, CDP 수집 1이다. CDP 수집 테스트는 실제 Chrome으로 돌렸다.
 - report-check 회귀: 274개 보고의 지적이 v2.0.1과 같고 바뀐 파일은 0이다. ATELIER에서 만든 fixture 8개 중 바뀐 것은 의도한 3개다(`AC:` 접두, AC 절, `decided in rev19 DEC-061`).
 - sample-pixels는 ATELIER 캡처(품절 칩 M)에서 `median #8E8E8E, range 118–158, n 12 px`를 낸다. 범위는 ATELIER의 .NET 판독과 같다. `#8A8A8A`는 within, 수정 전 `#9A9A9A`는 outside다.
 - 수집기는 픽스처 페이지에서 확인했다. DPR 2 전 화면, reduce emulate·inject, Playwright 없는 `capture.mjs` 대체 경로의 Tab·Enter와 단언을 돌렸다. ATELIER `client/dist`(정적, 읽기만)에서는 1024·360 전 화면을 찍었다. CDP로 찍은 `#8A8A8A` 칩은 sample-pixels로 `median #8A8A8A`(diff 0)였다. 캡처는 `evals/v2.0.2-tests-20261126/collector/`에 보관했다.
@@ -52,15 +52,15 @@
 - macOS·Linux 브라우저 자동 탐색과 Edge 단독 환경은 실행하지 않았다. CDP `fill`·`hover`·`scroll`·`click`도 실제 브라우저로 시험하지 않았다.
 - R3·R5 fixture의 초안 문장은 ATELIER에 원본이 없어 마찰 줄에서 재구성했다.
 
-### 세션이 대신 내린 결정 (사용자 확인 대상)
+### 세션이 대신 내린 결정 (2026-11-26 사용자 결정: 아래 허용 오차만 바꾸고 나머지 확정)
 
 - 과업 번호는 T045다.
 - R5가 받는 ID는 `DEC-`만이 아니라 `[A-Z]{2,6}-숫자`다. ATELIER가 `SCR-004`를 썼다.
 - 쌍 줄 안의 대기 표기도 인정한다.
 - `~/.claude/skills`를 기본 탐색 마지막에 더했다.
-- 허용 오차는 채널 **또는** 대비, 둘 중 하나만 맞으면 된다.
+- 허용 오차: 처음 안은 채널 **또는** 대비였다. 사용자 결정으로 **그리고**(둘 다)로 바꿨다. 이 바뀜으로 ATELIER 칩 L 판독(diff 5 / 0.22)은 outside가 됐다.
 - CDP 수집기는 `mobile`·터치 에뮬레이션을 끈다(Playwright 경로와 같게).
-- SKILL.md는 14,766B에서 18,390B로 커졌고 줄이지 않았다.
+- SKILL.md는 14,766B에서 18,452B로 커졌고(허용 오차 결정 반영 포함) 줄이지 않았다.
 - part19 회귀 스크립트는 자기 출력을 덮어써서 돌리지 않았다. 같은 274개로 v2.0.1과 비교하는 스크립트를 따로 두었다.
 - R5의 보고 전체 단위 대기 인정은 회귀를 바꾸지 않으려고 그대로 뒀다.
 

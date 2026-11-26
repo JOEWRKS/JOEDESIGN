@@ -16,7 +16,7 @@
 //   4. report per channel median and range, the count, and the contrast of the median
 //      against the background
 // Output: `median #8E8E8E, range 118–158, n 12 px (row 22, bg #FFFFFF, contrast 3.28)`.
-// With --expect: `expect #8A8A8A: channel diff 4 / contrast diff 0.18 -> within (±8 or ±0.2)`.
+// With --expect: `expect #8A8A8A: channel diff 4 / contrast diff 0.18 -> within (±8 and ±0.2)`.
 // Exit 0: read (and within tolerance when --expect is given). 1: outside tolerance or no ink.
 // 2: usage or decode error.
 import { readFileSync } from 'node:fs';
@@ -178,7 +178,7 @@ export function sample(image, options = {}) {
 export function compare(result, expected, tolerance = 8, contrastTolerance = 0.2) {
   const channel = Math.max(...result.median.map((v, i) => Math.abs(v - expected[i])));
   const contrastDiff = Math.abs(result.contrast - contrast(expected, result.bg));
-  return { channel, contrastDiff, within: channel <= tolerance || contrastDiff <= contrastTolerance };
+  return { channel, contrastDiff, within: channel <= tolerance && contrastDiff <= contrastTolerance };
 }
 
 export function format(result, options = {}) {
@@ -192,7 +192,7 @@ export function format(result, options = {}) {
   if (options.expect) {
     const c = compare(result, options.expect, options.tolerance ?? 8);
     line += `\nexpect ${hex(options.expect)}: channel diff ${c.channel} / contrast diff ${c.contrastDiff.toFixed(2)} ` +
-      `-> ${c.within ? 'within' : 'outside'} (±${options.tolerance ?? 8} or ±0.2)`;
+      `-> ${c.within ? 'within' : 'outside'} (±${options.tolerance ?? 8} and ±0.2)`;
   }
   return line;
 }

@@ -4,7 +4,7 @@ import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { deflateSync } from 'node:zlib';
 import { execFileSync, spawnSync } from 'node:child_process';
-import { decodePng, sample, compare, format, parseHex } from '../skills/joedesign/scripts/sample-pixels.mjs';
+import { decodePng, sample, compare, contrast, format, parseHex } from '../skills/joedesign/scripts/sample-pixels.mjs';
 
 const SCRIPT = new URL('../skills/joedesign/scripts/sample-pixels.mjs', import.meta.url);
 // ATELIER Stage 1 capture (copied): 160x44 crop of the sold-out size chips M and L, the C1 row's spot check
@@ -85,6 +85,24 @@ test('the fixed colour #8A8A8A is within tolerance; the colour before the fix (#
   const before = compare(r, parseHex('#9A9A9A'));
   assert.equal(before.within, false);
   assert.ok(before.channel > 8 && before.contrastDiff > 0.2);
+});
+
+test('agreement needs both: channel ±8 and contrast ±0.2 (2026-11-26 user decision)', () => {
+  const white = [255, 255, 255];
+  const reading = (median) => ({ median, bg: white, contrast: contrast(median, white) });
+  // ATELIER chip M stays within: diff 4 / 0.18
+  const chip = compare(sample(decodePng(readFileSync(CHIPS)), { region: [0, 0, 78, 44] }), parseHex('#8A8A8A'));
+  assert.equal(chip.channel, 4);
+  assert.ok(chip.contrastDiff <= 0.2);
+  assert.equal(chip.within, true);
+  // channel over, contrast within: grey expected, blue-grey read at about the same lightness
+  const hue = compare(reading([138, 138, 156]), parseHex('#8A8A8A'));
+  assert.ok(hue.channel > 8 && hue.contrastDiff <= 0.2, JSON.stringify(hue));
+  assert.equal(hue.within, false);
+  // contrast over, channel within: dark ink where 8 levels move the contrast a lot
+  const dark = compare(reading([40, 40, 40]), parseHex('#202020'));
+  assert.ok(dark.channel <= 8 && dark.contrastDiff > 0.2, JSON.stringify(dark));
+  assert.equal(dark.within, false);
 });
 
 test('a chip border hairline (#E5E5E5 on white) is background at the default threshold', () => {

@@ -94,7 +94,8 @@ includes them); a measurement without them is not `rendered`, so measure again f
 served URL or with the CSS injected. A reduced-motion reading taken with the page's own
 reduce rules injected without the media condition says `rendered (reduce injected)`. A
 colour spot check reads capture pixels at the stroke centre row and records
-`median M, range a–b, n px` (`scripts/sample-pixels.mjs`). Each fix takes its own line; its result
+`median M, range a–b, n px` (`scripts/sample-pixels.mjs`); it agrees only when the
+median is within ±8 per channel and its contrast within ±0.2 of the expected. Each fix takes its own line; its result
 is `fixed` only when its spot check cell holds a direct observation of the fixed
 thing on a target that showed it, otherwise `changed`. A `changed` fix is an open
 issue: it goes under 남은 문제 (remaining work) in the report, ISSUES and ROADMAP,

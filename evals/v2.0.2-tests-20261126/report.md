@@ -1,6 +1,6 @@
 # JOEDESIGN 2.0.2 후보 준비 (2026-11-26, T045)
 
-**결론:** ATELIER 실사용(2026-11-23~25) 마찰 중 사용자가 2026-11-26에 확정한 일곱 항목(묶음 H·I, 그 뒤 JOEDESIGN 줄 다섯)을 모두 구현하고 문서화했다. 커밋은 브랜치 `v2.0.2`에 로컬로만 했다(push·태그·Release·설치 없음). node 59/59, python 150 OK(건너뜀 2). report-check 회귀 274개는 v2.0.1과 지적이 같고 바뀐 파일은 0이다. 행동 시험은 0회다.
+**결론:** ATELIER 실사용(2026-11-23~25) 마찰 중 사용자가 2026-11-26에 확정한 일곱 항목(묶음 H·I, 그 뒤 JOEDESIGN 줄 다섯)을 모두 구현하고 문서화했다. 커밋은 브랜치 `v2.0.2`에 로컬로만 했다(push·태그·Release·설치 없음). node 60/60(5번 결정 반영 뒤), python 150 OK(건너뜀 2). report-check 회귀 274개는 v2.0.1과 지적이 같고 바뀐 파일은 0이다. 행동 시험은 0회다.
 
 입력: `ATELIER/TOOL-FRICTION.md` JOEDESIGN 줄 7개(2026-11-23~25), `ATELIER/Library/tool-friction-review.md` 묶음 H·I. ATELIER는 읽기만 했다. 캡처 1장과 보고 두 건을 복사해 fixture로 썼다(아래).
 
@@ -8,7 +8,7 @@
 
 | # | 항목 | 처리 | 확인 |
 |---|---|---|---|
-| 1 | H 색·모션의 직접 관측 | SKILL.md 새 절 "Direct observation of colour and motion". 어느 픽셀(획 중앙 행), 배율(DPR 2 원본 또는 2x 줌), 허용 오차(채널 ±8 또는 대비 ±0.2), 기록 형식 `median M, range a–b, n px`을 정했다. `scripts/sample-pixels.mjs`(Node만, zlib로 PNG 해독)를 넣었다. reduced-motion은 에뮬레이션이 기본이다. 안 되면 "페이지 자체 reduce 규칙을 조건 없이 주입"을 대체 관측으로 인정하고 `rendered (reduce injected)`로 적는다. DESIGN Report Form에 두 문장 | ATELIER 캡처 `scr002-360x640-soldout-chips-M-L.png`(fixtures/sample-pixels/): M 칩 획 행 `median #8E8E8E, range 118–158, n 12 px`, 범위는 ATELIER 기록(118–158)과 같다. `#8A8A8A` within, 수정 전 색 `#9A9A9A` outside. CDP 캡처(DPR 2)한 `#8A8A8A` 칩: `median #8A8A8A, range 138–179, n 30 px`, diff 0. 테스트 7개 |
+| 1 | H 색·모션의 직접 관측 | SKILL.md 새 절 "Direct observation of colour and motion". 어느 픽셀(획 중앙 행), 배율(DPR 2 원본 또는 2x 줌), 허용 오차(채널 ±8 그리고 대비 ±0.2, 2026-11-26 사용자 결정), 기록 형식 `median M, range a–b, n px`을 정했다. `scripts/sample-pixels.mjs`(Node만, zlib로 PNG 해독)를 넣었다. reduced-motion은 에뮬레이션이 기본이다. 안 되면 "페이지 자체 reduce 규칙을 조건 없이 주입"을 대체 관측으로 인정하고 `rendered (reduce injected)`로 적는다. DESIGN Report Form에 두 문장 | ATELIER 캡처 `scr002-360x640-soldout-chips-M-L.png`(fixtures/sample-pixels/): M 칩 획 행 `median #8E8E8E, range 118–158, n 12 px`, 범위는 ATELIER 기록(118–158)과 같다. `#8A8A8A` within, 수정 전 색 `#9A9A9A` outside. CDP 캡처(DPR 2)한 `#8A8A8A` 칩: `median #8A8A8A, range 138–179, n 30 px`, diff 0. 테스트 8개(그리고 판정 1개 포함) |
 | 2 | I report-check R5 | 쌍의 줄 끝이 `decided in rev N DEC-xxx`(리비전과 결정·레코드 ID)이면 정의가 정한 변화로 인정한다. `rev19 DEC-061에서 결정`, 쌍 줄 자체의 `product decision pending`도 인정한다. 지적 문구에 그 형식을 넣었다. SKILL.md 한 구절, DESIGN Report Form 한 문장과 예시 | ATELIER Stage 1 보고 재구성 fixture: 표지 없음 → R5(2.0.1·2.0.2 둘 다), `— decided in JOEFLOW rev19 DEC-061` → 2.0.1 R5, 2.0.2 ok. `decided in JOEFLOW`(리비전·ID 없음) → 여전히 R5. 테스트 4개 |
 | 3 | 출처 관측 범위 | DESIGN 템플릿 Visual Sources에 출처 표를 넣고 `Observation scope (per state)` 열을 필수로 했다(관측 상태 → 결정, 미관측 상태 → 유도 근거). SKILL.md 1단계에 일부만 관측됐을 때 진행 방법(관측분과 명시한 유도로 진행, 미관측은 증거 경계에, 반하는 관측이 나오면 재개) | 문서. 행동 시험 0회 |
 | 4 | report-check R3 | `AC:`로 시작하는 줄(`AC-004:`, `AC-004, AC-007:`, `수용 기준:`)과 AC 제목(`## AC …`, `## 수용 기준`, `acceptance`) 아래 같은 수준 다음 제목까지는 R3이 읽지 않는다. 기술 검사 낱말 확장: typecheck, `validate-*`, pytest, 통합 테스트 등. 둘 다 디자인 검사 낱말이 있으면 다시 읽는다. 지적 문구에 `AC:` 안내를 넣었다. SKILL.md 6단계·Report Form 한 문장 | ATELIER Stage 3 보고 재구성 fixture: 접두어 없는 AC 문장 → R3(2.0.1·2.0.2 둘 다, 2.0.2 문구에 `AC:` 안내), `AC:` 접두 → 2.0.2 ok, `## AC observation` 절 → 2.0.2 ok, 실제 보낸 글은 둘 다 ok. 테스트 4개 |
@@ -22,7 +22,7 @@
 
 | 명령 | 결과 | 기록 |
 |---|---|---|
-| `node --test tests/*.tests.mjs` | 59/59(2.0.1의 44 + report-check 8 + sample-pixels 7) | [node-tests.txt](node-tests.txt) |
+| `node --test tests/*.tests.mjs` | 60/60, 2026-11-26 5번 결정 반영 뒤 재실행(2.0.1의 44 + report-check 8 + sample-pixels 8). [node-tests.txt](node-tests.txt)는 결정 전 59/59 실행 기록이다 | [node-tests.txt](node-tests.txt) |
 | `python -B -m unittest discover -s tests` | 150 OK, 건너뜀 2(2.0.1의 147 + doctor 2 + CDP 수집 1. 건너뜀은 기존 2개: Playwright 수집 시험, 브라우저 렌더 conformance 시험. 둘 다 환경 변수로 켜는 시험) | [python-tests.txt](python-tests.txt) |
 | `node evals/v2.0.2-tests-20261126/regress.mjs` | 274개: v2.0.1 `{"R3":269,"R5":44,"R1":75,"R6a":103,"R4":4,"R2":3,"R6b":7}`, 후보 같음, 바뀐 파일 0. fixture 8개: v2.0.1 R5 3·R3 3 → 후보 R5 2·R3 1 | [regress-274.txt](regress-274.txt), [regress-changes.tsv](regress-changes.tsv) |
 | `sh evals/v2.0.2-tests-20261126/collector/run.sh` | 아래 수집기 절 | [collector/run-output.txt](collector/run-output.txt) |
@@ -35,14 +35,15 @@ part19 회귀(`evals/check-coverage-20261104/part19/regress.mjs`)는 돌리지 �
 ```text
 $ node skills/joedesign/scripts/sample-pixels.mjs fixtures/sample-pixels/scr002-360x640-soldout-chips-M-L.png --region 0,0,78,44 --expect '#8A8A8A'
 median #8E8E8E, range 118–158, n 12 px (row 22, bg #FFFFFF, contrast 3.28)
-expect #8A8A8A: channel diff 4 / contrast diff 0.18 -> within (±8 or ±0.2)
+expect #8A8A8A: channel diff 4 / contrast diff 0.18 -> within (±8 and ±0.2)
 $ ... --expect '#9A9A9A'
-expect #9A9A9A: channel diff 12 / contrast diff 0.46 -> outside (±8 or ±0.2)   (종료 코드 1)
+expect #9A9A9A: channel diff 12 / contrast diff 0.46 -> outside (±8 and ±0.2)   (종료 코드 1)
 ```
 
 - 캡처는 160×44 RGB, 1x(ATELIER가 DPR 2 렌더를 내장 브라우저 zoom으로 1x 재표본한 것)다. 획 행은 22행 하나이고 그 행 잉크 픽셀 12개의 범위가 ATELIER가 .NET으로 읽은 118–158과 같다. 중앙값은 짝수 개라 가운데 두 값(140, 143)의 평균을 반올림해 142(#8E)다. ATELIER는 141을 적었다(가운데 값 고르는 방식 차이로 보이며 확인하지 않았다).
 - 기본 문턱은 배경과 채널 차 40 초과다. 칩 테두리 `#E5E5E5`(차 26)는 배경으로 남아 영역 없이 전체 이미지를 줘도 22행을 고른다(테스트).
-- 칩 L 영역(82,0,78,44)은 `median #8F8F8F, range 121–198, n 8 px`이고, `#8A8A8A` within(diff 5 / 0.22), `#9A9A9A` outside(diff 11 / 0.42)다. 테스트는 칩 M만 단언한다.
+- 칩 L 영역(82,0,78,44)은 `median #8F8F8F, range 121–198, n 8 px`이다. `#8A8A8A`는 diff 5 / 0.22로, 대비가 0.2를 넘어 outside다("그리고" 판정. 결정 전 "또는"에서는 within). `#9A9A9A`는 outside(diff 11 / 0.42)다. 테스트는 칩 M만 단언한다.
+- [collector/run-output.txt](collector/run-output.txt)의 sample-pixels 줄은 결정 전 실행이라 `(±8 or ±0.2)` 문구가 남아 있다. 그 두 판독(diff 0 / 0.00)은 "그리고"에서도 within이다.
 
 ## 수집기 (항목 6)
 
@@ -79,7 +80,7 @@ ATELIER `DESIGN.md` Rule coverage 표를 읽어 첫 칸의 규칙 ID로 묶었�
 
 ## SKILL.md 문구 변경 요약
 
-전체 diff: [skill-md.diff](skill-md.diff)(v2.0.1 대비). 크기 14,766B → 18,390B(+3,624B). 줄여 넣지 못한 이유와 확인 요청은 아래 "사용자 확인이 필요한 것".
+전체 diff: [skill-md.diff](skill-md.diff)(v2.0.1 대비). 크기 14,766B → 18,390B(+3,624B), 허용 오차 결정 반영 뒤 18,452B. skill-md.diff는 결정 전 diff이고, 그 뒤 색 관측 절의 "or"가 "and"로 바뀌었다(아래 "사용자 확인이 필요한 것" 5번).
 
 | 위치 | 2.0.1 | 2.0.2 | 항목 |
 |---|---|---|---|
@@ -116,12 +117,17 @@ ATELIER `DESIGN.md` Rule coverage 표를 읽어 첫 칸의 규칙 ID로 묶었�
 
 ## 사용자 확인이 필요한 것
 
-1. **R5가 인정하는 ID 범위:** `DEC-061`만이 아니라 `[A-Z]{2,6}-숫자` 레코드 ID(예 `SCR-004`)도 받는다. ATELIER Stage 3이 실제로 `decided in JOEFLOW rev20 SCR-004`를 썼기 때문이다. DEC만 받게 좁힐지.
-2. **쌍 줄 안의 `product decision pending`도 인정:** ATELIER slice-proof처럼 after 줄 끝에 대기를 적는 형식을 기록으로 본다. 2.0.1은 그 표기를 무시했다(다른 곳에 대기가 없으면 R5).
-3. **doctor 기본 탐색에 `~/.claude/skills` 추가:** 러너(`run`)의 전문 스킬 해석도 같은 함수를 쓰므로 함께 바뀐다(마지막 순위). 원치 않으면 doctor만 바꾸거나 빼겠다.
-4. **SKILL.md +3.6KB:** 1.3.0 때는 1.2.1 크기 이하로 맞췄다. 이번에는 일곱 항목 문구를 넣고 줄이지 않았다. 줄일 후보: Specialist skills 문단을 execution.md로 옮기고 한 줄만 남기기, 색 관측 절의 예시 문장.
-5. **허용 오차 의미:** "채널 ±8 **또는** 대비 ±0.2"로 둘 중 하나만 맞으면 agree다. ATELIER M 칩은 채널 diff 4, 대비 diff 0.18로 둘 다 맞는다. 둘 다 요구로 바꿀지.
-6. **CDP 수집기의 `mobile` 에뮬레이션:** ATELIER 씨앗은 768 미만에서 `mobile: true`와 터치를 켰다. capture.mjs(Playwright) 동작과 맞추려고 끄고, 데스크톱 뷰포트 크기만 바꾼다. 터치 에뮬레이션이 필요하면 옵션을 더하겠다.
+사용자 결정(2026-11-26, 부모 세션에 "추천대로 게시"): 아래 6건 중 1·2·3·4·6은 그대로 확정했고 5번만 바꿨다. 바꾼 5번은 결정 뒤 커밋 하나로 반영했다.
+
+1. **R5가 인정하는 ID 범위 — 확정.** `DEC-061`만이 아니라 `[A-Z]{2,6}-숫자` 레코드 ID(예 `SCR-004`)도 받는다. ATELIER Stage 3이 `decided in JOEFLOW rev20 SCR-004`를 썼다.
+2. **쌍 줄 안의 `product decision pending`도 인정 — 확정.** after 줄 끝에 대기를 적는 형식(ATELIER slice-proof)을 기록으로 본다.
+3. **doctor 기본 탐색에 `~/.claude/skills` 추가 — 확정.** 러너(`run`)의 전문 스킬 해석도 같은 함수라 함께 바뀐다(마지막 순위).
+4. **SKILL.md +3.6KB — 확정.** 일곱 항목 문구를 줄이지 않고 둔다.
+5. **허용 오차 의미 — 바뀜.** 처음 안은 "채널 ±8 **또는** 대비 ±0.2"였다. 결정은 "채널 ±8 **그리고** 대비 ±0.2"로, 둘 다 맞아야 within(agree)이다. 이유는 "또는"이면 명도가 같은 색상 변화(회색 ↔ 푸른 회색)가 통과하기 때문이다. 반영한 곳:
+   - `sample-pixels.mjs`의 판정과 출력 `-> within (±8 and ±0.2)`, SKILL.md 색 관측 절, 템플릿 Report Form 한 문장.
+   - 테스트 1개를 더했다. M 칩(4 / 0.18)은 within이다. 채널만 넘는 경우(푸른 회색 `[138,138,156]` 대 `#8A8A8A`)와 대비만 넘는 경우(`#282828` 대 `#202020`)는 outside다.
+   - 결과가 바뀐 판독이 하나 있다. 칩 L(8 px, diff 5 / 0.22)은 "또는"에서 within이었고 이제 outside다. ATELIER가 근거로 쓴 칩 M은 그대로 within이다.
+6. **CDP 수집기의 `mobile` 에뮬레이션 끔 — 확정.** capture.mjs(Playwright)와 같게 데스크톱 뷰포트 크기만 바꾼다.
 
 ## 쓴 경로
 

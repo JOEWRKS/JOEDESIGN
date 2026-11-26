@@ -206,8 +206,9 @@ the middle of a letter) from a DPR-2 capture or a 2x zoom of one:
 Anti-aliasing makes the reading a spread, recorded as `median M, range a–b, n px` with
 the capture, e.g. `360x640 chip M: check #8A8A8A / observed median #8E8E8E, range
 118–158, 12 px (capture scr002-…png)`. It agrees with the check when the median is
-within ±8 of each expected channel or its contrast with the background within ±0.2 of
-the expected contrast; otherwise the check or the row is wrong. Reduced motion is
+within ±8 of each expected channel and its contrast with the background within ±0.2 of
+the expected contrast (both: a hue shift at the same lightness keeps the contrast);
+otherwise the check or the row is wrong. Reduced motion is
 observed where the browser emulates `prefers-reduced-motion: reduce` (`capture-cdp.mjs
 --reduce-motion emulate`; plain `rendered`). Where it cannot, the page's own reduce
 rules injected without the media condition (`--reduce-motion inject`) are an accepted
