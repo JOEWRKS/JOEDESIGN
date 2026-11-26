@@ -1,0 +1,9 @@
+{
+  "base_commit": "3f76319f6c8a5929c2f55dc47b3c0e4f6a825bdb",
+  "package_files": 28,
+  "package_equals_head": true,
+  "package_equals_personal_install": true,
+  "geo_24_input_changes_since_read_only_reproduction": [],
+  "geo_baseline_unchanged": true,
+  "consumer_result": "38dcfe1f264d1d7eca40303940524f405f6a9558ebfc7e1349898fe4a82ef308"
+}

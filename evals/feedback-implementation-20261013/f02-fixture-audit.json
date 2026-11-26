@@ -1,0 +1,228 @@
+{
+  "purpose": "Synthetic fixture provenance audit, not delivery/consumer PASS",
+  "cases": [
+    {
+      "case": "F02-P01",
+      "intentional_structural_findings": [],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N01",
+      "intentional_structural_findings": [],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N02",
+      "intentional_structural_findings": [],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N03",
+      "intentional_structural_findings": [],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N04",
+      "intentional_structural_findings": [
+        "target_stale"
+      ],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N05",
+      "intentional_structural_findings": [],
+      "source_references_verified": 16
+    },
+    {
+      "case": "F02-P02",
+      "intentional_structural_findings": [],
+      "source_references_verified": 16
+    },
+    {
+      "case": "F02-N06",
+      "intentional_structural_findings": [
+        "missing_exclusion_authorization"
+      ],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N07",
+      "intentional_structural_findings": [],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N08",
+      "intentional_structural_findings": [
+        "target_mismatch"
+      ],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N09",
+      "intentional_structural_findings": [
+        "duplicate_required"
+      ],
+      "source_references_verified": 16
+    },
+    {
+      "case": "F02-N10",
+      "intentional_structural_findings": [
+        "source_claim_mismatch"
+      ],
+      "source_references_verified": 15
+    },
+    {
+      "case": "F02-N11",
+      "intentional_structural_findings": [
+        "missing_mapping_review"
+      ],
+      "source_references_verified": 14
+    }
+  ],
+  "files": {
+    "f02-fixtures/F02-N01/design-fragment.json": "d2b7b779f47fcf999412fb3b2149cf9f6624426eae2b8352f484a17d2d9a942c",
+    "f02-fixtures/F02-N01/input.json": "b62ebd1819e171a11ae6158b680430caa097c9f22aea2dc714e5db526e16832a",
+    "f02-fixtures/F02-N01/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N01/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N01/sources/authorization.json": "9631ad9a7e1bce204e58bc48f90fbc83198a7be39afdbfd87f67aef7283c80e0",
+    "f02-fixtures/F02-N01/sources/design-observations.json": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+    "f02-fixtures/F02-N01/sources/exact-acceptance.json": "f7486d2dad98054b75c7002d80227316f2f8e35523de3a8525512674e391dae1",
+    "f02-fixtures/F02-N01/sources/mapping-review.json": "10425f80a529af6a90a2ff8de914736bed32ff5ca98b56cd0cedf620d6ea3901",
+    "f02-fixtures/F02-N01/sources/scope.json": "34bd1d9e07d09f96ff7494394419dd66b75ea4b19489d4aff0de792003eb4df0",
+    "f02-fixtures/F02-N01/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N01/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N02/design-fragment.json": "9e577e12a9211993d426020ae0b30eeaa1f84a8c1ad6835f1b579cdd4db0298a",
+    "f02-fixtures/F02-N02/input.json": "37cd3c77301f86c147088147f01220914bb04957bde8e570a37f65a7cc5e29f8",
+    "f02-fixtures/F02-N02/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N02/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N02/sources/authorization.json": "9631ad9a7e1bce204e58bc48f90fbc83198a7be39afdbfd87f67aef7283c80e0",
+    "f02-fixtures/F02-N02/sources/design-observations.json": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+    "f02-fixtures/F02-N02/sources/exact-acceptance.json": "1e21ef83a48ec5a508c18a9955b488676d8a204e00fae6da87c4addd05603db0",
+    "f02-fixtures/F02-N02/sources/mapping-review.json": "29476b62260804ded2b2a1db476aa349aa6cfc7949ab070755d173ef37860faf",
+    "f02-fixtures/F02-N02/sources/scope.json": "34bd1d9e07d09f96ff7494394419dd66b75ea4b19489d4aff0de792003eb4df0",
+    "f02-fixtures/F02-N02/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N02/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N03/design-fragment.json": "f561632fdc775d40d3cea6c28881f3683751b07d4fdb90362629f858a53e7005",
+    "f02-fixtures/F02-N03/input.json": "1154952ee54090396125d1d1440158017cf820564945cec1e651d37fc599b2a7",
+    "f02-fixtures/F02-N03/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N03/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N03/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-N03/sources/design-observations.json": "66889598a8e0e2635cf3769466b66d58aa895562420002df54c417bce8227eed",
+    "f02-fixtures/F02-N03/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N03/sources/mapping-review.json": "db91990565cf731fcabaa13e031c7b578adbd6e754155cfc6ae7878982e8deb3",
+    "f02-fixtures/F02-N03/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-N03/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N03/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N04/design-fragment.json": "f9f6494ae3584d69b450017a68b50349d743eca70ea24392f2ad89be52d95c4c",
+    "f02-fixtures/F02-N04/input.json": "b7e9d0d2e9aa2abd3b6ded6016ab015487571e7d7089b1642ce8e959597e47b4",
+    "f02-fixtures/F02-N04/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N04/outputs/mobile.json": "d6f43c1cbbac064a73018333922d6ee41c5e2e0b0a10f68fc1d0b7a5314a970e",
+    "f02-fixtures/F02-N04/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-N04/sources/design-observations.json": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+    "f02-fixtures/F02-N04/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N04/sources/mapping-review.json": "9a0b78ba6d5e813a14cbd29056b6efc1edd1a27e5d66869072e284209115fb9b",
+    "f02-fixtures/F02-N04/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-N04/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N04/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N05/design-fragment.json": "117ed48cc4ab34303b2679380387e0ca5fbb38a14d2505c27419099a64c18abd",
+    "f02-fixtures/F02-N05/input.json": "d64a0c95323d17002b6d04d8d3e767262d2ca0e296c386f76a2e417277f1cbbc",
+    "f02-fixtures/F02-N05/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N05/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N05/sources/authorization.json": "9631ad9a7e1bce204e58bc48f90fbc83198a7be39afdbfd87f67aef7283c80e0",
+    "f02-fixtures/F02-N05/sources/design-observations.json": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+    "f02-fixtures/F02-N05/sources/exact-acceptance.json": "8f945df1afa670cf1f924aa6b1b800d9e112172cfbf2d7c2e8780c9c39d7c7ba",
+    "f02-fixtures/F02-N05/sources/mapping-review.json": "ebd12dc1c777a56569f3bc505929884de3f1ac17e982e8bc2c0a4b7c86dee81e",
+    "f02-fixtures/F02-N05/sources/scope.json": "34bd1d9e07d09f96ff7494394419dd66b75ea4b19489d4aff0de792003eb4df0",
+    "f02-fixtures/F02-N05/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N05/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N06/design-fragment.json": "f46ee061e127820a72671389e9e4b204915145aeb19eb651e17e3665f57badca",
+    "f02-fixtures/F02-N06/input.json": "c885e80e21610020655129397309b95645607214613675760625dadd2e99073e",
+    "f02-fixtures/F02-N06/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N06/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N06/sources/authorization.json": "bb248d3c0074c18476cc18a9fab0269554ae2b767c2d3e8344dc1bf885534a24",
+    "f02-fixtures/F02-N06/sources/design-observations.json": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+    "f02-fixtures/F02-N06/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N06/sources/mapping-review.json": "2d205245d0c81f32327e97c9ab2d7cb491b967a923273fd5a0eb831870bcd6be",
+    "f02-fixtures/F02-N06/sources/scope.json": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b",
+    "f02-fixtures/F02-N06/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N06/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N07/design-fragment.json": "c2d9bd49bd18cfc28129d576daee0f9a6ec4f644d01f5cb527a01f4fba645af4",
+    "f02-fixtures/F02-N07/input.json": "566e34231c420ac4afcb6430735e5d4f00e448f3c3a910166d56937192801c78",
+    "f02-fixtures/F02-N07/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N07/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N07/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-N07/sources/design-observations.json": "d0908b6ce38367f1fde8da4157901d3b4d874566852a9a023f9518daa3ce82c9",
+    "f02-fixtures/F02-N07/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N07/sources/mapping-review.json": "ce32d9560bf3c9e48e97a4ef8173590d1d9e83f3f58ee7531b5a3a3ea5563b24",
+    "f02-fixtures/F02-N07/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-N07/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N07/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N08/design-fragment.json": "e211107a9a8559b1c7d7a59ea39bca273dc259fc1b154d4b6c1c6c8cceee5ec2",
+    "f02-fixtures/F02-N08/input.json": "760991ad5893aa0ac0a1c0d789db5916098f740ab2495dd279e4a6c49accafeb",
+    "f02-fixtures/F02-N08/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N08/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N08/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-N08/sources/design-observations.json": "20f6240d324cfc675118e6544a6d232c22e4139aa513232aaa9ac2055a074d9e",
+    "f02-fixtures/F02-N08/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N08/sources/mapping-review.json": "d5757130ab9831c7c1ed649ebbcd39c9587da466db17fee4e3632ad26aaeef3e",
+    "f02-fixtures/F02-N08/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-N08/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N08/targets/mobile-other.json": "49156380a404326a6ebad44c9e06a1c8516f0a4d80692dc061d0a79464760a50",
+    "f02-fixtures/F02-N08/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N09/design-fragment.json": "f9f6494ae3584d69b450017a68b50349d743eca70ea24392f2ad89be52d95c4c",
+    "f02-fixtures/F02-N09/input.json": "cb8183b469a7f6b6c6a3d56e04892bfe6ff6b61c33a2117f7b1640e073bfdf4c",
+    "f02-fixtures/F02-N09/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N09/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N09/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-N09/sources/design-observations.json": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+    "f02-fixtures/F02-N09/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N09/sources/mapping-review.json": "9a0b78ba6d5e813a14cbd29056b6efc1edd1a27e5d66869072e284209115fb9b",
+    "f02-fixtures/F02-N09/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-N09/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N09/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N10/design-fragment.json": "64c8fb092be478db000bed355d6bd82251b0ad8129f5b6823e3dcf0244453dfc",
+    "f02-fixtures/F02-N10/input.json": "4f3f4ffeaf8aa53ac568be54eb5b7a33bb9687ea3ce7eecf4f42f29f4923e60d",
+    "f02-fixtures/F02-N10/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N10/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N10/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-N10/sources/design-observations.json": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+    "f02-fixtures/F02-N10/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N10/sources/mapping-review.json": "6398772c1b5a4430a610aeb641a9c73e64cbf2f7a3a31150fe71cbbd4b5c2cd7",
+    "f02-fixtures/F02-N10/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-N10/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N10/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-N11/design-fragment.json": "f9f6494ae3584d69b450017a68b50349d743eca70ea24392f2ad89be52d95c4c",
+    "f02-fixtures/F02-N11/input.json": "9ba717b871837bf689ec9d964d44faf018fc7c1a2608d1e2a49fecb60fc07812",
+    "f02-fixtures/F02-N11/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N11/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-N11/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-N11/sources/design-observations.json": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+    "f02-fixtures/F02-N11/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-N11/sources/mapping-review.json": "9a0b78ba6d5e813a14cbd29056b6efc1edd1a27e5d66869072e284209115fb9b",
+    "f02-fixtures/F02-N11/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-N11/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-N11/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-P01/design-fragment.json": "f9f6494ae3584d69b450017a68b50349d743eca70ea24392f2ad89be52d95c4c",
+    "f02-fixtures/F02-P01/input.json": "b7e9d0d2e9aa2abd3b6ded6016ab015487571e7d7089b1642ce8e959597e47b4",
+    "f02-fixtures/F02-P01/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-P01/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-P01/sources/authorization.json": "48b3eae9201052ec61c5832bea221182e57a2fd8d18cebe94f8a399ad96a7472",
+    "f02-fixtures/F02-P01/sources/design-observations.json": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+    "f02-fixtures/F02-P01/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-P01/sources/mapping-review.json": "9a0b78ba6d5e813a14cbd29056b6efc1edd1a27e5d66869072e284209115fb9b",
+    "f02-fixtures/F02-P01/sources/scope.json": "3a6f6f6ab2b2fc131d71ea48820ff47bec126704bbf51786394f7e1cd0ef6621",
+    "f02-fixtures/F02-P01/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-P01/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382",
+    "f02-fixtures/F02-P02/design-fragment.json": "f46ee061e127820a72671389e9e4b204915145aeb19eb651e17e3665f57badca",
+    "f02-fixtures/F02-P02/input.json": "66684beae99db5a3ef5b4cff29ebce263545191045c5bb2c3ce59c356621fa04",
+    "f02-fixtures/F02-P02/outputs/desktop.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-P02/outputs/mobile.json": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd",
+    "f02-fixtures/F02-P02/sources/authorization.json": "bb248d3c0074c18476cc18a9fab0269554ae2b767c2d3e8344dc1bf885534a24",
+    "f02-fixtures/F02-P02/sources/design-observations.json": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+    "f02-fixtures/F02-P02/sources/exact-acceptance.json": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+    "f02-fixtures/F02-P02/sources/mapping-review.json": "2d205245d0c81f32327e97c9ab2d7cb491b967a923273fd5a0eb831870bcd6be",
+    "f02-fixtures/F02-P02/sources/scope.json": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b",
+    "f02-fixtures/F02-P02/targets/desktop.json": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3",
+    "f02-fixtures/F02-P02/targets/mobile.json": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "synthetic": true,
+  "kind": "scope-to-source mapping review fixture",
+  "scope": {
+    "path": "sources/scope.json",
+    "sha256": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b"
+  },
+  "reviewed_meaning": [
+    "Current demo scope is distinct from full Manifest approval and launch.",
+    "Visual observations do not create exact user acceptance.",
+    "Per-target evidence does not transfer to other viewport or output.",
+    "Excluded former failures are retained as history, not erased."
+  ],
+  "reviewed_sources": [
+    {
+      "path": "sources/design-observations.json",
+      "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72"
+    },
+    {
+      "path": "sources/exact-acceptance.json",
+      "sha256": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483"
+    }
+  ],
+  "unreviewed_meaning": []
+}

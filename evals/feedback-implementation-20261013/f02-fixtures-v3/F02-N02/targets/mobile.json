@@ -1,0 +1,17 @@
+{
+  "synthetic": true,
+  "scope_id": "synthetic-demo",
+  "build_id": "fixture-build-r1",
+  "route": "/demo",
+  "state": "initial",
+  "viewport": [
+    390,
+    900
+  ],
+  "theme": "light",
+  "locale": "ko",
+  "output": {
+    "path": "outputs/mobile.json",
+    "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+  }
+}

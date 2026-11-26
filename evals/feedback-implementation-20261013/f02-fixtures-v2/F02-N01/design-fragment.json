@@ -1,0 +1,216 @@
+{
+  "synthetic": true,
+  "scope_id": "synthetic-demo",
+  "observations": [
+    {
+      "outcome_id": "desktop-view",
+      "lane": "technical",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+        "pointer": "/claims/1",
+        "value": {
+          "outcome_id": "desktop-view",
+          "lane": "technical",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "desktop-view",
+      "lane": "visual",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+        "pointer": "/claims/2",
+        "value": {
+          "outcome_id": "desktop-view",
+          "lane": "visual",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "technical",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+        "pointer": "/claims/4",
+        "value": {
+          "outcome_id": "mobile-view",
+          "lane": "technical",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/mobile.json",
+              "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+            },
+            {
+              "path": "outputs/mobile.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "visual",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4",
+        "pointer": "/claims/5",
+        "value": {
+          "outcome_id": "mobile-view",
+          "lane": "visual",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/mobile.json",
+              "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+            },
+            {
+              "path": "outputs/mobile.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "desktop-view",
+      "lane": "acceptance",
+      "status": "ACCEPTED",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/exact-acceptance.json",
+        "sha256": "f7486d2dad98054b75c7002d80227316f2f8e35523de3a8525512674e391dae1",
+        "pointer": "/claims/0",
+        "value": {
+          "outcome_id": "desktop-view",
+          "lane": "acceptance",
+          "status": "ACCEPTED",
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "acceptance",
+      "status": "REJECTED",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/exact-acceptance.json",
+        "sha256": "f7486d2dad98054b75c7002d80227316f2f8e35523de3a8525512674e391dae1",
+        "pointer": "/claims/1",
+        "value": {
+          "outcome_id": "mobile-view",
+          "lane": "acceptance",
+          "status": "REJECTED",
+          "targets": [
+            {
+              "path": "targets/mobile.json",
+              "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+            },
+            {
+              "path": "outputs/mobile.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

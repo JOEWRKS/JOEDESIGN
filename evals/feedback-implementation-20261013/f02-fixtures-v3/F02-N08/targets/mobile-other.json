@@ -1,0 +1,11 @@
+{
+  "synthetic": true,
+  "route": "/demo",
+  "state": "initial",
+  "viewport": [
+    767,
+    900
+  ],
+  "theme": "light",
+  "locale": "ko"
+}

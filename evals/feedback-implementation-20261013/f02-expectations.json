@@ -1,0 +1,97 @@
+{
+  "synthetic": true,
+  "expectations_frozen_before_consumer_execution": true,
+  "cases": [
+    {
+      "id": "F02-P01",
+      "meaning": "demo complete, operations outside scope, Manifest unapproved",
+      "expected_class": "ready",
+      "input": "f02-fixtures\\F02-P01\\input.json",
+      "input_sha256": "b7e9d0d2e9aa2abd3b6ded6016ab015487571e7d7089b1642ce8e959597e47b4"
+    },
+    {
+      "id": "F02-N01",
+      "meaning": "technical PASS but required mobile output rejected",
+      "expected_class": "blocked",
+      "input": "f02-fixtures\\F02-N01\\input.json",
+      "input_sha256": "b62ebd1819e171a11ae6158b680430caa097c9f22aea2dc714e5db526e16832a"
+    },
+    {
+      "id": "F02-N02",
+      "meaning": "desktop accepted, mobile acceptance absent",
+      "expected_class": "blocked",
+      "input": "f02-fixtures\\F02-N02\\input.json",
+      "input_sha256": "37cd3c77301f86c147088147f01220914bb04957bde8e570a37f65a7cc5e29f8"
+    },
+    {
+      "id": "F02-N03",
+      "meaning": "required mobile observation unverified",
+      "expected_class": "unknown",
+      "input": "f02-fixtures\\F02-N03\\input.json",
+      "input_sha256": "1154952ee54090396125d1d1440158017cf820564945cec1e651d37fc599b2a7"
+    },
+    {
+      "id": "F02-N04",
+      "meaning": "current output changed after observations",
+      "expected_class": "unknown",
+      "input": "f02-fixtures\\F02-N04\\input.json",
+      "input_sha256": "b7e9d0d2e9aa2abd3b6ded6016ab015487571e7d7089b1642ce8e959597e47b4"
+    },
+    {
+      "id": "F02-N05",
+      "meaning": "same current exact output accepted and rejected",
+      "expected_class": "conflict",
+      "input": "f02-fixtures\\F02-N05\\input.json",
+      "input_sha256": "d64a0c95323d17002b6d04d8d3e767262d2ca0e296c386f76a2e417277f1cbbc"
+    },
+    {
+      "id": "F02-P02",
+      "meaning": "authorized removal of former required mobile outcome, failure retained",
+      "expected_class": "ready",
+      "input": "f02-fixtures\\F02-P02\\input.json",
+      "input_sha256": "66684beae99db5a3ef5b4cff29ebce263545191045c5bb2c3ce59c356621fa04"
+    },
+    {
+      "id": "F02-N06",
+      "meaning": "exclusion lacks authorization",
+      "expected_class": "invalid_or_unknown",
+      "input": "f02-fixtures\\F02-N06\\input.json",
+      "input_sha256": "c885e80e21610020655129397309b95645607214613675760625dadd2e99073e"
+    },
+    {
+      "id": "F02-N07",
+      "meaning": "visual PASS, technical not verified",
+      "expected_class": "unknown",
+      "input": "f02-fixtures\\F02-N07\\input.json",
+      "input_sha256": "566e34231c420ac4afcb6430735e5d4f00e448f3c3a910166d56937192801c78"
+    },
+    {
+      "id": "F02-N08",
+      "meaning": "same output but different viewport identity in observation",
+      "expected_class": "unknown",
+      "input": "f02-fixtures\\F02-N08\\input.json",
+      "input_sha256": "760991ad5893aa0ac0a1c0d789db5916098f740ab2495dd279e4a6c49accafeb"
+    },
+    {
+      "id": "F02-N09",
+      "meaning": "duplicate required outcome",
+      "expected_class": "invalid",
+      "input": "f02-fixtures\\F02-N09\\input.json",
+      "input_sha256": "cb8183b469a7f6b6c6a3d56e04892bfe6ff6b61c33a2117f7b1640e073bfdf4c"
+    },
+    {
+      "id": "F02-N10",
+      "meaning": "normalized PASS contradicts bound raw FAIL",
+      "expected_class": "invalid_or_conflict",
+      "input": "f02-fixtures\\F02-N10\\input.json",
+      "input_sha256": "4f3f4ffeaf8aa53ac568be54eb5b7a33bb9687ea3ce7eecf4f42f29f4923e60d"
+    },
+    {
+      "id": "F02-N11",
+      "meaning": "mapping semantic review absent",
+      "expected_class": "unknown",
+      "input": "f02-fixtures\\F02-N11\\input.json",
+      "input_sha256": "9ba717b871837bf689ec9d964d44faf018fc7c1a2608d1e2a49fecb60fc07812"
+    }
+  ]
+}

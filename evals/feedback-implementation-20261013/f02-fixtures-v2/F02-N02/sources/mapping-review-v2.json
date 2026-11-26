@@ -1,0 +1,34 @@
+{
+  "synthetic": true,
+  "review": {
+    "scope_id": "synthetic-demo",
+    "status": "CONFIRMED",
+    "mapping_sha256": "0ccfa81184e59f037c047f21172080fd5d42e87abe3658da81b656612257c014"
+  },
+  "review_content": {
+    "synthetic": true,
+    "kind": "scope-to-source mapping review fixture",
+    "scope": {
+      "path": "sources/scope.json",
+      "sha256": "34bd1d9e07d09f96ff7494394419dd66b75ea4b19489d4aff0de792003eb4df0"
+    },
+    "reviewed_meaning": [
+      "Current demo scope is distinct from full Manifest approval and launch.",
+      "Visual observations do not create exact user acceptance.",
+      "Per-target evidence does not transfer to other viewport or output.",
+      "Excluded former failures are retained as history, not erased."
+    ],
+    "reviewed_sources": [
+      {
+        "path": "sources/design-observations.json",
+        "sha256": "66fff35869d2383e594b905bde888c09b688e5c72c88738bd7478684de6bc1e4"
+      },
+      {
+        "path": "sources/exact-acceptance.json",
+        "sha256": "1e21ef83a48ec5a508c18a9955b488676d8a204e00fae6da87c4addd05603db0"
+      }
+    ],
+    "unreviewed_meaning": []
+  },
+  "limits": "Canonical binding detects changed mapping; not author authentication or semantic proof."
+}

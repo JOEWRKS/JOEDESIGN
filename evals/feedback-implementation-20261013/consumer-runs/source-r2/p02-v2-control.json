@@ -1,0 +1,23 @@
+{
+  "command": [
+    "node",
+    "D:\\JOEWRKS\\\uc791\uc5c5\ud558\ub124\uc2a4\\skills\\joeness-setup\\scripts\\roadmap-review.mjs",
+    "--root",
+    "D:\\JOEWRKS\\JOEDESIGN\\evals\\feedback-implementation-20261013\\f02-fixtures-v2\\F02-P02",
+    "--input",
+    "input.json",
+    "--input-sha256",
+    "03e914875e5a13f2b1d84a66d57ccdf059022a8b711f5afb26e6340accfb711f"
+  ],
+  "exit": 2,
+  "cli_sha256": "38dcfe1f264d1d7eca40303940524f405f6a9558ebfc7e1349898fe4a82ef308",
+  "cli_unchanged": true,
+  "same_cli_as_v3": true,
+  "delivery": "undetermined",
+  "codes": [
+    "OBSERVATION",
+    "OBSERVATION",
+    "OBSERVATION",
+    "OBSERVATION"
+  ]
+}

@@ -1,0 +1,603 @@
+{
+  "schema": "joeness.roadmap-review.v1",
+  "scope_id": "synthetic-demo",
+  "scope_source": {
+    "path": "sources/scope.json",
+    "sha256": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b",
+    "pointer": "",
+    "value": {
+      "synthetic": true,
+      "scope_id": "synthetic-demo",
+      "revision": 1,
+      "manifest_approval": "UNAPPROVED",
+      "delivery": "non-launch demo",
+      "required": [
+        {
+          "id": "desktop-view",
+          "label": "desktop scoped review",
+          "required_lanes": [
+            "implementation",
+            "technical",
+            "visual"
+          ],
+          "acceptance_required": false,
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ],
+          "visual_meaning": "Fixture-scoped conformance; not global aesthetic acceptance"
+        }
+      ],
+      "excluded": [
+        {
+          "id": "production-operations",
+          "label": "Live operations",
+          "reason": "The synthetic scope explicitly excludes launch"
+        },
+        {
+          "id": "mobile-view",
+          "label": "Prior mobile outcome",
+          "reason": "Explicit synthetic scoped change"
+        }
+      ]
+    }
+  },
+  "scope_authorization": {
+    "path": "sources/authorization.json",
+    "sha256": "bb248d3c0074c18476cc18a9fab0269554ae2b767c2d3e8344dc1bf885534a24",
+    "pointer": "",
+    "value": {
+      "synthetic": true,
+      "scope_id": "synthetic-demo",
+      "revision": 1,
+      "actor": "SYNTHETIC_USER_NOT_REAL_APPROVAL",
+      "decision": "Use this fixture scope, preserve Manifest UNAPPROVED",
+      "scope": {
+        "synthetic": true,
+        "scope_id": "synthetic-demo",
+        "revision": 1,
+        "manifest_approval": "UNAPPROVED",
+        "delivery": "non-launch demo",
+        "required": [
+          {
+            "id": "desktop-view",
+            "label": "desktop scoped review",
+            "required_lanes": [
+              "implementation",
+              "technical",
+              "visual"
+            ],
+            "acceptance_required": false,
+            "targets": [
+              {
+                "path": "targets/desktop.json",
+                "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+              },
+              {
+                "path": "outputs/desktop.json",
+                "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+              }
+            ],
+            "visual_meaning": "Fixture-scoped conformance; not global aesthetic acceptance"
+          }
+        ],
+        "excluded": [
+          {
+            "id": "production-operations",
+            "label": "Live operations",
+            "reason": "The synthetic scope explicitly excludes launch"
+          },
+          {
+            "id": "mobile-view",
+            "label": "Prior mobile outcome",
+            "reason": "Explicit synthetic scoped change"
+          }
+        ]
+      }
+    }
+  },
+  "mapping_review": {
+    "path": "sources/mapping-review.json",
+    "sha256": "2d205245d0c81f32327e97c9ab2d7cb491b967a923273fd5a0eb831870bcd6be",
+    "pointer": "",
+    "value": {
+      "synthetic": true,
+      "kind": "scope-to-source mapping review fixture",
+      "scope": {
+        "path": "sources/scope.json",
+        "sha256": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b"
+      },
+      "reviewed_meaning": [
+        "Current demo scope is distinct from full Manifest approval and launch.",
+        "Visual observations do not create exact user acceptance.",
+        "Per-target evidence does not transfer to other viewport or output.",
+        "Excluded former failures are retained as history, not erased."
+      ],
+      "reviewed_sources": [
+        {
+          "path": "sources/design-observations.json",
+          "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72"
+        },
+        {
+          "path": "sources/exact-acceptance.json",
+          "sha256": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483"
+        }
+      ],
+      "unreviewed_meaning": []
+    }
+  },
+  "required_outcomes": [
+    {
+      "id": "desktop-view",
+      "label": "desktop scoped review",
+      "required_lanes": [
+        "implementation",
+        "technical",
+        "visual"
+      ],
+      "acceptance_required": false,
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/scope.json",
+        "sha256": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b",
+        "pointer": "/required/0",
+        "value": {
+          "id": "desktop-view",
+          "label": "desktop scoped review",
+          "required_lanes": [
+            "implementation",
+            "technical",
+            "visual"
+          ],
+          "acceptance_required": false,
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ],
+          "visual_meaning": "Fixture-scoped conformance; not global aesthetic acceptance"
+        }
+      }
+    }
+  ],
+  "excluded_outcomes": [
+    {
+      "id": "production-operations",
+      "label": "Live operations",
+      "source": {
+        "path": "sources/scope.json",
+        "sha256": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b",
+        "pointer": "/excluded/0",
+        "value": {
+          "id": "production-operations",
+          "label": "Live operations",
+          "reason": "The synthetic scope explicitly excludes launch"
+        }
+      },
+      "authorization": {
+        "path": "sources/authorization.json",
+        "sha256": "bb248d3c0074c18476cc18a9fab0269554ae2b767c2d3e8344dc1bf885534a24",
+        "pointer": "",
+        "value": {
+          "synthetic": true,
+          "scope_id": "synthetic-demo",
+          "revision": 1,
+          "actor": "SYNTHETIC_USER_NOT_REAL_APPROVAL",
+          "decision": "Use this fixture scope, preserve Manifest UNAPPROVED",
+          "scope": {
+            "synthetic": true,
+            "scope_id": "synthetic-demo",
+            "revision": 1,
+            "manifest_approval": "UNAPPROVED",
+            "delivery": "non-launch demo",
+            "required": [
+              {
+                "id": "desktop-view",
+                "label": "desktop scoped review",
+                "required_lanes": [
+                  "implementation",
+                  "technical",
+                  "visual"
+                ],
+                "acceptance_required": false,
+                "targets": [
+                  {
+                    "path": "targets/desktop.json",
+                    "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+                  },
+                  {
+                    "path": "outputs/desktop.json",
+                    "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+                  }
+                ],
+                "visual_meaning": "Fixture-scoped conformance; not global aesthetic acceptance"
+              }
+            ],
+            "excluded": [
+              {
+                "id": "production-operations",
+                "label": "Live operations",
+                "reason": "The synthetic scope explicitly excludes launch"
+              },
+              {
+                "id": "mobile-view",
+                "label": "Prior mobile outcome",
+                "reason": "Explicit synthetic scoped change"
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "id": "mobile-view",
+      "label": "Prior mobile outcome",
+      "source": {
+        "path": "sources/scope.json",
+        "sha256": "368fb5f7e03fed81637dda83b5c2ecdc02cc6387884200b2a1eebd358f7c948b",
+        "pointer": "/excluded/1",
+        "value": {
+          "id": "mobile-view",
+          "label": "Prior mobile outcome",
+          "reason": "Explicit synthetic scoped change"
+        }
+      },
+      "authorization": {
+        "path": "sources/authorization.json",
+        "sha256": "bb248d3c0074c18476cc18a9fab0269554ae2b767c2d3e8344dc1bf885534a24",
+        "pointer": "",
+        "value": {
+          "synthetic": true,
+          "scope_id": "synthetic-demo",
+          "revision": 1,
+          "actor": "SYNTHETIC_USER_NOT_REAL_APPROVAL",
+          "decision": "Use this fixture scope, preserve Manifest UNAPPROVED",
+          "scope": {
+            "synthetic": true,
+            "scope_id": "synthetic-demo",
+            "revision": 1,
+            "manifest_approval": "UNAPPROVED",
+            "delivery": "non-launch demo",
+            "required": [
+              {
+                "id": "desktop-view",
+                "label": "desktop scoped review",
+                "required_lanes": [
+                  "implementation",
+                  "technical",
+                  "visual"
+                ],
+                "acceptance_required": false,
+                "targets": [
+                  {
+                    "path": "targets/desktop.json",
+                    "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+                  },
+                  {
+                    "path": "outputs/desktop.json",
+                    "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+                  }
+                ],
+                "visual_meaning": "Fixture-scoped conformance; not global aesthetic acceptance"
+              }
+            ],
+            "excluded": [
+              {
+                "id": "production-operations",
+                "label": "Live operations",
+                "reason": "The synthetic scope explicitly excludes launch"
+              },
+              {
+                "id": "mobile-view",
+                "label": "Prior mobile outcome",
+                "reason": "Explicit synthetic scoped change"
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "observations": [
+    {
+      "outcome_id": "desktop-view",
+      "lane": "implementation",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+        "pointer": "/claims/0",
+        "value": {
+          "outcome_id": "desktop-view",
+          "lane": "implementation",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "desktop-view",
+      "lane": "technical",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+        "pointer": "/claims/1",
+        "value": {
+          "outcome_id": "desktop-view",
+          "lane": "technical",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "desktop-view",
+      "lane": "visual",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+        "pointer": "/claims/2",
+        "value": {
+          "outcome_id": "desktop-view",
+          "lane": "visual",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "implementation",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+        "pointer": "/claims/3",
+        "value": {
+          "outcome_id": "mobile-view",
+          "lane": "implementation",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/mobile.json",
+              "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+            },
+            {
+              "path": "outputs/mobile.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "technical",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+        "pointer": "/claims/4",
+        "value": {
+          "outcome_id": "mobile-view",
+          "lane": "technical",
+          "status": "PASS",
+          "targets": [
+            {
+              "path": "targets/mobile.json",
+              "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+            },
+            {
+              "path": "outputs/mobile.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "visual",
+      "status": "FAIL",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/design-observations.json",
+        "sha256": "780f4532f3f89e02b9c790f70ef66b6a5459457e48c8426a4657a446f5cd1d72",
+        "pointer": "/claims/5",
+        "value": {
+          "outcome_id": "mobile-view",
+          "lane": "visual",
+          "status": "FAIL",
+          "targets": [
+            {
+              "path": "targets/mobile.json",
+              "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+            },
+            {
+              "path": "outputs/mobile.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "desktop-view",
+      "lane": "acceptance",
+      "status": "NOT_GRANTED",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/exact-acceptance.json",
+        "sha256": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+        "pointer": "/claims/0",
+        "value": {
+          "outcome_id": "desktop-view",
+          "lane": "acceptance",
+          "status": "NOT_GRANTED",
+          "targets": [
+            {
+              "path": "targets/desktop.json",
+              "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+            },
+            {
+              "path": "outputs/desktop.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "acceptance",
+      "status": "NOT_GRANTED",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ],
+      "source": {
+        "path": "sources/exact-acceptance.json",
+        "sha256": "3b3a9cf4b7869fec749253822968c9ce01d6f348311db86df21a31797b4a5483",
+        "pointer": "/claims/1",
+        "value": {
+          "outcome_id": "mobile-view",
+          "lane": "acceptance",
+          "status": "NOT_GRANTED",
+          "targets": [
+            {
+              "path": "targets/mobile.json",
+              "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+            },
+            {
+              "path": "outputs/mobile.json",
+              "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

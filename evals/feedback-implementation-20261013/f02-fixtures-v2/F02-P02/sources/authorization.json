@@ -1,0 +1,49 @@
+{
+  "synthetic": true,
+  "scope_id": "synthetic-demo",
+  "revision": 1,
+  "actor": "SYNTHETIC_USER_NOT_REAL_APPROVAL",
+  "decision": "Use this fixture scope, preserve Manifest UNAPPROVED",
+  "scope": {
+    "synthetic": true,
+    "scope_id": "synthetic-demo",
+    "revision": 1,
+    "manifest_approval": "UNAPPROVED",
+    "delivery": "non-launch demo",
+    "required": [
+      {
+        "id": "desktop-view",
+        "label": "desktop scoped review",
+        "required_lanes": [
+          "implementation",
+          "technical",
+          "visual"
+        ],
+        "acceptance_required": false,
+        "targets": [
+          {
+            "path": "targets/desktop.json",
+            "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+          },
+          {
+            "path": "outputs/desktop.json",
+            "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+          }
+        ],
+        "visual_meaning": "Fixture-scoped conformance; not global aesthetic acceptance"
+      }
+    ],
+    "excluded": [
+      {
+        "id": "production-operations",
+        "label": "Live operations",
+        "reason": "The synthetic scope explicitly excludes launch"
+      },
+      {
+        "id": "mobile-view",
+        "label": "Prior mobile outcome",
+        "reason": "Explicit synthetic scoped change"
+      }
+    ]
+  }
+}

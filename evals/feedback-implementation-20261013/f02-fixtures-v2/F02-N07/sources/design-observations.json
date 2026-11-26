@@ -1,0 +1,97 @@
+{
+  "synthetic": true,
+  "not_real_measurement": true,
+  "scope_id": "synthetic-demo",
+  "claims": [
+    {
+      "outcome_id": "desktop-view",
+      "lane": "implementation",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ]
+    },
+    {
+      "outcome_id": "desktop-view",
+      "lane": "technical",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ]
+    },
+    {
+      "outcome_id": "desktop-view",
+      "lane": "visual",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/desktop.json",
+          "sha256": "83217f14df9c234bca01c49954458b946c97f92686c70c9ea0a7a417554ac2d3"
+        },
+        {
+          "path": "outputs/desktop.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ]
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "implementation",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ]
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "technical",
+      "status": "UNVERIFIED",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ]
+    },
+    {
+      "outcome_id": "mobile-view",
+      "lane": "visual",
+      "status": "PASS",
+      "targets": [
+        {
+          "path": "targets/mobile.json",
+          "sha256": "84b32d50877e5aa66af16894d01f00feac35b978de7e4cb3ffe3365ddf075382"
+        },
+        {
+          "path": "outputs/mobile.json",
+          "sha256": "b9a119368fa9d0b1edebe31e992c080be623046579e4318b7184eb29624de0fd"
+        }
+      ]
+    }
+  ]
+}
