@@ -1,0 +1,53 @@
+{
+ "url": "http://127.0.0.1:8731/",
+ "browser": "Chrome/158.0.8127.37",
+ "dpr": 2,
+ "theme": "light",
+ "reduced_motion": "no-preference",
+ "captures": [
+  {
+   "size": "1024x768",
+   "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/fixture/fixture-1024x768@2x-full.png",
+   "sha256": "bac0b32a414769e5300b21b8f4d5b57dc0416e1638748a389d7e359275a2afa7",
+   "page_errors": [],
+   "probe": {
+    "animation": "rise",
+    "duration": "0.6s",
+    "transition": "0s",
+    "reduce": false,
+    "sheets": 1,
+    "chipM": [
+     96,
+     114.875,
+     72,
+     44
+    ]
+   }
+  },
+  {
+   "size": "360x640",
+   "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/fixture/fixture-360x640@2x-full.png",
+   "sha256": "c57bdc2ef912fc1638a40a1c0955af7b42a511523ab50e2d60e6c9c3f78e98a9",
+   "page_errors": [],
+   "probe": {
+    "animation": "rise",
+    "duration": "0.6s",
+    "transition": "0s",
+    "reduce": false,
+    "sheets": 1,
+    "chipM": [
+     96,
+     114.875,
+     72,
+     44
+    ]
+   }
+  }
+ ]
+}

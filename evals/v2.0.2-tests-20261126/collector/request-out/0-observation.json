@@ -1,0 +1,69 @@
+{
+  "target": {
+    "id": "narrow-selected",
+    "route": "/",
+    "viewport": [
+      360,
+      640
+    ],
+    "locale": "ko-KR",
+    "theme": "light",
+    "state": "selected"
+  },
+  "requested_url": "http://127.0.0.1:8731/",
+  "build_id": "capture-cdp-fixture",
+  "actions": [
+    {
+      "type": "press",
+      "key": "Tab",
+      "focus": {
+        "tag": "BUTTON",
+        "id": "chip-s",
+        "visible": true
+      }
+    },
+    {
+      "type": "press",
+      "key": "Enter",
+      "focus": {
+        "tag": "BUTTON",
+        "id": "chip-s",
+        "visible": true
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "selector": "#state",
+      "text": "S 선택됨",
+      "visible": true
+    },
+    {
+      "selector": "#chip-s",
+      "focused": true
+    }
+  ],
+  "console_errors": [],
+  "frames": [
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-start.png",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-0.png",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-1.png",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-result.png",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-full.png"
+  ],
+  "motion_observation": "FRAME_SAMPLES_ONLY",
+  "driver": "cdp",
+  "browser": "Chrome/158.0.8127.37",
+  "reduced_motion": "no-preference",
+  "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+  ],
+  "actual_url": "http://127.0.0.1:8731/",
+  "frame_hashes": {
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-start.png": "923bb730b05c625f14635dbbb8da504b701f5cb000907cf9ba5e392ff6120d30",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-0.png": "3e773e49f6c5d2d6c74fdbc351e4731c3c8e67239a1304a02f6a8d91689cbe23",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-1.png": "375bca52794171288db06a63dae2474f30ddfb37256204d1144e8c48921827ef",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-result.png": "df2dbed5afda9855b3836a0e17d3e4232bfdace5eeba953b7c956c15a2ae5cf0",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-full.png": "ea5375d6132156513ea2e6a58c210a56721bc5663f50c0406cb05c917d6cb15c"
+  }
+}

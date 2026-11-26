@@ -1,0 +1,175 @@
++ S=skills/joedesign/scripts
++ C=evals/v2.0.2-tests-20261126/collector
++ PROBE='({...window.motion(), chipM: (() => { const r = document.getElementById("chip-m").getBoundingClientRect(); return [r.x, r.y, r.width, r.height]; })()})'
++ node skills/joedesign/scripts/capture-cdp.mjs --url http://127.0.0.1:8731/ --sizes 1024x768,360x640 --dpr 2 --out evals/v2.0.2-tests-20261126/collector/fixture --name fixture --probe '({...window.motion(), chipM: (() => { const r = document.getElementById("chip-m").getBoundingClientRect(); return [r.x, r.y, r.width, r.height]; })()})'
+{
+ "url": "http://127.0.0.1:8731/",
+ "browser": "Chrome/158.0.8127.37",
+ "dpr": 2,
+ "theme": "light",
+ "reduced_motion": "no-preference",
+ "captures": [
+  {
+   "size": "1024x768",
+   "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/fixture/fixture-1024x768@2x-full.png",
+   "sha256": "bac0b32a414769e5300b21b8f4d5b57dc0416e1638748a389d7e359275a2afa7",
+   "page_errors": [],
+   "probe": {
+    "animation": "rise",
+    "duration": "0.6s",
+    "transition": "0s",
+    "reduce": false,
+    "sheets": 1,
+    "chipM": [
+     96,
+     114.875,
+     72,
+     44
+    ]
+   }
+  },
+  {
+   "size": "360x640",
+   "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/fixture/fixture-360x640@2x-full.png",
+   "sha256": "c57bdc2ef912fc1638a40a1c0955af7b42a511523ab50e2d60e6c9c3f78e98a9",
+   "page_errors": [],
+   "probe": {
+    "animation": "rise",
+    "duration": "0.6s",
+    "transition": "0s",
+    "reduce": false,
+    "sheets": 1,
+    "chipM": [
+     96,
+     114.875,
+     72,
+     44
+    ]
+   }
+  }
+ ]
+}
++ node skills/joedesign/scripts/capture-cdp.mjs --url http://127.0.0.1:8731/ --sizes 360x640 --out evals/v2.0.2-tests-20261126/collector/fixture --name fixture-reduce-emulate --reduce-motion emulate --probe '({...window.motion(), chipM: (() => { const r = document.getElementById("chip-m").getBoundingClientRect(); return [r.x, r.y, r.width, r.height]; })()})'
+{
+ "url": "http://127.0.0.1:8731/",
+ "browser": "Chrome/158.0.8127.37",
+ "dpr": 1,
+ "theme": "light",
+ "reduced_motion": "emulate",
+ "captures": [
+  {
+   "size": "360x640",
+   "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/fixture/fixture-reduce-emulate-360x640-reduce-emulate-full.png",
+   "sha256": "b11584f2272d62a8780ab338a82a0edec8309206ada0a18ec7ac85dfd63aaa5d",
+   "page_errors": [],
+   "probe": {
+    "animation": "none",
+    "duration": "0s",
+    "transition": "0s",
+    "reduce": true,
+    "sheets": 1,
+    "chipM": [
+     96,
+     114.875,
+     72,
+     44
+    ]
+   }
+  }
+ ]
+}
++ node skills/joedesign/scripts/capture-cdp.mjs --url http://127.0.0.1:8731/ --sizes 360x640 --out evals/v2.0.2-tests-20261126/collector/fixture --name fixture-reduce-inject --reduce-motion inject --probe '({...window.motion(), chipM: (() => { const r = document.getElementById("chip-m").getBoundingClientRect(); return [r.x, r.y, r.width, r.height]; })()})'
+{
+ "url": "http://127.0.0.1:8731/",
+ "browser": "Chrome/158.0.8127.37",
+ "dpr": 1,
+ "theme": "light",
+ "reduced_motion": "inject",
+ "captures": [
+  {
+   "size": "360x640",
+   "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+   ],
+   "reduce_injection": {
+    "rules": 2,
+    "unreadable": 0
+   },
+   "path": "evals/v2.0.2-tests-20261126/collector/fixture/fixture-reduce-inject-360x640-reduce-inject-full.png",
+   "sha256": "b11584f2272d62a8780ab338a82a0edec8309206ada0a18ec7ac85dfd63aaa5d",
+   "page_errors": [],
+   "probe": {
+    "animation": "none",
+    "duration": "0s",
+    "transition": "0s",
+    "reduce": false,
+    "sheets": 2,
+    "chipM": [
+     96,
+     114.875,
+     72,
+     44
+    ]
+   }
+  }
+ ]
+}
++ node skills/joedesign/scripts/capture.mjs
+{"captures":[{"target_id":"narrow-selected","kind":"render","path":"<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-result.png","action":"","result":"Configured state predicates observed","frames":["<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-start.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-0.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-1.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-result.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-full.png"]},{"target_id":"narrow-selected","kind":"interaction","path":"<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-observation.json","action":"[{\"type\":\"press\",\"key\":\"Tab\",\"focus\":{\"tag\":\"BUTTON\",\"id\":\"chip-s\",\"visible\":true}},{\"type\":\"press\",\"key\":\"Enter\",\"focus\":{\"tag\":\"BUTTON\",\"id\":\"chip-s\",\"visible\":true}}]","result":"[{\"selector\":\"#state\",\"text\":\"S 선택됨\",\"visible\":true},{\"selector\":\"#chip-s\",\"focused\":true}]","frames":["<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-start.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-0.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-action-1.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-result.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-full.png"]},{"target_id":"narrow-selected","kind":"technical","path":"<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\0-observation.json","action":"browser diagnostics","result":"[]","frames":[]},{"target_id":"wide-reduce-injected","kind":"render","path":"<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-result.png","action":"","result":"Configured state predicates observed","frames":["<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-start.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-result.png","<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-full.png"]},{"target_id":"wide-reduce-injected","kind":"technical","path":"<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-observation.json","action":"browser diagnostics","result":"[]","frames":[]}],"errors":[]}+ node skills/joedesign/scripts/capture-cdp.mjs --url http://127.0.0.1:8732/ --sizes 1024x768,360x640 --out evals/v2.0.2-tests-20261126/collector/atelier-dist --name atelier-dist --settle 1500 --probe '({title: document.title, text: document.body.innerText.slice(0, 120), sheets: document.styleSheets.length})'
+{
+ "url": "http://127.0.0.1:8732/",
+ "browser": "Chrome/158.0.8127.37",
+ "dpr": 1,
+ "theme": "light",
+ "reduced_motion": "no-preference",
+ "captures": [
+  {
+   "size": "1024x768",
+   "stylesheets": [
+    "http://127.0.0.1:8732/fonts/pretendard/pretendardvariable-dynamic-subset.css",
+    "http://127.0.0.1:8732/assets/index-D9INL6PM.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/atelier-dist/atelier-dist-1024x768-full.png",
+   "sha256": "0b3f30442ce81586d56a30795aebc19db67e8bd7aa017605dbc9e45b7804faab",
+   "page_errors": [],
+   "probe": {
+    "title": "ATELIER",
+    "text": "ATELIER\n검색\n0\n\n상품을 불러올 수 없습니다\n\n다시 시도",
+    "sheets": 2
+   }
+  },
+  {
+   "size": "360x640",
+   "stylesheets": [
+    "http://127.0.0.1:8732/fonts/pretendard/pretendardvariable-dynamic-subset.css",
+    "http://127.0.0.1:8732/assets/index-D9INL6PM.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/atelier-dist/atelier-dist-360x640-full.png",
+   "sha256": "bb191d8d8b3f41b82e288ba995572c3f4c0261e5dd2fc675af012fa347f622db",
+   "page_errors": [],
+   "probe": {
+    "title": "ATELIER",
+    "text": "ATELIER\n검색\n0\n\n상품을 불러올 수 없습니다\n\n다시 시도",
+    "sheets": 2
+   }
+  }
+ ]
+}
++ node skills/joedesign/scripts/sample-pixels.mjs evals/v2.0.2-tests-20261126/collector/fixture/fixture-360x640@2x-full.png --region 200,236,128,76 --expect '#8A8A8A'
+median #8A8A8A, range 138–179, n 30 px (row 272, bg #FFFFFF, contrast 3.45)
+expect #8A8A8A: channel diff 0 / contrast diff 0.00 -> within (±8 or ±0.2)
++ node skills/joedesign/scripts/sample-pixels.mjs evals/v2.0.2-tests-20261126/collector/fixture/fixture-1024x768@2x-full.png --region 200,236,128,76 --expect '#8A8A8A'
+median #8A8A8A, range 138–179, n 30 px (row 272, bg #FFFFFF, contrast 3.45)
+expect #8A8A8A: channel diff 0 / contrast diff 0.00 -> within (±8 or ±0.2)
++ node skills/joedesign/scripts/capture-cdp.mjs --url https://example.com/ --sizes 360x640 --out evals/v2.0.2-tests-20261126/collector/refused --name refused
+capture-cdp: Collector only operates an explicitly configured local preview
+# absolute paths of this worktree were replaced with <repo> after the run

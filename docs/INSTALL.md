@@ -7,7 +7,7 @@
 | 설치 단위 | `skills/joedesign/` 전체 |
 | 스킬 ID·실행 요청 | `joedesign` · `$joedesign` |
 | 버전 원본 | [VERSION](../skills/joedesign/VERSION) |
-| 2.0.1 변경 경계 | `doctor` 기본 경로의 `CODEX_HOME` 반영, 영수증 evidence 경로의 프로젝트 기준 상대화, `DESIGN_INTENT.json` 예시 행과 행 모양 오류, 측정 전 스타일시트 확인 한 문장. JSON schema/contract 버전 및 과거 증거의 의미 유지([변경 이력](../CHANGELOG.md)) |
+| 2.0.2 변경 경계 | 색·모션 직접 관측 절과 `sample-pixels.mjs`, report-check R3(AC 줄)·R5(`decided in rev N DEC-xxx`), 출처 표 관측 범위 열, 전문 스킬 위치·대체 실행, Playwright 없는 수집기 `capture-cdp.mjs`, 규칙 행 병합·재실행 범위. `doctor`에 `collector` 블록과 `~/.claude/skills` 검색. JSON schema/contract 버전 및 과거 증거의 의미 유지([변경 이력](../CHANGELOG.md)) |
 
 ## 최초 설치
 
@@ -33,14 +33,14 @@ python -B <설치폴더>/scripts/harness_cli.py doctor
 
 | 항목 | 확인·준비 기준 |
 |---|---|
-| `version` | `2.0.1` 및 실제 운영지침 경로 확인 |
+| `version` | `2.0.2` 및 실제 운영지침 경로 확인 |
 | `doctor` | 발견 경로·누락된 전문 스킬 확인. 준비 부족 시 종료코드 2는 정상 진단 결과 |
 | 기본 전문 검수 | `impeccable`, `ui-ux-pro-max`, `web-design-guidelines` 필요 |
 | 추가 전문 검수 | 모션·React 성능 검수에 해당 전문 스킬 준비 |
-| 기본 검색 경로 | 패키지 형제 폴더, `$CODEX_HOME/skills`(미지정 시 사용자 `.codex/skills`), 사용자 `.agents/skills` |
+| 기본 검색 경로 | 패키지 형제 폴더, `$CODEX_HOME/skills`(미지정 시 사용자 `.codex/skills`), 사용자 `.agents/skills`, 사용자 `.claude/skills`(2.0.2) |
 | 사용자 지정 경로 검사 | `doctor --skills-root <스킬들상위폴더>`. 기본 검색 경로를 **대체**(추가 아님). 여러 경로는 `--skills-root` 반복 지정 |
 | 자동 실행 | 기존 Codex 실행기·Python 3 필요 |
-| 브라우저 수집 | 기존 Node·Playwright 패키지·브라우저 경로 추가 필요 |
+| 브라우저 수집 | Node 22 이상과 설치된 Chrome·Edge(`CHROME_PATH` 또는 일반 설치 경로). 프로젝트에 Playwright 패키지가 있으면 `capture.mjs`가 그것을 쓰고, 없으면 `capture-cdp.mjs`로 넘긴다. `doctor`의 `collector.route`가 `playwright`/`cdp`/`none`을 보여 줌 |
 | 진단 CLI | Python 표준 라이브러리 사용. pip 설치 불필요 |
 
 - 전문 스킬: 실제 제공처의 설치 방법 적용. 이름만 같은 가짜 파일·폴더로 누락 대체 금지.
@@ -72,7 +72,7 @@ Git 저장소 갱신과 설치 폴더 갱신은 별도 절차.
 - 구형 두 패키지 이전: 별도 공개 진입점 `joedesign-harness` 정리 필요.
   현재 운영은 내부 하네스를 포함한 `joedesign` 하나로 통합.
 - 이미 이전한 설치: 과거 이전 작업의 재실행 불필요.
-- 버전 고정: `git pull --ff-only`는 `main` 브랜치 복제본 전제이며 최신 `main`으로 이동. 특정 버전·detached 복제본은 `git fetch --tags; git checkout v2.0.1`.
+- 버전 고정: `git pull --ff-only`는 `main` 브랜치 복제본 전제이며 최신 `main`으로 이동. 특정 버전·detached 복제본은 `git fetch --tags; git checkout v2.0.2`.
 
 ### 백업과 해시 비교
 

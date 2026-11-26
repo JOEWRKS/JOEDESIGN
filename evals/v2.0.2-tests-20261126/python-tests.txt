@@ -1,0 +1,5 @@
+$ python -B -m unittest discover -s tests
+----------------------------------------------------------------------
+Ran 150 tests in 153.408s
+
+OK (skipped=2)

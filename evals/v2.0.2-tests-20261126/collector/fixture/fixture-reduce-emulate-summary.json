@@ -1,0 +1,31 @@
+{
+ "url": "http://127.0.0.1:8731/",
+ "browser": "Chrome/158.0.8127.37",
+ "dpr": 1,
+ "theme": "light",
+ "reduced_motion": "emulate",
+ "captures": [
+  {
+   "size": "360x640",
+   "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/fixture/fixture-reduce-emulate-360x640-reduce-emulate-full.png",
+   "sha256": "b11584f2272d62a8780ab338a82a0edec8309206ada0a18ec7ac85dfd63aaa5d",
+   "page_errors": [],
+   "probe": {
+    "animation": "none",
+    "duration": "0s",
+    "transition": "0s",
+    "reduce": true,
+    "sheets": 1,
+    "chipM": [
+     96,
+     114.875,
+     72,
+     44
+    ]
+   }
+  }
+ ]
+}

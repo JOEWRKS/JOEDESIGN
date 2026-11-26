@@ -1,0 +1,39 @@
+{
+ "url": "http://127.0.0.1:8732/",
+ "browser": "Chrome/158.0.8127.37",
+ "dpr": 1,
+ "theme": "light",
+ "reduced_motion": "no-preference",
+ "captures": [
+  {
+   "size": "1024x768",
+   "stylesheets": [
+    "http://127.0.0.1:8732/fonts/pretendard/pretendardvariable-dynamic-subset.css",
+    "http://127.0.0.1:8732/assets/index-D9INL6PM.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/atelier-dist/atelier-dist-1024x768-full.png",
+   "sha256": "0b3f30442ce81586d56a30795aebc19db67e8bd7aa017605dbc9e45b7804faab",
+   "page_errors": [],
+   "probe": {
+    "title": "ATELIER",
+    "text": "ATELIER\n검색\n0\n\n상품을 불러올 수 없습니다\n\n다시 시도",
+    "sheets": 2
+   }
+  },
+  {
+   "size": "360x640",
+   "stylesheets": [
+    "http://127.0.0.1:8732/fonts/pretendard/pretendardvariable-dynamic-subset.css",
+    "http://127.0.0.1:8732/assets/index-D9INL6PM.css"
+   ],
+   "path": "evals/v2.0.2-tests-20261126/collector/atelier-dist/atelier-dist-360x640-full.png",
+   "sha256": "bb191d8d8b3f41b82e288ba995572c3f4c0261e5dd2fc675af012fa347f622db",
+   "page_errors": [],
+   "probe": {
+    "title": "ATELIER",
+    "text": "ATELIER\n검색\n0\n\n상품을 불러올 수 없습니다\n\n다시 시도",
+    "sheets": 2
+   }
+  }
+ ]
+}

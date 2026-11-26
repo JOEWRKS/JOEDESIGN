@@ -1,0 +1,49 @@
+{
+  "target": {
+    "id": "wide-reduce-injected",
+    "route": "/",
+    "viewport": [
+      1024,
+      768
+    ],
+    "locale": "ko-KR",
+    "theme": "light",
+    "state": "default"
+  },
+  "requested_url": "http://127.0.0.1:8731/",
+  "build_id": "capture-cdp-fixture",
+  "actions": [],
+  "assertions": [
+    {
+      "selector": "#chip-m",
+      "visible": true
+    },
+    {
+      "selector": ".chip",
+      "count": 3
+    }
+  ],
+  "console_errors": [],
+  "frames": [
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-start.png",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-result.png",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-full.png"
+  ],
+  "motion_observation": "FRAME_SAMPLES_ONLY",
+  "driver": "cdp",
+  "browser": "Chrome/158.0.8127.37",
+  "reduced_motion": "injected",
+  "stylesheets": [
+    "http://127.0.0.1:8731/style.css"
+  ],
+  "reduce_injection": {
+    "rules": 2,
+    "unreadable": 0
+  },
+  "actual_url": "http://127.0.0.1:8731/",
+  "frame_hashes": {
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-start.png": "271bc3613aa26229e4d06a2e2b18bcc726b0bad17c24f7f68c960838c02edd55",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-result.png": "271bc3613aa26229e4d06a2e2b18bcc726b0bad17c24f7f68c960838c02edd55",
+    "<repo>\\evals\\v2.0.2-tests-20261126\\collector\\request-out\\1-full.png": "0b29ed0fa867777bf3712404508ced44df7f0ce0e64876e1c9132397f30ded2b"
+  }
+}

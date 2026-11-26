@@ -1,4 +1,4 @@
-# 빠른 시작 (JOEDESIGN 2.0.1)
+# 빠른 시작 (JOEDESIGN 2.0.2)
 
 설치 → 확인 → 첫 검수 → 보고 검사 → 업데이트 → 제거. 명령은 Windows PowerShell 기준이다. 설치 스크립트는 없고, 아래 명령을 직접 실행한다.
 
@@ -34,9 +34,10 @@ python -B <설치폴더>\scripts\harness_cli.py version
 python -B <설치폴더>\scripts\harness_cli.py doctor
 ```
 
-- `version`: `"version": "2.0.1"`과 실제 `SKILL.md` 경로가 나와야 한다(연결 설치는 복제본 쪽 경로로 나온다).
+- `version`: `"version": "2.0.2"`과 실제 `SKILL.md` 경로가 나와야 한다(연결 설치는 복제본 쪽 경로로 나온다).
 - `doctor`: 전문 스킬(impeccable, ui-ux-pro-max, web-design-guidelines 등)이 없으면 `UNAVAILABLE`과 **종료 코드 2가 정상**이다. 발견은 호출·검수 완료와 다르다.
-- `doctor`의 기본 탐색 경로는 패키지 형제 폴더, `$CODEX_HOME/skills`(CODEX_HOME이 없으면 `~/.codex/skills`), `~/.agents/skills`다.
+- `doctor`의 기본 탐색 경로는 패키지 형제 폴더, `$CODEX_HOME/skills`(CODEX_HOME이 없으면 `~/.codex/skills`), `~/.agents/skills`, `~/.claude/skills`(2.0.2)다. 없는 전문 스킬은 `missing_specialists`에 이름과 대체 실행 방법(다른 설치본의 SKILL.md를 하위 에이전트가 읽어 적용, 없으면 `not run`)이 나온다.
+- `doctor`의 `collector`: 브라우저 수집 경로. `route`가 `playwright`(프로젝트에 Playwright 패키지), `cdp`(설치된 Chrome·Edge를 DevTools 프로토콜로 사용, `capture-cdp.mjs`), `none` 중 하나다. 이 값은 종료 코드에 영향이 없다.
 - `--skills-root`를 주면 기본 탐색 경로를 **대체**한다(추가가 아니다). 여러 경로를 함께 보려면 경로마다 반복한다. Claude Code 설치에서 Claude 스킬 폴더와 `~/.agents/skills`를 함께 보는 예:
 
 ```powershell
@@ -77,6 +78,24 @@ node <설치폴더>\scripts\report-check.mjs --verify SENT.md
 
 `stamp: match (...); text ok`면 도장 아래 본문이 검사한 것과 같다. `mismatch`·`missing`이면 종료 코드 1. 도장은 형식 검사 결과이지 숫자의 참을 보증하지 않는다.
 
+제품 수용 기준(AC) 결과는 디자인 검사가 아니다. `AC:`로 시작하는 줄이나 AC 제목 아래에 쓰면 괄호 규칙(R3)을 받지 않는다. 제품 정의가 이미 정한 표시 변화는 after 줄 끝에 `decided in rev N DEC-xxx`를 붙이면 R5가 대기 표기를 요구하지 않는다.
+
+### 캡처와 색 관측 (2.0.2, 선택)
+
+Playwright가 없어도 설치된 Chrome·Edge로 전 화면 캡처를 찍는다(Node 22 이상, 로컬 미리보기 주소만).
+
+```powershell
+node <설치폴더>\scripts\capture-cdp.mjs --url http://localhost:5173/ --sizes 1024x768,360x640 --dpr 2 --out captures
+```
+
+색 규칙의 직접 관측은 그 캡처의 획 중앙 행 픽셀을 읽는다. 기록은 `median M, range a–b, n px` 형식이다.
+
+```powershell
+node <설치폴더>\scripts\sample-pixels.mjs captures\page-360x640@2x-full.png --region 200,236,128,76 --expect '#8A8A8A'
+```
+
+reduced-motion은 `--reduce-motion emulate`(미디어 기능 에뮬레이션)로 찍는다. 그게 안 되는 환경에서는 `--reduce-motion inject`(페이지 자체 reduce 규칙을 조건 없이 주입)로 찍고, 결과 줄을 `rendered (reduce injected)`로 적는다.
+
 ## 5. 업데이트
 
 | 설치 방식 | 방법 |
@@ -84,7 +103,7 @@ node <설치폴더>\scripts\report-check.mjs --verify SENT.md
 | Codex(복사본) | 복제본에서 `git pull --ff-only` → 기존 `$CODEX_HOME/skills/joedesign`을 스킬 탐색 경로 **밖**으로 백업(예: `~/Documents/JOEDESIGN-backups/<날짜>/`) → 폴더 삭제 → README 블록 다시 실행. README 블록은 폴더가 있으면 멈추므로 그대로는 업데이트에 쓸 수 없다. 백업·해시 비교 명령: [설치 안내의 백업과 해시 비교](INSTALL.md#백업과-해시-비교) |
 | Claude Code(연결) | 연결한 복제본에서 `git pull --ff-only`. 연결은 그대로 둔다 |
 
-`git pull --ff-only`는 `main` 브랜치 복제본을 전제로 하고, 태그가 아닌 최신 `main`으로 간다. 특정 버전에 맞추거나 태그를 체크아웃한 복제본(detached HEAD)이면 대신 `git fetch --tags; git checkout v2.0.1`처럼 태그를 체크아웃한다.
+`git pull --ff-only`는 `main` 브랜치 복제본을 전제로 하고, 태그가 아닌 최신 `main`으로 간다. 특정 버전에 맞추거나 태그를 체크아웃한 복제본(detached HEAD)이면 대신 `git fetch --tags; git checkout v2.0.2`처럼 태그를 체크아웃한다.
 
 업데이트 뒤 `version`을 다시 실행한다.
 

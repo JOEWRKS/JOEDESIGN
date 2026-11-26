@@ -10,7 +10,7 @@
 
 - **Role:** UI creation, implementation, and design review in Codex and Claude Code.
 - **Operation:** One operating core, with stage-specific role assignments and integrated results.
-- **Version:** **2.0.1** — defined in [VERSION](skills/joedesign/VERSION). Per-version changes: [CHANGELOG (Korean)](CHANGELOG.md).
+- **Version:** **2.0.2** — defined in [VERSION](skills/joedesign/VERSION). Per-version changes: [CHANGELOG (Korean)](CHANGELOG.md).
 - **Use cases:** New UI creation, existing UI extensions and repairs, and design conformance review.
 
 ## 2. Design Purpose
@@ -47,7 +47,7 @@ Each tool works on its own. Automated consumption of review results needs the [p
 ## 6. Limitations
 
 - **2.0.0 identifies the package's supported scope, not a guarantee of defect-free results.**
-- Specialist review needs skills such as Impeccable, UI UX Pro Max and web-design-guidelines; automated runs and browser capture need an existing Codex executor, Node, Playwright and a browser. None are installed by the package.
+- Specialist review needs skills such as Impeccable, UI UX Pro Max and web-design-guidelines; automated runs need an existing Codex executor; browser capture needs Node and an installed Chrome or Edge (Playwright is used when the project already has it). None are installed by the package.
 - Reuse of earlier checks is narrow: [exact conditions](skills/joedesign/references/impact.md). Missing, failed or stale evidence is never promoted to a pass.
 
 [Quickstart](docs/QUICKSTART.md) · [Security](SECURITY.md) · [Installation](docs/INSTALL.md) · [Operating instructions](skills/joedesign/SKILL.md) ·
@@ -63,7 +63,7 @@ Each tool works on its own. Automated consumption of review results needs the [p
 
 - **역할:** Codex·Claude Code에서 화면 제작·구현·디자인 검수 지원.
 - **운영:** 단일 코어 아래 단계별 역할 배정 및 결과 통합.
-- **버전:** **2.0.1** — [VERSION](skills/joedesign/VERSION) 기준. 버전별 변경은 [변경 이력](CHANGELOG.md) 참고.
+- **버전:** **2.0.2** — [VERSION](skills/joedesign/VERSION) 기준. 버전별 변경은 [변경 이력](CHANGELOG.md) 참고.
 - **적용 대상:** 신규 화면 제작, 기존 화면 확장·수정, 디자인 기준 준수 검수.
 
 ## 2. 설계 목적
@@ -138,7 +138,7 @@ $joedesign
 ## 6. 한계
 
 - **2.0.0은 지원 범위의 패키지 버전. 무결점 보장과 구분.**
-- 전문 검수에는 Impeccable, UI UX Pro Max, web-design-guidelines 등, 자동 실행·브라우저 수집에는 기존 Codex 실행기·Node·Playwright·브라우저 필요. 패키지가 설치하지 않음.
+- 전문 검수에는 Impeccable, UI UX Pro Max, web-design-guidelines 등, 자동 실행에는 기존 Codex 실행기, 브라우저 수집에는 Node와 설치된 Chrome·Edge 필요(프로젝트에 Playwright가 있으면 그것을 씀). 패키지가 설치하지 않음.
 - 기존 검사 재사용은 좁게 한정: [정확한 조건](skills/joedesign/references/impact.md). 누락·실패·오래된 근거의 통과 처리 금지.
 
 [빠른 시작](docs/QUICKSTART.md) · [보안](SECURITY.md) · [설치·복구](docs/INSTALL.md) · [운영지침](skills/joedesign/SKILL.md) ·

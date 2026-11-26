@@ -1,0 +1,56 @@
+{
+  "dependencies": {
+    "joedesign": {
+      "status": "AVAILABLE",
+      "path": "<repo>\\skills\\joedesign\\SKILL.md",
+      "sha256": "968d033f121134f69852f6d24e45cb407f56cbf0920ece66fa5de7b4d92d9515"
+    },
+    "impeccable": {
+      "status": "UNAVAILABLE",
+      "path": null,
+      "sha256": null
+    },
+    "ui-ux-pro-max": {
+      "status": "UNAVAILABLE",
+      "path": null,
+      "sha256": null
+    },
+    "web-design-guidelines": {
+      "status": "UNAVAILABLE",
+      "path": null,
+      "sha256": null
+    },
+    "react-best-practices": {
+      "status": "UNAVAILABLE",
+      "path": null,
+      "sha256": null
+    },
+    "optimize-web-animations": {
+      "status": "UNAVAILABLE",
+      "path": null,
+      "sha256": null
+    }
+  },
+  "ready_for_synthesis": false,
+  "internal_modules": {
+    "visual-translation.md": true,
+    "visual-production.md": true
+  },
+  "version": "2.0.2",
+  "operating_core": "<repo>\\skills\\joedesign\\SKILL.md",
+  "host_verifier": "UNAVAILABLE",
+  "automatic_certification": false,
+  "collector": {
+    "route": "cdp",
+    "node": true,
+    "playwright": null,
+    "cdp_browser": "<ProgramFiles>\\Google\\Chrome\\Application\\chrome.exe",
+    "chrome_path_env": "UNSET",
+    "collectors": {
+      "playwright": "scripts/capture.mjs",
+      "cdp": "scripts/capture-cdp.mjs"
+    }
+  },
+  "note": "Availability and file identity do not prove skill invocation or behavior.",
+  "missing_specialists": "Not found: impeccable, ui-ux-pro-max, web-design-guidelines, react-best-practices, optimize-web-animations. A host whose agent cannot load one may apply it through a subagent that reads that SKILL.md from another installation (record which file and hash); a specialist found nowhere is reported as not run, never as passed (SKILL.md, Specialist skills)."
+}

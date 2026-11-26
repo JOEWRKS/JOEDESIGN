@@ -1,6 +1,20 @@
 # JOEDESIGN repository
 
-## T044 2.0.1: 2.0.0 시험 결함 수정 (2026-11-20, 현재)
+## T045 2.0.2: ATELIER 실사용 마찰 (2026-11-26, 현재)
+
+- 지시: 부모 세션 위임 과제 "JOEDESIGN 2.0.2". 사용자가 2026-11-26에 범위를 확정했다: ATELIER `Library/tool-friction-review.md` 묶음 H·I와 `TOOL-FRICTION.md` 끝 JOEDESIGN 줄 다섯. 브랜치 `v2.0.2`(워크트리)에서 작업한다. ATELIER는 읽기만 한다.
+- 변경 일곱 가지:
+  - 색·모션 직접 관측 절과 `scripts/sample-pixels.mjs`.
+  - report-check R5 `decided in rev N DEC-xxx`, R3의 AC 줄·AC 절 제외.
+  - 출처 표 관측 범위 열.
+  - 전문 스킬 위치와 하위 에이전트 대체 실행, 크기별 전 화면 캡처.
+  - `scripts/capture-cdp.mjs`, `capture.mjs`의 Playwright 없을 때 대체, doctor `collector`와 `~/.claude/skills`.
+  - 규칙 행 병합과 재실행 범위(conformance.md 예시).
+  - VERSION 2.0.2, CHANGELOG 2.0.2(미게시).
+- 게이트: node 59/59, python 150 OK(건너뜀 2), 274개 회귀는 v2.0.1과 같다, 행동 시험 0회. 기록은 evals/v2.0.2-tests-20261126/report.md.
+- 완료 순서: `v2.0.2`에 로컬 커밋까지 한다. push·태그·Release·개인 설치는 부모 세션 재검증과 사용자 승인 뒤에 한다.
+
+## T044 2.0.1: 2.0.0 시험 결함 수정 (2026-11-20)
 
 - 지시: 부모 세션 위임 과제 "JOEDESIGN 2.0.1 후보", 사용자 승인 "세 도구 2.0.1 시작"(부모 세션이 받음). 입력은 2.0.0 시험 보고 두 건
   (evals/v2-tests-20261119/docs-joedesign-report.md, integration-report.md). JOENESS·JOEFLOW 2.0.1은 다른 세션이 맡는다.

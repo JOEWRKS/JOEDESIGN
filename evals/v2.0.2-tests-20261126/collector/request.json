@@ -1,0 +1,21 @@
+{
+  "output_dir": "evals/v2.0.2-tests-20261126/collector/request-out",
+  "build_id": "capture-cdp-fixture",
+  "targets": [
+    {"id": "narrow-selected", "route": "/", "viewport": [360, 640], "locale": "ko-KR", "theme": "light", "state": "selected"},
+    {"id": "wide-reduce-injected", "route": "/", "viewport": [1024, 768], "locale": "ko-KR", "theme": "light", "state": "default"}
+  ],
+  "browser": {
+    "base_url": "http://127.0.0.1:8731",
+    "probes": {
+      "narrow-selected": {
+        "actions": [{"type": "press", "key": "Tab"}, {"type": "press", "key": "Enter"}],
+        "assertions": [{"selector": "#state", "text": "S 선택됨", "visible": true}, {"selector": "#chip-s", "focused": true}]
+      },
+      "wide-reduce-injected": {
+        "reduced_motion": "inject",
+        "assertions": [{"selector": "#chip-m", "visible": true}, {"selector": ".chip", "count": 3}]
+      }
+    }
+  }
+}
