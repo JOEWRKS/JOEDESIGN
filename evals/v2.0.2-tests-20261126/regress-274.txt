@@ -1,0 +1,7 @@
+274 reports
+2.0.1: {"R3":269,"R5":44,"R1":75,"R6a":103,"R4":4,"R2":3,"R6b":7}
+2.0.2 candidate: {"R3":269,"R5":44,"R1":75,"R6a":103,"R4":4,"R2":3,"R6b":7}
+files whose findings changed: 0
+8 fixtures
+2.0.1: {"R5":3,"R3":3}
+2.0.2 candidate: {"R5":2,"R3":1}

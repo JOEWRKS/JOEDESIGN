@@ -305,3 +305,60 @@ test('R7 1.3.4: clauses split at commas, semicolons and slashes, so one sentence
   // the own-CSS clause names only the other page
   assert.deepEqual(rules(`- ${idx}\n- ${cf}\n\nC1은 두 화면 모두 4px였다(rendered: 확인 화면 own css, 도구가 요청 화면 링크 CSS를 막아 주입했다).\n`), ['R7']);
 });
+
+// 2.0.2 (ATELIER friction): AC results and definition-decided display changes
+import { readFileSync as readFixture } from 'node:fs';
+const fixture = (name) => readFixture(new URL(`../fixtures/report-check-202/${name}`, import.meta.url), 'utf8');
+
+test('R3: an AC result line with `AC:` or under an AC heading is not a design-check outcome', () => {
+  assert.deepEqual(rules(`- ${LINE}\n\nAC: every AC-004 sentence passes on screen.\n`), []);
+  assert.deepEqual(rules(`- ${LINE}\n\n- AC-004, AC-007: 모든 문장 통과.\n`), []);
+  assert.deepEqual(rules(`- ${LINE}\n\n수용 기준: 전 문장 통과.\n`), []);
+  assert.deepEqual(rules(`- ${LINE}\n\n## AC observation\n\nEvery sentence passes at 1024 and 360.\n\n### AC-007\n\nAll pass.\n\n## Notes\n\nEverything passes.\n`), ['R3']);
+  assert.deepEqual(rules(`- ${LINE}\n\nEvery AC-004 sentence passes on screen.\n`), ['R3']);
+});
+
+test('R3: an AC line that names a design check is still read', () => {
+  assert.deepEqual(rules(`- ${LINE}\n\nAC: spacing passes everywhere.\n`), ['R3']);
+});
+
+test('R3: more technical checks are exempt (type check, validators, integration tests)', () => {
+  assert.deepEqual(rules(`- ${LINE}\n\n\`npm run typecheck\` 0 errors, \`npm run validate-products\` passed, 통합 테스트 18개 통과.\n`), []);
+});
+
+test('R3 fixture (ATELIER Stage 3): the draft AC sentence is flagged; the AC: prefix and an AC section pass; the sent text still passes', () => {
+  const draft = check(fixture('stage3-draft-ac-sentence.md'));
+  assert.deepEqual(draft.map((x) => x[1]), ['R3']);
+  assert.match(draft[0][3], /start its line with `AC:`/);
+  assert.deepEqual(rules(fixture('stage3-ac-prefix.md')), []);
+  assert.deepEqual(rules(fixture('stage3-ac-section.md')), []);
+  assert.deepEqual(rules(fixture('stage3-sent.md')), []);
+});
+
+const PAIR = '## Display before/after\n\n- before: 계정 진입 | `/account` 링크 | 상단 바\n- after: 계정 진입 | 비회원 메뉴 로그인·주문 조회 | 상단 바';
+test('R5: a differing pair ending in `decided in rev N DEC-xxx` is a decided change', () => {
+  assert.deepEqual(rules(`- ${LINE}\n\n${PAIR} — decided in JOEFLOW rev19 DEC-061\n`), []);
+  assert.deepEqual(rules(`- ${LINE}\n\n${PAIR} (decided in rev20 (SCR-004))\n`), []);
+  assert.deepEqual(rules(`- ${LINE}\n\n${PAIR} — rev19 DEC-061에서 결정\n`), []);
+  assert.deepEqual(rules(`- ${LINE}\n\n${PAIR} — product decision pending\n`), []);
+});
+
+test('R5: without a revision and an ID the pair still needs a record, and the message names the decided form', () => {
+  for (const tail of ['', ' — decided in JOEFLOW', ' — decided in DEC-061', ' — decided in rev19']) {
+    const f = check(`- ${LINE}\n\n${PAIR}${tail}\n`);
+    assert.deepEqual(f.map((x) => x[1]), ['R5'], tail);
+    assert.match(f[0][3], /decided in rev N DEC-xxx/);
+  }
+});
+
+test('R5: the decided marker does not make a matching pair differ', () => {
+  const same = '- before: 정렬 | select | `/`\n- after: 정렬 | select | `/` — decided in rev19 DEC-061\n';
+  assert.deepEqual(rules(`- ${LINE}\n\n## Display before/after\n\n${same}`), []);
+});
+
+test('R5 fixture (ATELIER Stage 1 DEC-061): the pair without a marker is flagged, with the marker it passes', () => {
+  assert.deepEqual(rules(fixture('stage1-draft-pair-no-marker.md')), ['R5']);
+  assert.deepEqual(rules(fixture('stage1-pair-decided-malformed.md')), ['R5']);
+  assert.deepEqual(rules(fixture('stage1-pair-decided.md')), []);
+  assert.deepEqual(rules(fixture('stage1-sent.md')), []);
+});

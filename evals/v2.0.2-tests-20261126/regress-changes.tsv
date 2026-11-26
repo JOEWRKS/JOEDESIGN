@@ -1,0 +1,4 @@
+file	v2.0.1	2.0.2
+fixtures/report-check-202/stage1-pair-decided.md	2.0.1 R5@33	2.0.2 ok
+fixtures/report-check-202/stage3-ac-prefix.md	2.0.1 R3@31	2.0.2 ok
+fixtures/report-check-202/stage3-ac-section.md	2.0.1 R3@33	2.0.2 ok

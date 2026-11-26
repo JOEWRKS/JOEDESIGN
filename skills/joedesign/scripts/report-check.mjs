@@ -13,13 +13,23 @@
 //       in its spot check cell
 //   R3  outside the list, a sentence that states a design-check outcome (pass, count,
 //       no failures) also carries, in that same sentence, the scope (sizes x states),
-//       rendered or code, and the spot check outcome
-//   R4  a fix whose list line says `changed` is not named in the report's 해결 (resolved)
+//       rendered or code, and the spot check outcome. Not design-check outcomes, so not
+//       read by R3 (2.0.2): product acceptance (AC) results, on a line that starts with
+//       `AC:` (`AC-004:`, `AC-004, AC-007:`, `수용 기준:`) or under a heading that names AC
+//       (`## AC-004`, `## AC observation`, `## 수용 기준`) down to the next heading of the
+//       same or a higher level; and technical checks (tests, type check, build, lint,
+//       validators). Either is read by R3 again when the sentence names a design check
+//       (spacing, overflow, S1 ...).
+//   R4 a fix whose list line says `changed` is not named in the report's 해결 (resolved)
 //       line; an unconfirmed fix belongs under 남은 문제 (remaining)
 //   R5  a report that says it moved, overlapped, hid or merged an existing element
 //       carries `before: element | content shown | route` and `after: ...` lines for
 //       each element (or one `display unchanged` line); when a pair differs, the report
-//       records it as `product decision pending` (제품 결정 대기)
+//       records it as `product decision pending` (제품 결정 대기). A pair the approved product
+//       definition already decided ends its before or after line with `decided in rev N
+//       DEC-xxx` (a revision and a decision or record ID: `decided in JOEFLOW rev19 DEC-061`,
+//       `decided in rev20 (SCR-004)`, `rev19 DEC-061에서 결정`) and needs no pending record
+//       (2.0.2); a pair line that itself says `product decision pending` is recorded too.
 //   R6  in a report with the JOENESS six lines (작업, 업데이트 파일, 이슈, 해결, 남은 문제,
 //       다음 작업), no results line comes above the first of them (a list nested inside
 //       them, as some 1.3.0 reports have, is tolerated); the order of the parts is set by
@@ -107,7 +117,13 @@ const NOT_CLAIM = new RegExp(
 const COUNT = /(?<![\d.×x/])(\d{1,6})\s*\/\s*(\d{1,6})(?![\d/×x])/g;
 const TECH = new RegExp(
   '\\btsc\\b|타입\\s*검사|type\\s*-?check|vitest|단위\\s*테스트|unit tests?|빌드|\\bbuild\\b|' +
-  'E2E|playwright|\\blint\\b|npm (?:run )?test|node --test|unittest', 'i');
+  'E2E|playwright|\\blint\\b|npm (?:run )?test|node --test|unittest|' +
+  // 2.0.2: more technical checks (ATELIER Stage 3: `npm run typecheck`, `validate-products`)
+  'typecheck|validate-[\\w-]+|pytest|cargo test|go test|integration tests?|통합\\s*테스트|서버\\s*테스트', 'i');
+// 2.0.2: product acceptance results are not design-check outcomes
+const AC_PREFIX = /^\s*(?:[-*+]\s*)?\**\s*(?:AC(?:-\d+)?(?:\s*[,·/&]\s*AC-\d+)*|수용\s*기준)\s*\**\s*[:：]/i;
+const AC_HEADING = /\bAC\b|\bAC-\d|수용\s*기준|\bacceptance\b/i;
+const HEADING = /^\s{0,3}(#{1,6})\s+(.*)$/;
 // a technical-check sentence is exempt unless it also names a design check
 const DESIGN = new RegExp(
   'spacing|간격\\s*검사|넘침|overflow|잘림|clipp|규칙\\s*검사|design[- ]check|' +
@@ -193,7 +209,13 @@ const BA_LINE = /^\s*(?:[-*+]\s*)?\**\s*(before|after)\s*\**\s*[:：]\s*(.*)$/i;
 const DISPLAY_SAME = /display unchanged|표시\s*(?:변화|변경)\s*없음/i;
 const PENDING = /product decision pending|제품\s*결정\s*대기/i;
 // "no pending item" is not a pending record
-const NO_PENDING = /\b(?:no|not)\s+(?:a\s+)?product decision pending|(?:product decision pending|제품\s*결정\s*대기)[^.。\n]{0,12}(?:없|아님|아니|\bnone\b|\bno\b|\b0\b)/i;
+// 2.0.2: a pair the approved definition already decided: `decided in rev N DEC-xxx`
+const DECIDED = new RegExp([
+  /\bdecided in\b[^|]{0,40}?\brev\s*\.?\s*\d+[^|]{0,12}?\b[A-Z]{2,6}-\d{1,5}\b/.source,
+  /\brev\s*\.?\s*\d+\s*[(（]?\s*[A-Z]{2,6}-\d{1,5}\s*[)）]?\s*(?:에서\s*)?결정/.source,
+].join('|'));
+const DECIDED_TAIL = /\s*(?:[—–-]+\s*|[(（]\s*)?(?:decided in\b.*|rev\s*\.?\s*\d+\s*[(（]?\s*[A-Z]{2,6}-\d{1,5}.*결정.*|product decision pending.*|제품\s*결정\s*대기.*)$/i;
+const NO_PENDING =/\b(?:no|not)\s+(?:a\s+)?product decision pending|(?:product decision pending|제품\s*결정\s*대기)[^.。\n]{0,12}(?:없|아님|아니|\bnone\b|\bno\b|\b0\b)/i;
 
 function baKey(s) {
   return s.replaceAll('`', '').replace(/["'“”‘’]/g, '').replace(/\s+/g, ' ').trim().toLowerCase();
@@ -306,6 +328,7 @@ export function check(text) {
   let relocateAt = 0;
   let displaySame = false;
   let pending = false;
+  let acLevel = 0; // heading level of the AC section the line is in (0: none)
   const sixFirst = new Map(); // label -> first line number
   const rowLines = []; // line numbers of results lines outside code blocks
   let injectedAt = 0; // first line saying CSS was injected
@@ -320,9 +343,19 @@ export function check(text) {
     if (STAMP_LINE.test(raw.trim())) return; // a stamp from an earlier run is not part of the report
     if (NONE_RAN.test(raw)) noneRan = true;
     if (!inCode) {
+      const heading = raw.match(HEADING);
+      if (heading) {
+        const level = heading[1].length;
+        if (acLevel && level <= acLevel) acLevel = 0;
+        if (!acLevel && AC_HEADING.test(heading[2])) acLevel = level;
+      }
       const ba = raw.replaceAll('**', '').match(BA_LINE);
       if (ba) {
-        baLines.push([no, ba[1].toLowerCase(), ba[2].split('|').map((c) => c.trim())]);
+        const cells = ba[2].split('|').map((c) => c.trim());
+        const last = cells.length - 1;
+        const recorded = DECIDED.test(ba[2]) ? 'decided' : PENDING.test(ba[2]) && !NO_PENDING.test(ba[2]) ? 'pending' : '';
+        if (recorded) cells[last] = cells[last].replace(DECIDED_TAIL, '').trim();
+        baLines.push([no, ba[1].toLowerCase(), cells, recorded]);
         return; // a before/after line is a record, not prose or a result row
       }
       if (DISPLAY_SAME.test(raw)) displaySame = true;
@@ -367,6 +400,7 @@ export function check(text) {
       if (shortRow === null && (PASS.test(raw) || isCount(raw))) shortRow = no;
       return;
     }
+    const acLine = acLevel > 0 || AC_PREFIX.test(raw.replaceAll('`', ''));
     const plain = raw.replaceAll('`', '').replaceAll('**', '')
       .replace(/^\s*(?:[-*+]|\d+[.)])\s+/, '');
     for (const s of sentences(plain)) {
@@ -377,7 +411,7 @@ export function check(text) {
       const claim = (PASS.test(s) && !NOT_CLAIM.test(s)) || isCount(s);
       if (!claim) continue;
       if (/report-check/i.test(s)) continue; // a note about this script is not a design-check outcome
-      if (TECH.test(s) && !DESIGN.test(s)) continue;
+      if ((acLine || TECH.test(s)) && !DESIGN.test(s)) continue; // AC or technical result, not a design check
       const missing = [];
       if (!SCOPE.test(s)) missing.push('sizes x states');
       if (!MODE.test(s)) missing.push('rendered or code');
@@ -386,7 +420,8 @@ export function check(text) {
         const short = s.length <= 90 ? s : `${s.slice(0, 87)}...`;
         findings.push([no, 'R3', short,
           `check outcome without ${missing.join(', ')}: add the parenthesis copied from ` +
-          'its result line, or name the check and leave the outcome to the line']);
+          'its result line, or name the check and leave the outcome to the line (a product acceptance result is ' +
+          'not a design check: start its line with `AC:` or put it under an AC heading)']);
       }
     }
   });
@@ -453,25 +488,27 @@ export function check(text) {
       'or one `display unchanged` line']);
   }
   const pairs = new Map(); // element -> {before, after, no}
-  for (const [no, side, cells] of baLines) {
+  for (const [no, side, cells, recorded] of baLines) {
     if (cells.length < 3 || !cells[0]) {
       findings.push([no, 'R5', cells.join(' | '),
         'a before/after line has three cells: `element | content shown | route to reach it`']);
       continue;
     }
     const key = baKey(cells[0]);
-    const entry = pairs.get(key) || { name: cells[0], before: null, after: null, no };
+    const entry = pairs.get(key) || { name: cells[0], before: null, after: null, no, recorded: '' };
     entry[side] = cells.slice(1).map(baKey).join(' | ');
+    if (recorded) entry.recorded = recorded;
     entry.no = no;
     pairs.set(key, entry);
   }
-  const differs = [...pairs.values()].filter((e) => e.before !== e.after);
+  const differs = [...pairs.values()].filter((e) => e.before !== e.after && !e.recorded);
   if (differs.length && !pending) {
     for (const e of differs) {
       const why = e.before === null ? 'no before line' : e.after === null ? 'no after line' : 'content or route differs';
       findings.push([e.no, 'R5', e.name,
         `before and after differ (${why}): what the user sees or how they reach it changed, so record it as ` +
-        '`product decision pending` for JOEFLOW re-entry; a pair that only moved has the same content and route']);
+        '`product decision pending` for JOEFLOW re-entry, or, when the approved product definition already decided ' +
+        'it, end the after line of the pair with `decided in rev N DEC-xxx`; a pair that only moved has the same content and route']);
     }
   }
   return findings;
