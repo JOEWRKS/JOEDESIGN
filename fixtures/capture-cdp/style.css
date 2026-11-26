@@ -1,0 +1,15 @@
+/* fixture for capture-cdp.mjs and sample-pixels.mjs: a sold-out chip drawn in #8A8A8A with a strike */
+body { margin: 0; font: 500 16px/1.5 system-ui, sans-serif; color: #111; background: #fff; }
+main { padding: 24px 16px; }
+.chips { display: flex; gap: 8px; }
+.chip { width: 72px; height: 44px; border: 1px solid #e5e5e5; border-radius: 22px; background: #fff;
+  font: 500 16px/1 system-ui, sans-serif; color: #111; transition: background-color 200ms; }
+.chip.on { background: #111; color: #fff; }
+.chip.sold { color: #8a8a8a; text-decoration: line-through; text-decoration-thickness: 2px; }
+.reveal { margin-top: 24px; padding: 16px; background: #f5f5f5; animation: rise 600ms ease-out both; }
+@keyframes rise { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: none; } }
+.tall { height: 1400px; display: flex; align-items: flex-end; border-top: 1px solid #e5e5e5; }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { animation: none; }
+  .chip { transition: none; }
+}

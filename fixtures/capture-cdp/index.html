@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>capture-cdp fixture</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <h1>사이즈</h1>
+  <div class="chips">
+    <button class="chip" id="chip-s">S</button>
+    <button class="chip sold" id="chip-m" disabled>M</button>
+    <button class="chip sold" id="chip-l" disabled>L</button>
+  </div>
+  <p id="state">선택 없음</p>
+  <div class="reveal" id="reveal">reveal</div>
+  <section class="tall">긴 페이지의 끝</section>
+</main>
+<script>
+document.getElementById('chip-s').addEventListener('click', () => {
+  document.getElementById('state').textContent = 'S 선택됨';
+  document.getElementById('chip-s').classList.add('on');
+});
+window.motion = () => {
+  const r = document.getElementById('reveal');
+  const s = getComputedStyle(r);
+  return { animation: s.animationName, duration: s.animationDuration, transition: s.transitionDuration,
+    reduce: matchMedia('(prefers-reduced-motion: reduce)').matches, sheets: document.styleSheets.length };
+};
+</script>
+</body>
+</html>

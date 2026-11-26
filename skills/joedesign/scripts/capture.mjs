@@ -1,4 +1,6 @@
 // Optional collector: use an existing Playwright package and browser, never install.
+// Without a Playwright package (and no explicit playwright_module), the same request goes to
+// capture-cdp.mjs, which drives an installed Chrome/Edge over the DevTools protocol (2.0.2).
 import fs from 'node:fs';
 import path from 'node:path';
 import {createRequire} from 'node:module';
@@ -11,7 +13,16 @@ const base = new URL(input.browser.base_url);
 if (!['http:', 'https:'].includes(base.protocol) || !['localhost', '127.0.0.1', '[::1]'].includes(base.hostname)) {
   throw new Error('Collector only operates an explicitly configured local preview');
 }
-const {chromium} = require(input.browser.playwright_module || 'playwright');
+let chromium = null;
+try {
+  ({chromium} = require(input.browser.playwright_module || 'playwright'));
+} catch (error) {
+  if (input.browser.playwright_module || error.code !== 'MODULE_NOT_FOUND') throw error;
+}
+if (!chromium) {
+  const {collect} = await import('./capture-cdp.mjs');
+  process.stdout.write(JSON.stringify(await collect(input)));
+} else {
 const out = path.resolve(input.output_dir);
 fs.mkdirSync(out, {recursive: true});
 const captures = [], errors = [];
@@ -28,7 +39,7 @@ try {
     if (url.origin !== base.origin) throw new Error('Target escapes configured preview origin');
     const context = await browser.newContext({viewport: {width: target.viewport[0], height: target.viewport[1]},
       locale: target.locale, colorScheme: target.theme === 'dark' ? 'dark' : 'light',
-      reducedMotion: probe.reduced_motion ? 'reduce' : 'no-preference'});
+      reducedMotion: probe.reduced_motion === true ? 'reduce' : 'no-preference'});
     const page = await context.newPage();
     const log = {target, requested_url: url.href, build_id: input.build_id, actions: [], assertions: [],
       console_errors: [], frames: [], motion_observation: 'FRAME_SAMPLES_ONLY'};
@@ -42,6 +53,11 @@ try {
     try {
       await page.goto(url.href, {waitUntil: 'load', timeout: 30000});
       await page.evaluate(() => document.fonts.ready);
+      if (probe.reduced_motion === 'inject') {
+        const {REDUCE_INJECT_JS} = await import('./capture-cdp.mjs');
+        log.reduced_motion = 'injected';
+        log.reduce_injection = await page.evaluate(REDUCE_INJECT_JS);
+      }
       await frame('start');
       for (const [n, action] of (probe.actions || []).entries()) {
         const locator = action.selector ? page.locator(action.selector) : null;
@@ -115,3 +131,4 @@ try {
   await browser.close();
 }
 process.stdout.write(JSON.stringify({captures, errors}));
+}

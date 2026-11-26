@@ -32,7 +32,7 @@ def main(argv=None):
     p = sub.add_parser('doctor', help='Report which specialist skills are found; finding is not invocation')
     p.add_argument('--skills-root', type=Path, action='append',
                    help='Replaces the default roots (package siblings, $CODEX_HOME/skills or ~/.codex/skills, '
-                        '~/.agents/skills); repeat it to search several roots')
+                        '~/.agents/skills, ~/.claude/skills); repeat it to search several roots')
     p = sub.add_parser('init'); p.add_argument('root', type=Path); p.add_argument('--intent', type=Path, required=True)
     p = sub.add_parser('index'); p.add_argument('corpus', type=Path); p.add_argument('--output', type=Path)
     p = sub.add_parser('retrieve'); p.add_argument('index', type=Path); p.add_argument('--intent', type=Path, required=True); p.add_argument('--limit', type=int, default=10); p.add_argument('--output', type=Path)
@@ -68,7 +68,7 @@ def main(argv=None):
         result = {'name': 'joedesign', 'version': (package / 'VERSION').read_text().strip(),
                   'operating_core': str(package / 'SKILL.md')}
     elif args.command == 'doctor':
-        from harness.execution import skill_sources, VISUAL_MODULE_NAMES
+        from harness.execution import skill_sources, collector_sources, VISUAL_MODULE_NAMES
         settings = {'skills_roots': args.skills_root} if args.skills_root else {}
         sources = skill_sources(settings)
         dependencies = {}
@@ -87,7 +87,15 @@ def main(argv=None):
                   'version': (package / 'VERSION').read_text().strip(),
                   'operating_core': str(package / 'SKILL.md'),
                   'host_verifier': 'UNAVAILABLE', 'automatic_certification': False,
+                  # 2.0.2: which browser collector can run here (no effect on ready_for_synthesis)
+                  'collector': collector_sources(),
                   'note': 'Availability and file identity do not prove skill invocation or behavior.'}
+        missing = [n for n, d in dependencies.items() if d['status'] == 'UNAVAILABLE' and n != 'joedesign']
+        if missing:
+            result['missing_specialists'] = (
+                'Not found: ' + ', '.join(missing) + '. A host whose agent cannot load one may apply it through '
+                'a subagent that reads that SKILL.md from another installation (record which file and hash); '
+                'a specialist found nowhere is reported as not run, never as passed (SKILL.md, Specialist skills).')
         code = 0 if ready else 2
     elif args.command == 'run':
         from harness.execution import Execution

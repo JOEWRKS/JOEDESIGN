@@ -59,8 +59,9 @@ def skill_sources(settings):
     # Codex loads skills from $CODEX_HOME/skills when CODEX_HOME is set; follow it
     # so the report matches the installation actually in use.
     codex = Path(os.environ['CODEX_HOME']) if os.environ.get('CODEX_HOME') else Path.home() / '.codex'
+    # ~/.claude/skills (2.0.2): Claude Code's personal skill folder, searched last.
     roots = [Path(p) for p in settings.get('skills_roots',
-             [package.parent, codex / 'skills', Path.home() / '.agents/skills'])]
+             [package.parent, codex / 'skills', Path.home() / '.agents/skills', Path.home() / '.claude/skills'])]
     result = {'J': core} if core.is_file() else {}
     for role, name in names.items():
         explicit = settings.get('skills', {}).get(role)
@@ -69,6 +70,40 @@ def skill_sources(settings):
         if path:
             result[role] = path
     return result
+
+
+def browser_candidates(env=None):
+    """Chrome/Edge paths capture-cdp.mjs tries after CHROME_PATH (same order)."""
+    env = os.environ if env is None else env
+    if os.name == 'nt':
+        roots = [env.get(k) for k in ('ProgramFiles', 'ProgramFiles(x86)', 'LOCALAPPDATA') if env.get(k)]
+        return [Path(r) / sub for r in roots for sub in
+                ('Google/Chrome/Application/chrome.exe', 'Microsoft/Edge/Application/msedge.exe')]
+    if os.uname().sysname == 'Darwin':
+        return [Path(p) for p in ('/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+                                  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+                                  '/Applications/Chromium.app/Contents/MacOS/Chromium')]
+    return [Path(p) for p in ('/usr/bin/google-chrome', '/usr/bin/google-chrome-stable', '/usr/bin/chromium',
+                              '/usr/bin/chromium-browser', '/usr/bin/microsoft-edge',
+                              '/usr/bin/microsoft-edge-stable', '/snap/bin/chromium')]
+
+
+def collector_sources(cwd=None, env=None):
+    """Which browser collector route is available here; finding is not running."""
+    env = os.environ if env is None else env
+    cwd = Path.cwd() if cwd is None else Path(cwd)
+    playwright = next((d / 'node_modules/playwright' for d in (cwd, *cwd.parents)
+                       if (d / 'node_modules/playwright/package.json').is_file()), None)
+    chrome = env.get('CHROME_PATH')
+    browser = Path(chrome) if chrome and Path(chrome).is_file() else (
+        None if chrome else next((p for p in browser_candidates(env) if p.is_file()), None))
+    node = shutil.which('node')
+    route = 'playwright' if playwright and node else 'cdp' if browser and node else 'none'
+    return {'route': route, 'node': bool(node),
+            'playwright': str(playwright) if playwright else None,
+            'cdp_browser': str(browser) if browser else None,
+            'chrome_path_env': 'SET_BUT_MISSING' if chrome and not browser else ('SET' if chrome else 'UNSET'),
+            'collectors': {'playwright': 'scripts/capture.mjs', 'cdp': 'scripts/capture-cdp.mjs'}}
 
 
 def preflight(bundle, settings, project, root):

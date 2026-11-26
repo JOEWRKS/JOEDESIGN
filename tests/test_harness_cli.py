@@ -108,6 +108,38 @@ class CLITests(unittest.TestCase):
                          (fake_home / '.codex/skills/ui-ux-pro-max/SKILL.md').resolve())
         self.assertEqual(report['impeccable']['status'], 'UNAVAILABLE')
 
+    def test_doctor_default_roots_include_claude_personal_skills(self):
+        import os
+        fake_home = self.root / 'home'
+        skill = fake_home / '.claude' / 'skills' / 'web-design-guidelines' / 'SKILL.md'
+        skill.parent.mkdir(parents=True)
+        skill.write_text('claude fixture', encoding='utf-8')
+        env = dict(os.environ, HOME=str(fake_home), USERPROFILE=str(fake_home), CODEX_HOME=str(self.root / 'none'))
+        result = subprocess.run([sys.executable, str(self.entry), 'doctor'], capture_output=True,
+                                text=True, encoding='utf-8', env=env)
+        report = json.loads(result.stdout)
+        self.assertEqual(Path(report['dependencies']['web-design-guidelines']['path']), skill.resolve())
+        self.assertIn('impeccable', report['missing_specialists'])
+        self.assertIn('subagent', report['missing_specialists'])
+        self.assertIn(report['collector']['route'], ('playwright', 'cdp', 'none'))
+
+    def test_collector_sources_follow_chrome_path_and_a_project_playwright(self):
+        from harness.execution import collector_sources
+        browser = self.root / 'browser.exe'
+        browser.write_text('', encoding='utf-8')
+        found = collector_sources(cwd=self.root, env={'CHROME_PATH': str(browser)})
+        self.assertEqual(Path(found['cdp_browser']), browser)
+        self.assertEqual(found['chrome_path_env'], 'SET')
+        missing = collector_sources(cwd=self.root, env={'CHROME_PATH': str(self.root / 'absent.exe')})
+        self.assertIsNone(missing['cdp_browser'])
+        self.assertEqual(missing['chrome_path_env'], 'SET_BUT_MISSING')
+        package = self.root / 'node_modules' / 'playwright' / 'package.json'
+        package.parent.mkdir(parents=True)
+        package.write_text('{}', encoding='utf-8')
+        nested = self.root / 'app' / 'src'
+        nested.mkdir(parents=True)
+        self.assertEqual(Path(collector_sources(cwd=nested, env={})['playwright']), package.parent)
+
     def test_retrieve_with_string_requirements_names_the_required_row_shape(self):
         corpus = self.root / 'corpus'
         corpus.mkdir()
