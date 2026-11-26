@@ -10,7 +10,8 @@
   - 전문 스킬 위치와 하위 에이전트 대체 실행, 크기별 전 화면 캡처.
   - `scripts/capture-cdp.mjs`, `capture.mjs`의 Playwright 없을 때 대체, doctor `collector`와 `~/.claude/skills`.
   - 규칙 행 병합과 재실행 범위(conformance.md 예시).
-  - VERSION 2.0.2, CHANGELOG 2.0.2(미게시).
+  - VERSION 2.0.2, CHANGELOG 2.0.2.
+- 게시: 사용자 승인("추천대로 게시", 2026-11-26, 부모 세션이 직접 받음; 대신 내린 결정 6건 중 허용 오차만 "채널 ±8 그리고 대비 ±0.2"로 바꾸고 나머지 확정) 뒤 태그 v2.0.2·Release·개인 설치(evals/v2.0.2-tests-20261126/install-receipt-202.md).
 - 게이트: node 59/59, python 150 OK(건너뜀 2), 274개 회귀는 v2.0.1과 같다, 행동 시험 0회. 기록은 evals/v2.0.2-tests-20261126/report.md.
 - 완료 순서: `v2.0.2`에 로컬 커밋까지 한다. push·태그·Release·개인 설치는 부모 세션 재검증과 사용자 승인 뒤에 한다.
 

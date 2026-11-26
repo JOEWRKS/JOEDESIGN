@@ -1,8 +1,8 @@
 # JOEDESIGN 업데이트 내역
 
-## 2.0.2 — ATELIER 실사용 마찰: 색·모션 관측, report-check R3·R5, 출처 관측 범위, 전문 스킬, Playwright 없는 수집기, 규칙 행 병합 (미게시, 2026-11-26, T045)
+## 2.0.2 — ATELIER 실사용 마찰: 색·모션 관측, report-check R3·R5, 출처 관측 범위, 전문 스킬, Playwright 없는 수집기, 규칙 행 병합 (2026-11-26, T045)
 
-- **미게시 후보.** 브랜치 `v2.0.2`에 로컬 커밋만 있다. 태그·Release·개인 설치는 사용자 승인 뒤에 한다.
+- 게시: 사용자 승인("추천대로 게시", 2026-11-26, 부모 세션이 직접 받음; 하위 세션이 대신 내린 결정 6건 중 허용 오차만 "그리고"로 바꾸고 나머지 확정) 뒤 태그 v2.0.2, GitHub Release, 개인 설치 갱신(영수증 evals/v2.0.2-tests-20261126/install-receipt-202.md). 릴리스 노트 [release-notes-v2.0.2.md](evals/v2.0.2-tests-20261126/release-notes-v2.0.2.md).
 
 출처: ATELIER(쇼핑몰) 실사용 중 기록한 `TOOL-FRICTION.md`의 JOEDESIGN 줄 7개(2026-11-23~25)와 `Library/tool-friction-review.md` 묶음 H·I다. 범위는 사용자가 2026-11-26에 확정했다(부모 세션이 전달). 준비 보고: [report.md](evals/v2.0.2-tests-20261126/report.md).
 
