@@ -40,6 +40,14 @@ review uses actual specialist skills and the ordered R → C1 → conditional C2
 in [operation](references/operation.md#raci-as-the-work-route). Role names alone do
 not establish skill use. C2 diagnoses conflict, uncertainty or recurring failure.
 
+**Specialist skills** are separate packages, found beside this package, in
+`$CODEX_HOME/skills` (else `~/.codex/skills`), `~/.agents/skills` or `~/.claude/skills`;
+`scripts/harness_cli.py doctor` lists which were found and where. When the running
+agent cannot load one that exists in another of those folders, apply it through a
+subagent that reads that SKILL.md in full and works only on the assigned claim; record
+the file path and its SHA-256 (doctor prints it) with the review. A specialist found
+nowhere is `not run` for that claim, never passed or replaced by a role label.
+
 ## Decide the scope before making the screen
 
 Read the request, Product source, root DESIGN.md, originals/assets, scoped approval
@@ -63,7 +71,9 @@ visual work the definition already covers. Moving, overlapping, hiding or mergin
 an existing element first gets `## Display before/after` in DESIGN.md and the
 report, per element: `before: element | content shown | route` and `after: ...`
 (`hidden` when gone). A differing pair is recorded as above; a match is a design
-decision. If the user's own request is that
+decision; a differing pair the approved definition already decided ends its after
+line with `decided in rev N DEC-xxx` (that revision and decision or record ID) and is
+not pending. If the user's own request is that
 behavior, build what the user specified and keep its product record pending: the
 definition is extended in JOEFLOW, not by code or DESIGN.md, and any part of the
 behavior the user did not specify is a product question for that re-entry, not a
@@ -91,6 +101,13 @@ route. Continue independent authorized work without expanding an unproved direct
    Search results, brand names and prose summaries are not original inspection.
    Other tools may supplement this work; provider failure does not silently waive
    OMD or source comparison. Keep dependent work unresolved when sources are unavailable.
+   When only some states of a source can be observed (its empty cart, not the filled
+   one), the DESIGN source table's observation-scope column records each state: an
+   observed state → the decision taken from it; an unobserved state → the basis it is
+   derived from (product definition, approved tokens, an observed state of the same
+   source), never written as observed. Proceed on the observed states and the stated
+   derivations, list the unobserved states under the evidence boundary, and reopen a
+   derived decision when a later observation contradicts it.
 2. **Translate into the product.** Apply the visual translation module to attention
    order, grouping, density, imagery and narrow-screen behavior using real content.
    Preserve required functions, information, states and recovery. Keep one compact
@@ -116,7 +133,13 @@ route. Continue independent authorized work without expanding an unproved direct
    shadow included, not a wrapper box). If they differ, fix the check or the row.
    Every row's Spot check cell records the outcome: the target with both readings, or
    "not spot-checked". One row's spot check does not cover another row, and a row
-   inherited without a recorded comparison is not spot-checked.
+   inherited without a recorded comparison is not spot-checked. Keep one row per rule:
+   a revision that extends a rule to new screens or states adds them to that row's
+   Layouts, Sizes and States (a changed threshold is amended in its Rule cell, with the
+   revision), not a new row. After any change, re-run every row whose layouts the
+   changed files render, whichever revision added it. A row counts only with at least
+   one full-screen capture per size it covers, named in its Spot check cell or the TASK
+   entry its Result links: counts and boxes alone do not show a broken layout.
 4. **Review the actual proof.** Use R/C1 and conditional C2 for affected claims, then
    fresh independent critique. Distinguish information/function preservation, source
    relationship conformance and whole-screen design quality. Challenge the composition
@@ -153,7 +176,8 @@ route. Continue independent authorized work without expanding an unproved direct
    rendered or code, spot check outcome). Write "spacing 918/918 (12 sizes x 6
    states, rendered; spot check differs: check 16 / observed 8)", not "the check
    passed, but ..."; a sentence with no room for the parenthesis names the check and
-   leaves the outcome to its line.
+   leaves the outcome to its line. Product acceptance (AC) results are not design
+   checks: they go on lines starting `AC:` or under an AC heading, outside this rule.
    A line that is not spot-checked is never listed as resolved, verified or done.
    Before sending, write the whole message you are about to send, every section and
    sentence of it, to a file and run this skill's `scripts/report-check.mjs` on it
@@ -173,6 +197,23 @@ route. Continue independent authorized work without expanding an unproved direct
    workflow completion, certification and exact user acceptance remain distinct.
    User rejection remains REJECTED for that output; no counts or role labels erase it.
 
+## Direct observation of colour and motion
+
+A colour rule's direct observation reads pixels from a capture, not computed styles.
+Sample the centre row of a stroke inside the element (a strikethrough, an underline,
+the middle of a letter) from a DPR-2 capture or a 2x zoom of one:
+`node <skill folder>/scripts/sample-pixels.mjs <png> --region x,y,w,h --expect #RRGGBB`.
+Anti-aliasing makes the reading a spread, recorded as `median M, range a–b, n px` with
+the capture, e.g. `360x640 chip M: check #8A8A8A / observed median #8E8E8E, range
+118–158, 12 px (capture scr002-…png)`. It agrees with the check when the median is
+within ±8 of each expected channel or its contrast with the background within ±0.2 of
+the expected contrast; otherwise the check or the row is wrong. Reduced motion is
+observed where the browser emulates `prefers-reduced-motion: reduce` (`capture-cdp.mjs
+--reduce-motion emulate`; plain `rendered`). Where it cannot, the page's own reduce
+rules injected without the media condition (`--reduce-motion inject`) are an accepted
+substitute, and its lines say `rendered (reduce injected)`. Reading the rules in the
+stylesheet alone is `code`.
+
 ## Execution support
 
 For CLI-managed work, the coordinator prepares source-grounded contracts using
@@ -184,7 +225,13 @@ control height, wrapping and repeated-role consistency; CSS values alone are not
 measurements. Missing/failed/stale conformance blocks the relevant phase even when
 generic specialist claims pass. Use verify-design for direct/non-Git observations,
 and pass its result to JOENESS's completion consumer where connected; JOEDESIGN
-does not own that work ledger or grant user acceptance.
+does not own that work ledger or grant user acceptance. The collector
+`scripts/capture.mjs` uses an existing Playwright package; without one it passes the
+same request to `scripts/capture-cdp.mjs`, which drives an installed Chrome or Edge
+headless over the DevTools protocol (`CHROME_PATH`, else the usual install paths;
+Node 22+). That script also takes full-page captures directly (`--url <local preview>
+--sizes 1024x768,360x640 --dpr 2 --out <dir>`). Neither installs anything; `doctor`
+reports which route is available.
 
 Direct host/browser tools and non-Git projects follow the same operating route,
 recording source → decision → observation → verdict in existing DESIGN/review records;

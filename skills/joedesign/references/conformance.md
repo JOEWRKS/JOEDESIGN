@@ -58,7 +58,12 @@ a move, overlap, hide or merge without `before:`/`after:` lines per element (or 
 pending`, and a report that says CSS was injected for the measurement (an inject word
 with a CSS word in the sentence, `--inject`, or CSS put in with 넣어) while a rendered
 line says only `rendered` (`rendered (own css)`, or a prose clause naming that check or
-its page as loading its own CSS, clears it);
+its page as loading its own CSS, clears it). Since 2.0.2 the script does not read
+product acceptance results as design-check outcomes (a line starting `AC:` or under an
+AC heading) nor more technical checks (type check, validators, integration tests),
+unless the sentence names a design check; and it accepts a differing before/after pair
+whose line ends in `decided in rev N DEC-xxx` (the approved definition's revision and
+decision or record ID) or itself says `product decision pending`;
 the file is corrected until the script prints `report-check: ok <chars> chars <sha8>`,
 and that stamp line ends the sent text so `--verify` can confirm the checked text is
 the sent text. A project ledger that keeps the report (JOENESS TASK) keeps the stamp
@@ -69,6 +74,29 @@ explanation, stamp); the script flags a results line placed above the six lines.
 In a JOENESS-connected project the same reporting rule also appears in the JOENESS
 AGENTS block; DESIGN.md's Report Form is the original, and the AGENTS copy follows it.
 The script reads the form of the text, not the truth of a number.
+
+## Rule rows across revisions
+
+A rule keeps one row for the life of DESIGN.md. When a revision brings the rule to new
+screens or states, those join the row's Layouts, Sizes and States lists, each addition
+marked with its revision; a changed threshold is amended in the Rule cell with its
+revision. A new row is for a new rule only. Per-revision rows hide what a change must
+re-run: in ATELIER (2026-11-25) T1, C1, S1, M1 and M2 each had a Rev 2, Rev 3 and Rev 4
+row, 15 of the table's 42 rows, and a Rev 5 CSS change to the catalog card dots broke
+the Rev 2 T1 row, which a run of the Rev 5 rows alone would have missed. Merged, those
+15 rows are 5 and the table 32; for example the three T1 rows become
+
+| Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| T1 tap targets ≥44×44, primary pills 56; inputs ≥48 (Rev 3); order rows ≥56, hearts and reason rows ≥44 (Rev 4) | rendered box sizes (`T1`, `T1s2`, `T1s3`) | 360x640 account menu items: check 44 / observed 44; 360x640 삭제 text button: check ≥44 / observed 44×44 (Rev 3); 360x640 account tabs: check ≥44 / observed 설정 44×44 (Rev 4) | SCR-001, SCR-002; SCR-003, SCR-004, SCR-005 lookup (Rev 3); SCR-005, SCR-006, SCR-007 (Rev 4) | 360, 390, 768, 1024, 1440 | default, sold-out, account menu open; cart, empty, checkout default, errors, processing (Rev 3); 6 auth, 3 account, logout dialog, paid detail, cancel dialog, cancel done (Rev 4) | top-bar search input 44 tall (owner call); widths (Rev 3, Rev 4) | <latest TASK entry> |
+
+After a change, every row whose Layouts the changed files render runs again,
+whichever revision added it; a shared stylesheet or token file renders every screen
+that loads it, so it re-runs every such row. Each row also names at least one
+full-screen capture per size it covers (in its Spot check cell or the TASK entry its
+Result links): in the same project a row that counted one visible section per screen
+passed a 1024 account page whose section sat in a 320px column beside the tabs, and no
+1024 capture of that page existed to show it.
 
 ## Fix the required scope before implementation
 

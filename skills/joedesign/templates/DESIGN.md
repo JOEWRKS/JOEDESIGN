@@ -15,7 +15,15 @@ unknown/empty is valid. Do not retranscribe settled source specifications. -->
 
 <!-- Original artifact/version + direct real-asset pointers + surface/state/viewport.
 Distinguish approved visual targets from ordinary references. Supplied ≠ approved.
-Record actual approval and its scope; do not fabricate approval or source facts. -->
+Record actual approval and its scope; do not fabricate approval or source facts.
+Observation scope is required per source, state by state: an observed state names the
+decision taken from it; an unobserved state names the basis it is derived from
+(product definition, approved tokens, an observed state of the same source) and is
+never written as observed. A source with no observed state is not a source. -->
+
+| Source | Role | Observation scope (per state) | Measured facts |
+| --- | --- | --- | --- |
+| <original, viewport> | Primary / Secondary | observed: <state> → <decision>; not observed: <state> → derived from <basis> | <values read from the original> |
 
 ## Project Decisions
 
@@ -50,7 +58,21 @@ quantity the rule names. Fill the Spot check cell in every row with
 spot-checked, and one row's spot check does not cover another row. When a result is
 quoted elsewhere (report, ROADMAP), quote it with this row's layouts, sizes and
 states, and with "not spot-checked" when that is the row's state; such a result is
-not listed as resolved or verified. Result links the latest TASK entry; no copied log. -->
+not listed as resolved or verified. Result links the latest TASK entry; no copied log.
+One row per rule across revisions: when a revision extends a rule to new screens or
+states, add them to that row's Layouts, Sizes and States lists (mark each addition with
+its revision, e.g. "SCR-003, SCR-004 (Rev 3)"); a changed threshold is amended in the
+Rule cell with its revision. A new row is for a new rule only. After a change, re-run
+every row whose Layouts the changed files render, whichever revision added it (a
+shared CSS or token file renders every screen that loads it). A row counts only with at
+least one full-screen capture per size in its Sizes cell, named in its Spot check cell
+or the TASK entry its Result links; element counts and boxes alone do not show a
+broken layout. Merged form, e.g.: | T1 tap targets ≥44×44, pills 56; inputs ≥48 (Rev 3)
+| rendered box sizes | 360x640 menu items: check 44 / observed 44 | SCR-001, SCR-002;
+SCR-003, SCR-004 (Rev 3) | 360, 390, 768, 1024, 1440 | default, sold-out; cart,
+checkout (Rev 3) | ... | ... | -->
+
+<!-- The full worked example: references/conformance.md, "Rule rows across revisions". -->
 
 | Rule | Check | Spot check | Layouts | Sizes | States | Unmeasured | Result |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -69,18 +91,26 @@ CSS is written `rendered (own css)` (or a sentence outside the list names that c
 its page as loading its own CSS). Before any rendered measurement, confirm the
 page's linked stylesheets actually loaded (`document.styleSheets.length` is nonzero and
 includes them); a measurement without them is not `rendered`, so measure again from a
-served URL or with the CSS injected. Each fix takes its own line; its result
+served URL or with the CSS injected. A reduced-motion reading taken with the page's own
+reduce rules injected without the media condition says `rendered (reduce injected)`. A
+colour spot check reads capture pixels at the stroke centre row and records
+`median M, range a–b, n px` (`scripts/sample-pixels.mjs`). Each fix takes its own line; its result
 is `fixed` only when its spot check cell holds a direct observation of the fixed
 thing on a target that showed it, otherwise `changed`. A `changed` fix is an open
 issue: it goes under 남은 문제 (remaining work) in the report, ISSUES and ROADMAP,
 never under 해결 (resolved). Outside the list, a pass or count carries its
-parenthesis (sizes x states, rendered or code, spot check outcome). A turn with no
+parenthesis (sizes x states, rendered or code, spot check outcome); a product
+acceptance (AC) result is not a design check and goes on a line starting `AC:` or
+under an AC heading, without that parenthesis. A turn with no
 design check says `design checks: none ran`. A result that is not spot-checked is
 not resolved, verified or done. A change that moves, overlaps, hides or merges an
 existing element lists, under `## Display before/after`, two lines per element:
 `before: element | content shown | route` and `after: ...` (`hidden` when gone).
 A pair that differs stays `product decision pending` until the product definition
-changes; a matching pair is a design decision.
+changes; a matching pair is a design decision. A differing pair the approved
+definition already decided ends its after line with `decided in rev N DEC-xxx` (that
+revision and decision or record ID), e.g. `after: account entry | guest menu 로그인 /
+주문 조회 | top bar — decided in JOEFLOW rev19 DEC-061`, and is not pending.
 
 Report order (this paragraph is the one place that sets it): (1) when the project
 reports in the six lines 작업, 업데이트 파일, 이슈, 해결, 남은 문제, 다음 작업
